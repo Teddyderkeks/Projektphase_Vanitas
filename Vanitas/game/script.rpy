@@ -68,11 +68,11 @@ label shop:
 
     menu:
         "Plausch mit Kollegen":
-            jump conversation
+            jump conversation_with_seller
         "Ab zur Arbeit":
             jump work
 
-label conversation:
+label conversation_with_seller:
     "Gespräch mit Verkäufer, Informationen über Firma / Anan"
 
     if pill_taken:
