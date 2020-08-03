@@ -56,27 +56,6 @@ label search_kloth_without_anan_office:
 
     jump selection_kloth_office
 
-label letter_kloth:
-    $ read_letter_kloth = True
-
-    "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
-
-    jump selection_kloth_office
-
-label computer_kloth:
-    $ read_computer_kloth = True
-
-    "Online Blog über Hinweise auf einen Bombenleger bzw Zerstörer von Aither"
-
-    jump selection_kloth_office
-
-label document_kloth:
-    $ read_document_kloth = True
-
-    "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
-
-    jump selection_kloth_office
-
 label everything_seen:
     "Wenn alles angesehen"
 

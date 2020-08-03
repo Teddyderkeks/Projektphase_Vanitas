@@ -1,7 +1,9 @@
-default infos_count = 0
+default infos_count_anan = 0
+default infos_count_kloth = 0
 default read_letter_anan = False
 default read_document_anan = False
 default read_computer_anan = False
+default face_anan_in_office = False
 
 label office:
     scene hall
@@ -55,38 +57,86 @@ label misunderstanding:
 
     jump selection_anan_office
 
-label letter_anan:
-    $ read_letter_anan =True
-    $ infos_count += 1
-
-    "Informationen über die frühen Tage von Aither und den Aufbau der Strukturen, Wichtigkeit dass jeder Happiness nimmt weil sonst Chaos ausbricht!"
-
-    jump selection_anan_office
-
-label document_anan:
-    $ read_document_anan =True
-    $ infos_count += 1
-
-    "Nicht einfach zu verstehende Diagramme und co über das menschliche Gehirn/Psychologie/Wirkungsweisen"
-
-    jump selection_anan_office
-
-label computer_anan:
-    $ read_computer_anan =True
-    $ infos_count += 1
-
-    "Liste von bekannten nicht-Pillennehmer; Atropos als neuester Eintrag mit Notation ihn zu beobachten und gegebenenfalls Maßnahmen zu ergreifen"
-
-    jump selection_anan_office
-
-label how_many_infos:
+label how_many_infos_anan:
     "Wie viele Sachen angesehen?"
 
-    if infos_count == 0:
-        "wla"
-    if infos_count == 1:
-        "wlaa"
-    if infos_count == 2:
-        "wlaa"
-    if infos_count == 3:
-        "wlaaa"
+    if infos_count_anan == 0:
+        "Anan kommt zurück, Atropos zeigt Einsicht, Anan fragt nach ob Atropos Kloth gesehen hat und schickt ihn zurück um die Pille zu nehmen"
+
+        jump understanding
+
+    if infos_count_anan == 1:
+        jump one_or_two_infos
+
+    if infos_count_anan == 2:
+        jump one_or_two_infos
+
+    if infos_count_anan == 3:
+        "Anan erwischt Atropos und es kommt zum riesen Streit, Atropos konfrontiert Anan mit den Hinweisen, Anan wirft ihn raus und kündigt den Rauswurf aus der Firma an"
+
+        jump visit_kloth
+
+label one_or_two_infos:
+    "Anan kommt zurück und bemerkt nichts; fragt nach ob Atropos Kloth schon gesehen hat und will ihn zurückschicken um die Pille zu nehmen"
+
+    "Anan mit den Tatsachen konfrontieren?"
+
+    menu:
+        "Ja":
+            jump face_anan
+        "Nein":
+            jump not_face_anan
+
+label face_anan:
+    "Riesen Streit, da Atropos in privaten Dokumenten geschnüffelt hat; Anan wirft Atropos raus und kündigt den Rauswurf aus der Firma an"
+
+    jump  visit_kloth
+
+label not_face_anan:
+    scene hall
+
+    "Atropos verlässt das Büro; Monolog über Sinn der Firma und Moralischen Aspekt"
+
+    "Firma OK oder böse?"
+
+    menu:
+        "OK":
+            jump ###prototyp
+        "Böse":
+            $ face_anan_in_office = True
+            jump visit_kloth
+
+label visit_kloth:
+    scene hall
+    if face_anan_in_office:
+        "Beschließt, Kloth aufzusuchen und ihn dazu zu befragen, da dieser ja Sekretär von Anan ist"
+
+    else:
+        "Atropos beschließt Kloth aufzusuchen und ihn nach diesen Sachen zu befragen, da er ja Sekretär von Anan ist"
+
+    "Kloth antwortet nicht auf Anrufe/Nachrichten; Beschluss sein Büro aufzusuchen;"
+
+    scene kloth_office
+
+    "Kloth nicht da, Atropos durchsucht das Büro"
+
+    "Was untersuchen? Oder Kloth suchen?"
+
+    jump selection_kloth_office_after_anan_office
+
+label search_kloth_in_stairwell:
+    scene hall
+
+    "Sucht Kloth,"
+
+    scene stairwell
+
+    "findet die Leiche im Treppenhaus"
+
+    scene hall
+
+    "Erinnerung an das Gespräch mit Kloth"
+
+    jump ###prototyp
+    
+label how_many_infos_kloth:
