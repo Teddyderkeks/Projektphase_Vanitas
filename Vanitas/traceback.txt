@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/selection_kloth_office.rpy", line 4, in script
+    if read_documnet:
+  File "game/selection_kloth_office.rpy", line 4, in <module>
+    if read_documnet:
+NameError: name 'read_documnet' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/selection_kloth_office.rpy", line 4, in script
+    if read_documnet:
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/selection_kloth_office.rpy", line 4, in <module>
+    if read_documnet:
+NameError: name 'read_documnet' is not defined
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+Vanitas 1.0
+Mon Aug 03 12:21:03 2020
