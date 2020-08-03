@@ -2,37 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at
-  File "game/intro.rpyc", line 3 and
-  File "game/script.rpy", line 3.
-
-The label quick_ending is defined twice, at
-  File "game/intro.rpyc", line 16 and
-  File "game/script.rpy", line 16.
-
-The label change is defined twice, at
-  File "game/intro.rpyc", line 21 and
-  File "game/script.rpy", line 21.
-
-The label take_pill is defined twice, at
-  File "game/intro.rpyc", line 39 and
-  File "game/script.rpy", line 39.
-
-The label not_take_pill is defined twice, at
-  File "game/intro.rpyc", line 46 and
-  File "game/script.rpy", line 46.
-
-The label later_take_pill is defined twice, at
-  File "game/intro.rpyc", line 53 and
-  File "game/script.rpy", line 53.
-
-The label shop is defined twice, at
-  File "game/intro.rpyc", line 60 and
-  File "game/script.rpy", line 60.
-
-The label conversation is defined twice, at
-  File "game/intro.rpyc", line 72 and
-  File "game/script.rpy", line 72.
+File "game/pill_kloth_search.rpy", line 86: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    if read_letter:
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Jul 30 12:11:44 2020
+Mon Aug 03 12:36:20 2020
