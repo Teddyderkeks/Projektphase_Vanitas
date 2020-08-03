@@ -138,5 +138,16 @@ label search_kloth_in_stairwell:
     "Erinnerung an das Gespräch mit Kloth"
 
     jump ###prototyp
-    
+
 label how_many_infos_kloth:
+
+    "Wie viele Sachen angesehen?"
+
+    if infos_count_kloth == 1:
+        jump one_or_two_infos
+
+    if infos_count_kloth == 2:
+        jump one_or_two_infos
+
+    if infos_count_kloth == 3:
+        jump
