@@ -1,6 +1,7 @@
-default read_letter = False
-default read_computer = False
-default read_document = False
+default read_letter_kloth = False
+default read_computer_kloth = False
+default read_document_kloth = False
+default secret_ending = False
 
 label search_kloth:
     scene hall
@@ -55,22 +56,22 @@ label search_kloth_without_anan_office:
 
     jump selection_kloth_office
 
-label letter:
-    $ read_letter = True
+label letter_kloth:
+    $ read_letter_kloth = True
 
     "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
 
     jump selection_kloth_office
 
-label computer:
-    $ read_computer = True
+label computer_kloth:
+    $ read_computer_kloth = True
 
     "Online Blog über Hinweise auf einen Bombenleger bzw Zerstörer von Aither"
 
     jump selection_kloth_office
 
-label document:
-    $ read_document = True
+label document_kloth:
+    $ read_document_kloth = True
 
     "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
 
@@ -88,6 +89,8 @@ label everything_seen:
             jump still_search_kloth
 
 label hints:
+    $ secret_ending = True
+
     scene hall
 
     "Monolog über Firma: ist sie so gut oder Böse, wenn sie einen Freund so in Verzweiflung stürzen kann?"
@@ -101,22 +104,28 @@ label hints:
         "Auslösen":
             jump trigger_bomb
 
-label defuse_bomb:
-    scene server_room
+label still_search_kloth:
+    scene hall
 
-    "Endsequenz, Atropos versucht die Bombe zu entschärfen, scheitert jedoch, da Kloth einen Failsafe eingebaut hat"
+    "Trifft auf Anan, dieser sucht ebenfalls nach Kloth"
 
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
+    scene stairwell
 
-    return
+    "Betreten gemeinsam Treppenhaus und finden Kloths Leiche"
 
-label trigger_bomb:
-    scene server_room
+    scene hall
 
-    "Endsequenz, jedoch stark verschwommen, da Symbiont starke Rolle übernimmt"
+    "ERINNERUNG an das Gespräch mit Kloth"
 
-    "SECRET ENDING: Atropos geht am nächsten Tag zu einer anderen Arbeit, ein paar Tage später Zeitungsbericht über Zerstörung von Aither"
+    scene hall
 
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
+    "Anan scheint etwas zu begreifen, ist enttäuscht aber nicht unglaublich überrascht;"
+    "Atropos wird wegen der gleichgültigen Reaktion wütend, Streit mit Anan mit anschließender Entscheidung, Kloths Hinweisen  nachzugehen und Bombe auszulösen"
 
-    return
+    "Was genau tun?"
+
+    menu:
+        "Bombe einfach hochjagen":
+            jump blow_up_bomb
+        "Leute retten, aber Gebäude sprengen":
+            jump rescue_people_and_blow_up
