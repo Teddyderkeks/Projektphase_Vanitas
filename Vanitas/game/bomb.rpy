@@ -2,7 +2,11 @@ label choice_bomb:
     scene hall
 
     "Monolog über Firma: ist sie so gut oder Böse, wenn sie einen Freund so in Verzweiflung stürzen kann?"
-    "Symbiont nimmt starken Einfluss und möchte Bombe entschärfen"
+    
+    if weak_symbiont:
+        "Symbiont versucht noch schwach Einfluss zu nehmen und möchte Bombe entschärfen"
+    else:
+        "Symbiont nimmt starken Einfluss und möchte Bombe entschärfen"
 
     "Bombe aufsuchen und auslösen oder entschärfen"
 

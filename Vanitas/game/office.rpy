@@ -138,12 +138,8 @@ label search_kloth_in_stairwell:
     scene stairwell
 
     "findet die Leiche im Treppenhaus"
-######################
-    scene hall
 
-    "Erinnerung an das Gespräch mit Kloth"
-
-    jump ###prototyp
+    jump leave_or_corpse
 
 label how_many_infos_kloth:
 
