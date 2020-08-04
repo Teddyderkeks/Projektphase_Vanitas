@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/pill_kloth_search.rpy", line 86: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    if read_letter:
-    ^
+File "game/office.rpy", line 109: expected 'label_name' not found.
+    jump 
+        ^
+
+File "game/office.rpy", line 146: expected 'label_name' not found.
+    jump 
+        ^
+
+File "game/rueffel.rpy", line 10: expected 'label_name' not found.
+    jump 
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 03 12:36:20 2020
+Tue Aug 04 12:56:13 2020

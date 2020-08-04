@@ -73,3 +73,27 @@ label selection_kloth_office:
                         jump still_search_kloth
                     "Kloth nicht suchen":
                         jump not_search_kloth
+
+label letter_kloth:
+    $ read_letter_kloth = True
+    $ infos_count_kloth += 1
+
+    "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
+
+    jump selection_kloth_office
+
+label computer_kloth:
+    $ read_computer_kloth = True
+    $ infos_count_kloth += 1
+
+    "Online Blog über Hinweise auf einen Bombenleger bzw Zerstörer von Aither"
+
+    jump selection_kloth_office
+
+label document_kloth:
+    $ read_document_kloth = True
+    $ infos_count_kloth += 1
+
+    "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
+
+    jump selection_kloth_office
