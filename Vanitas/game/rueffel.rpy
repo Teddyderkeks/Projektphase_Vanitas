@@ -7,7 +7,7 @@ label rueffel:
 
     menu:
         "Einsichtig":
-            jump ###back_to_work
+            jump back_to_work
         "Wütend/Agressiv":
             jump expulsion_office
 

@@ -4,6 +4,8 @@ default read_letter_anan = False
 default read_document_anan = False
 default read_computer_anan = False
 default face_anan_in_office = False
+default bomb_trigger_choice = False
+default last_try_find_kloth = False
 
 label office:
     scene hall
@@ -30,8 +32,8 @@ label conversation_with_anan:
             jump understanding
         "Sinn der Pille hinterfragen":
             jump questioning
-        #"Wütend":
-            #jump rueffel
+        "Wütend":
+            jump rueffel
 
 label understanding:
     scene hall
@@ -72,6 +74,7 @@ label how_many_infos_anan:
         jump one_or_two_infos
 
     if infos_count_anan == 3:
+        $ last_try_find_kloth = True
         "Anan erwischt Atropos und es kommt zum riesen Streit, Atropos konfrontiert Anan mit den Hinweisen, Anan wirft ihn raus und kündigt den Rauswurf aus der Firma an"
 
         jump visit_kloth
@@ -83,11 +86,13 @@ label one_or_two_infos:
 
     menu:
         "Ja":
+            $ last_try_find_kloth = True
             jump face_anan
         "Nein":
             jump not_face_anan
 
 label face_anan:
+    $ bomb_trigger_choice = True
     "Riesen Streit, da Atropos in privaten Dokumenten geschnüffelt hat; Anan wirft Atropos raus und kündigt den Rauswurf aus der Firma an"
 
     jump  visit_kloth
@@ -101,9 +106,10 @@ label not_face_anan:
 
     menu:
         "OK":
-            jump ###prototyp
+            jump back_to_work
         "Böse":
             $ face_anan_in_office = True
+            $ bomb_trigger_choice = True
             jump visit_kloth
 
 label visit_kloth:
@@ -132,7 +138,7 @@ label search_kloth_in_stairwell:
     scene stairwell
 
     "findet die Leiche im Treppenhaus"
-
+######################
     scene hall
 
     "Erinnerung an das Gespräch mit Kloth"
@@ -144,10 +150,46 @@ label how_many_infos_kloth:
     "Wie viele Sachen angesehen?"
 
     if infos_count_kloth == 1:
-        jump one_or_two_infos
+        jump choice_bomb
 
     if infos_count_kloth == 2:
-        jump one_or_two_infos
+        jump choice_bomb
 
     if infos_count_kloth == 3:
-        jump
+        if last_try_find_kloth:
+            jump last_search_kloth
+        else:
+            jump next_step_with_bomb
+
+label last_search_kloth:
+    "Kloth suchen?"
+
+    menu:
+        "Ja":
+            jump end_search_kloth
+        "Nein, diese Informationen sind genug":
+            jump next_step_with_bomb
+
+label end_search_kloth:
+    scene hall
+
+    "Sucht Kloth"
+
+    scene stairwell
+
+    "findet die Leiche im Treppenhaus und erinnert sich dass er ihn selbst gestoßen hat"
+    "Kann nicht begreifen, wie ein Produkt, welches Glücklichkeit verspricht so etwas bewirken kann/mit Menschen anstellen kann"
+
+    scene hall
+    "Verfällt in Wahnsinn,"
+    scene server_room
+    "sucht die Bombe auf und stellt den Timer auf 10 Minuten,"
+    scene hall
+    "geht dann (immer noch dem Wahnsinn verfallen) hinaus und Verbarrikadiert so viele Türen wie möglich"
+
+    scene server_room
+    "Kehrt zur Bombe zurück und setzt sich mit irrem Lachen davor und wartet bis sie runterzählt; hört auch klopfen und verwirrte Stimmen vor der Tür"
+
+    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
+
+    return

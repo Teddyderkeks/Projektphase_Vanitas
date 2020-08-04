@@ -57,31 +57,16 @@ label search_kloth_without_anan_office:
     jump selection_kloth_office
 
 label everything_seen:
+    $ secret_ending = True
     "Wenn alles angesehen"
 
     "Nach Kloth suchen oder Hinweisen nachgehen?"
 
     menu:
         "Hinweise":
-            jump hints
+            jump choice_bomb
         "Kloth":
             jump still_search_kloth
-
-label hints:
-    $ secret_ending = True
-
-    scene hall
-
-    "Monolog über Firma: ist sie so gut oder Böse, wenn sie einen Freund so in Verzweiflung stürzen kann?"
-    "Symbiont nimmt starken Einfluss und möchte Bombe entschärfen"
-
-    "Bombe aufsuchen und auslösen oder entschärfen"
-
-    menu:
-        "Entschärfen":
-            jump defuse_bomb
-        "Auslösen":
-            jump trigger_bomb
 
 label still_search_kloth:
     scene hall
@@ -101,10 +86,4 @@ label still_search_kloth:
     "Anan scheint etwas zu begreifen, ist enttäuscht aber nicht unglaublich überrascht;"
     "Atropos wird wegen der gleichgültigen Reaktion wütend, Streit mit Anan mit anschließender Entscheidung, Kloths Hinweisen  nachzugehen und Bombe auszulösen"
 
-    "Was genau tun?"
-
-    menu:
-        "Bombe einfach hochjagen":
-            jump blow_up_bomb
-        "Leute retten, aber Gebäude sprengen":
-            jump rescue_people_and_blow_up
+    jump next_step_with_bomb
