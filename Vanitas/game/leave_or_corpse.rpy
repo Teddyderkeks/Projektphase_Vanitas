@@ -56,7 +56,7 @@ label accept_conversation_kloth:
 
     "Was untersuchen?"
 
-    jump selection_kloth_office_after_corpse
+    jump choice_bomb
 
 label refuse_conversation_kloth:
     "Atropos lehnt ab, weil der Tag heute schon zu stressig war; Kloth wendet sich enttäuscht ab und redet im Hintergrund mit Chesis"
@@ -66,4 +66,4 @@ label refuse_conversation_kloth:
 
     "Was untersuchen?"
 
-    jump selection_kloth_office_after_corpse
+    jump choice_bomb
