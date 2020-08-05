@@ -1,4 +1,8 @@
+default kloth_office_choice = False
+
 label selection_kloth_office:
+    $ kloth_office_choice = True
+    
     if read_letter_kloth:
         if read_computer_kloth:
             if read_document_kloth:
@@ -79,8 +83,12 @@ label letter_kloth:
     $ infos_count_kloth += 1
 
     "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
-
-    jump selection_kloth_office
+    if kloth_office_choice:
+        jump selection_kloth_office
+    if kloth_office_back_to_work_choice:
+        jump selection_kloth_office_back_to_work
+    if kloth_office_after_anan_office:
+        jump selection_kloth_office_after_anan_office
 
 label computer_kloth:
     $ read_computer_kloth = True
@@ -88,7 +96,12 @@ label computer_kloth:
 
     "Online Blog über Hinweise auf einen Bombenleger bzw Zerstörer von Aither"
 
-    jump selection_kloth_office
+    if kloth_office_choice:
+        jump selection_kloth_office
+    if kloth_office_back_to_work_choice:
+        jump selection_kloth_office_back_to_work
+    if kloth_office_after_anan_office:
+        jump selection_kloth_office_after_anan_office
 
 label document_kloth:
     $ read_document_kloth = True
@@ -96,4 +109,9 @@ label document_kloth:
 
     "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
 
-    jump selection_kloth_office
+    if kloth_office_choice:
+        jump selection_kloth_office
+    if kloth_office_back_to_work_choice:
+        jump selection_kloth_office_back_to_work
+    if kloth_office_after_anan_office:
+        jump selection_kloth_office_after_anan_office

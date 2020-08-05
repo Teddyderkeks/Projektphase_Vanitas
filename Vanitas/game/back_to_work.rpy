@@ -1,4 +1,7 @@
+default back_to_work_bevore = False
+
 label back_to_work:
+    $ back_to_work_bevore = True
     "Monolog über Gespräch mit Anan, Gedanken über Wirksamkeit der Pille"
     "Sieht Plakate über Happiness und betrachtet sie"
 

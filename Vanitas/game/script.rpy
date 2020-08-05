@@ -73,7 +73,7 @@ label shop:
             jump work
 
 label conversation_with_seller:
-    "Gespräch mit Verkäufer, Informationen über Firma / Anan"
+    "Gespräch mit Kollegen, Informationen über Firma / Anan"
 
     if pill_taken:
         "Chesis kommt an und grüßt Atropos gut gelaunt"
@@ -161,14 +161,12 @@ label be_against:
     jump go_office
 
 label go_office:
+    "ZEITSPRUNG; Atropos realisiert, dass es Zeit ist Anan aufzusuchen"
+
     if straight_office:
-
-        "ZEITSPRUNG; Atropos realisiert, dass es Zeit ist Anan aufzusuchen"
-
         jump office
 
     else:
-
         "Will ich gehen?"
 
         menu:

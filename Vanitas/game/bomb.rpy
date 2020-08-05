@@ -2,7 +2,7 @@ label choice_bomb:
     scene hall
 
     "Monolog über Firma: ist sie so gut oder Böse, wenn sie einen Freund so in Verzweiflung stürzen kann?"
-    
+
     if weak_symbiont:
         "Symbiont versucht noch schwach Einfluss zu nehmen und möchte Bombe entschärfen"
     else:
@@ -24,7 +24,7 @@ label choice_bomb:
                 jump trigger_bomb
 
 label next_step_with_bomb:
-    if bomb_trigger_choice:
+    if rage_atropos_bomb:
         "Atropos verfällt in Rage, als er realisiert was Aither alles unternimmt um die Menschen zu kontrollieren, beschließt die Bombe auszulösen"
 
     "Was genau tun?"
@@ -90,14 +90,8 @@ label defuse_bomb:
 label trigger_bomb:
     scene server_room
 
-    if secret_ending:
-        "Endsequenz, jedoch stark verschwommen, da Symbiont starke Rolle übernimmt"
+    "Endsequenz, jedoch stark verschwommen, da Symbiont starke Rolle übernimmt"
 
-        "SECRET ENDING: Atropos geht am nächsten Tag zu einer anderen Arbeit, ein paar Tage später Zeitungsbericht über Zerstörung von Aither"
+    "SECRET ENDING: Atropos geht am nächsten Tag zu einer anderen Arbeit, ein paar Tage später Zeitungsbericht über Zerstörung von Aither"
 
-        $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-
-    else:
-        "Endsequenz, jedoch stark verschwommen, da Symbiont starke Rolle übernimmt"
-
-        $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
+    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
