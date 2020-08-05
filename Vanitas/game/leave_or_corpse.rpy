@@ -54,9 +54,11 @@ label accept_conversation_kloth:
     "Kloth denkt, dass Atropos nun auf seiner Seite ist und bittet ihn darum, ihm zu Helfen"
     "Sequenz: Atropos wird wütend und packt Kloth, Chesis kommt dazu und einer von beiden stößt Kloth die Treppe runter"
 
-    "Was untersuchen?"
-
-    jump choice_bomb
+    if back_to_work_bevore:
+        "Was untersuchen?"
+        jump selection_kloth_office_back_to_work
+    else:
+        jump choice_bomb
 
 label refuse_conversation_kloth:
     "Atropos lehnt ab, weil der Tag heute schon zu stressig war; Kloth wendet sich enttäuscht ab und redet im Hintergrund mit Chesis"
@@ -64,6 +66,8 @@ label refuse_conversation_kloth:
     "Atropos wird wütend auf Chesis, wie konnte dieser das ihrem Freund antun?"
     "GEGENWART Realisation: Kloth hatte etwas wichtiges zu sagen; macht sich auf den Weg zu seinem Büro um Hinweise zu suchen"
 
-    "Was untersuchen?"
-
-    jump choice_bomb
+    if back_to_work_bevore:
+        "Was untersuchen?"
+        jump selection_kloth_office_back_to_work
+    else:
+        jump choice_bomb

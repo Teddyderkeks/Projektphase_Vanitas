@@ -6,6 +6,7 @@ default read_computer_anan = False
 default face_anan_in_office = False
 default bomb_trigger_choice = False
 default last_try_find_kloth = False
+default rage_atropos_bomb = False
 
 label office:
     scene hall
@@ -93,6 +94,7 @@ label one_or_two_infos:
 
 label face_anan:
     $ bomb_trigger_choice = True
+
     "Riesen Streit, da Atropos in privaten Dokumenten geschnüffelt hat; Anan wirft Atropos raus und kündigt den Rauswurf aus der Firma an"
 
     jump  visit_kloth
@@ -108,6 +110,7 @@ label not_face_anan:
         "OK":
             jump back_to_work
         "Böse":
+            $ rage_atropos_bomb = True
             $ face_anan_in_office = True
             $ bomb_trigger_choice = True
             jump visit_kloth
@@ -131,6 +134,7 @@ label visit_kloth:
     jump selection_kloth_office_after_anan_office
 
 label search_kloth_in_stairwell:
+    $ rage_atropos_bomb = False
     scene hall
 
     "Sucht Kloth,"
@@ -158,6 +162,7 @@ label how_many_infos_kloth:
             jump next_step_with_bomb
 
 label last_search_kloth:
+    $ rage_atropos_bomb = True
     "Kloth suchen?"
 
     menu:

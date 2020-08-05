@@ -1,7 +1,6 @@
 default read_letter_kloth = False
 default read_computer_kloth = False
 default read_document_kloth = False
-default secret_ending = False
 
 label search_kloth:
     scene hall
@@ -57,7 +56,6 @@ label search_kloth_without_anan_office:
     jump selection_kloth_office
 
 label everything_seen:
-    $ secret_ending = True
     "Wenn alles angesehen"
 
     "Nach Kloth suchen oder Hinweisen nachgehen?"

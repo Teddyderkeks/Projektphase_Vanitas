@@ -1,5 +1,4 @@
 label selection_anan_office:
-
     if read_letter_anan:
         if read_computer_anan:
             if read_document_anan:
@@ -9,14 +8,14 @@ label selection_anan_office:
                     "Dokument":
                         jump document_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
         else:
             if read_document_anan:
                 menu:
                     "PC":
                         jump computer_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
             else:
                 menu:
                     "PC":
@@ -24,7 +23,7 @@ label selection_anan_office:
                     "Dokument":
                         jump document_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
     else:
         if read_computer_anan:
             if read_document_anan:
@@ -32,7 +31,7 @@ label selection_anan_office:
                     "Brief":
                         jump letter_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
             else:
                 menu:
                     "Brief":
@@ -40,7 +39,7 @@ label selection_anan_office:
                     "Dokument":
                         jump document_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
         else:
             if read_document_anan:
                 menu:
@@ -49,7 +48,7 @@ label selection_anan_office:
                     "PC":
                         jump computer_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
             else:
 
                 "Was im Büro ansehen?"
@@ -61,7 +60,7 @@ label selection_anan_office:
                     "Dokument":
                         jump document_anan
                     "Nichts":
-                        jump how_many_infos
+                        jump how_many_infos_anan
 
 label letter_anan:
     $ read_letter_anan =True
