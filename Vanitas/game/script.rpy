@@ -8,16 +8,7 @@ label start:
 
     "Will ich versuchen etwas zu ändern?"
 
-    menu:
-        "ja":
-            jump change
-        "nein":
-            jump quick_ending
-
-label quick_ending:
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-
-    return
+    jump change
 
 label change:
     scene street
