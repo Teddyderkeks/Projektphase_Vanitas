@@ -1,28 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/selection_kloth_office.rpy", line 82, in script
-    if kloth_office_choice:
-  File "game/selection_kloth_office.rpy", line 82, in <module>
-    if kloth_office_choice:
-NameError: name 'kloth_office_choice' is not defined
+  File "game/selection_kloth_office.rpy", line 120, in script
+    if infos_count_kloth = 1 or infos_count_kloth = 2:
+SyntaxError: invalid syntax (game/selection_kloth_office.rpy, line 120)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/selection_kloth_office.rpy", line 82, in script
-    if kloth_office_choice:
+  File "game/selection_kloth_office.rpy", line 120, in script
+    if infos_count_kloth = 1 or infos_count_kloth = 2:
   File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
     if renpy.python.py_eval(condition):
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/selection_kloth_office.rpy", line 82, in <module>
-    if kloth_office_choice:
-NameError: name 'kloth_office_choice' is not defined
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/selection_kloth_office.rpy, line 120)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Wed Aug 05 16:25:41 2020
+Fri Aug 07 14:54:30 2020

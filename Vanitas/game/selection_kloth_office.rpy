@@ -1,4 +1,5 @@
 default kloth_office_choice = False
+default password_right = False
 
 label selection_kloth_office:
     $ kloth_office_choice = True
@@ -94,7 +95,35 @@ label computer_kloth:
     $ read_computer_kloth = True
     $ infos_count_kloth += 1
 
-    "Online Blog über Hinweise auf einen Bombenleger bzw Zerstörer von Aither"
+    "Möglichkeit zur Eingabe Passwort"
+
+    python:
+        password = renpy.input ("Passwort:")
+
+    if password == "Sadness" or password == "sadness":
+        $ password_right = True
+        "Dialog"
+    else:
+        "anderer Dialog"
+
+    "Dialog nach Passwort"
+
+    "Blog wird gezeigt"
+
+    python:
+        password = password.strip()
+        
+    if password_right:
+        "Dialog korrektes Passwort"
+    else:
+        "Dialog inkorrektes Passwort"
+
+    "Dialog nach Blog"
+
+    if infos_count_kloth == 1 or infos_count_kloth == 2:
+        "Dialog wenn noch nicht alles gefunden"
+
+    "Dialog"
 
     if kloth_office_choice:
         jump selection_kloth_office
