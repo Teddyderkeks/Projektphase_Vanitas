@@ -2,7 +2,7 @@ default pill_taken = False
 default straight_office = False
 
 label start:
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
+    $ renpy.movie_cutscene("cutscenes_intro.mpg")
 
     scene atropos_falling
 
