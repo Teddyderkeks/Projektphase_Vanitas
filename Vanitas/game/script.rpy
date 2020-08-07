@@ -37,15 +37,11 @@ label take_pill:
     jump shop
 
 label not_take_pill:
-    $ pill_taken = False
-
     "Monolog: Tablette sowieso überflüssig, ich bin doch auch so glücklich"
 
     jump shop
 
 label later_take_pill:
-    $ pill_taken = False
-
     "Monolog: Tablette wichtig (mit Erklärung), aber die letzten Tage hab ich auch nix bemerkt"
 
     jump shop
