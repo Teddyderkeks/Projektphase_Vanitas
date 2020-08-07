@@ -38,7 +38,16 @@ label still_search_chesis:
             jump not_search_kloth
 
 label not_search_kloth:
+    if read_document_kloth:
+        1.Dialog
+
+    if infos_count_kloth = 1:
+        2.Dialog
+    if infos_count_kloth = 2:
+        2.Dialog
+
     scene laboratory
+
 
     "Atropos geht nach der Pause weiter seiner Arbeit nach"
 

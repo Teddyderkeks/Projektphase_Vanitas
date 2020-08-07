@@ -2,7 +2,7 @@ default kloth_office_choice = False
 
 label selection_kloth_office:
     $ kloth_office_choice = True
-    
+
     if read_letter_kloth:
         if read_computer_kloth:
             if read_document_kloth:
@@ -73,16 +73,16 @@ label selection_kloth_office:
                         jump computer_kloth
                     "Dokument":
                         jump document_kloth
-                    "Kloth":
-                        jump still_search_kloth
-                    "Kloth nicht suchen":
-                        jump not_search_kloth
 
 label letter_kloth:
     $ read_letter_kloth = True
     $ infos_count_kloth += 1
 
-    "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
+    if read_computer_kloth:
+        "anderer Dialog"
+    else:
+        "Liest sich wie eine Art Abschiedsbrief voller Angst und Zweifel über Aither"
+
     if kloth_office_choice:
         jump selection_kloth_office
     if kloth_office_back_to_work_choice:
@@ -107,7 +107,10 @@ label document_kloth:
     $ read_document_kloth = True
     $ infos_count_kloth += 1
 
-    "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
+    if read_computer_kloth:
+        "anderer Dialog"
+    else:
+        "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
 
     if kloth_office_choice:
         jump selection_kloth_office
