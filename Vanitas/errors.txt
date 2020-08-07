@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/office.rpy", line 109: expected 'label_name' not found.
-    jump 
-        ^
+File "game/pill.rpy", line 42: expected statement.
+    1.Dialog
+            ^
 
-File "game/office.rpy", line 146: expected 'label_name' not found.
-    jump 
-        ^
-
-File "game/rueffel.rpy", line 10: expected 'label_name' not found.
-    jump 
-        ^
+File "game/pill.rpy", line 45: expected statement.
+    2.Dialog
+            ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Aug 04 12:56:13 2020
+Fri Aug 07 14:52:28 2020

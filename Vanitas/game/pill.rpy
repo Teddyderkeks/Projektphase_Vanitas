@@ -39,12 +39,10 @@ label still_search_chesis:
 
 label not_search_kloth:
     if read_document_kloth:
-        1.Dialog
+        "1.Dialog"
 
-    if infos_count_kloth = 1:
-        2.Dialog
-    if infos_count_kloth = 2:
-        2.Dialog
+    if infos_count_kloth == 1 or infos_count_kloth == 2:
+        "2.Dialog"
 
     scene laboratory
 
