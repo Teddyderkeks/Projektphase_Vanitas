@@ -442,14 +442,14 @@ label explodierenPillegenommen:
 
     #"Was genau tun?"
 
-#    if bomb_trigger_choice:
+    #if bomb_trigger_choice:
         #menu:
-        #    "Bombe einfach hochjagen":
-        #        jump blow_up_bomb
-        #    "Leute retten, aber Gebäude sprengen":
-        #        jump rescue_people_and_blow_up
-        #    "Anan locken":
-        #        jump lure_anan
+            #"Bombe einfach hochjagen":
+            #   jump blow_up_bomb
+            #"Leute retten, aber Gebäude sprengen":
+            #   jump rescue_people_and_blow_up
+            #"Anan locken":
+            #   jump lure_anan
     #else:
     #    menu:
         #    "Bombe einfach hochjagen":
