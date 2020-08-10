@@ -257,7 +257,7 @@ label shop:
     "Dann kümmere ich mich am besten als allererstes darum."
 
 
-    scene shop
+    scene shop_1
 
     show zelos normal
 
@@ -313,7 +313,7 @@ label conversation_with_seller:
         stop music fadeout 1
         play music "Sound_Buro.mp3" fadeout 2
 
-        scene buero1
+        scene office_1
 
         # Atropos Gedanken
         "Hmm, es scheint noch keiner hier zu sein."
@@ -327,7 +327,7 @@ label conversation_with_seller:
         # Atropos Gedanken
         "Tatsächlich, sie sind es und sie scheinen sich eh noch zu unterhalten bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
 
-        scene buero2
+        scene office_2
 
         "Atropos" "Hey Leute."
 
@@ -693,7 +693,7 @@ label conversation_with_seller:
 
             "Atropos" "Ich sollte dann nun wirklich ins Labor."
 
-            scene laboratory
+            scene lab
             stop music fadeout 2
             play music "Sound_labor_sorglos.mp3" fadeout 3
 
@@ -806,7 +806,7 @@ label conversation_with_seller:
         stop music fadeout 1
         play music "Sound_Buro.mp3" fadeout 2
 
-        scene buero1
+        scene office_1
 
         # Atropos Gedanken
         "Hmm, es scheint noch keiner hier zu sein."
@@ -820,7 +820,7 @@ label conversation_with_seller:
         # Atropos Gedanken
         "Tatsächlich, sie sind es und sie scheinen sich eh noch zu unterhalten bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
 
-        scene buero2
+        scene office_2
 
         "Atropos" "Hey Leute."
 
@@ -1183,7 +1183,7 @@ label work:
 
             stop music fadeout 1
             play music "Sound_labor_sorglos.mp3" fadeout 2
-            scene laboratory
+            scene lab
 
             "Atropos" "Hey Era."
 
@@ -1416,7 +1416,7 @@ label anan_is_right:
     "Aber jetzt erstmal zurück ins Labor. Ich habe noch einiges zu tun. Ich darf Anan nicht erneut enttäuschen."
 
 
-    scene laboratory
+    scene lab
 
     "Atropos" "Hey Era."
 
@@ -1536,7 +1536,7 @@ label anan_is_right:
         "Ob er wohl mit allen Informationen Recht hatte?"
 
     # ab hier wieder alle
-    scene bildschirm
+    scene triumvirate
     show anan 1:
         xalign 0.5
     show atlas normal:
@@ -1593,7 +1593,7 @@ label anan_is_right:
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
-    scene laboratory
+    scene lab
     show era normal:
         xalign 0.25
     show narcais normal:
@@ -1670,7 +1670,7 @@ label why_important:
     "Vermutlich sollte ich jetzt erstmal ins Labor zurück, damit ich Anan nicht erneut enttäusche… dann sehe ich weiter…"
 
 
-    scene laboratory
+    scene lab
 
     "Atropos" "Hey Era."
 
@@ -1804,7 +1804,7 @@ label why_important:
         "Ob er wohl mit allen Informationen Recht hatte?"
 
     # ab hier wieder alle
-    scene bildschirm
+    scene triumvirate
     show anan 1:
         xalign 0.5
     show atlas normal:
@@ -1860,7 +1860,7 @@ label why_important:
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
-    scene laboratory
+    scene lab
     show era normal:
         xalign 0.25
     show narcais normal:
@@ -1956,7 +1956,7 @@ label be_against:
     "Aber jetzt erstmal zurück ins Labor…"
 
 
-    scene laboratory
+    scene lab
 
     show era normal:
         xalign 0.5
@@ -2045,7 +2045,7 @@ label be_against:
     "Era" "Ich… ich kümmere mich darum!"
     hide era
 
-    scene bildschirm
+    scene triumvirate
 
     show anan 1:
         xalign 0.5
@@ -2104,7 +2104,7 @@ label be_against:
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
-    scene laboratory
+    scene lab
     show era normal:
         xalign 0.25
     show narcais normal:
@@ -2228,7 +2228,7 @@ label good_mood:
         "Ob er wohl mit allen Informationen Recht hatte?"
 
 
-    scene bildschirm
+    scene triumvirate
     show anan 1:
         xalign 0.5
     show adres normal:
@@ -2284,7 +2284,7 @@ label good_mood:
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
-    scene laboratory
+    scene lab
 
     show era normal:
         xalign 0.25

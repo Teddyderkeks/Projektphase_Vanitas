@@ -1,5 +1,5 @@
 label pill:
-    scene laboratory
+    scene lab
 
     # Atropos Gedanken
     "Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
@@ -68,7 +68,7 @@ label pill:
 
 label still_search_chesis:
 
-    scene shop
+    scene shop_1
 
     # Atropos Gedanken
     "Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
@@ -93,7 +93,7 @@ label still_search_chesis:
     # Atropos Gedanken
     "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
-    scene beratung
+    scene shop_2
 
     # Atropos Gedanken
     "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
@@ -163,7 +163,7 @@ label still_search_chesis:
 
 label mittagspausemitchesis:
 
-    scene buero2
+    scene office_2
     show chesis laechelnd:
         xalign 0.5
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen anschließen?"
@@ -267,7 +267,7 @@ label not_search_kloth:
         # Atropos Gedanken
         "Und jetzt zurück ins Labor."
 
-        scene laboratory
+        scene lab
 
         jump laborpillende
 
@@ -297,7 +297,7 @@ label not_search_kloth:
             # Atropos Gedanken
             "Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
 
-            scene laboratory
+            scene lab
             jump laborpillende
 
 label laborpillende:

@@ -291,7 +291,7 @@ label search_kloth_without_anan_office:
             # Atropos Gedanken
             "So oder so. Ich muss ohnehin zurück zur Arbeit. Wenn Kloth nicht beim Labor ist, dann werde ich ihm einfach nochmal eine Nachricht schreiben."
 
-            scene laboratory
+            scene lab
             # Atropos Gedanken
             "Er ist nicht hier. Schade. Ich hatte schon Hoffnung gehabt. Aber er wird sich schon melden."
 
@@ -376,7 +376,7 @@ label everything_seen:
 
             # Atropos Gedanken
             "Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
-            scene laboratory
+            scene lab
             jump laborpillende
         "Ich muss versuchen den Hinweisen nachzugehen.":
             jump choice_bomb
@@ -472,7 +472,7 @@ label still_search_kloth:
 
     "Atropos" "Okay… die Fahrzüge sind komplett überfüllt. Wenn wir unten starten und uns nach oben vorarbeiten wollen, müssen wir das Treppenhaus nehmen."
 
-    scene treppenhaus2
+    scene stairs_up
 
     "Atropos" "Kloth? Kloth?"
 
