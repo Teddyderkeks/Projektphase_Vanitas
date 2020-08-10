@@ -68,10 +68,7 @@ label how_many_infos_anan:
 
         jump understanding
 
-    if infos_count_anan == 1:
-        jump one_or_two_infos
-
-    if infos_count_anan == 2:
+    if infos_count_anan == 1 or infos_count_anan == 2:
         jump one_or_two_infos
 
     if infos_count_anan == 3:
@@ -139,7 +136,7 @@ label search_kloth_in_stairwell:
 
     "Sucht Kloth,"
 
-    scene stairwell
+    scene stairs_down
 
     "findet die Leiche im Treppenhaus"
 
@@ -149,10 +146,7 @@ label how_many_infos_kloth:
 
     "Wie viele Sachen angesehen?"
 
-    if infos_count_kloth == 1:
-        jump choice_bomb
-
-    if infos_count_kloth == 2:
+    if infos_count_kloth == 1 or infos_count_kloth == 2:
         jump choice_bomb
 
     if infos_count_kloth == 3:
@@ -176,7 +170,7 @@ label end_search_kloth:
 
     "Sucht Kloth"
 
-    scene stairwell
+    scene stairs_down
 
     "findet die Leiche im Treppenhaus und erinnert sich dass er ihn selbst gestoßen hat"
     "Kann nicht begreifen, wie ein Produkt, welches Glücklichkeit verspricht so etwas bewirken kann/mit Menschen anstellen kann"

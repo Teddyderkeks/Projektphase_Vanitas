@@ -18,7 +18,7 @@ label expulsion_office:
 
     "Atropos verlässt das Büro wütend und läuft Chesis über den Weg, dieser ist bemerkenswert gleichgültig/steht auf Anans Seite"
 
-    scene laboratory
+    scene lab
 
     "ZEITSPRUNG nachdem Atropos ins Labor zurück ist"
 

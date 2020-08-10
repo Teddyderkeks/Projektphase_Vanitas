@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/office.rpy", line 109: expected 'label_name' not found.
-    jump 
-        ^
-
-File "game/office.rpy", line 146: expected 'label_name' not found.
-    jump 
-        ^
-
-File "game/rueffel.rpy", line 10: expected 'label_name' not found.
-    jump 
-        ^
+File "game/selection_kloth_office.rpy", line 255: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            "{i}Willst du die Bombe finden und entschärfen?" {/i}"
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Aug 04 12:56:13 2020
+Sat Aug 08 01:17:31 2020
