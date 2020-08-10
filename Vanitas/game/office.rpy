@@ -136,7 +136,7 @@ label search_kloth_in_stairwell:
 
     "Sucht Kloth,"
 
-    scene stairwell
+    scene stairs_down
 
     "findet die Leiche im Treppenhaus"
 
@@ -170,7 +170,7 @@ label end_search_kloth:
 
     "Sucht Kloth"
 
-    scene stairwell
+    scene stairs_down
 
     "findet die Leiche im Treppenhaus und erinnert sich dass er ihn selbst gestoßen hat"
     "Kann nicht begreifen, wie ein Produkt, welches Glücklichkeit verspricht so etwas bewirken kann/mit Menschen anstellen kann"
