@@ -85,6 +85,11 @@ define gui.notify_text_size = 24
 ## The size of the game's title.
 define gui.title_text_size = 75
 
+## Custom Cursor in Game #######################################################
+##
+
+## This sets the cursor to an custom cursor; if None, it's the system cursor.
+define config.mouse = {"default": [("gui/cursor1.png", 0, 0)]}
 
 ## Main and Game Menus #########################################################
 
