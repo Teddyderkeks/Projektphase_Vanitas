@@ -103,6 +103,8 @@ define config.end_splash_transition = fade
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
+##Musik Main Menu
+define config.main_menu_music = "Sound_hauptmenu.mp3"
 
 ## Dialogue ####################################################################
 ##
