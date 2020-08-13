@@ -1,7 +1,6 @@
 ﻿################################################################################
 ## Initialization
 ################################################################################
-
 init offset = -1
 
 
@@ -294,16 +293,17 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
         yalign 0.5
 
         spacing gui.navigation_spacing
 
         if main_menu:
+            xpos 350
 
             textbutton _("Start") action Start()
 
         else:
+            xpos gui.navigation_xpos
 
             textbutton _("History") action ShowMenu("history")
 
@@ -374,10 +374,9 @@ screen main_menu():
         vbox:
             text "[config.name!t]":
                 style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+                xpos -1100
+                ypos -800
+                font "vivaldi.ttf"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -588,17 +587,17 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-
+    $ left_side = True
     tag menu
 
     use file_slots(_("Speichern"))
 
 
 screen load():
-
+    $ left_side = True
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("Laden"))
 
 
 screen file_slots(title):
