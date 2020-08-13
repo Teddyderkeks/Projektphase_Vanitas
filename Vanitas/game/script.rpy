@@ -3,7 +3,9 @@ default straight_office = False
 default neiro_unterhalten= False
 
 label start:
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    stop music
+    $ renpy.movie_cutscene("cutscene_introsound.mpg")
+    play music "Sound_freeze.mp3" fadeout 2000
 
     scene atropos_falling
 
@@ -25,11 +27,12 @@ label start:
     # Symbiont
     "{i}Lebe wohl. {/i}"
 
-
     jump change
+
 
 label change:
     scene street
+    stop music fadeout 2000
     play music "Sound_verkehrsraum_demo.mp3" fadeout 1
 
     # Symbiont
@@ -54,10 +57,10 @@ label change:
     "{i}Jeder bekommt von Aither geeignete Arbeit zugeteilt. Arbeit, die ihn glücklich macht.{/i}"
 
     # Atropos Gedanken
-    "Ich kann mir nicht vorstellen direkt unter Anan zu arbeiten. Als rechte Hand von einem der großen Drei trägt man bestimmt viel Verantwortung. Das merkt man Kloth auch an."
+    "Ich kann mir nicht vorstellen, direkt unter Anan zu arbeiten. Als rechte Hand von einem der 'Großen Drei' trägt man bestimmt viel Verantwortung. Das merkt man Kloth auch an."
 
     # Symbiont
-    "{i}Anan hat in dieser Welt wirklich einiges verändert. Deswegen ist es eine Ehre für ihn und Aither zu arbeiten.{/i}"
+    "{i}Anan hat in dieser Welt wirklich einiges verändert. Deswegen ist es eine Ehre, für ihn und Aither zu arbeiten.{/i}"
 
     # Atropos Gedanken
     "Und nicht nur er. Auch Atlas und Adrés. Ohne ihr Triumvirat wäre die Welt vermutlich immer noch im Krieg versunken."
@@ -81,7 +84,7 @@ label change:
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
 
-    "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
+    "Durchsage" "{i} Nimm Happiness ein und lebe dein Leben so, wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit.{/i}"
 
     # Atropos Gedanken
     "Happiness…"
@@ -104,7 +107,7 @@ label change:
     "Aber war ich in den letzten Tagen deswegen wirklich weniger glücklich?"
 
     # Symbiont
-    "{i}Nimm die Pille, Atropos. Du brauchst sie um glücklich zu sein. {/i}"
+    "{i}Nimm die Pille, Atropos. Du brauchst sie, um glücklich zu sein. {/i}"
 
     # Atropos Gedanken
     "Ich habe aber nicht den Eindruck, dass sich viel verändert hat…"
@@ -123,7 +126,7 @@ label change:
 #            jump take_pill
 #        "Ich nehme die Pille nicht- ich brauche sie nicht!":
 #            jump not_take_pill
-#        "Ich nehme die Pille sobald ich auf der Arbeit bin.":
+#        "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
 #            jump later_take_pill
 
 label menustart:
@@ -133,7 +136,7 @@ label menustart:
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
             jump back_pill_decision
-        "Ich nehme die Pille sobald ich auf der Arbeit bin.":
+        "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
             jump back_pill_decision
 
 # muss am Ende wieder rausgelöscht werden!!!!
@@ -158,13 +161,13 @@ label take_pill:
     "Es war ein großer Fehler gewesen in letzter Zeit nicht auf die regelmäßige Einnahme zu achten."
 
     # Atropos Gedanken
-    "Wenn ich genauer darüber nachdenke… Vermutlich war ich nicht so glücklich wie ich hätte sein können."
+    "Wenn ich genauer darüber nachdenke… Vermutlich war ich nicht so glücklich, wie ich hätte sein können."
 
     # Atropos Gedanken
     "Aber ich möchte glücklich sein. Ich möchte genauso glücklich sein wie alle anderen."
 
     # Atropos Gedanken
-    "Ohne die Pille habe ich mich irgendwie so… leer gefühlt, da waren Gedanken gewesen, die ich nicht haben wollte."
+    "Ohne die Pille habe ich mich irgendwie so… leer gefühlt. Da waren Gedanken gewesen, die ich nicht haben wollte."
 
     # Atropos Gedanken
     "Aber ich beginne mich langsam wieder besser zu fühlen. Ich fühle mich gut. Zufrieden."
@@ -183,8 +186,9 @@ label take_pill:
 
     # Symbiont
     "{i}Gut gemacht, Atropos. Das ist es was wichtig ist: Ein glückliches Leben und genau dieses Leben führst du nun wieder. {/i}"
+
     # Symbiont
-    "{i}Vergiss niemals glücklich zu sein und immer deinem Glück zu folgen. {/i}"
+    "{i}Vergiss niemals, glücklich zu sein und immer deinem Glück zu folgen. {/i}"
 
     # Symbiont
     "{i}In jeder einzelnen Entscheidung. {/i}"
@@ -212,10 +216,10 @@ label not_take_pill:
     "Ich war glücklich und ich bin glücklich. Dafür brauche ich die Pille nicht. Sie scheint fast nur ein Placebo zu sein."
 
     # Atropos Gedanken
-    "Die Hauptsache ist doch, dass ich glücklich bin und nicht wie ich dieses Glück erreiche."
+    "Die Hauptsache ist doch, dass ich glücklich bin und nicht, wie ich dieses Glück erreiche."
 
     # Atropos Gedanken
-    "Ich werde die Tablette einfach weiterhin nicht nehmen. Dass wird schon keinem auffallen. Und wenn doch, fange ich einfach an sie wieder zu nehmen."
+    "Ich werde die Tablette einfach weiterhin nicht nehmen. Das wird schon keinem auffallen. Und wenn doch, fange ich einfach an, sie wieder zu nehmen."
 
     # Atropos Gedanken
     "Schaden wird sie mir auf keinen Fall."
@@ -225,7 +229,7 @@ label not_take_pill:
 
 label later_take_pill:
     # Atropos Gedanken
-    "Ich nehme die Pille sobald ich auf der Arbeit bin. Das sollte ausreichen."
+    "Ich nehme die Pille, sobald ich auf der Arbeit bin. Das sollte ausreichen."
 
     # Atropos Gedanken
     "Ich weiß ja, dass die Tablette wichtig ist. Nur durch sie kann ich wirklich glücklich sein…"
@@ -234,7 +238,7 @@ label later_take_pill:
     "Dennoch… Ich habe die letzten Tage keinen großen Unterschied bemerkt, obwohl ich sie unregelmäßig eingenommen hatte."
 
     # Atropos Gedanken
-    "Es wird schon keine Auswirkungen gehabt haben, dass ich sie die paar Mal vergessen habe."
+    "Es wird schon keine Auswirkungen haben, dass ich sie die paar Mal vergessen habe."
 
     # Atropos Gedanken
     "Sicherheitshalber werde ich sie heute trotzdem wieder einnehmen. Ich möchte mein Glück nicht riskieren."
@@ -243,7 +247,7 @@ label later_take_pill:
     "Bei allen anderen wirkt sie immerhin auch. Alle Menschen sind glücklich seit Anan und die anderen sie uns zum Geschenk gemacht haben."
 
     # Atropos Gedanken
-    "Das ist kein Vergleich zu dem wie kaputt und zerstört die Welt zuvor war."
+    "Das ist kein Vergleich zu dem, wie kaputt und zerstört die Welt zuvor war."
 
     # Atropos Gedanken
     "Ich sollte dankbarer für diese Chance sein und mein Glück nicht riskieren."
@@ -255,22 +259,22 @@ label shop:
     scene street
 
     # Atropos Gedanken
-    "Ich bin heute echt früh dran. Da ist schon Aither und ich habe noch reichlich Zeit bis ich mit der Arbeit anfangen muss."
+    "Ich bin heute echt früh dran. Da ist schon Aither und ich habe noch reichlich Zeit, bis ich mit der Arbeit anfangen muss."
 
     # Atropos Gedanken
     "Zum Glück wohne ich nicht so weit von der Filiale entfernt. Ich könnte es echt schlimmer treffen."
 
     # Atropos Gedanken
-    "Ich verstehe nicht wie Kloth so weit außerhalb vom Zentrum Astoas leben kann. Er hat ein großes Haus, aber dafür fährt er immer Ewigkeiten bis zur Arbeit."
+    "Ich verstehe nicht, wie Kloth so weit außerhalb vom Zentrum Astoas leben kann. Er hat ein großes Haus, aber dafür fährt er immer Ewigkeiten bis zur Arbeit."
 
     # Atropos Gedanken
-    "Egal… was muss ich heute nochmal tun?"
+    #"Egal… was muss ich heute nochmal tun?"
 
     # Atropos Gedanken
-    "Ach stimmt ja. Die neuen Proben, die gestern von Adrés Filiale eingetroffen sind müssen analysiert und ausgewertet werden."
+    #"Ach stimmt ja. Die neuen Proben, die gestern von Adrés Filiale eingetroffen sind, müssen analysiert und ausgewertet werden."
 
     # Atropos Gedanken
-    "Dann kümmere ich mich am besten als allererstes darum."
+    #"Dann kümmere ich mich am besten als Allererstes darum."
 
 
     scene shop_1
@@ -279,7 +283,7 @@ label shop:
 
     "Zelos" "Guten Morgen und einen wunderschönen Tag, was…? Ach, du bist es Atropos- heute extra überpünktlich?"
 
-    "Atropos" "Hey, Zelos. Ja, ich bin heute etwas zu früh aufgewacht und dachte mir, dass ich den Tag besser nutze als noch weiter liegen zu bleiben."
+    "Atropos" "Hey, Zelos. Ja, ich bin heute etwas zu früh aufgewacht und dachte mir, dass ich den Tag besser nutze, als noch weiter liegen zu bleiben."
 
     "Zelos" "Eifrig und strebsam, das lobe ich mir. Aber man kann auch gar nicht anders als seine Arbeit hier zu lieben, natürlich ist man da gerne bereit mehr Zeit zu investieren."
 
@@ -303,11 +307,11 @@ label conversation_with_seller:
     show zelos normal
     "Atropos" "Ich wollte ohnehin mal bei Tycho und den anderen im Büro vorbeischauen. Wir sehen uns später."
 
-    "Zelos" "Richte den Anderen schöne Grüße von mir aus."
+    "Zelos" "Richte den Anderen schöne Grüße von mir aus!"
 
     "Atropos" "Klar, mache ich."
 
-    "Zelos" "Wir machen heute um 12:15 Mittagspause. Du kommst doch mit uns in die Mensa, oder?"
+    "Zelos" "Wir machen heute um 12:15 Uhr Mittagspause. Du kommst doch mit uns in die Mensa, oder?"
 
     "Atropos" "Ich weiß noch nicht, ob ich es zeitlich schaffe. Es türmt sich heute ein Berg an Arbeit, aber ich versuche es auf alle Fälle."
 
@@ -315,7 +319,7 @@ label conversation_with_seller:
 
     "Atropos" "(lacht) Nichts… alles gut, lass dich von mir nicht länger aufhalten. Wir sehen uns."
 
-    "Zelos" "Bis dann und einen wunderschön glücklichen Tag in der besten Firma der Welt."
+    "Zelos" "Bis dann und einen wunderschön glücklichen Tag in der besten Firma der Welt!"
 
 
 
@@ -350,7 +354,7 @@ label conversation_with_seller:
         show ireia normal:
             xalign 0.5
 
-        "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen. Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich."
+        "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen! Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich!"
 
         "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
 
@@ -381,7 +385,7 @@ label conversation_with_seller:
         show neiro normal:
             xalign 0.25
 
-        "Neiro" "Oh… ich hatte euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
+        "Neiro" "Oh… ich habe euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
 
         "Atropos" "Neiro wie er leibt und lebt. (lacht)"
 
@@ -599,18 +603,18 @@ label conversation_with_seller:
             scene hall
 
             # Atropos Gedanken
-            "Es war schön mal wieder eine Runde mit ihnen zu reden."
+            "Es war schön, mal wieder eine Runde mit ihnen zu reden."
 
             # Atropos Gedanken
-            "Ich sollte öfters mal bei ihnen vorbeischauen."
+            "Ich sollte öfter mal bei ihnen vorbeischauen."
 
 
             show chesis smiling:
                 xalign 0.5
 
-            "Chesis" "Guten Morgen."
+            "Chesis" "Guten Morgen!"
 
-            "Atropos" "Hey Chesis, wie schön dir über den Weg zu laufen."
+            "Atropos" "Hey Chesis, wie schön dir über den Weg zu laufen!"
 
             "Atropos" "Hast du Kloth heute schon gesehen?"
 
@@ -626,11 +630,11 @@ label conversation_with_seller:
 
             "Chesis" "Klar, wie könnte ich das vergessen. Es ist schade, dass Kloth uns keine Gesellschaft mehr leistet, aber es ist auch so schön. Und wir sehen ihn ja nach der Arbeit."
 
-            "Atropos" "Alleine das eine Mal als Kloth zu uns gelaufen kam, um uns zu erzählen, dass er Anans Chefsekretär werden soll!"
+            "Atropos" "Alleine das eine Mal, als Kloth zu uns gelaufen kam, um uns zu erzählen, dass er Anans Chefsekretär werden soll!"
 
             show chesis grinning2
 
-            "Chesis" "Stimmt, das war unvergesslich gewesen. Kloth kam zu uns gelaufen und…"
+            "Chesis" "Stimmt, das war unvergesslich! Kloth kam zu uns gelaufen und…"
 
 # hier fehlt noch sepiafilter
             show sepia
@@ -649,19 +653,19 @@ label conversation_with_seller:
 
             "Chesis" "Erzähl schon."
 
-            "Kloth" "Ihr wisst doch, dass ich gestern zu Anan gerufen wurde. Ich hatte mich ja da schon gefragt, wie ich zu dieser Ehre gekommen bin…"
+            "Kloth" "Ihr wisst doch, dass ich gestern zu Anan gerufen wurde. Ich hatte mich ja da schon gefragt, wie ich zu dieser Ehre kam…"
 
-            "Atropos" "Und? Was war der Grund gewesen?"
+            "Atropos" "Und? Was war der Grund?"
 
             "Kloth" "Es ist so unglaublich! Ich wurde zu seinem Chefsekretär befördert. Ich kann es immer noch nicht richtig fassen…"
 
             show chesis grinning
 
-            "Chesis" "Herzlichen Glückwunsch, du hast es verdient."
+            "Chesis" "Herzlichen Glückwunsch, du hast es verdient!"
 
             "Atropos" "Kloth, das sind ja fantastische Neuigkeiten. Ich freue mich riesig für dich!"
 
-            "Kloth" "Es war schon immer mein Traum gewesen der Menschheit dienen zu können und als Anans Chefsekretär ist mir das nun wirklich möglich!"
+            "Kloth" "Es war schon immer mein Traum, der Menschheit dienen zu können und als Anans Chefsekretär ist mir das nun wirklich möglich!"
 
             "Chesis" "Wenn jemand von uns so etwas erreichen konnte, dann du."
 
@@ -669,7 +673,7 @@ label conversation_with_seller:
 
             "Kloth" "Und Atropos, bei dir geht ja auch schon länger das Gerücht um, dass du zum Leiter des Labors befördert werden sollst!"
 
-            "Atropos" "Wir erklimmen wohl alle gerade die Leiter. Aber ich könnte mir auch nichts Anderes für mein Leben vorstellen."
+            "Atropos" "Wir erklimmen wohl alle gerade die Leiter. Aber ich könnte mir auch nichts anderes für mein Leben vorstellen."
 
             "Atropos" "Wir helfen den Menschen dabei ein glückliches Leben zu führen."
 
@@ -696,9 +700,9 @@ label conversation_with_seller:
 
             show chesis grinning
 
-            "Chesis" "Damals ohne euch und ohne die Happinesspille war ich einsam und verloren gewesen. Alles hatte sich geändert, nachdem ich euch kennenlernen durfte."
+            "Chesis" "Damals, ohne euch und ohne die Happinesspille, war ich einsam und verloren gewesen. Alles hatte sich geändert, nachdem ich euch kennenlernen durfte."
 
-            "Atropos" "Du hattest uns damals auch sehr geholfen. Es war gut gewesen jemanden in der Gruppe zu haben, der etwas ruhiger und bedachter war. (lacht)"
+            "Atropos" "Du hast uns damals auch sehr geholfen. Es ist gut jemanden in der Gruppe zu haben, der etwas ruhiger und bedachter ist. (lacht)"
 
             show chesis smiling
 
@@ -764,7 +768,7 @@ label conversation_with_seller:
             # Atropos Gedanken
             "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
 
-            "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
+            "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen musst."
 
             "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
@@ -774,13 +778,15 @@ label conversation_with_seller:
 
             "Era" "…"
 
-            "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
+            "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir, wir könnten uns vielleicht mal treffen?"
 
             # Atropos Gedanken
-            "Das war mal wieder eine 180 Grad Wendung bei ihr gewesen. Manchmal frage ich mich…"
+            "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+
 
             # Symbiont
-            "{i}Sie ist einfach ein wenig unsicher. Es wirkt als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+            "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+
 
             # Symbiont
             "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
@@ -807,7 +813,7 @@ label conversation_with_seller:
 
             "Narcais" "Dies birgt allerdings bekannter Weise hohe Risiken, weil die Umweltverschmutzungen durch den Krieg auch Kinder betreffen können."
 
-            "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happinesspille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
+            "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happiness-Pille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
 
             "Narcais" "Die Kinder sollten ebenfalls in der Lage sein eine glückliche Kindheit führen zu dürfen! Wenn ich an meine eigene Kindheit denke…"
 
@@ -904,7 +910,7 @@ label conversation_with_seller:
 
         "Atropos" "Neiro wie er leibt und lebt. (lacht)"
 
-        "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte von dir keine schlechteren Ergebnisse deswegen sehen."
+        "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte deswegen von dir keine schlechteren Ergebnisse sehen."
 
         "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
 
@@ -913,7 +919,7 @@ label conversation_with_seller:
 
         "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
 
-        "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zu feiern haben. Das Glück der Menschen entsteht nicht von selbst."
+        "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zum Feiern haben. Das Glück der Menschen entsteht nicht von selbst."
 
         "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
 
@@ -929,9 +935,9 @@ label conversation_with_seller:
 
         "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
 
-        "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch hatte Anan mir eine Einladung geschenkt."
+        "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch schenkte Anan mir eine Einladung."
 
-        "Tycho" "Ich hatte mein Glück kaum fassen können. Und es war berauschend gewesen. All das Essen im Überfluss und dann die Musik, der Tanz…"
+        "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
 
         "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
 
@@ -942,11 +948,11 @@ label conversation_with_seller:
 
         "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
 
-        "Atropos" "Habe ich dich gerade richtig verstanden? Die großen Drei alle hier in Astoa?"
+        "Atropos" "Habe ich dich gerade richtig verstanden? Die großen Drei, alle hier in Astoa?"
 
-        "Ireia" "Das sind ja unglaubliche Neuigkeiten. Wieso hast du uns nicht schon früher davon erzählt?"
+        "Ireia" "Das sind ja unglaubliche Neuigkeiten! Wieso hast du uns nicht schon früher davon erzählt?"
 
-        "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört hatte, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
+        "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
 
         "Atropos" "Ich frage mich, wie die beiden wohl sind. Natürlich kennt man ihre Namen… immerhin sind Anan, Atlas und Adrés die Gründer von Aither und diejenigen, die den Krieg beendet haben…"
 
@@ -954,15 +960,15 @@ label conversation_with_seller:
 
         "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
 
-        "Ireia" "Da haben sie Wichtigeres zu tun als sich darum zu kümmern, dass wir Informationen über sie bekommen."
+        "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
 
         "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
 
         "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
 
-        "Armene" "Nein… ich wollte mich nur am Gespräch beteiligen…"
+        "Armene" "Nein… Ich wollte mich nur am Gespräch beteiligen…"
 
-        "Neiro" "Um was geht es? Tut mir leid, ich war mit den Gedanken kurz abgeschweift…"
+        "Neiro" "Um was geht es? Tut mir leid, ich bin mit den Gedanken kurz abgeschweift…"
 
         "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
 
@@ -980,7 +986,7 @@ label conversation_with_seller:
         menu:
             "Ich hätte gerne mehr Informationen über die Gründungsfeier.":
                 jump entscheidung4_1V2
-            "Ich würde mich gerne noch etwas mehr über die großen Drei unterhalten.":
+            "Ich würde mich gerne noch etwas mehr über die Großen Drei unterhalten.":
                 jump entscheidung4_2V2
             "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
                 jump entscheidung4_3V2
@@ -1013,7 +1019,7 @@ label conversation_with_seller:
 
             "Neiro" "Nein, soweit ich das weiß, werden alle drei live geschaltet."
 
-            "Ireia" "Das gab es ja noch nie. Normalerweise kommunizieren wir nicht mit dem Rest der Welt… warum sollten wir auch?"
+            "Ireia" "Das gab es ja noch nie! Normalerweise kommunizieren wir nicht mit den Menschen außerhalb von Astoa… warum sollten wir auch?"
 
             "Tycho" "Das sind wirklich unglaubliche Neuigkeiten! Ich freue mich schon darauf. Die diesjährige Gründungsfeier wird unbeschreiblich und unvergesslich werden!"
 
@@ -1039,11 +1045,11 @@ label conversation_with_seller:
 
             "Ireia" "Sie wollen das Beste für die Welt, genauso wie Anan. Ist das nicht das Einzige, das zählt?"
 
-            "Tycho" "Ihnen ist unser Wohl am aller Wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht mir das vorzustellen!"
+            "Tycho" "Ihnen ist unser Wohl am aller Wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht, mir das vorzustellen!"
 
             "Ireia" "Wir wären immer noch im Krieg versunken. Ohne die Happiness-Pille, ohne glückliche Menschen würde es nur weiter Streit und Zwietracht geben."
 
-            "Atropos" "Ich frage mich immer noch wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
+            "Atropos" "Ich frage mich immer noch, wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
 
             "Tycho" "Natürlich durch unsere Glücklichkeit: Happiness. Das ist das Einzige, was wirklich zählt. Spielen andere Gründe oder genauere Erläuterungen eine Rolle?"
 
@@ -1075,18 +1081,18 @@ label conversation_with_seller:
 
             "Neiro" "Es geht gerade um Anan? Was ist mit ihm? Ist er nicht toll? So zuvorkommend und aufmerksam- einen besseren Chef kann man sich nicht wünschen."
 
-            "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich meine Pille vergessen zu nehmen, weil ich eine Zeit lang krank gewesen war."
+            "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich vergessen meine Pille zu nehmen, weil ich eine Zeit lang krank war."
 
             "Atropos" "Das hattest du ja noch nie erwähnt… wie ist er damit umgegangen?"
 
-            "Tycho" "Er war unglaublich verständnisvoll gewesen und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
+            "Tycho" "Er war unglaublich verständnisvoll und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
 
             # Atropos Gedanken
             "Ob Anan wohl auch bei mir so verständnisvoll reagieren würde, wenn er mitbekommen würde, dass ich die Pille nicht genommen habe?"
 
             "Tycho" "Durch dieses Ereignis ist mir noch einmal bewusst geworden, wie wichtig die Happiness-Pille eigentlich ist."
 
-            "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht wie sehr ich es damals bereut hatte."
+            "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht, wie sehr ich es damals bereut hatte."
 
             "Tycho" "Anan gibt alles, damit es uns gut geht und wir glücklich sind. Wie hatte ich es ihm nur so danken können?"
 
@@ -1120,9 +1126,9 @@ label conversation_with_seller:
 
             "Tycho" "Du kannst dich auf uns verlassen. Das wird die beste Totenehrung dieses Jahres, versprochen."
 
-            "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen am planen was es alles zu Essen geben soll."
+            "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen dabei zu planen, was es alles zu Essen geben soll."
 
-            "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
+            "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb, war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
 
             "Tycho" "Es war dafür aber auch eine wunderschöne Ehrung gewesen, die deinem Vater würdig gewesen war."
 
@@ -1135,7 +1141,7 @@ label conversation_with_seller:
         label nachentscheidung4V2:
             "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
-            "Tycho" "Mach´s gut, bis zur Mittagspause."
+            "Tycho" "Mach´s gut, bis zur Mittagspause!"
 
             "Ireia" "Auf Wiedersehen."
 
@@ -1158,15 +1164,15 @@ label work:
 
     "Atropos" "Als Kind hätte er sich vermutlich auch niemals vorstellen können eines Tages Chefsekretär von Anan zu werden."
 
-    "Zelos" "Also dann, ich muss nun wirklich weitermachen. Aither öffnet bald und die Pillen lagern sich weder von selbst ein noch verkaufen sie sich von allein."
+    "Zelos" "Also dann, ich muss nun wirklich weitermachen. Aither öffnet bald und die Pillen lagern sich weder von selbst ein, noch verkaufen sie sich von allein."
 
-    "Atropos" "Mach´s gut, wir sehen uns."
+    "Atropos" "Mach´s gut, wir sehen uns!"
 
-    "Zelos" "Ach Atropos, ich vergaß: Bist du um 12:15 in der Mensa dabei?"
+    "Zelos" "Ach Atropos, ich vergaß: Bist du um 12:15 Uhr in der Mensa dabei?"
 
     "Atropos" "Ich denke, ich müsste es schaffen. Bis dann, man sieht sich."
 
-    "Zelos" "Bis nachher und einen wunderschön glücklichen Tag in der besten Firma der Welt."
+    "Zelos" "Bis nachher und einen wunderschön glücklichen Tag in der besten Firma der Welt!"
 
     label worknachzelos:
 
@@ -1199,7 +1205,7 @@ label work:
 
             "Atropos" "Ja, natürlich, ich stelle sie dir heute fertig."
 
-            "Anan" "Vielen Dank. Wir alle schätzen deine Arbeit sehr. Denk immer daran: Den Glücklichen gehört die Welt. Kein Mensch sollte unglücklich sein."
+            "Anan" "Vielen Dank! Wir alle schätzen deine Arbeit sehr. Denk immer daran: Den Glücklichen gehört die Welt. Kein Mensch sollte unglücklich sein."
 
             "Atropos" "Ich werde es nicht vergessen!"
 
@@ -1218,7 +1224,8 @@ label work:
             "Er war höflich gewesen, aber gleichzeitig so einnehmend. Man kann ihm keinen Wunsch abschlagen."
 
             # Atropos Gedanken
-            "Und dass er sich die Zeit genommen hat mit mir zu sprechen, obwohl er Anan ist… Er kümmert sich wirklich um das Glück aller Menschen. Es ist nicht nur leeres Gerede."
+            "Und dass er sich die Zeit genommen hat, mit mir zu sprechen, obwohl er Anan ist… Er kümmert sich wirklich um das Glück aller Menschen. Es ist nicht nur leeres Gerede."
+
 
             # Atropos Gedanken
             "Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
@@ -1265,10 +1272,11 @@ label work:
             "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
 
             # Atropos Gedanken
-            "Das war mal wieder eine 180 Grad Wendung bei ihr gewesen. Manchmal frage ich mich…"
+            "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+
 
             # Symbiont
-            "{i}Sie ist einfach ein wenig unsicher. Es wirkt als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+            "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
             # Symbiont
             "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
@@ -1279,11 +1287,11 @@ label work:
 
             "Atropos" "Dann ist es abgemacht."
 
-            "Era" "Kommen… kommen Chesis und Kloth dann auch mit? Ihr drei seid wirklich unzertrennlich seit ihr hier angefangen habt…"
+            "Era" "Kommen… kommen Chesis und Kloth dann auch mit? Ihr drei seid wirklich unzertrennlich, seit ihr hier angefangen habt…"
 
             "Atropos" "Möchtest du denn, dass sie mitkommen?"
 
-            "Era" "Also… ich… ich… nein, ich würde lieber Zeit mit dir alleine verbringen ehrlich gesagt."
+            "Era" "Also… Ich… Ich… Nein, ehrlich gesagt, würde ich lieber Zeit mit dir alleine verbringen."
 
             show narcais normal:
                 xalign 0.25
@@ -1316,13 +1324,13 @@ label work:
 
             "Era" "Und… und was war mit Chesis und dir gewesen?"
 
-            "Atropos" "Kloth hatte mich zu einem Praktikum überredet und es war die beste Entscheidung meines Lebens gewesen dieses zu machen."
+            "Atropos" "Kloth hatte mich zu einem Praktikum überredet und es war die beste Entscheidung meines Lebens, es zu machen."
 
             "Atropos" "Und dann hatten Kloth und ich Chesis überzeugt doch ebenfalls hier anzufangen, weil er hier gute Chancen hat trotz seiner introvertierten Art."
 
             "Era" "Stimmt… es ist wirklich schwer mit ihm zu reden… ich hatte es ein paar Mal versucht und dann musste ich aufgegeben. Dir gegenüber ist er dagegen so offen."
 
-            "Atropos" "Wir sind immerhin auch schon seit Ewigkeiten befreundet. Ich bin mir sicher mit der Zeit wird er sich auch dir gegenüber mehr öffnen."
+            "Atropos" "Wir sind immerhin auch schon seit Ewigkeiten befreundet. Ich bin mir sicher, mit der Zeit wird er sich auch dir gegenüber mehr öffnen."
 
             "Era" "Das… das wäre sehr schön."
 
@@ -1498,10 +1506,12 @@ label anan_is_right:
     "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
 
     # Atropos Gedanken
-    "Das war mal wieder eine 180 Grad Wendung bei ihr gewesen. Manchmal frage ich mich…"
+    "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+
 
     # Symbiont
-    "{i}Sie ist einfach ein wenig unsicher. Es wirkt als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+    "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+
 
     # Symbiont
     "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
@@ -1587,13 +1597,13 @@ label anan_is_right:
         xalign 0.99
 
 
-    "Anan" "Ich hoffe ihr alle hattet heute bisher einen glücklichen Tag gehabt."
+    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag gehabt."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    "Anan" "Ich bin mir sicher keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -1603,7 +1613,7 @@ label anan_is_right:
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
     "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
 
@@ -1611,7 +1621,7 @@ label anan_is_right:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés waren meine Mitstreiter seit sie mich im Krieg retteten. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -1621,11 +1631,11 @@ label anan_is_right:
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
-    "Anan" "Ihr seid alle herzlich eingeladen diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
 
     "Anan" "Weil ihr uns dabei helft das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die ersten, die die neue Happiness erhalten. "
 
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich. Lebt, sodass ihr glücklich seid. Macht die Welt zu einem besseren Ort. "
+    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
 
     "Anan" "Vergesst niemals: Happiness. Dein Leben. Deine Entscheidung. Deine Glücklichkeit. "
 
@@ -1826,7 +1836,7 @@ label why_important:
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
-    "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
+    "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so, wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
 
     "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
 
@@ -1854,13 +1864,13 @@ label why_important:
     show adres normal:
         xalign 0.99
 
-    "Anan" "Ich hoffe ihr alle hattet heute bisher einen glücklichen Tag gehabt."
+    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag gehabt."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    "Anan" "Ich bin mir sicher keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -1870,7 +1880,7 @@ label why_important:
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
     "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
 
@@ -1878,7 +1888,7 @@ label why_important:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés waren meine Mitstreiter seit sie mich im Krieg retteten. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -1888,11 +1898,11 @@ label why_important:
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
-    "Anan" "Ihr seid alle herzlich eingeladen diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
 
     "Anan" "Weil ihr uns dabei helft das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die ersten, die die neue Happiness erhalten. "
 
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich. Lebt, sodass ihr glücklich seid. Macht die Welt zu einem besseren Ort. "
+    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
 
     "Anan" "Vergesst niemals: Happiness. Dein Leben. Deine Entscheidung. Deine Glücklichkeit. "
 
@@ -2098,13 +2108,13 @@ label be_against:
 
     # Bild wechselt von Laborhintergrund in Nahansicht des Bildschirms. Atlas, Anan und Adrés tauchen nebeneinander auf
 
-    "Anan" "Ich hoffe ihr alle hattet heute bisher einen glücklichen Tag gehabt."
+    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag gehabt."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    "Anan" "Ich bin mir sicher keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -2114,7 +2124,7 @@ label be_against:
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
     "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
 
@@ -2122,7 +2132,7 @@ label be_against:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés waren meine Mitstreiter seit sie mich im Krieg retteten. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -2132,11 +2142,11 @@ label be_against:
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
-    "Anan" "Ihr seid alle herzlich eingeladen diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
 
     "Anan" "Weil ihr uns dabei helft das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die ersten, die die neue Happiness erhalten. "
 
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich. Lebt, sodass ihr glücklich seid. Macht die Welt zu einem besseren Ort. "
+    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
 
     "Anan" "Vergesst niemals: Happiness. Dein Leben. Deine Entscheidung. Deine Glücklichkeit. "
 
@@ -2278,13 +2288,13 @@ label good_mood:
     show atlas normal:
         xalign 0
 
-    "Anan" "Ich hoffe ihr alle hattet heute bisher einen glücklichen Tag gehabt."
+    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag gehabt."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    "Anan" "Ich bin mir sicher keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -2294,7 +2304,7 @@ label good_mood:
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
     "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
 
@@ -2302,7 +2312,7 @@ label good_mood:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés waren meine Mitstreiter seit sie mich im Krieg retteten. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -2312,11 +2322,11 @@ label good_mood:
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
-    "Anan" "Ihr seid alle herzlich eingeladen diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
 
     "Anan" "Weil ihr uns dabei helft das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die ersten, die die neue Happiness erhalten. "
 
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich. Lebt, sodass ihr glücklich seid. Macht die Welt zu einem besseren Ort. "
+    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
 
     "Anan" "Vergesst niemals: Happiness. Dein Leben. Deine Entscheidung. Deine Glücklichkeit. "
 
@@ -2340,13 +2350,13 @@ label good_mood:
     # Atropos Gedanken
     "Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
 
-    "Atropos" "Dieser Mann ist wirklich unglaublich… man spürt mit jeder Faser seines Körpers wie wichtig ihm das Wohl aller Menschen ist."
+    "Atropos" "Dieser Mann ist wirklich unglaublich… Man spürt mit jeder Faser seines Körpers, wie wichtig ihm das Wohl aller Menschen ist."
 
     "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
 
     "Atropos" "Ich frage mich, welchen Preis er wohl dafür bezahlen muss?"
 
-    "Narcais" "Egal wie hoch er auch sein mag. Ich bin mir sicher, dass Anan nicht eine Sekunde zögert diesen zu bezahlen."
+    "Narcais" "Egal wie hoch er auch sein mag. Ich bin mir sicher, dass Anan nicht eine Sekunde zögert, diesen zu bezahlen."
 
     "Atropos" "Jetzt sollten wir aber zurück an die Arbeit, wir müssen heute noch einiges schaffen."
 

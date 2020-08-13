@@ -121,7 +121,7 @@ label letter_kloth:
     "Ich werde mir den Brief anschauen."
 
     # Atropos Gedanken
-    " Mal sehen, was in diesem steht."
+    " Mal sehen, was darin steht."
 
 
     if read_computer_kloth:
@@ -144,7 +144,7 @@ label letter_kloth:
         "Was habe ich da gerade gelesen?"
 
         # Atropos Gedanken
-        "Ich mache mir immer größere Sorgen um Kloth… irgendetwas scheint nicht zu stimmen…"
+        "Ich mache mir immer größere Sorgen um Kloth… Irgendetwas scheint nicht zu stimmen…"
 
         # Symbiont
         "{i}Du interpretierst zu viel in seine Worte. Er ist wahnsinnig. Glaubst du das alles hier wirklich? {/i}"
@@ -159,7 +159,7 @@ label letter_kloth:
         "{i}Er braucht Hilfe. Er ist nicht mehr bei Sinnen. Höre nicht auf ihn, Atropos. {/i}"
 
         # Symbiont
-        "{i}Du bist glücklich, willst du dieses Glück riskieren? {/i}"
+        "{i}Du bist glücklich. Willst du dieses Glück riskieren? {/i}"
 
         if read_letter_kloth:
             if read_computer_kloth:
@@ -187,13 +187,13 @@ label computer_kloth:
     "Ob er wohl passwortgeschützt ist?"
 
     # Atropos Gedanken
-    "Es gibt einen passwortgeschützten Teil und einen für den ich kein Passwort brauche."
+    "Es gibt einen passwortgeschützten Teil und einen, für den ich kein Passwort brauche."
 
     # Atropos Gedanken
-    "Hatte Kloth mir gegenüber mal erwähnt was das Passwort ist?"
+    "Hatte Kloth mir gegenüber mal erwähnt, was das Passwort ist?"
 
     # Atropos Gedanken
-    "Ich kann es einfach Mal ausprobieren."
+    "Ich kann es einfach mal ausprobieren."
 
     # Symbiont
     "{i}Du willst dich in den PC deines Freundes einhacken? Denkst du wirklich, dass du das tun solltest? {/i}"
@@ -221,13 +221,13 @@ label computer_kloth:
         "{i}Du musst die Bombe stoppen, Atropos. Rette alle Menschen. Du kannst nicht zulassen, dass das Glück aller Menschen durch so etwas verpufft. {/i}"
 
         # Symbiont
-        "{i}Lass nicht zu, dass so viele darunter leiden müssen, was ein einziger Irrer vollbracht hat. {/i}"
+        "{i}Lass nicht zu, dass so viele darunter leiden müssen, was ein einziger Irrer vollbracht hat! {/i}"
 
         # Symbiont
-        "{i}Bringe den Menschen Glücklichkeit. {/i}"
+        "{i}Bringe den Menschen Glücklichkeit! {/i}"
 
         # Symbiont
-        "{i}Bringe dir selbst Glücklichkeit. {/i}"
+        "{i}Bringe dir selbst Glücklichkeit! {/i}"
 
 
     else:
@@ -288,7 +288,7 @@ label computer_kloth:
     "Ich bin doch nur ein bedeutungsloser kleiner Mensch."
 
     # Atropos Gedanken
-    "Und was, wenn es doch alles nur Lügen waren? Kloth wirkte in meinen Erinnerungen wirklich wahnsinnig…"
+    "Und was, wenn es doch alles nur Lügen sind? Kloth wirkte in meinen Erinnerungen wirklich wahnsinnig…"
 
     # Atropos Gedanken
     "Soll ich ihn zur Rede stellen?"
@@ -303,10 +303,10 @@ label computer_kloth:
     "Das alles macht mir Angst…"
 
     # Symbiont
-    "{i}Du bist unglücklich. Es liegt an dir wieder glücklich zu werden. {/i}"
+    "{i}Du bist unglücklich. Es liegt an dir, wieder glücklich zu werden. {/i}"
 
     # Symbiont
-    "{i}Es ist deine Entscheidung wie du diese Glück erreichen willst. {/i}"
+    "{i}Es ist deine Entscheidung, wie du dieses Glück erreichen willst. {/i}"
 
     # Symbiont
     "{i}Allein deine Entscheidung und deine Wahl. {/i}"
@@ -362,7 +362,7 @@ label document_kloth:
         "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
 
         # Atropos Gedanken
-        "Wenn ich das richtig verstehe… wenn einer der Server zusammenbricht, würde alles untergehen, oder?"
+        "Wenn ich das richtig verstehe… Wenn einer der Server zusammenbricht, würde alles untergehen, oder?"
 
         # Symbiont
         "{i}Warum machst du dir überhaupt darüber Gedanken? {/i}"
@@ -371,7 +371,7 @@ label document_kloth:
         "{i}Das ist nichts, was du wissen musst, um glücklich zu sein und ein glückliches Leben zu führen. {/i}"
 
         # Symbiont
-        "{i}Schaue dir nicht mehr an. Schon für das, was du bereits gesehen hast, könntest du einen Haufen Ärger bekommen. {/i}"
+        "{i}Schaue dir nichts mehr an. Schon für das, was du bereits gesehen hast, könntest du einen Haufen Ärger bekommen. {/i}"
 
         # Symbiont
         "{i}Du willst doch glücklich sein. {/i}"

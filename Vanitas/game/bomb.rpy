@@ -40,7 +40,7 @@ label choice_bomb:
     "Hat Kloth etwa von dem Anschlag erfahren und versucht ihn zu verhindern? Hat er für die Firma sein Leben gelassen?"
 
     # Atropos Gedanken
-    "Es würde Kloth ähnlich sehen… er hat Aither über alles geliebt. So sehr ihn die Firma vielleicht auch in den Ruin getrieben hätte, er hätte dennoch sein Leben für sie gegeben."
+    "Es würde Kloth ähnlich sehen… er liebt Aither über alles. So sehr ihn die Firma vielleicht auch in den Ruin treiben würde, er würde dennoch sein Leben für sie gegeben."
 
     # Atropos Gedanken
     "Ob Aither an seinem Zustand schuld war? Was hat Kloth erfahren, dass ihm so viel Angst bereitet hat?"
@@ -67,13 +67,13 @@ label choice_bomb:
     "Wem soll ich glauben?"
 
     # Atropos Gedanken
-    "Mir selbst? Kloths Abschiedbrief? Meinen Erinnerungen? Kloths Glaube an Aither?"
+    "Mir selbst? Kloths Abschiedsbrief? Meinen Erinnerungen? Kloths Glaube an Aither?"
 
     # Atropos Gedanken
     "Ahhhhh…"
 
     # Symbiont
-    "{i}Es spielt keine Rolle an wen du letztlich glaubst. Das Einzige, das wichtig ist, ist, dass du mit deinen Entscheidungen nicht nur leben kannst, sondern auch glücklich bist. {/i}"
+    "{i}Es spielt keine Rolle, an wen du letztlich glaubst. Das Einzige, das wichtig ist, ist, dass du mit deinen Entscheidungen nicht nur leben kannst, sondern auch glücklich bist. {/i}"
 
     # Symbiont
     "{i}Frage dich selbst. Was möchtest du tun? Du könntest versuchen die Bombe zu entschärfen, auch wenn es sein kann, dass du scheiterst. {/i}"
@@ -91,10 +91,10 @@ label choice_bomb:
     "Aber selbst, wenn ich die Bombe entschärfen wollte… wie soll ich es tun?"
 
     # Atropos Gedanken
-    "Ich weiß nicht wo sie ist."
+    "Ich weiß nicht, wo sie ist."
 
     # Symbiont
-    "{i}Du hast alle Hinweise gefunden, die dich zu deiner Antwort führen. Setze sie zusammen und finde deine persönliche Antwort. {/i}"
+    "{i}Du hast alle Hinweise gefunden, die dich zu deiner Antwort führen. Setz sie zusammen und finde deine persönliche Antwort! {/i}"
 
     # Atropos Gedanken
     "Der Serverraum… aber warum?"
@@ -138,7 +138,7 @@ label choice_bomb:
     "Meine Finger zittern wie verrückt…"
 
     # Symbiont
-    "{i}Beruhige dich, Atropos. Atme tief durch. Das ist der alles entscheidende Moment. Welche Entscheidung wirst du treffen, damit du glücklich bist? {/i}"
+    "{i}Beruhige dich, Atropos! Atme tief durch. Das ist der alles entscheidende Moment. Welche Entscheidung wirst du treffen, damit du glücklich bist? {/i}"
 
     # Symbiont
     "{i}Was macht dich glücklich? {/i}"
@@ -162,10 +162,10 @@ label choice_bomb:
     "Aber andererseits… kann ich all die Menschenleben wirklich gefährden?"
 
     # Atropos Gedanken
-    "Kann ich Era und die anderen einfach so sterben lassen ohne wenigstens etwas versucht zu haben?"
+    "Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
 
     # Atropos Gedanken
-    "Kann ich einfach so blindlings Kloths Zweifeln vertrauen ohne von ihm mehr erfahren zu haben?"
+    "Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
 
     # Atropos Gedanken
     "Ich weiß einfach nicht, was ich tun soll…"
@@ -179,11 +179,8 @@ label choice_bomb:
     # Atropos Gedanken
     "Sie ist zu schwer zu fällen… ja… ich denke ich wäre glücklicher… ich kann diese Verantwortung einfach nicht tragen."
 
-    # Atropos Gedanken
-    "Sie ist zu schwer zu fällen… ja… ich denke ich wäre glücklicher… ich kann diese Verantwortung einfach nicht tragen."
-
     # Symbiont
-    "{i}Dann entschärfe die Bombe. Rette all die Menschenleben. Sorge dafür, dass auch sie glücklich sein können. {/i}"
+    "{i}Dann entschärfe die Bombe. Rette all die Menschenleben! Sorge dafür, dass auch sie glücklich sein können! {/i}"
 
     # Atropos Gedanken
     "Aber was ist, wenn die Menschen ohne Aither glücklicher wären?"
@@ -198,7 +195,7 @@ label choice_bomb:
     "{i}Dein Glück und das Glück aller Menschen. {/i}"
 
     # Symbiont
-    "{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich. {/i}"
+    "{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich! {/i}"
 
     menu:
         "Ich will die Bombe entschärfen!":
@@ -231,9 +228,9 @@ label entschaerfenPillegenommen:
     "Das würde mich unglücklich machen!"
 
     # Symbiont
-    "{i}Dann worauf wartest du noch? Sorge für dein eigenes Glück. Kämpfe dafür. {/i}"
+    "{i}Dann worauf wartest du noch? Sorge für dein eigenes Glück. Kämpfe dafür! {/i}"
 
-    "Atropos" "Verdammt… die Drähte… heißt es nicht immer einen muss man durchschneiden?"
+    "Atropos" "Verdammt… die Drähte… heißt es nicht immer, man müsse einen durchschneiden?"
 
     "Atropos" "Aber ich hätte nicht mal etwas zum Durchschneiden da…"
 
@@ -309,7 +306,7 @@ label explodierenPillegenommen:
     "Aither muss schuld an seinem Zerfall in letzter Zeit gewesen sein."
 
     # Atropos Gedanken
-    "Die Happinesspille muss schuld sein."
+    "Die Happiness-Pille muss schuld sein."
 
     # Atropos Gedanken
     "Das alles muss ein Ende finden."
@@ -345,7 +342,7 @@ label explodierenPillegenommen:
     "{i}7 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Die Zeit wird langsam knapp… ich habe keine Zeit mehr etwas zu ändern… ich dachte ich wäre meiner Entscheidung sicher gewesen, aber…"
+    "Die Zeit wird langsam knapp… Ich habe keine Zeit mehr etwas zu ändern… Ich dachte, ich wäre meiner Entscheidung sicher gewesen, aber…"
 
     # Symbiont
     "{i}6 Sekunden. {/i}"
@@ -363,7 +360,7 @@ label explodierenPillegenommen:
     "{i}4 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Selbst wenn es richtig ist die Firma zu zerstören und ich vertraue Kloth dabei… hätte ich eine andere Entscheidung treffen sollen?"
+    "Selbst wenn es richtig ist, die Firma zu zerstören - und ich vertraue Kloth dabei- … hätte ich eine andere Entscheidung treffen sollen?"
 
     # Symbiont
     "{i}Bist du glücklich, Atropos? {/i}"
