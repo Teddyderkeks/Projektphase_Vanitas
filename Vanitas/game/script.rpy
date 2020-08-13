@@ -116,17 +116,34 @@ label change:
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
 
+    jump menustart
 
+
+#    menu:
+#        "Ich sollte die Pille besser jetzt sofort nehmen.":
+#            jump take_pill
+#        "Ich nehme die Pille nicht- ich brauche sie nicht!":
+#            jump not_take_pill
+#        "Ich nehme die Pille sobald ich auf der Arbeit bin.":
+#            jump later_take_pill
+
+label menustart:
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
-            jump not_take_pill
+            jump back_pill_decision
         "Ich nehme die Pille sobald ich auf der Arbeit bin.":
-            jump later_take_pill
+            jump back_pill_decision
 
-#label back_pill_decision:
+# muss am Ende wieder rausgelöscht werden!!!!
+
+label back_pill_decision:
+        "Entwickler" "Es tut uns schrecklich leid, aber dieser Zweig ist noch nicht fertig. Wir leiten dich mit des nächsten Klicks automatisch zurück zur Entscheidung."
+        "Entwickler" "Bitte triff nun die Entscheidung >Ich sollte die Pille besser sofort nehmen<."
+        "Entwickler" "Wir entschuldigen uns für die Umstände und hoffen, dass du eines Tages zurückkehren wirst um auch diesen Zweig auszuprobieren."
+        jump menustart
 
 
 label take_pill:

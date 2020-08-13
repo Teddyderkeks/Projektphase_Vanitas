@@ -665,7 +665,13 @@ label still_search_kloth:
             scene kloth_office
             "Atropos"  "Natürlich…"
 
-            "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            if kloth_office_visited:
+                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            else:
+                "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
+
+
+
             # Spieler wird PC ohne Passwort-Kennung angezeigt
             "Blog über Bombenleger, der Aither vernichten will."
             "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
@@ -693,7 +699,10 @@ label still_search_kloth:
             "Atropos"  "Aber was?"
             scene kloth_office
             "Atropos"  "Natürlich…"
-            "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            if kloth_office_visited:
+                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            else:
+                "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
             # Spieler wird PC ohne Passwort-Kennung angezeigt
             "Blog über Bombenleger, der Aither vernichten will."
 

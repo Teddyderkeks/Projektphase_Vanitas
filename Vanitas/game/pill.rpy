@@ -301,6 +301,8 @@ label not_search_kloth:
             jump laborpillende
 
 label laborpillende:
+
+    scene lab
     # Atropos Gedanken
     "Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
 
