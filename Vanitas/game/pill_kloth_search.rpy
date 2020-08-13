@@ -178,8 +178,10 @@ label search_kloth_without_anan_office:
 
     # Überschwung zu Erinnerung, Ort: Kloths Büro; Über der gesamten Erinnerung liegt ein Rauschen
 
+
     scene kloth_office
-    show kloth aengstlich2:
+    show sepia
+    show kloth angry_neutral behind sepia:
         xalign 0.5
 
     "Atropos" "Zu so früher Stunde schon ein Bier? (lacht)"
@@ -188,25 +190,37 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Vergessen? Es gibt doch nichts in diesem wundervollen Leben, das man vergessen möchte."
 
+    show kloth angry
+
     "Kloth" "Wundervoll? Glücklich? Bestimmt… Träum weiter Atropos, bleibe in deiner Traumwelt gefangen."
 
     "Atropos" "Von was redest du nur?"
+
+    show kloth vest_open
 
     "Kloth" "Sieh dich doch mal um. All diese glücklichen, breit grinsenden Menschen, die alles toll finden, was andere sagen und tun. Nennst du das Glück?"
 
     "Atropos" "Kloth, was ist denn nur los mit dir? Du machst mir ja fast schon Angst."
 
+    show kloth angry
+
     "Kloth" "Immerhin würdest du dann nicht mehr seelenlos glücklich sein. Das wäre schon mal ein Fortschritt."
 
     "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon. Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
+
+    show kloth crazy
 
     "Kloth" "Nein, ist er nicht! Mir geht es gut. Hörst du Atropos? Mir geht es gut!"
 
     "Atropos" "Schon okay, ich habe verstanden. Du bist glücklich und das freut mich."
 
+    show kloth scared1
+
     "Kloth" "Sie werden kommen, Atropos. Ich warne dich. Sie werden kommen und uns holen."
 
     "Kloth" "Sie warten nur darauf, dass wir alle zu seelenlosen Kreaturen werden. Und dann holen sie uns."
+
+    show kloth crazy
 
     "Kloth" "Aber mich werden sie nicht bekommen. Ich werde ihnen entkommen. Ich werde fliehen, hörst du?"
 
@@ -214,6 +228,7 @@ label search_kloth_without_anan_office:
 
     # Ende der Erinnerung, zurück im Flur
     hide kloth
+    hide sepia
     scene hall
 
     # Atropos Gedanken
@@ -472,7 +487,9 @@ label still_search_kloth:
 
     "Atropos" "Okay… die Fahrzüge sind komplett überfüllt. Wenn wir unten starten und uns nach oben vorarbeiten wollen, müssen wir das Treppenhaus nehmen."
 
-    scene stairs_up
+    hide anan
+
+    scene corpse
 
     "Atropos" "Kloth? Kloth?"
 
@@ -495,34 +512,45 @@ label still_search_kloth:
 
     "Atropos" "Das darf doch nicht wahr sein…"
 
-    hide anan
 
     # Wechsel zu Erinnerung
-    show kloth aengstlich1:
+    show sepia
+    scene stairs_up
+    show kloth scared2 behind sepia:
         xalign 0.5
     "Kloth" "Atropos!"
 
     "Atropos" "Kloth, was ist los?"
 
+    show kloth unsuresmiling
+
     "Kloth"  "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
     "Atropos"  "Beruhige dich erst einmal und atme tief durch. Was ist passiert?"
+
+    show kloth scared2
 
     "Kloth" "Nicht hier … es könnte jemand kommen und dann…"
 
     "Atropos"  "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
+    show kloth scared1
+
     "Kloth" "Ich… ich…"
 
     "Atropos"  "Ich wollte eigentlich gerade Mittagspause machen. Willst du nicht einfach mitkommen und wir reden dann? Chesis scheint auch Pause zu haben."
 
+    show kloth unsuresmiling
+
     "Kloth" "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
+
 
     "Kloth" "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
 
     "Atropos"  "Ja natürlich helfe ich dir. Erzähl endlich was los ist. Wie kann ich dir helfen?"
 
     hide kloth
+    hide sepia
 
     # Erinnerung endet.
     show anan 2:

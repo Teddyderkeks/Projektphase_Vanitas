@@ -98,16 +98,20 @@ label still_search_chesis:
     # Atropos Gedanken
     "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
 
-    show chesis laechelnd:
+    show chesis smiling:
         xalign 0.5
 
     "Chesis" "Hey Atropos."
 
     "Atropos" "Hast du Zeit für eine Mittagspause?"
 
+    show chesis grinning2
+
     "Chesis" "Bin gerade mit meinem Gespräch fertig geworden, wo wollen wir hin?"
 
     "Atropos" "Lass uns doch nach Kloth suchen. Er will seine Mittagspause bestimmt nicht alleine verbringen."
+
+    show chesis confused
 
     "Chesis" "Ich weiß nicht."
 
@@ -115,9 +119,13 @@ label still_search_chesis:
 
     "Atropos" "Lass uns das heute ändern!"
 
+    show chesis angry
+
     "Chesis" "Er hat sich schon den ganzen Tag nicht gemeldet und ich kann mir besseres vorstellen als meine Mittagspause darauf zu verschwenden ihn zu suchen."
 
     "Atropos" "Wir sind doch Freunde und bestimmt ist er einfach nur in seinem Büro. Ich kann ihn auch einfach anrufen."
+
+    show chesis confused
 
     "Chesis" "Ich weiß nicht."
 
@@ -133,6 +141,8 @@ label still_search_chesis:
     # Symbiont
     "{i}Nicht jeder ist nun mal ständig am Handy und erreichbar. Freu e dich lieber auf nachher, wenn du ihn wiedersiehst. {/i}"
 
+    show chesis smiling
+
     "Chesis" "Ach spielt doch keine Rolle. Du zerbrichst dir unnötig den Kopf."
 
     menu:
@@ -141,6 +151,8 @@ label still_search_chesis:
             "Atropos" "Ich denke ich möchte trotzdem lieber nach Kloth suchen."
 
             "Atropos" "Ich bin glücklicher, wenn ich weiß, dass bei ihm alles in Ordnung ist."
+
+            show chesis confused
 
             "Chesis" "Wie du meinst. Ich gehe lieber was essen, ich habe Hunger."
 
@@ -157,6 +169,8 @@ label still_search_chesis:
 
             "Atropos" "Gehen wir ins Büro und holen uns dort einen Kaffee?"
 
+            show chesis grinning
+
             "Chesis" "Gerne."
 
             jump mittagspausemitchesis
@@ -164,7 +178,7 @@ label still_search_chesis:
 label mittagspausemitchesis:
 
     scene office_2
-    show chesis laechelnd:
+    show chesis smiling:
         xalign 0.5
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen anschließen?"
 
@@ -172,20 +186,30 @@ label mittagspausemitchesis:
 
     "Atropos" "Alles gut, wegen mir müssen wir nicht in die Mensa. Ich weiß doch, dass du dich am wohlsten fühlst, wenn wir nur unter uns sind."
 
+    show chesis grinning
+
     "Chesis" "Danke."
     # Gespräch über Kloths Schüchternheit und die Überwindung dieser dank Atropos und Kloth möglich.
 
     "Atropos" "Sag Mal, Chesis. Ist dir eine Veränderung an Kloth in der letzten Zeit aufgefallen?"
 
+    show chesis confused
+
     "Chesis" "Wie meinst du das?"
 
     "Atropos" "Nicht nur, dass Kloth sich in letzter Zeit kaum bei uns gemeldet hat, aber er wirkte irgendwie fast schon erschöpft? Als würde ihn irgendetwas beschäftigen…"
 
+    show chesis smiling
+
     "Chesis" "Ich denke du irrst dich."
+
+    show chesis confused
 
     "Chesis" "Er hat einfach viel zu tun wegen der Gründungsfeier und ist deswegen bestimmt gestresst."
 
     "Atropos" "Ich weiß nicht… ich denke wir sollten vielleicht doch besser mal nach ihm schauen."
+
+    show chesis grinning2
 
     "Chesis" "Du hast dir schon immer zu viele Gedanken um alles gemacht."
 
@@ -196,6 +220,8 @@ label mittagspausemitchesis:
 
     # Symbiont
     "{i}Dein Leben ist ohne sie so viel einfacher und glücklicher. {/i}"
+
+    show chesis smiling
 
     "Chesis" "Ja, bleibe einfach ruhig. Das wird sich alles aufklären und am Ende werden wir darüber lachen."
 
@@ -212,6 +238,8 @@ label mittagspausemitchesis:
             # Atropos Gedanken
             "Zukünftig werde ich sie auf keinen Fall mehr vergessen. Ich will glücklich sein und ein glückliches Leben führen können."
 
+            show chesis grinning
+
             "Chesis" "(lacht) Ja, solltest du."
 
             # weiterer Smalltalk möglich
@@ -222,6 +250,8 @@ label mittagspausemitchesis:
 
             "Atropos" "Um 19 Uhr bei dir dann?"
 
+            show chesis smiling
+
             "Chesis" "Ja genau, ich freue mich schon."
 
             "Atropos" "Ich mich auch, bis dann."
@@ -231,9 +261,13 @@ label mittagspausemitchesis:
 
             "Atropos" "Ich gehe trotzdem besser auf Nummer sicher und suche ihn."
 
+            show chesis confused
+
             "Chesis" "Wenn du meinst. Viel Erfolg und richte ihm schöne Grüße aus, wenn du ihn findest."
 
             "Atropos" "Klar mache ich. Wir sehen uns dann später. 19 Uhr, richtig?"
+
+            show chesis smiling
 
             "Chesis" "Ja, genau. Ich freue mich, bis dann."
 
