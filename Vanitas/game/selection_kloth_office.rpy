@@ -1,8 +1,10 @@
 default kloth_office_choice = False
 default password_right = False
+default kloth_office_visited = False
 
 label selection_kloth_office:
     $ kloth_office_choice = True
+    $ kloth_office_visited = True
 
 
 
