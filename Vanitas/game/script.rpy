@@ -605,7 +605,7 @@ label conversation_with_seller:
             "Ich sollte öfters mal bei ihnen vorbeischauen."
 
 
-            show chesis laechelnd:
+            show chesis smiling:
                 xalign 0.5
 
             "Chesis" "Guten Morgen."
@@ -614,24 +614,31 @@ label conversation_with_seller:
 
             "Atropos" "Hast du Kloth heute schon gesehen?"
 
+            show chesis confused
+
             "Chesis" "Nein. Ich…"
 
             "Atropos" "Ach, auch egal. Die Hauptsache ist, dass er später beim Grillen auftaucht."
 
             "Atropos" "Erinnerst du dich noch daran, wie wir früher immer noch Ewigkeiten hier im Flur gestanden hatten?"
 
+            show chesis grinning
+
             "Chesis" "Klar, wie könnte ich das vergessen. Es ist schade, dass Kloth uns keine Gesellschaft mehr leistet, aber es ist auch so schön. Und wir sehen ihn ja nach der Arbeit."
 
             "Atropos" "Alleine das eine Mal als Kloth zu uns gelaufen kam, um uns zu erzählen, dass er Anans Chefsekretär werden soll!"
 
+            show chesis grinning2
+
             "Chesis" "Stimmt, das war unvergesslich gewesen. Kloth kam zu uns gelaufen und…"
 
 # hier fehlt noch sepiafilter
+            show sepia
 
-            show chesis laechelnd:
+            show chesis smiling behind sepia:
                 xalign 0.75
 
-            show kloth grinsend:
+            show kloth grinning behind sepia:
                 xalign 0.25
 
             "Kloth" "Atropos… Chesis… hier seid ihr…"
@@ -647,6 +654,8 @@ label conversation_with_seller:
             "Atropos" "Und? Was war der Grund gewesen?"
 
             "Kloth" "Es ist so unglaublich! Ich wurde zu seinem Chefsekretär befördert. Ich kann es immer noch nicht richtig fassen…"
+
+            show chesis grinning
 
             "Chesis" "Herzlichen Glückwunsch, du hast es verdient."
 
@@ -664,23 +673,34 @@ label conversation_with_seller:
 
             "Atropos" "Wir helfen den Menschen dabei ein glückliches Leben zu führen."
 
+            show chesis confused
+
             "Chesis" "Kloth, was sind dann eigentlich deine Tätigkeiten?"
+
+            show kloth unsuresmiling
 
             "Kloth" "Sorry, aber das muss mein kleines Geheimnis bleiben. Ihr wisst, dass ich euch sonst alles sage, aber darüber darf ich nicht reden."
 
             "Atropos" "Ja klar, verstehe ich. Letztlich spielt es ja auch keine Rolle. Wichtig ist nur, dass wir für Aither arbeiten."
 
             hide kloth
+            hide sepia
 
 # Ende Sepiafilter
+
+            show chesis smiling
 
             "Atropos" "An solche Momente erinnere ich mich immer wieder gerne. Ich schätze jede Sekunde, die ich mit Kloth und dir verbringen darf."
 
             "Chesis" "Geht mir genauso. Ihr seid meine besten Freunde seit der Kindheit."
 
+            show chesis grinning
+
             "Chesis" "Damals ohne euch und ohne die Happinesspille war ich einsam und verloren gewesen. Alles hatte sich geändert, nachdem ich euch kennenlernen durfte."
 
             "Atropos" "Du hattest uns damals auch sehr geholfen. Es war gut gewesen jemanden in der Gruppe zu haben, der etwas ruhiger und bedachter war. (lacht)"
+
+            show chesis smiling
 
             "Chesis" "Da vorne ist Anan. Wie soll ich ihn nur begrüßen?"
 
@@ -693,15 +713,21 @@ label conversation_with_seller:
 
             hide anan
 
+            show chesis confused
+
             "Chesis" "Jetzt habe ich meine Chance verpasst. Aber ist er nicht einfach nur unglaublich? Seine Präsenz nimmt den ganzen Raum ein, ohne dass er dafür etwas tun müsste."
 
             "Atropos" "Da kann ich dir nur zustimmen. Er ist wirklich beeindruckend."
+
+            show chesis smiling
 
             "Chesis" "Also dann, ich muss jetzt hier weiter. Man sieht sich."
 
             "Atropos" "Mach´s gut. Wir sehen uns dann ja spätestens beim Grillen."
 
             "Atropos" "Oder in der Mittagspause, wenn wir sie gleichzeitig machen sollten."
+
+            show chesis grinning2
 
             "Chesis" "Gerne."
 
