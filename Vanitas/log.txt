@@ -1,35 +1,34 @@
-Thu Aug 13 22:22:25 2020
+Fri Aug 14 01:12:35 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.05s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.02s
-Loading error handling took 0.05s
-Loading script took 1.31s
-Loading save slot metadata. took 0.06s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.18s
+Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Sabrina\\AppData\\Roaming/RenPy/backups\\Vanitas':
 Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.13s
+Creating interface object took 0.04s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.01s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.05s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.04s
-Save pyanalysis. took 0.08s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.06s
 Running _start took 0.00s
 Performance test:
@@ -362,18 +361,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 3.492000103s
+Total time until interface ready: 1.05499982834s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017949 seconds.
-- Frame drawn at 0.032949 seconds.
-- Frame drawn at 0.049949 seconds.
-- Frame drawn at 0.066949 seconds.
-- 0.066949 seconds to render 5 frames.
-
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
-Root FBO is: 0
-FBO Maximum Texture Size: 2048
+- Frame drawn at 0.015000 seconds.
+- Frame drawn at 0.032000 seconds.
+- Frame drawn at 0.047000 seconds.
+- Frame drawn at 0.064000 seconds.
+- 0.064000 seconds to render 5 frames.

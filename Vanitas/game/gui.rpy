@@ -92,7 +92,7 @@ define config.mouse = {"default": [("gui/cursor1.png", 0, 0)]}
 
 ##Splashscreen before Main Menu#################################################
 label splashscreen:
-    $ renpy.movie_cutscene("Sound_Opening_probend.mpg")
+    $ renpy.movie_cutscene("opening.mpg")
     return
 
 define config.end_splash_transition = fade
