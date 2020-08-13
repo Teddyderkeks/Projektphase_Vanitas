@@ -2,7 +2,6 @@ default pill_taken = False
 default straight_office = False
 default neiro_unterhalten= False
 
-
 label start:
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
