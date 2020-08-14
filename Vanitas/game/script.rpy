@@ -1629,7 +1629,7 @@ label anan_is_right:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -1896,7 +1896,7 @@ label why_important:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -2140,7 +2140,7 @@ label be_against:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
@@ -2320,7 +2320,7 @@ label good_mood:
 
     "Anan" "Ich bin bereit alles dafür zu geben und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Anan und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
