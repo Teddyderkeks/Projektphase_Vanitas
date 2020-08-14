@@ -86,6 +86,8 @@ label change:
 
     "Durchsage" "{i} Nimm Happiness ein und lebe dein Leben so, wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit.{/i}"
 
+    scene detail_pill
+
     # Atropos Gedanken
     "Happiness…"
 
@@ -157,6 +159,8 @@ label take_pill:
     # Atropos Gedanken
     "So… schnell runter damit, ehe ich es schon wieder vergesse."
 
+    scene street
+
     # Atropos Gedanken
     "Es war ein großer Fehler gewesen in letzter Zeit nicht auf die regelmäßige Einnahme zu achten."
 
@@ -224,6 +228,8 @@ label not_take_pill:
     # Atropos Gedanken
     "Schaden wird sie mir auf keinen Fall."
 
+    scene street
+
 
     jump shop
 
@@ -251,6 +257,8 @@ label later_take_pill:
 
     # Atropos Gedanken
     "Ich sollte dankbarer für diese Chance sein und mein Glück nicht riskieren."
+
+    scene street
 
 
     jump shop
