@@ -7,6 +7,7 @@ default face_anan_in_office = False
 default bomb_trigger_choice = False
 default last_try_find_kloth = False
 default rage_atropos_bomb = False
+default straight_anan_office = False
 
 label office:
     scene hall
@@ -19,6 +20,7 @@ label office:
 
     menu:
         "Ja":
+            $ straight_anan_office = True
             jump selection_anan_office
         "Nein":
             jump conversation_with_anan
@@ -64,22 +66,45 @@ label how_many_infos_anan:
     "Wie viele Sachen angesehen?"
 
     if infos_count_anan == 0:
-        "Anan kommt zurück, Atropos zeigt Einsicht, Anan fragt nach ob Atropos Kloth gesehen hat und schickt ihn zurück um die Pille zu nehmen"
+        if  straight_anan_office:
+            scene hall
 
-        jump understanding
+            "Atropos verlässt das Büro wieder weil ihn Gewissensbisse (Symbiont) plagen, Anan kommt an, Schelte für Atropos weil er die Pille nicht genommen hat, Aufforderung dies jetzt zu tun"
+
+            "Reaktion auf die Schelte"
+
+            menu:
+                "Wütend":
+                    jump rueffel
+                "Einsichtig":
+                    jump understanding
+
+        else:
+            "Anan kommt zurück, Atropos zeigt Einsicht, Anan fragt nach ob Atropos Kloth gesehen hat und schickt ihn zurück um die Pille zu nehmen"
+
+            jump understanding
 
     if infos_count_anan == 1 or infos_count_anan == 2:
+        if  straight_anan_office:
+
+            scene hall
+            "Atropos verlässt das Büro und wartet auf Anan, welcher kurze Zeit später ankommt und anfängt Atropos wegen der nicht genommenen Pille zu rüffeln"
+
+        else:
+            "Anan kommt zurück und bemerkt nichts; fragt nach ob Atropos Kloth schon gesehen hat und will ihn zurückschicken um die Pille zu nehmen"
+
         jump one_or_two_infos
 
     if infos_count_anan == 3:
+        if straight_anan_office:
+            "Atropos erhebt sich vom Schreibtisch als Anan in seinem Büro kommt"
+
         $ last_try_find_kloth = True
         "Anan erwischt Atropos und es kommt zum riesen Streit, Atropos konfrontiert Anan mit den Hinweisen, Anan wirft ihn raus und kündigt den Rauswurf aus der Firma an"
 
         jump visit_kloth
 
 label one_or_two_infos:
-    "Anan kommt zurück und bemerkt nichts; fragt nach ob Atropos Kloth schon gesehen hat und will ihn zurückschicken um die Pille zu nehmen"
-
     "Anan mit den Tatsachen konfrontieren?"
 
     menu:
