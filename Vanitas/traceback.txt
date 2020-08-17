@@ -1,82 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {/i} in u'Er scheint das B\xf6se zu suchen und es in Aither gefunden zu haben. {/i}'.:
-  File "game/selection_kloth_office.rpy", line 154, in script
-    "Er scheint das Böse zu suchen und es in Aither gefunden zu haben. {/i}"
-Exception: u'/i' closes a text tag that isn't open.
+While running game code:
+  File "game/script.rpy", line 13, in script
+    "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+Exception: Screen quick_menu is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/selection_kloth_office.rpy", line 154, in script
-    "Er scheint das Böse zu suchen und es in Aither gefunden zu haben. {/i}"
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
-    **display_args)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+  File "game/script.rpy", line 13, in script
+    "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 671, in execute
+    statement_name("say")
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 45, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2251, in do_with
+    clear=clear)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3194, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2094, in draw_screen
-    renpy.config.screen_height,
-  File "renpy/display/render.pyx", line 490, in renpy.display.render.render_screen (gen\renpy.display.render.c:6805)
-    rv = render(root, width, height, st, st)
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
-    st, at)
-  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\text\text.py", line 1996, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\text\text.py", line 597, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\text\text.py", line 969, in segment
-    raise Exception("%r closes a text tag that isn't open." % text)
-Exception: u'/i' closes a text tag that isn't open.
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2876, in interact_core
+    renpy.display.screen.show_overlay_screens(suppress_overlay)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 1371, in show_overlay_screens
+    show_screen(i)
+  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 1107, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen quick_menu is not known.
+
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Sat Aug 08 01:36:40 2020
+Fri Aug 14 09:29:59 2020

@@ -55,7 +55,6 @@ define gui.hover_muted_color = '#7a3d00'
 define gui.text_color = '#FFEFDB'
 define gui.interface_text_color = '#ffffff'
 
-
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
@@ -91,12 +90,21 @@ define gui.title_text_size = 75
 ## This sets the cursor to an custom cursor; if None, it's the system cursor.
 define config.mouse = {"default": [("gui/cursor1.png", 0, 0)]}
 
+##Splashscreen before Main Menu#################################################
+label splashscreen:
+    $ renpy.movie_cutscene("opening.mpg")
+    return
+
+define config.end_splash_transition = fade
+
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
+##Musik Main Menu
+define config.main_menu_music = "Sound_hauptmenu.mp3"
 
 ## Dialogue ####################################################################
 ##

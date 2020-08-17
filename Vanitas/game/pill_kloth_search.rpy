@@ -43,7 +43,7 @@ label search_kloth:
     # Atropos Gedanken
     "Kein Laut zu hören… vielleicht hat er mich ja nicht gehört? Kloth wird schon nicht sauer sein, wenn ich einfach eintrete."
 
-    # Wechsel zu Kloths Büro
+    scene kloth_office
 
     "Atropos" "Kloth?"
 
@@ -52,6 +52,8 @@ label search_kloth:
 
     # Atropos Gedanken
     "Das wäre auch zu schön gewesen."
+
+    scene hall
 
     # Atropos Gedanken
     "Aber wo kann er sonst sein?"
@@ -79,7 +81,7 @@ label search_kloth:
             "Aber was soll ich jetzt nur tun?"
 
             # Atropos Gedanken
-            "Es fühlt sich falsch an einfach ins Labor zurückzukehren."
+            "Es fühlt sich falsch an, einfach ins Labor zurückzukehren."
 
             jump search_kloth_without_anan_office
 
@@ -96,10 +98,12 @@ label search_kloth_in_anan_office:
     "Es scheint auch hier niemand da zu sein…"
 
     # Atropos Gedanken
-    "Sollte ich nachschauen? Aber bei Anan ist es noch einmal etwas anderes einfach einzutreten als bei Kloth…"
+    "Sollte ich nachschauen? Aber bei Anan ist es noch einmal etwas anderes, einfach einzutreten als bei Kloth…"
+
 
     # Atropos Gedanken
-    "Was soll’s… ich muss Kloth finden."
+    "Sollte ich nachschauen? Aber bei Anan ist es noch einmal etwas anderes, einfach einzutreten als bei Kloth…"
+
 
     scene anan_office
 
@@ -132,25 +136,27 @@ label symbiont_in_between:
     "Ich möchte das Risiko eingehen und mich trotzdem umsehen."
 
     # Symbiont
-    "{i}Verlasse diesen Raum. Du gefährdest deine Glücklichkeit mit jeder Sekunde mehr. Siehst du es nicht? {/i}"
+    "{i}Verlasse diesen Raum! Du gefährdest deine Glücklichkeit mit jeder Sekunde mehr. Siehst du es nicht? {/i}"
 
     # Symbiont
     "{i}Das wird kein gutes Ende nehmen. Suche an einem anderen Ort nach Kloth oder lass es ganz bleiben. {/i}"
 
     # Symbiont
-    "{i}Es geht ihm gut. Er ist glücklich so wie jeder andere Mensch auch. {/i}"
+    "{i}Es geht ihm gut. Er ist glücklich, so wie jeder andere Mensch auch. {/i}"
 
     # Symbiont
     "{i}Ist es dir das Risiko wirklich wert, auch wenn du wahrscheinlich nichts finden wirst, was dich zu Kloth führt? {/i}"
 
     # Symbiont
-    "{i}Verlasse diesen Raum, Atropos. Denk an deine Glücklichkeit. {/i}"
+    "{i}Verlasse diesen Raum, Atropos! Denk an deine Glücklichkeit. {/i}"
+
 
     # Symbiont
-    "{i}Riskiere sie nicht. {/i}"
+    "{i}Riskiere sie nicht! {/i}"
 
     # Atropos Gedanken
-    "Ja, meine Glücklichkeit ist wichtiger… was tue ich hier noch?"
+    "Ja, meine Glücklichkeit ist wichtiger… Was tue ich hier noch?"
+
 
     scene hall
 
@@ -158,7 +164,7 @@ label symbiont_in_between:
     "Aber was soll ich jetzt nur tun?"
 
     # Atropos Gedanken
-    "Es fühlt sich falsch an einfach ins Labor zurückzukehren."
+    "Es fühlt sich falsch an, einfach ins Labor zurückzukehren."
 
 
     jump search_kloth_without_anan_office
@@ -178,8 +184,10 @@ label search_kloth_without_anan_office:
 
     # Überschwung zu Erinnerung, Ort: Kloths Büro; Über der gesamten Erinnerung liegt ein Rauschen
 
+
     scene kloth_office
-    show kloth aengstlich2:
+    show sepia
+    show kloth angry_neutral behind sepia:
         xalign 0.5
 
     "Atropos" "Zu so früher Stunde schon ein Bier? (lacht)"
@@ -188,25 +196,37 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Vergessen? Es gibt doch nichts in diesem wundervollen Leben, das man vergessen möchte."
 
+    show kloth angry
+
     "Kloth" "Wundervoll? Glücklich? Bestimmt… Träum weiter Atropos, bleibe in deiner Traumwelt gefangen."
 
     "Atropos" "Von was redest du nur?"
+
+    show kloth vest_open
 
     "Kloth" "Sieh dich doch mal um. All diese glücklichen, breit grinsenden Menschen, die alles toll finden, was andere sagen und tun. Nennst du das Glück?"
 
     "Atropos" "Kloth, was ist denn nur los mit dir? Du machst mir ja fast schon Angst."
 
+    show kloth angry
+
     "Kloth" "Immerhin würdest du dann nicht mehr seelenlos glücklich sein. Das wäre schon mal ein Fortschritt."
 
-    "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon. Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
+    "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon! Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
+
+    show kloth crazy
 
     "Kloth" "Nein, ist er nicht! Mir geht es gut. Hörst du Atropos? Mir geht es gut!"
 
     "Atropos" "Schon okay, ich habe verstanden. Du bist glücklich und das freut mich."
 
-    "Kloth" "Sie werden kommen, Atropos. Ich warne dich. Sie werden kommen und uns holen."
+    show kloth scared1
+
+    "Kloth" "Sie werden kommen, Atropos. Ich warne dich! Sie werden kommen und uns holen!"
 
     "Kloth" "Sie warten nur darauf, dass wir alle zu seelenlosen Kreaturen werden. Und dann holen sie uns."
+
+    show kloth crazy
 
     "Kloth" "Aber mich werden sie nicht bekommen. Ich werde ihnen entkommen. Ich werde fliehen, hörst du?"
 
@@ -214,13 +234,14 @@ label search_kloth_without_anan_office:
 
     # Ende der Erinnerung, zurück im Flur
     hide kloth
+    hide sepia
     scene hall
 
     # Atropos Gedanken
-    "Was war das denn für eine seltsame Erinnerung gewesen? Die hatte ich ja vollkommen vergessen…"
+    "Was war das denn für eine seltsame Erinnerung? Die hatte ich ja vollkommen vergessen…"
 
     # Atropos Gedanken
-    "Das Gespräch war ein paar Monate her, ob es mittlerweile wohl noch schlimmer geworden ist?"
+    "Das Gespräch war ein paar Monate her. Ob es mittlerweile wohl noch schlimmer geworden ist?"
 
     # Atropos Gedanken
     "Kloth wirkte fast schon besessen. Und es würde erklären, warum er sich in letzter Zeit so selten gemeldet hat."
@@ -244,7 +265,7 @@ label search_kloth_without_anan_office:
     "{i}Aber jetzt geh. Er ist doch ohnehin nicht da, willst du durch ganz Aither rennen, um ihn zu suchen? {/i}"
 
     # Symbiont
-    "{i}Du musst heute noch so viel Arbeit erledigen. Kümmere dich darum. Das macht dich glücklich. {/i}"
+    "{i}Du musst heute noch so viel Arbeit erledigen. Kümmere dich darum! Das macht dich glücklich. {/i}"
 
 
     menu:
@@ -256,7 +277,7 @@ label search_kloth_without_anan_office:
             "So kann ich ihm am besten helfen."
 
             # Atropos Gedanken
-            "Ich muss endlich wissen, was los ist."
+            "Ich muss endlich wissen, was los ist!"
 
             jump still_search_kloth
         "Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann.":
@@ -368,7 +389,7 @@ label everything_seen:
             "{i}Ja, vergiss es. Sei einfach nur glücklich. Du bist sicher, nichts kann dir passieren. Das alles hier ist niemals passiert. Du hast eine ganz normale Mittagspause verbracht. {/i}"
 
             # Symbiont
-            "{i}Sei glücklich, Atropos. {/i}"
+            "{i}Sei glücklich, Atropos! {/i}"
             scene hall
 
             # Atropos Gedanken
@@ -419,7 +440,7 @@ label still_search_kloth:
     show anan 2:
         xalign 0.5
 
-    "Anan" "Atropos? Was kann ich für dich tun? Aber ich befürchte du musst dich kurzhalten, ich bin beschäftigt."
+    "Anan" "Atropos? Was kann ich für dich tun? Aber ich befürchte, du musst dich kurzhalten, ich bin beschäftigt."
 
     "Atropos" "Kloth, dein Sekretär… er ist ein guter Freund von mir und ich habe schon seit einer ganzen Weile nichts mehr von ihm gehört."
 
@@ -436,7 +457,7 @@ label still_search_kloth:
     if read_letter_kloth:
 
         # Atropos Gedanken
-        "Ich hoffe nur es ist nicht schon zu spät… ich habe ein ungutes Gefühl…"
+        "Ich hoffe nur, es ist nicht schon zu spät… Ich habe ein ungutes Gefühl…"
 
     "Anan" "Kloth Hetair? Ich bin ebenfalls auf der Suche nach ihm. Er ist heute nicht bei mir zu Arbeitsbeginn aufgetaucht."
 
@@ -448,18 +469,18 @@ label still_search_kloth:
 
     "Anan" "(mustert Atropos prüfend)"
 
-    "Anan" "Gut. Lass uns zusammen weitersuchen. Es ist ihm nicht möglich spurlos zu verschwinden."
+    "Anan" "Gut. Lass uns zusammen weitersuchen. Es ist ihm nicht möglich, spurlos zu verschwinden."
 
     "Atropos" "Wieso bist du dir so sicher, dass er hier ist?"
 
     "Atropos" "Gibt es keine Möglichkeit, dass er sich vielleicht einen Tag frei genommen hat und nun irgendwo in Astoa aufhält?"
 
-    "Anan" "Sein Verlassen des Gebäudes gestern wurde nicht registriert."
+    "Anan" "Es gab gestern keine Registrierung, dass er das Gebäude verlassen hätte."
 
     "Anan" "Er befindet sich innerhalb Aithers."
 
     # Symbiont
-    "{i}Willst du Kloth wirklich finden? Du weißt nicht, ob du die Wahrheit erträgst… was ist, wenn du sie nicht verkraftest? {/i}"
+    "{i}Willst du Kloth wirklich finden? Du weißt nicht, ob du die Wahrheit erträgst… Was ist, wenn du sie nicht verkraftest? {/i}"
 
     # Atropos Gedanken
     "Ich kann die Wahrheit verkraften. Egal was Kloth mir zu erzählen hat, ich werde ihm zuhören und für ihn da sein."
@@ -472,7 +493,9 @@ label still_search_kloth:
 
     "Atropos" "Okay… die Fahrzüge sind komplett überfüllt. Wenn wir unten starten und uns nach oben vorarbeiten wollen, müssen wir das Treppenhaus nehmen."
 
-    scene stairs_up
+    hide anan
+
+    scene corpse
 
     "Atropos" "Kloth? Kloth?"
 
@@ -481,7 +504,7 @@ label still_search_kloth:
     "Atropos" "Das ganze Blut… ist er… ist er etwa tot?"
 
     # Symbiont
-    "{i}Alles kommt wieder in Ordnung. Alles wird gut. Alles wird glücklich. Entspanne dich. Kloth geht es gut. Mach dir keine Sorgen.{/i}"
+    "{i}Alles kommt wieder in Ordnung. Alles wird gut. Alles wird glücklich. Entspann dich. Kloth geht es gut. Mach dir keine Sorgen! {/i}"
 
     "Atropos" "Neeeein! Kloth liegt hier vor mir…"
 
@@ -495,34 +518,44 @@ label still_search_kloth:
 
     "Atropos" "Das darf doch nicht wahr sein…"
 
-    hide anan
 
     # Wechsel zu Erinnerung
-    show kloth aengstlich1:
+    scene stairs_up
+    show sepia
+    show kloth scared2 behind sepia:
         xalign 0.5
     "Kloth" "Atropos!"
 
     "Atropos" "Kloth, was ist los?"
 
+    show kloth unsuresmiling
+
     "Kloth"  "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
     "Atropos"  "Beruhige dich erst einmal und atme tief durch. Was ist passiert?"
+
+    show kloth scared2
 
     "Kloth" "Nicht hier … es könnte jemand kommen und dann…"
 
     "Atropos"  "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
+    show kloth scared1
+
     "Kloth" "Ich… ich…"
 
     "Atropos"  "Ich wollte eigentlich gerade Mittagspause machen. Willst du nicht einfach mitkommen und wir reden dann? Chesis scheint auch Pause zu haben."
 
-    "Kloth" "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
+    show kloth unsuresmiling
 
-    "Kloth" "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
+    "Kloth" "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht, an wen ich mich sonst wenden soll. Ich brauche dich jetzt!"
+
+    "Kloth" "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen!"
 
     "Atropos"  "Ja natürlich helfe ich dir. Erzähl endlich was los ist. Wie kann ich dir helfen?"
 
     hide kloth
+    hide sepia
 
     # Erinnerung endet.
     show anan 2:
@@ -555,16 +588,16 @@ label still_search_kloth:
 
     "Anan" "Eine solche Person trifft man viel zu selten an."
 
-    "Atropos"  "Ist das alles? Er war dein persönlicher Sekretär gewesen!"
+    "Atropos"  "Ist das alles? Er war dein persönlicher Sekretär!"
 
     "Atropos"  "Aber dir scheint das ja alles vollkommen egal zu sein…"
 
-    "Atropos"  "Ich dachte dir sei das Glück der Menschen so unglaublich wichtig?"
+    "Atropos"  "Ich dachte, dir sei das Glück der Menschen so unglaublich wichtig?"
 
     "Atropos"  "Das macht mir gerade aber nicht den Anschein!"
 
     # Symbiont
-    "{i}Beruhige dich Atropos. Deine Wut auf Anan ist nicht angemessen. Er hat dir nichts getan. Du bist wütend auf dich selbst, weil du Kloths Tod nicht verhindern konntest. {i}"
+    "{i}Beruhige dich, Atropos. Deine Wut auf Anan ist nicht angemessen. Er hat dir nichts getan. Du bist wütend auf dich selbst, weil du Kloths Tod nicht verhindern konntest. {i}"
 
     # Symbiont
     "{i}Möchtest du das alles nicht vergessen und einfach nur glücklich sein? {i}"
@@ -579,7 +612,7 @@ label still_search_kloth:
 
     "Anan" "Du willst kein Leid fühlen. Du willst den Schmerz nicht durchleben, welchen ich auf mich genommen habe."
 
-    "Anan" "Nimm das Geschenk an, welches ich der Menschheit gemacht habe. Sei glücklich und zufrieden. Der Preis dafür war hoch und der Kampf dafür war lange."
+    "Anan" "Nimm das Geschenk an, welches ich der Menschheit gemacht habe. Sei glücklich und zufrieden! Der Preis dafür war hoch und der Kampf dafür war lange."
 
     "Anan" "Wieso kämpfst du gerade so sehr gegen dein eigenes Glück an?"
 
@@ -628,7 +661,7 @@ label still_search_kloth:
     "{i}Anan sagt nichts als die Wahrheit. Du solltest auf ihn hören. Er würde niemals die Menschen anlügen, die er so sehr liebt. {i}"
 
     # Atropos Gedanken
-    "Aither ist an all diesem Mist schuld… sie zwingen mich dazu um jeden Preis glücklich zu sein, auch wenn ich das gerade einfach nicht sein möchte!"
+    "Aither ist an all diesem Mist schuld… sie zwingen mich dazu, um jeden Preis glücklich zu sein, auch wenn ich das gerade einfach nicht sein möchte!"
 
     # Atropos Gedanken
     "Kloth hatte Recht mit allem… das, was ich im Labor herausgefunden habe… es muss etwas zu bedeuten haben… Kloth hatte etwas herausgefunden… er wollte handeln."
@@ -665,7 +698,13 @@ label still_search_kloth:
             scene kloth_office
             "Atropos"  "Natürlich…"
 
-            "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            if kloth_office_visited:
+                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            else:
+                "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
+
+
+
             # Spieler wird PC ohne Passwort-Kennung angezeigt
             "Blog über Bombenleger, der Aither vernichten will."
             "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
@@ -693,7 +732,10 @@ label still_search_kloth:
             "Atropos"  "Aber was?"
             scene kloth_office
             "Atropos"  "Natürlich…"
-            "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            if kloth_office_visited:
+                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+            else:
+                "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
             # Spieler wird PC ohne Passwort-Kennung angezeigt
             "Blog über Bombenleger, der Aither vernichten will."
 
@@ -742,7 +784,7 @@ label serverraumpille:
 label menschennichthelfen:
     "Atropos"  "Wenn ich den Menschen helfe, rette ich damit vielleicht auch Anan. Das kann ich nicht zulassen."
 
-    "Atropos"  "Anan ist überhaupt erst schuld für die gesamte Lage, in der wir uns gerade befinden."
+    "Atropos"  "Anan ist überhaupt erst schuld an der gesamten Lage, in der wir uns gerade befinden."
 
     "Atropos"  "Er hat Kloth umgebracht und uns unser scheinbares Glück aufgezwungen."
 
@@ -771,11 +813,11 @@ label menschennichthelfen:
 
     "Atropos"  "…"
 
-    "Atropos"  "Koth… ich wünschte du wärst jetzt an meiner Seite…"
+    "Atropos"  "Koth… ich wünschte, du wärst jetzt an meiner Seite…"
 
-    "Atropos"  "Ich wünschte du wärst in dem Wissen gestorben, tatsächlich etwas erreicht zu haben."
+    "Atropos"  "Ich wünschte, du wärst in dem Wissen gestorben, tatsächlich etwas erreicht zu haben."
 
-    "Atropos"  "Ich hoffe du kannst den Triumph noch von irgendwo anders auskosten."
+    "Atropos"  "Ich hoffe, du kannst den Triumph noch von irgendwo anders auskosten."
 
     # Symbiont
     "{i}10 Sekunden. {i}"
@@ -785,7 +827,7 @@ label menschennichthelfen:
     # Symbiont
     "{i}9 Sekunden. {i}"
 
-    "Atropos"  "Die 10 Minuten gingen schneller um als ich dachte… ich wünschte, ich hätte etwas mehr Zeit, um mich gedanklich von allen zu verabschieden."
+    "Atropos"  "Die 10 Minuten gingen schneller um, als ich dachte… ich wünschte, ich hätte etwas mehr Zeit, um mich gedanklich von allen zu verabschieden."
 
     # Symbiont
     "{i}8 Sekunden. Bereust du deine Entscheidung? Oder bist du glücklich?{i}"
@@ -824,14 +866,12 @@ label menschenhelfen:
 
     "Atropos"  "Und die Vernichtung dieser Filiale sowie der Server wird uns wenigstens etwas Zeit verschaffen."
 
-    "Atropos"  "Selbst wenn sich Anan dadurch retten kann… ich könnte es nicht mit meinem Gewissen vereinbaren alle deswegen sterben zu lassen."
-
     "Atropos"  "Zeit, in der auch andere Menschen erkennen können, was wahres Glück bedeutet."
 
     # Symbiont
     "{i}Was bedeutet für dich wahres Glück? {i}"
 
-    "Atropos"  "Die Möglichkeit selbst zu entscheiden wie ich in bestimmten Momenten fühlen möchte. Es sollte allein meine Entscheidung sein."
+    "Atropos"  "Die Möglichkeit, selbst zu entscheiden, wie ich in bestimmten Momenten fühlen möchte. Es sollte allein meine Entscheidung sein."
 
     # Symbiont
     "{i}Und so bist du wahrhaft glücklich? {i}"
@@ -845,7 +885,7 @@ label menschenhelfen:
     "{i}Atropos. Kannst du wirklich damit leben, dass Menschen deswegen sterben oder verletzt werden? {i}"
 
     # Atropos Gedanken
-    "Ich denke das ist es wert."
+    "Ich denke, das ist es wert."
 
     # Atropos Gedanken
     "Der Alarm ist ganz schön laut und all diese aufgeregten Stimmen, welche durcheinanderrufen."
@@ -887,7 +927,7 @@ label menschenhelfen:
     "Atropos"  "Verlasst das Gebäude… bitte…"
 
     # Symbiont
-    "{i}Rette sie. Du könntest mit ihrem Tod nicht leben. {i}"
+    "{i}Rette sie! Du könntest mit ihrem Tod nicht leben. {i}"
 
     "Atropos"  "Verdammt… ich darf nicht zu spät kommen… der Serverraum… ich muss zurück und die Bombe aufhalten!"
 

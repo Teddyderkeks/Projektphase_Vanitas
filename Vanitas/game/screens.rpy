@@ -1,7 +1,6 @@
 ﻿################################################################################
 ## Initialization
 ################################################################################
-
 init offset = -1
 
 
@@ -240,33 +239,33 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
-screen quick_menu():
+#screen quick_menu():
 
     ## Ensure this appears on top of other screens.
-    zorder 100
+    #zorder 100
 
-    if quick_menu:
+    #if quick_menu:
 
-        hbox:
-            style_prefix "quick"
+        #hbox:
+            #style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            #xalign 0.5
+            #yalign 1.0
 
-            textbutton _("Zurück") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Spulen") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Speichern") action ShowMenu('save')
-            textbutton _("S.Speichern") action QuickSave()
-            textbutton _("S. Laden") action QuickLoad()
-            textbutton _("Optionen") action ShowMenu('preferences')
+            #textbutton _("Zurück") action Rollback()
+            #textbutton _("History") action ShowMenu('history')
+            #textbutton _("Spulen") action Skip() alternate Skip(fast=True, confirm=True)
+            #textbutton _("Auto") action Preference("auto-forward", "toggle")
+            #textbutton _("Speichern") action ShowMenu('save')
+            #textbutton _("S.Speichern") action QuickSave()
+            #textbutton _("S. Laden") action QuickLoad()
+            #textbutton _("Optionen") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
+#init python:
+    #config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
 
@@ -294,22 +293,25 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
         yalign 0.5
 
         spacing gui.navigation_spacing
 
+        xpos gui.navigation_xpos
+
         if main_menu:
+            #xpos 350
 
             textbutton _("Start") action Start()
 
         else:
+            #xpos gui.navigation_xpos
 
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Speichern") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Laden") action ShowMenu("load")
 
         textbutton _("Einstellungen") action ShowMenu("preferences")
 
@@ -374,10 +376,9 @@ screen main_menu():
         vbox:
             text "[config.name!t]":
                 style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+                xpos -1400
+                ypos -800
+                font "vivaldi.ttf"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -588,17 +589,17 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-
+    $ left_side = True
     tag menu
 
     use file_slots(_("Speichern"))
 
 
 screen load():
-
+    $ left_side = True
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("Laden"))
 
 
 screen file_slots(title):
