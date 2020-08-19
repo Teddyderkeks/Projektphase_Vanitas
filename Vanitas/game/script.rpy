@@ -121,6 +121,7 @@ label change:
 
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
+    show screen force_mouse_move
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
@@ -128,6 +129,7 @@ label change:
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
             jump not_take_pill
         "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
+            hide screen force_mouse_move
             jump later_take_pill
 
 
