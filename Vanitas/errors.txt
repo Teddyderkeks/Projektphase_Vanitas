@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 570: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                text _("Vanitas ist ein" \n hallo")
+The label watchofficecalendar is defined twice, at
+  File "game/script.rpy", line 365 and
+  File "game/script.rpy", line 953.
+
+The label watchofficephoto is defined twice, at
+  File "game/script.rpy", line 377 and
+  File "game/script.rpy", line 965.
+
+The label watchofficehourglass is defined twice, at
+  File "game/script.rpy", line 386 and
+  File "game/script.rpy", line 974.
+
+The label watchnothingoffice is defined twice, at
+  File "game/script.rpy", line 398 and
+  File "game/script.rpy", line 986.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 19 16:33:22 2020
+Wed Aug 19 20:03:01 2020
