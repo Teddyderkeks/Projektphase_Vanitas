@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 19: u'menu' is not a keyword argument or valid child for the screen statement.
-    menu:
-        ^
+File "game/screens.rpy", line 570: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                text _("Vanitas ist ein" \n hallo")
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 19 15:14:02 2020
+Wed Aug 19 16:33:22 2020

@@ -2,9 +2,11 @@ screen pfeil_back():
     frame:
         xpos 1700 ypos 500
         imagebutton:
-            idle "pfeil_rechts"
+            idle "pfeil"
             hover "pfeil_rechts_blau"
             action Jump ("treppenhaus2")
+
+image pfeil_rechts = Transform ("pfeil",rotate = 180)
 
 #call screen pfeil_back
 #hide screen pfeil_back
