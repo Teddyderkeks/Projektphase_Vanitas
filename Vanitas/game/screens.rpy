@@ -307,9 +307,7 @@ screen navigation():
         else:
             #xpos gui.navigation_xpos
 
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Speichern") action ShowMenu("save")
+            textbutton _("Spiel speichern") action ShowMenu("save")
 
         textbutton _("Laden") action ShowMenu("load")
 

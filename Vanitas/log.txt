@@ -1,25 +1,15 @@
-<<<<<<< HEAD
-Wed Aug 19 18:48:39 2020
-=======
-Wed Aug 19 18:11:07 2020
->>>>>>> Sabrina
+Wed Aug 19 19:44:48 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
 <<<<<<< HEAD
 Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata. took 0.03s
-=======
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.26s
+Loading error handling took 0.03s
+Loading script took 0.18s
 Loading save slot metadata. took 0.06s
->>>>>>> Sabrina
 Loading persistent took 0.00s
 
 File "game/office.rpy", line 353: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
@@ -422,8 +412,7 @@ Loading script took 0.21s
 Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-<<<<<<< HEAD
-Running init code took 0.07s
+Running init code took 0.46s
 Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -439,32 +428,19 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.000000
-<<<<<<< HEAD
-Creating interface object took 0.06s
+Creating interface object took 0.08s
 Cleaning stores took 0.00s
 Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.18s
+Build styles took 0.01s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.08s
-=======
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
->>>>>>> Sabrina
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.02s
+Interface start took 0.03s
 
 primary display bounds: (0, 0, 1920, 1200)
 swap interval: 1 frames
@@ -844,22 +820,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-<<<<<<< HEAD
-Total time until interface ready: 1.53900003433s
+Total time until interface ready: 2.08299994469s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.014333 seconds.
-- Frame drawn at 0.015333 seconds.
-- Frame drawn at 0.021333 seconds.
-- Frame drawn at 0.034333 seconds.
-- 0.034333 seconds to render 5 frames.
-=======
-Total time until interface ready: 20.4589998722s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.018949 seconds.
-- Frame drawn at 0.019949 seconds.
-- Frame drawn at 0.024949 seconds.
-- Frame drawn at 0.040949 seconds.
-- 0.040949 seconds to render 5 frames.
->>>>>>> Sabrina
+- Frame drawn at 0.014333 seconds.
+- Frame drawn at 0.019333 seconds.
+- Frame drawn at 0.032333 seconds.
+- 0.032333 seconds to render 5 frames.
