@@ -1,79 +1,36 @@
-<<<<<<< HEAD
-Wed Aug 19 13:57:58 2020
-=======
-Wed Aug 19 14:02:58 2020
->>>>>>> Tati
+Wed Aug 19 14:14:23 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Tati
-Bootstrap to the start of init.init took 0.06s
-Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.02s
-<<<<<<< HEAD
-Loading script took 0.46s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.08s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Saknoops\\AppData\\Roaming/RenPy/backups\\Vanitas':
-Dump and make backups. took 0.06s
-=======
-Loading script took 0.31s
-Loading save slot metadata. took 0.03s
-=======
 Bootstrap to the start of init.init took 0.12s
-=======
-Bootstrap to the start of init.init took 0.10s
->>>>>>> Stashed changes
 Early init took 0.01s
-Loader init took 0.05s
+Loader init took 0.04s
 Loading error handling took 0.03s
-Loading script took 1.09s
+Loading script took 0.70s
 Loading save slot metadata. took 0.05s
 Loading persistent took 0.02s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.11s
-Loading analysis data took 0.07s
-Analyze and compile ATL took 0.00s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Tatiana Krupenina\\AppData\\Roaming/RenPy/backups\\Vanitas':
-Dump and make backups. took 0.11s
->>>>>>> Tati
+Backing up script files to 'C:\\Users\\Saknoops\\AppData\\Roaming/RenPy/backups\\Vanitas':
+Dump and make backups. took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.000000
-<<<<<<< HEAD
-Creating interface object took 0.08s
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-Creating interface object took 0.06s
-=======
-Creating interface object took 0.12s
->>>>>>> Stashed changes
->>>>>>> Tati
+Creating interface object took 0.09s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-<<<<<<< Updated upstream
-Save screen analysis took 0.06s
-Prepare screens took 0.05s
-<<<<<<< HEAD
+Save screen analysis took 0.07s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.06s
+Save bytecode. took 0.08s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -83,27 +40,6 @@ Traceback (most recent call last):
     __import__(mod)
 ImportError: DLL load failed: The specified module could not be found.
 Unknown renderer: angle
-=======
-Save pyanalysis. took 0.11s
-Save bytecode. took 0.06s
-=======
-Creating interface object took 0.11s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.01s
-Load screen analysis took 0.12s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-=======
-Save screen analysis took 0.09s
->>>>>>> Stashed changes
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.10s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.03s
->>>>>>> Tati
 
 primary display bounds: (0, 0, 1920, 1200)
 swap interval: 1 frames
@@ -483,15 +419,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-<<<<<<< HEAD
-Total time until interface ready: 1.
-=======
-Total time until interface ready: 3.1970000267s
+Total time until interface ready: 2.09399986267s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.014333 seconds.
-- Frame drawn at 0.016333 seconds.
-- Frame drawn at 0.021333 seconds.
-- Frame drawn at 0.033333 seconds.
-- 0.033333 seconds to render 5 frames.
->>>>>>> Tati
+- Frame drawn at 0.018949 seconds.
+- Frame drawn at 0.019949 seconds.
+- Frame drawn at 0.033949 seconds.
+- Frame drawn at 0.049949 seconds.
+- 0.049949 seconds to render 5 frames.
