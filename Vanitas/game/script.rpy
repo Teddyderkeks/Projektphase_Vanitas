@@ -1,6 +1,7 @@
 default pill_taken = False
 default straight_office = False
 default neiro_unterhalten= False
+define startfade=Fade(0.5,0.5,0.5)
 
 label start:
     stop music
@@ -32,6 +33,7 @@ label start:
 
 label change:
     scene street
+    with startfade
     stop music fadeout 2000
     play music "Sound_verkehrsraum_demo.mp3" fadeout 1
 
@@ -123,31 +125,14 @@ label change:
     jump menustart
 
 
-#    menu:
-#        "Ich sollte die Pille besser jetzt sofort nehmen.":
-#            jump take_pill
-#        "Ich nehme die Pille nicht- ich brauche sie nicht!":
-#            jump not_take_pill
-#        "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
-#            jump later_take_pill
-
-label menustart:
-
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
-            jump back_pill_decision
+            jump not_take_pill
         "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
-            jump back_pill_decision
+            jump later_take_pill
 
-# muss am Ende wieder rausgelöscht werden!!!!
-
-label back_pill_decision:
-        "Entwickler" "Es tut uns schrecklich leid, aber dieser Zweig ist noch nicht fertig. Wir leiten dich mit des nächsten Klicks automatisch zurück zur Entscheidung."
-        "Entwickler" "Bitte triff nun die Entscheidung >Ich sollte die Pille besser sofort nehmen<."
-        "Entwickler" "Wir entschuldigen uns für die Umstände und hoffen, dass du eines Tages zurückkehren wirst um auch diesen Zweig auszuprobieren."
-        jump menustart
 
 
 label take_pill:
