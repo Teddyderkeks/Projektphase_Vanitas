@@ -916,340 +916,292 @@ label conversation_with_seller:
         # Atropos Gedanken
         "{i}Dann bin ich wohl wirklich zu früh dran."
 
+        # Atropos Gedanken
+        "Ich höre Stimmen, könnten sie das sein?"
+
+        # Atropos Gedanken
+        "Tatsächlich, sie sind es und sie scheinen sich eh noch zu unterhalten bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
+
+        scene office_2
+
+        "Atropos" "Hey Leute."
+
+        show ireia normal:
+            xalign 0.5
+
+        "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen. Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich."
+
+        "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
+
+        show tycho normal:
+            xalign 0.75
+
+        "Tycho" "Das will ich dir aber auch geraten haben. (lacht) Uns kann man doch gar nicht {b}nicht{/b} mögen, nicht wahr? Und dementsprechend musst du uns auch vermisst haben."
+
+        show armene normal:
+            xalign 1
+
+        "Armene" "Ja. Ja, das stimmt! Hallo Atropos."
+
+        "Atropos" "Hi Armene, wie geht es dir?"
+
+        "Armene" "Ich bin glücklich wie immer!"
+
+        "Ireia" "Jetzt überfall die Arme doch nicht, du kennst sie doch."
+
+        "Ireia" "Und Armene, du solltest weiter deine Präsentation über das firmeninterne Kommunikationssystem vorbereiten- ich erwarte bessere Arbeit von dir als letztes Mal."
+
+        "Armene" "Natürlich Ireia, tut mir leid."
+
+        hide armene normal
+
+        "Tycho" "Neiro, gesell dich doch zu uns, was sitzt du so einsam und verlassen an deinem Platz? Deine Arbeitszeit hat doch noch nicht angefangen."
+
+        show neiro normal:
+            xalign 0.25
+
+        "Neiro" "Oh… ich hatte euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
+
+        "Atropos" "Neiro wie er leibt und lebt. (lacht)"
+
+        "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte deswegen von dir keine schlechteren Ergebnisse sehen."
+
+        "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
+
+        # Atropos Gedanken
+        "Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+
+        "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
+
+        "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zum Feiern haben. Das Glück der Menschen entsteht nicht von selbst."
+
+        "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
+
+        "Tycho" "Zurück zum Thema… diese Party wird gigantisch. Erinnert ihr euch noch an die anlässlich des 30. Gründungstages?"
+
+        "Atropos" "Damals hatte ich noch nicht hier gearbeitet. So alt bin ich nun auch nicht. (lacht)"
+
+        "Tycho" "Ach stimmt, du bist ja ein paar Jahre jünger als ich, oder? 24?"
+
+        "Atropos" "Fast… 25. (grinst)"
+
+        "Tycho" "Jedenfalls… wo war ich stehen geblieben?"
+
+        "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
+
+        "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch schenkte Anan mir eine Einladung."
+
+        "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
+
+        "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
+
+        "Atropos" "Ja… du kannst doch nicht die Information anteasern und dann damit hinter dem Berg halten."
+
+        show armene normal:
+            xalign 1
+
+        "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
+
+        "Atropos" "Habe ich dich gerade richtig verstanden? Die großen Drei, alle hier in Astoa?"
+
+        "Ireia" "Das sind ja unglaubliche Neuigkeiten! Wieso hast du uns nicht schon früher davon erzählt?"
+
+        "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
+
+        "Atropos" "Ich frage mich, wie die beiden wohl sind. Natürlich kennt man ihre Namen… immerhin sind Anan, Atlas und Adrés die Gründer von Aither und diejenigen, die den Krieg beendet haben…"
+
+        "Atropos" "Dennoch kenne ich Atlas und Adrés nur von Fotos und nicht von Videoaufzeichnungen oder anderen Quellen. Es wird ein ziemliches Geheimnis um ihre Existenz gemacht."
+
+        "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
+
+        "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
+
+        "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
+
+        "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
+
+        "Armene" "Nein… Ich wollte mich nur am Gespräch beteiligen…"
+
+        "Neiro" "Um was geht es? Tut mir leid, ich bin mit den Gedanken kurz abgeschweift…"
+
+        "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
+
+        "Tycho" "(lacht) Und wieder das übliche Chaos. Es macht echt zu viel Spaß mit euch Zeit zu verbringen!"
+
+        "Ireia" "Armene, los an die Arbeit!"
+
+        "Armene" "Ja natürlich Ireia, mache ich!"
+
+        hide armene normal
+
+        # Atropos Gedanken
+        "Was mich gerade interessieren würde…"
+
         menu:
-            "Ich schaue mir den Kalender an.":
-                jump watchofficecalendar
+            "Ich hätte gerne mehr Informationen über die Gründungsfeier.":
+                jump entscheidung4_1V2
+            "Ich würde mich gerne noch etwas mehr über die Großen Drei unterhalten.":
+                jump entscheidung4_2V2
+            "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
+                jump entscheidung4_3V2
 
-            "Da ist ein interessantes Foto.":
-                jump watchofficephoto
+        label entscheidung4_1V2:
 
-            "Neben der Sanduhr liegt etwas.":
-                jump watchofficehourglass
+            $ neiro_unterhalten = True
 
-            "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
-                jump watchnothingoffice
+            "Atropos" "Tycho, hast du noch mehr Informationen über die diesjährige Gründungsfeier?"
 
-        label watchofficecalendar:
-            scene detail_calendar
-            # Atropos Gedanken
-            "September 2256."
-            # Atropos Gedanken
-            "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
-            # Atropos Gedanken
-            "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            # nach Button-Klick
-            scene office_1
-            jump watchnothingoffice
+            "Tycho" "Hmm, gute Frage- lass mich einen Moment überlegen…"
 
-        label watchofficephoto:
-            scene detail_photo_neiro
-            # Atropos Gedanken
-            "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
-            # Atropos Gedanken
-            "Was sein Bruder wohl jetzt so macht?"
-            scene office_1
-            jump watchnothingoffice
+            "Neiro" "Ihr sprecht über die Gründungsfeier?"
 
-        label watchofficehourglass:
-            scene detail_hourglass
-            # normalerweise nach Button-Klick!!
-            # Atropos Gedanken
-            "Was steht da?"
-            show detail_hourglass_overlay
-            # normalerweise nach Button-Klick!!
-            # Atropos Gedanken
-            "Ein Gedicht. Wohl von Neiro."
-            scene office_1
-            jump watchnothingoffice
+            "Ireia" "Ja, darum ging es schon die ganzen letzten Minuten."
 
-        label watchnothingoffice:
+            "Neiro" "Oh. Jedenfalls, ich weiß ein bisschen was…"
 
-            # Atropos Gedanken
-            "Ich höre Stimmen, könnten sie das sein?"
+            "Tycho" "Worauf wartest du noch? Erzähl schon!"
+
+            "Neiro" "Atlas und Adrés werden hierher nach Astoa kommen, um der Gründungsfeier beizuwohnen!"
+
+            "Atropos" "Neiro, das wissen wir bereits. (lacht) Immerhin haben wir dadurch noch einmal die Bestätigung."
+
+            "Ireia" "Weißt du sonst noch etwas? Irgendwelche Neuigkeiten?"
+
+            "Neiro" "Es hieß, dass heute im Laufe des Tages noch eine offizielle Ankündigung des Ganzen erfolgen soll."
+
+            "Atropos" "Eine offizielle Ankündigung? Also einfach eine Durchsage von Anan?"
+
+            "Neiro" "Nein, soweit ich das weiß, werden alle drei live geschaltet."
+
+            "Ireia" "Das gab es ja noch nie! Normalerweise kommunizieren wir nicht mit den Menschen außerhalb von Astoa… warum sollten wir auch?"
+
+            "Tycho" "Das sind wirklich unglaubliche Neuigkeiten! Ich freue mich schon darauf. Die diesjährige Gründungsfeier wird unbeschreiblich und unvergesslich werden!"
+
+            "Neiro" "Und es gibt noch etwas: Angeblich soll mit der Gründungsfeier eine neue Happiness-Pille vorgestellt werden."
+
+            "Ireia" "Eine neue Pille? Sag nicht, dass es eine Pille sein wird, die uns noch glücklicher macht?"
+
+            "Tycho" "Ich wüsste nicht, was es sonst sein könnte… der Tag wird ja immer besser!"
+
+            "Ireia" "Atropos, müsstest du darüber nicht eigentlich mehr wissen?"
 
             # Atropos Gedanken
-            "Tatsächlich, sie sind es und sie scheinen sich eh noch zu unterhalten bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
+            "Eine neue Pille? Ob sie dann wohl besser wirkt als die aktuelle? Immerhin scheine ich sie momentan nicht wirklich für mein Glück zu brauchen."
 
-            scene office_2
+            # Symbiont
+            "{i}Doch, du brauchst sie. Merkst du nicht, dass du immer mehr zu zweifeln beginnst? Zweifel säen Unmut und Unzufriedenheit. Du gefährdest dein Glück. {/i}"
 
-            "Atropos" "Hey Leute."
+            jump nachentscheidung4V2
 
-            show ireia normal:
-                xalign 0.5
+        label entscheidung4_2V2:
 
-            "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen. Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich."
+            "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
 
-            "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
+            "Ireia" "Sie wollen das Beste für die Welt, genauso wie Anan. Ist das nicht das Einzige, das zählt?"
 
-            show tycho normal:
-                xalign 0.75
+            "Tycho" "Ihnen ist unser Wohl am aller Wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht, mir das vorzustellen!"
 
-            "Tycho" "Das will ich dir aber auch geraten haben. (lacht) Uns kann man doch gar nicht {b}nicht{/b} mögen, nicht wahr? Und dementsprechend musst du uns auch vermisst haben."
+            "Ireia" "Wir wären immer noch im Krieg versunken. Ohne die Happiness-Pille, ohne glückliche Menschen würde es nur weiter Streit und Zwietracht geben."
 
-            show armene normal:
-                xalign 1
+            "Atropos" "Ich frage mich immer noch, wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
 
-            "Armene" "Ja. Ja, das stimmt! Hallo Atropos."
+            "Tycho" "Natürlich durch unsere Glücklichkeit: Happiness. Das ist das Einzige, was wirklich zählt. Spielen andere Gründe oder genauere Erläuterungen eine Rolle?"
 
-            "Atropos" "Hi Armene, wie geht es dir?"
+            "Ireia" "Nein, das ist nun wirklich nichts, worüber wir uns Gedanken machen müssten."
 
-            "Armene" "Ich bin glücklich wie immer!"
+            "Ireia" "Sie schenkten uns Happiness und beendeten damit den 50-jährigen Krieg. Darum sind wir heute glücklich. Darum dürfen wir das Leben unserer Träume leben!"
 
-            "Ireia" "Jetzt überfall die Arme doch nicht, du kennst sie doch."
-
-            "Ireia" "Und Armene, du solltest weiter deine Präsentation über das firmeninterne Kommunikationssystem vorbereiten- ich erwarte bessere Arbeit von dir als letztes Mal."
-
-            "Armene" "Natürlich Ireia, tut mir leid."
-
-            hide armene normal
-
-            "Tycho" "Neiro, gesell dich doch zu uns, was sitzt du so einsam und verlassen an deinem Platz? Deine Arbeitszeit hat doch noch nicht angefangen."
-
-            show neiro normal:
-                xalign 0.25
-
-            "Neiro" "Oh… ich hatte euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
-
-            "Atropos" "Neiro wie er leibt und lebt. (lacht)"
-
-            "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte deswegen von dir keine schlechteren Ergebnisse sehen."
-
-            "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
+            # Symbiont
+            "{i} Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
 
             # Atropos Gedanken
-            "Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+            "Ja, ich besitze ein glückliches Leben. Aber sollte man aus diesem Grund dennoch nichts hinterfragen?"
 
-            "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
+            "Atropos" "Sollten wir nicht mehr erfahren dürfen? Wieso machen Anan und die anderen beiden so ein großes Geheimnis aus der Vergangenheit?"
 
-            "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zum Feiern haben. Das Glück der Menschen entsteht nicht von selbst."
+            "Atropos" "Wir wissen, dass sie den Krieg beendet haben und dass das mit Hilfe der Happiness-Pille passiert ist… aber wie?"
 
-            "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
-
-            "Tycho" "Zurück zum Thema… diese Party wird gigantisch. Erinnert ihr euch noch an die anlässlich des 30. Gründungstages?"
-
-            "Atropos" "Damals hatte ich noch nicht hier gearbeitet. So alt bin ich nun auch nicht. (lacht)"
-
-            "Tycho" "Ach stimmt, du bist ja ein paar Jahre jünger als ich, oder? 24?"
-
-            "Atropos" "Fast… 25. (grinst)"
-
-            "Tycho" "Jedenfalls… wo war ich stehen geblieben?"
-
-            "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
-
-            "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch schenkte Anan mir eine Einladung."
-
-            "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
-
-            "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
-
-            "Atropos" "Ja… du kannst doch nicht die Information anteasern und dann damit hinter dem Berg halten."
-
-            show armene normal:
-                xalign 1
-
-            "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
-
-            "Atropos" "Habe ich dich gerade richtig verstanden? Die großen Drei, alle hier in Astoa?"
-
-            "Ireia" "Das sind ja unglaubliche Neuigkeiten! Wieso hast du uns nicht schon früher davon erzählt?"
-
-            "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
-
-            "Atropos" "Ich frage mich, wie die beiden wohl sind. Natürlich kennt man ihre Namen… immerhin sind Anan, Atlas und Adrés die Gründer von Aither und diejenigen, die den Krieg beendet haben…"
-
-            "Atropos" "Dennoch kenne ich Atlas und Adrés nur von Fotos und nicht von Videoaufzeichnungen oder anderen Quellen. Es wird ein ziemliches Geheimnis um ihre Existenz gemacht."
-
-            "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
-
-            "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
-
-            "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
-
-            "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
-
-            "Armene" "Nein… Ich wollte mich nur am Gespräch beteiligen…"
-
-            "Neiro" "Um was geht es? Tut mir leid, ich bin mit den Gedanken kurz abgeschweift…"
-
-            "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
-
-            "Tycho" "(lacht) Und wieder das übliche Chaos. Es macht echt zu viel Spaß mit euch Zeit zu verbringen!"
-
-            "Ireia" "Armene, los an die Arbeit!"
-
-            "Armene" "Ja natürlich Ireia, mache ich!"
-
-            hide armene normal
+            "Ireia" "Habt ihr schon Mal die Ehre gehabt mit Anan zu sprechen?"
 
             # Atropos Gedanken
-            "Was mich gerade interessieren würde…"
+            "Sie übergehen mich. Ist das in letzter Zeit nicht irgendwie häufiger vorgekommen? Als würden sie die Wahrheit einfach nicht hören wollen."
 
-            menu:
-                "Ich hätte gerne mehr Informationen über die Gründungsfeier.":
-                    jump entscheidung4_1V2
-                "Ich würde mich gerne noch etwas mehr über die Großen Drei unterhalten.":
-                    jump entscheidung4_2V2
-                "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
-                    jump entscheidung4_3V2
+            # Atropos Gedanken
+            "Naja, egal, ich will mir gerade keine Gedanken mehr darum machen. Heute ist so ein schöner Tag. Ich sollte aufhören über so unnötiges Zeug nachzudenken."
 
-            label entscheidung4_1V2:
+            "Ireia" "Ich hatte Dank ein paar weniger Meetings mal mit ihm zu tun. Er ist die beeindruckendste Persönlichkeit, die ich jemals getroffen habe."
 
-                $ neiro_unterhalten = True
+            "Ireia" "Und obwohl er fast schon gottgleichen Status hat, ist er trotzdem auf dem Boden geblieben und kümmert sich um jeden einzelnen von uns."
 
-                "Atropos" "Tycho, hast du noch mehr Informationen über die diesjährige Gründungsfeier?"
+            "Neiro" "Es geht gerade um Anan? Was ist mit ihm? Ist er nicht toll? So zuvorkommend und aufmerksam- einen besseren Chef kann man sich nicht wünschen."
 
-                "Tycho" "Hmm, gute Frage- lass mich einen Moment überlegen…"
+            "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich vergessen meine Pille zu nehmen, weil ich eine Zeit lang krank war."
 
-                "Neiro" "Ihr sprecht über die Gründungsfeier?"
+            "Atropos" "Das hattest du ja noch nie erwähnt… wie ist er damit umgegangen?"
 
-                "Ireia" "Ja, darum ging es schon die ganzen letzten Minuten."
+            "Tycho" "Er war unglaublich verständnisvoll und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
 
-                "Neiro" "Oh. Jedenfalls, ich weiß ein bisschen was…"
+            # Atropos Gedanken
+            "Ob Anan wohl auch bei mir so verständnisvoll reagieren würde, wenn er mitbekommen würde, dass ich die Pille nicht genommen habe?"
 
-                "Tycho" "Worauf wartest du noch? Erzähl schon!"
+            "Tycho" "Durch dieses Ereignis ist mir noch einmal bewusst geworden, wie wichtig die Happiness-Pille eigentlich ist."
 
-                "Neiro" "Atlas und Adrés werden hierher nach Astoa kommen, um der Gründungsfeier beizuwohnen!"
+            "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht, wie sehr ich es damals bereut hatte."
 
-                "Atropos" "Neiro, das wissen wir bereits. (lacht) Immerhin haben wir dadurch noch einmal die Bestätigung."
+            "Tycho" "Anan gibt alles, damit es uns gut geht und wir glücklich sind. Wie hatte ich es ihm nur so danken können?"
 
-                "Ireia" "Weißt du sonst noch etwas? Irgendwelche Neuigkeiten?"
+            "Atropos" "Tycho… wie…"
 
-                "Neiro" "Es hieß, dass heute im Laufe des Tages noch eine offizielle Ankündigung des Ganzen erfolgen soll."
+            "Tycho" "Ich… Ich bin so glücklich, dass ich eine zweite Chance erhalten habe. Jetzt kann ich dabei helfen allen Menschen ihr Glück zu geben!"
 
-                "Atropos" "Eine offizielle Ankündigung? Also einfach eine Durchsage von Anan?"
+            jump nachentscheidung4V2
 
-                "Neiro" "Nein, soweit ich das weiß, werden alle drei live geschaltet."
+        label entscheidung4_3V2:
 
-                "Ireia" "Das gab es ja noch nie! Normalerweise kommunizieren wir nicht mit den Menschen außerhalb von Astoa… warum sollten wir auch?"
+            "Atropos" "Neiro, dein Bruder ist gestorben?"
 
-                "Tycho" "Das sind wirklich unglaubliche Neuigkeiten! Ich freue mich schon darauf. Die diesjährige Gründungsfeier wird unbeschreiblich und unvergesslich werden!"
+            "Neiro" "Achso… ja. Er ist von einem der Busse erwischt worden, der eine technische Fehlfunktion hatte."
 
-                "Neiro" "Und es gibt noch etwas: Angeblich soll mit der Gründungsfeier eine neue Happiness-Pille vorgestellt werden."
+            "Ireia" "Möge er nun in Frieden glücklich sein."
 
-                "Ireia" "Eine neue Pille? Sag nicht, dass es eine Pille sein wird, die uns noch glücklicher macht?"
+            "Atropos" "Wann findet seine Ehrung statt?"
 
-                "Tycho" "Ich wüsste nicht, was es sonst sein könnte… der Tag wird ja immer besser!"
+            "Neiro" "Genau steht es noch nicht fest, aber voraussichtlich kommenden Sonntag. Ihr seid alle herzlich eingeladen, wenn ihr wollt. Es wird ein riesiges Fest geben."
 
-                "Ireia" "Atropos, müsstest du darüber nicht eigentlich mehr wissen?"
+            "Tycho" "Habe ich da Fest gehört? Da kann man doch gar nicht nein sagen, ich bin so was von dabei! Atropos, wie sieht es bei dir aus?"
 
-                # Atropos Gedanken
-                "Eine neue Pille? Ob sie dann wohl besser wirkt als die aktuelle? Immerhin scheine ich sie momentan nicht wirklich für mein Glück zu brauchen."
+            "Atropos" "Ich muss später nochmal in meinen Terminkalender schauen, aber ansonsten bin ich natürlich auch gerne dabei."
 
-                # Symbiont
-                "{i}Doch, du brauchst sie. Merkst du nicht, dass du immer mehr zu zweifeln beginnst? Zweifel säen Unmut und Unzufriedenheit. Du gefährdest dein Glück. {/i}"
+            "Atropos" "Die Totenehrungen sind jedes Mal ein unvergessliches Ereignis. Ich freue mich schon darauf!"
 
-                jump nachentscheidung4V2
+            "Ireia" "Ich komme natürlich ebenfalls. Dein Bruder war ein guter Mensch, Neiro, dem das Glück aller Menschen sehr am Herzen lag. Er verdient es angemessen geehrt und gefeiert zu werden."
 
-            label entscheidung4_2V2:
+            "Neiro" "Danke, das freut mich sehr zu hören. Gebt die Einladung gerne an alle weiter. Ich freue mich, wenn viele Leute kommen!"
 
-                "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
+            "Tycho" "Du kannst dich auf uns verlassen. Das wird die beste Totenehrung dieses Jahres, versprochen."
 
-                "Ireia" "Sie wollen das Beste für die Welt, genauso wie Anan. Ist das nicht das Einzige, das zählt?"
+            "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen dabei zu planen, was es alles zu Essen geben soll."
 
-                "Tycho" "Ihnen ist unser Wohl am aller Wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht, mir das vorzustellen!"
+            "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb, war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
 
-                "Ireia" "Wir wären immer noch im Krieg versunken. Ohne die Happiness-Pille, ohne glückliche Menschen würde es nur weiter Streit und Zwietracht geben."
+            "Tycho" "Es war dafür aber auch eine wunderschöne Ehrung gewesen, die deinem Vater würdig gewesen war."
 
-                "Atropos" "Ich frage mich immer noch, wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
+            "Atropos" "Das stimmt."
 
-                "Tycho" "Natürlich durch unsere Glücklichkeit: Happiness. Das ist das Einzige, was wirklich zählt. Spielen andere Gründe oder genauere Erläuterungen eine Rolle?"
 
-                "Ireia" "Nein, das ist nun wirklich nichts, worüber wir uns Gedanken machen müssten."
+            jump nachentscheidung4V2
 
-                "Ireia" "Sie schenkten uns Happiness und beendeten damit den 50-jährigen Krieg. Darum sind wir heute glücklich. Darum dürfen wir das Leben unserer Träume leben!"
 
-                # Symbiont
-                "{i} Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
+        label nachentscheidung4V2:
+            "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
-                # Atropos Gedanken
-                "Ja, ich besitze ein glückliches Leben. Aber sollte man aus diesem Grund dennoch nichts hinterfragen?"
+            "Tycho" "Mach´s gut, bis zur Mittagspause!"
 
-                "Atropos" "Sollten wir nicht mehr erfahren dürfen? Wieso machen Anan und die anderen beiden so ein großes Geheimnis aus der Vergangenheit?"
+            "Ireia" "Auf Wiedersehen."
 
-                "Atropos" "Wir wissen, dass sie den Krieg beendet haben und dass das mit Hilfe der Happiness-Pille passiert ist… aber wie?"
+            scene hall
 
-                "Ireia" "Habt ihr schon Mal die Ehre gehabt mit Anan zu sprechen?"
-
-                # Atropos Gedanken
-                "Sie übergehen mich. Ist das in letzter Zeit nicht irgendwie häufiger vorgekommen? Als würden sie die Wahrheit einfach nicht hören wollen."
-
-                # Atropos Gedanken
-                "Naja, egal, ich will mir gerade keine Gedanken mehr darum machen. Heute ist so ein schöner Tag. Ich sollte aufhören über so unnötiges Zeug nachzudenken."
-
-                "Ireia" "Ich hatte Dank ein paar weniger Meetings mal mit ihm zu tun. Er ist die beeindruckendste Persönlichkeit, die ich jemals getroffen habe."
-
-                "Ireia" "Und obwohl er fast schon gottgleichen Status hat, ist er trotzdem auf dem Boden geblieben und kümmert sich um jeden einzelnen von uns."
-
-                "Neiro" "Es geht gerade um Anan? Was ist mit ihm? Ist er nicht toll? So zuvorkommend und aufmerksam- einen besseren Chef kann man sich nicht wünschen."
-
-                "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich vergessen meine Pille zu nehmen, weil ich eine Zeit lang krank war."
-
-                "Atropos" "Das hattest du ja noch nie erwähnt… wie ist er damit umgegangen?"
-
-                "Tycho" "Er war unglaublich verständnisvoll und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
-
-                # Atropos Gedanken
-                "Ob Anan wohl auch bei mir so verständnisvoll reagieren würde, wenn er mitbekommen würde, dass ich die Pille nicht genommen habe?"
-
-                "Tycho" "Durch dieses Ereignis ist mir noch einmal bewusst geworden, wie wichtig die Happiness-Pille eigentlich ist."
-
-                "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht, wie sehr ich es damals bereut hatte."
-
-                "Tycho" "Anan gibt alles, damit es uns gut geht und wir glücklich sind. Wie hatte ich es ihm nur so danken können?"
-
-                "Atropos" "Tycho… wie…"
-
-                "Tycho" "Ich… Ich bin so glücklich, dass ich eine zweite Chance erhalten habe. Jetzt kann ich dabei helfen allen Menschen ihr Glück zu geben!"
-
-                jump nachentscheidung4V2
-
-            label entscheidung4_3V2:
-
-                "Atropos" "Neiro, dein Bruder ist gestorben?"
-
-                "Neiro" "Achso… ja. Er ist von einem der Busse erwischt worden, der eine technische Fehlfunktion hatte."
-
-                "Ireia" "Möge er nun in Frieden glücklich sein."
-
-                "Atropos" "Wann findet seine Ehrung statt?"
-
-                "Neiro" "Genau steht es noch nicht fest, aber voraussichtlich kommenden Sonntag. Ihr seid alle herzlich eingeladen, wenn ihr wollt. Es wird ein riesiges Fest geben."
-
-                "Tycho" "Habe ich da Fest gehört? Da kann man doch gar nicht nein sagen, ich bin so was von dabei! Atropos, wie sieht es bei dir aus?"
-
-                "Atropos" "Ich muss später nochmal in meinen Terminkalender schauen, aber ansonsten bin ich natürlich auch gerne dabei."
-
-                "Atropos" "Die Totenehrungen sind jedes Mal ein unvergessliches Ereignis. Ich freue mich schon darauf!"
-
-                "Ireia" "Ich komme natürlich ebenfalls. Dein Bruder war ein guter Mensch, Neiro, dem das Glück aller Menschen sehr am Herzen lag. Er verdient es angemessen geehrt und gefeiert zu werden."
-
-                "Neiro" "Danke, das freut mich sehr zu hören. Gebt die Einladung gerne an alle weiter. Ich freue mich, wenn viele Leute kommen!"
-
-                "Tycho" "Du kannst dich auf uns verlassen. Das wird die beste Totenehrung dieses Jahres, versprochen."
-
-                "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen dabei zu planen, was es alles zu Essen geben soll."
-
-                "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb, war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
-
-                "Tycho" "Es war dafür aber auch eine wunderschöne Ehrung gewesen, die deinem Vater würdig gewesen war."
-
-                "Atropos" "Das stimmt."
-
-
-                jump nachentscheidung4V2
-
-
-            label nachentscheidung4V2:
-                "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
-
-                "Tycho" "Mach´s gut, bis zur Mittagspause!"
-
-                "Ireia" "Auf Wiedersehen."
-
-                scene hall
-
-                jump worknachzelos
+            jump worknachzelos
 
 label work:
     show zelos normal
