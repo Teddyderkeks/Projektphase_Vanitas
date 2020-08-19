@@ -19,4 +19,4 @@ The label watchnothingoffice is defined twice, at
   File "game/script.rpy", line 986.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 19 20:03:01 2020
+Wed Aug 19 21:23:31 2020
