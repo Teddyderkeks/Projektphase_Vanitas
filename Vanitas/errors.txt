@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/office.rpy", line 353: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Nein… nein, möchte ich nicht. Du hast ja Recht."
-                                                     ^
+File "game/screens.rpy", line 570: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                text _("Vanitas ist ein" \n hallo")
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 19 18:11:08 2020
+Wed Aug 19 16:33:22 2020

@@ -4,134 +4,68 @@ label pill:
     # Atropos Gedanken
     "Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
 
-    #Atropos Gedanken
-    "Ich könnte mich ein wenig umsehen, um auf andere Gedanken zu kommen."
+    "Atropos" "Era, machst du auch Pause?"
 
-    #Atropos Gedanken
-    "Oder ich spreche mit Era..."
+    show era normal:
+        xalign 0.5
+
+    "Era" "Ich… Tut mir leid, ich muss noch das Protokoll hier fertig formulieren, solange ich alle Daten in meinem Kopf habe."
+
+    "Era" "Ich kann also erst später Mittagspause machen."
+
+    "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
+
+    show narcais normal:
+        xalign 0.25
+    show era normal:
+        xalign 0.75
+
+    "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe mich dieser zu widmen."
+
+    "Narcais" "Kann ich denn wenigstens von dir heute noch Feedback erwarten?"
+
+    "Atropos" "Ich hatte erst einmal alles für Anans Bericht fertiggestellt, aber sobald ich von der Mittagspause zurückkomme, setze ich mich dran."
+
+    "Narcais" "Danke, das klingt doch vielversprechend."
+
+    "Atropos" "Also dann ihr beiden. Wir sehen uns später."
+
+    "Era" "B-Bis später."
+
+    hide era
+    hide narcais
+
+    scene hall
+
+    # Atropos Gedanken
+    "Soll ich erst nach Kloth suchen oder erst nach Chesis? Den anderen kann ich mich auch nachher noch anschließen."
+
+    # Symbiont
+    "{i}Verbringe die Pause besser mit Chesis allein. Kloth scheint beschäftigt zu sein, sonst hätte er dir schon längst auf deine Nachrichten geantwortet. {/i}"
+
+    # Symbiont
+    "{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
+
 
     menu:
-        "Ich könnte mir den Computer ansehen.":
-            jump watchlabcomp
+        "Ich sollte nach Kloth suchen.":
 
-        "Kamen neue Substanzen hinzu? Ich sollte mir die Schränke anschauen.":
-            jump watchlabcab
+            # Atropos Gedanken
+            "Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
 
-        "Über der Tür hängt...":
-            jump watchlabdoor
+            # Atropos Gedanken
+            "Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen.¬¬"
 
-        "Ich spreche mit Era.":
-            jump watchnothinglab
+            jump search_kloth
+        "Ich werde erstmal nach Chesis suchen.":
 
-    label watchlabcomp:
+            # Atropos Gedanken
+            "Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
 
-        # Atropos Gedanken
-        "Era scheint gerade an etwas dran zu sein. Das sind einige Auswertungen aus dem Spektrometer."
-        # Atropos Gedanken
-        "Sieht eigentlich gar nicht mal so schlecht aus… Interessant."
-        # Atropos Gedanken
-        "Ach, Moment. Das ist nicht von Era, das ist von Narcais."
-        # Atropos Gedanken
-        "…"
-        # Atropos Gedanken
-        "Dann ist es vielleicht doch nicht mehr so interessant."
+            # Atropos Gedanken
+            "Wo könnte er gerade nur sein? Er müsste seine Mittagspause eigentlich auch bereits angefangen haben, aber sicherheitshalber kann ich ja mal im Geschäft unten nachsehen."
 
-        jump watchnothinglab
-
-    label watchlabcab:
-
-        # Atropos Gedanken
-        "Da drin ist alles Mögliche, damit wir nicht nur die Pillen herstellen, sondern auch unsere Produkte verbessern. Dass wir da noch den Überblick behalten…"
-        # Atropos Gedanken
-        "Wir müssen viel experimentieren und forschen. Es ist unglaublich faszinierend und spannend. Darum liebe ich meinen Beruf hier nur umso mehr."
-        # Atropos Gedanken
-        "Allerdings kann es manchmal auch ganz schön gefährlich werden."
-        # Atropos Gedanken
-        "Mit der falschen Mischung könnte man alles in die Luft jagen."
-
-        jump watchnothinglab
-
-    label watchlabdoor:
-
-        # Atropos Gedanken
-        "Die Notdusche… Mein alter Freund."
-        # Atropos Gedanken
-        "Als ich hier angefangen habe, ist mir mal etwas von den Proben auf die Kleidung getropft."
-        # Atropos Gedanken
-        "Ich musste mich bis auf die Unterwäsche ausziehen und komplett abduschen."
-        # Atropos Gedanken
-        "Da blieb auch keine Zeit, die anderen höflich zu fragen, ob sie sich nicht vielleicht umdrehen wollen. Oder ob sie rausgehen können."
-        # Atropos Gedanken
-        "Seitdem achte ich immer darauf, welche Unterwäsche ich trage."
-
-        jump watchnothinglab
-
-    label watchnothinglab:
-
-
-
-        "Atropos" "Era, machst du auch Pause?"
-
-        show era normal:
-            xalign 0.5
-
-        "Era" "Ich… Tut mir leid, ich muss noch das Protokoll hier fertig formulieren, solange ich alle Daten in meinem Kopf habe."
-
-        "Era" "Ich kann also erst später Mittagspause machen."
-
-        "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
-
-        show narcais normal:
-            xalign 0.25
-        show era normal:
-            xalign 0.75
-
-        "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe mich dieser zu widmen."
-
-        "Narcais" "Kann ich denn wenigstens von dir heute noch Feedback erwarten?"
-
-        "Atropos" "Ich hatte erst einmal alles für Anans Bericht fertiggestellt, aber sobald ich von der Mittagspause zurückkomme, setze ich mich dran."
-
-        "Narcais" "Danke, das klingt doch vielversprechend."
-
-        "Atropos" "Also dann ihr beiden. Wir sehen uns später."
-
-        "Era" "B-Bis später."
-
-        hide era
-        hide narcais
-
-        scene hall
-
-        # Atropos Gedanken
-        "Soll ich erst nach Kloth suchen oder erst nach Chesis? Den anderen kann ich mich auch nachher noch anschließen."
-
-        # Symbiont
-        "{i}Verbringe die Pause besser mit Chesis allein. Kloth scheint beschäftigt zu sein, sonst hätte er dir schon längst auf deine Nachrichten geantwortet. {/i}"
-
-        # Symbiont
-        "{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
-
-
-        menu:
-            "Ich sollte nach Kloth suchen.":
-
-                # Atropos Gedanken
-                "Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
-
-                # Atropos Gedanken
-                "Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen.¬¬"
-
-                jump search_kloth
-            "Ich werde erstmal nach Chesis suchen.":
-
-                # Atropos Gedanken
-                "Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
-
-                # Atropos Gedanken
-                "Wo könnte er gerade nur sein? Er müsste seine Mittagspause eigentlich auch bereits angefangen haben, aber sicherheitshalber kann ich ja mal im Geschäft unten nachsehen."
-
-                jump still_search_chesis
+            jump still_search_chesis
 
 
 label still_search_chesis:

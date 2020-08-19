@@ -1,26 +1,17 @@
-screen arrow_watchoffice():
+screen pfeil_back():
     frame:
         xpos 1700 ypos 500
         imagebutton:
-            idle "arrow.png"
-            hover "arrowblue.png"
-            focus_mask True
-            action Jump ("watchnothingoffice")
+            idle "pfeil"
+            hover "pfeil_rechts_blau"
+            action Jump ("treppenhaus2")
 
-screen arrow_watchhall():
-    frame:
-        xpos 1700 ypos 500
-        imagebutton:
-            idle "arrow.png"
-            hover "arrowblue.png"
-            focus_mask True
-            action Jump ("watchnothinghall")
-
+image pfeil_rechts = Transform ("pfeil",rotate = 180)
 
 #call screen pfeil_back
 #hide screen pfeil_back
 
-screen force_mouse_move_1():
+screen force_mouse_move():
 
     on "show":
         action MouseMove(x=960, y=540, duration=.3)

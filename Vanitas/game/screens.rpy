@@ -302,16 +302,16 @@ screen navigation():
         if main_menu:
             #xpos 350
 
-            textbutton _("Start") action Start()
+            textbutton _("Spiel starten") action Start()
 
         else:
             #xpos gui.navigation_xpos
 
-            textbutton _("History") action ShowMenu("history")
+            #textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Speichern") action ShowMenu("save")
+            textbutton _("Spiel speichern") action ShowMenu("save")
 
-        textbutton _("Laden") action ShowMenu("load")
+        textbutton _("Spiel laden") action ShowMenu("load")
 
         textbutton _("Einstellungen") action ShowMenu("preferences")
 
@@ -325,10 +325,12 @@ screen navigation():
 
         textbutton _("Über") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        textbutton _("Credits") action ShowMenu("credits")
+
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Hilfe") action ShowMenu("help")
+            #textbutton _("Hilfe") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -558,14 +560,14 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            #text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+            #if gui.about:
+                #text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
+            text _("\n Vanitas ist ein Visual Novel, das im Sinne einer Projektarbeit hervorgegangen ist. Nightshade Games ist eine Gruppe von Game Design Studenten der Mediadesign Hochschule, Standort München.")
+            text _("\n Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""
@@ -578,6 +580,64 @@ style about_text is gui_text
 style about_label_text:
     size gui.label_text_size
 
+screen credits():
+
+    tag menu
+
+    use game_menu(_("Credits"), scroll="viewport"):
+
+        vbox:
+
+            hbox:
+                box_wrap True
+
+                vbox:
+                    style_prefix "radio"
+                    text _(" Producer")
+                    text _("\n Game")
+                    text _(" Designer")
+                    text _("\n\n Artists")
+                    text _("\n\n\n\n\n\n Tech")
+                    text _("\n\n Musik")
+
+                vbox:
+                    #style_prefix "radio"
+                    text _(" Dimitry Kamelin")
+                    text _("\n {b}Sabrina Knoops{/b}")
+                    text _(" Simon Marx")
+                    text _(" Laura Lawatowitsch")
+                    text _("\n {b}Vanessa Rudewig{/b}")
+                    text _(" Myo Sonntag")
+                    text _(" Eliza Ghanbar")
+                    text _(" Nadine Mayer")
+                    text _(" Kaz Lehrl")
+                    text _(" Brandon Lenk")
+                    text _("\n {b}Tatiana Krupenina{/b}")
+                    text _(" Luis Stilp")
+                    text _("\n Lukas Geppert")
+
+                vbox:
+                    #style_prefix "radio"
+                    text _("\n\n Creative Director, Writing")
+                    text _(" Story Design")
+                    text _(" Game Design")
+                    text _("\n Enviroment")
+                    text _(" Animation, Character")
+                    text _(" Animation, UI")
+                    text _(" Enviroment")
+                    text _(" Enviroment, UI")
+                    text _(" Animation, Chracter")
+                    text _("\n Programming, Website")
+                    text _(" Sound Design")
+                    text _("\n Lukas Geppert")
+
+
+style credits_label is gui_label
+style credits_label_text is gui_label_text
+style credits_text is gui_text
+
+style credits_label_text:
+    size gui.label_text_size
 
 ## Load and Save screens #######################################################
 ##
@@ -589,22 +649,19 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-    $ left_side = True
     tag menu
 
-    use file_slots(_("Speichern"))
+    use file_slots(_(" Spiel speichern"))
 
 
 screen load():
-    $ left_side = True
     tag menu
 
-    use file_slots(_("Laden"))
-
+    use file_slots(_("Spiel laden"))
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatisches Specihern"), quick=_(""))
 
     use game_menu(title):
 
@@ -646,36 +703,14 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        #text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("leer")):
+                        text FileTime(slot, format=_("{#file_time}%d %B %Y, %H:%M"), empty=_("Leer")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
                             style "slot_name_text"
 
                         key "save_delete" action FileDelete(slot)
-
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                spacing gui.page_spacing
-
-                textbutton _("<") action FilePagePrevious()
-
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
-
-                textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label
@@ -736,20 +771,6 @@ screen preferences():
                         textbutton _("Fenster") action Preference("display", "window")
                         textbutton _("Vollbild") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "radio"
-                    label _("Rollback Side")
-                    textbutton _("Disable") action Preference("rollback side", "disable")
-                    textbutton _("Left") action Preference("rollback side", "left")
-                    textbutton _("Right") action Preference("rollback side", "right")
-
-                vbox:
-                    style_prefix "check"
-                    label _("Spulen")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("Nach Auswahl") action Preference("after choices", "toggle")
-                    textbutton _("Übergänge") action InvertSelected(Preference("transitions", "toggle"))
-
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
@@ -800,7 +821,7 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("Gesamtlautstärke aus"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
