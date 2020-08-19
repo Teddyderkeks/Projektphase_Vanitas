@@ -1,8 +1,6 @@
 default pill_taken = False
 default straight_office = False
 default neiro_unterhalten= False
-default badmood= False
-default okaymood=False
 define startfade=Fade(0.5,0.5,0.5)
 
 label start:
@@ -123,7 +121,7 @@ label change:
 
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
-    #show screen force_mouse_move_1
+    show screen force_mouse_move
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
@@ -353,19 +351,15 @@ label conversation_with_seller:
 
         menu:
             "Ich schaue mir den Kalender an.":
-                "Ich schaue mir den Kalender an."
                 jump watchofficecalendar
 
             "Da ist ein interessantes Foto.":
-                "Da ist ein interessantes Foto."
                 jump watchofficephoto
 
             "Neben der Sanduhr liegt etwas.":
-                "Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
-                "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
                 jump watchnothingoffice
 
         label watchofficecalendar:
@@ -376,8 +370,9 @@ label conversation_with_seller:
             "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
             "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            call screen arrow_watchoffice()
-
+            # nach Button-Klick
+            scene office_1
+            jump watchnothingoffice
 
         label watchofficephoto:
             scene detail_photo_neiro
@@ -385,18 +380,22 @@ label conversation_with_seller:
             "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
             "Was sein Bruder wohl jetzt so macht?"
-            call screen arrow_watchoffice()
+            scene office_1
+            jump watchnothingoffice
 
         label watchofficehourglass:
             scene detail_hourglass
+            # normalerweise nach Button-Klick!!
             # Atropos Gedanken
             "Was steht da?"
             show detail_hourglass_overlay
-            call screen arrow_watchoffice()
+            # normalerweise nach Button-Klick!!
+            # Atropos Gedanken
+            "Ein Gedicht. Wohl von Neiro."
+            scene office_1
+            jump watchnothingoffice
 
         label watchnothingoffice:
-
-            scene office_1
 
             # Atropos Gedanken
             "Ich höre Stimmen, könnten sie das sein?"
@@ -765,7 +764,7 @@ label conversation_with_seller:
 
                 "Chesis" "Da vorne ist Anan. Wie soll ich ihn nur begrüßen?"
 
-                show anan normal_mid:
+                show anan 1:
                     xalign 0.25
 
                 "Anan" "Guten Morgen und Glück für die Welt."
@@ -797,160 +796,114 @@ label conversation_with_seller:
                 #Atropos Gedanken
                 "Ich könnte mich noch einmal umsehen..."
 
-                menu:
-                    "Wieso ist hier ein Schmetterling?":
-                        "Wieso ist hier ein Schmetterling?"
-                        jump watchhallbutterfly
-
-                    "Ich will mir die Bilder ansehen.":
-                        "Ich will mir die Bilder ansehen."
-                        jump watchhallpictures
-
-                    "Ein Druckknopfmelder?":
-                        "Ein Druckknopfmelder?"
-                        jump watchhallalarm
-
-                    "Ich sollte dann wirklich ins Labor.":
-                        jump watchnothinghall
-
-                label watchhallbutterfly:
-                    # Atropos
-                    "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
-                    # Atropos
-                    "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
-                    # Atropos
-                    "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
-                    # Atropos
-                    "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
-
-                label watchhallpictures:
-                    scene detail_pictureshall
-                    # Atropos Gedanken
-                    "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
-                    # Atropos Gedanken
-                    "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
-                    # Atropos Gedanken
-                    "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                    call screen arrow_watchhall()
-                label watchhallalarm:
-                    scene detail_alarm
-                    # Atropos Gedanken
-                    "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
-                    # Atropos Gedanken
-                    "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
-                    # Atropos Gedanken
-                    "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                    call screen arrow_watchhall()
-
-                label watchnothinghall:
-
-                    "Atropos" "Ich sollte dann wirklich ins Labor."
-
-                    scene lab
-                    stop music fadeout 2
-                    play music "Sound_labor_sorglos.mp3" fadeout 3
-
-                    "Atropos" "Hey Era."
-
-                    show era normal:
-                        xalign 0.5
-
-                    "Era" "Atropos? Du bist hier? Oh… ich… guten Morgen…"
-
-                    "Era" "…"
-
-                    "Atropos" "…"
-
-                    "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
-
-                    "Atropos" "Ja, natürlich… sorry…"
-
-                    "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
-
-                    "Era" "Ich… ahhhh…"
-
-                    # Atropos Gedanken
-                    "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
-
-                    # Atropos Gedanken
-                    "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
-
-                    "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen musst."
-
-                    "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
-
-                    "Atropos" "Was wolltest du?"
-
-                    "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
-
-                    "Era" "…"
-
-                    "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir, wir könnten uns vielleicht mal treffen?"
-
-                    # Atropos Gedanken
-                    "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
 
-                    # Symbiont
-                    "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+                "Atropos" "Ich sollte dann nun wirklich ins Labor."
+
+                scene lab
+                stop music fadeout 2
+                play music "Sound_labor_sorglos.mp3" fadeout 3
+
+                "Atropos" "Hey Era."
+
+                show era normal:
+                    xalign 0.5
+
+                "Era" "Atropos? Du bist hier? Oh… ich… guten Morgen…"
+
+                "Era" "…"
+
+                "Atropos" "…"
+
+                "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
+
+                "Atropos" "Ja, natürlich… sorry…"
+
+                "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+
+                "Era" "Ich… ahhhh…"
+
+                # Atropos Gedanken
+                "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+
+                # Atropos Gedanken
+                "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
+
+                "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen musst."
+
+                "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
+
+                "Atropos" "Was wolltest du?"
+
+                "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
+
+                "Era" "…"
+
+                "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir, wir könnten uns vielleicht mal treffen?"
+
+                # Atropos Gedanken
+                "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
 
-                    # Symbiont
-                    "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
+                # Symbiont
+                "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
-                    "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
 
-                    "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
+                # Symbiont
+                "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
 
-                    show era normal:
-                        xalign 0.25
+                "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
 
-                    show narcais normal:
-                        xalign 0.75
+                "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
 
-                    "Narcais" "Einen glücklichen guten Morgen zusammen. Habt ihr schon meine letzten Forschungsergebnisse gesehen? Ich kann mich selbst nur loben, sie sind hervorragend ausgefallen."
+                show era normal:
+                    xalign 0.25
 
-                    "Era" "G-Guten Morgen…"
+                show narcais normal:
+                    xalign 0.75
 
-                    "Atropos" "Morgen… hattest du dich nicht mit dem Einfluss der Impfung auf Kinder und Jugendliche beschäftigt?"
+                "Narcais" "Einen glücklichen guten Morgen zusammen. Habt ihr schon meine letzten Forschungsergebnisse gesehen? Ich kann mich selbst nur loben, sie sind hervorragend ausgefallen."
 
-                    "Narcais" "Ja, genau. Und ich bin zu dem Schluss gekommen, dass wir es mit Glycohexatenol versuchen sollten."
+                "Era" "G-Guten Morgen…"
 
-                    "Narcais" "Die Jugendlichen vertragen den alten Wirkstoff ebenfalls gut, aber nachweislich können wir keine Kinder damit impfen."
+                "Atropos" "Morgen… hattest du dich nicht mit dem Einfluss der Impfung auf Kinder und Jugendliche beschäftigt?"
 
-                    "Narcais" "Dies birgt allerdings bekannter Weise hohe Risiken, weil die Umweltverschmutzungen durch den Krieg auch Kinder betreffen können."
+                "Narcais" "Ja, genau. Und ich bin zu dem Schluss gekommen, dass wir es mit Glycohexatenol versuchen sollten."
 
-                    "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happiness-Pille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
+                "Narcais" "Die Jugendlichen vertragen den alten Wirkstoff ebenfalls gut, aber nachweislich können wir keine Kinder damit impfen."
 
-                    "Narcais" "Die Kinder sollten ebenfalls in der Lage sein eine glückliche Kindheit führen zu dürfen! Wenn ich an meine eigene Kindheit denke…"
+                "Narcais" "Dies birgt allerdings bekannter Weise hohe Risiken, weil die Umweltverschmutzungen durch den Krieg auch Kinder betreffen können."
 
-                    "Atropos" "Narcais- du zählst nur Fakten auf, die bereits bekannt sind. Was ist jetzt mit dem Glycohexatenol?"
+                "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happiness-Pille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
 
-                    # Atropos Gedanken
-                    "Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
+                "Narcais" "Die Kinder sollten ebenfalls in der Lage sein eine glückliche Kindheit führen zu dürfen! Wenn ich an meine eigene Kindheit denke…"
 
-                    "Narcais" "Ich habe die Erkenntnis gewonnen, dass der Wirkstoff die Durchführung der Impfung um einige Jahre vorverlegen dürfte."
+                "Atropos" "Narcais- du zählst nur Fakten auf, die bereits bekannt sind. Was ist jetzt mit dem Glycohexatenol?"
 
-                    "Narcais" "Diesbezüglich hatte ich einige Forschungen durchgeführt, welche meine Erkenntnis belegt hatten."
+                # Atropos Gedanken
+                "Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
 
-                    "Narcais" "Ich habe bereits einen umfassenden Bericht dazu verfasst und dir geschickt. Aber du musst vermutlich nur einen kurzen Blick darauf werfen…"
+                "Narcais" "Ich habe die Erkenntnis gewonnen, dass der Wirkstoff die Durchführung der Impfung um einige Jahre vorverlegen dürfte."
 
-                    "Narcais" "Du weißt, dass ich immer beste Arbeit abliefere und keine Fehler mache."
+                "Narcais" "Diesbezüglich hatte ich einige Forschungen durchgeführt, welche meine Erkenntnis belegt hatten."
 
-                    "Atropos" "Danke, ich beschäftige mich später damit."
+                "Narcais" "Ich habe bereits einen umfassenden Bericht dazu verfasst und dir geschickt. Aber du musst vermutlich nur einen kurzen Blick darauf werfen…"
 
-                    "Narcais" "Ja, natürlich. Lass dir Zeit. Nicht jeder kann so schnell und effizient arbeiten wie ich…"
+                "Narcais" "Du weißt, dass ich immer beste Arbeit abliefere und keine Fehler mache."
 
-                    hide narcais
+                "Atropos" "Danke, ich beschäftige mich später damit."
 
-                    "Atropos" "Sorry für die Unterbrechung, Era. Also, wir schreiben dann einfach die Tage, okay?"
+                "Narcais" "Ja, natürlich. Lass dir Zeit. Nicht jeder kann so schnell und effizient arbeiten wie ich…"
 
-                    "Era" "J-Ja… natürlich. Danke Atropos!"
+                hide narcais
+
+                "Atropos" "Sorry für die Unterbrechung, Era. Also, wir schreiben dann einfach die Tage, okay?"
+
+                "Era" "J-Ja… natürlich. Danke Atropos!"
 
 
 
-                    jump good_mood
+                jump good_mood
 
     else:
 
@@ -986,22 +939,18 @@ label conversation_with_seller:
 
         menu:
             "Ich schaue mir den Kalender an.":
-                "Ich schaue mir den Kalender an."
-                jump watchofficecalendar2
+                jump watchofficecalendar
 
             "Da ist ein interessantes Foto.":
-                "Da ist ein interessantes Foto."
-                jump watchofficephoto2
+                jump watchofficephoto
 
             "Neben der Sanduhr liegt etwas.":
-                "Neben der Sanduhr liegt etwas."
-                jump watchofficehourglass2
+                jump watchofficehourglass
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
-                "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
-                jump watchnothingoffice2
+                jump watchnothingoffice
 
-        label watchofficecalendar2:
+        label watchofficecalendar:
             scene detail_calendar
             # Atropos Gedanken
             "September 2256."
@@ -1009,25 +958,32 @@ label conversation_with_seller:
             "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
             "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            call screen arrow_watchoffice()
+            # nach Button-Klick
+            scene office_1
+            jump watchnothingoffice
 
-
-        label watchofficephoto2:
+        label watchofficephoto:
             scene detail_photo_neiro
             # Atropos Gedanken
             "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
             "Was sein Bruder wohl jetzt so macht?"
-            call screen arrow_watchoffice()
+            scene office_1
+            jump watchnothingoffice
 
-        label watchofficehourglass2:
+        label watchofficehourglass:
             scene detail_hourglass
+            # normalerweise nach Button-Klick!!
             # Atropos Gedanken
             "Was steht da?"
             show detail_hourglass_overlay
-            call screen arrow_watchoffice()
+            # normalerweise nach Button-Klick!!
+            # Atropos Gedanken
+            "Ein Gedicht. Wohl von Neiro."
+            scene office_1
+            jump watchnothingoffice
 
-        label watchnothingoffice2:
+        label watchnothingoffice:
 
 
             # Atropos Gedanken
@@ -1315,128 +1271,7 @@ label conversation_with_seller:
 
                 scene hall
 
-                # Atropos Gedanken
-                "So… dann mal auf ins Labor."
-
-                "Chesis" "Guten Morgen."
-
-                "Atropos" "Hey Chesis, wie schön dir über den Weg zu laufen."
-
-                "Atropos" "Hast du Kloth heute schon gesehen?"
-
-                "Chesis" "Nein. Ich…"
-
-                "Atropos" "Was ist? Aber ich frage mich wirklich, wo er ist…"
-
-                "Atropos" "Ich habe schon seit gestern nichts mehr von ihm gehört und wir wollten heute eigentlich noch besprechen, was wir fürs Grillen besorgen wollen."
-
-                "Atropos" "Mir fällt auf, dass er auch auf meine Nachrichten nicht mehr geantwortet hat… seltsam…"
-
-                # Symbiont
-                "{i}Vermutlich ist er einfach viel beschäftigt. Die anderen meinten doch, dass bald die Gründungsfeier sein wird. Da wird Kloth viel zu organisieren haben. {/i}"
-
-                "Chesis" "Ich… mein Kopf tut so weh. Tut mir leid, ich muss los…"
-
-                "Atropos" "Alles in Ordnung, Chesis? Kann ich irgendetwas für dich tun?"
-
-                "Chesis" "Schon okay, es wird gerade wieder besser. Worüber hatten wir nochmal gesprochen?"
-
-                "Atropos" "Über Kloth und dass er seit gestern fast schon spurlos verschwunden ist."
-
-                "Chesis" "Ich bin mir sicher, er wird schon wieder auftauchen…"
-
-                "Chesis" "Mach dir keinen Kopf! Du musst dir wirklich keine Gedanken machen. Es geht ihm bestimmt gut."
-
-                "Chesis" "Ja ganz bestimmt. Es geht ihm gut. Alles ist in Ordnung. "
-
-                "Chesis" "Er wird nachher wieder bei uns sein und wir werden alle zusammen grillen. So wie wir es schon seit Wochen geplant haben. "
-
-                # Atropos Gedanken
-                "Was ist denn nur los mit ihm? Er wirkt so anders. Normalerweise redet er nie so viel…"
-
-                "Atropos" "Chesis, bist du dir sicher, dass alles in Ordnung ist?"
-
-                # vollkommen ruhig und gelassen.
-
-                "Chesis" "Ja natürlich ist alles in Ordnung. Warum fragst du? "
-
-                # Symbiont
-                "{i}Du hast es dir bestimmt nur eingebildet. Er ist glücklich, was sollte also nicht stimmen? {/i}"
-
-                "Atropos" "Alles gut… passt schon…"
-
-                # Atropos Gedanken
-                "Vielleicht gab es ja einen Vorfall zwischen ihm und seiner Freundin?"
-
-                "Chesis" "Also dann, ich muss los. Wir sehen uns später."
-
-                "Atropos" "Wenn es etwas gibt, worüber du mit mir reden möchtest, kannst du jederzeit zu mir kommen. Ich hoffe das weißt du."
-
-                "Chesis" "Danke Atropos, du bist ein wahrer Freund. Aber mach dir keine Sorgen, es ist alles in Ordnung. Ich bin glücklich."
-
-                "Atropos" "(leise) Das ist alles, was zählt."
-
-                "Chesis" "Bis später!"
-
-                "Atropos" "Mach´s gut…"
-
-                #Atropos Gedanken
-                "… Das war ein wenig seltsam. Ich glaube, ich sollte mich ein wenig auf andere Gedanken bringen."
-
-                #Atropos Gedanken
-                "Ich könnte mich vielleicht noch einmal umsehen, bevor ich gehe..."
-
-                menu:
-                    "Wieso ist hier ein Schmetterling?":
-                        "Wieso ist hier ein Schmetterling?"
-                        jump watchhallbutterfly3
-
-                    "Ich will mir die Bilder ansehen.":
-                        "Ich will mir die Bilder ansehen."
-                        jump watchhallpictures3
-
-                    "Ein Druckknopfmelder?":
-                        "Ein Druckknopfmelder?"
-                        jump watchhallalarm3
-
-                    "Ich habe vermutlich lange genug herumgetrödelt.":
-                        jump watchnothinghall3
-
-                label watchhallbutterfly3:
-                    # Atropos
-                    "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
-                    # Atropos
-                    "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
-                    # Atropos
-                    "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
-                    # Atropos
-                    "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
-
-                label watchhallpictures3:
-                    scene detail_pictureshall
-                    # Atropos Gedanken
-                    "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
-                    # Atropos Gedanken
-                    "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
-                    # Atropos Gedanken
-                    "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                    call screen arrow_watchhall()
-
-                label watchhallalarm3:
-                    scene detail_alarm
-                    # Atropos Gedanken
-                    "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
-                    # Atropos Gedanken
-                    "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
-                    # Atropos Gedanken
-                    "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                    call screen arrow_watchhall()
-
-                label watchnothinghall3:
-                    #Atropos Gedanken
-                    "Ich habe vermutlich lange genug herumgetrödelt. Wird Zeit, dass ich mich langsam an die Arbeit mache."
-                    jump worknachzelos
+                jump worknachzelos
 
 label work:
     show zelos normal
@@ -1481,7 +1316,7 @@ label work:
             # Atropos Gedanken
             "Letztlich werde ich es wohl erst erfahren, wenn die Pille im Verkauf ist, immerhin arbeitet jeder nur an einem winzigen Teil des großen Ganzen."
 
-            show anan normal_mid :
+            show anan 1:
                 xalign 0.5
 
             "Anan" "Guten Morgen und Glück für die Welt."
@@ -1515,185 +1350,133 @@ label work:
             # Atropos Gedanken
             "Und dass er sich die Zeit genommen hat, mit mir zu sprechen, obwohl er Anan ist… Er kümmert sich wirklich um das Glück aller Menschen. Es ist nicht nur leeres Gerede."
 
+
             # Atropos Gedanken
-            "Aber bevor ich mich um den Bericht für ihn kümmere, könnte ich mich noch kurz umsehen."
+            "Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
 
-            menu:
-                "Wieso ist hier ein Schmetterling?":
-                    "Wieso ist hier ein Schmetterling?"
-                    jump watchhallbutterfly2
+            stop music fadeout 1
+            play music "Sound_labor_sorglos.mp3" fadeout 2
+            scene lab
 
-                "Ich will mir die Bilder ansehen.":
-                    "Ich will mir die Bilder ansehen."
-                    jump watchhallpictures2
+            "Atropos" "Hey Era."
 
-                "Ein Druckknopfmelder?":
-                    "Ein Druckknopfmelder?"
-                    jump watchhallalarm2
+            show era normal:
+                xalign 0.5
 
-                "Ich sollte dann wirklich ins Labor. Ich will Anan nicht enttäuschen":
-                    jump watchnothinghall2
+            "Era" "Atropos? Du bist hier? Oh… ich… guten Morgen…"
 
-            label watchhallbutterfly2:
-                # Atropos
-                "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
-                # Atropos
-                "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
-                # Atropos
-                "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
-                # Atropos
-                "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                jump watchnothinghall
+            "Era" "…"
 
-            label watchhallpictures2:
-                scene detail_pictureshall
-                # Atropos Gedanken
-                "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
-                # Atropos Gedanken
-                "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
-                # Atropos Gedanken
-                "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                call screen arrow_watchhall()
+            "Atropos" "…"
 
-            label watchhallalarm2:
-                scene detail_alarm
-                # Atropos Gedanken
-                "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
-                # Atropos Gedanken
-                "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
-                # Atropos Gedanken
-                "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                call screen arrow_watchhall()
+            "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
-            label watchnothinghall2:
+            "Atropos" "Ja, natürlich… sorry…"
 
+            "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
 
-                # Atropos Gedanken
-                "Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
+            "Era" "Ich… ahhhh…"
 
-                stop music fadeout 1
-                play music "Sound_labor_sorglos.mp3" fadeout 2
-                scene lab
+            # Atropos Gedanken
+            "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
 
-                "Atropos" "Hey Era."
+            # Atropos Gedanken
+            "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
 
-                show era normal:
-                    xalign 0.5
+            "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
 
-                "Era" "Atropos? Du bist hier? Oh… ich… guten Morgen…"
+            "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
-                "Era" "…"
+            "Atropos" "Was wolltest du?"
 
-                "Atropos" "…"
+            "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
 
-                "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
+            "Era" "…"
 
-                "Atropos" "Ja, natürlich… sorry…"
+            "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
 
-                "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+            # Atropos Gedanken
+            "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
-                "Era" "Ich… ahhhh…"
 
-                # Atropos Gedanken
-                "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+            # Symbiont
+            "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
-                # Atropos Gedanken
-                "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
+            # Symbiont
+            "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
 
-                "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
+            "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
 
-                "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
+            "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
 
-                "Atropos" "Was wolltest du?"
+            "Atropos" "Dann ist es abgemacht."
 
-                "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
+            "Era" "Kommen… kommen Chesis und Kloth dann auch mit? Ihr drei seid wirklich unzertrennlich, seit ihr hier angefangen habt…"
 
-                "Era" "…"
+            "Atropos" "Möchtest du denn, dass sie mitkommen?"
 
-                "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
+            "Era" "Also… Ich… Ich… Nein, ehrlich gesagt, würde ich lieber Zeit mit dir alleine verbringen."
 
-                # Atropos Gedanken
-                "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+            show narcais normal:
+                xalign 0.25
 
+            show era normal:
+                xalign 0.75
 
-                # Symbiont
-                "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
-                # Symbiont
-                "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
+            "Narcais" "Einen glücklichen guten Morgen zusammen. Was habe ich verpasst? Redet ihr über mich?"
 
-                "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
+            "Atropos" "Morgen… Und nein, nicht jedes Gespräch dreht sich gleich um dich, Narcais. (lacht)"
 
-                "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
+            "Era" "G-Guten Morgen… es ging gerade um Kloth und Chesis."
 
-                "Atropos" "Dann ist es abgemacht."
+            "Narcais" "Ach die drei unzertrennlichen Freunde. Ihr wart schon damals in der Schule berühmt berüchtigt. Keiner konnte euch das Wasser reichen."
 
-                "Era" "Kommen… kommen Chesis und Kloth dann auch mit? Ihr drei seid wirklich unzertrennlich, seit ihr hier angefangen habt…"
+            "Narcais" "Abgesehen von mir natürlich, aber das haben alle verkannt."
 
-                "Atropos" "Möchtest du denn, dass sie mitkommen?"
+            "Era" "Hattet ihr damals eigentlich alle gleichzeitig angefangen hier zu arbeiten, Atropos?"
 
-                "Era" "Also… Ich… Ich… Nein, ehrlich gesagt, würde ich lieber Zeit mit dir alleine verbringen."
+            "Atropos" "Nein, Kloth hatte ein paar Jahre vor uns angefangen. Er wurde damals von Anan höchstpersönlich rekrutiert."
 
-                show narcais normal:
-                    xalign 0.25
+            "Era" "Von Anan?"
 
-                show era normal:
-                    xalign 0.75
+            "Atropos" "Kloth hatte bei einer Feier eine Rede über Aither und die Bedeutung des Glücks gehalten und konnte so Anan von sich überzeugen."
 
+            "Era" "Kloth ist wirklich mitreißend. Er ist Anan sehr ähnlich. Fast schon wie Vater und Sohn."
 
-                "Narcais" "Einen glücklichen guten Morgen zusammen. Was habe ich verpasst? Redet ihr über mich?"
+            "Atropos" "Das stimmt wohl. (lacht)"
 
-                "Atropos" "Morgen… Und nein, nicht jedes Gespräch dreht sich gleich um dich, Narcais. (lacht)"
+            "Era" "Und… und was war mit Chesis und dir gewesen?"
 
-                "Era" "G-Guten Morgen… es ging gerade um Kloth und Chesis."
+            "Atropos" "Kloth hatte mich zu einem Praktikum überredet und es war die beste Entscheidung meines Lebens, es zu machen."
 
-                "Narcais" "Ach die drei unzertrennlichen Freunde. Ihr wart schon damals in der Schule berühmt berüchtigt. Keiner konnte euch das Wasser reichen."
+            "Atropos" "Und dann hatten Kloth und ich Chesis überzeugt doch ebenfalls hier anzufangen, weil er hier gute Chancen hat trotz seiner introvertierten Art."
 
-                "Narcais" "Abgesehen von mir natürlich, aber das haben alle verkannt."
+            "Era" "Stimmt… es ist wirklich schwer mit ihm zu reden… ich hatte es ein paar Mal versucht und dann musste ich aufgegeben. Dir gegenüber ist er dagegen so offen."
 
-                "Era" "Hattet ihr damals eigentlich alle gleichzeitig angefangen hier zu arbeiten, Atropos?"
+            "Atropos" "Wir sind immerhin auch schon seit Ewigkeiten befreundet. Ich bin mir sicher, mit der Zeit wird er sich auch dir gegenüber mehr öffnen."
 
-                "Atropos" "Nein, Kloth hatte ein paar Jahre vor uns angefangen. Er wurde damals von Anan höchstpersönlich rekrutiert."
+            "Era" "Das… das wäre sehr schön."
 
-                "Era" "Von Anan?"
+            "Narcais" "Seid ihr fertig mit eurem Gespräch über nicht anwesende Personen? Ich bin auch noch da."
 
-                "Atropos" "Kloth hatte bei einer Feier eine Rede über Aither und die Bedeutung des Glücks gehalten und konnte so Anan von sich überzeugen."
+            "Atropos" "Wer könnte dich vergessen? (lacht)"
 
-                "Era" "Kloth ist wirklich mitreißend. Er ist Anan sehr ähnlich. Fast schon wie Vater und Sohn."
+            "Narcais" "Niemand, das ist mir bewusst!"
 
-                "Atropos" "Das stimmt wohl. (lacht)"
+            "Narcais" "Jedenfalls: Ich habe einen Bericht verfasst, den du noch durcharbeiten müsstest."
 
-                "Era" "Und… und was war mit Chesis und dir gewesen?"
+            "Narcais" "Ich bin mir sicher, dass er keine Fehler hat, immerhin habe ich ihn erstellt, aber so ist nun mal die Vorschrift."
 
-                "Atropos" "Kloth hatte mich zu einem Praktikum überredet und es war die beste Entscheidung meines Lebens, es zu machen."
+            "Atropos" "Es ging um den Einfluss der Impfung auf Kinder und Jugendliche, richtig?"
 
-                "Atropos" "Und dann hatten Kloth und ich Chesis überzeugt doch ebenfalls hier anzufangen, weil er hier gute Chancen hat trotz seiner introvertierten Art."
+            "Narcais" "Ja, genau. Und diesbezüglich: Ich habe einige…"
 
-                "Era" "Stimmt… es ist wirklich schwer mit ihm zu reden… ich hatte es ein paar Mal versucht und dann musste ich aufgegeben. Dir gegenüber ist er dagegen so offen."
+            "Atropos" "Können wir deinen Vortrag auf später verschieben? Ich muss noch etwas für Anan fertig zusammenstellen. Ich beschäftige mich später mit deinem Bericht."
 
-                "Atropos" "Wir sind immerhin auch schon seit Ewigkeiten befreundet. Ich bin mir sicher, mit der Zeit wird er sich auch dir gegenüber mehr öffnen."
+            "Narcais" "Ich bin froh zu hören, dass wenigstens eine Person hier meine Arbeit wertschätzt. Ich arbeite nun weiter."
 
-                "Era" "Das… das wäre sehr schön."
-
-                "Narcais" "Seid ihr fertig mit eurem Gespräch über nicht anwesende Personen? Ich bin auch noch da."
-
-                "Atropos" "Wer könnte dich vergessen? (lacht)"
-
-                "Narcais" "Niemand, das ist mir bewusst!"
-
-                "Narcais" "Jedenfalls: Ich habe einen Bericht verfasst, den du noch durcharbeiten müsstest."
-
-                "Narcais" "Ich bin mir sicher, dass er keine Fehler hat, immerhin habe ich ihn erstellt, aber so ist nun mal die Vorschrift."
-
-                "Atropos" "Es ging um den Einfluss der Impfung auf Kinder und Jugendliche, richtig?"
-
-                "Narcais" "Ja, genau. Und diesbezüglich: Ich habe einige…"
-
-                "Atropos" "Können wir deinen Vortrag auf später verschieben? Ich muss noch etwas für Anan fertig zusammenstellen. Ich beschäftige mich später mit deinem Bericht."
-
-                "Narcais" "Ich bin froh zu hören, dass wenigstens eine Person hier meine Arbeit wertschätzt. Ich arbeite nun weiter."
-
-                jump good_mood
+            jump good_mood
 
         else:
             scene hall
@@ -1710,7 +1493,7 @@ label work:
             # Symbiont
             "{i}Nimm die Pille jetzt ein. Werde wieder glücklich. Du hast es verdient ein sorgenfreies Leben zu haben. {/i}"
 
-            show anan normal_mid:
+            show anan 1:
                 xalign 0.5
 
             "Anan" "Guten Morgen und Glück für die Welt."
@@ -1773,12 +1556,10 @@ label work:
 
             menu:
                 "Anan hat ja recht...":
-                    $ okaymood= True
                     jump anan_is_right
                 "Ich bin doch auch ohne Pille glücklich...":
                     jump why_important
                 "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
-                    $ badmood= True
                     jump be_against
 
 label anan_is_right:
@@ -1932,7 +1713,7 @@ label anan_is_right:
 
     # ab hier wieder alle
     scene triumvirate
-    show anan normal_mid:
+    show anan 1:
         xalign 0.5
     show atlas normal:
         xalign 0
@@ -2200,7 +1981,7 @@ label why_important:
 
     # ab hier wieder alle
     scene triumvirate
-    show anan normal_mid:
+    show anan 1:
         xalign 0.5
     show atlas normal:
         xalign 0
@@ -2442,7 +2223,7 @@ label be_against:
 
     scene triumvirate
 
-    show anan normal_mid:
+    show anan 1:
         xalign 0.5
     show atlas normal:
         xalign 0
@@ -2624,7 +2405,7 @@ label good_mood:
 
 
     scene triumvirate
-    show anan normal_mid:
+    show anan 1:
         xalign 0.5
     show adres normal:
         xalign 0.99
