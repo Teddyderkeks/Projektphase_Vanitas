@@ -117,6 +117,7 @@ label change:
 
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
+    show screen force_mouse_move
 
     jump menustart
 
@@ -137,7 +138,8 @@ label menustart:
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
             jump back_pill_decision
         "Ich nehme die Pille, sobald ich auf der Arbeit bin.":
-            jump back_pill_decision
+            hide screen force_mouse_move
+            jump later_take_pill
 
 # muss am Ende wieder rausgelöscht werden!!!!
 

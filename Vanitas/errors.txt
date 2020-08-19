@@ -2,18 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/script.rpy", line 144: end of line expected.
-    "Entwickler" "Bitte triff nun die Entscheidung ""Ich sollte die Pille besser sofort nehmen."""
-                                                    ^
-
-Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 13 14:07:57 2020
-=======
-File "game/screens.rpy", line 306: keyword argument u'xpos' appears more than once in a vbox statement.
-    xpos 60
+File "game/functions.rpy", line 19: u'menu' is not a keyword argument or valid child for the screen statement.
+    menu:
         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 13 17:10:14 2020
->>>>>>> Tati
+Wed Aug 19 15:14:02 2020
