@@ -227,6 +227,66 @@ screen arrow_detail_posterpills():
             focus_mask True
             action Jump ("after_detail_posterpills")
 
+screen arrow_detail_blogkloth():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_blogkloth")
+
+screen arrow_detail_servertextkloth():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_servertextkloth")
+
+screen arrow_detail_servergraphkloth():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_servergraphkloth")
+
+screen arrow_detail_blogkloth2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_blogkloth2")
+
+screen arrow_detail_servertextkloth2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_servertextkloth2")
+
+screen arrow_detail_servergraphkloth2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("after_detail_servergraphkloth2")
+
+
+
+
+
+
+
 #call screen pfeil_back
 #hide screen pfeil_back
 

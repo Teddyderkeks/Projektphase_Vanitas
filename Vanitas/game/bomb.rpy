@@ -1,3 +1,7 @@
+define fadealarm=Fade(1,0.5,2)
+define fadeshort=Fade(0.5,0.5,0.5)
+
+
 label choice_bomb:
 
 
@@ -17,6 +21,7 @@ label choice_bomb:
     "Nein!"
 
     scene hall
+    with fadeshort
 
     # Symbiont
     "{i}Macht es dich glücklich, wenn du den Hinweisen nachgehen kannst, egal wohin es dich letztlich führen wird? {/i}"
@@ -124,6 +129,7 @@ label choice_bomb:
     "Ich… ich…"
 
     scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Ich höre ein Ticken. Ist sie das?"
@@ -240,44 +246,58 @@ label entschaerfenPillegenommen:
 
     "Atropos" "Verdammt!"
 
+    scene detail_bomb0010
+    with fadeshort
+
     # Symbiont
     "{i}10 Sekunden… die Uhr sie tickt…{/i}"
 
     "Atropos" "Bitte… bitte…"
+
+    scene detail_bomb0009
 
     # Symbiont
     "{i}9 Sekunden…{/i}"
 
     "Atropos" "Das darf doch nicht wahr sein…"
 
+    scene detail_bomb0008
+
     # Symbiont
     "{i}8 Sekunden…{/i}"
 
     "Atropos" "Era…"
+
+    scene detail_bomb0007
 
     # Symbiont
     "{i}7 Sekunden…{/i}"
 
     "Atropos" "Kloth… Chesis…"
 
+    scene detail_bomb0006
+
     # Symbiont
     "{i}6 Sekunden…{/i}"
 
     "Atropos" "Es tut mir so leid…"
+
+    scene detail_bomb0005
 
     # Symbiont
     "{i}5 Sekunden…{/i}"
 
     "Atropos" "Da, das ist die Lösung! Bitte… funktioniere…"
 
+    scene detail_bomb0004
+
     # Symbiont
     "{i}4 Sekunden…{/i}"
 
     "Atropos" "Es hat funktioniert! Ich habe es geschafft!"
 
-    # leise
     # Symbiont
-    "{i}Die Uhr, sie tickt… sie nimmt die Zeit und dich gleich mit. (leise) {/i}"
+    "{i}Es war zu spät... {/i}"
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -311,6 +331,9 @@ label explodierenPillegenommen:
     # Atropos Gedanken
     "Das alles muss ein Ende finden."
 
+    scene detail_bomb0010
+    with fadeshort
+
     # Symbiont
     "{i}Noch 10 Sekunden… die Uhr, sie tickt…{/i}"
 
@@ -319,6 +342,8 @@ label explodierenPillegenommen:
 
     # Atropos Gedanken
     "Ich wünschte ich hätte die Chance gehabt nochmal mit Kloth über alles zu sprechen. Ihn zu fragen, was das alles zu bedeuten hat."
+
+    scene detail_bomb0009
 
     # Symbiont
     "{i}9 Sekunden. {/i}"
@@ -329,6 +354,8 @@ label explodierenPillegenommen:
     # Atropos Gedanken
     "Auch die mächtigsten Männer brauchen wohl jemanden, dem sie sich anvertrauen können…"
 
+    scene detail_bomb0008
+
     # Symbiont
     "{i}8 Sekunden. {/i}"
 
@@ -338,11 +365,15 @@ label explodierenPillegenommen:
     # Atropos Gedanken
     "So viele Menschen werden heute sterben…"
 
+    scene detail_bomb0007
+
     # Symbiont
     "{i}7 Sekunden. {/i}"
 
     # Atropos Gedanken
     "Die Zeit wird langsam knapp… Ich habe keine Zeit mehr etwas zu ändern… Ich dachte, ich wäre meiner Entscheidung sicher gewesen, aber…"
+
+    scene detail_bomb0006
 
     # Symbiont
     "{i}6 Sekunden. {/i}"
@@ -350,11 +381,15 @@ label explodierenPillegenommen:
     # Atropos Gedanken
     "Was ist dieses Gefühl?"
 
+    scene detail_bomb0005
+
     # Symbiont
     "{i}5 Sekunden. {/i}"
 
     # Atropos Gedanken
     "Ich habe Angst… ich habe Angst zu sterben… und all diese anderen Menschen, die ich mit in den Tod reiße…"
+
+    scene detail_bomb0004
 
     # Symbiont
     "{i}4 Sekunden. {/i}"
@@ -375,6 +410,7 @@ label explodierenPillegenommen:
     $ renpy.movie_cutscene("cutscene_ende.mpg")
 
     scene street
+    with fadeshort
 
     # Atropos Gedanken
     "Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung."
@@ -501,6 +537,7 @@ label sawallthreekloth:
     "Aber wo kann er sein? Wo kann ich ihn nur finden? Es ist fast Zeit für die Mittagspause, oder? Vielleicht arbeitet er noch?"
 
     scene shop_1
+    with fadeshort
     show zelos normal
 
     "Zelos" "Atropos? Was ist los? Du wirkst so gehetzt?"
@@ -527,6 +564,7 @@ label sawallthreekloth:
     "Ich muss mit Chesis sprechen. Jetzt sofort."
 
     scene shop_2
+    with fadeshort
 
     # Symbiont
     "{i}Sprich nicht mit Chesis. Er ist genau wie alle anderen. Er wird ohnehin nicht auf dich hören und du wirst ihn nur ins Unglück stürzen. {/i}"
@@ -535,7 +573,7 @@ label sawallthreekloth:
     "Wo ist er nur?"
 
     "Atropos" "Chesis?"
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Atropos? Meine Mittagspause hat noch nicht angefangen."
 
@@ -544,7 +582,8 @@ label sawallthreekloth:
     "Chesis" "(an Kunden gewandt) Tut mir leid, ich bin gleich zurück."
 
     scene hall
-    show chesis smiling
+    with fadeshort
+    show chesis normal
 
     "Chesis" "Was ist denn nur los mit dir? Du wirkst schon fast… wie… wie…"
 
@@ -727,6 +766,7 @@ label saveeralab:
     "Ich habe das ungute Gefühl, dass die Uhr tickt…"
 
     scene lab
+    with fadeshort
 
     "Atropos" "Era?"
 
@@ -829,6 +869,7 @@ label saveeralab:
     "Atropos" "Vielleicht solltest du heute besser auch früher gehen, Narcais. Es wird dich am Ende glücklicher machen."
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Wo könnte er nur sein? Vermutlich ist er bei der Mensa, oder?"
@@ -914,6 +955,7 @@ label saveeraelsewhere:
     # Atropos Gedanken
     "Wo ist sie nur?"
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Wo ist sie nur?"
@@ -923,6 +965,7 @@ label saveeraelsewhere:
     "Zelos" "Atropos?"
 
     scene shop_2
+    with fadeshort
 
     # Atropos Gedanken
     "Wo ist sie nur?"
@@ -930,6 +973,7 @@ label saveeraelsewhere:
     "Chesis" "Atropos?"
 
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Wo ist sie nur?"
@@ -941,6 +985,7 @@ label saveeraelsewhere:
     "Das darf doch nicht wahr sein…"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Ich muss sie finden…"
@@ -967,6 +1012,7 @@ label saveeraelsewhere:
     "Ich muss mich beeilen…"
 
     scene lab
+    with fadeshort
 
     "Atropos" "Era?"
 
@@ -1003,6 +1049,7 @@ label saveeraelsewhere:
     "Era" "Das macht auch mich glücklich…"
 
     scene hall
+    with fadeshort
     show era normal
 
     "Atropos" "Los! Renn!"
@@ -1039,6 +1086,7 @@ label savechesis:
     # Atropos Gedanken
     "Wohin ist er vorher gegangen? Zurück zur Arbeit? Ich muss ihn finden!"
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Soll ich Zelos auch warnen? Aber er wirkt beschäftigt und ich habe Angst, dass mich das zu viel Zeit kosten wird…"
@@ -1047,10 +1095,11 @@ label savechesis:
     "Nein- ich muss weiter… tut mir leid, Zelos… ich hoffe, dass du noch genug Zeit hast."
 
     scene shop_2
+    with fadeshort
 
     "Atropos" "Chesis?"
 
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Was ist los? Du siehst, dass ich in einem Gespräch bin."
 
@@ -1169,6 +1218,10 @@ label savechesis:
     "Atropos" "Es tut mir leid."
 
     show server_room
+    with fadealarm
+
+    show detail_bomb0004
+    with fadealarm
 
     "Atropos" "4 Sekunden? Neeeein!"
 
@@ -1196,11 +1249,13 @@ label savetycho:
     "Ich muss zumindest nachsehen und es versuchen."
 
     scene office_1
+    with fadeshort
 
     # Atropos Gedanken
     "Neiros Arbeitsplatz ist schonmal verlassen… Hoffentlich ist wenigstens Tycho da…"
 
     scene office_2
+    with fadeshort
     show armene normal
     "Armene" "Atropos? Du hier?"
 
@@ -1248,6 +1303,7 @@ label savetycho:
     "Sind sie bereits in der Mensa?"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Warte… ist er das da vorne nicht?"
@@ -1267,6 +1323,7 @@ label savetycho:
     "Tycho" "Okay!"
 
     scene office_1
+    with fadeshort
     show tycho normal
 
     "Tycho" "Also, was gibt es? Wie kann ich dir helfen?"
@@ -1342,7 +1399,13 @@ label savetycho:
     "Ach richtig- im Flur…"
 
     scene hall
-    # wenn möglich Nahaufnahme vom Schalter zeigen
+    with fadealarm
+    scene detail_alarm
+    with fadealarm
+    scene detail_alarmbroken
+    with fadealarm
+    scene hall
+    with fadealarm
 
     # Atropos Gedanken
     "Der Alarm ist ganz schön laut… hoffentlich bewirkt er etwas."
@@ -1395,6 +1458,7 @@ label savekloth:
     "Ich muss nochmal ganz Aither ablaufen und Kloth finden…"
 
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Hier ist er schonmal nicht… ich sollte Zelos fragen, ob er Kloth gesehen hat."
@@ -1457,12 +1521,13 @@ label savekloth:
     "Ab zu den Fahrzügen… oh verdammt, sie sind zu voll… dann eben die Treppe."
 
     scene stairs_down
-
+    with fadeshort
 
     # Atropos Gedanken
     "Kloth… Wo bist du nur?"
 
     scene stairs_up
+    with fadeshort
 
     # Atropos Gedanken
     "Warte… was war das eben gewesen?"
@@ -1517,10 +1582,12 @@ label savekloth:
     "{i}Nein!{/i}"
 
     scene stairs_down
+    with fadeshort
 
     # Atropos Gedanken
     "Was…?"
     scene corpse
+    with fadeshort
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -1545,6 +1612,9 @@ label saveallallthreekloth:
     # Atropos Gedanken
     "Aber wie kann ich alle warnen? Wie kann ich sie auf die Gefahr aufmerksam machen, die vermutlich droht?"
 
+    scene detail_alarm
+    with fadeshort
+
     # Atropos Gedanken
     "Der Feuermelder…"
 
@@ -1557,10 +1627,14 @@ label saveallallthreekloth:
     # Atropos Gedanken
     "Ich muss es versuchen, selbst wenn dann Panik ausbrechen würde."
 
-    # Möglichkeit Handfeuermelder zu zeigen
+    scene detail_alarmbroken
+    with fadeshort
 
     # Atropos Gedanken
     "Der Alarm ist ganz schön laut… ich hoffe er bewirkt etwas."
+
+    scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Bitte… flieht doch…"
@@ -1619,7 +1693,7 @@ label saveallallthreekloth:
 
     "Tycho" "Du warst es, Atropos? Aber warum?"
 
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Ist es wegen der Bombe?"
 
@@ -1758,10 +1832,18 @@ label saveallallthreekloth:
 
     "Anan" "Konsequenzen, derer ich mir stets bewusst war. Und ich trage die Verantwortung für jede von diesen."
 
-    show server_room
+    scene server_room
+    with fadeshort
     show anan normal_mid
 
+    scene detail_bomb0020
+    with fadeshort
+
+
     "Anan" "Noch 20 Sekunden. Ich bereue es nicht der Menschheit Happiness geschenkt zu haben. Nur so konnte sie glücklich sein und war es auch."
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Aber warum ihnen keine Wahl lassen?"
 
@@ -1774,6 +1856,7 @@ label saveallallthreekloth:
     "Atropos" "Nein… Ja… Ich denke schon…"
 
     scene detail_pill
+    with fadeshort
 
     "Anan" "Nimm sie. Sei glücklich."
 
@@ -1781,6 +1864,7 @@ label saveallallthreekloth:
     "Ich nehme sie…"
 
     scene server_room
+    with fadeshort
 
     # Symbiont
     "{i}Atropos, sei glücklich. Vergiss all das Leid. Es geht dir gut. {/i}"
@@ -1838,6 +1922,7 @@ label doesbombexistsawallthreekloth:
     "Und da vorne ist der Serverraum auch schon."
 
     scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Dieses Ticken…"
@@ -1854,8 +1939,14 @@ label doesbombexistsawallthreekloth:
     # Atropos Gedanken
     "Oder hat er es nur durch Zufall mitbekommen?"
 
+    scene detail_bomb2031
+    with fadeshort
+
     # Atropos Gedanken
     "Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
+
+    scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt werden würde?"
@@ -1922,7 +2013,13 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "Früher waren die Menschen doch auch glücklich…"
 
+    scene detail_bomb0309
+    with fadeshort
+
     "Atropos" "Noch ein paar Minuten…"
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Ich habe Angst… was ist, wenn wirklich alle sterben?"
 
@@ -1946,7 +2043,14 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "…"
 
+    scene detail_bomb0047
+    with fadeshort
+
     "Atropos" "Nicht mal mehr eine Minute…"
+
+    scene server_room
+    with fadeshort
+
 
     "Atropos" "Chesis… habe ich das Richtige getan?"
 
@@ -2082,14 +2186,21 @@ label trywarnpeople:
     "Atropos" "Ich kann die unschuldigen Menschen nicht sterben lassen! Was wäre es dann noch wert, dass ich ihnen ihr Glück zurückgeben möchte?"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Wo ist er?"
+
+    scene detail_alarm
+    with fadeshort
 
     # Atropos Gedanken
     "Ach… da…"
     # Atropos Gedanken
     "Bitte funktioniere…"
+
+    scene detail_alarmbroken
+    with fadeshort
 
     # Atropos Gedanken
     "Wenn die Bombe hochgeht, ohne dass ich es schaffe die Menschen zu retten… nein, das könnte ich mir nicht verzeihen…"
@@ -2103,8 +2214,12 @@ label trywarnpeople:
     # Atropos Gedanken
     "Ich muss sie retten und das um jeden Preis!"
 
+
     # Atropos Gedanken
     "Der Alarm ist zu laut, aber immerhin verlassen die Menschen schon mal ihren Arbeitsplatz."
+
+    scene hall
+    with fadeshort
 
     "Atropos" "Flieht! Verlasst das Gebäude! Ein Feuer ist ausgebrochen!"
 
@@ -2118,6 +2233,7 @@ label trywarnpeople:
     "Ich muss zum Serverraum!"
 
     scene server_room
+    with fadeshort
 
     "Atropos" "Wo ist die Bombe?"
 
@@ -2125,7 +2241,14 @@ label trywarnpeople:
 
     "Atropos" "Tatsächlich! Und die Zeit, wie viel Zeit bleibt den anderen noch?"
 
+    scene detail_bomb1000
+    with fadeshort
+
     "Atropos" "10 Minuten? Das müsste ausreichen… puh…"
+
+    scene server_room
+    with fadeshort
+
 
     "Atropos" "In 10 Minuten sollte ein Großteil der Menschen das Gebäude verlassen haben… oder?"
 
@@ -2155,15 +2278,28 @@ label trywarnpeople:
 
     "Atropos" "Ich hoffe nur, die Menschen werden es auch so sehen. Ich hoffe, ich konnte alle in Aither retten."
 
+    scene detail_bomb0009
+    with fadeshort
+
     "Atropos" "Nur noch ein paar Sekunden."
+
+    scene detail_bomb0008
 
     "Atropos" "Chesis, Kloth. Bitte vergesst mich nie."
 
+    scene detail_bomb0007
+
     "Atropos" "Ihr seid mir die wichtigsten Menschen, die mir noch in meinem Leben geblieben sind."
+
+    scene detail_bomb0006
 
     "Atropos" "Überlebt das alles und macht die Welt zu einem besseren Ort."
 
+    scene detail_bomb0005
+
     "Atropos" "Noch fünf Sekunden…"
+
+    scene detail_bomb0004
 
     "Atropos" "Ich liebe euch."
 
@@ -2202,6 +2338,7 @@ label doesbombexist:
     "Und da vorne ist der Serverraum auch schon."
 
     scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Dieses Ticken…"
@@ -2218,8 +2355,14 @@ label doesbombexist:
     # Atropos Gedanken
     "Oder hat er es nur durch Zufall mitbekommen?"
 
+    scene detail2031
+    with fadeshort
+
     # Atropos Gedanken
     "Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
+
+    scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt wird?"
@@ -2286,7 +2429,13 @@ label doesbombexist:
 
     "Atropos" "Früher waren die Menschen doch auch glücklich…"
 
+    scene detail_bomb0309
+    with fadeshort
+
     "Atropos" "Noch ein paar Minuten…"
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Ich habe Angst… was ist, wenn wirklich alle sterben?"
 
@@ -2310,7 +2459,13 @@ label doesbombexist:
 
     "Atropos" "…"
 
+    scene detail_bomb0047
+    with fadeshort
+
     "Atropos" "Nicht mal mehr eine Minute…"
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Chesis, Kloth… habe ich das Richtige getan?"
 
@@ -2359,12 +2514,19 @@ label besureanandies:
 
     "Atropos" "Ich muss zum Serverraum!"
     scene server_room
+    with fadeshort
 
     "Atropos" "Wie viel Zeit bleibt mir noch? Wo ist die Bombe?"
 
     "Atropos" "Da… das rote Leuchten. Ist sie das?"
 
-    "Atropos" "Tatsächlich. Noch 15 Minuten."
+    scene detail_bomb1020
+    with fadeshort
+
+    "Atropos" "Tatsächlich. Noch 10 Minuten."
+
+    scene serverroom
+    with fadeshort
 
     "Atropos" "Nur noch so wenig Zeit? Aber wie bekomme ich Anan dazu hier hochzukommen? Durch Erpressung? Es ist einen Versuch wert…"
 
@@ -2373,6 +2535,7 @@ label besureanandies:
     "Atropos" "Ich muss es versuchen."
 
     scene hall
+    with fadeshort
 
     "Atropos" "Anan? Bist du da?"
 
@@ -2507,13 +2670,15 @@ label ananorjustbombwho:
         "Ich muss Chesis finden!"
 
         scene shop_1
+        with fadeshort
 
         "Zelos" "Atropos? Kannst du Mal eben kommen?"
 
         "Atropos" "Keine Zeit."
 
         scene shop_2
-        show chesis smiling
+        with fadeshort
+        show chesis normal
 
         "Atropos" "Chesis? Ich muss mit dir reden!"
 
@@ -2528,7 +2693,8 @@ label ananorjustbombwho:
         "Chesis" "Okay, okay."
 
         scene hall
-        show chesis smiling
+        with fadeshort
+        show chesis normal
 
         "Chesis" "Wohin gehen wir?"
 
@@ -2557,7 +2723,8 @@ label ananorjustbombwho:
         "Atropos" "Du kommst jetzt mit!"
 
         scene stairs_down
-        show chesis smiling
+        with fadeshort
+        show chesis normal
 
         "Chesis" "Und? Was ist jetzt?"
 
@@ -2710,6 +2877,7 @@ label ananorjustbombwho:
             "Ich muss zurück in Kloths Büro… ich hätte mich dort von Anfang an genauer umsehen sollen."
 
             scene hall
+            with fadeshort
             # Atropos Gedanken
             "Ich muss sichergehen, dass diese Bombe hochgeht!"
 
@@ -2717,10 +2885,12 @@ label ananorjustbombwho:
             "Aber was habe ich übersehen?"
 
             scene kloth_office
+            with fadeshort
 
             "Atropos"  "Was ist mit diesem Dokument? Enthält das irgendwelche Informationen?"
 
             scene detail_servertext
+            with fadeshort
             call screen arrow_detail_servertext2()
 
 
@@ -2735,6 +2905,7 @@ label ananorjustbombwho:
                 "Aber was?"
 
                 scene kloth_office
+                with fadeshort
 
                 # Atropos Gedanken
                 "Den Computer… hatte ich ihn mir angeschaut?"
@@ -2746,6 +2917,7 @@ label ananorjustbombwho:
                 "Mal sehen..."
 
                 scene detail_blog
+                with fadeshort
                 call screen arrow_detail_blog3
 
 
@@ -2757,6 +2929,7 @@ label ananorjustbombwho:
                 "Vielleicht finde ich in Kloths Büro ja irgendwelche Hinweise, die mir weiterhelfen?"
 
                 scene kloth_office
+                with fadeshort
 
                 # Atropos Gedanken
                 "Der Computer… der hilft mir bestimmt weiter…"
@@ -2768,6 +2941,7 @@ label ananorjustbombwho:
                 "Mal sehen..."
 
                 scene detail_blog
+                with fadeshort
                 call screen arrow_detail_blog4
 
 
@@ -2781,6 +2955,7 @@ label ananorjustbombwho:
             "Aber was?"
 
             scene kloth_office
+            with fadeshort
 
             # Atropos Gedanken
             "Den Computer… hatte ich ihn mir angeschaut?"
@@ -2792,6 +2967,7 @@ label ananorjustbombwho:
             "Mal sehen..."
 
             scene detail_blog
+            with fadeshort
             call screen arrow_detail_blog3
 
 label after_detail_blog3:
@@ -2805,25 +2981,30 @@ label after_detail_blog3:
     "Atropos"  "Aber wo kann sie versteckt sein?"
 
     scene kloth_office
+    with fadeshort
 
     "Atropos"  "Es muss noch andere Hinweise geben…"
 
     "Atropos"  "Was ist mit diesem Dokument? Enthält das irgendwelche Informationen?"
 
     scene detail_servertext
+    with fadeshort
     call screen arrow_detail_servertext3()
 
 label after_detail_servertext2:
     scene detail_servergraph
+    with fadeshort
     call screen arrow_detail_servergraph2()
 
 label after_detail_servergraph2:
     scene kloth_office
+    with fadeshort
     "Atropos" "Das erklärt alles. Ich muss in den Serverraum. Sofort!"
     jump chesiskillsklothwhattodo
 
 label after_detail_servertext3:
     scene detail_servergraph
+    with fadeshort
     call screen arrow_detail_servergraph3()
 
 label after_detail_servergraph3:
@@ -2846,16 +3027,18 @@ label after_detail_blog2:
     "Atropos"  "Was ist mit diesem Dokument? Enthält das irgendwelche Informationen?"
 
     scene detail_servertext4
+    with fadeshort
     call screen arrow_detail_servertext4()
 
 label after_detail_servertext4:
     scene detail_servergraph
+    with fadeshort
     call screen arrow_detail_servergraph4()
 
 label after_detail_servergraph4:
 
     scene kloth_office
-
+    with fadeshort
     "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
     jump chesiskillsklothwhattodo
 
@@ -2870,6 +3053,7 @@ label after_detail_blog4:
     "Atropos"  "Aber wo… wo könnte sie sein?"
 
     scene kloth_office
+    with fadeshort
 
     "Atropos"  "Warte… die Serverstrukturen, die ich vorher gesehen habe… wollte Kloth die Server in die Luft jagen?"
 
@@ -2880,6 +3064,7 @@ label chesiskillsklothwhattodo:
 
         # ab hier wieder alle
         scene server_room
+        with fadeshort
 
         # Atropos Gedanken
         "Ein Ticken… Also doch…"
@@ -2887,8 +3072,14 @@ label chesiskillsklothwhattodo:
         # Atropos Gedanken
         "Wo ist sie? Ach, da leuchten die Ziffern im Dunkeln… Wie viel Zeit bleibt noch?"
 
+        scene detail_bomb2031
+        with fadeshort
+
         # Atropos Gedanken
         "20 Minuten…"
+
+        scene server_room
+        with fadeshort
 
         # Atropos Gedanken
         "Was soll ich mit dieser verbleibenden Zeit anfangen? Was soll ich tun?"
@@ -2937,6 +3128,7 @@ label ananshoulddie:
     "Atropos"  "Sein Büro… ich muss es dort versuchen. Wie viel Zeit bleibt mir noch? 10 Minuten? Das muss reichen…"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Ich hoffe, er merkt mir seinen Hass auf ihn nicht an…"
@@ -2950,6 +3142,7 @@ label ananshoulddie:
     "Anan" "Komm herein."
 
     scene anan_office
+    with fadeshort
     show anan normal_mid
 
     "Anan" "Atropos? Wie kann ich dir helfen?"
@@ -2978,6 +3171,7 @@ label ananshoulddie:
     "Anan" "In Ordnung, lass uns gehen."
 
     scene hall
+    with fadeshort
     show anan normal_mid
 
 
@@ -2997,6 +3191,7 @@ label ananshoulddie:
     "Anan" "…"
 
     scene server_room
+    with fadeshort
 
     "Anan"  "Wo ist Kloth?"
 
@@ -3038,8 +3233,14 @@ label aithershoulddie:
 
     "Atropos"  "…"
 
+    scene detail_bomb0200
+    with fadeshort
+
     # Atropos Gedanken
     "Noch 2 Minuten…"
+
+    scene server_room
+    with fadeshort
 
     "Atropos"  "Stirb, Aither, und nimm all das Elend mit dir…"
 
@@ -3055,19 +3256,32 @@ label aithershoulddie:
 
     "Atropos"  "…"
 
-    # ab hier heruntertickende sBombe
+    scene detail_bomb0010
+    with fadeshort
 
     "Atropos"  "Noch 10 Sekunden…"
 
+    scene detail_bomb0009
+
     "Atropos"  "Zerfalle in Staub, Aither!"
+
+    scene detail_bomb0008
 
     "Atropos"  "Warte… was ist mit all den Menschen, die noch hier sind?"
 
+    scene detail_bomb0007
+
     "Atropos"  "Es spielt keine Rolle mehr… es ist zu spät…"
+
+    scene detail_bomb0006
 
     "Atropos"  "…"
 
+    scene detail_bomb0005
+
     "Atropos"  "Ruhe in Frieden, Kloth."
+
+    scene detail_bomb0004
 
     "Atropos"  "Dein Tod ist gerächt!"
 

@@ -1,6 +1,7 @@
 label takepillnow:
 
     scene lab
+    with fadeshort
 
     # Atropos Gedanken
     "Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"

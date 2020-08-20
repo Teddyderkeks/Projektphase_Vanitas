@@ -28,11 +28,13 @@ label escapelater:
     "Era" "B-Bis später!"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Jetzt suche ich erstmal nach Chesis- vielleicht will er mit in die Mittagspause kommen."
 
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
@@ -54,12 +56,13 @@ label escapelater:
     "Zelos" "Einen wunderschönen, glücklichen guten Morgen! Was kann ich dir heute Gutes tun?"
 
     # Atropos Gedanken
-    "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis.¬¬"
+    "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
     scene shop_2
+    with fadeshort
 
     # Atropos Gedanken
-    "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch.¬¬"
+    "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
 
     # Hier Möglichkeit sich umzuschauen während man auf Chesis wartet.
 
@@ -79,6 +82,7 @@ label escapelater:
     "Chesis" "Gerne."
 
     scene office_2
+    with fadeshort
 
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen nachher anschließen?"
 
@@ -130,6 +134,7 @@ label escapelater:
     "Dann werde ich einfach schon Mal ins Labor zurück. Ich habe sonst ohnehin nichts mehr zu tun."
 
     scene lab
+    with fadeshort
 
     # Atropos Gedanken
     "Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
@@ -186,6 +191,7 @@ label gowithnarcais:
     "Atropos" "Klar, lass uns gehen!"
 
     scene hall
+    with fadeshort
     show narcais normal
 
     "Narcais" "Bist du schon dazugekommen mir über meinen Bericht drüber zuschauen?"
@@ -235,6 +241,7 @@ label gowithnarcais:
     "Atropos" "Da vorne ist der Serverraum!"
 
     scene server_room
+    with fadeshort
 
     "Atropos" "Hallo? Jemand da?"
 
@@ -269,9 +276,13 @@ label gowithnarcais:
 
     "Atropos" "Warte… was ist das?"
 
-    # zeigt Bombe mit 6 Sekunden Zeit übrig
+    scene detail_bomb0006
+    with fadeshort
 
     "Atropos" "Das… das kann doch nicht wahr sein…"
+
+    scene serverroom
+    with fadeshort
 
     "Narcais" "Eine Bombe?"
 
@@ -286,6 +297,7 @@ label gowithnarcais:
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
     return
+
 label dontgowithnarcais:
 
 

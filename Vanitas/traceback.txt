@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/office.rpy", line 1487, in script
-    
-ScriptError: could not find label 'next_step_with_bomb'.
+  File "game/pill_kloth_search.rpy", line 898, in script
+    with fadeshort
+TypeError: Fade() got multiple values for keyword argument 'old_widget'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/office.rpy", line 1487, in script
-    
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'next_step_with_bomb'.
+  File "game/pill_kloth_search.rpy", line 898, in script
+    with fadeshort
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 1389, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2251, in do_with
+    clear=clear)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3047, in interact_core
+    new_widget=layers_root)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\curry.py", line 43, in __call__
+    **dict(self.kwargs.items() + kwargs.items()))
+TypeError: Fade() got multiple values for keyword argument 'old_widget'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Thu Aug 20 05:38:27 2020
+Thu Aug 20 23:33:46 2020

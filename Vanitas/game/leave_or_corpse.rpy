@@ -25,6 +25,7 @@ label leave_and_go_pill:
     "Ich will einfach nur glücklich sein. Mein Leben war zuvor so einfach und ohne Probleme… das hier macht mir Angst."
 
     scene lab
+    with fadeshort
 
     # Atropos Gedanken
     "Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
@@ -69,6 +70,7 @@ label kloth_corpse:
     "Trotzdem habe ich Angst…"
 
     scene corpse
+    with fadeshort
 
     "Atropos" "Kloth?"
 
@@ -118,6 +120,7 @@ label kloth_corpse:
     show sepia
     show kloth smiling behind sepia
     scene stairs_up
+    with fadeshort
 
     "Kloth" "Atropos!"
 

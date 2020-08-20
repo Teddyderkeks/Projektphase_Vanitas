@@ -4,6 +4,7 @@ default read_document_kloth = False
 
 label search_kloth:
     scene hall
+    with fadeshort
 
     # Symbiont
     "{i}Du solltest ihn nicht anrufen. Was ist, wenn er gerade in einer Besprechung ist und du ihn störst? {/i}"
@@ -44,6 +45,7 @@ label search_kloth:
     "Kein Laut zu hören… vielleicht hat er mich ja nicht gehört? Kloth wird schon nicht sauer sein, wenn ich einfach eintrete."
 
     scene kloth_office
+    with fadeshort
 
     "Atropos" "Kloth?"
 
@@ -54,6 +56,7 @@ label search_kloth:
     "Das wäre auch zu schön gewesen."
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Aber wo kann er sonst sein?"
@@ -106,6 +109,7 @@ label search_kloth_in_anan_office:
 
 
     scene anan_office
+    with fadeshort
 
     # Atropos Gedanken
     "Es ist tatsächlich verlassen."
@@ -159,6 +163,7 @@ label symbiont_in_between:
 
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Aber was soll ich jetzt nur tun?"
@@ -172,6 +177,7 @@ label symbiont_in_between:
 
 label search_kloth_without_anan_office:
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Wo könnte ich Kloth nur suchen?"
@@ -186,6 +192,7 @@ label search_kloth_without_anan_office:
 
 
     scene kloth_office
+    with fadeshort
     show sepia
     show kloth angry_neutral behind sepia:
         xalign 0.5
@@ -236,6 +243,7 @@ label search_kloth_without_anan_office:
     hide kloth
     hide sepia
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Was war das denn für eine seltsame Erinnerung? Die hatte ich ja vollkommen vergessen…"
@@ -294,6 +302,7 @@ label search_kloth_without_anan_office:
             "Ich will, dass er endlich wieder glücklich sein kann und nicht so leiden muss, wie es in der Erinnerung den Anschein hatte."
 
             scene kloth_office
+            with fadeshort
 
             # Atropos Gedanken
             "Kloths Büro… ich habe mich schon lange nicht mehr wirklich hier aufgehalten. Wo könnte ich nur Hinweise finden?"
@@ -313,6 +322,7 @@ label search_kloth_without_anan_office:
             "So oder so. Ich muss ohnehin zurück zur Arbeit. Wenn Kloth nicht beim Labor ist, dann werde ich ihm einfach nochmal eine Nachricht schreiben."
 
             scene lab
+            with fadeshort
             # Atropos Gedanken
             "Er ist nicht hier. Schade. Ich hatte schon Hoffnung gehabt. Aber er wird sich schon melden."
 
@@ -391,6 +401,7 @@ label everything_seen:
             # Symbiont
             "{i}Sei glücklich, Atropos! {/i}"
             scene hall
+            with fadeshort
 
             # Atropos Gedanken
             "Ob wohl Era da ist? Ich würde gerne ein bisschen Zeit mit ihr alleine verbringen und sie besser kennenlernen."
@@ -398,6 +409,7 @@ label everything_seen:
             # Atropos Gedanken
             "Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
             scene lab
+            with fadeshort
             jump laborpillende
         "Ich muss versuchen den Hinweisen nachzugehen.":
             jump choice_bomb
@@ -422,6 +434,7 @@ label everything_seen:
 label still_search_kloth:
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Aber wo könnte er nur sein? Ich habe doch schon an so vielen Orten nach ihm gesucht…"
@@ -437,7 +450,7 @@ label still_search_kloth:
 
     "Atropos" "Anan?"
 
-    show anan 2:
+    show anan normal_mid:
         xalign 0.5
 
     "Anan" "Atropos? Was kann ich für dich tun? Aber ich befürchte, du musst dich kurzhalten, ich bin beschäftigt."
@@ -496,6 +509,7 @@ label still_search_kloth:
     hide anan
 
     scene corpse
+    with fadeshort
 
     "Atropos" "Kloth? Kloth?"
 
@@ -521,6 +535,7 @@ label still_search_kloth:
 
     # Wechsel zu Erinnerung
     scene stairs_up
+    with fadeshort
     show sepia
     show kloth scared2 behind sepia:
         xalign 0.5
@@ -558,7 +573,7 @@ label still_search_kloth:
     hide sepia
 
     # Erinnerung endet.
-    show anan 2:
+    show anan normal_mid:
         xalign 0.5
 
 
@@ -663,11 +678,13 @@ label still_search_kloth:
     # Atropos Gedanken
     "Aither ist an all diesem Mist schuld… sie zwingen mich dazu, um jeden Preis glücklich zu sein, auch wenn ich das gerade einfach nicht sein möchte!"
 
-    # Atropos Gedanken
-    "Kloth hatte Recht mit allem… das, was ich im Labor herausgefunden habe… es muss etwas zu bedeuten haben… Kloth hatte etwas herausgefunden… er wollte handeln."
+    if kloth_office_visited:
 
-    # Atropos Gedanken
-    "Und letzten Endes wurde er umgebracht. Es würde mich nicht wundern, wenn es Anan höchstpersönlich gewesen wäre."
+        # Atropos Gedanken
+        "Kloth hatte recht mit allem… das, was ich im Büro herausgefunden habe… es muss etwas zu bedeuten haben… Kloth hatte etwas herausgefunden… er wollte handeln."
+
+        # Atropos Gedanken
+        "Und letzten Endes wurde er umgebracht. Es würde mich nicht wundern, wenn es Anan höchstpersönlich gewesen wäre."
 
     # Atropos Gedanken
     "Vermutlich hatte Kloth eine Wahrheit herausgefunden, die Anan unbequem geworden wäre."
@@ -694,8 +711,10 @@ label still_search_kloth:
         else:
             "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
             scene hall
+            with fadeshort
             "Atropos"  "Aber was?"
             scene kloth_office
+            with fadeshort
             "Atropos"  "Natürlich…"
 
             if kloth_office_visited:
@@ -703,65 +722,94 @@ label still_search_kloth:
             else:
                 "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
 
+            scene detail_blog
+            with fadeshort
+            call screen arrow_detail_blogkloth2
 
-
-            # Spieler wird PC ohne Passwort-Kennung angezeigt
-            "Blog über Bombenleger, der Aither vernichten will."
-            "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
-            jump serverraumpille
 
     else:
         if read_computer_kloth:
             "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
             scene hall
+            with fadeshort
             "Atropos"  "Aber was?"
             scene kloth_office
+            with fadeshort
             "Atropos"  "Natürlich…"
-
             "Atropos"  "Das Dokument auf seinem Tisch…"
-            # Spieler wird Dokument gezeigt
-            "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
-
-            "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
-            jump serverraumpille
+            scene detail_servertext
+            with fadeshort
+            call screen arrow_detail_servertextkloth2
 
         else:
 
             "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
             scene hall
+            with fadeshort
             "Atropos"  "Aber was?"
             scene kloth_office
+            with fadeshort
             "Atropos"  "Natürlich…"
             if kloth_office_visited:
                 "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
             else:
                 "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
-            # Spieler wird PC ohne Passwort-Kennung angezeigt
-            "Blog über Bombenleger, der Aither vernichten will."
 
-            "Atropos"  "Eine Bombe?"
+            scene detail_blog
+            with fadeshort
+            call screen arrow_detail_blogkloth
 
-            "Atropos"  "Was hat das zu bedeuten? War es das, was Kloth erreichen wollte? Wollte er Aither in die Luft jagen?"
 
-            "Atropos"  "Aber wo kann sie versteckt sein?"
+label after_detail_blogkloth2:
+    "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
+    jump serverraumpille
+label after_detail_servertextkloth2:
+    scene detail_servergraph
+    with fadeshort
+    call screen arrow_detail_servergraphkloth2
 
-            "Atropos"  "Es muss noch andere Hinweise geben…"
+label after_detail_servergraphkloth2:
+    "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
+    jump serverraumpille
 
-            "Atropos"  "Was ist mit diesem Dokument? Enthält das irgendwelche Informationen?"
+label after_detail_blogkloth:
 
-            # Spieler wird Dokument gezeigt
-            "Strukturen von Aither (interkontinental), Wichtigkeit des Servers"
+    "Atropos"  "Eine Bombe?"
 
-            "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
-            jump serverraumpille
+    "Atropos"  "Was hat das zu bedeuten? War es das, was Kloth erreichen wollte? Wollte er Aither in die Luft jagen?"
+
+    "Atropos"  "Aber wo kann sie versteckt sein?"
+
+    "Atropos"  "Es muss noch andere Hinweise geben…"
+
+    scene kloth_office
+    with fadeshort
+
+    "Atropos"  "Was ist mit diesem Dokument? Enthält das irgendwelche Informationen?"
+
+    scene detail_servertext
+    with fadeshort
+    call screen arrow_detail_servertextkloth
+
+label after_detail_servertextkloth:
+    scene detail_servergraph
+    with fadeshort
+    call screen arrow_detail_servergraphkloth
+
+label after_detail_servergraphkloth:
+    "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
+    jump serverraumpille
+
 
 label serverraumpille:
     scene hall
+    with fadeshort
     "Atropos"  "Ich muss mich beeilen. Ich weiß nicht, wie viel Zeit mir noch bleibt."
 
     # Symbiont
     "{i}Was willst du tun, wenn du dort bist? Welche Entscheidung wirst du treffen? Wirst du mit dieser Entscheidung glücklich sein? {i}"
     scene server_room
+    with fadeshort
     "Atropos"  "Ein Ticken… Es ist also tatsächlich wahr. Hier ist eine Bombe versteckt, welche jeden Moment hochgehen kann."
 
     # Symbiont
@@ -794,8 +842,14 @@ label menschennichthelfen:
 
     "Atropos"  "Das darf ich nicht zulassen."
 
+    scene detail_bomb1000
+    with fadeshort
+
     # Symbiont
     "{i}Noch 10 Minuten. {i}"
+
+    scene server_room
+    with fadeshort
 
     "Atropos"  "Ich bin bereit für alles, was kommen wird."
 
@@ -819,35 +873,50 @@ label menschennichthelfen:
 
     "Atropos"  "Ich hoffe, du kannst den Triumph noch von irgendwo anders auskosten."
 
+    scene detail_bomb0010
+    with fadeshort
+
     # Symbiont
     "{i}10 Sekunden. {i}"
 
     "Atropos"  "Jetzt ist also alles vorbei, was?"
+
+    scene detail_bomb0009
 
     # Symbiont
     "{i}9 Sekunden. {i}"
 
     "Atropos"  "Die 10 Minuten gingen schneller um, als ich dachte… ich wünschte, ich hätte etwas mehr Zeit, um mich gedanklich von allen zu verabschieden."
 
+    scene detail_bomb0008
+
     # Symbiont
     "{i}8 Sekunden. Bereust du deine Entscheidung? Oder bist du glücklich?{i}"
 
     "Atropos"  "Ich bin glücklich."
+
+    scene detail_bomb0007
 
     # Symbiont
     "{i}7 Sekunden. {i}"
 
     "Atropos"  "Denke ich."
 
+    scene detail_bomb0006
+
     # Symbiont
     "{i}6 Sekunden. {i}"
 
     "Atropos"  "Vielleicht hätte ich doch alle warnen sollen."
 
+    scene detail_bomb0005
+
     # Symbiont
     "{i}5 Sekunden. {i}"
 
     "Atropos"  "Ob sie mir wohl jemals verzeihen werden?"
+
+    scene detail_bomb0004
 
     # Symbiont
     "{i}4 Sekunden. Ja, das werden sie. Du hast es für das Wohl der gesamten Menschheit getan.{i}"
@@ -877,6 +946,9 @@ label menschenhelfen:
     "{i}Und so bist du wahrhaft glücklich? {i}"
 
     scene hall
+    with fadealarm
+    scene detail_alarm
+    with fadealarm
 
     # Atropos Gedanken
     "Es sollte ausreichen, wenn ich den Handfeuermelder betätige. Das sollte zumindest den meisten Menschen die Chance geben zu entkommen. Mehr kann ich nicht tun."
@@ -887,8 +959,15 @@ label menschenhelfen:
     # Atropos Gedanken
     "Ich denke, das ist es wert."
 
+    scene detail_alarmbroken
+    with fadeshort
+
     # Atropos Gedanken
     "Der Alarm ist ganz schön laut und all diese aufgeregten Stimmen, welche durcheinanderrufen."
+
+    scene hall
+    with fadeshort
+
 
     show ireia normal:
         xalign 0.25
@@ -932,6 +1011,10 @@ label menschenhelfen:
     "Atropos"  "Verdammt… ich darf nicht zu spät kommen… der Serverraum… ich muss zurück und die Bombe aufhalten!"
 
     scene server_room
+    with fadealarm
+
+    scene detail_bomb0004
+    with fadeshort
 
     # Symbiont
     "{i}4 Sekunden. Atropos, bist du glücklich? {i}"
