@@ -1,5 +1,6 @@
 label pill:
     scene lab
+    with fadeshort
 
     # Atropos Gedanken
     "Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
@@ -102,6 +103,7 @@ label pill:
         hide narcais
 
         scene hall
+        with fadeshort
 
         # Atropos Gedanken
         "Soll ich erst nach Kloth suchen oder erst nach Chesis? Den anderen kann ich mich auch nachher noch anschließen."
@@ -120,7 +122,7 @@ label pill:
                 "Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
 
                 # Atropos Gedanken
-                "Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen.¬¬"
+                "Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen."
 
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
@@ -137,6 +139,7 @@ label pill:
 label still_search_chesis:
 
     scene shop_1
+    with fadeshort
 
     # Atropos Gedanken
     "Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
@@ -162,6 +165,7 @@ label still_search_chesis:
     "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
     scene shop_2
+    with fadeshort
 
     # Atropos Gedanken
     "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
@@ -246,6 +250,7 @@ label still_search_chesis:
 label mittagspausemitchesis:
 
     scene office_2
+    with fadeshort
     show chesis smiling:
         xalign 0.5
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen anschließen?"
@@ -362,6 +367,7 @@ label not_search_kloth:
         "Ich werde immer an seiner Seite stehen und für ihn da sein, wenn er mich braucht."
 
         scene hall
+        with fadeshort
 
         # Atropos Gedanken
         "So… ich habe Kloth nochmals eine Nachricht geschrieben. Ich bin mir sicher, es wird sich alles aufklären."
@@ -370,6 +376,7 @@ label not_search_kloth:
         "Und jetzt zurück ins Labor."
 
         scene lab
+        with fadeshort
 
         jump laborpillende
 
@@ -392,6 +399,7 @@ label not_search_kloth:
             "{i}Sei glücklich, Atropos! {/i}"
 
             scene hall
+            with fadeshort
 
             # Atropos Gedanken
             "Ob wohl Era da ist? Ich würde gerne ein bisschen Zeit mit ihr alleine verbringen und sie besser kennenlernen."
@@ -400,11 +408,13 @@ label not_search_kloth:
             "Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
 
             scene lab
+            with fadeshort
             jump laborpillende
 
 label laborpillende:
 
     scene lab
+    with fadeshort
     # Atropos Gedanken
     "Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
 
@@ -443,6 +453,7 @@ label erabegleiten:
     "Era" "Ja… Ja… natürlich. "
 
     scene hall
+    with fadeshort
     show era normal:
         xalign 0.5
 
@@ -468,6 +479,7 @@ label erabegleiten:
     "Atropos" "So, wir sind da- mal schauen, ob sie uns weiterhelfen können."
 
     scene server_room
+    with fadeshort
 
     show era normal:
         xalign 0.5
@@ -491,7 +503,13 @@ label erabegleiten:
     # Atropos Gedanken
     "Warte… das ist doch keine Uhr, oder? Das sieht mehr aus wie…"
 
+    scene detail_bomb0007
+    with fadeshort
+
     "Atropos" "Era, geh da weg! Sofort!"
+
+    scene server_room
+    with fadeshort
 
     # Symbiont
     "{i}Lauf, Atropos.{/i}"
@@ -524,6 +542,7 @@ label eranichtbegleiten:
     "Atropos" "Also, bis gleich!"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Ich hoffe es ist überhaupt jemand da. Soweit ich weiß, machen die Kollegen aus dem Serverraum immer erst ziemlich spät Mittagspause."
@@ -532,6 +551,7 @@ label eranichtbegleiten:
     "Ah, da ist er ja schon. Mal sehen, ob mir dort jemand weiterhelfen kann."
 
     scene server_room
+    with fadeshort
 
     "Atropos" "Hallo? Jemand hier?"
 
@@ -549,8 +569,14 @@ label eranichtbegleiten:
     # Atropos Gedanken
     "Was ist das? Es sieht aus wie eine Uhr, aber…"
 
+    scene detail_bomb0005
+    with fadeshort
+
     # Symbiont
     "{i}Renn, Atropos!{/i}"
+
+    scene server_room
+    with fadeshort
 
     # Atropos Gedanken
     "Wie? Was?"

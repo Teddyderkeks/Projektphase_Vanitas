@@ -10,10 +10,12 @@ label back_to_work:
 
 
     scene stairs_up
+    with fadeshort
 
     # Atropos Gedanken
     "Aber apropos Pille. Sind die Werbeplakate für diese neu?"
     scene detail_posterpills
+    with fadeshort
 
     # Atropos Gedanken
     "Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden."
@@ -23,6 +25,7 @@ label back_to_work:
 label after_detail_posterpills:
 
     scene stairs_up
+    with fadeshort
 
     # Atropos Gedanken
     "Oh, da vorne sind Tycho und die anderen. Soll ich mit ihnen sprechen, bevor ich ins Labor zurückgehe?"
@@ -148,6 +151,7 @@ label talk_with_colleagues:
     "Naja, egal. Ich sollte jetzt zurück ins Labor…"
 
     scene stairs_down
+    with fadeshort
 
     # Atropos Gedanken
     "Warte… was ist das?"
