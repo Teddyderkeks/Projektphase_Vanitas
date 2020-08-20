@@ -63,7 +63,7 @@ label escapelater:
 
     # Hier Möglichkeit sich umzuschauen während man auf Chesis wartet.
 
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Hey Atropos."
 
