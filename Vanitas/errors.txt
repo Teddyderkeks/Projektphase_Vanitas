@@ -2,18 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/script.rpy", line 144: end of line expected.
-    "Entwickler" "Bitte triff nun die Entscheidung ""Ich sollte die Pille besser sofort nehmen."""
-                                                    ^
+The label after_detail_blog3 is defined twice, at
+  File "game/bomb.rpy", line 2796 and
+  File "game/bomb.rpy", line 2861.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 13 14:07:57 2020
-=======
-File "game/screens.rpy", line 306: keyword argument u'xpos' appears more than once in a vbox statement.
-    xpos 60
-        ^
-
-Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 13 17:10:14 2020
->>>>>>> Tati
+Thu Aug 20 04:31:41 2020
