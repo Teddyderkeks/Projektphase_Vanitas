@@ -4,6 +4,10 @@ default neiro_unterhalten= False
 default badmood= False
 default okaymood=False
 define startfade=Fade(0.5,0.5,0.5)
+define datewithera= False
+define dialgoueoffice= False
+define talkchesismorning= False
+define loudspeaker = False
 
 label start:
     stop music
@@ -397,6 +401,7 @@ label conversation_with_seller:
         label watchnothingoffice:
 
             scene office_1
+            $ dialgoueoffice=True
 
             # Atropos Gedanken
             "Ich höre Stimmen, könnten sie das sein?"
@@ -665,6 +670,8 @@ label conversation_with_seller:
                 # Atropos Gedanken
                 "Ich sollte öfter mal bei ihnen vorbeischauen."
 
+                $ talkchesismorning= True
+
 
                 show chesis smiling:
                     xalign 0.5
@@ -844,6 +851,8 @@ label conversation_with_seller:
                     call screen arrow_watchhall()
 
                 label watchnothinghall:
+
+                    $ datewithera= True
 
                     "Atropos" "Ich sollte dann wirklich ins Labor."
 
@@ -1029,6 +1038,7 @@ label conversation_with_seller:
 
         label watchnothingoffice2:
 
+            $ dialgoueoffice=True
 
             # Atropos Gedanken
             "Ich höre Stimmen, könnten sie das sein?"
@@ -1318,6 +1328,8 @@ label conversation_with_seller:
                 # Atropos Gedanken
                 "So… dann mal auf ins Labor."
 
+                $ talkchesismorning= True
+
                 "Chesis" "Guten Morgen."
 
                 "Atropos" "Hey Chesis, wie schön dir über den Weg zu laufen."
@@ -1567,6 +1579,8 @@ label work:
 
             label watchnothinghall2:
 
+                $ datewithera= True
+
 
                 # Atropos Gedanken
                 "Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
@@ -1783,6 +1797,8 @@ label work:
 
 label anan_is_right:
     $ straight_office = True
+
+    $ datewithera= True
 
     # Atropos Gedanken
     "Anan hat ja recht. Ich sehe es ein. Es war ein Fehler gewesen…"
@@ -2733,6 +2749,7 @@ label no_office:
 
     "Durchsage" "{i}Atropos Laitos. Dein Glück erwartet dich. Finde dich umgehend im Büro von Anan ein. {/i}"
 
+    $ loudspeaker = True
     # Atropos Gedanken
     "Ich werde die Durchsage einfach überhören."
 
@@ -2759,5 +2776,7 @@ label no_office:
     "Atropos" "Schon gut, schon gut."
 
     "Atropos" "Ich geh ja schon."
+
+    scene hall
 
     jump rueffel

@@ -1,22 +1,5 @@
 label takepillnow:
 
-    scene hall
-
-    # Atropos Gedanken
-    "Dann mal auf ins Labor, um die Pille zu nehmen."
-
-    # Atropos Gedanken
-    "Ich hoffe, es hat keine weiteren Auswirkungen, dass ich meine Pille nicht genommen hatte."
-
-    # Atropos Gedanken
-    "Aber jetzt sollte ich nicht weiter darüber nachdenken. Ich will einfach nur glücklich sein."
-
-    # Symbiont
-    "{i}Nimm Happiness und du kannst wieder glücklich werden. {i}"
-
-    # Atropos Gedanken
-    "Ja, das stimmt wohl."
-
     scene lab
 
     # Atropos Gedanken
@@ -41,7 +24,7 @@ label takepillnow:
     # Atropos Gedanken
     "Es ist die richtige Entscheidung, glücklich sein zu wollen."
 
-    "Atropos" "(schluckt Happiness)"
+    "Atropos" "(schluckt Happinesss)"
 
     # Symbiont
     "{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
@@ -51,3 +34,5 @@ label takepillnow:
 
     # Atropos Gedanken
     "Ich bin glücklich! Und nun zurück an die Arbeit- es dauert nicht mehr lange bis zur Mittagspause."
+
+jump escapelater
