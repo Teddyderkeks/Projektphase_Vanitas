@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-The label watchofficecalendar is defined twice, at
-  File "game/script.rpy", line 365 and
-  File "game/script.rpy", line 953.
-
-The label watchofficephoto is defined twice, at
-  File "game/script.rpy", line 377 and
-  File "game/script.rpy", line 965.
-
-The label watchofficehourglass is defined twice, at
-  File "game/script.rpy", line 386 and
-  File "game/script.rpy", line 974.
-
-The label watchnothingoffice is defined twice, at
-  File "game/script.rpy", line 398 and
-  File "game/script.rpy", line 986.
+The label after_detail_blog3 is defined twice, at
+  File "game/bomb.rpy", line 2796 and
+  File "game/bomb.rpy", line 2861.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 19 21:23:31 2020
+Thu Aug 20 04:31:41 2020
