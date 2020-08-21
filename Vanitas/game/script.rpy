@@ -9,8 +9,10 @@ define datewithera= False
 define dialgoueoffice= False
 define talkchesismorning= False
 define loudspeaker = False
-define symb= Character(None ,window_background="gui/textbox_withoutname.png")
-#$ symb= Character(None, namebox_height=360, namebox_yalign=0.5)
+define symb= Character(None,window_background="gui/textbox_withoutname.png")
+
+#xalign=0.5, yalign=1.0
+$ symb= Character (None, window_xalign=0.5, window_yalign=1.0, who_posy=500)
 
 label start:
     stop music
@@ -134,17 +136,17 @@ label change:
 
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
-    #show screen force_mouse_move_1
+    show screen force_mouse_move_threeoptions
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump not_take_pill
         "Ich nehme die Pille, sobald ich sie brauche.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump later_take_pill
 
 
@@ -1043,7 +1045,7 @@ label conversation_with_seller:
             "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
             "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
 
         label watchofficephoto2:
@@ -1053,7 +1055,7 @@ label conversation_with_seller:
             "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
             "Was sein Bruder wohl jetzt so macht?"
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
         label watchofficehourglass2:
             scene detail_hourglass
@@ -1061,7 +1063,7 @@ label conversation_with_seller:
             # Atropos Gedanken
             "Was steht da?"
             show detail_hourglass_overlay
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
         label watchnothingoffice2:
 
@@ -1448,7 +1450,7 @@ label conversation_with_seller:
                     "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
                     "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
+                    jump watchnothinghall3
 
                 label watchhallpictures3:
                     scene detail_pictureshall
@@ -1459,7 +1461,7 @@ label conversation_with_seller:
                     "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                     # Atropos Gedanken
                     "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                    call screen arrow_watchhall()
+                    call screen arrow_watchhall3()
 
                 label watchhallalarm3:
                     scene detail_alarm
@@ -1470,7 +1472,7 @@ label conversation_with_seller:
                     "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                     # Atropos Gedanken
                     "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                    call screen arrow_watchhall()
+                    call screen arrow_watchhall3()
 
                 label watchnothinghall3:
                     #Atropos Gedanken
@@ -1583,7 +1585,7 @@ label work:
                 "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                 # Atropos
                 "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                jump watchnothinghall
+                jump watchnothinghall2
 
             label watchhallpictures2:
                 scene detail_pictureshall
@@ -1816,14 +1818,17 @@ label work:
             # Atropos Gedanken
             "Verdammt…"
 
-
+            show screen force_mouse_move_threeoptions
             menu:
                 "Anan hat ja recht...":
+                    hide screen force_mouse_move_threeoptions
                     $ okaymood= True
                     jump anan_is_right
                 "Ich bin doch auch ohne Pille glücklich...":
+                    hide screen force_mouse_move_threeoptions
                     jump why_important
                 "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
+                    hide screen force_mouse_move_threeoptions
                     $ badmood= True
                     jump be_against
 
@@ -2621,9 +2626,11 @@ label go_office:
         jump office
 
     else:
-
+        show screen force_mouse_move_twooptions
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+
+                hide screen force_mouse_move_twooptions
                 # Atropos Gedanken
                 "Vermutlich ist es besser, wenn ich zu Anan gehe. Ich will keinen Ärger bekommen. Nicht auch noch dafür."
 
@@ -2645,6 +2652,7 @@ label go_office:
 
                 jump office
             "Ich werde auf keinen Fall zu Anans Büro gehen.":
+                hide screen force_mouse_move_twooptions
                 jump no_office
 
 label good_mood:
