@@ -9,8 +9,10 @@ define datewithera= False
 define dialgoueoffice= False
 define talkchesismorning= False
 define loudspeaker = False
-define symb= Character(None ,window_background="gui/textbox_withoutname.png")
-#$ symb= Character(None, namebox_height=360, namebox_yalign=0.5)
+define symb= Character(None,window_background="gui/textbox_withoutname.png")
+
+#xalign=0.5, yalign=1.0
+$ symb= Character (None, window_xalign=0.5, window_yalign=1.0, who_posy=500)
 
 label start:
     stop music
@@ -134,17 +136,17 @@ label change:
 
     # Atropos Gedanken
     "Was soll ich jetzt machen? Soll ich sie nehmen?"
-    #show screen force_mouse_move_1
+    show screen force_mouse_move_threeoptions
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump not_take_pill
         "Ich nehme die Pille, sobald ich sie brauche.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump later_take_pill
 
 
@@ -1816,14 +1818,17 @@ label work:
             # Atropos Gedanken
             "Verdammt…"
 
-
+            show screen force_mouse_move_threeoptions
             menu:
                 "Anan hat ja recht...":
+                    hide screen force_mouse_move_threeoptions
                     $ okaymood= True
                     jump anan_is_right
                 "Ich bin doch auch ohne Pille glücklich...":
+                    hide screen force_mouse_move_threeoptions
                     jump why_important
                 "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
+                    hide screen force_mouse_move_threeoptions
                     $ badmood= True
                     jump be_against
 
@@ -2621,9 +2626,11 @@ label go_office:
         jump office
 
     else:
-
+        show screen force_mouse_move_twooptions
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+
+                hide screen force_mouse_move_twooptions
                 # Atropos Gedanken
                 "Vermutlich ist es besser, wenn ich zu Anan gehe. Ich will keinen Ärger bekommen. Nicht auch noch dafür."
 
@@ -2645,6 +2652,7 @@ label go_office:
 
                 jump office
             "Ich werde auf keinen Fall zu Anans Büro gehen.":
+                hide screen force_mouse_move_twooptions
                 jump no_office
 
 label good_mood:
