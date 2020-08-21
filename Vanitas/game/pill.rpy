@@ -225,7 +225,7 @@ label still_search_chesis:
 
             "Atropos" "Ich denke, ich möchte trotzdem lieber nach Kloth suchen."
 
-            "Atropos" "Ich bin glücklicher, wenn ich weiß, dass bei ihm alles in Ordnung ist."s
+            "Atropos" "Ich bin glücklicher, wenn ich weiß, dass bei ihm alles in Ordnung ist."
 
             show chesis confused
 
