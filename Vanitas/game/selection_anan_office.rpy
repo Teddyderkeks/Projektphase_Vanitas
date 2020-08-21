@@ -137,36 +137,40 @@ label letter_anan:
     "Anan meinte zuvor bei seiner Ansprache, dass Adrés und Atlas ihn im Krieg retteten, aber irgendwie konnte ich es nicht ganz glauben. Sie müssen schon ewig Freunde sein, so wie Chesis, Kloth und ich."
 
     scene detail_letter1
+    with fadeshort
     call screen arrow_detail_letter1()
 
-    label after_detail_letter1:
-        scene detail_letter2
-        call screen arrow_detail_letter2()
+label after_detail_letter1:
+    scene detail_letter2
+    with fadeshort
+    call screen arrow_detail_letter2()
 
-    label after_detail_letter2:
+label after_detail_letter2:
+
+    # Atropos Gedanken
+    "Was hat das alles zu bedeuten?"
+
+    # Atropos Gedanken
+    "Ist Happiness wirklich so wichtig?"
+
+    # Atropos Gedanken
+    "Aber… was jetzt?"
+
+    # Atropos Gedanken
+    "Was soll ich mit diesem Wissen anfangen?"
+
+    if infos_count_anan <3:
+        scene anan_office
+        with fadeshort
 
         # Atropos Gedanken
-        "Was hat das alles zu bedeuten?"
+        "Soll ich nach mehr Hinweisen suchen? Aber Anan… er könnte jeden Moment zurückkommen."
 
-        # Atropos Gedanken
-        "Ist Happiness wirklich so wichtig?"
-
-        # Atropos Gedanken
-        "Aber… was jetzt?"
-
-        # Atropos Gedanken
-        "Was soll ich mit diesem Wissen anfangen?"
-
-        if infos_count_anan <3:
-            scene anan_office
-
-            # Atropos Gedanken
-            "Soll ich nach mehr Hinweisen suchen? Aber Anan… er könnte jeden Moment zurückkommen."
-
-            jump selection_anan_office
-        else:
-            scene anan_office
-            jump selection_anan_office
+        jump selection_anan_office
+    else:
+        scene anan_office
+        with fadeshort
+        jump selection_anan_office
 
 label document_anan:
     $ read_document_anan =True
@@ -179,6 +183,7 @@ label document_anan:
     "Ob ich sie überhaupt verstehe? Die wirken ziemlich kompliziert."
 
     scene detail_document
+    with fadeshort
     call screen arrow_detail_document
     label after_detail_document:
 
@@ -192,6 +197,7 @@ label document_anan:
         "Ich wünschte ich könnte besser verstehen, was hier alles steht, aber das sind alles Substanzen, mit denen ich selbst nicht arbeite und von denen ich noch nie gehört habe…"
 
         scene anan_office
+        with fadeshort
 
         if infos_count_anan <3:
 
@@ -233,6 +239,7 @@ label computer_anan:
     "Was wohl der Inhalt dessen ist?"
 
     scene detail_ananpc
+    with fadeshort
     call screen arrow_detail_ananpc
 
     label after_detail_ananpc:
@@ -250,6 +257,7 @@ label computer_anan:
         "Ist es wirklich so gefährlich für die Menschheit, wenn ein paar wenige Menschen sie nicht nehmen?"
 
         scene anan_office
+        with fadeshort
 
         if infos_count_anan <3:
 
@@ -269,6 +277,7 @@ label computer_anan:
 label pictures_anan:
     $ sawpictures =True
     scene detail_oldphotos
+    with fadeshort
     # Atropos Gedanken
     "Das sind alte Fotos von Anan. Ein wenig seltsam, ihn so zu sehen. Im Vergleich dazu ist er heute manchmal der reine Ernst in Person."
     # Atropos Gedanken
@@ -280,6 +289,7 @@ label pictures_anan:
     call screen arrow_detail_oldphotos
     label after_detail_oldphotos:
         scene anan_office
+        with fadeshort
         # Atropos Gedanken
         "Was soll ich jetzt machen?"
         jump selection_anan_office
@@ -301,6 +311,7 @@ label books_anan:
     "Oh? Da ist was rausgefallen. War ich das?"
 
     scene detail_bookphoto
+    with fadeshort
     # Atropos Gedanken
     "Das ist ein Foto… Anan sieht darauf ziemlich jung aus. Von 2219? Wahnsinn. Wer sie wohl war?"
     # Atropos Gedanken
@@ -308,6 +319,7 @@ label books_anan:
     call screen arrow_detail_bookphoto
     label after_detail_bookphoto:
         scene anan_office
+        with fadeshort
         # Atropos Gedanken
         "Was soll ich jetzt machen?"
         jump selection_anan_office
@@ -315,6 +327,7 @@ label books_anan:
 label safe_anan:
     $ sawsafe =True
     scene detail_safe
+    with fadeshort
     if sawbooks:
         # Atropos Gedanken
         "Ein Safe? Da könnte etwas Interessantes drin sein…"
@@ -335,6 +348,7 @@ label safe_anan:
         # Atropos Gedanken
         "2 – 2 – 1 – 9"
         scene detail_safe_open
+        with fadeshort
         # Atropos Gedanken
         "Volltreffer! Aber das sind doch… Datenträger? Anan hat sie sogar beschriftet. Nachrichten von Atlas und Adrés …"
         # Atropos Gedanken
@@ -350,6 +364,7 @@ label safe_anan:
         call screen arrow_detail_safe_open
         label after_detail_safe_open:
             scene anan_office
+            with fadeshort
             # Atropos Gedanken
             "Was soll ich jetzt machen?"
             jump selection_anan_office
@@ -362,6 +377,7 @@ label safe_anan:
         # Atropos Gedanken
         "Leider kenne ich den Code nicht."
         scene anan_office
+        with fadeshort
         # Atropos Gedanken
         "Was soll ich jetzt machen?"
         jump selection_anan_office

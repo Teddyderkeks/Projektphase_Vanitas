@@ -15,103 +15,136 @@ label selection_kloth_office:
                 jump everything_seen
             else:
                 menu:
-                    "Ich werde mir das Dokument anschauen.":
-                        jump document_kloth
+                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
-
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
-
                         jump still_search_kloth
-                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
-                        jump not_search_kloth
+                    "Ich werde mir das Dokument anschauen.":
+                        jump document_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
         else:
             if read_document_kloth:
                 menu:
-                    "Ich werde den Computer durchsuchen.":
-                        jump computer_kloth
+                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
-
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump still_search_kloth
-                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
-
-                        jump not_search_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde den Computer durchsuchen.":
+                        jump computer_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
             else:
                 menu:
-                    "Ich werde den Computer durchsuchen.":
-                        jump computer_kloth
-                    "Ich werde mir das Dokument anschauen.":
-                        jump document_kloth
+                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
-
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump still_search_kloth
-                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
-                        jump not_search_kloth
+                    "Ich werde mir das Dokument anschauen.":
+                        jump document_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde den Computer durchsuchen.":
+                        jump computer_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
     else:
         if read_computer_kloth:
             if read_document_kloth:
                 menu:
-                    "Ich werde mir den Brief anschauen.":
-                        jump letter_kloth
+                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
-
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump still_search_kloth
-                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
-                        jump not_search_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde mir den Brief anschauen.":
+                        jump letter_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
             else:
                 menu:
-                    "Ich werde mir den Brief anschauen.":
-                        jump letter_kloth
-                    "Ich werde mir das Dokument anschauen.":
-                        jump document_kloth
+                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
-
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump still_search_kloth
-                    "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
-
-
-                        jump not_search_kloth
+                    "Ich werde mir das Dokument anschauen.":
+                        jump document_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde mir den Brief anschauen.":
+                        jump letter_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
         else:
             if read_document_kloth:
                 menu:
-                    "Ich werde mir den Brief anschauen.":
-                        jump letter_kloth
-                    "Ich werde den Computer durchsuchen.":
-                        jump computer_kloth
+                    "Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit.":
+                        jump not_search_kloth
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
                         "Ich muss Kloth sofort finden!"
                         # Atropos Gedanken
                         "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump still_search_kloth
-                    "Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit.":
-                        jump not_search_kloth
-            else:
-                menu:
-                    "Ich werde mir den Brief anschauen.":
-                        jump letter_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
                     "Ich werde den Computer durchsuchen.":
                         jump computer_kloth
+                    "Ich werde mir den Brief anschauen.":
+                        jump letter_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
+            else:
+                menu:
+                    "Ich werde das Regal untersuchen."  if sawshelf == False:
+                        jump shelf_kloth
                     "Ich werde mir das Dokument anschauen.":
                         jump document_kloth
+                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                        jump pictureskloth_kloth
+                    "Ich werde den Computer durchsuchen.":
+                        jump computer_kloth
+                    "Ich werde mir den Brief anschauen.":
+                        jump letter_kloth
+                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                        jump worldmap_kloth
 
 label letter_kloth:
     $ read_letter_kloth = True
@@ -124,6 +157,7 @@ label letter_kloth:
     " Mal sehen, was in diesem steht."
 
     scene detail_letterkloth
+    with fadeshort
     call screen arrow_detail_letterkloth
     label after_detail_letterkloth:
 
@@ -193,6 +227,7 @@ label letter_kloth:
                 "{i}Du bist glücklich. Willst du dieses Glück riskieren? {/i}"
 
         scene kloth_office
+        with fadeshort
 
 
     if kloth_office_choice:
@@ -213,15 +248,13 @@ label computer_kloth:
     "Ob er wohl passwortgeschützt ist?"
 
     scene detail_klothpassword
+    with fadeshort
 
     # Atropos Gedanken
     "Es gibt einen passwortgeschützten Teil und einen, für den ich kein Passwort brauche."
 
     # Atropos Gedanken
     "Hatte Kloth mir gegenüber mal erwähnt, was das Passwort ist?"
-
-    # Atropos Gedanken
-    "Ich kann es einfach mal ausprobieren."
 
     # Symbiont
     "{i}Du willst dich in den PC deines Freundes einhacken? Denkst du wirklich, dass du das tun solltest? {/i}"
@@ -232,8 +265,11 @@ label computer_kloth:
     # Symbiont
     "{i}Du möchtest doch glücklich sein. {/i}"
 
+    # Atropos Gedanken
+    "Ich probiere einfach mal irgendetwas aus, es kann nicht schaden, selbst wenn es falsch ist."
 
     scene detail_enterpassword
+    with fadeshort
 
     python:
         password = renpy.input ("Passwort:")
@@ -241,6 +277,7 @@ label computer_kloth:
     if password == "Sadness" or password == "sadness":
         $ password_right = True
         scene detail_confession
+        with fadeshort
         call screen arrow_detail_confession
         label after_detail_confession:
 
@@ -272,6 +309,7 @@ label computer_kloth:
     "Was ist das hier? Es scheint eine Art Online Blog zu sein…"
 
     scene detail_blog
+    with fadeshort
     call screen arrow_detail_blog
     label after_detail_blog:
 
@@ -373,6 +411,7 @@ label computer_kloth:
 
 
         scene kloth_office
+        with fadeshort
         if kloth_office_choice:
             jump selection_kloth_office
         if kloth_office_back_to_work_choice:
@@ -391,70 +430,69 @@ label document_kloth:
     "Was es mir wohl verrät?"
 
     scene detail_servertext
+    with fadeshort
     call screen arrow_detail_servertext()
 
-    label after_detail_servertext:
-        scene detail_servergraph
-        call screen arrow_detail_servergraph()
+label after_detail_servertext:
+    scene detail_servergraph
+    with fadeshort
+    call screen arrow_detail_servergraph()
 
-    label after_detail_servergraph:
+label after_detail_servergraph:
 
-        if read_computer_kloth:
+    if read_computer_kloth:
 
-            # Atropos Gedanken
-            "Die Server? Das spielt gerade keine Rolle… das sind doch nur unwichtige Informationen…"
+        # Atropos Gedanken
+        "Die Server? Das spielt gerade keine Rolle… das sind doch nur unwichtige Informationen…"
 
-            # Atropos Gedanken
-            "Ist hier denn nichts mehr zu der Bombe?"
+        # Atropos Gedanken
+        "Ist hier denn nichts mehr zu der Bombe?"
 
-            # Atropos Gedanken
-            "Und warum hatte Kloth diesen Blog offen?"
+        # Atropos Gedanken
+        "Und warum hatte Kloth diesen Blog offen?"
 
-            # Atropos Gedanken
-            "Sagt der Schreiber wirklich die Wahrheit?"
+        # Atropos Gedanken
+        "Sagt der Schreiber wirklich die Wahrheit?"
 
-            # Atropos Gedanken
-            "Was soll ich tun?"
+        # Atropos Gedanken
+        "Was soll ich tun?"
 
-            # Atropos Gedanken
-            "Was soll ich tun?"
+        # Atropos Gedanken
+        "Was soll ich tun?"
 
-            # Atropos Gedanken
-            "Was soll ich nur tun?"
+        # Atropos Gedanken
+        "Was soll ich nur tun?"
 
 
-        else:
+    else:
 
-            # Atropos Gedanken
-            "Wenn ich das richtig verstehe… Wenn einer der Server zusammenbricht, würde alles untergehen, oder?"
+        # Atropos Gedanken
+        "Wenn ich das richtig verstehe… Wenn einer der Server zusammenbricht, würde alles untergehen, oder?"
 
-            # Symbiont
-            "{i}Warum machst du dir überhaupt darüber Gedanken? {/i}"
+        # Symbiont
+        "{i}Warum machst du dir überhaupt darüber Gedanken? {/i}"
 
-            # Symbiont
-            "{i}Das ist nichts, was du wissen musst, um glücklich zu sein und ein glückliches Leben zu führen. {/i}"
+        # Symbiont
+        "{i}Das ist nichts, was du wissen musst, um glücklich zu sein und ein glückliches Leben zu führen. {/i}"
 
-            # Symbiont
-            "{i}Schaue dir nichts mehr an. Schon für das, was du bereits gesehen hast, könntest du einen Haufen Ärger bekommen. {/i}"
+        # Symbiont
+        "{i}Schaue dir nichts mehr an. Schon für das, was du bereits gesehen hast, könntest du einen Haufen Ärger bekommen. {/i}"
 
-            # Symbiont
-            "{i}Du willst doch glücklich sein. {/i}"
-        scene kloth_office
+        # Symbiont
+        "{i}Du willst doch glücklich sein. {/i}"
+    scene kloth_office
+    with fadeshort
 
-        if read_letter_kloth:
-            if read_computer_kloth:
-                if read_document_kloth:
-                    jump everything_seen
-                else:
-                    # Atropos Gedanken
-                    "Was soll ich jetzt tun?"
+    if infos_count_kloth<3:
+        # Atropos Gedanken
+        "Was soll ich jetzt tun?"
 
-        if kloth_office_choice:
-            jump selection_kloth_office
-        if kloth_office_back_to_work_choice:
-            jump selection_kloth_office_back_to_work
-        if kloth_office_after_anan_office:
-            jump selection_kloth_office_after_anan_office
+    if kloth_office_choice:
+        jump selection_kloth_office
+    if kloth_office_back_to_work_choice:
+        jump selection_kloth_office_back_to_work
+    if kloth_office_after_anan_office:
+        jump selection_kloth_office_after_anan_office
 
 label shelf_kloth:
     $ sawshelf = True
@@ -467,11 +505,13 @@ label shelf_kloth:
     # Atropos Gedanken
     "Hoffentlich war es ein Einbrecher. Bitte lass es nicht Kloth gewesen sein."
     scene kloth_office
+    with fadeshort
     jump selection_kloth_office_after_anan_office
 
 label pictureskloth_kloth:
     $ sawpictureskloth = True
     scene detail_photoskloth
+    with fadeshort
     # Atropos Gedanken
     "Bilder von uns. Wenn ich sie so miteinander vergleiche, komme ich mir schon ganz alt vor."
     # Atropos Gedanken
@@ -481,14 +521,17 @@ label pictureskloth_kloth:
     call screen arrow_detail_photoskloth
     label after_detail_photoskloth:
         scene kloth_office
+        with fadeshort
         jump selection_kloth_office_after_anan_office
 
 label worldmap_kloth:
     $ sawworldmap = True
     scene detail_map
+    with fadeshort
     # Atropos Gedanken
     "Die Großen Drei – gerecht auf der Welt verteilt."
     call screen arrow_detail_worldmap
     label after_detail_worldmap:
         scene kloth_office
+        with fadeshort
         jump selection_kloth_office_after_anan_office

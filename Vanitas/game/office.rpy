@@ -11,6 +11,7 @@ default straight_anan_office = False
 
 label office:
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Immerhin ist Anans Büro nicht so weit entfernt."
@@ -71,6 +72,7 @@ label office:
             # Atropos Gedanken
             "Ich trete einfach mal ein und sehe dann weiter. Es wird schon nichts Schlimmes deswegen passieren."
             scene anan_office
+            with fadeshort
 
             # Atropos Gedanken
             "Der Raum ist tatsächlich leer. Anan schafft es also nicht mal, pünktlich zu seinem eigenen Termin zu erscheinen."
@@ -105,6 +107,7 @@ label office:
 
 label conversation_with_anan:
     scene hall
+    with fadeshort
 
     show anan normal_mid
 
@@ -114,6 +117,7 @@ label conversation_with_anan:
     "Ich kann nicht einschätzen, ob Anan gute oder schlechte Laune hat. Ich hoffe einfach nur, ich bekomme nicht zu viel Ärger."
 
     scene anan_office
+    with fadeshort
     show anan normal_mid
 
     "Anan" "Nimm bitte Platz."
@@ -215,9 +219,9 @@ label conversation_with_anan:
 
             "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
 
-            "Anan" "Egal wie unwichtig ihnen das Glück der¬¬¬ Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+            "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
 
-            jump rueffel
+            jump expulsion_office
 
 label understanding:
     "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
@@ -249,6 +253,7 @@ label understanding:
     "Atropos"  "Du hast recht. Es tut mir leid."
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Dann mal auf ins Labor, um die Pille zu nehmen."
@@ -350,6 +355,7 @@ label understandingpart2:
     "Atropos" "Danke vielmals. Ich dir auch."
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Dann mal auf ins Labor, um die Pille zu nehmen."
@@ -398,6 +404,7 @@ label understandingpart3:
     "Atropos"  "Du hast recht. Es tut mir leid."
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Zum Glück hatte ich mich nicht in Anans Büro umgesehen. Sonst wäre ich wohl nicht so glimpflich davongekommen."
@@ -553,6 +560,7 @@ label how_many_infos_anan:
             "{i}Verlass das Zimmer und Anan wird nichts mitbekommen. Sei einfach glücklich, nimm die Pille und bringe alles wieder in Ordnung!{i}"
 
             scene hall
+            with fadeshort
 
             # Atropos Gedanken
             "Zum Glück… Anan ist noch nicht zu sehen."
@@ -570,6 +578,7 @@ label how_many_infos_anan:
             "Immerhin hat er nicht mitbekommen, dass ich in seinem Büro war."
 
             scene anan_office
+            with fadeshort
             show anan normal_mid
 
             "Anan" "Nimm bitte Platz."
@@ -668,9 +677,9 @@ label how_many_infos_anan:
 
                     "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
 
-                    "Anan" "Egal wie unwichtig ihnen das Glück der¬¬¬ Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+                    "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
 
-                    jump rueffel
+                    jump expulsion_office
                 "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
                     jump understandingpart3
 
@@ -747,6 +756,7 @@ label how_many_infos_anan:
             "Atropos" "Danke, ich werde mein Bestes geben."
 
             scene hall
+            with fadeshort
             jump takepillnow
 
     if infos_count_anan == 1 or infos_count_anan == 2:
@@ -776,6 +786,7 @@ label how_many_infos_anan:
             "Und danach…"
 
             scene hall
+            with fadeshort
 
             # Atropos Gedanken
             "Anan ist noch nicht zu sehen. Ich habe Glück."
@@ -793,6 +804,7 @@ label how_many_infos_anan:
             "Immerhin hat er nicht mitbekommen, dass ich in seinem Büro war."
 
             scene anan_office
+            with fadeshort
             show anan normal_mid
 
             "Anan" "Nimm bitte Platz."
@@ -1026,6 +1038,7 @@ label how_many_infos_anan:
         "Atropos" "Ja."
 
         scene hall
+        with fadeshort
 
         jump visit_kloth
 
@@ -1186,6 +1199,7 @@ label not_face_anan:
     "Atropos" "Danke… ich dir auch…"
 
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Was soll ich jetzt nur tun? Was soll ich mit meinem Wissen anfangen?"
@@ -1285,6 +1299,7 @@ label not_face_anan:
 
 label visit_kloth:
     scene hall
+    with fadeshort
     if face_anan_in_office:
         # Atropos Gedanken
         "Ich sollte Kloth suchen. Vielleicht kann er mir Antworten geben."
@@ -1345,6 +1360,7 @@ label visit_kloth:
     "Kein Laut zu hören… vielleicht hat er mich ja nicht gehört? Kloth wird schon nicht sauer sein, wenn ich einfach eintrete."
 
     scene kloth_office
+    with fadeshort
 
     "Atropos" "Kloth?"
 
@@ -1383,11 +1399,13 @@ label search_kloth_in_stairwell:
     "Die Aufzüge sind so voll- ich nehme besser die Treppe…"
 
     scene stairs_up
+    with fadeshort
 
     # Atropos Gedanken
     "Wo mag er nur sein? Ob ihm etwas zugestoßen ist? Wenn ja… ich könnte es nicht ertragen…"
 
     scene stairs_down
+    with fadeshort
 
     # Atropos Gedanken
     "Warte… was ist das?"
@@ -1487,6 +1505,7 @@ label last_search_kloth:
 
 label end_search_kloth:
     scene hall
+    with fadeshort
 
     # Atropos Gedanken
     "Ich muss nach Kloth suchen!"
@@ -1534,11 +1553,13 @@ label end_search_kloth:
     "Vor den Aufzügen warten so viele Menschen, ich nehme die Treppe…"
 
     scene stairs_down
+    with fadeshort
 
     "Atropos"  "Kloth?"
 
     "Atropos"  "{b}Kloth?{/b}"
     scene corpse
+    with fadeshort
 
     "Atropos"  "KLOTH!"
 
@@ -1564,6 +1585,7 @@ label end_search_kloth:
 
     show sepia
     scene stairs_up
+    with fadeshort
     show kloth smiling behind sepia
 
     "Kloth"  "Atropos!"
@@ -1591,6 +1613,7 @@ label end_search_kloth:
     "Atropos" "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch. Ich hatte heute einen stressigen Tag und brauche jetzt erstmal wieder etwas Ruhe und Entspannung."
     # ab hier Glitch
     scene stairs_up
+    with fadeshort
 
     "Kloth" "Neeeein!"
 
@@ -1677,8 +1700,15 @@ label end_search_kloth:
     "Atropos" "Tick, Tack- wie viel Zeit bleibt euch wohl noch?"
 
     scene server_room
+    with fadealarm
+
+    scene detail_bomb1000
+    with short
 
     "Atropos" "10 Minuten… dann werdet ihr endlich alle brennen. Und ich mit euch!"
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Kloth, siehst du mir zu? Bist du stolz auf mich? Ich erfülle deinen Wunsch!"
 
@@ -1693,12 +1723,11 @@ label end_search_kloth:
     "Atropos" "Tick. Tack."
 
     scene hall
+    with fadeshort
 
     "Atropos" "Hört ihr das? Ohh, eine Bombe! Sie ist hier bei mir und ihr werdet alle sterben…"
 
     "Atropos" "(lacht)"
-
-
 
     "Atropos" "Seht euch nur an, wie ihr eurer Arbeit weiter nachgeht als hätte ich nichts gesagt. Nur, weil euch meine Worte unglücklich machen würden, arbeitet ihr weiter als wäre nichts."
 
@@ -1710,13 +1739,11 @@ label end_search_kloth:
 
     "Atropos" "Die Stimme wird sterben. Endlich! Bei allen! Seid mir dankbar. Lacht! Lebt! Ach, nein… ihr sterbt ja… Sterbt!"
 
-    "Atropos" "Die Stimme wird sterben. Endlich! Bei allen! Seid mir dankbar. Lacht! Lebt! Ach, nein… ihr sterbt ja… Sterbt!"
-
     "Atropos" "Brennt… Brennt lichterloh!"
 
     "Atropos" "Ihr werdet wie eine Fackel brennen, obwohl es doch mitten am Tag ist! (lacht)"
 
-    "Atropos" "Wieso ignoriert ihr mich denn alle? Schaut mich an? Ich bin euer neuer Gott!"
+    "Atropos" "Wieso ignoriert ihr mich denn alle? Schaut mich an! Ich bin euer neuer Gott!"
 
     "Atropos" "Der Gott einer neuen Welt!"
 
@@ -1731,6 +1758,7 @@ label end_search_kloth:
     "Atropos" "So tief werdet ihr nie wieder schlafen!"
 
     scene server_room
+    with fadeshort
 
     "Atropos" "So, und damit ihr auch alle schön schlafen könnt, schließe ich die Tür ab!"
 
@@ -1738,7 +1766,13 @@ label end_search_kloth:
 
     "Atropos" "Das wäre wirklich nicht nett…"
 
+    scene detail_bomb0010
+    with fadeshort
+
     "Atropos" "Noch 10 Sekunden… mein Baby… du wirst uns alle retten…"
+
+    scene server_room
+    with fadeshort
 
     "Atropos" "Reiße ganz Aither in die Luft, ja?"
 
