@@ -7,6 +7,15 @@ screen arrow_watchoffice():
             focus_mask True
             action Jump ("watchnothingoffice")
 
+screen arrow_watchoffice2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("watchnothingoffice2")
+
 screen arrow_watchhall():
     frame:
         xpos 1700 ypos 500
@@ -15,6 +24,15 @@ screen arrow_watchhall():
             hover "arrowblue.png"
             focus_mask True
             action Jump ("watchnothinghall")
+
+screen arrow_watchhall2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            focus_mask True
+            action Jump ("watchnothinghall2")
 
 screen arrow_detail_ananpc():
     frame:

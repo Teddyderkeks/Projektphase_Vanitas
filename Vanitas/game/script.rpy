@@ -1585,7 +1585,7 @@ label work:
                 "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                 # Atropos
                 "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                jump watchnothinghall
+                jump watchnothinghall2
 
             label watchhallpictures2:
                 scene detail_pictureshall
