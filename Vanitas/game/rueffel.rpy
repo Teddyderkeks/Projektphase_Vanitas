@@ -79,8 +79,11 @@ label rueffel:
 
     "Atropos"  "Ich…"
 
+    show screen force_mouse_move_twooptions
+
     menu:
         "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+            hide screen force_mouse_move_twooptions
 
             "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
 
@@ -115,6 +118,7 @@ label rueffel:
 
             jump back_to_work
         "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+            hide screen force_mouse_move_twooptions
             jump ichsollmichopfern
 
 

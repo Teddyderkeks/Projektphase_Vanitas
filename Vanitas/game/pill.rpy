@@ -114,9 +114,10 @@ label pill:
         # Symbiont
         "{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
 
-
+        show screen force_mouse_move_twooptions
         menu:
             "Ich sollte nach Kloth suchen.":
+                hide screen force_mouse_move_twooptions
 
                 # Atropos Gedanken
                 "Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
@@ -126,6 +127,8 @@ label pill:
 
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
+
+                hide screen force_mouse_move_twooptions
 
                 # Atropos Gedanken
                 "Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
