@@ -9,6 +9,8 @@ define datewithera= False
 define dialgoueoffice= False
 define talkchesismorning= False
 define loudspeaker = False
+define symb= Character(None ,window_background="gui/textbox_withoutname.png")
+#$ symb= Character(None, namebox_height=360, namebox_yalign=0.5)
 
 label start:
     stop music
@@ -18,7 +20,7 @@ label start:
     scene atropos_falling
 
     # Symbiont
-    "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
+    symb "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
 
     # Symbiont
     "{i}Du wirst sterben und es scheint keinen Ausweg aus der Lage zu geben. {/i}"

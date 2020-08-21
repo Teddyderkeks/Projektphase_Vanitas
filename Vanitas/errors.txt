@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label after_detail_blog3 is defined twice, at
-  File "game/bomb.rpy", line 2796 and
-  File "game/bomb.rpy", line 2861.
+File "game/script.rpy", line 14: expected 'word' not found.
+    style.say_who_window.background = Frame("gui/textbox_withoutname.png")
+         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Aug 20 04:31:41 2020
+Fri Aug 21 09:57:43 2020
