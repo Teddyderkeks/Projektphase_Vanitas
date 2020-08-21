@@ -25,14 +25,14 @@ screen arrow_watchhall():
             focus_mask True
             action Jump ("watchnothinghall")
 
-screen arrow_watchhall2():
+screen arrow_watchhall3():
     frame:
         xpos 1700 ypos 500
         imagebutton:
             idle "arrow.png"
             hover "arrowblue.png"
             focus_mask True
-            action Jump ("watchnothinghall2")
+            action Jump ("watchnothinghall3")
 
 screen arrow_detail_ananpc():
     frame:
