@@ -1045,7 +1045,7 @@ label conversation_with_seller:
             "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
             "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
 
         label watchofficephoto2:
@@ -1055,7 +1055,7 @@ label conversation_with_seller:
             "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
             "Was sein Bruder wohl jetzt so macht?"
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
         label watchofficehourglass2:
             scene detail_hourglass
@@ -1063,7 +1063,7 @@ label conversation_with_seller:
             # Atropos Gedanken
             "Was steht da?"
             show detail_hourglass_overlay
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
         label watchnothingoffice2:
 
@@ -1450,7 +1450,7 @@ label conversation_with_seller:
                     "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
                     "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
+                    jump watchnothinghall3
 
                 label watchhallpictures3:
                     scene detail_pictureshall
@@ -1461,7 +1461,7 @@ label conversation_with_seller:
                     "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                     # Atropos Gedanken
                     "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                    call screen arrow_watchhall()
+                    call screen arrow_watchhall3()
 
                 label watchhallalarm3:
                     scene detail_alarm
@@ -1472,7 +1472,7 @@ label conversation_with_seller:
                     "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                     # Atropos Gedanken
                     "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                    call screen arrow_watchhall()
+                    call screen arrow_watchhall3()
 
                 label watchnothinghall3:
                     #Atropos Gedanken
