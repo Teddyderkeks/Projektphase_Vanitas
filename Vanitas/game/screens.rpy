@@ -125,17 +125,20 @@ style say_label is default
 style say_dialogue is default
 style say_thought is say_dialogue
 
-style namebox is default
+#style namebox is default
 style namebox_label is say_label
 
 
 style window:
     xalign 0.5
     xfill True
-    yalign gui.textbox_yalign
+    yalign gui.namebox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    #background Image("gui/textbox_chara.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox_chara.png")
+
+
 
 style namebox:
     xpos gui.name_xpos
@@ -203,12 +206,13 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
-screen choice(items):
+screen choice (items):
     style_prefix "choice"
-
     vbox:
+        yalign 0.5
         for i in items:
             textbutton i.caption action i.action
+
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,

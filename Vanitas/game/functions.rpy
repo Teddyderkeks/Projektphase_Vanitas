@@ -281,20 +281,18 @@ screen arrow_detail_servergraphkloth2():
             focus_mask True
             action Jump ("after_detail_servergraphkloth2")
 
-
-
-
-
-
-
 #call screen pfeil_back
 #hide screen pfeil_back
 
-screen force_mouse_move_1():
 
+screen force_mouse_move_threeoptions():
     on "show":
-        action MouseMove(x=960, y=540, duration=.3)
+        action MouseMove(x=960, y=430, duration=0.2)
 
-    timer .5 repeat True action MouseMove(x=960, y=540, duration=.3)
+    timer 2 repeat True action MouseMove(x=960, y=430, duration=0.2)
 
-#show screen force_mouse_move
+screen force_mouse_move_twooptions():
+    on "show":
+        action MouseMove(x=960, y=500, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=500, duration=0.2)

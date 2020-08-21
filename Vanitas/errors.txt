@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: expected 'word' not found.
-    style.say_who_window.background = Frame("gui/textbox_withoutname.png")
-         ^
+File "game/script.rpy", line 1824: end of line expected.
+    hide screen force_mouse_move_ananright()
+                                          ^
+
+File "game/script.rpy", line 1828: end of line expected.
+    hide screen force_mouse_move_ananright()
+                                          ^
+
+File "game/script.rpy", line 1831: end of line expected.
+    hide screen force_mouse_move_ananright()
+                                          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Aug 21 09:57:43 2020
+Fri Aug 21 14:16:34 2020
