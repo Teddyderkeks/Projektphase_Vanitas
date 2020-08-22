@@ -303,9 +303,13 @@ label shop:
 
     "Atropos" "Hey, Zelos. Ja, ich bin heute etwas zu früh aufgewacht und dachte mir, dass ich den Tag besser nutze, als noch weiter liegen zu bleiben."
 
+    show zelos happy
+
     "Zelos" "Eifrig und strebsam, das lobe ich mir. Aber man kann auch gar nicht anders als seine Arbeit hier zu lieben, natürlich ist man da gerne bereit mehr Zeit zu investieren."
 
     "Atropos" "Spaß macht die Arbeit hier auf jeden Fall und wir dienen der Menschheit. Das kann wohl nicht jeder von sich behaupten. (lacht)"
+
+    show zelos normal
 
     "Zelos" "Ich hoffe es stört dich nicht, wenn ich nebenbei weiterarbeite? Die neuste Lieferung der Happiness-Pille kam eben an und ich muss sie noch in die Regale einsortieren."
 
@@ -325,6 +329,8 @@ label conversation_with_seller:
     show zelos normal
     "Atropos" "Ich wollte ohnehin mal bei Tycho und den anderen im Büro vorbeischauen. Wir sehen uns später."
 
+    show zelos happy
+
     "Zelos" "Richte den Anderen schöne Grüße von mir aus!"
 
     "Atropos" "Klar, mache ich."
@@ -333,9 +339,13 @@ label conversation_with_seller:
 
     "Atropos" "Ich weiß noch nicht, ob ich es zeitlich schaffe. Es türmt sich heute ein Berg an Arbeit, aber ich versuche es auf alle Fälle."
 
+    show zelos normal
+
     "Zelos" "(murmelt) Happiness- Glück für alle. Oh, tut mir leid, was hast du gesagt?"
 
     "Atropos" "(lacht) Nichts… alles gut, lass dich von mir nicht länger aufhalten. Wir sehen uns."
+
+    show zelos happy
 
     "Zelos" "Bis dann und einen wunderschön glücklichen Tag in der besten Firma der Welt!"
 
@@ -444,49 +454,80 @@ label conversation_with_seller:
 
             "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
 
-            show tycho normal:
+            show ireia normal_gray
+            show tycho really_happy:
                 xalign 0.75
 
             "Tycho" "Das will ich dir aber auch geraten haben. (lacht) Uns kann man doch gar nicht {b}nicht{/b} mögen, nicht wahr? Und dementsprechend musst du uns auch vermisst haben."
 
-            show armene normal:
+            show tycho really_happy_gray
+            show armene normal behind tycho:
                 xalign 1
 
             "Armene" "Ja. Ja, das stimmt! Hallo Atropos."
 
             "Atropos" "Hi Armene, wie geht es dir?"
 
+            show armene happy
+
             "Armene" "Ich bin glücklich wie immer!"
+
+            show armene happy_gray
+            show ireia happy
 
             "Ireia" "Jetzt überfall die Arme doch nicht, du kennst sie doch."
 
+            show ireia strict
+
             "Ireia" "Und Armene, du solltest weiter deine Präsentation über das firmeninterne Kommunikationssystem vorbereiten- ich erwarte bessere Arbeit von dir als letztes Mal."
+
+            show ireia strict_gray
+            show armene normal
 
             "Armene" "Natürlich Ireia, tut mir leid!"
 
-            hide armene normal
+            hide armene
+            show tycho normal
 
             "Tycho" "Neiro, gesell dich doch zu uns, was sitzt du so einsam und verlassen an deinem Platz? Deine Arbeitszeit hat doch noch nicht angefangen."
 
-            show neiro normal:
+            show tycho normal_gray
+            show neiro nervous_laugh:
                 xalign 0.25
 
             "Neiro" "Oh… ich habe euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
 
             "Atropos" "Neiro, wie er leibt und lebt. (lacht)"
 
+            show neiro nervous_laugh_gray
+            show ireia strict
+
             "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte von dir keine schlechteren Ergebnisse deswegen sehen."
+
+            show ireia strict_gray
+            show neiro happy
 
             "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
 
             # Atropos Gedanken
             "Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
 
+            show neiro happy_gray
+            show tycho normal
+
             "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
+
+            show tycho normal_gray
+            show ireia happy
 
             "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zu feiern haben. Das Glück der Menschen entsteht nicht von selbst."
 
+            show ireia happy_gray
+            show tycho happy
+
             "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
+
+            show tycho normal
 
             "Tycho" "Zurück zum Thema… diese Party wird gigantisch. Erinnert ihr euch noch an die anlässlich des 30. Gründungstages?"
 
@@ -501,18 +542,34 @@ label conversation_with_seller:
             "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
 
             "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch gab Anan mir eine Einladung."
+
+            show tycho really_happy
+
             "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
+
+            show tycho really_happy_gray
+            show ireia strict
+
             "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
 
             "Atropos" "Ja… du kannst doch nicht die Information anteasern und dann damit hinter dem Berg halten."
 
-            show armene normal:
+            show ireia strict_gray
+            show tycho happy
+            show armene normal_gray:
                 xalign 1
 
             "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
 
             "Atropos" "Habe ich dich gerade richtig verstanden? Die Großen Drei, alle hier in Astoa?"
+
+            show tycho happy_gray
+            show ireia happy
+
             "Ireia" "Das sind ja unglaubliche Neuigkeiten. Wieso hast du uns nicht schon früher davon erzählt?"
+
+            show ireia happy_gray
+            show tycho normal
 
             "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
 
@@ -520,29 +577,51 @@ label conversation_with_seller:
 
             "Atropos" "Dennoch kenne ich Atlas und Adrés nur von Fotos und nicht von Videoaufzeichnungen oder anderen Quellen. Es wird ein ziemliches Geheimnis um ihre Existenz gemacht."
 
-            "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
+            show tycho normal_gray
+            show ireia normal
 
+            "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
 
             "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
 
+            show ireia normal_gray
+            show armene shy
 
             "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
 
+            show armene shy_gray
+            show ireia strict
+
             "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
 
+            show ireia strict_gray
+            show armene shy
+
             "Armene" "Nein… ich wollte mich nur am Gespräch beteiligen…"
+
+            show armene shy_gray
+            show neiro normal
 
             "Neiro" "Um was geht es? Tut mir leid, ich war mit den Gedanken kurz abgeschweift…"
 
             "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
 
+            show neiro normal_gray
+            show tycho happy
+
             "Tycho" "(lacht) Und wieder das übliche Chaos. Es macht echt zu viel Spaß mit euch Zeit zu verbringen!"
+
+            show tycho happy_gray
+            show ireia strict
 
             "Ireia" "Armene, los an die Arbeit!"
 
+            show ireya strict_gray
+            show armene normal
+
             "Armene" "Ja natürlich Ireia, mache ich!"
 
-            hide armene normal
+            hide armene
 
             # Atropos Gedanken
             "Was mich gerade interessieren würde…"
