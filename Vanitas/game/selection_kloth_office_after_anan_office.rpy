@@ -18,10 +18,10 @@ label selection_kloth_office_after_anan_office:
 
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump search_kloth_in_stairwell
 
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
@@ -41,10 +41,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
@@ -62,10 +62,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde mir das Dokument anschauen.":
@@ -87,10 +87,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
@@ -107,10 +107,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
 
@@ -132,10 +132,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
 
@@ -159,9 +159,9 @@ label selection_kloth_office_after_anan_office:
 
                     "Nein, ich suche besser nach Kloth.":
                         # Atropos Gedanken
-                        "Nein, ich suche besser nach Kloth."
+                        symb"Nein, ich suche besser nach Kloth."
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
 
