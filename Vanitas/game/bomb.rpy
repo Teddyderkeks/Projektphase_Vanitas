@@ -250,7 +250,7 @@ label entschaerfenPillegenommen:
     with fadeshort
 
     # Symbiont
-    "{i}10 Sekunden… die Uhr sie tickt…{/i}"
+    "{i}10 Sekunden… die Uhr, sie tickt…{/i}"
 
     "Atropos" "Bitte… bitte…"
 
@@ -544,13 +544,19 @@ label sawallthreekloth:
 
     "Atropos" "Chesis… bitte sag mir, dass du ihn gesehen hast…"
 
+    show zelos happy
+
     "Zelos" "Ja klar, er ist eifrig am Arbeiten, so wie immer…"
 
     "Atropos" "Danke…"
 
+    show zelos normal
+
     "Zelos" "Atropos?"
 
     "Atropos" "Was?"
+
+    show zelos happy
 
     "Zelos" "Ich wünsche dir einen wunderschön glücklichen Tag!"
 
@@ -573,17 +579,20 @@ label sawallthreekloth:
     "Wo ist er nur?"
 
     "Atropos" "Chesis?"
-    show chesis normal
+
+    show chesis confused
 
     "Chesis" "Atropos? Meine Mittagspause hat noch nicht angefangen."
 
     "Atropos" "Das spielt keine Rolle, ich muss mit dir reden. Jetzt sofort."
 
+    show chesis normal
+
     "Chesis" "(an Kunden gewandt) Tut mir leid, ich bin gleich zurück."
 
     scene hall
     with fadeshort
-    show chesis normal
+    show chesis confused
 
     "Chesis" "Was ist denn nur los mit dir? Du wirkst schon fast… wie… wie…"
 
@@ -593,7 +602,11 @@ label sawallthreekloth:
 
     "Atropos" "Vermutlich wirke ich wie Kloth, weil ich das Gleiche herausgefunden habe…"
 
+    show chesis happy_alt
+
     "Chesis" "Du scherzt, oder? (lacht)"
+
+    show chesis happy
 
     "Chesis" "Kloth geht es gut… und von was redest du? Herausgefunden?"
 
@@ -601,7 +614,11 @@ label sawallthreekloth:
 
     "Atropos" "Genau das ist ja das Problem… die Menschen sind nicht glücklich!"
 
+    show chesis confused
+
     "Chesis" "Hmm? Atropos, von was redest du nur? Sieh dich um…"
+
+    show chesis normal
 
     "Chesis" "Siehst du eine einzige Person, die unglücklich ist?"
 
@@ -614,6 +631,8 @@ label sawallthreekloth:
 
     "Atropos" "Sei still!"
 
+    show chesis confused
+
     "Chesis" "Was? Ich habe nichts gesagt?"
 
     "Atropos" "Nicht du… ich… ich…"
@@ -622,13 +641,19 @@ label sawallthreekloth:
 
     "Atropos" "Sag es mir, Chesis! Sag mir, ob du die Pille freiwillig nimmst…"
 
+    show chesis angry
+
     "Chesis" "Natürlich tue ich das. Warum auch nicht? Ich will glücklich sein."
 
     "Atropos" "Aber die Pille macht irgendetwas mit unserem Gehirn… Und dazu kommt die Bombe… und… und…"
 
+    show chesis confused
+
     "Chesis" "Atropos? Ist alles in Ordnung? Das klingt alles so wirr und ohne Zusammenhang. Soll ich einen Arzt rufen?"
 
     "Atropos" "Nein! Aither… Aither ist böse… verstehst du das nicht?"
+
+    show chesis happy_alt
 
     "Chesis" "Also dann- wir sehen uns nachher (lacht)."
 
@@ -774,6 +799,8 @@ label saveeralab:
 
     "Narcais" "Ich hätte nicht erwartet, dich heute noch anzutreffen. Du hast dir außerordentlich Zeit gelassen."
 
+    show narcais confused
+
     "Narcais" "Warum bist du auf der Suche nach Era?"
 
     # Atropos Gedanken
@@ -781,11 +808,15 @@ label saveeralab:
 
     "Atropos" "Wo ist sie? Bitte… sag es mir."
 
+    show narcais normal
+
     "Narcais" "Einen verzweifelten Atropos habe ich ja auch noch nie erlebt. Sie wollte kurz auf Toilette, sie sollte jeden Moment zurück sein."
 
     "Atropos" "Danke…"
 
     "Atropos" "Sag Mal… Narcais… willst du heute nicht besser etwas früher Schluss machen?"
+
+    show narcais confused
 
     "Narcais" "Warum sollte ich?"
 
@@ -794,7 +825,11 @@ label saveeralab:
 
     "Atropos" "Du siehst… müde aus?"
 
+    show narcais cocky
+
     "Narcais" "Ich und müde? Guter Scherz! (lacht)"
+
+    show narcais normal
 
     "Narcais" "Also… ich muss diese Analyse hier fertigbekommen. Entschuldige mich."
 
@@ -815,15 +850,19 @@ label saveeralab:
 
     "Atropos" "Era, du bist hier… du weißt gar nicht wie erleichtert ich bin."
 
+    show era shy
+
     "Era" "W-Was? Ich… ich…"
 
     "Atropos" "Möchtest du heute nicht ein bisschen früher Schluss machen?"
 
     show narcais normal
+    show era shy_gray
 
     "Narcais" "Das hat er mich auch schon gefragt. Ich habe keine Ahnung, was heute mit ihm los ist."
 
     hide narcais
+    show era normal
 
     "Era" "Was ist denn los, Atropos?"
 
@@ -832,9 +871,13 @@ label saveeralab:
 
     "Atropos" "Du hast heute schon den ganzen Tag so hart gearbeitet. Du hast es dir verdient. Und ich… ich mache mir Sorgen um dich."
 
+    show era shy
+
     "Era" "Du… Du machst dir Sorgen um mich? Ich, ahh…"
 
     "Atropos" "Ich weiß doch, dass deine kleine Schwester im Moment krank ist. Geh nach Hause und kümmere dich um sie, okay?"
+
+    show era confused
 
     "Era" "D-Du wusstest davon?"
 
@@ -842,17 +885,25 @@ label saveeralab:
 
     "Era" "Ahhhh…."
 
+    show era shy
+
     "Era" "Ich…"
 
     "Atropos" "Na los, geh schon, ehe ich es mir anders überlege (lacht)"
+
+    show era confused
 
     "Era" "Aber mein Bericht…"
 
     "Atropos" "Ich kümmere mich darum. Ich bin dein Vorgesetzter- keine Sorge, du wirst keinen Ärger dafür bekommen. Ich trage die Verantwortung."
 
+    show era happy
+
     "Era" "Danke, Atropos."
 
     "Era" "(küsst Atropos auf die Wange)"
+
+    show era shy
 
     "Era" "Ich mache mich sofort auf den Heimweg."
 
@@ -965,14 +1016,18 @@ label saveeraelsewhere:
     "Zelos" "Atropos?"
 
     scene shop_2
+    hide zelos
     with fadeshort
 
     # Atropos Gedanken
     "Wo ist sie nur?"
 
+    show chesis confused
+
     "Chesis" "Atropos?"
 
     scene shop_1
+    hide chesis
     with fadeshort
 
     # Atropos Gedanken
@@ -1022,15 +1077,25 @@ label saveeraelsewhere:
 
     "Atropos" "Du bist hier…"
 
+    show era confused
+
     "Era" "Ahhh… Du umarmst mich? Wie…? W-Warum?"
+
+    show era shy
 
     "Atropos" "Ich habe dich überall gesucht… ich dachte du wärst bereits in der Mittagspause…"
 
+    show era normal
+
     "Era" "Ich musste noch meinen Bericht fertig machen… ich… ich wollte gerade gehen."
+
+    show era shy
 
     "Era" "W-Warum? Möchtest du mitkommen?"
 
     "Atropos" "Geh!"
+
+    show era confused
 
     "Era" "W-Was?"
 
@@ -1040,11 +1105,15 @@ label saveeraelsewhere:
 
     "Atropos" "Ich kann es dir nicht erklären. Aber bitte… bitte vertraue mir!"
 
+    show era normal
+
     "Era" "Ist alles in Ordnung?"
 
     "Atropos" "Nein! Das ist ja das Problem… bitte Era… bitte verlass das Gebäude…"
 
     "Era" "Okay… okay… ja… alles, was dich glücklich macht."
+
+    show era shy
 
     "Era" "Das macht auch mich glücklich…"
 
@@ -1054,9 +1123,13 @@ label saveeraelsewhere:
 
     "Atropos" "Los! Renn!"
 
+    show era happy
+
     "Era" "Also dann… wir sehen uns morgen, ja?"
 
     "Atropos" "Bis morgen. Und Era?"
+
+    show era confused
 
     "Era" "Hmm?"
 
@@ -1099,11 +1172,13 @@ label savechesis:
 
     "Atropos" "Chesis?"
 
-    show chesis normal
+    show chesis happy
 
     "Chesis" "Was ist los? Du siehst, dass ich in einem Gespräch bin."
 
     "Atropos" "Es ist wichtig… bitte…"
+
+    show chesis normal
 
     "Chesis" "Okay. Ich komme schon."
 
@@ -1119,10 +1194,14 @@ label savechesis:
 
     else:
 
+        show chesis confused
+
         "Chesis" "Wir haben uns doch heute noch gar nicht gesehen."
     # alle
 
     "Atropos" "Du erinnerst dich nicht?"
+
+    show chesis confused
 
     "Chesis" "Von was sprichst du?"
 
@@ -1141,6 +1220,8 @@ label savechesis:
     # Atropos Gedanken
     "Was kann ich tun?"
 
+    show chesis angry
+
     "Chesis" "Atropos? Kann ich zurück? Sobald die Kundin glücklich ist, können wir gerne gemeinsam in die Mittagspause gehen."
 
     "Atropos" "Kloth…"
@@ -1148,6 +1229,8 @@ label savechesis:
 
     # Atropos Gedanken
     "Tut mir leid, Kloth, dass ich dich als Ausrede missbrauche…"
+
+    show chesis confused
 
     "Chesis" "Kloth? Was ist mit ihm?"
 
@@ -1157,11 +1240,15 @@ label savechesis:
 
     "Atropos" "Vielleicht braucht er ja Hilfe?"
 
+    show chesis normal
+
     "Chesis" "Klar, mache ich. Aber lass mich noch das Gespräch zu Ende führen, okay?"
 
     "Atropos" "Nein! Geh jetzt. Jetzt sofort!"
 
     "Chesis" "Okay."
+
+    show chesis happy
 
     "Chesis" "Bis nachher dann beim Grillen."
 
@@ -1261,6 +1348,8 @@ label savetycho:
 
     "Atropos" "Oh hey… Armene… sag mal, wo sind die anderen?"
 
+    show armene shy
+
     "Armene" "Ich weiß nicht… wir wollten eigentlich in die Mittagspause, aber sie waren mit einem Mal weg. Ich denke, sie haben mich vergessen…"
 
     # Atropos Gedanken
@@ -1272,22 +1361,31 @@ label savetycho:
 
     "Atropos" "Dass die anderen nicht auf dich gewartet haben…"
 
+    show armene normal
 
     "Armene" "Hmm? Ich habe ihnen gesagt, dass sie vorgehen sollen. Ich wollte ein bisschen für mich sein."
 
     "Atropos" "Armene… du solltest heute besser früher gehen."
 
+    show armene shy
+
     "Armene" "Warum? Habe ich wieder etwas verpasst?"
 
     "Atropos" "Kann man wohl so sagen. (lacht nervös)"
+
+    show armene happy
 
     "Armene" "Etwas Lustiges? Wo? Wann? Was?"
 
     "Atropos" "In Astoa auf dem… Marktplatz. Jetzt sofort."
 
+    show armene shy
+
     "Armene" "Meine Mittagspause müsste ausreichen, oder? Dann würde ich endlich mal etwas Spannendes erleben und würde einmal im Mittelpunkt der Aufmerksamkeit stehen!"
 
     "Atropos" "Ja, los. Geh!"
+
+    show armene happy
 
     "Armene" "Danke Atropos!"
 
@@ -1310,11 +1408,13 @@ label savetycho:
 
     "Atropos" "Tycho?"
 
-    show tycho normal
+    show tycho happy
 
     "Tycho" "Oh hey. Was geht? Verbringst du die Mittagspause mit uns?"
 
     "Atropos" "Nein… sag mal, können wir kurz irgendwo ungestört reden?"
+
+    show tycho normal
 
     "Tycho" "Ja klar, kein Problem! Wohin sollen wir?"
 
@@ -1330,6 +1430,8 @@ label savetycho:
 
     "Atropos" "Du müsstest mir einen kleinen Gefallen tun…"
 
+    show tycho really_happy
+
     "Tycho" "Klar, für dich doch immer! Um was geht es denn?"
 
     "Atropos" "Ich… ich…"
@@ -1337,15 +1439,21 @@ label savetycho:
     # Atropos Gedanken
     "Wie soll ich es ihm nur erklären? Die Wahrheit würde er mir doch niemals abkaufen…"
 
+    show tycho normal
+
     "Tycho" "Was ist los?"
 
     "Atropos" "Kannst du alle unserer Freunde dazu bringen das Gebäude zu verlassen?"
+
+    show tycho happy
 
     "Tycho" "Was? (lacht)"
 
     "Tycho" "Guter Scherz… das muss man dir lassen! (lacht)"
 
     "Atropos" "Ich meine es ernst!"
+
+    show tycho normal
 
     "Tycho" "Warum sollten wir?"
 
@@ -1355,11 +1463,17 @@ label savetycho:
 
     "Tycho" "Werden bald böse Killerroboter kommen und uns alle zerfleischen? (lacht)"
 
+    show tycho really_happy
+
     "Atropos" "Ich scherze nicht, Tycho! Bitte…"
+
+    show tycho happy
 
     "Tycho" "Also deine Happiness- Pille scheint heute irgendwie nicht ganz so zu funktionieren, wie sie soll… nimm besser noch eine neue…"
 
     "Atropos" "Hör mir doch zu, Tycho… bitte, du bist der Einzige, der mir gerade helfen kann…"
+
+    show tycho normal
 
     "Tycho" "Ich muss zurück zu den anderen, aber hat mich gefreut."
 
@@ -1464,13 +1578,15 @@ label savekloth:
     "Hier ist er schonmal nicht… ich sollte Zelos fragen, ob er Kloth gesehen hat."
 
     "Atropos" "Zelos?"
-    show zelos normal
+    show zelos happy
 
     "Zelos" "Hey Atropos- was gibt’s? Aber fass dich bitte kurz, ich habe noch einige Kunden glücklich zu machen!"
 
     "Atropos" "Ja, klar, kein Problem."
 
     "Atropos" "Sag Mal: Du fängst ja immer relativ früh mit der Arbeit an und hörst ziemlich spät auf, richtig?"
+
+    show zelos normal
 
     "Zelos" "Normalerweise schon, warum fragst du?"
 
@@ -1483,6 +1599,8 @@ label savekloth:
     "Zelos" "Nun ja… Kloth blieb schon öfter länger und machte Überstunden, ich würde es also nicht als seltsam erachten, ihn nicht gesehen zu haben."
 
     "Atropos" "Oh okay… Hast du ihn denn heute sonst irgendwo gesehen?"
+
+    show zelos happy
 
     "Zelos" "Nein, tut mir leid. Und ich muss zurück an die Arbeit. Aber viel Erfolg bei der Suche."
 
@@ -1530,7 +1648,7 @@ label savekloth:
     with fadeshort
 
     # Atropos Gedanken
-    "Warte… was war das eben gewesen?"
+    "Warte… was war das eben?"
 
     # Atropos Gedanken
     "Irgendetwas… irgendetwas war da doch, oder?"
@@ -1644,14 +1762,17 @@ label saveallallthreekloth:
 
     "Tycho" "Was ist denn los?"
 
-
     "Tycho" "Warum ist der Alarm losgegangen?"
 
     "Tycho" "Hast du etwas gesehen oder gehört, Atropos?"
 
+    show tycho happy
+
     "Tycho" "Machen wir eine Übung? (lacht)"
 
     "Atropos" "Es scheint ein Feuer ausgebrochen zu sein. Schnapp dir die anderen und flieht!"
+
+    show tycho normal
 
     "Tycho" "Ein Feuer? Aber warum kam dann keine Durchsage diesbezüglich?"
 
@@ -1659,9 +1780,12 @@ label saveallallthreekloth:
 
     "Atropos" "Nein! Das Feuer ist echt! Flieht doch bitte… Verlass das Gebäude, Tycho!"
 
+    show tycho happy
+
     "Tycho" "Ach komm… (lacht)"
 
-    show anan normal_mid
+    show tycho happy_gray
+    show anan strict_mid
 
     "Anan" "Was hat dieser Aufstand hier zu bedeuten? Wer hat den Feueralarm ausgelöst?"
 
@@ -1673,11 +1797,19 @@ label saveallallthreekloth:
     # Atropos Gedanken
     "Ich bin mir sicher, er würde die Wahrheit in meinen Augen erkennen können."
 
+    show anan strict_mid_gray
+    show tycho normal
+
     "Tycho" "Wir wissen es nicht. Keiner hat es gesehen."
+
+    show tycho normal_gray
+    show anan strict_mid
 
     "Anan" "Atropos."
 
     "Atropos" "J-Ja?"
+
+    show anan disappointed_mid
 
     "Anan" "Du wirkst immer noch nicht glücklich. Du hast Happiness nicht eingenommen."
 
@@ -1686,21 +1818,32 @@ label saveallallthreekloth:
 
     "Atropos" "Nein… nein, habe ich nicht."
 
-
     "Anan" "Du hast den Feuermelder aktiviert."
 
     "Atropos" "Ja…"
 
+    show anan disappointed_mid_gray
+    show tycho normal
+
     "Tycho" "Du warst es, Atropos? Aber warum?"
 
-    show chesis normal
+    show tycho normal_gray
+    show chesis angry
 
     "Chesis" "Ist es wegen der Bombe?"
 
+    show chesis angry_gray
+    show anan normal_left
+
     "Anan" "Bombe?"
+
+    show anan normal_left_gray
+    show chesis confused
 
     "Chesis" "Ach, Atropos hatte so was in die Richtung glaube ich Mal erwähnt, aber keine Ahnung. Man sieht sich."
     hide chesis
+
+    show anan strict left
 
     "Anan" "Atropos, auf ein Wort."
     hide tycho
@@ -1722,11 +1865,15 @@ label saveallallthreekloth:
     # Atropos Gedanken
     "Wenn ich ihm jetzt von der Bombe erzähle, ist alles aus…"
 
+    show anan strict_mid
+
     "Anan" "Ich erwarte eine Antwort."
 
     "Atropos" "Ich… ich habe gehört, dass es eine Bombe geben soll?"
 
     "Atropos" "Durch… durch den Feueralarm wollte ich nur die Menschen retten!"
+
+    show anan normal_mid
 
     "Anan" "Das ist nicht alles."
 
@@ -1736,10 +1883,14 @@ label saveallallthreekloth:
 
     "Atropos" "Natürlich hätte da früher oder später jemand eingegriffen und versucht, deinem Treiben ein Ende zu setzen!"
 
+    show anan disappointed_mid
+
     "Anan" "Es war Kloth. Ich hätte seine Veränderung früher in Bezug setzen sollen."
 
     # Atropos Gedanken
     "Was? Woher weiß er das? Ich habe doch gar nichts gesagt…"
+
+    show anan strict_mid
 
     "Anan" "Wo ist die Bombe? Wann geht sie hoch?"
 
@@ -1824,7 +1975,11 @@ label saveallallthreekloth:
 
     "Atropos" "Aber… ich…"
 
+    show anan disappointed_mid
+
     "Anan" "Du denkst, dass du unschuldig bist, weil du die Bombe nicht gelegt hast? Das nimmt die Schuld nicht von dir."
+
+    show anan strict_mid
 
     "Anan" "Nicht nur die großen Entscheidungen zählen, sondern auch jede noch so kleine."
 
@@ -1857,6 +2012,7 @@ label saveallallthreekloth:
 
     scene detail_pill
     with fadeshort
+    show anan happy_left
 
     "Anan" "Nimm sie. Sei glücklich."
 
@@ -1865,6 +2021,7 @@ label saveallallthreekloth:
 
     scene server_room
     with fadeshort
+    hide anan
 
     # Symbiont
     "{i}Atropos, sei glücklich. Vergiss all das Leid. Es geht dir gut. {/i}"
@@ -2558,13 +2715,19 @@ label besureanandies:
 
     "Atropos" "Ich weiß die Wahrheit hinter Happiness!"
 
+    show anan happy_mid
+
     "Anan" "Du meinst also die Wahrheit zu kennen. Ich wage, das zu bezweifeln."
 
     "Atropos" "Ich weiß, was ihr mit unserem Gehirn anstellt. Und wenn du nicht willst, dass ich rede, wirst du mir jetzt still und brav folgen!"
 
+    show anan strict_mid
+
     "Anan" "Du weißt gar nichts und die Menschen werden dir nicht zuhören. Denkst du, sie würden deine Wahrheit glauben?"
 
     "Anan" "Die Wahrheit ist viel komplizierter als du dir jemals vorstellen könntest. Und die Menschheit ist noch nicht bereit für diese Wahrheit. Niemand könnte sie verkraften und ertragen."
+
+    show anan disappointed_mid
 
     "Anan" "So wie es aussieht, auch nicht du."
 
@@ -2572,17 +2735,23 @@ label besureanandies:
 
     "Atropos" "Deine ach so geliebte Firma wird bald nicht mehr existieren!"
 
+    show anan normal_mid
+
     "Anan" "Was hast du getan?"
 
-    "Atropos" "Folge mir, dann wirst du es vielleicht herausfinden. Aber ich werde die Menschheit von deinen Fesseln befreien?"
+    "Atropos" "Folge mir, dann wirst du es vielleicht herausfinden. Aber ich werde die Menschheit von deinen Fesseln befreien!"
 
     "Anan" "Du bezeichnest Glück also als Fessel? Aber bist du dir auch wirklich sicher, dass eine Welt ohne Aither eine bessere Welt wäre?"
+
+    show anan disappointed_mid
 
     "Anan" "Du hast nicht erlebt, wie die Welt damals zu Zeiten des Krieges und auch in den Jahren direkt danach aussah, bis sich Aither etabliert hatte."
 
     "Anan" "Du bist jung und naiv. Blind für die Wahrheit. Blind dafür, dass die Menschheit Happiness braucht. Dass sie ohne Happiness nicht mehr existieren könnte."
 
     "Anan" "Das weltweite System beruht auf Happiness. Fällt Happiness weg, wird dieses System zusammenbrechen und die Welt im Chaos versinken."
+
+    show anan strict_mid
 
     "Anan" "Was denkst du würde passieren, wenn der Welt mit einem Mal ihre Glücklichkeit genommen wird? Wenn sie wieder all das Leid und den Schmerz, Neid, Hass und Wut ertragen müssten?"
 
@@ -2603,6 +2772,8 @@ label besureanandies:
     "Über Anans Ansprache habe ich komplett die Zeit vergessen."
 
     "Atropos" "Folge mir!"
+
+    show anan normal_mid
 
     "Anan" "Ich bedauere es, dich so aufgelöst zu sehen. Nimm Happiness ein und vergiss das, was dich so sehr beschäftigt und beunruhigt."
 
@@ -2671,11 +2842,13 @@ label ananorjustbombwho:
 
         scene shop_1
         with fadeshort
+        show zelos normal
 
         "Zelos" "Atropos? Kannst du Mal eben kommen?"
 
         "Atropos" "Keine Zeit."
 
+        hide zelos
         scene shop_2
         with fadeshort
         show chesis normal
@@ -2686,23 +2859,30 @@ label ananorjustbombwho:
 
         "Atropos" "Nein! Nicht nachher, sondern jetzt!"
 
+        show chesis angry
+
         "Chesis" "Was ist denn so Dringendes?"
 
         "Atropos" "Komm jetzt, nicht hier!"
+
+        show chesis confused
 
         "Chesis" "Okay, okay."
 
         scene hall
         with fadeshort
-        show chesis normal
 
         "Chesis" "Wohin gehen wir?"
 
         "Atropos" "Das siehst du gleich."
 
+        show chesis normal
+
         "Chesis" "Atropos… bitte… ich muss zurück zum Gespräch."
 
         "Atropos" "Nein!"
+
+        show chesis angry
 
         "Chesis" "Warum gehen wir in Richtung Treppenhaus? Ich… ich will zurück!"
 
@@ -2710,13 +2890,21 @@ label ananorjustbombwho:
 
         "Atropos" "Gibt es zufällig etwas, das dich beunruhigt?"
 
+        show chesis confused
+
         "Chesis" "Von was redest du? Nein- ich muss einfach nur zurück zur Arbeit."
+
+        show chesis normal
 
         "Chesis" "Darf ich gehen?"
 
         "Atropos" "Nein!"
 
+        show chesis confused
+
         "Chesis" "Atropos…"
+
+        show chesis normal
 
         "Chesis" "Ich will nicht…"
 
@@ -2724,11 +2912,12 @@ label ananorjustbombwho:
 
         scene stairs_down
         with fadeshort
-        show chesis normal
 
         "Chesis" "Und? Was ist jetzt?"
 
         "Atropos" "Überspiel es nicht! Du weißt genau, was los ist!"
+
+        show chesis confused
 
         "Chesis" "Du machst mir langsam Angst. Hast du heute Happiness genommen?"
 
@@ -2742,6 +2931,8 @@ label ananorjustbombwho:
 
         "Chesis" "Was? Nein… Nein… das war ich nicht… nein… ich…"
 
+        show chesis angry
+
         "Chesis" "Ich habe nichts getan!"
 
         "Chesis" "Ich habe Kloth nicht getötet, Atropos. Du warst es!"
@@ -2754,9 +2945,13 @@ label ananorjustbombwho:
 
         "Atropos" "Ich weiß, was ich gesehen habe! Du warst es! DU hast Kloth umgebracht!"
 
+        show chesis happy_alt
+
         "Chesis" "Also dann, ich muss zurück an die Arbeit. Wir sehen uns später, Atropos! (lacht)"
 
         "Atropos" "Ist das dein Ernst? Ist das dein verdammter Ernst? Willst du jetzt so tun, als hätte dieses Gespräch hier nie stattgefunden?"
+
+        show chesis confused
 
         "Chesis" "Welches Gespräch?"
 
@@ -2771,6 +2966,8 @@ label ananorjustbombwho:
         "Chesis" "Von was redest du?"
 
         "Atropos"  "Vergiss es… Geh zurück zu deinem Gespräch. Ich habe Wichtigeres zu tun!"
+
+        show chesis happy
 
         "Chesis" "Okay. Also dann, wir sehen uns!"
 
@@ -3143,7 +3340,7 @@ label ananshoulddie:
 
     scene anan_office
     with fadeshort
-    show anan normal_mid
+    show anan happy_mid
 
     "Anan" "Atropos? Wie kann ich dir helfen?"
 
@@ -3152,6 +3349,8 @@ label ananshoulddie:
 
     "Atropos"  "Du musst zum Serverraum! Irgendetwas stimmt nicht!"
 
+    show anan normal_mid
+
     "Anan" "Was stimmt nicht?"
 
     "Atropos"  "Kloth… ich habe Kloth gefunden… er liegt dort… er ist… er ist tot!"
@@ -3159,12 +3358,16 @@ label ananshoulddie:
     # Atropos Gedanken
     "Es ist die Wahrheit… sie ist nur ein wenig verdreht."
 
+    show anan strict_mid
+
     "Anan" "Du hast deine Pille immer noch nicht genommen. Nimm sie und kehre ins Labor zurück. Werd glücklich. Ich kümmere mich darum."
 
     # Atropos Gedanken
     "Nein, ich muss sichergehen, dass er wirklich hier und jetzt mitkommt…"
 
     "Atropos"  "Nein! Ich komme mit! Ich… ich nehme Happiness danach… bitte!"
+
+    show anan normal_mid
 
     "Anan" "…"
 
@@ -3181,6 +3384,8 @@ label ananshoulddie:
     # Atropos Gedanken
     "Vielleicht 4 Minuten?"
 
+    show anan strict_mid
+
     "Anan" "Warum warst du im Serverraum?"
 
     # Atropos Gedanken
@@ -3192,6 +3397,7 @@ label ananshoulddie:
 
     scene server_room
     with fadeshort
+    show anan normal_mid
 
     "Anan"  "Wo ist Kloth?"
 
@@ -3199,6 +3405,8 @@ label ananshoulddie:
     "Ich glaube, es ist noch zu viel Zeit übrig… ich muss mehr Zeit herauszögern…"
 
     "Atropos"  "Ich… ich… es war dort drüben."
+
+    show anan strict_mid
 
     "Anan" "Atropos, was willst du wirklich von mir? Du lügst mich an, seit du mein Büro betreten hast. Warum sträubst du dich so dagegen, glücklich zu sein?"
 

@@ -82,20 +82,27 @@ label pill:
 
         "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
 
-        show narcais normal:
+        show narcais cocky:
             xalign 0.25
-        show era normal:
+        show era normal_gray:
             xalign 0.75
 
         "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe mich dieser zu widmen."
+
+        show narcais annoyed
 
         "Narcais" "Kann ich denn wenigstens von dir heute noch Feedback erwarten?"
 
         "Atropos" "Ich hatte erst einmal alles für Anans Bericht fertiggestellt, aber sobald ich von der Mittagspause zurückkomme, setze ich mich dran."
 
+        show narcais normal
+
         "Narcais" "Danke, das klingt doch vielversprechend."
 
         "Atropos" "Also dann ihr beiden. Wir sehen uns später."
+
+        show narcais normal_gray
+        show era happy
 
         "Era" "B-Bis später."
 
@@ -158,6 +165,8 @@ label still_search_chesis:
 
     "Atropos" "Danke für die Info, aber ich denke ich suche erstmal nach Chesis."
 
+    show zelos happy
+
     "Zelos" "Alles klar. Dir noch eine schöne Mittagspause!"
 
     "Atropos" "Danke, dir auch!"
@@ -167,6 +176,7 @@ label still_search_chesis:
     # Atropos Gedanken
     "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
+    hide zelos
     scene shop_2
     with fadeshort
 
