@@ -29,11 +29,13 @@ label leave_and_go_pill:
 
     # Atropos Gedanken
     "Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
-    show era normal
+    show era confused
 
     "Era" "Was… was ist los, Atropos?"
 
     "Atropos" "Hast du meine Happiness-Pillen gesehen? Ich kann sie nicht finden?"
+
+    show era normal
 
     "Era" "Nein, leider nicht… tut mir leid… aber du kannst gerne eine von meinen haben… Also, wenn du möchtest."
 
@@ -41,7 +43,11 @@ label leave_and_go_pill:
 
     "Atropos" "Muss ich dann wohl. (lacht) Aber danke trotzdem für das Angebot, Era."
 
+    show era happy
+
     "Era" "K-Kein Problem…"
+
+    hide era
 
     # Atropos Gedanken
     "Na los, ich tue das Richtige. Es ist die richtige Entscheidung Happiness zu nehmen."
@@ -126,9 +132,13 @@ label kloth_corpse:
 
     "Atropos" "Kloth, was ist los?"
 
+    show cloth scared1_neutral
+
     "Kloth" "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
     "Atropos" "Beruhige dich erst einmal und atme tief durch. Was ist passiert? "
+
+    show kloth scared1
 
     "Kloth" "Nicht hier … es könnte jemand kommen und dann…"
 
@@ -140,9 +150,15 @@ label kloth_corpse:
 
     "Atropos" "Ich wollte eigentlich gerade Mittagspause machen. Willst du nicht einfach mitkommen und wir reden dann? Chesis scheint auch Pause zu haben."
 
+    show kloth scared2
+
     "Kloth" "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht, an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
 
+    show kloth scared1_neutral
+
     "Kloth" "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
+
+    show kloth scared1
 
     "Kloth" "Du bist der Einzige, der mir helfen kann!"
 
@@ -173,19 +189,27 @@ label reschedule_conversation_kloth:
     $ reschedule_kloth = True
     "Atropos" "Können wir das Gespräch vielleicht vertagen? Ich habe echt Hunger und will Chesis zudem nicht warten lassen."
 
+    show kloth scared1
+
     "Kloth" "Kannst du dir nicht jetzt kurz fünf Minuten nehmen? Bitte… es dauert wirklich nicht lange…"
 
     "Atropos" "Muss es jetzt sein? Kloth, so wichtig kann es doch gar nicht sein, dass du nicht noch ein bisschen länger warten kannst, oder?"
 
     "Atropos" "Ich bezweifle sehr, dass du irgendwelche Staatsgeheimnisse entdeckt hast. Also los, entspann dich und wir sprechen wann anders darüber, okay?"
 
+    show kloth scared2
+
     "Kloth" "Jetzt hör mir doch bitte einen Moment zu… es braucht wirklich nicht lange, okay? Ich verspreche es dir…"
 
     "Atropos"  "Um was geht es denn überhaupt?"
 
+    show kloth scared1_neutral
+
     "Kloth" "Ich arbeite ja bei Anan als Chefsekretär und, nun ja… es ist alles nicht so wie es scheint, Atropos. Ich habe mehr erfahren und ich komme mit dieser Wahrheit nicht alleine klar…"
 
     "Atropos" "Wieso flüsterst du? So schlimm kann die Wahrheit schon nicht sein."
+
+    show kloth scared2
 
     "Kloth" "Und wie sie es ist. Sie ist gefährlich, vielleicht sogar tödlich… Bitte… können wir an einen ruhigen Ort gehen und ich erzähle dir dann alles?"
 
@@ -207,13 +231,19 @@ label reschedule_conversation_kloth:
 label accept_conversation_kloth:
     "Atropos" "Ja, natürlich helfe ich dir. Erzähl endlich, was los ist. Wie kann ich dir helfen?"
 
+    show kloth unsuresmiling
+
     "Kloth" "(atmet erleichtert auf) Danke Atropos! Wirklich… vielen, vielen Dank… du weißt nicht, wie froh ich bin endlich jemanden zu haben, dem ich mich anvertrauen kann."
 
     "Atropos" "Schon okay, nichts zu danken. Wir sind Freunde. Ich bin für dich da. Also, worum geht es?"
 
+    show kloth scared1_neutral
+
     "Kloth" "Die Happiness-Pille ist nicht das, was du und jeder andere Mensch auf dieser Welt denkt."
 
     "Atropos" "Von was redest du? Sie sorgt dafür, dass wir glücklich sind und endlich das Leben unserer Träume leben können. Nicht mehr und nicht weniger."
+
+    show kloth scared1
 
     "Kloth" "Nein, das stimmt nicht. Also doch… zum Teil schon, aber es ist nur die halbe Wahrheit. Die Tabletten bewirken nicht wirklich etwas…"
 
@@ -234,6 +264,8 @@ label accept_conversation_kloth:
 
     "Atropos" "Nein… nein, ich will ein glückliches Leben haben."
     # Ende Glitch-Effekt
+
+    show kloth unsuresmiling_neutral
 
     "Kloth" "Hast du was gesagt? Geht es dir gut? Du hast ziemlich weggetreten gewirkt."
 
@@ -269,6 +301,8 @@ label accept_conversation_kloth:
 
 label refuse_conversation_kloth:
     "Atropos" "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch. Ich hatte heute einen stressigen Tag und brauche jetzt erstmal wieder etwas Ruhe und Entspannung."
+
+    show kloth angry_neutral
 
     "Kloth" "Oh okay. Ja klar… wenn du nicht willst… ich kann dich nicht dazu zwingen. Ich wünschte, du hättest mir zugehört, Atropos. Ich dachte, wir wären Freunde."
 

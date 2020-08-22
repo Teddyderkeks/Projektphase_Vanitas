@@ -49,6 +49,8 @@ label rueffel:
 
     "Atropos"  "Ich werde mich nicht entschuldigen, dass ich die Pille nicht genommen habe."
 
+    show anan strict_mid
+
     "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
     "Atropos"  "Schaden? Aber…"
@@ -59,13 +61,19 @@ label rueffel:
 
     "Atropos"  "Ich…"
 
+    show anan normal_mid
+
     "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
 
     "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
 
+    show anan disappointed_mid
+
     "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
 
     "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
+
+    show anan normal_mid
 
     "Anan" "Du solltest dein Leben genießen und glücklich sein."
 
@@ -91,6 +99,8 @@ label rueffel:
 
             "Atropos"  "Ich will glücklich sein und wenn Happiness der einzige Weg dorthin ist, dann werde ich diesem Weg folgen."
 
+            show anan strict_mid
+
             "Anan" "Happiness ist der einzige Weg. Wir haben viele andere Wege versucht, aber keiner hatte den Erfolg gebracht, welchen wir uns erhofft hatten."
 
             "Anan" "Das Glück aller Menschen steht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
@@ -103,11 +113,15 @@ label rueffel:
 
             "Atropos"  "Ja."
 
+            show anan normal_mid
+
             "Anan" "Du darfst zurück ins Labor. Nimm die Pille sofort, wenn du dort bist und vergiss sie zukünftig nicht mehr."
 
             "Atropos"  "Werde ich nicht. Und danke Anan."
 
             "Anan" "Sei einfach nur glücklich. Mehr will ich nicht. Du hast es verdient, glücklich zu sein, du leistet wertvolle Arbeit für die Gesellschaft."
+
+            show anan happy_mid
 
             "Anan" "Jemand, der Menschen ihr Glück bringt, sollte selbst nicht unglücklich sein."
 
@@ -131,9 +145,13 @@ label ichsollmichopfern:
 
     "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
 
+    show anan strict_mid
+
     "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
 
     "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
+
+    show anan disappointed_mid
 
     "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
 
@@ -145,9 +163,13 @@ label ichsollmichopfern:
 
     "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
 
+    show anan strict_mid
+
     "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
 
     "Anan" "Sie sind verloren, aber sie können gerettet werden. Wir können sie finden und ihnen die Wahrheit und Erkenntnis zurückbringen."
+
+    show anan normal_mid
 
     "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
 
@@ -159,9 +181,13 @@ label expulsion_office:
 
     "Atropos"  "Wahrhaftes Glück? Das ist alles vollkommen absurd. Hörst du dich eigentlich selbst reden?"
 
+    show anan strict_mid
+
     "Anan" "Wenn du dich weiterhin dagegen weigerst Happiness zu nehmen, bleibt mir keine andere Wahl als dir die Kündigung zu reichen."
 
     "Anan" "Du verstehst, dass niemand Menschen Happiness bringen kann, der selbst nicht glücklich ist."
+
+    show anan normal_mid
 
     "Anan" "Ich biete dir eine letzte Chance. Nimm jetzt die Pille und werde glücklich. Kehre in dein altes Leben zurück. Sonst müssen wir ein anderes Leben für dich finden, das dich glücklich macht."
 
@@ -171,6 +197,7 @@ label expulsion_office:
 
     "Atropos"  "Besser Konsequenzen als weiterhin zu etwas gezwungen zu werden, das ich nicht möchte!"
 
+    hide anan
     scene hall
     with fadeshort
 
@@ -191,9 +218,13 @@ label expulsion_office:
 
     "Atropos"  "Oh… tut mir leid, ich war in Gedanken versunken."
 
+    show chesis happy
+
     "Chesis"  "Kein Problem. Kamst du aus Anans Büro?"
 
     "Atropos"  "Ja, ich verlasse die Firma."
+
+    show chesis confused
 
     "Chesis"  "Du verlässt die Firma?"
 
@@ -207,6 +238,8 @@ label expulsion_office:
 
     "Atropos"  "Aber ich will auch nicht länger hierbleiben. Ich will die Pille nicht weiter auf Zwang nehmen müssen und ich will auch nicht dafür arbeiten, andere Menschen dazu zu zwingen."
 
+    show chesis angry
+
     "Chesis"  "Aber warum nimmst du denn Happiness nicht? Willst du denn nicht glücklich sein?"
 
     "Atropos"  "Ich will glücklich sein, aber ich will nicht zu diesem Glück gezwungen werden! Verstehst du das nicht?"
@@ -217,10 +250,13 @@ label expulsion_office:
 
     "Atropos"  "Wieso bist du auf Anans Seite? Schalte doch mal deinen Kopf ein! Bist das wirklich du, der da gerade spricht? Oder sind deine Worte durch die Tablette beeinflusst?"
 
+    show chesis normal
+
     "Chesis"  "Ich bin immer ich und darin ändert Happiness nichts."
 
     "Atropos"  "Nein- du bist nicht mehr du. Wir reden, wenn du wieder bei klarem Verstand bist."
 
+    hide chesis
     scene lab
     with fadeshort
     show narcais normal
@@ -228,15 +264,23 @@ label expulsion_office:
 
     "Atropos"  "Das muss dir jemand anderer geben. Ich höre auf. Ich packe heute nur noch meine Sachen zusammen und räume meinen Arbeitsplatz auf."
 
+    show narcais confused
+
     "Narcais"  "Du verlässt uns? Welchen Grund könnte es dafür geben?"
 
     "Atropos"  "Viele Gründe und sie spielen für dich keine Rolle."
 
+    show narcais normal
+
     "Narcais"  "Ich wünsche dir Glücklichkeit für deinen weiteren Weg. Kannst du bei Anan ein gutes Wort für mich einlegen, damit ich deinen Posten übernehmen kann?"
+
+    show narcais cocky
 
     "Narcais"  "Ich wäre vermutlich ohnehin besser geeignet."
 
     "Atropos"  "Mal sehen."
+
+    show narcais normal
 
     "Narcais"  "Danke! Also dann, ich muss weiterarbeiten."
 
@@ -259,9 +303,13 @@ label expulsion_office:
 
     "Atropos"  "Danke! Sag mal, hast du Era gesehen? Ich würde mich gerne von ihr verabschieden."
 
+    show narcais confused
+
     "Narcais"  "Sie ist auf die Toilette gegangen, sollte aber in kürzester Zeit wieder hier sein."
 
     "Atropos"  "Vielleicht begegne ich ihr ja auf dem Flur. Also, bis bald."
+
+    hide narcais
     scene hall
     with fadeshort
 
@@ -273,16 +321,22 @@ label expulsion_office:
 
     "Atropos"  "Oh hey… ich bin auf dem Weg zu Anan. Ich wechsle meinen Job. Es gab ein paar Schwierigkeiten, die sich nicht lösen ließen."
 
+    show era confused
+
     "Era"  "Oh… okay… das… das ist wirklich schade."
 
     if datewithera:
         "Atropos"  "Aber keine Sorge, das Date steht natürlich trotzdem noch. Wenn du möchtest, zumindest…"
+
+        show era happy
 
         "Era"  "Das… das wäre wirklich schön."
 
         "Atropos"  "Dann ist es abgemacht, wir sehen uns am Donnerstag. Noch einen wunderschönen Tag."
     else:
         "Atropos"  "Aber wir können ja trotzdem weiterhin den Kontakt halten. Ich bin ja nicht aus der Welt."
+
+        show era shy
 
         "Era"  "Das… das wäre wirklich schön."
 

@@ -82,20 +82,27 @@ label pill:
 
         "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
 
-        show narcais normal:
+        show narcais cocky:
             xalign 0.25
-        show era normal:
+        show era normal_gray:
             xalign 0.75
 
         "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe mich dieser zu widmen."
+
+        show narcais annoyed
 
         "Narcais" "Kann ich denn wenigstens von dir heute noch Feedback erwarten?"
 
         "Atropos" "Ich hatte erst einmal alles für Anans Bericht fertiggestellt, aber sobald ich von der Mittagspause zurückkomme, setze ich mich dran."
 
+        show narcais normal
+
         "Narcais" "Danke, das klingt doch vielversprechend."
 
         "Atropos" "Also dann ihr beiden. Wir sehen uns später."
+
+        show narcais normal_gray
+        show era happy
 
         "Era" "B-Bis später."
 
@@ -158,6 +165,8 @@ label still_search_chesis:
 
     "Atropos" "Danke für die Info, aber ich denke ich suche erstmal nach Chesis."
 
+    show zelos happy
+
     "Zelos" "Alles klar. Dir noch eine schöne Mittagspause!"
 
     "Atropos" "Danke, dir auch!"
@@ -167,6 +176,7 @@ label still_search_chesis:
     # Atropos Gedanken
     "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
+    hide zelos
     scene shop_2
     with fadeshort
 
@@ -254,7 +264,7 @@ label mittagspausemitchesis:
 
     scene office_2
     with fadeshort
-    show chesis smiling:
+    show chesis happy:
         xalign 0.5
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen anschließen?"
 
@@ -262,7 +272,7 @@ label mittagspausemitchesis:
 
     "Atropos" "Alles gut, wegen mir müssen wir nicht in die Mensa. Ich weiß doch, dass du dich am wohlsten fühlst, wenn wir nur unter uns sind."
 
-    show chesis grinning
+    show chesis happy_alt
 
     "Chesis" "Danke."
     # Gespräch über Kloths Schüchternheit und die Überwindung dieser dank Atropos und Kloth möglich.
@@ -275,7 +285,7 @@ label mittagspausemitchesis:
 
     "Atropos" "Nicht nur, dass Kloth sich in letzter Zeit kaum bei uns gemeldet hat, aber er wirkte irgendwie fast schon erschöpft? Als würde ihn irgendetwas beschäftigen…"
 
-    show chesis smiling
+    show chesis happy_alt
 
     "Chesis" "Ich denke, du irrst dich."
 
@@ -285,7 +295,7 @@ label mittagspausemitchesis:
 
     "Atropos" "Ich weiß nicht… Ich denke, wir sollten vielleicht doch besser mal nach ihm schauen."
 
-    show chesis grinning2
+    show chesis happy_alt
 
     "Chesis" "Du hast dir schon immer zu viele Gedanken um alles gemacht."
 
@@ -297,7 +307,7 @@ label mittagspausemitchesis:
     # Symbiont
     "{i}Dein Leben ist ohne sie so viel einfacher und glücklicher. {/i}"
 
-    show chesis smiling
+    show chesis happy
 
     "Chesis" "Ja, bleibe einfach ruhig. Das wird sich alles aufklären und am Ende werden wir darüber lachen."
 
@@ -314,7 +324,7 @@ label mittagspausemitchesis:
             # Atropos Gedanken
             "Zukünftig werde ich sie auf keinen Fall mehr vergessen. Ich will glücklich sein und ein glückliches Leben führen können."
 
-            show chesis grinning
+            show chesis happy_alt
 
             "Chesis" "(lacht) Ja, solltest du."
 
@@ -326,7 +336,7 @@ label mittagspausemitchesis:
 
             "Atropos" "Um 19 Uhr bei dir dann?"
 
-            show chesis smiling
+            show chesis happy
 
             "Chesis" "Ja genau, ich freue mich schon!"
 
@@ -343,7 +353,7 @@ label mittagspausemitchesis:
 
             "Atropos" "Klar mache ich. Wir sehen uns dann später. 19 Uhr, richtig?"
 
-            show chesis smiling
+            show chesis happy
 
             "Chesis" "Ja, genau. Ich freue mich, bis dann!"
 
@@ -428,18 +438,22 @@ label laborpillende:
     # Atropos Gedanken
     "Warum funktioniert denn der Computer mit einem Mal nicht mehr?"
 
-    show era normal:
+    show era confused:
         xalign 0.5
 
     "Era" "Atropos? W-Was ist los?"
 
     "Atropos" "Die Computer funktionieren aus irgendeinem Grund nicht."
 
+    show era normal
+
     "Era" "Du könntest in den Serverraum gehen und dort mal nachfragen… Vi…Vielleicht wissen sie dort, was das Problem ist."
 
     "Atropos" "Stimmt, das ist eine gute Idee."
 
     "Atropos" "Wo liegt der Serverraum nochmal? Ich war schon seit Ewigkeiten nicht mehr dort."
+
+    show era shy
 
     "Era" "Wenn…, wenn du willst könnte ich dich hinbringen?"
 
@@ -453,11 +467,13 @@ label erabegleiten:
 
     "Atropos" "Klar, gerne. Wenn du gerade die Zeit dafür hast?"
 
+    show era happy
+
     "Era" "Ja… Ja… natürlich. "
 
     scene hall
     with fadeshort
-    show era normal:
+    show era shy:
         xalign 0.5
 
     "Atropos" "…"
@@ -477,6 +493,8 @@ label erabegleiten:
 
     "Atropos" "Du weißt gar nicht, wie glücklich ich gerade bin. Ich freue mich schon sehr auf das Date!"
 
+    show era happy
+
     "Era" "Ich mich auch."
 
     "Atropos" "So, wir sind da- mal schauen, ob sie uns weiterhelfen können."
@@ -491,15 +509,21 @@ label erabegleiten:
 
     "Atropos" "Seltsam- es scheint keiner hier zu sein…"
 
+    show era confused
+
     "Era" "Nicht? Aber man hört doch das Ticken einer Uhr- da, um die Ecke rum…"
 
     "Atropos" "Hallo? Wir haben ein Problem mit unserem Computer und könnten Hilfe gebrauchen!… Ist jemand hier?"
+
+    show era normal
 
     "Era" "Vielleicht… ist die Person in ihre Arbeit vertieft und hört uns nicht?"
 
     "Atropos" "Gut möglich, lass uns nachschauen gehen."
 
     "Era" "…"
+
+    show era confused
 
     "Era" "Das ist aber eine seltsame Uhr. So etwas habe ich noch nie gesehen…"
 
@@ -534,9 +558,13 @@ label eranichtbegleiten:
 
     "Atropos" "Alles gut, ich finde es schon."
 
+    show era shy
+
     "Era" "O-Okay… und Atropos…?"
 
     "Atropos" "Was gibt´s?"
+
+    show era happy
 
     "Era" "Ich freue mich aufs Bowlen!"
 
@@ -544,6 +572,7 @@ label eranichtbegleiten:
 
     "Atropos" "Also, bis gleich!"
 
+    hide era
     scene hall
     with fadeshort
 

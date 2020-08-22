@@ -474,9 +474,13 @@ label still_search_kloth:
 
     "Anan" "Kloth Hetair? Ich bin ebenfalls auf der Suche nach ihm. Er ist heute nicht bei mir zu Arbeitsbeginn aufgetaucht."
 
-    "Anan" "Er hatte sich sonst immer abgemeldet, aber heute hat er es nicht getan."
+    show anan strict_mid
+
+    "Anan" "Er hat sich sonst immer abgemeldet, aber heute hat er es nicht getan."
 
     "Anan" "Weißt du etwas darüber?"
+
+    show anan normal_mid
 
     "Atropos" "Nein… nein! Ich bin doch selbst auf der Suche nach ihm!"
 
@@ -487,6 +491,8 @@ label still_search_kloth:
     "Atropos" "Wieso bist du dir so sicher, dass er hier ist?"
 
     "Atropos" "Gibt es keine Möglichkeit, dass er sich vielleicht einen Tag frei genommen hat und nun irgendwo in Astoa aufhält?"
+
+    show anan strict_mid
 
     "Anan" "Es gab gestern keine Registrierung, dass er das Gebäude verlassen hätte."
 
@@ -595,11 +601,15 @@ label still_search_kloth:
     # Atropos Gedanken
     "Hätte ich deinen Tod irgendwie verhindern können?"
 
+    show anan disappointed_mid
+
     "Anan" "Ich bedauere seinen Tod. Wir verlieren einen geschätzten Mitarbeiter. Ich hatte große Hoffnungen in ihn gesetzt."
 
-    "Anan" "Er war einer der größten Verfechter des Glücks gewesen, aber letztlich hatte er der Verantwortung wohl doch nicht standhalten können und ist unter der Last zerbrochen."
+    "Anan" "Er ist einer der größten Verfechter des Glücks gewesen, aber letztlich hat er der Verantwortung wohl doch nicht standhalten können und ist unter der Last zerbrochen."
 
     "Anan" "Immerhin hat er der Menschheit viel Gutes getan. Ich werde ihn bei der Gründungsfeier ehren lassen. Ihm war das Glück aller Menschen stets am Wichtigsten."
+
+    show anan normal_mid
 
     "Anan" "Eine solche Person trifft man viel zu selten an."
 
@@ -629,6 +639,8 @@ label still_search_kloth:
 
     "Anan" "Nimm das Geschenk an, welches ich der Menschheit gemacht habe. Sei glücklich und zufrieden! Der Preis dafür war hoch und der Kampf dafür war lange."
 
+    show anan disappointed_mid
+
     "Anan" "Wieso kämpfst du gerade so sehr gegen dein eigenes Glück an?"
 
     "Anan" "Willst du wirklich Schmerz empfinden? Willst du diesen grauenhaften Schmerz empfinden, der dir die Luft zum Atmen nimmt?"
@@ -637,9 +649,13 @@ label still_search_kloth:
 
     "Anan" "All die Bilder der Toten? Ihre Augen, wie sie dich verzweifelt anblicken, voller Hoffnung, dass du sie retten kannst, obwohl es doch nicht möglich ist."
 
+    show anan normal_mid
+
     "Anan" "Es gibt für diese Welt keine andere Hoffnung als Glück."
 
     "Anan" "Nur das Glück und die Zufriedenheit jedes einzelnen Individuums sorgt dafür, dass die Welt in ihren Fugen bleibt."
+
+    show anan happy_mid
 
     "Anan" "Werde wieder glücklich, Atropos. Bitte. Bringe die Welt nicht aus dem Gleichgewicht. Ich will, dass es dir gut geht."
 
@@ -969,14 +985,17 @@ label menschenhelfen:
     with fadeshort
 
 
-    show ireia normal:
+    show ireia confused:
         xalign 0.25
-    show armene normal:
+    show armene normal_gray:
         xalign 0.75
 
     "Ireia" "Atropos, was ist los? Ist Aither in Gefahr?"
 
     "Atropos"  "Ich weiß es nicht, der Alarm ging mit einem Mal los. Aber ihr solltet besser bald das Gebäude verlassen."
+
+    show ireia confused_gray
+    show armene shy
 
     "Armene" "Ich will nicht, dass Aither etwas passiert. Wie soll ich denn sonst glücklich sein?"
 
@@ -984,13 +1003,21 @@ label menschenhelfen:
 
     "Atropos"  "Aber erkennt ihr es denn nicht? Wollt ihr wirklich auf diese Art und Weise glücklich sein? Euch ist jede andere Emotion genommen. Jede andere Option zu empfinden."
 
+    show armene shy_gray
+    show ireia normal
+
     "Ireia" "Ich will einfach nur glücklich sein. Ich möchte nicht, dass sich so etwas wie der 50-jährige Krieg wiederholt. Meine Eltern hatten mir von dieser Zeit erzählt…"
 
     "Ireia" "Da ist das hier doch nur ein kleiner Preis, nicht wahr? Ich bin glücklich so wie ich bin."
 
+    show ireia happy
+
     "Ireia" "Na los, Armene. Lass uns weiterarbeiten."
 
     "Ireia" "Ein Brand wird uns doch nicht einfach aufhalten. Der wird sicher bald gelöscht werden und wir haben nachher noch ein Meeting."
+
+    show ireia happy_gray
+    show armene nromal
 
     "Armene" "Natürlich Ireia. Man sieht sich später, Atropos!"
 

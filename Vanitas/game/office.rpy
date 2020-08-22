@@ -152,11 +152,15 @@ label conversation_with_anan:
 
     "Atropos"  "Anan… es tut mir leid…"
 
+    show anan disappointed_mid
+
     "Anan" "Es tut dir also leid."
 
     "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
     "Atropos"  "Schaden? Aber…"
+
+    show anan strict_mid
 
     "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
@@ -164,9 +168,13 @@ label conversation_with_anan:
 
     "Atropos"  "Ich…"
 
+    show anan happy_mid
+
     "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
 
     "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
+
+    show anan disappointed_mid
 
     "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
 
@@ -177,6 +185,8 @@ label conversation_with_anan:
     "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
 
     "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+
+    show anan happy_mid
 
     "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
 
@@ -199,6 +209,8 @@ label conversation_with_anan:
 
             "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
 
+            show anan disappointed_mid
+
             "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
 
             "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
@@ -212,6 +224,8 @@ label conversation_with_anan:
             "Anan" "Kann man noch vernünftig mit dir reden und dich überzeugen? Oder gehörst du bereits zu den verlorenen Seelen?"
 
             "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
+
+            show anan normal_mid
 
             "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
 
@@ -230,9 +244,11 @@ label understanding:
 
     "Atropos"  "Ich will glücklich sein und wenn Happiness der einzige Weg dorthin ist, dann werde ich diesem Weg folgen."
 
+    show anan happy_mid
+
     "Anan" "Happiness ist der einzige Weg. Wir haben viele andere Wege versucht, aber keiner hatte den Erfolg gebracht, welchen wir uns erhofft hatten."
 
-    "Anan" "Das Glück aller Menschen s teht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
+    "Anan" "Das Glück aller Menschen steht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
 
     "Anan" "Willst du glücklich sein?"
 
@@ -280,17 +296,23 @@ label understandingpart2:
 
     "Atropos"  "Ich sollte aufhören, so viele Fragen zu stellen."
 
+    show anan normal_mid
+
     "Anan" "Fragen sind gut. Fragen sind sogar wichtig, denn ohne Fragen kann man nicht zu Antworten kommen."
 
     "Anan" "Aber es ist wichtig, welche Art von Fragen gestellt werden. Es gibt falsche und es gibt richtige Fragen."
 
     "Anan" "Es gibt die Art von Fragen, die eine Rolle spielen. Die sinnvoll sind, die zu Veränderungen führen können."
 
+    show anan strict_mid
+
     "Anan" "Aber es gibt auch die Art von Fragen, die Unheil mit sich bringen. Fragen, die gefährlich sind. Fragen, auf die man besser keine Antwort bekommen möchte."
 
     "Anan" "Fragen, die dafür sorgen, dass falsche Vorstellungen im Kopf der Menschen gepflanzt werden."
 
     "Anan" "Und die Frage nach Happiness ist eine eben solche Frage."
+
+    show anan normal_mid
 
     "Anan" "Kannst du es denn nicht einfach akzeptieren und glücklich zu sein? Ich trage das Gewicht der Wahrheit auf meinen Schultern. Es sollte nicht auch noch auf deinen lasten müssen."
 
@@ -299,6 +321,8 @@ label understandingpart2:
     "Anan" "Es gibt keine universelle Wahrheit. Nur verschiedene Varianten von Lügen und Halbwahrheiten."
 
     "Anan" "Letztlich weiß wohl niemand genau, was die Wahrheit dahinter ist."
+
+    show anan strict_mid
 
     "Anan" "Deine Frage zielt wohl eher darauf ab, wie viele Menschen die Wirkung von Happiness verstehen können? Nimmst du die Pille, wenn ich dir eine Antwort auf diese Frage gebe?"
 
@@ -342,6 +366,8 @@ label understandingpart2:
 
     "Atropos" "Ich bin glücklich und ich werde die Pille nehmen. Ich brauche dafür die Wahrheit nicht. Weder die vollständige noch wie viele über die Wahrheit Bescheid wissen."
 
+    show anan happy_mid
+
     "Anan" "Ich danke dir."
 
     "Anan" "Ich danke dir für das Glück, das du den Menschen aufgrund deiner Entscheidung schenkst."
@@ -381,9 +407,13 @@ label understandingpart3:
 
     "Atropos"  "Ich will glücklich sein und wenn Happiness der einzige Weg dorthin ist, dann werde ich diesem Weg folgen."
 
+    show anan strict_mid
+
     "Anan" "Happiness ist der einzige Weg. Wir haben viele andere Wege versucht, aber keiner hatte den Erfolg gebracht, welchen wir uns erhofft hatten."
 
     "Anan" "Das Glück aller Menschen steht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
+
+    show anan normal_mid
 
     "Anan" "Willst du glücklich sein?"
 
@@ -399,6 +429,8 @@ label understandingpart3:
 
     "Anan" "Sei einfach nur glücklich. Mehr will ich nicht. Du hast es verdient glücklich zu sein, du leistet wertvolle Arbeit für die Gesellschaft."
 
+    show anan happy_mid
+
     "Anan" "Jemand, der Menschen ihr Glück bringt, sollte selbst nicht unglücklich sein."
 
     "Atropos"  "Du hast recht. Es tut mir leid."
@@ -407,7 +439,7 @@ label understandingpart3:
     with fadeshort
 
     # Atropos Gedanken
-    "Zum Glück hatte ich mich nicht in Anans Büro umgesehen. Sonst wäre ich wohl nicht so glimpflich davongekommen."
+    "Zum Glück habe ich mich nicht in Anans Büro umgesehen. Sonst wäre ich wohl nicht so glimpflich davongekommen."
 
     # Atropos Gedanken
     "Dann Mal auf ins Labor, um die Pille zu nehmen."
@@ -435,6 +467,8 @@ label questioning:
 
     "Atropos"  "Ich denke, ich bin glücklich."
 
+    show anan strict_mid
+
     "Anan" "Du {b}denkst{/b} also, dass du glücklich bist? Aber weißt du es auch? Bist du dir ganz sicher, dass du glücklich bist?"
 
     "Anan" "Bevor du mir diese Frage nicht mit einem überzeugten {b}Ja{/b} beantworten kannst, bist du nicht glücklich."
@@ -451,7 +485,11 @@ label questioning:
 
     "Anan" "Die Pille ist für dein Glück verantwortlich. Ohne Happiness kannst du nicht glücklich sein."
 
+    show anan disappointed_mid
+
     "Anan" "Nicht dauerhaft."
+
+    show anan normal_mid
 
     "Anan" "Es mag Momente geben, in denen du glücklich bist, so wie es vor Happiness der Fall war…"
 
@@ -472,6 +510,8 @@ label misunderstanding:
 
     "Atropos" "Wie macht sie uns glücklich?  Wirkt sie wie eine Droge? Lässt sie uns unglückliche Sachen vergessen und verdrängen? Sind wir dadurch einfach… glücklich?"
 
+    show anan normal_mid
+
     "Anan" "Wieso spielt es für dich eine Rolle auf welche Weise sie dich glücklich macht?"
 
     "Anan" "Was ändert es?"
@@ -479,6 +519,8 @@ label misunderstanding:
     "Atropos" "Alles… einfach alles… ich will die Wahrheit wissen… ist das Glück gar kein Glück, sondern einfach nur erzwungen? Nicht mehr als ein Schein?"
 
     "Anan" "Das Glück ist echt. Wie kann es falsches Glück geben? Glück ist, wenn du in einem Moment wirklich glücklich bist. Wenn es keine Sorgen, Zweifel und Probleme mehr gibt."
+
+    show anan happy_mid
 
     "Anan" "Glück ist die Erfüllung menschlichen Wünschens und Strebens. Der Weg dorthin spielt keine Rolle."
 
@@ -488,11 +530,15 @@ label misunderstanding:
 
     "Atropos" "Du bleibst die ganze Zeit so schwammig mit deinen Aussagen. Warum kann ich keine klaren Antworten bekommen?"
 
+    show anan normal_mid
+
     "Anan" "Weil es keine eindeutigen Antworten gibt und niemals geben wird. Uns bleibt allen nichts anderes als zu glauben, dass wir das Richtige tun und auf dem richtigen Weg sind."
 
     "Anan" "Und genau das tue ich."
 
-    "Anan" "(wirft einen raschen Blick auf sein Handy) Ich muss weg."
+    show anan strict_mid
+
+    "Anan" "(wirft einen raschen Blick auf sein Handy) Ich muss kurz weg."
 
     "Anan" "Dieses Gespräch ist noch nicht beendet. Wir setzen es fort, sobald ich zurück bin."
 
@@ -614,11 +660,15 @@ label how_many_infos_anan:
 
             "Atropos"  "Anan… es tut mir leid…"
 
+            show anan disappointed_mid
+
             "Anan" "Es tut dir also leid."
 
             "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
             "Atropos"  "Schaden? Aber…"
+
+            show anan strict_mid
 
             "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
@@ -626,11 +676,17 @@ label how_many_infos_anan:
 
             "Atropos"  "Ich…"
 
+            show anan normal_mid
+
             "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
 
             "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
 
+            show anan disappointed_mid
+
             "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+
+            show anan normal_mid
 
             "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
 
@@ -641,6 +697,8 @@ label how_many_infos_anan:
             "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
 
             "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+
+            show anan happy_mid
 
             "Anan" "Nimm Happiness, Atropos und werde wieder glücklich. Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
 
@@ -657,6 +715,8 @@ label how_many_infos_anan:
 
                     "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
 
+                    show anan disappointed_mid
+
                     "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
 
                     "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
@@ -664,6 +724,8 @@ label how_many_infos_anan:
                     "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
 
                     "Anan" "Ich dachte, dass du verstehen würdest, wie wichtig das Glück für die Menschen ist und dass du voll und ganz hinter Aither stehen würdest."
+
+                    show anan strict_mid
 
                     "Anan" "Aber das scheint nicht der Fall zu sein. Was soll ich jetzt nur mit dir anstellen?"
 
@@ -723,13 +785,13 @@ label how_many_infos_anan:
             # Atropos Gedanken
             "Glücklicher…"
 
-            show normal_mid
+            show anan normal_mid
 
             "Anan" "Wo waren wir stehen geblieben?"
 
             "Atropos" "Es… es tut mir leid."
 
-            "Anan" "Welche Fakten tun dir leid?"
+            "Anan" "Was genau tut dir leid?"
 
             "Atropos" "Ich denke ich hätte nicht so neugierig sein sollen. Du hast recht. Es ist gut so, wie es ist."
 
@@ -738,6 +800,8 @@ label how_many_infos_anan:
             "Atropos" "Ich weiß, es tut mir leid… ich wollte glücklich sein und das Glück auf meinem eigenen Weg erreichen, ohne zu erkennen, wie falsch das ist."
 
             "Atropos" "Was soll ich jetzt tun? Werde ich dafür bestraft, dass ich die Pille nicht genommen habe?"
+
+            show anan happy_mid
 
             "Anan" "Kehre ins Labor zurück und nimm Happiness. Werd wieder glücklich. Du wirst nicht bestraft."
 
@@ -751,10 +815,13 @@ label how_many_infos_anan:
 
             "Anan" "Sei geduldig und lass dich von den quälenden Fragen nicht länger peinigen. Sieh nach vorne und richte den Blick auf dein Glück."
 
+            show anan normal_mid
+
             "Anan" "Und jetzt zurück an die Arbeit. Ich erwarte deinen Bericht heute noch. Hab einen Tag voller Glück!"
 
             "Atropos" "Danke, ich werde mein Bestes geben."
 
+            hide anan
             scene hall
             with fadeshort
             jump takepillnow
@@ -842,15 +909,21 @@ label how_many_infos_anan:
 
             "Anan" "Es tut dir also leid."
 
+            show anan disappointed_mid
+
             "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
             "Atropos"  "Schaden? Aber…"
+
+            show anan strict_mid
 
             "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
             "Anan" "Verstehst du das, Atropos?"
 
             "Atropos"  "Ich…"
+
+            show anan normal_mid
 
             "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
 
@@ -859,7 +932,11 @@ label how_many_infos_anan:
             # Atropos Gedanken
             "Soll ich Anan unterbrechen?"
 
+            show anan disappointed_mid
+
             "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+
+            show anan normal_mid
 
             "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
 
@@ -943,6 +1020,8 @@ label how_many_infos_anan:
         # Atropos Gedanken
         "Anan hat gesehen, wie ich an seinem Computer stand und dort etwas gemacht habe."
 
+        show anan strict_mid
+
         "Anan" "Ich verlange augenblicklich eine Erklärung."
 
         "Atropos"  "Ich… ich…"
@@ -963,6 +1042,8 @@ label how_many_infos_anan:
 
         "Atropos" "Ich dachte, ich könnte vielleicht mehr über Happiness herausfinden, indem ich mich umschaue…"
 
+        show anan disappointed_mid
+
         "Anan" "(seufzt) Ich hatte gehofft, ich könnte dir eine zweite Chance geben. Ich hatte geglaubt, du würdest sie verdienen."
 
         # Atropos Gedanken
@@ -980,9 +1061,13 @@ label how_many_infos_anan:
 
         "Anan" "Ich will doch nur, dass die Menschen glücklich sind, Atropos. Ich will, dass du glücklich bist."
 
+        show anan strict_mid
+
         "Anan" "Aber irgendwann ist ein Maß erreicht, ich denke, das verstehst du? Wir können nicht so weitermachen, als wäre das nicht passiert. Die Zweifel sitzen bereits zu tief in dir."
 
         "Anan" "Deine Handlungen werden Konsequenzen mit sich ziehen. Du musst die Firma verlassen. Aber hab keine Sorge. Du kannst trotzdem glücklich sein."
+
+        show anan normal_mid
 
         "Anan" "Du wirst glücklich sein. Wir werden einen guten Job für dich finden, einen Job, der dich glücklich macht."
 
@@ -994,7 +1079,11 @@ label how_many_infos_anan:
 
         "Atropos" "Und der Brief über das angebliche Chaos, ohne Happiness. Das sind nichts anderes als Lügen, oder?"
 
+        show anan disappointed_mid
+
         "Anan" "Ich wünschte, es wären Lügen. Vielleicht würden die Menschen dann Happiness nicht brauchen, um glücklich zu sein."
+
+        show anan normal_mid
 
         "Anan" "Aber es sind keine Lügen. Und die Menschen brauchen Happiness, es gibt keine andere Lösung."
 
@@ -1037,6 +1126,7 @@ label how_many_infos_anan:
 
         "Atropos" "Ja."
 
+        hide anan
         scene hall
         with fadeshort
 
@@ -1099,6 +1189,8 @@ label face_anan:
     # alle
     "Atropos" "Was soll das alles? Was hat das zu bedeuten?"
 
+    show anan strict_mid
+
     "Anan" "Es ist wohl viel eher an mir, {b}dir{/b} diese Frage zu stellen."
 
     "Anan" "Ich verlange augenblicklich eine Erklärung."
@@ -1121,6 +1213,8 @@ label face_anan:
 
     "Atropos" "Ich dachte, ich könnte vielleicht mehr über Happiness herausfinden, indem ich mich umschaue…"
 
+    show anan disappointed_mid
+
     "Anan" "(seufzt) Ich hatte gehofft, ich könnte dir eine zweite Chance geben. Ich hatte geglaubt du würdest sie verdienen."
 
     # Atropos Gedanken
@@ -1138,6 +1232,8 @@ label face_anan:
 
     "Anan" "Ich will doch nur, dass die Menschen glücklich sind, Atropos. Ich will, dass du glücklich bist."
 
+    show anan strict_mid
+
     "Anan" "Aber irgendwann ist ein Maß erreicht, ich denke, das verstehst du? Wir können nicht so weitermachen, als wäre das nicht passiert. Die Zweifel sitzen bereits zu tief in dir."
 
     "Anan" "Deine Handlungen werden Konsequenzen mit sich ziehen. Du musst die Firma verlassen. Aber hab keine Sorge! Du kannst trotzdem glücklich sein."
@@ -1152,6 +1248,8 @@ label face_anan:
 
     "Anan" "Es ist gefährliches Wissen. Wissen, das dich ins Unglück stürzen kann- nein, sogar sicher wird."
 
+    show anan normal_mid
+
     "Anan" "Vertraue mir, Atropos. Ich will nur dein Bestes. Was denkst du hätte ich davon dich anzulügen?"
 
     "Anan" "Vertraue Happiness. Wir bringen dir dein glückliches Leben zurück, versprochen."
@@ -1162,6 +1260,8 @@ label face_anan:
     "Anan" "Du brauchst Zeit, um das alles zu vergessen. Zeit, bis sich dein Geist wieder beruhigt hat."
 
     "Anan" "Nimm die Happiness-Pille, sie wird dir helfen. Ich verspreche dir, dass dein Leben wieder glücklicher werden wird."
+
+    show anan strict_mid
 
     "Anan" "Bezüglich deiner neuen Arbeitsstelle wirst du morgen von Kloth hören."
 
@@ -1186,6 +1286,8 @@ label not_face_anan:
 
     "Atropos" "Ja… ja, haben sie… es tut mir leid…"
 
+    show anan strict_mid
+
     "Anan" "Kehre zurück ins Labor und nimm deine Pille. Sie wird dich wieder glücklich machen und all deine Zweifel vergessen lassen."
 
     "Anan" "Es ist die beste Lösung. Die einzige Lösung."
@@ -1194,10 +1296,13 @@ label not_face_anan:
 
     "Atropos" "Ja…"
 
+    show anan happy_mid
+
     "Anan" "Ich wünsche dir einen Tag voller Glücklichkeit, Atropos."
 
     "Atropos" "Danke… ich dir auch…"
 
+    hide anan
     scene hall
     with fadeshort
 
@@ -1592,21 +1697,33 @@ label end_search_kloth:
 
     "Atropos" "Kloth, was ist los?"
 
+    show kloth scared1_neutral
+
     "Kloth" "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
     "Atropos" "Beruhige dich erst einmal und atme tief durch. Was ist passiert? "
+
+    show kloth scared2
 
     "Kloth" "Nicht hier … es könnte jemand kommen und dann…"
 
     "Atropos" "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
+    show kloth scared1
+
     "Kloth" "Ich… ich…"
 
     "Atropos" "Ich wollte eigentlich gerade Mittagspause machen. Willst du nicht einfach mitkommen und wir reden dann? Chesis scheint auch Pause zu haben."
 
+    show kloth scared2
+
     "Kloth" "Du hörst mir ja gar nicht richtig zu… bitte… ich… ich weiß nicht, an wen ich mich sonst wenden soll. Ich brauche dich jetzt."
 
+    show kloth scared1_neutral
+
     "Kloth" "Es gibt da etwas, das ich schon eine ganze Weile mit mir herumtrage und ich komme alleine einfach nicht damit klar. Bitte, ich muss mit jemandem darüber sprechen."
+
+    show kloth scared2
 
     "Kloth" "Du bist der Einzige, der mir helfen kann!"
 
@@ -1614,24 +1731,39 @@ label end_search_kloth:
     # ab hier Glitch
     scene stairs_up
     with fadeshort
+    show kloth scared1
 
     "Kloth" "Neeeein!"
+
+    show kloth crazy
 
     "Kloth" "Atropos! Sie verfolgen uns. Wir haben keine Chance gegen sie!"
 
     "Kloth" "Sie werden uns finden und dann töten. Erst dich und dann mich!"
 
+    show kloth scared2
+
     "Kloth" "Sie mögen es nicht, wenn die Wahrheit über sie herauskommt! Sie werden alles dafür tun, dass sie verborgen bleibt!"
+
+    show kloth crazy
 
     "Kloth" "Sie leben! Sie sind in unserem Kopf! Immer, ganz laut!"
 
     "Kloth" "Und trotzdem nimmst du sie nicht wahr. Sie sind ein Teil von dir."
 
+    show kloth scared1
+
     "Kloth" "Ich bin sie losgeworden, aber nun wollen sie mich töten. Ich darf dieses Wissen nicht weitergeben!"
+
+    show kloth scared2
 
     "Kloth" "Wenn ich es tue, dann sterbe ich!"
 
+    show kloth scared1
+
     "Kloth" "Du wirst mich töten, nicht wahr?"
+
+    show kloth crazy
 
     "Kloth" "Du wirst uns alle töten!"
 
