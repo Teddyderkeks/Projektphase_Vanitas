@@ -56,42 +56,75 @@ label talk_with_colleagues:
     # Atropos Gedanken
     "Ich denke ich werde mich erst mit meinen Freunden unterhalten. Für alles andere ist auch nachher noch Zeit."
 
-    "Atropos" "Hey- schön euch zu sehen. Macht ihr gerade eine kleine Pause?"
-
     show tycho normal
     show ireia normal
     show neiro normal
     show armene normal
 
+    "Atropos" "Hey- schön euch zu sehen. Macht ihr gerade eine kleine Pause?"
 
-    "Tycho" "Jap. Wir waren unten in der Mensa und hatten uns einen kleinen Snack geholt. Jetzt sind wir auf dem Rückweg ins Labor."
+    show tycho happy
+    show ireia normal_gray
+    show neiro normal_gray
+    show armene normal_gray
+
+
+    "Tycho" "Jap. Wir waren unten in der Mensa und haben uns einen kleinen Snack geholt. Jetzt sind wir auf dem Rückweg ins Labor."
 
     "Tycho" "Was treibt dich hierher?"
 
     "Atropos" "Ach, ich bin auf dem Rückweg zum Labor."
 
+    show tycho happy_gray
+    show ireia normal
+
     "Ireia" "Auf dem Rückweg? Meinst du auf dem Rückweg von Anans Büro? Ich hatte dich vorher aus diesem kommen sehen. Auch wenn mittlerweile etwas Zeit seit diesem Zeitpunkt vergangen ist."
+
+    show ireia confused
 
     "Ireia" "Wieso bist du nicht direkt zurück?"
 
     "Atropos" "Ich…"
 
+    show ireia confused_gray
+    show tycho really_happy
+
     "Tycho" "Ach, verkehrst du mittlerweile in höheren Kreisen? Sind wir dir nicht mehr gut genug? (lacht)"
 
     "Atropos" "Ich war bei ihm, aber…"
 
+    show tycho really_happy_gray
+    show neiro normal
+
     "Neiro" "Es geht um Anan? Du durftest Zeit mit ihm verbringen? Das muss traumhaft sein… (seufzt)"
+
+    show neiro normal _gray
+    show armene shy
 
     "Armene" "Ich wünschte, ich hätte einmal das Glück mit ihm persönlich zu sprechen! Es gibt wirklich keine größere Ehre als für Anan zu arbeiten!"
 
+    show armene shy_gray
+    show neiro happy
+
     "Neiro"  "Und es gibt definitiv auch keinen besseren Chef. Ich kenne niemanden, der sich so sehr um das Wohl der Menschheit sorgt und sich für alle einsetzt."
+
+    show neiro happy_gray
+    show armene shy
 
     "Armene" "Und er ist so charmant und gut aussehend…"
 
+    show armene shy_gray
+    show ireia strict
+
     "Ireia" "Armene, Anan ist unfassbar toll, aber es ist immer noch dein Chef über den du hier redest."
+
+    show ireia strict_gray
+    show armene normal
 
     "Armene" "Tut mir leid, Ireia…"
 
+    show armene normal_gray
+    show tycho happy
 
     "Tycho" "Also, erzähl schon. Was hatte dich zu Anan verschlagen?"
 
@@ -102,7 +135,12 @@ label talk_with_colleagues:
 
     "Tycho" "Es ist schon unglaublich, dass sich so eine bedeutende Person wie Anan Zeit für persönliche Gespräche nimmt. Und dabei ist er auch immer so locker und entspannt drauf."
 
+    show tycho really_happy
+
     "Tycho" "Ich hatte neulich auch mal ein Gespräch mit ihm und…"
+
+    show tycho really happy_gray
+    show ireia strict
 
     "Ireia" "Die Geschichte hast du schon tausend Mal erzählt."
 
@@ -113,7 +151,14 @@ label talk_with_colleagues:
     "Aber vermutlich hatte er einen stressigen Tag, er trägt immerhin nicht wenig Verantwortung und dann kam auch noch ich zu seinen Problemen hinzu."
 
     "Atropos"  " Heute beim Gespräch wirkte er nicht unbedingt entspannt…"
+
+    show ireia strict_gray
+    show neiro nervous_laugh
+
     "Neiro"  "Nun, wenn man so hart und voller Freude arbeitet wie Anan, kann man sich wohl nicht entspannen. Er hat immer etwas zu tun."
+
+    show neiro nervous_laugh_gray
+    show ireia happy
 
     "Ireia" "Es muss viel Arbeit machen das Glück aller zu erhalten. Wir sind ihm wirklich viel schuldig."
 
@@ -122,18 +167,35 @@ label talk_with_colleagues:
 
     "Atropos"  " Nein, so meinte ich das nicht. Es geht mehr darum wie Anan sich verh…"
 
+    show ireia normal
+
     "Ireia" "Wir können alle noch viel von Anan lernen. Sein Enthusiasmus ist unglaublich. Aber hier zu arbeiten und das Glück in die Welt zu bringen- es gibt einfach keinen besseren Job."
+
+    show ireia normal_gray
+    show armene happy
 
     "Armene" "Und wir haben das Glück, dass wir unsere Happiness dafür auch noch umsonst bekommen. Kostenloses Glück, besser geht es nicht."
 
     # Atropos Gedanken
     "Sie verehren Anan wirklich wie einen Gott. Ob ich mich in ihm getäuscht habe? Aber irgendwie… warum ignorieren sie meine Aussagen, als wäre ich gar nicht da?"
 
+    show armene happy_gray
+    show ireia strict
+
     "Ireia" "Wir müssen langsam zurück an die Arbeit. Es ist noch eine ganze Menge zu tun."
+
+    show ireia strict_gray
+    show armene happy
 
     "Armene" "Wir organisieren gerade die Gründungsfeier, weißt du? Es wird ein riesiges Fest."
 
+    show armene happy_gray
+    show ireia happy
+
     "Ireia" "Na los, sonst kommen wir zu nichts. (lacht)"
+
+    show ireia happy_gray
+    show tycho really_happy
 
     "Tycho" "Mach’s gut. Wir sehen uns."
 

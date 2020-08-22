@@ -13,20 +13,30 @@ label escapelater:
 
     "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
 
+    show era normal_gray
     show narcais normal
 
     "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe, mich dieser zu widmen."
+
+    show narcais annoyed
 
     "Narcais" "Kann ich denn wenigstens heute noch von dir Feedback erwarten?"
 
     "Atropos" "Ich hatte erst einmal alles für Anans Bericht fertiggestellt, aber sobald ich von der Mittagspause zurückkomme, setze ich mich dran."
 
+    show narcais normal
+
     "Narcais" "Danke, das klingt doch vielversprechend."
 
     "Atropos" "Also dann, ihr beiden. Wir sehen uns später."
 
+    show narcais normal_gray
+    show era happy
+
     "Era" "B-Bis später!"
 
+    hide era
+    hide narcais
     scene hall
     with fadeshort
 
@@ -49,6 +59,8 @@ label escapelater:
 
     "Atropos" "Danke für die Info, aber ich denke, ich suche erstmal nach Chesis."
 
+    show zelos happy
+
     "Zelos" "Alles klar. Dir noch eine schöne Mittagspause!"
 
     "Atropos" "Danke, dir auch!"
@@ -58,6 +70,7 @@ label escapelater:
     # Atropos Gedanken
     "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
+    hide zelos
     scene shop_2
     with fadeshort
 
@@ -72,16 +85,20 @@ label escapelater:
 
     "Atropos" "Hast du Zeit für eine Mittagspause?"
 
+    show chesis happy
+
     "Chesis" "Bin gerade mit meinem Gespräch fertig geworden, wo wollen wir hin?"
 
     # Hier Option für weiteren Smalltalk wie Chesis Arbeitstag verlaufen ist
 
-
     "Atropos" "Gehen wir ins Büro und holen uns dort erstmal einen Kaffee?"
+
+    show chesis happy_alt
 
     "Chesis" "Gerne."
 
     scene office_2
+    show chesis normal
     with fadeshort
 
     "Atropos" "Die anderen sind nicht da, vermutlich sind sie bereits in der Mensa. Wollen wir uns ihnen nachher anschließen?"
@@ -90,17 +107,25 @@ label escapelater:
 
     "Atropos" "Alles gut, wegen mir müssen wir nicht in die Mensa. Ich weiß doch, dass du dich am wohlsten fühlst, wenn wir nur unter uns sind."
 
+    show chesis happy
+
     "Chesis" "Danke."
 
     "Atropos" "Wie war dein Arbeitstag heute?"
+
+    show chesis normal
 
     "Chesis" "Gut. Wie immer."
 
     "Atropos" "Meinen Tag heute wirst du mir nicht glauben!"
 
+    show chesis confused
+
     "Chesis" "Was ist passiert?"
 
     "Atropos" "Ich durfte mehrmals mit Anan sprechen!"
+
+    show chesis happy
 
     "Chesis" "Wow, wie kam es dazu?"
 
@@ -110,21 +135,33 @@ label escapelater:
 
     "Atropos" "Und ich bin froh, dass mir Anan meinen Fehler verziehen hat. Er ist wirklich der beste Chef, den man sich wünschen kann!"
 
+    show chesis happy_alt
+
     "Chesis" "Das stimmt wohl!"
+
+    show chesis confused
 
     "Chesis" "Sag mal, stört es dich, wenn Philote heute Abend mit uns isst?"
 
     "Atropos" "War sie nicht mit Freunden verabredet?"
 
+    show chesis normal
+
     "Chesis" "Ja, aber die haben keine Zeit mehr."
 
     "Atropos" "Achso… ja, klar, kein Problem. Philote gehört doch schon seit Jahren unzertrennlich zu dir und ich mag sie wirklich gern."
 
+    show chesis happy
+
     "Chesis" "Danke!"
+
+    show chesis confused
 
     "Chesis" "Oh… tut mir leid, ich habe gleich noch einen wichtigen Termin. Ich muss zurück."
 
     "Atropos" "Kein Problem, wir sehen uns dann später!"
+
+    show chesis happy
 
     "Chesis" "Bis dann!"
 
@@ -148,18 +185,22 @@ label escapelater:
 
     if datewithera:
 
-        show era normal:
+        show era confused:
             xalign 0.5
 
         "Era" "Atropos? W-Was ist los?"
 
         "Atropos" "Die Computer funktionieren aus irgendeinem Grund nicht."
 
+        show era normal
+
         "Era" "Du könntest in den Serverraum gehen und dort mal nachfragen… Vi…Vielleicht wissen sie dort, was das Problem ist."
 
         "Atropos" "Stimmt, das ist eine gute Idee."
 
         "Atropos" "Wo liegt der Serverraum nochmal? Ich war schon seit Ewigkeiten nicht mehr dort."
+
+        show era shy
 
         "Era" "Wenn…, wenn du willst könnte ich dich hinbringen?"
 
@@ -171,7 +212,8 @@ label escapelater:
 
     else:
 
-        show narcais normal
+        show era shy_gray
+        show narcais annoyed
 
         "Narcais" "Funktioniert dein Computer auch nicht mehr?"
 
@@ -198,27 +240,39 @@ label gowithnarcais:
 
     "Atropos" "Ja, bin ich. Er ist wirklich gut geworden- wie immer."
 
+    show narcais cocky
+
     "Narcais" "Ich weiß. Sag mal…"
 
     "Atropos" "Was?"
 
-    "Narcais" "Hattest du schon Mal eine Freundin?"
+    show narcais confused
+
+    "Narcais" "Hattest du schon mal eine Freundin?"
 
     "Atropos" "Was? Wie? Wie kommst du jetzt darauf?"
+
+    show narcais normal
 
     "Narcais" "Hattest du?"
 
     "Atropos" "Nein, bisher noch nicht…"
 
+    show narcais confused
+
     "Narcais" "Oh…"
 
     "Atropos" "Nein… sag mir nicht… du brauchst einen Rat? (lacht)"
+
+    show narcais annoyed
 
     "Narcais" "Nein… nein… ich doch nicht…"
 
     "Atropos" "Na los, sag schon. Wie kann ich dir helfen?"
 
     "Atropos" "Um wen geht es?"
+
+    show narcais confused
 
     "Narcais" "Kennst du Neiro?"
 
@@ -231,6 +285,8 @@ label gowithnarcais:
     "Narcais" "Danke… und vergiss dieses Gespräch bitte…"
 
     "Atropos" "Keine Sorge. Ich denke, ihr wärt süß zusammen, ich drücke dir auf alle Fälle die Daumen!"
+
+    show narcais normal
 
     "Narcais" "Danke."
 
@@ -251,6 +307,8 @@ label gowithnarcais:
 
     "Atropos" "Hmm?"
 
+    show narcais confused
+
     "Narcais" "Ich habe nächste Woche Geburtstag- feierst du ihn mit mir?"
 
     "Atropos" "Klar, gerne!"
@@ -263,6 +321,8 @@ label gowithnarcais:
 
     "Atropos" "Bestimmt! (lacht)"
 
+    show narcais annoyed
+
     "Narcais" "Sei mal leise! Hörst du auch dieses seltsame Ticken?"
 
     "Atropos" "Du hast Recht… was ist das?"
@@ -271,6 +331,8 @@ label gowithnarcais:
     "{i}Lauf! {/i}"
 
     "Atropos" "Was?"
+
+    show narcais confused
 
     "Narcais" "Was ist los?"
 
@@ -305,7 +367,7 @@ label dontgowithnarcais:
 
     hide narcais
 
-    show era normal
+    show era shy
 
     "Era" "A-An was arbeitest du gerade?"
 
@@ -314,6 +376,8 @@ label dontgowithnarcais:
     "Era" "O-Oh… okay…"
 
     "Atropos" "Kommst du mit deinen Analysen voran?"
+
+    show era normal
 
     "Era" "J-Ja… ich denke schon!"
 
@@ -327,25 +391,37 @@ label dontgowithnarcais:
 
     "Atropos" "Hast du Lust heute Abend zu grillen? Chesis, Kloth und ich sind verabredetet, aber sie haben bestimmt nichts gegen etwas Gesellschaft."
 
+    show era shy
+
     "Era" "W-Was? Wie…? Ich…"
 
     "Atropos" "Also… du musst nicht… es war nur eine Idee gewesen."
+
+    show era happy
 
     "Era" "Es würde mich sehr freuen…"
 
     "Atropos" "Super, dann ist es abgemacht!"
 
+    show era shy
+
     "Era" "J-Ja…"
 
     "Atropos" "Soll ich dich dann nachher abholen?"
+
+    show era happy
 
     "Era" "Gerne!"
 
     "Atropos" "Dann bin ich gegen 19 Uhr da."
 
+    show era normal
+
     "Era" "Oh… Atropos…"
 
     "Atropos" "Was gibt’s? Kannst du doch nicht?"
+
+    show era confused
 
     "Era" "Nein… nein! Ich… wollte nur fragen, ob meine Nichte uns begleiten kann. Seit meine Schwester und deren Frau starb, kümmere ich mich um sie."
 
@@ -353,7 +429,11 @@ label dontgowithnarcais:
 
     "Atropos" "Ich glaube du hattest es Mal erwähnt- Mögen sie nun für immer glücklich sein. Aber klar, bring sie mit! Es würde mich freuen sie kennenzulernen."
 
+    show era happy
+
     "Era" "Danke…"
+
+    show era shy
 
     "Era" "Und… und vielleicht können wir uns das nächste Mal dann ja zu zweit treffen?"
 

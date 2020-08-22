@@ -11,11 +11,17 @@ label takepillnow:
 
     "Atropos" "Hast du meine Happiness-Pillen gesehen? Ich kann sie nicht finden?"
 
+    show era confused
+
     "Era" "Nein, leider nicht… tut mir leid… aber du kannst gerne eine von meinen haben… Also, wenn du möchtest."
+
+    show era normal
 
     "Era" "Oder du nimmst eine aus dem Notfallset…"
 
     "Atropos" "Muss ich dann wohl. (lacht) Aber danke trotzdem für das Angebot, Era."
+
+    show era happy
 
     "Era" "K-Kein Problem…"
 
