@@ -13,22 +13,22 @@ label leave_or_corpse:
 
 label leave_and_go_pill:
     # Atropos Gedanken
-    "Ich will das nicht sehen… ich habe Angst."
+    symb"Ich will das nicht sehen… ich habe Angst."
 
     # Symbiont
-    "{i}Ja, geh zurück! Geh zurück ins Labor und vergiss, was du gesehen hast. Nimm Happiness und werde glücklich! {/i}"
+    symb"{i}Ja, geh zurück! Geh zurück ins Labor und vergiss, was du gesehen hast. Nimm Happiness und werde glücklich! {/i}"
 
     # Atropos Gedanken
-    "Vermutlich sollte ich Happiness wohl wirklich besser nehmen… ich will es einfach nur vergessen."
+    symb"Vermutlich sollte ich Happiness wohl wirklich besser nehmen… ich will es einfach nur vergessen."
 
     # Atropos Gedanken
-    "Ich will einfach nur glücklich sein. Mein Leben war zuvor so einfach und ohne Probleme… das hier macht mir Angst."
+    symb"Ich will einfach nur glücklich sein. Mein Leben war zuvor so einfach und ohne Probleme… das hier macht mir Angst."
 
     scene lab
     with fadeshort
 
     # Atropos Gedanken
-    "Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
+    symb"Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
     show era confused
 
     "Era" "Was… was ist los, Atropos?"
@@ -50,30 +50,30 @@ label leave_and_go_pill:
     hide era
 
     # Atropos Gedanken
-    "Na los, ich tue das Richtige. Es ist die richtige Entscheidung Happiness zu nehmen."
+    symb"Na los, ich tue das Richtige. Es ist die richtige Entscheidung Happiness zu nehmen."
 
     # Atropos Gedanken
-    "Es ist die richtige Entscheidung, glücklich sein zu wollen."
+    symb"Es ist die richtige Entscheidung, glücklich sein zu wollen."
 
     "Atropos" "(schluckt Happiness)"
 
     # Symbiont
-    "{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
+    symb"{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
 
     # Symbiont
-    "{i}Denk an dein einziges Ziel im Leben: glücklich zu sein. Egal wie diese Art von Glück für dich auch aussehen mag. {i}"
+    symb"{i}Denk an dein einziges Ziel im Leben: glücklich zu sein. Egal wie diese Art von Glück für dich auch aussehen mag. {i}"
 
     # Atropos Gedanken
-    "Ich bin glücklich! Und nun zurück an die Arbeit- es dauert nicht mehr lange bis zur Mittagspause."
+    symb"Ich bin glücklich! Und nun zurück an die Arbeit- es dauert nicht mehr lange bis zur Mittagspause."
 
     jump escapelater
 
 label kloth_corpse:
     # Atropos Gedanken
-    "Ich kann die Leiche nicht einfach liegenlassen, ohne zu wissen, wer es ist!"
+    symb"Ich kann die Leiche nicht einfach liegenlassen, ohne zu wissen, wer es ist!"
 
     # Atropos Gedanken
-    "Trotzdem habe ich Angst…"
+    symb"Trotzdem habe ich Angst…"
 
     scene corpse
     with fadeshort
@@ -93,10 +93,10 @@ label kloth_corpse:
     "Atropos" "Kloth… bitte…"
 
     # Symbiont
-    "{i}Pille, du musst deine Pille nehmen. Du halluzinierst, merkst du es denn nicht? Das hier kann nicht wahr sein. {i}"
+    symb"{i}Pille, du musst deine Pille nehmen. Du halluzinierst, merkst du es denn nicht? Das hier kann nicht wahr sein. {i}"
 
     # Symbiont
-    "{i}Wie könnte so etwas Schreckliches wahr sein? Du bist doch eigentlich glücklich.{i}"
+    symb"{i}Wie könnte so etwas Schreckliches wahr sein? Du bist doch eigentlich glücklich.{i}"
 
     "Atropos" "Nein… es ist wahr… es ist wahr… ich will nicht, dass es wahr ist, aber es ist wahr…"
 
@@ -115,7 +115,7 @@ label kloth_corpse:
     "Atropos" "Kann das alles einfach nur ein schlechter Traum sein? Ich habe nicht die Kraft, es durchzustehen, falls es wirklich wahr sein sollte…"
 
     # Symbiont
-    "{i}Ja, genau. Es ist nicht mehr als nur ein Traum. Du solltest weitergehen und eine Pause machen. Nimm die Pille, danach wird es dir besser gehen.{i}"
+    symb"{i}Ja, genau. Es ist nicht mehr als nur ein Traum. Du solltest weitergehen und eine Pause machen. Nimm die Pille, danach wird es dir besser gehen.{i}"
 
     "Atropos" "Ich weiß nicht mehr, was ich tun soll… Ich will weggehen, aber gleichzeitig habe ich das Gefühl, dass das hier real ist."
 
@@ -214,16 +214,16 @@ label reschedule_conversation_kloth:
     "Kloth" "Und wie sie es ist. Sie ist gefährlich, vielleicht sogar tödlich… Bitte… können wir an einen ruhigen Ort gehen und ich erzähle dir dann alles?"
 
     # Symbiont
-    "Rede nicht mit ihm! Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen."
+    symb"Rede nicht mit ihm! Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen."
 
     # Symbiont
-    "Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast!"
+    symb"Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast!"
 
     # Symbiont
-    "Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?"
+    symb"Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?"
 
     # Symbiont
-    "Lehne das Gespräch ab. Es wäre ein großer Fehler, mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen."
+    symb"Lehne das Gespräch ab. Es wäre ein großer Fehler, mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen."
 
 
     jump conversation_with_kloth
@@ -254,13 +254,13 @@ label accept_conversation_kloth:
     # Schwarzer Bildschirm, dann Glitch-Effekte
 
     # Symbiont
-    "Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht? "
+    symb"Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht? "
 
     # Symbiont
-    "Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?"
+    symb"Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?"
 
     # Symbiont
-    "Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?"
+    symb"Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?"
 
     "Atropos" "Nein… nein, ich will ein glückliches Leben haben."
     # Ende Glitch-Effekt
@@ -274,7 +274,7 @@ label accept_conversation_kloth:
     "Kloth" "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
 
     # Symbiont
-    "Ein glückliches Leben. Ein Leben voller Happiness."
+    symb"Ein glückliches Leben. Ein Leben voller Happiness."
 
     $ renpy.movie_cutscene("atropos_accepts_conversation.mpg")
 
@@ -309,10 +309,10 @@ label refuse_conversation_kloth:
     "Kloth" "Aber da habe ich mich wohl getäuscht. Ich habe mich in dir getäuscht. In dem Moment, in dem ich dich am meisten brauche, bist du nicht für mich da."
 
     # Symbiont
-    "{i}Lass dir kein schlechtes Gewissen einreden. Du hast die richtige Entscheidung getroffen. {/i}"
+    symb"{i}Lass dir kein schlechtes Gewissen einreden. Du hast die richtige Entscheidung getroffen. {/i}"
 
     # Symbiont
-    "{i}Wie kann er sich dein Freund nennen und dich gleichzeitig in ein tödliches Geheimnis einweihen wollen? So jemand darf sich nicht dein Freund schimpfen. {/i}"
+    symb"{i}Wie kann er sich dein Freund nennen und dich gleichzeitig in ein tödliches Geheimnis einweihen wollen? So jemand darf sich nicht dein Freund schimpfen. {/i}"
 
     "Kloth" "Vielleicht ist Chesis ja ein besserer Freund. Vielleicht hört wenigstens er mir zu."
 

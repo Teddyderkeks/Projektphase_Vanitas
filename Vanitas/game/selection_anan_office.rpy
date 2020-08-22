@@ -122,19 +122,19 @@ label letter_anan:
     $ infos_count_anan += 1
 
     # Atropos Gedanken
-    "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen."
+    symb"Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen."
 
     # Atropos Gedanken
-    "Von wem dieser wohl stammt?"
+    symb"Von wem dieser wohl stammt?"
 
     # Atropos Gedanken
-    "Atlas? Was….? Das kann doch nicht sein… Ist das etwa {b}der{/b} Atlas?"
+    symb"Atlas? Was….? Das kann doch nicht sein… Ist das etwa {b}der{/b} Atlas?"
 
     # Atropos Gedanken
-    "Der Brief sieht aus als wäre er schon etwas älter. Kennen sie sich wirklich schon so lange?"
+    symb"Der Brief sieht aus als wäre er schon etwas älter. Kennen sie sich wirklich schon so lange?"
 
     # Atropos Gedanken
-    "Anan meinte zuvor bei seiner Ansprache, dass Adrés und Atlas ihn im Krieg retteten, aber irgendwie konnte ich es nicht ganz glauben. Sie müssen schon ewig Freunde sein, so wie Chesis, Kloth und ich."
+    symb"Anan meinte zuvor bei seiner Ansprache, dass Adrés und Atlas ihn im Krieg retteten, aber irgendwie konnte ich es nicht ganz glauben. Sie müssen schon ewig Freunde sein, so wie Chesis, Kloth und ich."
 
     scene detail_letter1
     with fadeshort
@@ -148,23 +148,23 @@ label after_detail_letter1:
 label after_detail_letter2:
 
     # Atropos Gedanken
-    "Was hat das alles zu bedeuten?"
+    symb"Was hat das alles zu bedeuten?"
 
     # Atropos Gedanken
-    "Ist Happiness wirklich so wichtig?"
+    symb"Ist Happiness wirklich so wichtig?"
 
     # Atropos Gedanken
-    "Aber… was jetzt?"
+    symb"Aber… was jetzt?"
 
     # Atropos Gedanken
-    "Was soll ich mit diesem Wissen anfangen?"
+    symb"Was soll ich mit diesem Wissen anfangen?"
 
     if infos_count_anan <3:
         scene anan_office
         with fadeshort
 
         # Atropos Gedanken
-        "Soll ich nach mehr Hinweisen suchen? Aber Anan… er könnte jeden Moment zurückkommen."
+        symb"Soll ich nach mehr Hinweisen suchen? Aber Anan… er könnte jeden Moment zurückkommen."
 
         jump selection_anan_office
     else:
@@ -177,10 +177,10 @@ label document_anan:
     $ infos_count_anan += 1
 
     # Atropos Gedanken
-    "Ich könnte mir die herumliegenden Dokumente ansehen."
+    symb"Ich könnte mir die herumliegenden Dokumente ansehen."
 
     # Atropos Gedanken
-    "Ob ich sie überhaupt verstehe? Die wirken ziemlich kompliziert."
+    symb"Ob ich sie überhaupt verstehe? Die wirken ziemlich kompliziert."
 
     scene detail_document
     with fadeshort
@@ -188,13 +188,13 @@ label document_anan:
     label after_detail_document:
 
         # Atropos Gedanken
-        "Was ist das alles? Ich verstehe die Zusammenhänge nicht, aber es scheint um die Wirkungsweisen des Gehirns in Bezug auf bestimmte Substanzen zu gehen?"
+        symb"Was ist das alles? Ich verstehe die Zusammenhänge nicht, aber es scheint um die Wirkungsweisen des Gehirns in Bezug auf bestimmte Substanzen zu gehen?"
 
         # Atropos Gedanken
-        "Ob es wohl das ist, was die Pille mit unseren Köpfen anrichtet und uns so unsere Glücklichkeit bringt?"
+        symb"Ob es wohl das ist, was die Pille mit unseren Köpfen anrichtet und uns so unsere Glücklichkeit bringt?"
 
         # Atropos Gedanken
-        "Ich wünschte ich könnte besser verstehen, was hier alles steht, aber das sind alles Substanzen, mit denen ich selbst nicht arbeite und von denen ich noch nie gehört habe…"
+        symb"Ich wünschte ich könnte besser verstehen, was hier alles steht, aber das sind alles Substanzen, mit denen ich selbst nicht arbeite und von denen ich noch nie gehört habe…"
 
         scene anan_office
         with fadeshort
@@ -202,20 +202,20 @@ label document_anan:
         if infos_count_anan <3:
 
             # Atropos Gedanken
-            "Ob ich wohl noch mehr Hinweise finde, die das hier irgendwie erklären?"
+            symb"Ob ich wohl noch mehr Hinweise finde, die das hier irgendwie erklären?"
 
             if straight_anan_office:
                 # Symbiont
-                "{i}Bleibe weg und verlass augenblicklich das Büro! Diese Sachen gehen dich nichts an. Das wird dich in ein großes Unglück stürzen. {i}"
+                symb"{i}Bleibe weg und verlass augenblicklich das Büro! Diese Sachen gehen dich nichts an. Das wird dich in ein großes Unglück stürzen. {i}"
 
                 # Symbiont
-                "{i}Es wird nicht mehr lange dauern bis Anan kommt. {i}"
+                symb"{i}Es wird nicht mehr lange dauern bis Anan kommt. {i}"
             else:
                 # Symbiont
-                "{i}Bleib weg und setz dich wieder auf deinen Stuhl! Diese Sachen gehen dich nichts an. Das wird dich in ein großes Unglück stürzen. {i}"
+                symb"{i}Bleib weg und setz dich wieder auf deinen Stuhl! Diese Sachen gehen dich nichts an. Das wird dich in ein großes Unglück stürzen. {i}"
 
                 # Symbiont
-                "{i}Es wird nicht mehr lange dauern, bis Anan zurückkommt. {i}"
+                symb"{i}Es wird nicht mehr lange dauern, bis Anan zurückkommt. {i}"
 
             jump selection_anan_office
         else:
@@ -227,16 +227,16 @@ label computer_anan:
     $ infos_count_anan += 1
 
     # Atropos Gedanken
-    "Ich könnte mich auf Anans PC umsehen."
+    symb"Ich könnte mich auf Anans PC umsehen."
 
     # Atropos Gedanken
-    "Oh verdammt… da ist ja alles passwortgeschützt… habe ich überhaupt auf irgendetwas Zugriff?"
+    symb"Oh verdammt… da ist ja alles passwortgeschützt… habe ich überhaupt auf irgendetwas Zugriff?"
 
     # Atropos Gedanken
-    "Dieses Dokument, das offen ist… Anan scheint vergessen zu haben es zu schließen als er vorher sein Büro verließ."
+    symb"Dieses Dokument, das offen ist… Anan scheint vergessen zu haben es zu schließen als er vorher sein Büro verließ."
 
     # Atropos Gedanken
-    "Was wohl der Inhalt dessen ist?"
+    symb"Was wohl der Inhalt dessen ist?"
 
     scene detail_ananpc
     with fadeshort
@@ -245,16 +245,16 @@ label computer_anan:
     label after_detail_ananpc:
 
         # Atropos Gedanken
-        "Was ist das für eine Tabelle? Und warum stehe ich als neuester Eintrag drinnen? Ich muss beobachtet werden?"
+        symb"Was ist das für eine Tabelle? Und warum stehe ich als neuester Eintrag drinnen? Ich muss beobachtet werden?"
 
         # Atropos Gedanken
-        "Was hat das zu bedeuten? Sind das alles Menschen, die keine Pille genommen haben?"
+        symb"Was hat das zu bedeuten? Sind das alles Menschen, die keine Pille genommen haben?"
 
         # Atropos Gedanken
-        "Die Liste ist nicht sonderlich lang… aber warum muss extra eine Liste über uns geführt werden?"
+        symb"Die Liste ist nicht sonderlich lang… aber warum muss extra eine Liste über uns geführt werden?"
 
         # Atropos Gedanken
-        "Ist es wirklich so gefährlich für die Menschheit, wenn ein paar wenige Menschen sie nicht nehmen?"
+        symb"Ist es wirklich so gefährlich für die Menschheit, wenn ein paar wenige Menschen sie nicht nehmen?"
 
         scene anan_office
         with fadeshort
@@ -262,12 +262,12 @@ label computer_anan:
         if infos_count_anan <3:
 
             # Atropos Gedanken
-            "Bringen mir andere Sachen mehr Antworten? Soll ich mir noch etwas anschauen oder sollte ich es lieber bleiben lassen?"
+            symb"Bringen mir andere Sachen mehr Antworten? Soll ich mir noch etwas anschauen oder sollte ich es lieber bleiben lassen?"
             # Symbiont
-            "{i}Ja, lass die Finger von den Sachen, du hast genug gesehen. Deine Neugierde sollte schon längst befriedigt sein. Bist du jetzt glücklich? {i}"
+            symb"{i}Ja, lass die Finger von den Sachen, du hast genug gesehen. Deine Neugierde sollte schon längst befriedigt sein. Bist du jetzt glücklich? {i}"
 
             # Atropos Gedanken
-            "Anan könnte jeden Moment zurückkommen und mich erwischen."
+            symb"Anan könnte jeden Moment zurückkommen und mich erwischen."
             jump selection_anan_office
 
         else:
@@ -279,49 +279,48 @@ label pictures_anan:
     scene detail_oldphotos
     with fadeshort
     # Atropos Gedanken
-    "Das sind alte Fotos von Anan. Ein wenig seltsam, ihn so zu sehen. Im Vergleich dazu ist er heute manchmal der reine Ernst in Person."
+    symb"Das sind alte Fotos von Anan. Ein wenig seltsam, ihn so zu sehen. Im Vergleich dazu ist er heute manchmal der reine Ernst in Person."
     # Atropos Gedanken
-    "Ob er damals gewusst hat, wie viel Verantwortung auf ihn zukommen würde?"
+    symb"Ob er damals gewusst hat, wie viel Verantwortung auf ihn zukommen würde?"
     # Atropos Gedanken
-    "Der Kampf im Krieg muss ihn ziemlich verändert haben. Oder hat ihn der Frieden verändert?"
+    symb"Der Kampf im Krieg muss ihn ziemlich verändert haben. Oder hat ihn der Frieden verändert?"
     # Atropos Gedanken
-    "Da sind auch Atlas und Adrés. Aither muss damals noch relativ neu gewesen sein… Vielleicht ein, zwei Jahre alt?"
+    symb"Da sind auch Atlas und Adrés. Aither muss damals noch relativ neu gewesen sein… Vielleicht ein, zwei Jahre alt?"
     call screen arrow_detail_oldphotos
     label after_detail_oldphotos:
         scene anan_office
         with fadeshort
         # Atropos Gedanken
-        "Was soll ich jetzt machen?"
+        symb"Was soll ich jetzt machen?"
         jump selection_anan_office
 
 
 label books_anan:
     $ sawbooks =True
     # Atropos Gedanken
-    "Wow, was für Wälzer! Bücher sind schon Raritäten, aber solche wie diese hier werde ich wohl nirgendwo sonst wiederfinden."
+    symb"Wow, was für Wälzer! Bücher sind schon Raritäten, aber solche wie diese hier werde ich wohl nirgendwo sonst wiederfinden."
+    "Atropos""…"
     # Atropos Gedanken
-    "…"
+    symb"Ob es auffällt, wenn ich mal einen Blick in eines davon reinwerfe?"
     # Atropos Gedanken
-    "Ob es auffällt, wenn ich mal einen Blick in eines davon reinwerfe?"
+    symb"Ach, bestimmt nicht. Ich bin vorsichtig."
     # Atropos Gedanken
-    "Ach, bestimmt nicht. Ich bin vorsichtig."
+    symb"Mal sehen…"
     # Atropos Gedanken
-    "Mal sehen…"
-    # Atropos Gedanken
-    "Oh? Da ist was rausgefallen. War ich das?"
+    symb"Oh? Da ist was rausgefallen. War ich das?"
 
     scene detail_bookphoto
     with fadeshort
     # Atropos Gedanken
-    "Das ist ein Foto… Anan sieht darauf ziemlich jung aus. Von 2219? Wahnsinn. Wer sie wohl war?"
+    symb"Das ist ein Foto… Anan sieht darauf ziemlich jung aus. Von 2219? Wahnsinn. Wer sie wohl war?"
     # Atropos Gedanken
-    "Ich sollte das Buch sorgfältig zurücklegen, damit es nicht auffällt."
+    symb"Ich sollte das Buch sorgfältig zurücklegen, damit es nicht auffällt."
     call screen arrow_detail_bookphoto
     label after_detail_bookphoto:
         scene anan_office
         with fadeshort
         # Atropos Gedanken
-        "Was soll ich jetzt machen?"
+        symb"Was soll ich jetzt machen?"
         jump selection_anan_office
 
 label safe_anan:
@@ -330,54 +329,52 @@ label safe_anan:
     with fadeshort
     if sawbooks:
         # Atropos Gedanken
-        "Ein Safe? Da könnte etwas Interessantes drin sein…"
+        symb"Ein Safe? Da könnte etwas Interessantes drin sein…"
         # Atropos Gedanken
-        "Was könnte Anan wohl darin verbergen? Es muss etwas Wichtiges sein, wenn er es so absichert."
+        symb"Was könnte Anan wohl darin verbergen? Es muss etwas Wichtiges sein, wenn er es so absichert."
         # Atropos Gedanken
-        "Ich könnte versuchen, den Code zu erraten…"
+        symb"Ich könnte versuchen, den Code zu erraten…"
         # Atropos Gedanken
-        "Mal sehen. Sein Geburtsdatum vielleicht?"
+        symb"Mal sehen. Sein Geburtsdatum vielleicht?"
+        "Atropos""…"
         # Atropos Gedanken
-        "…"
+        symb"Nein… Der Gründungstag Aithers?"
+        "Atropos""…"
         # Atropos Gedanken
-        "Nein… Der Gründungstag Aithers?"
+        symb"Auch nicht richtig. Hm… Vielleicht ja…"
         # Atropos Gedanken
-        "…"
-        # Atropos Gedanken
-        "Auch nicht richtig. Hm… Vielleicht ja…"
-        # Atropos Gedanken
-        "2 – 2 – 1 – 9"
+        symb"2 – 2 – 1 – 9"
         scene detail_safe_open
         with fadeshort
         # Atropos Gedanken
-        "Volltreffer! Aber das sind doch… Datenträger? Anan hat sie sogar beschriftet. Nachrichten von Atlas und Adrés …"
+        symb"Volltreffer! Aber das sind doch… Datenträger? Anan hat sie sogar beschriftet. Nachrichten von Atlas und Adrés …"
         # Atropos Gedanken
-        "Und was sind die hier? ‘Kronos 2226’ … ‘Untersuchungen K 2226’ …"
+        symb"Und was sind die hier? ‘Kronos 2226’ … ‘Untersuchungen K 2226’ …"
         # Atropos Gedanken
-        "’2229: Happiness’"
+        symb"2229: Happiness’"
         # Atropos Gedanken
-        "2226… Das war kurz vor Ende des Krieges. Also müssen das hier Daten zu ihren ersten Forschungen für Happiness sein."
+        symb"2226… Das war kurz vor Ende des Krieges. Also müssen das hier Daten zu ihren ersten Forschungen für Happiness sein."
         # Atropos Gedanken
-        "Es wäre interessant, sich das mal anzusehen, aber ich kann damit nicht einfach durch das Gebäude laufen."
+        symb"Es wäre interessant, sich das mal anzusehen, aber ich kann damit nicht einfach durch das Gebäude laufen."
         # Atropos Gedanken
-        "Ich lege es erstmal wieder zurück."
+        symb"Ich lege es erstmal wieder zurück."
         call screen arrow_detail_safe_open
         label after_detail_safe_open:
             scene anan_office
             with fadeshort
             # Atropos Gedanken
-            "Was soll ich jetzt machen?"
+            symb"Was soll ich jetzt machen?"
             jump selection_anan_office
 
     else:
         # Atropos Gedanken
-        "Ein Safe? Da könnte etwas Interessantes drin sein…"
+        symb"Ein Safe? Da könnte etwas Interessantes drin sein…"
         # Atropos Gedanken
-        "Was könnte Anan wohl darin verbergen? Es muss etwas Wichtiges sein, wenn er es so absichert."
+        symb"Was könnte Anan wohl darin verbergen? Es muss etwas Wichtiges sein, wenn er es so absichert."
         # Atropos Gedanken
-        "Leider kenne ich den Code nicht."
+        symb"Leider kenne ich den Code nicht."
         scene anan_office
         with fadeshort
         # Atropos Gedanken
-        "Was soll ich jetzt machen?"
+        symb"Was soll ich jetzt machen?"
         jump selection_anan_office

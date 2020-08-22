@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1824: end of line expected.
-    hide screen force_mouse_move_ananright()
-                                          ^
-
-File "game/script.rpy", line 1828: end of line expected.
-    hide screen force_mouse_move_ananright()
-                                          ^
-
-File "game/script.rpy", line 1831: end of line expected.
-    hide screen force_mouse_move_ananright()
-                                          ^
+File "game/functions.rpy", line 326: end of line expected.
+    else: if thingswatched==4:
+          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Aug 21 14:16:34 2020
+Sun Aug 23 01:19:42 2020
