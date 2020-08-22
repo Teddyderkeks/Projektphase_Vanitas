@@ -3349,7 +3349,7 @@ label ananshoulddie:
 
     "Atropos"  "Du musst zum Serverraum! Irgendetwas stimmt nicht!"
 
-    show anan normal_mid
+    show anan strict_mid
 
     "Anan" "Was stimmt nicht?"
 
