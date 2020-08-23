@@ -1,13 +1,13 @@
 label rueffel:
     if loudspeaker:
         # Atropos Gedanken
-        "Da ist Anans Büro… ich habe absolut keine Lust reinzugehen."
+        symb"Da ist Anans Büro… ich habe absolut keine Lust reinzugehen."
 
         # Atropos Gedanken
-        "Der Ärger wird vermutlich noch größer ausfallen, weil ich nicht früher aufgetaucht bin, aber ich habe keine Lust auf seine Belehrungen."
+        symb"Der Ärger wird vermutlich noch größer ausfallen, weil ich nicht früher aufgetaucht bin, aber ich habe keine Lust auf seine Belehrungen."
 
         # Atropos Gedanken
-        "Ich werde nicht klopfen, sondern einfach eintreten. Jetzt ist ohnehin alles zu spät und Anan soll mein Missfallen zu spüren bekommen."
+        symb"Ich werde nicht klopfen, sondern einfach eintreten. Jetzt ist ohnehin alles zu spät und Anan soll mein Missfallen zu spüren bekommen."
 
     scene anan_office
     with fadeshort
@@ -18,34 +18,34 @@ label rueffel:
     "Atropos"  "…"
 
     # Atropos Gedanken
-    "Er spricht es gar nicht an, dass ich zu spät bin und einfach in sein Zimmer hineingeplatzt bin?"
+    symb"Er spricht gar nicht an, dass ich zu spät und einfach in sein Zimmer hineingeplatzt bin?"
 
     # Atropos Gedanken
-    "Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
+    symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
 
     # Atropos Gedanken
-    "Das kann er aber so was von vergessen. Es ist schon schlimm genug, dass ich seiner Aufforderung überhaupt gefolgt bin. Aber ich werde mich auf keinen Fall entschuldigen."
+    symb"Das kann er aber so was von vergessen. Es ist schon schlimm genug, dass ich seiner Aufforderung überhaupt gefolgt bin. Aber ich werde mich auf keinen Fall entschuldigen."
 
     # Atropos Gedanken
-    "Niemals!"
+    symb"Niemals!"
 
     # Symbiont
-    "{i}Entschuldige dich, egal aus welchem Grund. Willst du etwa noch mehr Ärger bekommen? {i}"
+    symb"{i}Entschuldige dich, egal aus welchem Grund. Willst du etwa noch mehr Ärger bekommen? {i}"
 
     # Symbiont
-    "{i}Sowohl Anan als auch du werdet glücklicher sein, wenn du dich entschuldigst. Mehr als das will er nicht hören. Einfach nur eine Entschuldigung für dein Verhalten. {i}"
+    symb"{i}Sowohl Anan als auch du werdet glücklicher sein, wenn du dich entschuldigst. Mehr als das will er nicht hören. Einfach nur eine Entschuldigung für dein Verhalten. {i}"
 
     # Symbiont
-    "{i}Tu es! {i}"
+    symb"{i}Tu es! {i}"
 
     # Atropos Gedanken
-    "Ich werde weiterhin schweigen…"
+    symb"Ich werde weiterhin schweigen…"
 
     # Atropos Gedanken
-    "Aber warum sagt Anan nichts? Das macht mir langsam Angst…"
+    symb"Aber warum sagt Anan nichts? Das macht mir langsam Angst…"
 
     # Atropos Gedanken
-    "Wartet er wirklich bis ich mich entschuldige?"
+    symb"Wartet er wirklich bis ich mich entschuldige?"
 
     "Atropos"  "Ich werde mich nicht entschuldigen, dass ich die Pille nicht genommen habe."
 
@@ -55,7 +55,7 @@ label rueffel:
 
     "Atropos"  "Schaden? Aber…"
 
-    "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+    "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
     "Anan" "Verstehst du das, Atropos?"
 
@@ -202,13 +202,13 @@ label expulsion_office:
     with fadeshort
 
     # Atropos Gedanken
-    "Wer denkt er eigentlich, wer er ist?"
+    symb"Wer denkt er eigentlich, wer er ist?"
 
     # Atropos Gedanken
-    "Nur weil er mitunter den Krieg beendet hat, kann er doch nicht jedem Menschen vorschreiben, wie dieser zu leben und glücklich zu leben hat!"
+    symb"Nur weil er mitunter den Krieg beendet hat, kann er doch nicht jedem Menschen vorschreiben, wie dieser zu leben und glücklich zu leben hat!"
 
     # Atropos Gedanken
-    "Es war die richtige Entscheidung die Firma zu verlassen! Ich stehe einfach nicht mehr hinter dieser und kann nicht so weiterarbeiten."
+    symb"Es war die richtige Entscheidung die Firma zu verlassen! Ich stehe einfach nicht mehr hinter dieser und kann nicht so weiterarbeiten."
 
     "Chesis"  "Atropos?"
 
@@ -289,7 +289,10 @@ label expulsion_office:
     hide narcais
 
     # Atropos Gedanken
-    "Dann packe ich mal meine Sachen zusammen… ist nicht bald ohnehin Zeit für die Mittagspause? Dann kann ich mich nochmal von meinen Freunden verabschieden."
+    symb"Dann packe ich mal meine Sachen zusammen… ist nicht bald ohnehin Zeit für die Mittagspause? Dann kann ich mich nochmal von meinen Freunden verabschieden."
+
+    scene lab
+    with fadestart
 
     "Atropos"  "…"
 
@@ -314,7 +317,7 @@ label expulsion_office:
     with fadeshort
 
     # Atropos Gedanken
-    "Era ist nicht zu sehen. Na gut, dann eben ohne sie… auf zu Anans Büro."
+    symb"Era ist nicht zu sehen. Na gut, dann eben ohne sie… auf zu Anans Büro."
 
     show era normal
     "Era"  "A-Atropos? Wo- Wohin gehst du? Und warum hast du deine Tasche dabei? Machst du Mittagspause?"

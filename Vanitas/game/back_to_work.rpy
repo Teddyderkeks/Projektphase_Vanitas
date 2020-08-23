@@ -3,22 +3,22 @@ default back_to_work_bevore = False
 label back_to_work:
     $ back_to_work_bevore = True
     # Atropos Gedanken
-    "So… zurück an die Arbeit. Ich muss die Pille nehmen."
+    symb"So… zurück an die Arbeit. Ich muss die Pille nehmen."
 
     # Atropos Gedanken
-    "Auch wenn ich mich immer noch frage, wie sie überhaupt wirkt…"
+    symb"Auch wenn ich mich immer noch frage, wie sie überhaupt wirkt…"
 
 
     scene stairs_up
     with fadeshort
 
     # Atropos Gedanken
-    "Aber apropos Pille. Sind die Werbeplakate für diese neu?"
+    symb"Aber apropos Pille. Sind die Werbeplakate für diese neu?"
     scene detail_posterpills
     with fadeshort
 
     # Atropos Gedanken
-    "Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden."
+    symb"Sie stellen sie genauso wie immer dar. Ein perfektes glückliches Leben für jeden."
 
     call screen arrow_detail_posterpills
 
@@ -28,38 +28,44 @@ label after_detail_posterpills:
     with fadeshort
 
     # Atropos Gedanken
-    "Oh, da vorne sind Tycho und die anderen. Soll ich mit ihnen sprechen, bevor ich ins Labor zurückgehe?"
+    symb"Oh, da vorne sind Tycho und die anderen. Soll ich mit ihnen sprechen, bevor ich ins Labor zurückgehe?"
 
     # Symbiont
-    "{i}Nimm die Pille jetzt. Willst du noch länger unglücklich sein? Sei dankbar, dass Anan dir eine zweite Chance gab. Verspiele diese nicht. Mit deinen Freunden kannst du auch nachher noch reden. {/i}"
+    symb"{i}Nimm die Pille jetzt. Willst du noch länger unglücklich sein? Sei dankbar, dass Anan dir eine zweite Chance gab. Verspiele diese nicht. Mit deinen Freunden kannst du auch nachher noch reden. {/i}"
 
-
+    show screen force_mouse_move_twooptions
     menu:
         "Ja, natürlich. Ich sollte sofort zurück ins Labor.":
+            hide screen force_mouse_move_twooptions
             jump take_pill_back_work
         "Ich denke, ich werde mich erst mit meinen Freunden unterhalten.":
+            hide screen force_mouse_move_twooptions
             jump talk_with_colleagues
 
 label take_pill_back_work:
     # Atropos Gedanken
-    "Ja, natürlich. Ich sollte sofort zurück ins Labor. Ich muss die Pille nehmen."
+    symb"Ja, natürlich. Ich sollte sofort zurück ins Labor. Ich muss die Pille nehmen."
 
     # Atropos Gedanken
-    "Ich hoffe nur, sie wirkt rasch. Ich will wieder glücklich sein, wie alle anderen auch."
+    symb"Ich hoffe nur, sie wirkt rasch. Ich will wieder glücklich sein, wie alle anderen auch."
 
     # Atropos Gedanken
-    "Aber jetzt sollte ich nicht weiter darüber nachdenken, Hauptsache ich bin bald glücklich."
+    symb"Aber jetzt sollte ich nicht weiter darüber nachdenken, Hauptsache ich bin bald glücklich."
 
     jump takepillnow
 
 label talk_with_colleagues:
     # Atropos Gedanken
-    "Ich denke ich werde mich erst mit meinen Freunden unterhalten. Für alles andere ist auch nachher noch Zeit."
+    symb"Ich denke ich werde mich erst mit meinen Freunden unterhalten. Für alles andere ist auch nachher noch Zeit."
 
-    show tycho normal
-    show ireia normal
-    show neiro normal
-    show armene normal
+    show tycho normal:
+        xalign 0.85
+    show ireia normal:
+        xalign 0.35
+    show neiro normal:
+        xalign 0.6
+    show armene normal:
+        xalign 0.0
 
     "Atropos" "Hey- schön euch zu sehen. Macht ihr gerade eine kleine Pause?"
 
@@ -129,7 +135,7 @@ label talk_with_colleagues:
     "Tycho" "Also, erzähl schon. Was hatte dich zu Anan verschlagen?"
 
     # Atropos Gedanken
-    "Ich sollte besser nichts von der Pille erwähnen. Sie würden mich nur dafür verurteilen."
+    symb"Ich sollte besser nichts von der Pille erwähnen. Sie würden mich nur dafür verurteilen."
 
     "Atropos"  "Ach, es ging um ein paar persönliche Sachen. Nichts weiter Wichtiges."
 
@@ -145,10 +151,10 @@ label talk_with_colleagues:
     "Ireia" "Die Geschichte hast du schon tausend Mal erzählt."
 
     # Atropos Gedanken
-    "Anan wirkte heute irgendwie anders, als ich ihn in Erinnerung hatte."
+    symb"Anan wirkte heute irgendwie anders, als ich ihn in Erinnerung hatte."
 
     # Atropos Gedanken
-    "Aber vermutlich hatte er einen stressigen Tag, er trägt immerhin nicht wenig Verantwortung und dann kam auch noch ich zu seinen Problemen hinzu."
+    symb"Aber vermutlich hatte er einen stressigen Tag, er trägt immerhin nicht wenig Verantwortung und dann kam auch noch ich zu seinen Problemen hinzu."
 
     "Atropos"  " Heute beim Gespräch wirkte er nicht unbedingt entspannt…"
 
@@ -163,7 +169,7 @@ label talk_with_colleagues:
     "Ireia" "Es muss viel Arbeit machen das Glück aller zu erhalten. Wir sind ihm wirklich viel schuldig."
 
     # Atropos Gedanken
-    "Warum haben sie meine Aussage so sehr verdreht?"
+    symb"Warum haben sie meine Aussage so sehr verdreht?"
 
     "Atropos"  " Nein, so meinte ich das nicht. Es geht mehr darum wie Anan sich verh…"
 
@@ -177,7 +183,7 @@ label talk_with_colleagues:
     "Armene" "Und wir haben das Glück, dass wir unsere Happiness dafür auch noch umsonst bekommen. Kostenloses Glück, besser geht es nicht."
 
     # Atropos Gedanken
-    "Sie verehren Anan wirklich wie einen Gott. Ob ich mich in ihm getäuscht habe? Aber irgendwie… warum ignorieren sie meine Aussagen, als wäre ich gar nicht da?"
+    symb"Sie verehren Anan wirklich wie einen Gott. Ob ich mich in ihm getäuscht habe? Aber irgendwie… warum ignorieren sie meine Aussagen, als wäre ich gar nicht da?"
 
     show armene happy_gray
     show ireia strict
@@ -207,61 +213,61 @@ label talk_with_colleagues:
     hide neiro
 
     # Atropos Gedanken
-    "Irgendetwas war an dem Gespräch seltsam. Aber irgendwie bekomme ich es nicht wirklich zu fassen… ich…"
+    symb"Irgendetwas war an dem Gespräch seltsam. Aber irgendwie bekomme ich es nicht wirklich zu fassen… ich…"
 
     # Atropos Gedanken
-    "Naja, egal. Ich sollte jetzt zurück ins Labor…"
+    symb"Naja, egal. Ich sollte jetzt zurück ins Labor…"
 
     scene stairs_down
     with fadeshort
 
     # Atropos Gedanken
-    "Warte… was ist das?"
+    symb"Warte… was ist das?"
 
     # Atropos Gedankens
-    "Das… das…"
+    symb"Das… das…"
 
     # Symbiont
-    "{i}Vergiss die Pille nicht, Atropos! Du fängst schon an dir Sachen einzubilden. Hier ist nichts zu sehen. {/i}"
+    symb"{i}Vergiss die Pille nicht, Atropos! Du fängst schon an dir Sachen einzubilden. Hier ist nichts zu sehen. {/i}"
 
     # Symbiont
-    "{i}Langsam wirst du ja schon fast wahnsinnig. Nimm die Pille und werde wieder glücklich, so wie alle deine Kollegen es sind! {/i}"
+    symb"{i}Langsam wirst du ja schon fast wahnsinnig. Nimm die Pille und werde wieder glücklich, so wie alle deine Kollegen es sind! {/i}"
 
     # Symbiont
-    "{i}Du hast dein Glück verdient. So wie alle Menschen Glück verdient haben. {/i}"
+    symb"{i}Du hast dein Glück verdient. So wie alle Menschen Glück verdient haben. {/i}"
 
     # Symbiont
-    "{i}Du willst das hier nicht sehen. Es würde dich unglücklich machen. Hier ist nichts. Vergiss, was du zu sehen glaubtest. {/i}"
+    symb"{i}Du willst das hier nicht sehen. Es würde dich unglücklich machen. Hier ist nichts. Vergiss, was du zu sehen glaubtest. {/i}"
 
     # Symbiont
-    "{i}Brich die Suche ab und kehre ins Labor zurück! Nimm die Pille! Lebe weiterhin ein glückliches Leben. {/i}"
+    symb"{i}Brich die Suche ab und kehre ins Labor zurück! Nimm die Pille! Lebe weiterhin ein glückliches Leben. {/i}"
 
     # Atropos Gedanken
-    "Ist das… ist das eine Leiche?"
+    symb"Ist das… ist das eine Leiche?"
 
     # Atropos Gedanken
-    "Aber wie? Warum? Warum ist sie noch niemandem aufgefallen?"
+    symb"Aber wie? Warum? Warum ist sie noch niemandem aufgefallen?"
 
     # Atropos Gedanken
-    "Was hat das alles zu bedeuten? Es macht mir Angst…"
+    symb"Was hat das alles zu bedeuten? Es macht mir Angst…"
 
     # Atropos Gedanken
-    "Will ich die Wahrheit dahinter überhaupt wissen?"
+    symb"Will ich die Wahrheit dahinter überhaupt wissen?"
 
     # Atropos Gedanken
-    "Nein… ja… ich… ich…"
+    symb"Nein… ja… ich… ich…"
 
     # Atropos Gedanken
-    "Was, wenn das Kloth ist?"
+    symb"Was, wenn das Kloth ist?"
 
     # Atropos Gedanken
-    "Das… das würde ich nicht ertragen…"
+    symb"Das… das würde ich nicht ertragen…"
 
     # Symbiont
-    "{i}Brich die Suche ab und kehre ins Labor zurück! Nimm die Pille! Lebe weiterhin ein glückliches Leben. {/i}"
+    symb"{i}Brich die Suche ab und kehre ins Labor zurück! Nimm die Pille! Lebe weiterhin ein glückliches Leben. {/i}"
 
     # Symbiont
-    "{i}Tu es! {/i}"
+    symb"{i}Tu es! {/i}"
 
 
 

@@ -1,10 +1,11 @@
 label takepillnow:
 
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
     # Atropos Gedanken
-    "Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
+    symb"Wo habe ich die Pillen nur hingetan? Sind sie in meiner Tasche?"
     show era normal
 
     "Era" "Was… was ist los, Atropos?"
@@ -25,21 +26,32 @@ label takepillnow:
 
     "Era" "K-Kein Problem…"
 
-    # Atropos Gedanken
-    "Na los, ich tue das Richtige. Es ist die richtige Entscheidung, Happiness zu nehmen."
+    scene detail_pillbox
+    with fadeshort
 
     # Atropos Gedanken
-    "Es ist die richtige Entscheidung, glücklich sein zu wollen."
+    symb"Na los, ich tue das Richtige. Es ist die richtige Entscheidung, Happiness zu nehmen."
+
+    scene detail_pill
+    with fadeshort
+
+    # Atropos Gedanken
+    symb"Es ist die richtige Entscheidung, glücklich sein zu wollen."
 
     "Atropos" "(schluckt Happinesss)"
 
-    # Symbiont
-    "{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+    scene lab
+    with fadeshort
 
     # Symbiont
-    "{i}Denk an dein einziges Ziel im Leben: glücklich zu sein. Egal wie diese Art von Glück für dich auch aussehen mag. {i}"
+    symb"{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
+
+    # Symbiont
+    symb"{i}Denk an dein einziges Ziel im Leben: glücklich zu sein. Egal wie diese Art von Glück für dich auch aussehen mag. {i}"
 
     # Atropos Gedanken
-    "Ich bin glücklich! Und nun zurück an die Arbeit- es dauert nicht mehr lange bis zur Mittagspause."
+    symb"Ich bin glücklich! Und nun zurück an die Arbeit- es dauert nicht mehr lange bis zur Mittagspause."
 
 jump escapelater

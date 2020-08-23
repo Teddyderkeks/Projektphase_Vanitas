@@ -1,11 +1,14 @@
 label escapelater:
 
     "Atropos" "…"
-    # Schwarzblende
+
+    show lab
+    with startfade
 
     "Atropos" "Era, machst du auch Pause?"
 
-    show era normal
+    show era normal:
+        xalign 0.5
 
     "Era" "Ich… Tut mir leid, ich muss noch das Protokoll hier fertig formulieren, solange ich alle Daten in meinem Kopf habe."
 
@@ -13,8 +16,11 @@ label escapelater:
 
     "Atropos" "Alles klar, kein Problem. Narcais, wie sieht es bei dir aus?"
 
-    show era normal_gray
-    show narcais normal
+    show era normal_gray:
+        xalign 0.25
+
+    show narcais normal:
+        xalign 0.75
 
     "Narcais" "Ich brauche so etwas wie eine Pause nicht. Deswegen leiste ich ja auch so hervorragende Arbeit, weil ich viel mehr Zeit habe, mich dieser zu widmen."
 
@@ -41,13 +47,13 @@ label escapelater:
     with fadeshort
 
     # Atropos Gedanken
-    "Jetzt suche ich erstmal nach Chesis- vielleicht will er mit in die Mittagspause kommen."
+    symb"Jetzt suche ich erstmal nach Chesis- vielleicht will er mit in die Mittagspause kommen."
 
     scene shop_1
     with fadeshort
 
     # Atropos Gedanken
-    "Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
+    symb"Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
 
     "Zelos" "Atropos! Komm mal schnell her."
 
@@ -68,14 +74,14 @@ label escapelater:
     "Zelos" "Einen wunderschönen, glücklichen guten Morgen! Was kann ich dir heute Gutes tun?"
 
     # Atropos Gedanken
-    "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
+    symb"Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
     hide zelos
     scene shop_2
     with fadeshort
 
     # Atropos Gedanken
-    "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
+    symb"Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
 
     # Hier Möglichkeit sich umzuschauen während man auf Chesis wartet.
 
@@ -168,20 +174,23 @@ label escapelater:
     hide chesis
 
     # Atropos Gedanken
-    "Dann werde ich einfach schon Mal ins Labor zurück. Ich habe sonst ohnehin nichts mehr zu tun."
+    symb"Dann werde ich einfach schon Mal ins Labor zurück. Ich habe sonst ohnehin nichts mehr zu tun."
 
     scene lab
     with fadeshort
 
     # Atropos Gedanken
-    "Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+    symb"Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
     "Atropos" "Verdammt!"
 
     # Atropos Gedanken
-    "Warum funktioniert denn der Computer mit einem Mal nicht mehr?"
+    symb"Warum funktioniert denn der Computer mit einem Mal nicht mehr?"
 
     if datewithera:
 
@@ -328,7 +337,7 @@ label gowithnarcais:
     "Atropos" "Du hast Recht… was ist das?"
 
     # Symbiont
-    "{i}Lauf! {/i}"
+    symb"{i}Lauf! {/i}"
 
     "Atropos" "Was?"
 
@@ -423,7 +432,7 @@ label dontgowithnarcais:
 
     show era confused
 
-    "Era" "Nein… nein! Ich… wollte nur fragen, ob meine Nichte uns begleiten kann. Seit meine Schwester und deren Frau starb, kümmere ich mich um sie."
+    "Era" "Nein… nein! Ich… wollte nur fragen, ob meine Nichte uns begleiten kann. Seit meine Schwester und ihre Frau starben, kümmere ich mich um sie."
 
     "Era" "Ich weiß nicht, ob ich dir schonmal davon erzählt habe…"
 

@@ -3,13 +3,13 @@ label pill:
     with fadeshort
 
     # Atropos Gedanken
-    "Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
+    symb"Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
 
     #Atropos Gedanken
-    "Ich könnte mich ein wenig umsehen, um auf andere Gedanken zu kommen."
+    symb"Ich könnte mich ein wenig umsehen, um auf andere Gedanken zu kommen."
 
     #Atropos Gedanken
-    "Oder ich spreche mit Era..."
+    symb"Oder ich spreche mit Era..."
 
     menu:
         "Ich könnte mir den Computer ansehen.":
@@ -27,43 +27,42 @@ label pill:
     label watchlabcomp:
 
         # Atropos Gedanken
-        "Era scheint gerade an etwas dran zu sein. Das sind einige Auswertungen aus dem Spektrometer."
+        symb"Era scheint gerade an etwas dran zu sein. Das sind einige Auswertungen aus dem Spektrometer."
         # Atropos Gedanken
-        "Sieht eigentlich gar nicht mal so schlecht aus… Interessant."
+        symb"Sieht eigentlich gar nicht mal so schlecht aus… Interessant."
         # Atropos Gedanken
-        "Ach, Moment. Das ist nicht von Era, das ist von Narcais."
+        symb"Ach, Moment. Das ist nicht von Era, das ist von Narcais."
+        "Atropos""…"
         # Atropos Gedanken
-        "…"
-        # Atropos Gedanken
-        "Dann ist es vielleicht doch nicht mehr so interessant."
+        symb"Dann ist es vielleicht doch nicht mehr so interessant."
 
         jump watchnothinglab
 
     label watchlabcab:
 
         # Atropos Gedanken
-        "Da drin ist alles Mögliche, damit wir nicht nur die Pillen herstellen, sondern auch unsere Produkte verbessern. Dass wir da noch den Überblick behalten…"
+        symb"Da drin ist alles Mögliche, damit wir nicht nur die Pillen herstellen, sondern auch unsere Produkte verbessern. Dass wir da noch den Überblick behalten…"
         # Atropos Gedanken
-        "Wir müssen viel experimentieren und forschen. Es ist unglaublich faszinierend und spannend. Darum liebe ich meinen Beruf hier nur umso mehr."
+        symb"Wir müssen viel experimentieren und forschen. Es ist unglaublich faszinierend und spannend. Darum liebe ich meinen Beruf hier nur umso mehr."
         # Atropos Gedanken
-        "Allerdings kann es manchmal auch ganz schön gefährlich werden."
+        symb"Allerdings kann es manchmal auch ganz schön gefährlich werden."
         # Atropos Gedanken
-        "Mit der falschen Mischung könnte man alles in die Luft jagen."
+        symb"Mit der falschen Mischung könnte man alles in die Luft jagen."
 
         jump watchnothinglab
 
     label watchlabdoor:
 
         # Atropos Gedanken
-        "Die Notdusche… Mein alter Freund."
+        symb"Die Notdusche… Mein alter Freund."
         # Atropos Gedanken
-        "Als ich hier angefangen habe, ist mir mal etwas von den Proben auf die Kleidung getropft."
+        symb"Als ich hier angefangen habe, ist mir mal etwas von den Proben auf die Kleidung getropft."
         # Atropos Gedanken
-        "Ich musste mich bis auf die Unterwäsche ausziehen und komplett abduschen."
+        symb"Ich musste mich bis auf die Unterwäsche ausziehen und komplett abduschen."
         # Atropos Gedanken
-        "Da blieb auch keine Zeit, die anderen höflich zu fragen, ob sie sich nicht vielleicht umdrehen wollen. Oder ob sie rausgehen können."
+        symb"Da blieb auch keine Zeit, die anderen höflich zu fragen, ob sie sich nicht vielleicht umdrehen wollen. Oder ob sie rausgehen können."
         # Atropos Gedanken
-        "Seitdem achte ich immer darauf, welche Unterwäsche ich trage."
+        symb"Seitdem achte ich immer darauf, welche Unterwäsche ich trage."
 
         jump watchnothinglab
 
@@ -113,35 +112,35 @@ label pill:
         with fadeshort
 
         # Atropos Gedanken
-        "Soll ich erst nach Kloth suchen oder erst nach Chesis? Den anderen kann ich mich auch nachher noch anschließen."
+        symb"Soll ich erst nach Kloth suchen oder erst nach Chesis? Den anderen kann ich mich auch nachher noch anschließen."
 
         # Symbiont
-        "{i}Verbringe die Pause besser mit Chesis allein. Kloth scheint beschäftigt zu sein, sonst hätte er dir schon längst auf deine Nachrichten geantwortet. {/i}"
+        symb"{i}Verbringe die Pause besser mit Chesis allein. Kloth scheint beschäftigt zu sein, sonst hätte er dir schon längst auf deine Nachrichten geantwortet. {/i}"
 
         # Symbiont
-        "{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
+        symb"{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
 
-        show screen force_mouse_move_twooptions
+        show screen force_mouse_move_twooptionsdown
         menu:
             "Ich sollte nach Kloth suchen.":
-                hide screen force_mouse_move_twooptions
+                hide screen force_mouse_move_twooptionsdown
 
                 # Atropos Gedanken
-                "Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
+                symb"Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
 
                 # Atropos Gedanken
-                "Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen."
+                symb"Ob etwas vorgefallen ist? Ich denke, ich probiere mal ihn anzurufen."
 
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
 
-                hide screen force_mouse_move_twooptions
+                hide screen force_mouse_move_twooptionsdown
 
                 # Atropos Gedanken
-                "Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
+                symb"Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
 
                 # Atropos Gedanken
-                "Wo könnte er gerade nur sein? Er müsste seine Mittagspause eigentlich auch bereits angefangen haben, aber sicherheitshalber kann ich ja mal im Geschäft unten nachsehen."
+                symb"Wo könnte er gerade nur sein? Er müsste seine Mittagspause eigentlich auch bereits angefangen haben, aber sicherheitshalber kann ich ja mal im Geschäft unten nachsehen."
 
                 jump still_search_chesis
 
@@ -152,14 +151,14 @@ label still_search_chesis:
     with fadeshort
 
     # Atropos Gedanken
-    "Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
+    symb"Aither ist mittlerweile ganz schön voll. Heute kommen wohl viele Leute, um ihre Vorräte neu aufzufüllen."
 
     "Zelos" "Atropos! Komm mal schnell her."
 
     show zelos normal:
         xalign 0.5
 
-    "Atropos" "Was gibt´s?"
+    "Atropos" "Was gibt's?"
 
     "Zelos" "Wie du siehst brummt uns der Laden. Ich muss meine Mittagspause verschieben. Aber Tycho und die anderen waren gerade da, sie wollten zur Mensa, wenn du sie suchst."
 
@@ -174,23 +173,23 @@ label still_search_chesis:
     "Zelos" "Einen wunderschönen glücklichen guten Morgen. Was kann ich dir heute Gutes tun?"
 
     # Atropos Gedanken
-    "Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
+    symb"Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
 
     hide zelos
     scene shop_2
     with fadeshort
 
     # Atropos Gedanken
-    "Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
+    symb"Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
 
-    show chesis smiling:
+    show chesis normal:
         xalign 0.5
 
     "Chesis" "Hey Atropos."
 
     "Atropos" "Hast du Zeit für eine Mittagspause?"
 
-    show chesis grinning2
+    show chesis happy_alt
 
     "Chesis" "Bin gerade mit meinem Gespräch fertig geworden, wo wollen wir hin?"
 
@@ -221,17 +220,18 @@ label still_search_chesis:
     "Atropos" "Ist etwas vorgefallen? Ich fange langsam an, mir Sorgen zu machen."
 
     # Symbiont
-    "{i}Es gibt nichts, worüber du dir Sorgen machen müsstest. Es geht ihm bestimmt gut. {/i}"
+    symb"{i}Es gibt nichts, worüber du dir Sorgen machen müsstest. Es geht ihm bestimmt gut. {/i}"
 
     # Symbiont
-    "{i}Nicht jeder ist nun mal ständig am Handy und erreichbar. Freue dich lieber auf nachher, wenn du ihn wiedersiehst. {/i}"
+    symb"{i}Nicht jeder ist nun mal ständig am Handy und erreichbar. Freue dich lieber auf nachher, wenn du ihn wiedersiehst. {/i}"
 
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Ach, spielt doch keine Rolle! Du zerbrichst dir unnötig den Kopf."
-
+    show screen force_mouse_move_twooptionsdown
     menu:
         "Ich möchte trotzdem lieber nach Kloth suchen.":
+            hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Ich denke, ich möchte trotzdem lieber nach Kloth suchen."
 
@@ -245,6 +245,7 @@ label still_search_chesis:
 
             jump search_kloth
         "Du hast Recht.":
+            hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Du hast Recht. Es wird schon alles in Ordnung sein."
 
@@ -254,7 +255,7 @@ label still_search_chesis:
 
             "Atropos" "Gehen wir ins Büro und holen uns dort einen Kaffee?"
 
-            show chesis grinning
+            show chesis happy
 
             "Chesis" "Gerne."
 
@@ -302,27 +303,28 @@ label mittagspausemitchesis:
     "Atropos" "Denkst du, dass ich mir gerade wirklich zu viele Sorgen mache?"
 
     # Symbiont
-    "{i}Ja, machst du dir. Vergiss all diese Zweifel, sie machen dich doch nur unglücklich. {/i}"
+    symb"{i}Ja, machst du dir. Vergiss all diese Zweifel, sie machen dich doch nur unglücklich. {/i}"
 
     # Symbiont
-    "{i}Dein Leben ist ohne sie so viel einfacher und glücklicher. {/i}"
+    symb"{i}Dein Leben ist ohne sie so viel einfacher und glücklicher. {/i}"
 
     show chesis happy
 
     "Chesis" "Ja, bleibe einfach ruhig. Das wird sich alles aufklären und am Ende werden wir darüber lachen."
-
+    show screen force_mouse_move_480
     menu:
         "Du hast ja Recht. Tut mir leid.":
+            hide screen force_mouse_move_480
 
             "Atropos" "Du hast ja Recht. Tut mir leid, ich weiß nicht, was in mich gefahren ist."
 
             "Atropos" "Ich sollte aufhören mir so viele Gedanken und Sorgen zu machen."
 
             # Atropos Gedanken
-            "Vermutlich verhalte ich mich so, weil ich die Pille zu oft vergessen hatte. Es hat also doch Auswirkungen."
+            symb"Vermutlich verhalte ich mich so, weil ich die Pille zu oft vergessen hatte. Es hat also doch Auswirkungen."
 
             # Atropos Gedanken
-            "Zukünftig werde ich sie auf keinen Fall mehr vergessen. Ich will glücklich sein und ein glückliches Leben führen können."
+            symb"Zukünftig werde ich sie auf keinen Fall mehr vergessen. Ich will glücklich sein und ein glückliches Leben führen können."
 
             show chesis happy_alt
 
@@ -344,6 +346,7 @@ label mittagspausemitchesis:
 
             jump not_search_kloth
         "Ich gehe trotzdem besser auf Nummer sicher und suche ihn.":
+            hide screen force_mouse_move_480
 
             "Atropos" "Ich gehe trotzdem besser auf Nummer sicher und suche ihn."
 
@@ -357,7 +360,7 @@ label mittagspausemitchesis:
 
             "Chesis" "Ja, genau. Ich freue mich, bis dann!"
 
-            "Atropos" "Mach´s gut, bis später!"
+            "Atropos" "Mach's gut, bis später!"
 
             jump search_kloth
 
@@ -365,28 +368,28 @@ label mittagspausemitchesis:
 label not_search_kloth:
     if read_document_kloth:
         # Atropos Gedanken
-        "Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit."
+        symb"Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit."
 
         # Atropos Gedanken
-        "Über Kloth werde ich schon früher oder später mehr erfahren."
+        symb"Über Kloth werde ich schon früher oder später mehr erfahren."
 
         # Atropos Gedanken
-        "Wenn er so weit ist, wird er mir alles erzählen. Und bis dahin kann ich warten. Wir sind immerhin beste Freunde."
+        symb"Wenn er so weit ist, wird er mir alles erzählen. Und bis dahin kann ich warten. Wir sind immerhin beste Freunde."
 
         # Atropos Gedanken
-        "Und wenn er Hilfe braucht, dann werde ich ihm helfen. Wenn ich mich richtig erinnere und es ihm tatsächlich nicht gut geht…"
+        symb"Und wenn er Hilfe braucht, dann werde ich ihm helfen. Wenn ich mich richtig erinnere und es ihm tatsächlich nicht gut geht…"
 
         # Atropos Gedanken
-        "Ich werde immer an seiner Seite stehen und für ihn da sein, wenn er mich braucht."
+        symb"Ich werde immer an seiner Seite stehen und für ihn da sein, wenn er mich braucht."
 
         scene hall
         with fadeshort
 
         # Atropos Gedanken
-        "So… ich habe Kloth nochmals eine Nachricht geschrieben. Ich bin mir sicher, es wird sich alles aufklären."
+        symb"So… ich habe Kloth nochmals eine Nachricht geschrieben. Ich bin mir sicher, es wird sich alles aufklären."
 
         # Atropos Gedanken
-        "Und jetzt zurück ins Labor."
+        symb"Und jetzt zurück ins Labor."
 
         scene lab
         with fadeshort
@@ -395,30 +398,30 @@ label not_search_kloth:
 
     if infos_count_kloth == 1 or infos_count_kloth == 2:
             # Atropos Gedanken
-            "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein."
+            symb"Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein."
 
             # Atropos Gedanken
-            "Das alles sind nichts anderes als Hirngespinste."
+            symb"Das alles sind nichts anderes als Hirngespinste."
 
             # Atropos Gedanken
-            "Ja, ganz bestimmt! Ich bilde mir das ganze nur ein…"
+            symb"Ja, ganz bestimmt! Ich bilde mir das ganze nur ein…"
 
             # Atropos Gedanken
-            "Ich kehre jetzt einfach ins Labor zurück und vergesse das Ganze. Alles wird wieder wie zuvor sein."
+            symb"Ich kehre jetzt einfach ins Labor zurück und vergesse das Ganze. Alles wird wieder wie zuvor sein."
             # Symbiont
-            "{i}Ja, vergiss es. Sei einfach nur glücklich. Du bist sicher, nichts kann dir passieren. Das alles hier ist niemals passiert. Du hast eine ganz normale Mittagspause verbracht. {/i}"
+            symb"{i}Ja, vergiss es. Sei einfach nur glücklich. Du bist sicher, nichts kann dir passieren. Das alles hier ist niemals passiert. Du hast eine ganz normale Mittagspause verbracht. {/i}"
 
             # Symbiont
-            "{i}Sei glücklich, Atropos! {/i}"
+            symb"{i}Sei glücklich, Atropos! {/i}"
 
             scene hall
             with fadeshort
 
             # Atropos Gedanken
-            "Ob wohl Era da ist? Ich würde gerne ein bisschen Zeit mit ihr alleine verbringen und sie besser kennenlernen."
+            symb"Ob wohl Era da ist? Ich würde gerne ein bisschen Zeit mit ihr alleine verbringen und sie besser kennenlernen."
 
             # Atropos Gedanken
-            "Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
+            symb"Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
 
             scene lab
             with fadeshort
@@ -429,14 +432,17 @@ label laborpillende:
     scene lab
     with fadeshort
     # Atropos Gedanken
-    "Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+    symb"Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
     "Atropos" "Verdammt!"
 
     # Atropos Gedanken
-    "Warum funktioniert denn der Computer mit einem Mal nicht mehr?"
+    symb"Warum funktioniert denn der Computer mit einem Mal nicht mehr?"
 
     show era confused:
         xalign 0.5
@@ -528,7 +534,7 @@ label erabegleiten:
     "Era" "Das ist aber eine seltsame Uhr. So etwas habe ich noch nie gesehen…"
 
     # Atropos Gedanken
-    "Warte… das ist doch keine Uhr, oder? Das sieht mehr aus wie…"
+    symb"Warte… das ist doch keine Uhr, oder? Das sieht mehr aus wie…"
 
     scene detail_bomb0007
     with fadeshort
@@ -539,7 +545,7 @@ label erabegleiten:
     with fadeshort
 
     # Symbiont
-    "{i}Lauf, Atropos.{/i}"
+    symb"{i}Lauf, Atropos.{/i}"
 
     "Era" "Was, warum? Es ist doch alles in Ordnung. Aber hier ist niemand. Wir sollten wo anders suchen gehen."
 
@@ -552,6 +558,7 @@ label erabegleiten:
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
+
     return
 
 label eranichtbegleiten:
@@ -562,7 +569,7 @@ label eranichtbegleiten:
 
     "Era" "O-Okay… und Atropos…?"
 
-    "Atropos" "Was gibt´s?"
+    "Atropos" "Was gibt's?"
 
     show era happy
 
@@ -577,10 +584,10 @@ label eranichtbegleiten:
     with fadeshort
 
     # Atropos Gedanken
-    "Ich hoffe es ist überhaupt jemand da. Soweit ich weiß, machen die Kollegen aus dem Serverraum immer erst ziemlich spät Mittagspause."
+    symb"Ich hoffe es ist überhaupt jemand da. Soweit ich weiß, machen die Kollegen aus dem Serverraum immer erst ziemlich spät Mittagspause."
 
     # Atropos Gedanken
-    "Ah, da ist er ja schon. Mal sehen, ob mir dort jemand weiterhelfen kann."
+    symb"Ah, da ist er ja schon. Mal sehen, ob mir dort jemand weiterhelfen kann."
 
     scene server_room
     with fadeshort
@@ -590,34 +597,34 @@ label eranichtbegleiten:
     "Atropos" "Hmmm… Sieht nicht danach aus…"
 
     # Atropos Gedanken
-    "Was ist dieses Geräusch? Es hört sich irgendwie seltsam an."
+    symb"Was ist dieses Geräusch? Es hört sich irgendwie seltsam an."
 
     # Atropos Gedanken
-    "Ich kenne es, aber gleichzeitig kann ich es nicht wirklich zuordnen…"
+    symb"Ich kenne es, aber gleichzeitig kann ich es nicht wirklich zuordnen…"
 
     # Atropos Gedanken
-    "Ich sehe einfach mal nach."
+    symb"Ich sehe einfach mal nach."
 
     # Atropos Gedanken
-    "Was ist das? Es sieht aus wie eine Uhr, aber…"
+    symb"Was ist das? Es sieht aus wie eine Uhr, aber…"
 
     scene detail_bomb0005
     with fadeshort
 
     # Symbiont
-    "{i}Renn, Atropos!{/i}"
+    symb"{i}Renn, Atropos!{/i}"
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Wie? Was?"
+    symb"Wie? Was?"
 
     # Atropos Gedanken
-    "Das kann nicht real sein."
+    symb"Das kann nicht real sein."
 
     # Symbiont
-    "{i}Renn! {/i}"
+    symb"{i}Renn! {/i}"
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 

@@ -6,241 +6,242 @@ label choice_bomb:
 
 
     # Atropos Gedanken
-    "Ich muss versuchen den Hinweisen nachzugehen."
+    symb"Ich muss versuchen den Hinweisen nachzugehen."
 
     # Atropos Gedanken
-    "Ich kann nicht ruhig und still dasitzen mit dem Wissen, dass es irgendwo eine Bombe gibt…"
+    symb"Ich kann nicht ruhig und still dasitzen mit dem Wissen, dass es irgendwo eine Bombe gibt…"
 
     # Atropos Gedanken
-    "Nein… das geht einfach nicht…"
+    symb"Nein… das geht einfach nicht…"
 
     # Atropos Gedanken
-    "Nein…"
+    symb"Nein…"
 
     # Atropos Gedanken
-    "Nein!"
+    symb"Nein!"
 
     scene hall
     with fadeshort
 
     # Symbiont
-    "{i}Macht es dich glücklich, wenn du den Hinweisen nachgehen kannst, egal wohin es dich letztlich führen wird? {/i}"
+    symb"{i}Macht es dich glücklich, wenn du den Hinweisen nachgehen kannst, egal wohin es dich letztlich führen wird? {/i}"
 
     # Atropos Gedanken
-    "Ja… ich will einfach nur die Wahrheit wissen, so sehr sie mir auch Angst bereitet…"
+    symb"Ja… ich will einfach nur die Wahrheit wissen, so sehr sie mir auch Angst bereitet…"
 
     # Atropos Gedanken
-    "Ist Kloth tot? Seine Worte klangen wie Abschiedsworte… als hätte er vorgehabt…"
+    symb"Ist Kloth tot? Seine Worte klangen wie Abschiedsworte… als hätte er vorgehabt…"
 
     # Atropos Gedanken
-    "Ich hätte für ihn da sein sollen… warum nur hatte ich den letzten Wochen nichts bemerkt?"
+    symb"Ich hätte für ihn da sein sollen… warum nur hatte ich den letzten Wochen nichts bemerkt?"
 
     # Atropos Gedanken
-    "Ich hätte doch sehen müssen, dass es meinem besten Freund immer schlechter ging…"
+    symb"Ich hätte doch sehen müssen, dass es meinem besten Freund immer schlechter ging…"
 
     # Atropos Gedanken
-    "Und dann diese Bombe… was hat all das zu bedeuten?"
+    symb"Und dann diese Bombe… was hat all das zu bedeuten?"
 
     # Atropos Gedanken
-    "Hat Kloth etwa von dem Anschlag erfahren und versucht ihn zu verhindern? Hat er für die Firma sein Leben gelassen?"
+    symb"Hat Kloth etwa von dem Anschlag erfahren und versucht ihn zu verhindern? Hat er für die Firma sein Leben gelassen?"
 
     # Atropos Gedanken
-    "Es würde Kloth ähnlich sehen… er liebt Aither über alles. So sehr ihn die Firma vielleicht auch in den Ruin treiben würde, er würde dennoch sein Leben für sie gegeben."
+    symb"Es würde Kloth ähnlich sehen… er liebt Aither über alles. So sehr ihn die Firma vielleicht auch in den Ruin treiben würde, er würde dennoch sein Leben für sie gegeben."
 
     # Atropos Gedanken
-    "Ob Aither an seinem Zustand schuld war? Was hat Kloth erfahren, dass ihm so viel Angst bereitet hat?"
+    symb"Ob Aither an seinem Zustand schuld war? Was hat Kloth erfahren, dass ihm so viel Angst bereitet hat?"
 
     # Atropos Gedanken
-    "Und dennoch… in seinem Brief schrieb er von Zweifeln, die er gegenüber der Firma hegt. Das alles passt nicht zusammen…"
+    symb"Und dennoch… in seinem Brief schrieb er von Zweifeln, die er gegenüber der Firma hegt. Das alles passt nicht zusammen…"
 
     # Atropos Gedanken
-    "Ist Kloth vielleicht wirklich wahnsinnig geworden?"
+    symb"Ist Kloth vielleicht wirklich wahnsinnig geworden?"
 
     # Atropos Gedanken
-    "Was soll ich nur tun?"
+    symb"Was soll ich nur tun?"
 
     # Atropos Gedanken
-    "Ich habe Angst. Angst etwas Falsches zu machen."
+    symb"Ich habe Angst. Angst etwas Falsches zu machen."
 
     # Atropos Gedanken
-    "Gibt es überhaupt ein richtig oder falsch in diesem Moment?"
+    symb"Gibt es überhaupt ein richtig oder falsch in diesem Moment?"
 
     # Atropos Gedanken
-    "Habe ich überhaupt die Chance etwas richtig zu machen?"
+    symb"Habe ich überhaupt die Chance etwas richtig zu machen?"
 
     # Atropos Gedanken
-    "Wem soll ich glauben?"
+    symb"Wem soll ich glauben?"
 
     # Atropos Gedanken
-    "Mir selbst? Kloths Abschiedsbrief? Meinen Erinnerungen? Kloths Glaube an Aither?"
+    symb"Mir selbst? Kloths Abschiedsbrief? Meinen Erinnerungen? Kloths Glaube an Aither?"
 
     # Atropos Gedanken
-    "Ahhhhh…"
+    symb"Ahhhhh…"
 
     # Symbiont
-    "{i}Es spielt keine Rolle, an wen du letztlich glaubst. Das Einzige, das wichtig ist, ist, dass du mit deinen Entscheidungen nicht nur leben kannst, sondern auch glücklich bist. {/i}"
+    symb"{i}Es spielt keine Rolle, an wen du letztlich glaubst. Das Einzige, das wichtig ist, ist, dass du mit deinen Entscheidungen nicht nur leben kannst, sondern auch glücklich bist. {/i}"
 
     # Symbiont
-    "{i}Frage dich selbst. Was möchtest du tun? Du könntest versuchen die Bombe zu entschärfen, auch wenn es sein kann, dass du scheiterst. {/i}"
+    symb"{i}Frage dich selbst. Was möchtest du tun? Du könntest versuchen die Bombe zu entschärfen, auch wenn es sein kann, dass du scheiterst. {/i}"
 
     # Symbiont
-    "{i}Du kannst aber auch annehmen, dass es die Bombe niemals gab und zu deinem alten Leben zurückkehren. Vielleicht ist das ja die Wahrheit. {/i}"
+    symb"{i}Du kannst aber auch annehmen, dass es die Bombe niemals gab und zu deinem alten Leben zurückkehren. Vielleicht ist das ja die Wahrheit. {/i}"
 
     # Symbiont
-    "{i}Aber vielleicht glaubst du auch deinem Freund und seinen Zweifeln über Aither. {/i}"
+    symb"{i}Aber vielleicht glaubst du auch deinem Freund und seinen Zweifeln über Aither. {/i}"
 
     # Symbiont
-    "{i}Es gibt nicht nur eine Art wahres Glück zu erreichen. Du musst deinen eigenen Weg finden, Atropos. {/i}"
+    symb"{i}Es gibt nicht nur eine Art wahres Glück zu erreichen. Du musst deinen eigenen Weg finden, Atropos. {/i}"
 
     # Atropos Gedanken
-    "Aber selbst, wenn ich die Bombe entschärfen wollte… wie soll ich es tun?"
+    symb"Aber selbst, wenn ich die Bombe entschärfen wollte… wie soll ich es tun?"
 
     # Atropos Gedanken
-    "Ich weiß nicht, wo sie ist."
+    symb"Ich weiß nicht, wo sie ist."
 
     # Symbiont
-    "{i}Du hast alle Hinweise gefunden, die dich zu deiner Antwort führen. Setz sie zusammen und finde deine persönliche Antwort! {/i}"
+    symb"{i}Du hast alle Hinweise gefunden, die dich zu deiner Antwort führen. Setz sie zusammen und finde deine persönliche Antwort! {/i}"
 
     # Atropos Gedanken
-    "Der Serverraum… aber warum?"
+    symb"Der Serverraum… aber warum?"
 
     # Atropos Gedanken
-    "Warum sollte man Aither vernichten wollen? Und nicht nur diese Filiale lahmlegen, sondern alle, indem der Server zerstört wird?"
+    symb"Warum sollte man Aither vernichten wollen? Und nicht nur diese Filiale lahmlegen, sondern alle, indem der Server zerstört wird?"
 
     # Atropos Gedanken
-    "Aither macht uns alle glücklich… oder?"
+    symb"Aither macht uns alle glücklich… oder?"
 
     # Symbiont
-    "{i}Das ist der einzige Zweck, zu dem Aither gegründet wurde. Anan ist nichts wichtiger als das persönliche Glück aller Menschen. {/i}"
+    symb"{i}Das ist der einzige Zweck, zu dem Aither gegründet wurde. Anan ist nichts wichtiger als das persönliche Glück aller Menschen. {/i}"
 
     # Atropos Gedanken
-    "Die Pillen… Ob Kloth wohl Probleme mit diesen hatte?"
+    symb"Die Pillen… Ob Kloth wohl Probleme mit diesen hatte?"
 
     # Atropos Gedanken
-    "Hat er herausgefunden, dass irgendetwas mit ihnen nicht stimmt?"
+    symb"Hat er herausgefunden, dass irgendetwas mit ihnen nicht stimmt?"
 
     # Atropos Gedanken
-    "Mein Kopf tut so weh… ich weiß einfach nicht, was ich tun soll…"
+    symb"Mein Kopf tut so weh… ich weiß einfach nicht, was ich tun soll…"
 
     # Symbiont
-    "{i}Geh zum Serverraum und beruhige dich erstmal. Sei ruhig. Denk nach. Was ist die für dich richtige Entscheidung? Wie kannst du glücklich sein? {/i}"
+    symb"{i}Geh zum Serverraum und beruhige dich erstmal. Sei ruhig. Denk nach. Was ist die für dich richtige Entscheidung? Wie kannst du glücklich sein? {/i}"
 
     # Atropos Gedanken
-    "Ich… ich…"
+    symb"Ich… ich…"
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Ich höre ein Ticken. Ist sie das?"
+    symb"Ich höre ein Ticken. Ist sie das?"
 
     # Atropos Gedanken
-    "Ja… da leuchten die Ziffern im Dunklen…"
+    symb"Ja… da leuchten die Ziffern im Dunklen…"
 
     # Atropos Gedanken
-    "Die Zahl… sie ist viel zu niedrig… was soll ich nur tun?"
+    symb"Die Zahl… sie ist viel zu niedrig… was soll ich nur tun?"
 
     # Atropos Gedanken
-    "Meine Finger zittern wie verrückt…"
+    symb"Meine Finger zittern wie verrückt…"
 
     # Symbiont
-    "{i}Beruhige dich, Atropos! Atme tief durch. Das ist der alles entscheidende Moment. Welche Entscheidung wirst du treffen, damit du glücklich bist? {/i}"
+    symb"{i}Beruhige dich, Atropos! Atme tief durch. Das ist der alles entscheidende Moment. Welche Entscheidung wirst du treffen, damit du glücklich bist? {/i}"
 
     # Symbiont
-    "{i}Was macht dich glücklich? {/i}"
+    symb"{i}Was macht dich glücklich? {/i}"
 
     # Atropos Gedanken
-    "Soll ich Kloth vertrauen? Wenn er von der Bombe wusste, sie nicht entschärft hat und niemanden davor gewarnt hat…"
+    symb"Soll ich Kloth vertrauen? Wenn er von der Bombe wusste, sie nicht entschärft hat und niemanden davor gewarnt hat…"
 
     # Atropos Gedanken
-    "Wollte er, dass es so endet?"
+    symb"Wollte er, dass es so endet?"
 
     # Atropos Gedanken
-    "Hat Aither ihn tatsächlich in den Abgrund getrieben? Für seinen Wahnsinn gesorgt?"
+    symb"Hat Aither ihn tatsächlich in den Abgrund getrieben? Für seinen Wahnsinn gesorgt?"
 
     # Atropos Gedanken
-    "Ist Aither an allem schuld? Wären wir ohne Aither glücklicher?"
+    symb"Ist Aither an allem schuld? Wären wir ohne Aither glücklicher?"
 
     # Symbiont
-    "{i}Die Zeit tickt. Dir bleiben nur noch Minuten. Triff deine Entscheidung. {/i}"
+    symb"{i}Die Zeit tickt. Dir bleiben nur noch Minuten. Triff deine Entscheidung. {/i}"
 
     # Atropos Gedanken
-    "Aber andererseits… kann ich all die Menschenleben wirklich gefährden?"
+    symb"Aber andererseits… kann ich all die Menschenleben wirklich gefährden?"
 
     # Atropos Gedanken
-    "Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
+    symb"Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
 
     # Atropos Gedanken
-    "Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
+    symb"Ich weiß einfach nicht, was ich tun soll…"
 
     # Atropos Gedanken
-    "Ich weiß einfach nicht, was ich tun soll…"
-
-    # Atropos Gedanken
-    "Warum kann mir niemand diese Entscheidung abnehmen?"
+    symb"Warum kann mir niemand diese Entscheidung abnehmen?"
 
     # Symbiont
-    "{i}Würde es dich glücklicher machen, wenn dir die Entscheidung abgenommen werden würde? {/i}"
+    symb"{i}Würde es dich glücklicher machen, wenn dir die Entscheidung abgenommen werden würde? {/i}"
 
     # Atropos Gedanken
-    "Sie ist zu schwer zu fällen… ja… ich denke ich wäre glücklicher… ich kann diese Verantwortung einfach nicht tragen."
+    symb"Sie ist zu schwer zu fällen… ja… ich denke ich wäre glücklicher… ich kann diese Verantwortung einfach nicht tragen."
 
     # Symbiont
-    "{i}Dann entschärfe die Bombe. Rette all die Menschenleben! Sorge dafür, dass auch sie glücklich sein können! {/i}"
+    symb"{i}Dann entschärfe die Bombe. Rette all die Menschenleben! Sorge dafür, dass auch sie glücklich sein können! {/i}"
 
     # Atropos Gedanken
-    "Aber was ist, wenn die Menschen ohne Aither glücklicher wären?"
+    symb"Aber was ist, wenn die Menschen ohne Aither glücklicher wären?"
 
     # Symbiont
-    "{i}Du weißt es selbst. Ohne Aither würde die Welt im Chaos versinken. Die Menschen sind glücklich dank Happiness. Zählt irgendetwas anderes? {/i}"
+    symb"{i}Du weißt es selbst. Ohne Aither würde die Welt im Chaos versinken. Die Menschen sind glücklich dank Happiness. Zählt irgendetwas anderes? {/i}"
 
     # Symbiont
-    "{i}Dein Glück ist das Einzige, das wichtig ist. {/i}"
+    symb"{i}Dein Glück ist das Einzige, das wichtig ist. {/i}"
 
     # Symbiont
-    "{i}Dein Glück und das Glück aller Menschen. {/i}"
+    symb"{i}Dein Glück und das Glück aller Menschen. {/i}"
 
     # Symbiont
-    "{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich! {/i}"
-
+    symb"{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich! {/i}"
+    show screen force_mouse_move_480
     menu:
         "Ich will die Bombe entschärfen!":
+            hide screen force_mouse_move_480
             jump entschaerfenPillegenommen
 
         "Ich werde abwarten und die Bombe explodieren lassen. Ich vertraue Kloth!":
+            hide screen force_mouse_move_480
             jump explodierenPillegenommen
 
 label entschaerfenPillegenommen:
 
     # Atropos Gedanken
-    "Ich will die Bombe entschärfen!"
+    symb"Ich will die Bombe entschärfen!"
 
     # Symbiont
-    "{i}Ist es das, was du wirklich willst? Bist du glücklich mit dieser Entscheidung? {/i}"
+    symb"{i}Ist es das, was du wirklich willst? Bist du glücklich mit dieser Entscheidung? {/i}"
 
     # Atropos Gedanken
-    "Ja, es spielt keine Rolle, was Kloth gedacht hat. Ich kann all die Menschen nicht sterben lassen!"
+    symb"Ja, es spielt keine Rolle, was Kloth gedacht hat. Ich kann all die Menschen nicht sterben lassen!"
 
     # Atropos Gedanken
-    "Vollkommen egal, ob Aither nun die Schuld an Kloths Zustand trägt oder nicht…"
+    symb"Vollkommen egal, ob Aither nun die Schuld an Kloths Zustand trägt oder nicht…"
 
     # Atropos Gedanken
-    "Egal, ob Aither uns nun glücklich macht oder nicht."
+    symb"Egal, ob Aither uns nun glücklich macht oder nicht."
 
     # Atropos Gedanken
-    "Ich kann all die Menschenleben nicht für eine vage Vermutung zerstören."
+    symb"Ich kann all die Menschenleben nicht für eine vage Vermutung zerstören."
 
     # Atropos Gedanken
-    "Das würde mich unglücklich machen!"
+    symb"Das würde mich unglücklich machen!"
 
     # Symbiont
-    "{i}Dann worauf wartest du noch? Sorge für dein eigenes Glück. Kämpfe dafür! {/i}"
+    symb"{i}Dann worauf wartest du noch? Sorge für dein eigenes Glück. Kämpfe dafür! {/i}"
 
     "Atropos" "Verdammt… die Drähte… heißt es nicht immer, man müsse einen durchschneiden?"
 
     "Atropos" "Aber ich hätte nicht mal etwas zum Durchschneiden da…"
 
     "Atropos" "Hilft mir das Internet weiter?"
+    scene server_room
+    with fadestart
 
     "Atropos" "…"
 
@@ -250,54 +251,54 @@ label entschaerfenPillegenommen:
     with fadeshort
 
     # Symbiont
-    "{i}10 Sekunden… die Uhr, sie tickt…{/i}"
+    symb"{i}10 Sekunden… die Uhr, sie tickt…{/i}"
 
     "Atropos" "Bitte… bitte…"
 
     scene detail_bomb0009
 
     # Symbiont
-    "{i}9 Sekunden…{/i}"
+    symb"{i}9 Sekunden…{/i}"
 
     "Atropos" "Das darf doch nicht wahr sein…"
 
     scene detail_bomb0008
 
     # Symbiont
-    "{i}8 Sekunden…{/i}"
+    symb"{i}8 Sekunden…{/i}"
 
     "Atropos" "Era…"
 
     scene detail_bomb0007
 
     # Symbiont
-    "{i}7 Sekunden…{/i}"
+    symb"{i}7 Sekunden…{/i}"
 
     "Atropos" "Kloth… Chesis…"
 
     scene detail_bomb0006
 
     # Symbiont
-    "{i}6 Sekunden…{/i}"
+    symb"{i}6 Sekunden…{/i}"
 
     "Atropos" "Es tut mir so leid…"
 
     scene detail_bomb0005
 
     # Symbiont
-    "{i}5 Sekunden…{/i}"
+    symb"{i}5 Sekunden…{/i}"
 
     "Atropos" "Da, das ist die Lösung! Bitte… funktioniere…"
 
     scene detail_bomb0004
 
     # Symbiont
-    "{i}4 Sekunden…{/i}"
+    symb"{i}4 Sekunden…{/i}"
 
     "Atropos" "Es hat funktioniert! Ich habe es geschafft!"
 
     # Symbiont
-    "{i}Es war zu spät... {/i}"
+    symb"{i}Es war zu spät... {/i}"
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -308,139 +309,149 @@ label explodierenPillegenommen:
 
 
     # Atropos Gedanken
-    "Ich werde abwarten und die Bombe explodieren lassen. Ich vertraue Kloth!"
+    symb"Ich werde abwarten und die Bombe explodieren lassen. Ich vertraue Kloth!"
 
     # Symbiont
-    "{i}Ist es das, was du wirklich willst? Bist du glücklich mit dieser Entscheidung? {/i}"
+    symb"{i}Ist es das, was du wirklich willst? Bist du glücklich mit dieser Entscheidung? {/i}"
 
     # Atropos Gedanken
-    "Ja, ich bin mir sicher. Ich kenne Kloth seit meiner Kindheit und neben Anan ist er einer der klügsten Menschen, die ich kenne."
+    symb"Ja, ich bin mir sicher. Ich kenne Kloth seit meiner Kindheit und neben Anan ist er einer der klügsten Menschen, die ich kenne."
 
     # Atropos Gedanken
-    "Das alles hier kann kein Zufall sein."
+    symb"Das alles hier kann kein Zufall sein."
 
     # Atropos Gedanken
-    "Kloth muss gute Gründe für seine Zweifel an Aither gehabt haben."
+    symb"Kloth muss gute Gründe für seine Zweifel an Aither gehabt haben."
 
     # Atropos Gedanken
-    "Aither muss schuld an seinem Zerfall in letzter Zeit gewesen sein."
+    symb"Aither muss schuld an seinem Zerfall in letzter Zeit gewesen sein."
 
     # Atropos Gedanken
-    "Die Happiness-Pille muss schuld sein."
+    symb"Die Happiness-Pille muss schuld sein."
 
     # Atropos Gedanken
-    "Das alles muss ein Ende finden."
+    symb"Das alles muss ein Ende finden."
+    scene server_room
+    with fadestart
 
     scene detail_bomb0010
     with fadeshort
 
+    show glitch
+
     # Symbiont
-    "{i}Noch 10 Sekunden… die Uhr, sie tickt…{/i}"
+    symb"{i}Noch 10 Sekunden… die Uhr, sie tickt…{/i}"
 
     # Atropos Gedanken
-    "Es ist also alles bald vorbei."
+    symb"Es ist also alles bald vorbei."
 
     # Atropos Gedanken
-    "Ich wünschte ich hätte die Chance gehabt nochmal mit Kloth über alles zu sprechen. Ihn zu fragen, was das alles zu bedeuten hat."
+    symb"Ich wünschte ich hätte die Chance gehabt nochmal mit Kloth über alles zu sprechen. Ihn zu fragen, was das alles zu bedeuten hat."
 
     scene detail_bomb0009
+    show glitch
 
     # Symbiont
-    "{i}9 Sekunden. {/i}"
+    symb"{i}9 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Er scheint so viel mehr als alle anderen zu wissen. Ob er dieses Wissen wohl von Anan hat?"
+    symb"Er scheint so viel mehr als alle anderen zu wissen. Ob er dieses Wissen wohl von Anan hat?"
 
     # Atropos Gedanken
-    "Auch die mächtigsten Männer brauchen wohl jemanden, dem sie sich anvertrauen können…"
+    symb"Auch die mächtigsten Männer brauchen wohl jemanden, dem sie sich anvertrauen können…"
 
     scene detail_bomb0008
+    show glitch
 
     # Symbiont
-    "{i}8 Sekunden. {/i}"
+    symb"{i}8 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Ob es wohl anders hätte kommen können? Hätte ich versuchen sollen alle zu retten, aber die Bombe explodieren lassen sollen?"
+    symb"Ob es wohl anders hätte kommen können? Hätte ich versuchen sollen alle zu retten, aber die Bombe explodieren lassen sollen?"
 
     # Atropos Gedanken
-    "So viele Menschen werden heute sterben…"
+    symb"So viele Menschen werden heute sterben…"
 
     scene detail_bomb0007
+    show glitch
 
     # Symbiont
-    "{i}7 Sekunden. {/i}"
+    symb"{i}7 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Die Zeit wird langsam knapp… Ich habe keine Zeit mehr etwas zu ändern… Ich dachte, ich wäre meiner Entscheidung sicher gewesen, aber…"
+    symb"Die Zeit wird langsam knapp… Ich habe keine Zeit mehr etwas zu ändern… Ich dachte, ich wäre meiner Entscheidung sicher gewesen, aber…"
 
     scene detail_bomb0006
+    show glitch
 
     # Symbiont
-    "{i}6 Sekunden. {/i}"
+    symb"{i}6 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Was ist dieses Gefühl?"
+    symb"Was ist dieses Gefühl?"
 
     scene detail_bomb0005
+    show glitch
 
     # Symbiont
-    "{i}5 Sekunden. {/i}"
+    symb"{i}5 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Ich habe Angst… ich habe Angst zu sterben… und all diese anderen Menschen, die ich mit in den Tod reiße…"
+    symb"Ich habe Angst… ich habe Angst zu sterben… und all diese anderen Menschen, die ich mit in den Tod reiße…"
 
     scene detail_bomb0004
+    show glitch
 
     # Symbiont
-    "{i}4 Sekunden. {/i}"
+    symb"{i}4 Sekunden. {/i}"
 
     # Atropos Gedanken
-    "Selbst wenn es richtig ist, die Firma zu zerstören - und ich vertraue Kloth dabei- … hätte ich eine andere Entscheidung treffen sollen?"
+    symb"Selbst wenn es richtig ist, die Firma zu zerstören - und ich vertraue Kloth dabei- … hätte ich eine andere Entscheidung treffen sollen?"
 
     # Symbiont
-    "{i}Bist du glücklich, Atropos? {/i}"
+    symb"{i}Bist du glücklich, Atropos? {/i}"
+    window hide
 
     # Atropos Gedanken
-    "Nein. Nein, bin ich nicht."
+    symb"Nein. Nein, bin ich nicht."
 
-    # End-Animation läuft ab, darüber liegt aber ein leichtes Rauschen
+    hide glitch
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
 
     scene street
-    with fadeshort
 
     # Atropos Gedanken
-    "Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung."
+    symb"Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung."
 
     # Atropos Gedanken
-    "Endlich fühle ich mich wirklich glücklich."
+    symb"Endlich fühle ich mich wirklich glücklich."
 
     # Atropos Gedanken
-    "Ich weiß nicht, warum ich in letzter Zeit unglücklicher gewesen war, aber jetzt bin ich glücklich und das ist das Einzige, das zählt."
+    symb"Ich weiß nicht, warum ich in letzter Zeit unglücklicher gewesen war, aber jetzt bin ich glücklich und das ist das Einzige, das zählt."
 
     # Atropos Gedanken
-    "Da vorne ist ja auch schon Tartaros. Und nachher treffe ich mich mit meinen Freunden- besser kann der Tag gar nicht mehr werden."
+    symb"Da vorne ist ja auch schon Tartaros. Und nachher treffe ich mich mit meinen Freunden- besser kann der Tag gar nicht mehr werden."
 
     # Atropos Gedanken
-    "Ich bin froh für eine Firma wie Tartaros zu arbeiten. Es muss schrecklich für die Menschen gewesen sein, die in Aither gearbeitet hatten."
+    symb"Ich bin froh für eine Firma wie Tartaros zu arbeiten. Es muss schrecklich für die Menschen gewesen sein, die in Aither gearbeitet hatten."
 
     # Atropos Gedanken
-    "Diese Bombe… einfach grauenhaft… wer könnte so etwas nur tun? All die Menschen, die gestorben sind…"
+    symb"Diese Bombe… einfach grauenhaft… wer könnte so etwas nur tun? All die Menschen, die gestorben sind…"
 
     # Atropos Gedanken
-    "Aber ich sollte mir keine Gedanken mehr darüber machen. Es liegt in der Vergangenheit und hat mich zum Glück nicht betroffen."
+    symb"Aber ich sollte mir keine Gedanken mehr darüber machen. Es liegt in der Vergangenheit und hat mich zum Glück nicht betroffen."
 
     # Atropos Gedanken
-    "Jetzt sollte ich mich ganz auf das Hier und Jetzt konzentrieren."
+    symb"Jetzt sollte ich mich ganz auf das Hier und Jetzt konzentrieren."
 
     # Atropos Gedanken
-    "Was steht heute alles an?"
+    symb"Was steht heute alles an?"
 
     # Symbiont
-    "{i}Atropos. Bist du glücklich? {/i}"
+    symb"{i}Atropos. Bist du glücklich? {/i}"
 
     "Atropos" "Ja. Ja, das bin ich."
 
@@ -449,92 +460,88 @@ label explodierenPillegenommen:
 
 label sawallthreekloth:
     # Atropos Gedanken
-    "Was hat das alles zu bedeuten?"
+    symb"Was hat das alles zu bedeuten?"
 
     # Atropos Gedanken
-    "All die Sachen, die ich in Anans und Kloths Büro gesehen habe… Was hat das zu bedeuten?"
+    symb"All die Sachen, die ich in Anans und Kloths Büro gesehen habe… Was hat das zu bedeuten?"
 
     # Atropos Gedanken
-    "Was bedeutet das für Aither?"
+    symb"Was bedeutet das für Aither?"
 
     # Atropos Gedanken
-    "Ich hatte irgendwo gehofft, dass das, was ich in Kloths Büro finde, meine Zweifel irgendwo zerstreuen mag, aber stattdessen sind sie nur noch mehr gewachsen."
+    symb"Ich hatte irgendwo gehofft, dass das, was ich in Kloths Büro finde, meine Zweifel irgendwo zerstreuen mag, aber stattdessen sind sie nur noch mehr gewachsen."
 
     # Atropos Gedanken
-    "Und ich bin wohl nicht die einzige Person mit Zweifeln… Kloth hatte sie auch… sein Abschiedsbrief…"
+    symb"Und ich bin wohl nicht die einzige Person mit Zweifeln… Kloth hatte sie auch… sein Abschiedsbrief…"
 
     # Atropos Gedanken
-    "Sag mir nicht, dass Kloth die Bombe gelegt hat, von der im Blog die Rede war?"
+    symb"Sag mir nicht, dass Kloth die Bombe gelegt hat, von der im Blog die Rede war?"
 
     # Atropos Gedanken
-    "Aber wenn ja… wo überhaupt?"
+    symb"Aber wenn ja… wo überhaupt?"
 
     # Atropos Gedanken
-    "Wo könnte man eine Bombe am besten legen, wenn man Aither schaden will?"
+    symb"Wo könnte man eine Bombe am besten legen, wenn man Aither schaden will?"
 
     # Symbiont
-    "{i}Ist es etwa auch das, was du willst? Aither zu schaden? {/i}"
+    symb"{i}Ist es etwa auch das, was du willst? Aither zu schaden? {/i}"
 
     # Atropos Gedanken
-    "Ich… ich weiß nicht… will ich das?"
+    symb"Ich… ich weiß nicht… will ich das?"
 
     # Atropos Gedanken
-    "Will ich Aither schaden?"
+    symb"Will ich Aither schaden?"
 
     # Atropos Gedanken
-    "Ich war so überzeugt von allem gewesen für das die Firma steht…"
+    symb"Ich war so überzeugt von allem gewesen für das die Firma steht…"
 
     # Atropos Gedanken
-    "Aber jetzt…"
+    symb"Aber jetzt…"
 
     # Atropos Gedanken
-    "Warum dürfen wir nicht unsere eigenen Entscheidungen treffen?"
+    symb"Warum dürfen wir nicht unsere eigenen Entscheidungen treffen?"
 
     # Atropos Gedanken
-    "Warum dürfen wir nicht unsere eigene Glücklichkeit finden?"
+    symb"Warum dürfen wir nicht unsere eigene Glücklichkeit finden?"
 
     # Atropos Gedanken
-    "Und diese Diagramme in Anans Büro… was haben diese zu bedeuten? Was stellt die Happiness-Pille mit unseren Köpfen an?"
+    symb"Und diese Diagramme in Anans Büro… was haben diese zu bedeuten? Was stellt die Happiness-Pille mit unseren Köpfen an?"
 
     # Atropos Gedanken
-    "Es gibt so viele, die an der Pille arbeiten- was machen die anderen mit dieser? Und sind sie sich dessen überhaupt bewusst?"
+    symb"Es gibt so viele, die an der Pille arbeiten- was machen die anderen mit dieser? Und sind sie sich dessen überhaupt bewusst?"
 
     # Atropos Gedanken
-    "Auch wenn die Ziele von Aither gut sein mögen, – alle Menschen sollen in Glücklichkeit leben können – ist die Art und Weise wie Anan das erreichen will, einfach nur falsch!"
+    symb"Auch wenn die Ziele von Aither gut sein mögen, – alle Menschen sollen in Glücklichkeit leben können – ist die Art und Weise wie Anan das erreichen will, einfach nur falsch!"
 
     # Atropos Gedanken
-    "Ich will bei klarem Verstand sein!"
+    symb"Ich will bei klarem Verstand sein!"
 
     # Atropos Gedanken
-    "Ich will selbst über mein Glück bestimmen können!"
+    symb"Ich will selbst über mein Glück bestimmen können!"
 
     # Atropos Gedanken
-    "Ich lasse mir nichts mehr vorschreiben! Nicht von Aither!"
+    symb"Ich lasse mir nichts mehr vorschreiben! Nicht von Aither!"
 
     # Atropos Gedanken
-    "Aber wie bringe ich die anderen Menschen dazu ebenfalls zu erkennen, was sie wirklich brauchen?"
+    symb"Aber wie bringe ich die anderen Menschen dazu ebenfalls zu erkennen, was sie wirklich brauchen?"
 
     # Atropos Gedanken
-    "Wie kann ich sie dazu bringen mir zuzuhören?"
+    symb"Wie kann ich sie dazu bringen mir zuzuhören?"
 
     # Atropos Gedanken
-    "Sich ebenfalls zu wehren? Wir dürfen nicht einfach nur still dasitzen und nichts tun, während Aither an unseren Gehirnen rumbastelt."
+    symb"Sich ebenfalls zu wehren? Wir dürfen nicht einfach nur still dasitzen und nichts tun, während Aither an unseren Gehirnen rumbastelt."
 
     # Symbiont
-    "{i}Hör auf, dich in die ganze Sache so sehr reinzusteigern. Atme tief durch und beruhige dich. Alles ist nicht so schlimm, wie du es denkst. {/i}"
+    symb"{i}Hör auf, dich in die ganze Sache so sehr reinzusteigern. Atme tief durch und beruhige dich. Alles ist nicht so schlimm, wie du es denkst. {/i}"
 
     # Atropos Gedanken
-    "Kloth… ich weiß nicht, wo du gerade bist… aber bitte… bitte sei noch am Leben."
+    symb"Kloth… ich weiß nicht, wo du gerade bist… aber bitte… bitte sei noch am Leben."
 
     # Atropos Gedanken
-    "Chesis… ich brauche ihn jetzt… ich muss mit ihm sprechen. Vielleicht weiß er, was zu tun ist."
-
-
-    # Atropos Gedanken
-    "Aber wo kann er sein? Wo kann ich ihn nur finden?"
+    symb"Chesis… ich brauche ihn jetzt… ich muss mit ihm sprechen. Vielleicht weiß er, was zu tun ist."
 
     # Atropos Gedanken
-    "Aber wo kann er sein? Wo kann ich ihn nur finden? Es ist fast Zeit für die Mittagspause, oder? Vielleicht arbeitet er noch?"
+    symb"Aber wo kann er sein? Wo kann ich ihn nur finden? Es ist fast Zeit für die Mittagspause, oder? Vielleicht arbeitet er noch?"
 
     scene shop_1
     with fadeshort
@@ -561,22 +568,22 @@ label sawallthreekloth:
     "Zelos" "Ich wünsche dir einen wunderschön glücklichen Tag!"
 
     # Atropos Gedanken
-    "Das alles wirkt ja schon fast wie Gehirnwäsche… Was soll der Mist? So kann es nicht weitergehen…"
+    symb"Das alles wirkt ja schon fast wie Gehirnwäsche… Was soll der Mist? So kann es nicht weitergehen…"
 
     # Symbiont
-    "{i}Atropos. {/i}"
+    symb"{i}Atropos. {/i}"
 
     # Atropos Gedanken
-    "Ich muss mit Chesis sprechen. Jetzt sofort."
+    symb"Ich muss mit Chesis sprechen. Jetzt sofort."
 
     scene shop_2
     with fadeshort
 
     # Symbiont
-    "{i}Sprich nicht mit Chesis. Er ist genau wie alle anderen. Er wird ohnehin nicht auf dich hören und du wirst ihn nur ins Unglück stürzen. {/i}"
+    symb"{i}Sprich nicht mit Chesis. Er ist genau wie alle anderen. Er wird ohnehin nicht auf dich hören und du wirst ihn nur ins Unglück stürzen. {/i}"
 
     # Atropos Gedanken
-    "Wo ist er nur?"
+    symb"Wo ist er nur?"
 
     "Atropos" "Chesis?"
 
@@ -627,7 +634,7 @@ label sawallthreekloth:
     "Atropos" "Nimmst du die Happiness-Pille wirklich freiwillig? Oder weil es von dir erwartet wird?"
 
     # Symbiont
-    "{i}Hör auf, Atropos! Willst du euch beide in den Abgrund reißen? Mach, was auch immer dich glücklich macht, aber gefährde nicht auch noch andere. {/i}"
+    symb"{i}Hör auf, Atropos! Willst du euch beide in den Abgrund reißen? Mach, was auch immer dich glücklich macht, aber gefährde nicht auch noch andere. {/i}"
 
     "Atropos" "Sei still!"
 
@@ -668,7 +675,7 @@ label sawallthreekloth:
     "Atropos" "Die Bombe… wo könnte sie nur sein?"
 
     # Symbiont
-    "{i}Beruhige dich! Du bist nicht mehr bei klarem Verstand. Nimm Happiness und alles wird gut werden. {/i}"
+    symb"{i}Beruhige dich! Du bist nicht mehr bei klarem Verstand. Nimm Happiness und alles wird gut werden. {/i}"
 
     "Atropos" "Wo könnte Kloth der Firma am meisten schaden?"
 
@@ -687,7 +694,7 @@ label sawallthreekloth:
     "Atropos" "Ja… ja… vermutlich… es ist die einzige Option…"
 
     # Symbiont
-    "{i}Die Menschen… {/i}"
+    symb"{i}Die Menschen… {/i}"
 
     "Atropos" "Stimmt… die Menschen hier im Gebäude… was ist mit ihnen? Ich weiß nicht, wie viel Zeit uns noch bleibt…"
 
@@ -719,7 +726,7 @@ label savepeoplesawallthreekloth:
     "Atropos" "Oder sollte ich besser nach meinen Freunden suchen und sichergehen, dass ihnen nichts passiert?"
 
     # Symbiont
-    "{i}Was würde dich glücklicher machen? {/i}"
+    symb"{i}Was würde dich glücklicher machen? {/i}"
 
     menu:
         "Meine Freunde… ich muss sichergehen, dass es ihnen gut geht.":
@@ -765,10 +772,10 @@ label saveera:
     "Atropos" "Ich kann sie einfach nicht sterben lassen."
 
     # Atropos Gedanken
-    "Aber wo könnte sie sein? Mittlerweile hat schon die Mittagspause angefangen."
+    symb"Aber wo könnte sie sein? Mittlerweile hat schon die Mittagspause angefangen."
 
     # Atropos Gedanken
-    "Sollte ich es trotzdem im Labor versuchen?"
+    symb"Sollte ich es trotzdem im Labor versuchen?"
 
     menu:
 
@@ -782,13 +789,13 @@ label saveera:
 label saveeralab:
 
     # Atropos Gedanken
-    "Ich versuche es im Labor. Vielleicht ist sie ja noch dort."
+    symb"Ich versuche es im Labor. Vielleicht ist sie ja noch dort."
 
     # Atropos Gedanken
-    "Einen Versuch ist es wert… und ich sollte mich besser beeilen…"
+    symb"Einen Versuch ist es wert… und ich sollte mich besser beeilen…"
 
     # Atropos Gedanken
-    "Ich habe das ungute Gefühl, dass die Uhr tickt…"
+    symb"Ich habe das ungute Gefühl, dass die Uhr tickt…"
 
     scene lab
     with fadeshort
@@ -804,7 +811,7 @@ label saveeralab:
     "Narcais" "Warum bist du auf der Suche nach Era?"
 
     # Atropos Gedanken
-    "Soll ich ihn ebenfalls warnen? Nein… erst muss ich wissen, wo Era ist."
+    symb"Soll ich ihn ebenfalls warnen? Nein… erst muss ich wissen, wo Era ist."
 
     "Atropos" "Wo ist sie? Bitte… sag es mir."
 
@@ -821,7 +828,7 @@ label saveeralab:
     "Narcais" "Warum sollte ich?"
 
     # Atropos Gedanken
-    "Wie kann ich ihn nur dazu bringen das Gebäude zu verlassen?"
+    symb"Wie kann ich ihn nur dazu bringen das Gebäude zu verlassen?"
 
     "Atropos" "Du siehst… müde aus?"
 
@@ -836,10 +843,13 @@ label saveeralab:
     hide narcais
 
     # Atropos Gedanken
-    "Verdammt… aber ich habe auch keine Zeit mich jetzt mit ihm herumzustreiten…"
+    symb"Verdammt… aber ich habe auch keine Zeit mich jetzt mit ihm herumzustreiten…"
 
     # Atropos Gedanken
-    "Wo bleibt denn nur Era?"
+    symb"Wo bleibt denn nur Era?"
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
@@ -856,18 +866,21 @@ label saveeralab:
 
     "Atropos" "Möchtest du heute nicht ein bisschen früher Schluss machen?"
 
-    show narcais normal
-    show era shy_gray
+    show narcais normal:
+        xalign 0.25
+    show era shy_gray:
+        xalign 0.75
 
     "Narcais" "Das hat er mich auch schon gefragt. Ich habe keine Ahnung, was heute mit ihm los ist."
 
     hide narcais
-    show era normal
+    show era normal:
+        xalign 0.5
 
     "Era" "Was ist denn los, Atropos?"
 
     # Atropos Gedanken
-    "Ich brauche eine gute Ausrede… Ich kann ihr nicht die Wahrheit erzählen. Sie würde sie ebenso wenig verstehen wie Chesis zuvor."
+    symb"Ich brauche eine gute Ausrede… Ich kann ihr nicht die Wahrheit erzählen. Sie würde sie ebenso wenig verstehen wie Chesis zuvor."
 
     "Atropos" "Du hast heute schon den ganzen Tag so hart gearbeitet. Du hast es dir verdient. Und ich… ich mache mir Sorgen um dich."
 
@@ -910,12 +923,12 @@ label saveeralab:
     hide era
 
     # Atropos Gedanken
-    "Mein Herz…"
+    symb"Mein Herz…"
 
     "Atropos" "Ich hoffe sie ist in Sicherheit."
 
     # Atropos Gedanken
-    "Und jetzt sollte ich nach Chesis suchen… ich kann ihn nicht sterben lassen!"
+    symb"Und jetzt sollte ich nach Chesis suchen… ich kann ihn nicht sterben lassen!"
 
     "Atropos" "Vielleicht solltest du heute besser auch früher gehen, Narcais. Es wird dich am Ende glücklicher machen."
 
@@ -923,55 +936,55 @@ label saveeralab:
     with fadeshort
 
     # Atropos Gedanken
-    "Wo könnte er nur sein? Vermutlich ist er bei der Mensa, oder?"
+    symb"Wo könnte er nur sein? Vermutlich ist er bei der Mensa, oder?"
 
     # Symbiont
-    "{i}Solltest du nicht besser versuchen, alle Menschen zu warnen? Kannst du sie wirklich so einfach sterben lassen? {/i}"
+    symb"{i}Solltest du nicht besser versuchen, alle Menschen zu warnen? Kannst du sie wirklich so einfach sterben lassen? {/i}"
 
     # Atropos Gedanken
-    "Ich… ich weiß nicht… kann ich das?"
+    symb"Ich… ich weiß nicht… kann ich das?"
 
     # Atropos Gedanken
-    "Aber letztlich ist doch das Wichtigste, dass Aither zerstört wird. Und Era ist in Sicherheit. Jetzt muss ich nur noch Chesis retten."
+    symb"Aber letztlich ist doch das Wichtigste, dass Aither zerstört wird. Und Era ist in Sicherheit. Jetzt muss ich nur noch Chesis retten."
 
     # Symbiont
-    "{i}Und was ist mit Kloth? Was ist, wenn er noch im Gebäude ist? Und deine anderen Freunde. Willst du sie wirklich einfach sterben lassen? {/i}"
+    symb"{i}Und was ist mit Kloth? Was ist, wenn er noch im Gebäude ist? Und deine anderen Freunde. Willst du sie wirklich einfach sterben lassen? {/i}"
 
     # Atropos Gedanken
-    "Ich… ich… wie viel Zeit habe ich noch? Verdammt…"
+    symb"Ich… ich… wie viel Zeit habe ich noch? Verdammt…"
 
     # Atropos Gedanken
-    "Wenn ich wüsste, wie viel Zeit ich habe…"
+    symb"Wenn ich wüsste, wie viel Zeit ich habe…"
 
     # Atropos Gedanken
-    "Was soll ich tun?"
+    symb"Was soll ich tun?"
 
     # Atropos Gedanken
-    "Nein…"
+    symb"Nein…"
 
     # Atropos Gedanken
-    "Was wäre das Richtige?"
+    symb"Was wäre das Richtige?"
 
     # Atropos Gedanken
-    "Was soll ich nur tun? Ich habe Angst…"
+    symb"Was soll ich nur tun? Ich habe Angst…"
 
     # Atropos Gedanken
-    "Angst die falsche Entscheidung zu treffen…"
+    symb"Angst die falsche Entscheidung zu treffen…"
 
     # Atropos Gedanken
-    "Wieso musste es so weit kommen? Vielleicht wäre es besser gewesen, wenn ich nie von allem erfahren hätte und glücklich gewesen wäre…"
+    symb"Wieso musste es so weit kommen? Vielleicht wäre es besser gewesen, wenn ich nie von allem erfahren hätte und glücklich gewesen wäre…"
 
     # Atropos Gedanken
-    "Einfach nur glücklich…"
+    symb"Einfach nur glücklich…"
 
     # Atropos Gedanken
-    "Soll ich Chesis retten, oder versuchen, alle Menschen zu retten?"
+    symb"Soll ich Chesis retten, oder versuchen, alle Menschen zu retten?"
 
     # Atropos Gedanken
-    "Gibt es die Bombe oder nicht?"
+    symb"Gibt es die Bombe oder nicht?"
 
     # Atropos Gedanken
-    "Und wie viel Zeit habe ich noch?"
+    symb"Und wie viel Zeit habe ich noch?"
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -983,33 +996,33 @@ label saveeralab:
 label saveeraelsewhere:
 
     # Atropos Gedanken
-    "Ich suche besser wo anders nach ihr. In ihrer Mittagspause ist sie bestimmt nicht dort."
+    symb"Ich suche besser wo anders nach ihr. In ihrer Mittagspause ist sie bestimmt nicht dort."
 
     # Atropos Gedanken
-    "Aber wo soll ich nach ihr suchen? Ich weiß, dass sie normalerweise ihre Zeit nicht in der Mensa mit den anderen verbringt."
+    symb"Aber wo soll ich nach ihr suchen? Ich weiß, dass sie normalerweise ihre Zeit nicht in der Mensa mit den anderen verbringt."
 
     # Atropos Gedanken
-    "Wo könnte sie sonst sein?"
+    symb"Wo könnte sie sonst sein?"
 
     # Atropos Gedanken
-    "Verdammt… was soll ich nur tun?"
+    symb"Verdammt… was soll ich nur tun?"
 
     # Atropos Gedanken
-    "Era darf nicht gefährdet sein, wenn die Bombe da ist und in die Luft geht…"
+    symb"Era darf nicht gefährdet sein, wenn die Bombe da ist und in die Luft geht…"
 
     # Atropos Gedanken
-    "Es darf kein Risiko bestehen!"
+    symb"Es darf kein Risiko bestehen!"
 
     # Atropos Gedanken
-    "Aber wo nur?"
+    symb"Aber wo nur?"
 
     # Atropos Gedanken
-    "Wo ist sie nur?"
+    symb"Wo ist sie nur?"
     scene shop_1
     with fadeshort
 
     # Atropos Gedanken
-    "Wo ist sie nur?"
+    symb"Wo ist sie nur?"
 
     show zelos normal
 
@@ -1020,7 +1033,7 @@ label saveeraelsewhere:
     with fadeshort
 
     # Atropos Gedanken
-    "Wo ist sie nur?"
+    symb"Wo ist sie nur?"
 
     show chesis confused
 
@@ -1031,40 +1044,40 @@ label saveeraelsewhere:
     with fadeshort
 
     # Atropos Gedanken
-    "Wo ist sie nur?"
+    symb"Wo ist sie nur?"
 
     # Atropos Gedanken
-    "Wo ist sie nur?"
+    symb"Wo ist sie nur?"
 
     # Atropos Gedanken
-    "Das darf doch nicht wahr sein…"
+    symb"Das darf doch nicht wahr sein…"
 
     scene hall
     with fadeshort
 
     # Atropos Gedanken
-    "Ich muss sie finden…"
+    symb"Ich muss sie finden…"
 
     # Atropos Gedanken
-    "Ich muss sie retten…"
+    symb"Ich muss sie retten…"
 
     # Atropos Gedanken
-    "Die Zeit verrinnt zwischen meinen Fingern… wie viel habe ich wohl noch?"
+    symb"Die Zeit verrinnt zwischen meinen Fingern… wie viel habe ich wohl noch?"
 
     # Atropos Gedanken
-    "Wie viel Zeit bleibt mir noch?"
+    symb"Wie viel Zeit bleibt mir noch?"
 
     # Atropos Gedanken
-    "Tage? Stunden? Minuten? Sekunden? Verdammt…"
+    symb"Tage? Stunden? Minuten? Sekunden? Verdammt…"
 
     # Atropos Gedanken
-    "Das Labor..."
+    symb"Das Labor..."
 
     # Atropos Gedanken
-    "Vielleicht ist sie ja doch dort?"
+    symb"Vielleicht ist sie ja doch dort?"
 
     # Atropos Gedanken
-    "Ich muss mich beeilen…"
+    symb"Ich muss mich beeilen…"
 
     scene lab
     with fadeshort
@@ -1148,24 +1161,24 @@ label saveeraelsewhere:
 label savechesis:
 
     # Atropos Gedanken
-    "Ich muss Chesis retten- er ist einer meiner besten Freunde seit unserer Kindheit- trotz seiner Ignoranz zuvor."
+    symb"Ich muss Chesis retten- er ist einer meiner besten Freunde seit unserer Kindheit- trotz seiner Ignoranz zuvor."
 
     # Atropos Gedanken
-    "Ich kann ihn nicht sterben lassen."
+    symb"Ich kann ihn nicht sterben lassen."
 
     # Atropos Gedanken
-    "Egal wie klein oder groß die Chance dafür ist."
+    symb"Egal wie klein oder groß die Chance dafür ist."
 
     # Atropos Gedanken
-    "Wohin ist er vorher gegangen? Zurück zur Arbeit? Ich muss ihn finden!"
+    symb"Wohin ist er vorher gegangen? Zurück zur Arbeit? Ich muss ihn finden!"
     scene shop_1
     with fadeshort
 
     # Atropos Gedanken
-    "Soll ich Zelos auch warnen? Aber er wirkt beschäftigt und ich habe Angst, dass mich das zu viel Zeit kosten wird…"
+    symb"Soll ich Zelos auch warnen? Aber er wirkt beschäftigt und ich habe Angst, dass mich das zu viel Zeit kosten wird…"
 
     # Atropos Gedanken
-    "Nein- ich muss weiter… tut mir leid, Zelos… ich hoffe, dass du noch genug Zeit hast."
+    symb"Nein- ich muss weiter… tut mir leid, Zelos… ich hoffe, dass du noch genug Zeit hast."
 
     scene shop_2
     with fadeshort
@@ -1212,13 +1225,13 @@ label savechesis:
     "Atropos" "Du erinnerst dich einfach nicht…"
 
     # Atropos Gedanken
-    "Ist das auch ein Effekt von Happiness? Hat dich unser Gespräch etwa unglücklich gemacht? Hast du deswegen alles vergessen?"
+    symb"Ist das auch ein Effekt von Happiness? Hat dich unser Gespräch etwa unglücklich gemacht? Hast du deswegen alles vergessen?"
 
     # Atropos Gedanken
-    "Aber wie soll ich dich dazu bringen, dass du das Gebäude verlässt?"
+    symb"Aber wie soll ich dich dazu bringen, dass du das Gebäude verlässt?"
 
     # Atropos Gedanken
-    "Was kann ich tun?"
+    symb"Was kann ich tun?"
 
     show chesis angry
 
@@ -1228,7 +1241,7 @@ label savechesis:
 
 
     # Atropos Gedanken
-    "Tut mir leid, Kloth, dass ich dich als Ausrede missbrauche…"
+    symb"Tut mir leid, Kloth, dass ich dich als Ausrede missbrauche…"
 
     show chesis confused
 
@@ -1256,50 +1269,50 @@ label savechesis:
 
 
     # Atropos Gedanken
-    "Immerhin ist er sicher."
+    symb"Immerhin ist er sicher."
 
     # Atropos Gedanken
-    "Was jetzt?"
+    symb"Was jetzt?"
 
     # Atropos Gedanken
-    "Was soll ich jetzt tun?"
+    symb"Was soll ich jetzt tun?"
 
     # Atropos Gedanken
-    "Ich weiß Chesis in Sicherheit, aber all meine anderen Freunde nicht… aber wie viel Zeit habe ich noch? Was ist, wenn ich vollkommen unnötig Panik schiebe?"
+    symb"Ich weiß Chesis in Sicherheit, aber all meine anderen Freunde nicht… aber wie viel Zeit habe ich noch? Was ist, wenn ich vollkommen unnötig Panik schiebe?"
 
     # Atropos Gedanken
-    "Wie viel Zeit bleibt mir noch?"
+    symb"Wie viel Zeit bleibt mir noch?"
 
     # Atropos Gedanken
-    "Was, wenn es nur noch Sekunden sind?"
+    symb"Was, wenn es nur noch Sekunden sind?"
 
     # Atropos Gedanken
-    "Ich sollte zum Serverraum… einfach, um sicher zu gehen…"
+    symb"Ich sollte zum Serverraum… einfach, um sicher zu gehen…"
 
     # Atropos Gedanken
-    "Dann weiß ich besser, wie ich vorgehen sollte."
+    symb"Dann weiß ich besser, wie ich vorgehen sollte."
 
 
     # Atropos Gedanken
-    "Ich hoffe, ich tue das Richtige."
+    symb"Ich hoffe, ich tue das Richtige."
 
     # Atropos Gedanken
-    "Ich hoffe, der Fall von Aither ist die richtige Entscheidung."
+    symb"Ich hoffe, der Fall von Aither ist die richtige Entscheidung."
 
     # Atropos Gedanken
-    "Ich hoffe, die Menschen können dadurch wahre Glücklichkeit empfinden."
+    symb"Ich hoffe, die Menschen können dadurch wahre Glücklichkeit empfinden."
 
     # Atropos Gedanken
-    "Was, wenn Atlas in dem Brief doch Recht hatte und die Welt dadurch ins Chaos stürzt?"
+    symb"Was, wenn Atlas in dem Brief doch Recht hatte und die Welt dadurch ins Chaos stürzt?"
 
     # Atropos Gedanken
-    "Selbst wenn Aither schlecht ist… vielleicht ist es das Beste für die Menschheit?"
+    symb"Selbst wenn Aither schlecht ist… vielleicht ist es das Beste für die Menschheit?"
 
     # Atropos Gedanken
-    "Wer bin ich, darüber zu urteilen?"
+    symb"Wer bin ich, darüber zu urteilen?"
 
     # Atropos Gedanken
-    "Ich hätte niemals darüber urteilen dürfen."
+    symb"Ich hätte niemals darüber urteilen dürfen."
 
 
     "Atropos" "Es tut mir leid."
@@ -1321,25 +1334,25 @@ label savechesis:
 label savetycho:
 
     # Atropos Gedanken
-    "Ich versuche Tycho zu finden. Er ist bei allen beliebt- vielleicht kann er meine restlichen Freunde warnen."
+    symb"Ich versuche Tycho zu finden. Er ist bei allen beliebt- vielleicht kann er meine restlichen Freunde warnen."
 
     # Atropos Gedanken
-    "Ich muss nur ihn überzeugen, er wird die anderen mitziehen."
+    symb"Ich muss nur ihn überzeugen, er wird die anderen mitziehen."
 
     # Atropos Gedanken
-    "Zumindest hoffe ich das…"
+    symb"Zumindest hoffe ich das…"
 
     # Atropos Gedanken
-    "Sind sie noch im Büro?"
+    symb"Sind sie noch im Büro?"
 
     # Atropos Gedanken
-    "Ich muss zumindest nachsehen und es versuchen."
+    symb"Ich muss zumindest nachsehen und es versuchen."
 
     scene office_1
     with fadeshort
 
     # Atropos Gedanken
-    "Neiros Arbeitsplatz ist schonmal verlassen… Hoffentlich ist wenigstens Tycho da…"
+    symb"Neiros Arbeitsplatz ist schonmal verlassen… Hoffentlich ist wenigstens Tycho da…"
 
     scene office_2
     with fadeshort
@@ -1353,7 +1366,7 @@ label savetycho:
     "Armene" "Ich weiß nicht… wir wollten eigentlich in die Mittagspause, aber sie waren mit einem Mal weg. Ich denke, sie haben mich vergessen…"
 
     # Atropos Gedanken
-    "Ist das etwa ebenfalls die Schuld der Pille?"
+    symb"Ist das etwa ebenfalls die Schuld der Pille?"
 
     "Atropos" "Das… tut mir leid…"
 
@@ -1392,19 +1405,19 @@ label savetycho:
     hide armene
 
     # Atropos Gedanken
-    "Immerhin ist sie dadurch sicher… aber was ist mit den anderen?"
+    symb"Immerhin ist sie dadurch sicher… aber was ist mit den anderen?"
 
     # Atropos Gedanken
-    "Wo könnte Tycho nur sein?"
+    symb"Wo könnte Tycho nur sein?"
 
     # Atropos Gedanken
-    "Sind sie bereits in der Mensa?"
+    symb"Sind sie bereits in der Mensa?"
 
     scene hall
     with fadeshort
 
     # Atropos Gedanken
-    "Warte… ist er das da vorne nicht?"
+    symb"Warte… ist er das da vorne nicht?"
 
     "Atropos" "Tycho?"
 
@@ -1437,7 +1450,7 @@ label savetycho:
     "Atropos" "Ich… ich…"
 
     # Atropos Gedanken
-    "Wie soll ich es ihm nur erklären? Die Wahrheit würde er mir doch niemals abkaufen…"
+    symb"Wie soll ich es ihm nur erklären? Die Wahrheit würde er mir doch niemals abkaufen…"
 
     show tycho normal
 
@@ -1489,28 +1502,28 @@ label savetycho:
     hide tycho
 
     # Atropos Gedanken
-    "Diese verdammte Pille!"
+    symb"Diese verdammte Pille!"
 
     # Atropos Gedanken
-    "Nur wegen ihr hat Tycho nicht auf mich gehört…"
+    symb"Nur wegen ihr hat Tycho nicht auf mich gehört…"
 
     # Atropos Gedanken
-    "Verdammt… was, wenn Chesis jetzt nicht rechtzeitig aus dem Gebäude kommt? Und was ist mit Kloth? Wo steckt er?"
+    symb"Verdammt… was, wenn Chesis jetzt nicht rechtzeitig aus dem Gebäude kommt? Und was ist mit Kloth? Wo steckt er?"
 
     # Atropos Gedanken
-    "Was soll ich jetzt nur tun?"
+    symb"Was soll ich jetzt nur tun?"
 
     # Atropos Gedanken
-    "Der Alarm… vielleicht hilft er noch etwas…"
+    symb"Der Alarm… vielleicht hilft er noch etwas…"
 
     # Atropos Gedanken
-    "Ich habe Angst, dass es jeden Moment so weit sein könnte und die Bombe mit einem Mal hochgeht…"
+    symb"Ich habe Angst, dass es jeden Moment so weit sein könnte und die Bombe mit einem Mal hochgeht…"
 
     # Atropos Gedanken
-    "Wo ist noch Mal ein Auslöser?"
+    symb"Wo ist noch Mal ein Auslöser?"
 
     # Atropos Gedanken
-    "Ach richtig- im Flur…"
+    symb"Ach richtig- im Flur…"
 
     scene hall
     with fadealarm
@@ -1522,7 +1535,7 @@ label savetycho:
     with fadealarm
 
     # Atropos Gedanken
-    "Der Alarm ist ganz schön laut… hoffentlich bewirkt er etwas."
+    symb"Der Alarm ist ganz schön laut… hoffentlich bewirkt er etwas."
 
     "Atropos" "Lauft!"
 
@@ -1536,46 +1549,46 @@ label savetycho:
 label savekloth:
 
     # Atropos Gedanken
-    "Ich weiß immer noch nicht, was mit Kloth passiert ist. Ich muss ihn finden."
+    symb"Ich weiß immer noch nicht, was mit Kloth passiert ist. Ich muss ihn finden."
 
     # Atropos Gedanken
-    "Ich muss ihn fragen, was das alles zu bedeuten hat."
+    symb"Ich muss ihn fragen, was das alles zu bedeuten hat."
 
     # Atropos Gedanken
-    "Ob es wirklich er ist, der die Bombe gelegt hat?"
+    symb"Ob es wirklich er ist, der die Bombe gelegt hat?"
 
     # Atropos Gedanken
-    "Hat er noch mehr herausgefunden als die Sachen, die ich entdeckt habe?"
+    symb"Hat er noch mehr herausgefunden als die Sachen, die ich entdeckt habe?"
 
     # Atropos Gedanken
-    "Und wo steckt er jetzt? Für den Fall, dass er die Bombe gelegt haben sollte, kann ich mir nicht vorstellen, dass er uns nicht gewarnt hätte."
+    symb"Und wo steckt er jetzt? Für den Fall, dass er die Bombe gelegt haben sollte, kann ich mir nicht vorstellen, dass er uns nicht gewarnt hätte."
 
     # Atropos Gedanken
-    "Zumindest Chesis und mich hätte er doch gewarnt, oder?"
+    symb"Zumindest Chesis und mich hätte er doch gewarnt, oder?"
 
     # Atropos Gedanken
-    "Er hätte uns nicht blind ins Verderben laufen lassen…"
+    symb"Er hätte uns nicht blind ins Verderben laufen lassen…"
 
     # Atropos Gedanken
-    "Nicht Kloth…"
+    symb"Nicht Kloth…"
 
     # Atropos Gedanken
-    "Aber wo er ist er dann jetzt?"
+    symb"Aber wo er ist er dann jetzt?"
 
     # Atropos Gedanken
-    "Wurde er ertappt und um die Ecke gebracht?"
+    symb"Wurde er ertappt und um die Ecke gebracht?"
 
     # Atropos Gedanken
-    "Was ist nur passiert?"
+    symb"Was ist nur passiert?"
 
     # Atropos Gedanken
-    "Ich muss nochmal ganz Aither ablaufen und Kloth finden…"
+    symb"Ich muss nochmal ganz Aither ablaufen und Kloth finden…"
 
     scene shop_1
     with fadeshort
 
     # Atropos Gedanken
-    "Hier ist er schonmal nicht… ich sollte Zelos fragen, ob er Kloth gesehen hat."
+    symb"Hier ist er schonmal nicht… ich sollte Zelos fragen, ob er Kloth gesehen hat."
 
     "Atropos" "Zelos?"
     show zelos happy
@@ -1609,101 +1622,101 @@ label savekloth:
     hide zelos
 
     # Atropos Gedanken
-    "Wo kann ich Kloth nur sonst finden?"
+    symb"Wo kann ich Kloth nur sonst finden?"
 
     # Atropos Gedanken
-    "Habe ich nicht mittlerweile so gut wie überall nach ihm gesucht?"
+    symb"Habe ich nicht mittlerweile so gut wie überall nach ihm gesucht?"
 
     # Atropos Gedanken
-    "Was ist, wenn ihm wirklich etwas zugestoßen ist?"
+    symb"Was ist, wenn ihm wirklich etwas zugestoßen ist?"
 
     # Atropos Gedanken
-    "Ich muss etwas tun… Ich muss ihn finden."
+    symb"Ich muss etwas tun… Ich muss ihn finden."
 
     # Atropos Gedanken
-    "Es ist gut, wenn die Bombe hochgeht und Aither endlich ein Ende bereitet wird, aber Kloth… ich muss ihn retten."
+    symb"Es ist gut, wenn die Bombe hochgeht und Aither endlich ein Ende bereitet wird, aber Kloth… ich muss ihn retten."
 
     # Atropos Gedanken
-    "Irgendetwas muss schiefgegangen sein… aber geht dann die Bombe überhaupt hoch?"
+    symb"Irgendetwas muss schiefgegangen sein… aber geht dann die Bombe überhaupt hoch?"
 
     # Atropos Gedanken
-    "Vielleicht sollte ich doch besser zuerst in den Serverraum und dort nachsehen, was mit der Bombe ist."
+    symb"Vielleicht sollte ich doch besser zuerst in den Serverraum und dort nachsehen, was mit der Bombe ist."
 
     # Atropos Gedanken
-    "Das wird mir zumindest etwas Klarheit verschaffen."
+    symb"Das wird mir zumindest etwas Klarheit verschaffen."
 
     # Atropos Gedanken
-    "Und dann werde ich weiter nach Kloth suchen."
+    symb"Und dann werde ich weiter nach Kloth suchen."
 
     # Atropos Gedanken
-    "Ab zu den Fahrzügen… oh verdammt, sie sind zu voll… dann eben die Treppe."
+    symb"Ab zu den Fahrzügen… oh verdammt, sie sind zu voll… dann eben die Treppe."
 
     scene stairs_down
     with fadeshort
 
     # Atropos Gedanken
-    "Kloth… Wo bist du nur?"
+    symb"Kloth… Wo bist du nur?"
 
     scene stairs_up
     with fadeshort
 
     # Atropos Gedanken
-    "Warte… was war das eben?"
+    symb"Warte… was war das eben?"
 
     # Atropos Gedanken
-    "Irgendetwas… irgendetwas war da doch, oder?"
+    symb"Irgendetwas… irgendetwas war da doch, oder?"
 
     # Symbiont
-    "{i}Geh weiter! Geh zum Serverraum. Hier ist nichts. Geh weiter! Hörst du, Atropos? Geh weiter und blick nicht zurück! {/i}"
+    symb"{i}Geh weiter! Geh zum Serverraum. Hier ist nichts. Geh weiter! Hörst du, Atropos? Geh weiter und blick nicht zurück! {/i}"
 
     # Symbiont
-    "{i}Alles ist gut. Alles ist in Ordnung. Alles ist glücklich. Blick nicht zurück! {/i}"
+    symb"{i}Alles ist gut. Alles ist in Ordnung. Alles ist glücklich. Blick nicht zurück! {/i}"
 
     # Symbiont
-    "{i}Sei glücklich! Sei glücklich! Sei glücklich, Atropos! {/i}"
+    symb"{i}Sei glücklich! Sei glücklich! Sei glücklich, Atropos! {/i}"
 
     # Symbiont
-    "{i}Vergiss, was du gesehen hast. Vergiss, was passiert ist. Du hast hier nichts verloren. Geh! {/i}"
+    symb"{i}Vergiss, was du gesehen hast. Vergiss, was passiert ist. Du hast hier nichts verloren. Geh! {/i}"
 
     # Atropos Gedanken
-    "Was… was habe ich gesehen?"
+    symb"Was… was habe ich gesehen?"
 
     # Atropos Gedanken
-    "Ich… ah… mein Kopf schmerzt… alles in mir drängt mich dazu so schnell wie möglich diesen Ort zu verlassen… er ist unheimlich…"
+    symb"Ich… ah… mein Kopf schmerzt… alles in mir drängt mich dazu so schnell wie möglich diesen Ort zu verlassen… er ist unheimlich…"
 
     # Symbiont
-    "{i}Geh zum Serverraum. {/i}"
+    symb"{i}Geh zum Serverraum. {/i}"
 
     # Atropos Gedanken
-    "Ich will zum Serverraum… ich muss nach der Bombe sehen…"
+    symb"Ich will zum Serverraum… ich muss nach der Bombe sehen…"
 
     # Atropos Gedanken
-    "Nein- was denke ich denn da? Da war doch gerade etwas, oder?"
+    symb"Nein- was denke ich denn da? Da war doch gerade etwas, oder?"
 
     # Symbiont
-    "{i}Nein, da war nichts. Geh weiter!{/i}"
+    symb"{i}Nein, da war nichts. Geh weiter!{/i}"
 
     # Atropos Gedanken
-    "Was soll ich nur tun? Verdammt… ich verliere wertvolle Zeit…"
+    symb"Was soll ich nur tun? Verdammt… ich verliere wertvolle Zeit…"
 
     # Symbiont
-    "{i}Geh weiter! Sofort. Verlass das Treppenhaus- es macht dich unglücklich.{/i}"
+    symb"{i}Geh weiter! Sofort. Verlass das Treppenhaus- es macht dich unglücklich.{/i}"
 
 
     # Atropos Gedanken
-    "Ich… ich… was habe ich nur gesehen?"
+    symb"Ich… ich… was habe ich nur gesehen?"
 
     # Atropos Gedanken
-    "Ich muss zurück…"
+    symb"Ich muss zurück…"
 
     # Symbiont
-    "{i}Nein!{/i}"
+    symb"{i}Nein!{/i}"
 
     scene stairs_down
     with fadeshort
 
     # Atropos Gedanken
-    "Was…?"
+    symb"Was…?"
     scene corpse
     with fadeshort
 
@@ -1719,43 +1732,43 @@ label saveallallthreekloth:
     "Atropos" "Ich muss sichergehen, dass es allen Menschen gut geht und alle eine Chance haben, nicht nur meine Freunde."
 
     # Atropos Gedanken
-    "Ich will Aither schaden und ihre Machenschaften stoppen, aber dafür sollten keine Menschen mit dem Leben bezahlen müssen."
+    symb"Ich will Aither schaden und ihre Machenschaften stoppen, aber dafür sollten keine Menschen mit dem Leben bezahlen müssen."
 
     # Atropos Gedanken
-    "Das wäre kein Ausgleich… ich will, dass die Menschen wahres Glück erfahren, dann sollten sie nicht dafür sterben."
+    symb"Das wäre kein Ausgleich… ich will, dass die Menschen wahres Glück erfahren, dann sollten sie nicht dafür sterben."
 
     # Atropos Gedanken
-    "Aber wie kann ich alle warnen? Wie kann ich sie auf die Gefahr aufmerksam machen, die vermutlich droht?"
+    symb"Aber wie kann ich alle warnen? Wie kann ich sie auf die Gefahr aufmerksam machen, die vermutlich droht?"
 
     # Atropos Gedanken
-    "Aber wie kann ich alle warnen? Wie kann ich sie auf die Gefahr aufmerksam machen, die vermutlich droht?"
+    symb"Aber wie kann ich alle warnen? Wie kann ich sie auf die Gefahr aufmerksam machen, die vermutlich droht?"
 
     scene detail_alarm
     with fadeshort
 
     # Atropos Gedanken
-    "Der Feuermelder…"
+    symb"Der Feuermelder…"
 
     # Atropos Gedanken
-    "Wenn ich diesen aktivieren würde, könnte es gehen?"
+    symb"Wenn ich diesen aktivieren würde, könnte es gehen?"
 
     # Atropos Gedanken
-    "Würden die Menschen auf diesen hören und das Gebäude verlassen? Dann hätte ich genug Zeit nach der Bombe zu sehen."
+    symb"Würden die Menschen auf diesen hören und das Gebäude verlassen? Dann hätte ich genug Zeit nach der Bombe zu sehen."
 
     # Atropos Gedanken
-    "Ich muss es versuchen, selbst wenn dann Panik ausbrechen würde."
+    symb"Ich muss es versuchen, selbst wenn dann Panik ausbrechen würde."
 
     scene detail_alarmbroken
     with fadeshort
 
     # Atropos Gedanken
-    "Der Alarm ist ganz schön laut… ich hoffe er bewirkt etwas."
+    symb"Der Alarm ist ganz schön laut… ich hoffe er bewirkt etwas."
 
     scene hall
     with fadeshort
 
     # Atropos Gedanken
-    "Bitte… flieht doch…"
+    symb"Bitte… flieht doch…"
 
     "Atropos" "Flieht!"
     show tycho normal
@@ -1784,18 +1797,20 @@ label saveallallthreekloth:
 
     "Tycho" "Ach komm… (lacht)"
 
-    show tycho happy_gray
-    show anan strict_mid
+    show tycho happy_gray:
+        xalign 0.25
+    show anan strict_mid:
+        xalign 0.75
 
     "Anan" "Was hat dieser Aufstand hier zu bedeuten? Wer hat den Feueralarm ausgelöst?"
 
     "Atropos" "…"
 
     # Atropos Gedanken
-    "Ich darf nicht auffallen. Gegen Anan bin ich komplett chancenlos, er darf mich mit nichts konfrontieren."
+    symb"Ich darf nicht auffallen. Gegen Anan bin ich komplett chancenlos, er darf mich mit nichts konfrontieren."
 
     # Atropos Gedanken
-    "Ich bin mir sicher, er würde die Wahrheit in meinen Augen erkennen können."
+    symb"Ich bin mir sicher, er würde die Wahrheit in meinen Augen erkennen können."
 
     show anan strict_mid_gray
     show tycho normal
@@ -1814,7 +1829,7 @@ label saveallallthreekloth:
     "Anan" "Du wirkst immer noch nicht glücklich. Du hast Happiness nicht eingenommen."
 
     # Atropos Gedanken
-    "Es bringt nichts, Anan in dieser Sache anzulügen."
+    symb"Es bringt nichts, Anan in dieser Sache anzulügen."
 
     "Atropos" "Nein… nein, habe ich nicht."
 
@@ -1828,7 +1843,8 @@ label saveallallthreekloth:
     "Tycho" "Du warst es, Atropos? Aber warum?"
 
     show tycho normal_gray
-    show chesis angry
+    show chesis confused:
+        xalign 0.0
 
     "Chesis" "Ist es wegen der Bombe?"
 
@@ -1847,6 +1863,8 @@ label saveallallthreekloth:
 
     "Anan" "Atropos, auf ein Wort."
     hide tycho
+    show anan strict left:
+        xalign 0.5
 
     "Atropos" "W-Was?"
 
@@ -1857,13 +1875,13 @@ label saveallallthreekloth:
     "Anan" "Was hat es mit der Bombe auf sich? Wenn du etwas weißt, sag es mir. Willst du, dass alle Menschen sterben?"
 
     # Atropos Gedanken
-    "Nein… das wollte ich eben nicht. Aber der Feueralarm hat nichts bewirkt…"
+    symb"Nein… das wollte ich eben nicht. Aber der Feueralarm hat nichts bewirkt…"
 
     # Atropos Gedanken
-    "Was soll ich nur tun? Er ist Anan… ich habe nichts persönlich gegen ihn, aber er hat Aither überhaupt erst erschaffen, mit ihrer falschen Moral."
+    symb"Was soll ich nur tun? Er ist Anan… ich habe nichts persönlich gegen ihn, aber er hat Aither überhaupt erst erschaffen, mit ihrer falschen Moral."
 
     # Atropos Gedanken
-    "Wenn ich ihm jetzt von der Bombe erzähle, ist alles aus…"
+    symb"Wenn ich ihm jetzt von der Bombe erzähle, ist alles aus…"
 
     show anan strict_mid
 
@@ -1888,7 +1906,7 @@ label saveallallthreekloth:
     "Anan" "Es war Kloth. Ich hätte seine Veränderung früher in Bezug setzen sollen."
 
     # Atropos Gedanken
-    "Was? Woher weiß er das? Ich habe doch gar nichts gesagt…"
+    symb"Was? Woher weiß er das? Ich habe doch gar nichts gesagt…"
 
     show anan strict_mid
 
@@ -1905,33 +1923,33 @@ label saveallallthreekloth:
     hide anan
 
     # Atropos Gedanken
-    "Das war… seltsam…"
+    symb"Das war… seltsam…"
 
     # Atropos Gedanken
-    "Was hat Anan vor?"
+    symb"Was hat Anan vor?"
 
     # Atropos Gedanken
-    "Und was soll ich jetzt tun?"
+    symb"Und was soll ich jetzt tun?"
 
     # Symbiont
-    "{i}Kannst du all die Menschen wirklich sterben lassen? Es gibt auch andere Wege, durch die du glücklich werden kannst. Du musst Aither dafür nicht vernichten. {/i}"
+    symb"{i}Kannst du all die Menschen wirklich sterben lassen? Es gibt auch andere Wege, durch die du glücklich werden kannst. Du musst Aither dafür nicht vernichten. {/i}"
 
     # Atropos Gedanken
-    "Ich muss zur Bombe."
+    symb"Ich muss zur Bombe."
 
     # Atropos Gedanken
-    "Verdammt… wo war nochmal der Serverraum?"
+    symb"Verdammt… wo war nochmal der Serverraum?"
 
     # Atropos Gedanken
-    "Ich… ich…"
+    symb"Ich… ich…"
 
     # Atropos Gedanken
-    "Ich habe Angst. Was, wenn ich es nicht schaffe alle Menschen zu retten?"
+    symb"Ich habe Angst. Was, wenn ich es nicht schaffe alle Menschen zu retten?"
 
     "Durchsage" "Bitte haltet einen Moment in eurer Arbeit ein. Es folgt eine Durchsage von Anan."
 
     # Atropos Gedanken
-    "Von Anan? Was hat er vor?"
+    symb"Von Anan? Was hat er vor?"
 
     # sämtliche Durchsagen ab hier erfolgen von Anan
     "Durchsage" "Ich wünsche euch allen einen wunderschön glücklichen Tag!"
@@ -1949,22 +1967,22 @@ label saveallallthreekloth:
     "Durchsage" "Ich hoffe, ihr wart glücklich."
 
     # Atropos Gedanken
-    "Was hat das zu bedeuten?"
+    symb"Was hat das zu bedeuten?"
 
     # Atropos Gedanken
-    "Wer ist Anan?"
+    symb"Wer ist Anan?"
 
     # Atropos Gedanken
-    "Es spielt keine Rolle, ich muss weiter."
+    symb"Es spielt keine Rolle, ich muss weiter."
 
     # Atropos Gedanken
-    "Ich muss zum Serverraum."
+    symb"Ich muss zum Serverraum."
 
     # Atropos Gedanken
-    "Immerhin scheinen alle Menschen Anans Worten zu folgen."
+    symb"Immerhin scheinen alle Menschen Anans Worten zu folgen."
 
     # Atropos Gedanken
-    "Da vorne ist der Serverraum, oder?"
+    symb"Da vorne ist der Serverraum, oder?"
     show anan normal_mid
 
     "Anan" "Die Bombe ist also im Serverraum."
@@ -2017,31 +2035,31 @@ label saveallallthreekloth:
     "Anan" "Nimm sie. Sei glücklich."
 
     # Atropos Gedanken
-    "Ich nehme sie…"
+    symb"Ich nehme sie…"
 
     scene server_room
     with fadeshort
     hide anan
 
     # Symbiont
-    "{i}Atropos, sei glücklich. Vergiss all das Leid. Es geht dir gut. {/i}"
+    symb"{i}Atropos, sei glücklich. Vergiss all das Leid. Es geht dir gut. {/i}"
 
     # Symbiont
-    "{i}Schließ deine Augen. Und wenn du sie wieder öffnest, wirst du Chesis und Kloth an deiner Seite haben. Alles wird so sein wie früher. {/i}"
+    symb"{i}Schließ deine Augen. Und wenn du sie wieder öffnest, wirst du Chesis und Kloth an deiner Seite haben. Alles wird so sein wie früher. {/i}"
 
     # Symbiont
-    "{i}Du wirst wieder glücklich sein. {/i}"
+    symb"{i}Du wirst wieder glücklich sein. {/i}"
 
     "Atropos" "Ich will nicht sterben…"
 
     # Symbiont
-    "{i}Vergiss die Angst. Vergiss den Schmerz. Sei glücklich. {/i}"
+    symb"{i}Vergiss die Angst. Vergiss den Schmerz. Sei glücklich. {/i}"
 
     # Symbiont
-    "{i}Du hast es verdient glücklich zu sein. {/i}"
+    symb"{i}Du hast es verdient glücklich zu sein. {/i}"
 
     # Symbiont
-    "{i}Vergiss all das, was dich quält und beunruhigt. Vergiss, was passiert ist und was kommen wird. Sei glücklich. {/i}"
+    symb"{i}Vergiss all das, was dich quält und beunruhigt. Vergiss, was passiert ist und was kommen wird. Sei glücklich. {/i}"
 
     "Atropos" "Danke…"
 
@@ -2061,67 +2079,67 @@ label doesbombexistsawallthreekloth:
     "Atropos" "Und vielleicht bleiben ja noch Tage, bis sie explodiert. Dann habe ich mehr Zeit, um mich zu entscheiden, was ich tun will."
 
     # Atropos Gedanken
-    "Habe ich die ganze Zeit laut vor mich hingeredet? Ich sollte aufpassen- ich weiß nie, wer vorbeikommen könnte."
+    symb"Habe ich die ganze Zeit laut vor mich hingeredet? Ich sollte aufpassen- ich weiß nie, wer vorbeikommen könnte."
 
     # Atropos Gedanken
-    "Dennoch… ich brauche mehr Zeit für das alles… ich brauche mehr Informationen. Ich muss Kloth dazu befragen…"
+    symb"Dennoch… ich brauche mehr Zeit für das alles… ich brauche mehr Informationen. Ich muss Kloth dazu befragen…"
 
     # Atropos Gedanken
-    "Ich muss verstehen, was das alles wirklich zu bedeuten hat."
+    symb"Ich muss verstehen, was das alles wirklich zu bedeuten hat."
 
     # Atropos Gedanken
-    "Der Serverraum. Wo war er gleich nochmal?"
+    symb"Der Serverraum. Wo war er gleich nochmal?"
 
     # Atropos Gedanken
-    "Ach richtig- ein Stockwerk höher. Zum Glück sind die Fahrstühle gerade leer."
+    symb"Ach richtig- ein Stockwerk höher. Zum Glück sind die Fahrstühle gerade leer."
 
     # Atropos Gedanken
-    "Und da vorne ist der Serverraum auch schon."
+    symb"Und da vorne ist der Serverraum auch schon."
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Dieses Ticken…"
+    symb"Dieses Ticken…"
 
     # Atropos Gedanken
-    "Könnte es sein?"
+    symb"Könnte es sein?"
 
     # Atropos Gedanken
-    "Tatsächlich… die Bombe… sie ist hier…"
+    symb"Tatsächlich… die Bombe… sie ist hier…"
 
     # Atropos Gedanken
-    "Ob Kloth sie wirklich gelegt hat?"
+    symb"Ob Kloth sie wirklich gelegt hat?"
 
     # Atropos Gedanken
-    "Oder hat er es nur durch Zufall mitbekommen?"
+    symb"Oder hat er es nur durch Zufall mitbekommen?"
 
     scene detail_bomb2031
     with fadeshort
 
     # Atropos Gedanken
-    "Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
+    symb"Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt werden würde?"
+    symb"Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt werden würde?"
 
     # Atropos Gedanken
-    "Ich muss den Machenschaften von Aither ein Ende setzen!"
+    symb"Ich muss den Machenschaften von Aither ein Ende setzen!"
 
     # Atropos Gedanken
-    "Und die Menschen würden sich doch bestimmt ohnehin nicht retten lassen… ja, ganz bestimmt… die Pille würde sie daran hindern…"
+    symb"Und die Menschen würden sich doch bestimmt ohnehin nicht retten lassen… ja, ganz bestimmt… die Pille würde sie daran hindern…"
 
     # Atropos Gedanken
-    "Die Menschen werden glücklicher ohne Aither sein! Ich tue allen ein Gefallen. Es wird schon nicht so schlimm sein, wenn die Bombe hier oben explodiert…"
+    symb"Die Menschen werden glücklicher ohne Aither sein! Ich tue allen ein Gefallen. Es wird schon nicht so schlimm sein, wenn die Bombe hier oben explodiert…"
 
     # Atropos Gedanken
-    "Hier sind keine anderen Menschen…"
+    symb"Hier sind keine anderen Menschen…"
 
     # Symbiont
-    "{i}Atropos…{/i}"
+    symb"{i}Atropos…{/i}"
 
     "Atropos" "Sei still! Sei einfach still!"
 
@@ -2147,8 +2165,6 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "…"
 
-    "Atropos" "…"
-
     "Atropos" "Ich habe Angst…"
 
     "Atropos" "Was, wenn ich doch Schuld tragen würde?"
@@ -2156,7 +2172,7 @@ label doesbombexistsawallthreekloth:
     "Atropos" "Wenn doch Menschen sterben?"
 
     # Symbiont
-    "{i}Atropos…{/i}"
+    symb"{i}Atropos…{/i}"
 
     "Atropos" "Sei still!"
 
@@ -2198,6 +2214,9 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "Ja, ganz sicher! Aither ist böse!"
 
+    scene lab
+    with startfade
+
     "Atropos" "…"
 
     scene detail_bomb0047
@@ -2208,10 +2227,12 @@ label doesbombexistsawallthreekloth:
     scene server_room
     with fadeshort
 
-
     "Atropos" "Chesis… habe ich das Richtige getan?"
 
     "Atropos" "Bitte vergib mir…"
+
+    scene server_room
+    with startfade
 
     "Atropos" "…"
 
@@ -2233,74 +2254,74 @@ label nextstepwithbomb:
     "Atropos" "Kann es sein… Die Informationen über den Server, die ich in Kloths Büro gefunden habe… Eine andere Erklärung gibt es nicht…"
 
     # Atropos Gedanken
-    "Aber was bedeutet das für Aither?"
+    symb"Aber was bedeutet das für Aither?"
 
     # Symbiont
-    "{i}Willst du Aither schaden? {/i}"
+    symb"{i}Willst du Aither schaden? {/i}"
 
     # Atropos Gedanken
-    "Ich… ich weiß nicht… will ich das?"
+    symb"Ich… ich weiß nicht… will ich das?"
 
     # Atropos Gedanken
-    "Will ich Aither schaden?"
+    symb"Will ich Aither schaden?"
 
     # Atropos Gedanken
-    "Ich war so überzeugt von allem gewesen, für das die Firma steht…"
+    symb"Ich war so überzeugt von allem gewesen, für das die Firma steht…"
 
     # Atropos Gedanken
-    "Aber jetzt…"
+    symb"Aber jetzt…"
 
     # Atropos Gedanken
-    "Warum dürfen wir nicht unsere eigenen Entscheidungen treffen?"
+    symb"Warum dürfen wir nicht unsere eigenen Entscheidungen treffen?"
 
     # Atropos Gedanken
-    "Warum dürfen wir nicht unsere eigene Glücklichkeit finden?"
+    symb"Warum dürfen wir nicht unsere eigene Glücklichkeit finden?"
 
     # Atropos Gedanken
-    "Und diese Diagramme in Anans Büro… was haben sie zu bedeuten? Was stellt die Happiness-Pille mit unseren Köpfen an?"
+    symb"Und diese Diagramme in Anans Büro… was haben sie zu bedeuten? Was stellt die Happiness-Pille mit unseren Köpfen an?"
 
     # Atropos Gedanken
-    "Es gibt so viele, die an der Pille arbeiten- was machen die anderen mit dieser? Und sind sie sich dessen überhaupt bewusst?"
+    symb"Es gibt so viele, die an der Pille arbeiten- was machen die anderen mit dieser? Und sind sie sich dessen überhaupt bewusst?"
 
     # Atropos Gedanken
-    "Auch wenn die Ziele von Aither gut sein mögen, – alle Menschen sollen in Glücklichkeit leben können – ist die Art und Weise wie Anan das erreichen will, einfach nur falsch!"
+    symb"Auch wenn die Ziele von Aither gut sein mögen, – alle Menschen sollen in Glücklichkeit leben können – ist die Art und Weise wie Anan das erreichen will, einfach nur falsch!"
 
     # Atropos Gedanken
-    "Ich will bei klarem Verstand sein!"
+    symb"Ich will bei klarem Verstand sein!"
 
     # Atropos Gedanken
-    "Ich will selbst über mein Glück bestimmen können!"
+    symb"Ich will selbst über mein Glück bestimmen können!"
 
     # Atropos Gedanken
-    "Ich lasse mir nichts mehr vorschreiben! Nicht von Aither!"
+    symb"Ich lasse mir nichts mehr vorschreiben! Nicht von Aither!"
 
     # Atropos Gedanken
-    "Aber wie bringe ich die anderen Menschen dazu ebenfalls zu erkennen, was sie wirklich brauchen?"
+    symb"Aber wie bringe ich die anderen Menschen dazu ebenfalls zu erkennen, was sie wirklich brauchen?"
 
     # Atropos Gedanken
-    "Wie kann ich sie dazu bringen mir zuzuhören?"
+    symb"Wie kann ich sie dazu bringen mir zuzuhören?"
 
     # Atropos Gedanken
-    "Sich ebenfalls zu wehren? Wir dürfen nicht einfach nur still dasitzen und nichts tun, während Aither an unseren Gehirnen rumbastelt."
+    symb"Sich ebenfalls zu wehren? Wir dürfen nicht einfach nur still dasitzen und nichts tun, während Aither an unseren Gehirnen rumbastelt."
 
     # Symbiont
-    "{i}Hör auf, dich in die ganze Sache so sehr reinzusteigern! Atme tief durch und beruhige dich! Alles ist nicht so schlimm, wie du es denkst. {/i}"
+    symb"{i}Hör auf, dich in die ganze Sache so sehr reinzusteigern! Atme tief durch und beruhige dich! Alles ist nicht so schlimm, wie du es denkst. {/i}"
 
     # Atropos Gedanken
-    "Kloth… ich weiß nicht, wo du gerade bist… aber bitte… bitte sei noch am Leben."
+    symb"Kloth… ich weiß nicht, wo du gerade bist… aber bitte… bitte sei noch am Leben."
 
     # Atropos Gedanken
-    "Die Bombe… Wann wird sie explodieren?"
+    symb"Die Bombe… Wann wird sie explodieren?"
 
     # Atropos Gedanken
-    "Und wenn sie explodiert… kann Aither damit vielleicht ein Ende bereitet werden?"
+    symb"Und wenn sie explodiert… kann Aither damit vielleicht ein Ende bereitet werden?"
 
     "Atropos" "Können alle Menschen dann wieder aus ihrer Starre erwachen? Wieder selbst über ihr Leben bestimmen?"
 
     "Atropos" "Ja… ja… vermutlich… es ist die einzige Option…"
 
     # Symbiont
-    "{i}Die Menschen… {/i}"
+    symb"{i}Die Menschen… {/i}"
 
     "Atropos" "Stimmt… die Menschen hier im Gebäude… was ist mit ihnen? Ich weiß nicht, wie viel Zeit uns noch bleibt…"
 
@@ -2346,34 +2367,34 @@ label trywarnpeople:
     with fadeshort
 
     # Atropos Gedanken
-    "Wo ist er?"
+    symb"Wo ist er?"
 
     scene detail_alarm
     with fadeshort
 
     # Atropos Gedanken
-    "Ach… da…"
+    symb"Ach… da…"
     # Atropos Gedanken
-    "Bitte funktioniere…"
+    symb"Bitte funktioniere…"
 
     scene detail_alarmbroken
     with fadeshort
 
     # Atropos Gedanken
-    "Wenn die Bombe hochgeht, ohne dass ich es schaffe die Menschen zu retten… nein, das könnte ich mir nicht verzeihen…"
+    symb"Wenn die Bombe hochgeht, ohne dass ich es schaffe die Menschen zu retten… nein, das könnte ich mir nicht verzeihen…"
 
     # Atropos Gedanken
-    "Die Firma muss für das, was sie uns angetan hat, büßen, aber nicht die unschuldigen Menschen!"
+    symb"Die Firma muss für das, was sie uns angetan hat, büßen, aber nicht die unschuldigen Menschen!"
 
     # Atropos Gedanken
-    "Sie dürfen nicht dafür büßen!"
+    symb"Sie dürfen nicht dafür büßen!"
 
     # Atropos Gedanken
-    "Ich muss sie retten und das um jeden Preis!"
+    symb"Ich muss sie retten und das um jeden Preis!"
 
 
     # Atropos Gedanken
-    "Der Alarm ist zu laut, aber immerhin verlassen die Menschen schon mal ihren Arbeitsplatz."
+    symb"Der Alarm ist zu laut, aber immerhin verlassen die Menschen schon mal ihren Arbeitsplatz."
 
     scene hall
     with fadeshort
@@ -2381,13 +2402,13 @@ label trywarnpeople:
     "Atropos" "Flieht! Verlasst das Gebäude! Ein Feuer ist ausgebrochen!"
 
     # Atropos Gedanken
-    "Ich kann nicht auf ihre Reaktion abwarten- ich muss versuchen, die Bombe zu finden, um herauszufinden, wie viel Zeit den Menschen noch bleibt."
+    symb"Ich kann nicht auf ihre Reaktion abwarten- ich muss versuchen, die Bombe zu finden, um herauszufinden, wie viel Zeit den Menschen noch bleibt."
 
     # Atropos Gedanken
-    "Vielleicht kann ich den Moment ja noch etwas herauszögern, damit wirklich nur Aither Schaden nimmt!"
+    symb"Vielleicht kann ich den Moment ja noch etwas herauszögern, damit wirklich nur Aither Schaden nimmt!"
 
     # Atropos Gedanken
-    "Ich muss zum Serverraum!"
+    symb"Ich muss zum Serverraum!"
 
     scene server_room
     with fadeshort
@@ -2477,67 +2498,67 @@ label doesbombexist:
     "Atropos" "Und vielleicht bleiben ja noch Tage, bis sie explodiert. Dann habe ich mehr Zeit, um mich zu entscheiden, was ich tun will."
 
     # Atropos Gedanken
-    "Habe ich die ganze Zeit laut vor mich hingeredet? Ich sollte aufpassen- ich weiß nie, wer vorbeikommen könnte."
+    symb"Habe ich die ganze Zeit laut vor mich hingeredet? Ich sollte aufpassen- ich weiß nie, wer vorbeikommen könnte."
 
     # Atropos Gedanken
-    "Dennoch… ich brauche mehr Zeit für das alles… ich brauche mehr Informationen. Ich muss Kloth dazu befragen…"
+    symb"Dennoch… ich brauche mehr Zeit für das alles… ich brauche mehr Informationen. Ich muss Kloth dazu befragen…"
 
     # Atropos Gedanken
-    "Ich muss verstehen, was das alles wirklich zu bedeuten hat."
+    symb"Ich muss verstehen, was das alles wirklich zu bedeuten hat."
 
     # Atropos Gedanken
-    "Der Serverraum. Wo war er gleich nochmal?"
+    symb"Der Serverraum. Wo war er gleich nochmal?"
 
     # Atropos Gedanken
-    "Ach richtig- ein Stockwerk höher. Zum Glück sind die Fahrstühle gerade leer."
+    symb"Ach richtig- ein Stockwerk höher. Zum Glück sind die Fahrstühle gerade leer."
 
     # Atropos Gedanken
-    "Und da vorne ist der Serverraum auch schon."
+    symb"Und da vorne ist der Serverraum auch schon."
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Dieses Ticken…"
+    symb"Dieses Ticken…"
 
     # Atropos Gedanken
-    "Könnte es sein?"
+    symb"Könnte es sein?"
 
     # Atropos Gedanken
-    "Tatsächlich… die Bombe… sie ist hier…"
+    symb"Tatsächlich… die Bombe… sie ist hier…"
 
     # Atropos Gedanken
-    "Ob Kloth sie wirklich gelegt hat?"
+    symb"Ob Kloth sie wirklich gelegt hat?"
 
     # Atropos Gedanken
-    "Oder hat er es nur durch Zufall mitbekommen?"
+    symb"Oder hat er es nur durch Zufall mitbekommen?"
 
     scene detail2031
     with fadeshort
 
     # Atropos Gedanken
-    "Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
+    symb"Wie viel Zeit habe ich noch? Zwanzig Minuten… es wäre genug Zeit, um alle zu retten…"
 
     scene server_room
     with fadeshort
 
     # Atropos Gedanken
-    "Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt wird?"
+    symb"Aber will ich das überhaupt? Was ist, wenn dadurch die Bombe gestoppt wird?"
 
     # Atropos Gedanken
-    "Ich muss den Machenschaften von Aither ein Ende setzen!"
+    symb"Ich muss den Machenschaften von Aither ein Ende setzen!"
 
     # Atropos Gedanken
-    "Und die Menschen würden sich doch bestimmt ohnehin nicht retten lassen… ja, ganz bestimmt… die Pille würde sie daran hindern…"
+    symb"Und die Menschen würden sich doch bestimmt ohnehin nicht retten lassen… ja, ganz bestimmt… die Pille würde sie daran hindern…"
 
     # Atropos Gedanken
-    "Die Menschen werden glücklicher ohne Aither sein! Ich tue allen ein Gefallen. Es wird schon nicht so schlimm sein, wenn die Bombe hier oben explodiert…"
+    symb"Die Menschen werden glücklicher ohne Aither sein! Ich tue allen ein Gefallen. Es wird schon nicht so schlimm sein, wenn die Bombe hier oben explodiert…"
 
     # Atropos Gedanken
-    "Hier sind keine anderen Menschen…"
+    symb"Hier sind keine anderen Menschen…"
 
     # Symbiont
-    "{i}Atropos…{/i}"
+    symb"{i}Atropos…{/i}"
 
     "Atropos" "Sei still! Sei einfach still!"
 
@@ -2560,8 +2581,8 @@ label doesbombexist:
     "Atropos" "Ich sitze einfach nur da und tue nichts… das ist alles… das ist absolut alles…"
 
     "Atropos" "Oder?"
-
-    "Atropos" "…"
+    scene server_room
+    with startfade
 
     "Atropos" "…"
 
@@ -2572,7 +2593,7 @@ label doesbombexist:
     "Atropos" "Wenn doch Menschen sterben?"
 
     # Symbiont
-    "{i}Atropos…{/i}"
+    symb"{i}Atropos…{/i}"
 
     "Atropos" "Sei still!"
 
@@ -2704,10 +2725,10 @@ label besureanandies:
     "Anan" "Atropos? Wie kann ich dir helfen?"
 
     # Atropos Gedanken
-    "Verdammt… was soll ich nur sagen?"
+    symb"Verdammt… was soll ich nur sagen?"
 
     # Atropos Gedanken
-    "Wie soll ich es sagen?"
+    symb"Wie soll ich es sagen?"
 
     "Atropos" "Ich weiß alles!"
 
@@ -2760,16 +2781,16 @@ label besureanandies:
     "Anan" "Ich hoffe, dass du das auch noch verstehen wirst. Happiness war die Lösung, welche den langen Krieg beendete und Happiness ist die Lösung für ein gemeinsames, friedliches Miteinander."
 
     # Atropos Gedanken
-    "Hat Anan Recht? Aber… ist Happiness nicht dennoch die falsche Lösung?"
+    symb"Hat Anan Recht? Aber… ist Happiness nicht dennoch die falsche Lösung?"
 
     # Atropos Gedanken
-    "Das, was Anan sagt, klingt so logisch. Aber… Anan versteht es mit Worten umzugehen. Was, wenn er mich gerade einfach nur manipuliert?"
+    symb"Das, was Anan sagt, klingt so logisch. Aber… Anan versteht es mit Worten umzugehen. Was, wenn er mich gerade einfach nur manipuliert?"
 
     # Atropos Gedanken
-    "Warte… verdammt, die Zeit… wie viel Zeit bleibt mir noch?"
+    symb"Warte… verdammt, die Zeit… wie viel Zeit bleibt mir noch?"
 
     # Atropos Gedanken
-    "Über Anans Ansprache habe ich komplett die Zeit vergessen."
+    symb"Über Anans Ansprache habe ich komplett die Zeit vergessen."
 
     "Atropos" "Folge mir!"
 
@@ -2780,7 +2801,7 @@ label besureanandies:
     "Atropos" "Ich will aber nicht vergessen! Ich will nicht das vergessen, was ich gesehen habe! Ich will die Wahrheit nicht vergessen!"
 
     # Atropos Gedanken
-    "Verdammt- ich muss zurück zum Serverraum. Sind es noch Minuten oder sogar nur noch Sekunden?"
+    symb"Verdammt- ich muss zurück zum Serverraum. Sind es noch Minuten oder sogar nur noch Sekunden?"
 
     "Anan" "Du wirkst hektisch. Wohin musst du so dringend? Wohin wolltest du mich bringen?"
 
@@ -2799,46 +2820,46 @@ label ananorjustbombwho:
     if murderer:
 
         # Atropos Gedanken
-        "Aber wie soll ich anfangen?"
+        symb"Aber wie soll ich anfangen?"
 
         # Atropos Gedanken
-        "Wie soll ich dich nur rächen?"
+        symb"Wie soll ich dich nur rächen?"
 
         # Atropos Gedanken
-        "Und warum hat Chesis das überhaupt getan? Wie konnte er dir so etwas antun?"
+        symb"Und warum hat Chesis das überhaupt getan? Wie konnte er dir so etwas antun?"
 
         # Atropos Gedanken
-        "Ich dachte, wir ständen uns alle so nahe… wir waren doch so lange Freunde…"
+        symb"Ich dachte, wir ständen uns alle so nahe… wir waren doch so lange Freunde…"
 
         # Atropos Gedanken
-        "Warum nur?"
+        symb"Warum nur?"
 
         # Atropos Gedanken
-        "WARUM?"
+        symb"WARUM?"
 
         # Atropos Gedanken
-        "Welchen Grund hatte Chesis, Kloth zu töten? Welche Gründe gibt es überhaupt, einen Menschen zu töten?"
+        symb"Welchen Grund hatte Chesis, Kloth zu töten? Welche Gründe gibt es überhaupt, einen Menschen zu töten?"
 
         # Atropos Gedanken
-        "Welche Rechtfertigung kann es dafür geben?"
+        symb"Welche Rechtfertigung kann es dafür geben?"
 
         # Atropos Gedanken
-        "Vielleicht… wenn es einem höheren Ziel dient… nein, was denke ich da bitte? Es gibt keinen Grund und keine Rechtfertigung."
+        symb"Vielleicht… wenn es einem höheren Ziel dient… nein, was denke ich da bitte? Es gibt keinen Grund und keine Rechtfertigung."
 
         # Atropos Gedanken
-        "Mord bleibt Mord."
+        symb"Mord bleibt Mord."
 
         # Atropos Gedanken
-        "Aber was jetzt? Was soll ich tun?"
+        symb"Aber was jetzt? Was soll ich tun?"
 
         # Atropos Gedanken
-        "Soll ich Chesis zur Rede stellen?"
+        symb"Soll ich Chesis zur Rede stellen?"
 
         # Atropos Gedanken
-        "Aber… aber…"
+        symb"Aber… aber…"
 
         # Atropos Gedanken
-        "Ich muss Chesis finden!"
+        symb"Ich muss Chesis finden!"
 
         scene shop_1
         with fadeshort
@@ -2913,11 +2934,10 @@ label ananorjustbombwho:
         scene stairs_down
         with fadeshort
 
+        show chesis confused
         "Chesis" "Und? Was ist jetzt?"
 
         "Atropos" "Überspiel es nicht! Du weißt genau, was los ist!"
-
-        show chesis confused
 
         "Chesis" "Du machst mir langsam Angst. Hast du heute Happiness genommen?"
 
@@ -2974,20 +2994,20 @@ label ananorjustbombwho:
         hide chesis
 
         # Atropos Gedanken
-        "Was jetzt?"
+        symb"Was jetzt?"
 
         # Atropos Gedanken
-        "Aither ist schuld an allem!"
+        symb"Aither ist schuld an allem!"
 
         # Atropos Gedanken
-        "Kloth wurde nur wegen Happiness umgebracht. Aber warum? Was hat er Aither angetan?"
+        symb"Kloth wurde nur wegen Happiness umgebracht. Aber warum? Was hat er Aither angetan?"
 
         # Atropos Gedanken
-        "Er vergötterte die Firma seit seiner Kindheit. Es gab keinen, der sie mehr liebte…"
+        symb"Er vergötterte die Firma seit seiner Kindheit. Es gab keinen, der sie mehr liebte…"
 
 
         # Atropos Gedanken
-        "Wie konnte sich das alles so entwickeln?"
+        symb"Wie konnte sich das alles so entwickeln?"
 
     else:
         "Atropos"  "Was hatte ich gemacht? Welche Rolle hatte ich in dem Ganzen gespielt?"
@@ -3011,37 +3031,37 @@ label ananorjustbombwho:
         if read_document_kloth:
 
             # Atropos Gedanken
-            "Und die Bombe… was hat es mit dieser auf sich? Aither würde es jedenfalls nur verdienen, in die Luft gejagt zu werden."
+            symb"Und die Bombe… was hat es mit dieser auf sich? Aither würde es jedenfalls nur verdienen, in die Luft gejagt zu werden."
 
             # Atropos Gedanken
-            "Es soll untergehen und uns Menschen endlich unsere Freiheit zurückgeben!"
+            symb"Es soll untergehen und uns Menschen endlich unsere Freiheit zurückgeben!"
 
             # Atropos Gedanken
-            "Und sie sollen für Kloths Tod büßen! Anan, glaube ja nicht, dass du dafür ungeschoren davonkommst!"
+            symb"Und sie sollen für Kloths Tod büßen! Anan, glaube ja nicht, dass du dafür ungeschoren davonkommst!"
 
             # Atropos Gedanken
-            "Du und die Firma, ihr werdet untergehen! Dafür werde ich sorgen!"
+            symb"Du und die Firma, ihr werdet untergehen! Dafür werde ich sorgen!"
 
             # Atropos Gedanken
-            "Aber wie nur? Ich weiß nicht, wo die Bombe steckt, wenn sie denn existiert und ich weiß noch weniger, wann sie von sich aus hochgehen würde."
+            symb"Aber wie nur? Ich weiß nicht, wo die Bombe steckt, wenn sie denn existiert und ich weiß noch weniger, wann sie von sich aus hochgehen würde."
 
             # Atropos Gedanken
-            "So oder so… ich muss dafür sorgen, dass sie ganz bestimmt hochgeht! Ich muss Kloth rächen!"
+            symb"So oder so… ich muss dafür sorgen, dass sie ganz bestimmt hochgeht! Ich muss Kloth rächen!"
 
             # Atropos Gedanken
-            "Warte… der Serverraum…"
+            symb"Warte… der Serverraum…"
 
             # Atropos Gedanken
-            "Kann es sein…?"
+            symb"Kann es sein…?"
 
             # Atropos Gedanken
-            "Wenn ich eine Bombe legen würde, um Aither zu schaden, dann würde ich sie vermutlich dort platzieren…"
+            symb"Wenn ich eine Bombe legen würde, um Aither zu schaden, dann würde ich sie vermutlich dort platzieren…"
 
             # Atropos Gedanken
-            "Ich muss nachschauen."
+            symb"Ich muss nachschauen."
 
             # Atropos Gedanken
-            "Sofort…"
+            symb"Sofort…"
 
             jump chesiskillsklothwhattodo
 
@@ -3049,37 +3069,37 @@ label ananorjustbombwho:
         if read_document_kloth == False:
 
             # Atropos Gedanken
-            "Und die Bombe… was hat es mit dieser auf sich? Aither würde es jedenfalls nur verdienen in die Luft gejagt zu werden."
+            symb"Und die Bombe… was hat es mit dieser auf sich? Aither würde es jedenfalls nur verdienen in die Luft gejagt zu werden."
 
 
             # Atropos Gedanken
-            "Es soll untergehen und uns Menschen endlich unsere Freiheit zurückgeben!"
+            symb"Es soll untergehen und uns Menschen endlich unsere Freiheit zurückgeben!"
 
             # Atropos Gedanken
-            "Und sie sollen für Kloths Tod büßen! Anan, glaube ja nicht, dass du dafür ungeschoren davonkommst!"
+            symb"Und sie sollen für Kloths Tod büßen! Anan, glaube ja nicht, dass du dafür ungeschoren davonkommst!"
 
             # Atropos Gedanken
-            "Du und die Firma, ihr werdet untergehen! Dafür werde ich sorgen!"
+            symb"Du und die Firma, ihr werdet untergehen! Dafür werde ich sorgen!"
 
             # Atropos Gedanken
-            "Aber wie nur? Ich weiß nicht, wo die Bombe steckt, wenn sie denn existiert und ich weiß noch weniger, wann sie von sich aus hochgehen würde."
+            symb"Aber wie nur? Ich weiß nicht, wo die Bombe steckt, wenn sie denn existiert und ich weiß noch weniger, wann sie von sich aus hochgehen würde."
 
             # Atropos Gedanken
-            "So oder so… ich muss dafür sorgen, dass sie ganz bestimmt hochgeht! Ich muss Kloth rächen!"
+            symb"So oder so… ich muss dafür sorgen, dass sie ganz bestimmt hochgeht! Ich muss Kloth rächen!"
 
             # Atropos Gedanken
-            "Aber wo könnte die Bombe sein? Ich muss sie finden!"
+            symb"Aber wo könnte die Bombe sein? Ich muss sie finden!"
 
             # Atropos Gedanken
-            "Ich muss zurück in Kloths Büro… ich hätte mich dort von Anfang an genauer umsehen sollen."
+            symb"Ich muss zurück in Kloths Büro… ich hätte mich dort von Anfang an genauer umsehen sollen."
 
             scene hall
             with fadeshort
             # Atropos Gedanken
-            "Ich muss sichergehen, dass diese Bombe hochgeht!"
+            symb"Ich muss sichergehen, dass diese Bombe hochgeht!"
 
             # Atropos Gedanken
-            "Aber was habe ich übersehen?"
+            symb"Aber was habe ich übersehen?"
 
             scene kloth_office
             with fadeshort
@@ -3096,22 +3116,22 @@ label ananorjustbombwho:
             if kloth_office_after_anan_office:
 
                 # Atropos Gedanken
-                "Ich muss zurück in Kloths Büro… ich muss etwas übersehen haben…"
+                symb"Ich muss zurück in Kloths Büro… ich muss etwas übersehen haben…"
 
                 # Atropos Gedanken
-                "Aber was?"
+                symb"Aber was?"
 
                 scene kloth_office
                 with fadeshort
 
                 # Atropos Gedanken
-                "Den Computer… hatte ich ihn mir angeschaut?"
+                symb"Den Computer… hatte ich ihn mir angeschaut?"
 
                 # Atropos Gedanken
-                "Verdammt, nein… das muss ich vergessen haben…"
+                symb"Verdammt, nein… das muss ich vergessen haben…"
 
                 # Atropos Gedanken
-                "Mal sehen..."
+                symb"Mal sehen..."
 
                 scene detail_blog
                 with fadeshort
@@ -3123,19 +3143,19 @@ label ananorjustbombwho:
             if kloth_office_after_anan_office == False:
 
                 # Atropos Gedanken
-                "Vielleicht finde ich in Kloths Büro ja irgendwelche Hinweise, die mir weiterhelfen?"
+                symb"Vielleicht finde ich in Kloths Büro ja irgendwelche Hinweise, die mir weiterhelfen?"
 
                 scene kloth_office
                 with fadeshort
 
                 # Atropos Gedanken
-                "Der Computer… der hilft mir bestimmt weiter…"
+                symb"Der Computer… der hilft mir bestimmt weiter…"
 
                 # Atropos Gedanken
-                "Irgendetwas Wichtiges muss auf diesem abgespeichert sein."
+                symb"Irgendetwas Wichtiges muss auf diesem abgespeichert sein."
 
                 # Atropos Gedanken
-                "Mal sehen..."
+                symb"Mal sehen..."
 
                 scene detail_blog
                 with fadeshort
@@ -3146,22 +3166,22 @@ label ananorjustbombwho:
         if read_document_kloth:
 
             # Atropos Gedanken
-            "Ich muss zurück in Kloths Büro… ich muss etwas übersehen haben…"
+            symb"Ich muss zurück in Kloths Büro… ich muss etwas übersehen haben…"
 
             # Atropos Gedanken
-            "Aber was?"
+            symb"Aber was?"
 
             scene kloth_office
             with fadeshort
 
             # Atropos Gedanken
-            "Den Computer… hatte ich ihn mir angeschaut?"
+            symb"Den Computer… hatte ich ihn mir angeschaut?"
 
             # Atropos Gedanken
-            "Verdammt, nein… das muss ich vergessen haben…"
+            symb"Verdammt, nein… das muss ich vergessen haben…"
 
             # Atropos Gedanken
-            "Mal sehen..."
+            symb"Mal sehen..."
 
             scene detail_blog
             with fadeshort
@@ -3264,28 +3284,28 @@ label chesiskillsklothwhattodo:
         with fadeshort
 
         # Atropos Gedanken
-        "Ein Ticken… Also doch…"
+        symb"Ein Ticken… Also doch…"
 
         # Atropos Gedanken
-        "Wo ist sie? Ach, da leuchten die Ziffern im Dunkeln… Wie viel Zeit bleibt noch?"
+        symb"Wo ist sie? Ach, da leuchten die Ziffern im Dunkeln… Wie viel Zeit bleibt noch?"
 
         scene detail_bomb2031
         with fadeshort
 
         # Atropos Gedanken
-        "20 Minuten…"
+        symb"20 Minuten…"
 
         scene server_room
         with fadeshort
 
         # Atropos Gedanken
-        "Was soll ich mit dieser verbleibenden Zeit anfangen? Was soll ich tun?"
+        symb"Was soll ich mit dieser verbleibenden Zeit anfangen? Was soll ich tun?"
 
         # Atropos Gedanken
-        "Aither… Aither muss büßen! Ich muss sichergehen, dass die Bombe auf alle Fälle hochgeht."
+        symb"Aither… Aither muss büßen! Ich muss sichergehen, dass die Bombe auf alle Fälle hochgeht."
 
         # Atropos Gedanken
-        "Ich räche dich, Kloth! Vertraue mir. Dein Tod wird nicht umsonst sein!"
+        symb"Ich räche dich, Kloth! Vertraue mir. Dein Tod wird nicht umsonst sein!"
 
         "Atropos"  "…"
 
@@ -3328,11 +3348,11 @@ label ananshoulddie:
     with fadeshort
 
     # Atropos Gedanken
-    "Ich hoffe, er merkt mir seinen Hass auf ihn nicht an…"
+    symb"Ich hoffe, er merkt mir seinen Hass auf ihn nicht an…"
 
 
     # Atropos Gedanken
-    "Meinen Rachedurst… das darf mir nicht den Weg versperren und mich an meinem Ziel scheitern lassen…"
+    symb"Meinen Rachedurst… das darf mir nicht den Weg versperren und mich an meinem Ziel scheitern lassen…"
 
     "Atropos"  "Anan? Bist du da?"
 
@@ -3345,7 +3365,7 @@ label ananshoulddie:
     "Anan" "Atropos? Wie kann ich dir helfen?"
 
     # Atropos Gedanken
-    "Verdammt… was soll ich nur sagen?"
+    symb"Verdammt… was soll ich nur sagen?"
 
     "Atropos"  "Du musst zum Serverraum! Irgendetwas stimmt nicht!"
 
@@ -3356,14 +3376,14 @@ label ananshoulddie:
     "Atropos"  "Kloth… ich habe Kloth gefunden… er liegt dort… er ist… er ist tot!"
 
     # Atropos Gedanken
-    "Es ist die Wahrheit… sie ist nur ein wenig verdreht."
+    symb"Es ist die Wahrheit… sie ist nur ein wenig verdreht."
 
     show anan strict_mid
 
     "Anan" "Du hast deine Pille immer noch nicht genommen. Nimm sie und kehre ins Labor zurück. Werd glücklich. Ich kümmere mich darum."
 
     # Atropos Gedanken
-    "Nein, ich muss sichergehen, dass er wirklich hier und jetzt mitkommt…"
+    symb"Nein, ich muss sichergehen, dass er wirklich hier und jetzt mitkommt…"
 
     "Atropos"  "Nein! Ich komme mit! Ich… ich nehme Happiness danach… bitte!"
 
@@ -3379,17 +3399,17 @@ label ananshoulddie:
 
 
     # Atropos Gedanken
-    "Wir dürfen weder zu früh kommen noch zu spät… wie viel Zeit bleibt mir noch?"
+    symb"Wir dürfen weder zu früh kommen noch zu spät… wie viel Zeit bleibt mir noch?"
 
     # Atropos Gedanken
-    "Vielleicht 4 Minuten?"
+    symb"Vielleicht 4 Minuten?"
 
     show anan strict_mid
 
     "Anan" "Warum warst du im Serverraum?"
 
     # Atropos Gedanken
-    "Oh… verdammt…"
+    symb"Oh… verdammt…"
 
     "Atropos"  "Die Computer bei uns im Labor hatten einen Ausfall. Ich wollte die Techniker dort bitten sich darum zu kümmern."
 
@@ -3402,7 +3422,7 @@ label ananshoulddie:
     "Anan"  "Wo ist Kloth?"
 
     # Atropos Gedanken
-    "Ich glaube, es ist noch zu viel Zeit übrig… ich muss mehr Zeit herauszögern…"
+    symb"Ich glaube, es ist noch zu viel Zeit übrig… ich muss mehr Zeit herauszögern…"
 
     "Atropos"  "Ich… ich… es war dort drüben."
 
@@ -3419,7 +3439,7 @@ label ananshoulddie:
     "Anan"  "Er war nicht mein Sekretär."
 
     # Atropos Gedanken
-    "Ich muss ihn noch länger hinhalten… wie viel Zeit fehlt noch? Sekunden?"
+    symb"Ich muss ihn noch länger hinhalten… wie viel Zeit fehlt noch? Sekunden?"
 
     "Atropos"  "Nicht dein Sekretär? Von was redest du?"
 
@@ -3434,10 +3454,10 @@ label ananshoulddie:
 label aithershoulddie:
 
     # Atropos Gedanken
-    "Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun."
+    symb"Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun."
 
     # Atropos Gedanken
-    "Ich bin kein Mörder!"
+    symb"Ich bin kein Mörder!"
 
     "Atropos"  "…"
 
@@ -3445,7 +3465,7 @@ label aithershoulddie:
     with fadeshort
 
     # Atropos Gedanken
-    "Noch 2 Minuten…"
+    symb"Noch 2 Minuten…"
 
     scene server_room
     with fadeshort
@@ -3461,6 +3481,9 @@ label aithershoulddie:
     "Atropos"  "Ich wünschte, du könntest mit mir reden und mir sagen, dass ich hier gerade das Richtige tue."
 
     "Atropos"  "Es tut mir leid, dass das alles passiert ist…"
+
+    scene server_room
+    with startfade
 
     "Atropos"  "…"
 
