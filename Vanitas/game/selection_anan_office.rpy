@@ -1,6 +1,7 @@
 default sawbooks = False
 default sawpictures = False
 default sawsafe= False
+default ananthingswatched=0
 
 label selection_anan_office:
 
@@ -9,117 +10,196 @@ label selection_anan_office:
             if read_document_anan:
                 jump how_many_infos_anan
             else:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich könnte mir die herumliegenden Dokumente ansehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump document_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
         else:
             if read_document_anan:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich könnte mich auf Anans PC umsehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump computer_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
             else:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich könnte mich auf Anans PC umsehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump computer_anan
                     "Ich könnte mir die herumliegenden Dokumente ansehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump document_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
     else:
         if read_computer_anan:
             if read_document_anan:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
+                        hide screen force_mouse_move_anansoffice
                         jump letter_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
             else:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
+                        hide screen force_mouse_move_anansoffice
                         jump letter_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich könnte mir die herumliegenden Dokumente ansehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump document_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
         else:
             if read_document_anan:
+                show screen force_mouse_move_anansoffice
                 menu:
                     "Der Safe sieht interessant aus." if sawsafe == False:
+                        hide screen force_mouse_move_anansoffice
                         jump safe_anan
                     "Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen.":
+                        hide screen force_mouse_move_anansoffice
                         jump how_many_infos_anan
                     "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
+                        hide screen force_mouse_move_anansoffice
                         jump letter_anan
                     "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                        hide screen force_mouse_move_anansoffice
                         jump pictures_anan
                     "Ich könnte mich auf Anans PC umsehen.":
+                        hide screen force_mouse_move_anansoffice
                         jump computer_anan
                     "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                        hide screen force_mouse_move_anansoffice
                         jump books_anan
 
             else:
-                menu:
+                if (sawsafe==True) or (sawpictures==True) or (sawbooks==True):
+                    show screen force_mouse_move_anansoffice
+                    menu:
 
-                    "Der Safe sieht interessant aus." if sawsafe == False:
-                        jump safe_anan
-                    "Ich sollte mich besser nicht in Anans Büro umschauen." if straight_anan_office == False:
-                        jump how_many_infos_anan
-                    "Ich sollte mich besser nicht in Anans Büro umschauen und das Zimmer verlassen." if straight_anan_office == True:
-                        jump how_many_infos_anan
-                    "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
-                        jump letter_anan
-                    "Ich könnte mir die Fotos ansehen." if sawpictures == False:
-                        jump pictures_anan
-                    "Ich könnte mich auf Anans PC umsehen.":
-                        jump computer_anan
-                    "Ich könnte mir die herumliegenden Dokumente ansehen.":
-                        jump document_anan
-                    "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
-                        jump books_anan
+                        "Der Safe sieht interessant aus." if sawsafe == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump safe_anan
+                        "Ich sollte mich besser nicht weiter in Anans Büro umschauen." if straight_anan_office == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump how_many_infos_anan
+                        "Ich sollte mich besser nicht weiter in Anans Büro umschauen und das Zimmer verlassen." if straight_anan_office == True:
+                            hide screen force_mouse_move_anansoffice
+                            jump how_many_infos_anan
+                        "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump letter_anan
+                        "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump pictures_anan
+                        "Ich könnte mich auf Anans PC umsehen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump computer_anan
+                        "Ich könnte mir die herumliegenden Dokumente ansehen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump document_anan
+                        "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump books_anan
+                else:
+                    show screen force_mouse_move_anansoffice
+                    menu:
+
+                        "Der Safe sieht interessant aus." if sawsafe == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump safe_anan
+                        "Ich sollte mich besser nicht in Anans Büro umschauen." if straight_anan_office == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump how_many_infos_anan
+                        "Ich sollte mich besser nicht in Anans Büro umschauen und das Zimmer verlassen." if straight_anan_office == True:
+                            hide screen force_mouse_move_anansoffice
+                            jump how_many_infos_anan
+                        "Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump letter_anan
+                        "Ich könnte mir die Fotos ansehen." if sawpictures == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump pictures_anan
+                        "Ich könnte mich auf Anans PC umsehen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump computer_anan
+                        "Ich könnte mir die herumliegenden Dokumente ansehen.":
+                            hide screen force_mouse_move_anansoffice
+                            jump document_anan
+                        "Ich werfe einen Blick auf die Bücher." if sawbooks == False:
+                            hide screen force_mouse_move_anansoffice
+                            jump books_anan
+
 
 
 label letter_anan:
     $ read_letter_anan =True
     $ infos_count_anan += 1
+    $ ananthingswatched +=1
 
     # Atropos Gedanken
     symb"Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen."
@@ -175,6 +255,7 @@ label after_detail_letter2:
 label document_anan:
     $ read_document_anan =True
     $ infos_count_anan += 1
+    $ ananthingswatched +=1
 
     # Atropos Gedanken
     symb"Ich könnte mir die herumliegenden Dokumente ansehen."
@@ -225,6 +306,7 @@ label document_anan:
 label computer_anan:
     $ read_computer_anan =True
     $ infos_count_anan += 1
+    $ ananthingswatched +=1
 
     # Atropos Gedanken
     symb"Ich könnte mich auf Anans PC umsehen."
@@ -276,6 +358,7 @@ label computer_anan:
 
 label pictures_anan:
     $ sawpictures =True
+    $ ananthingswatched +=1
     scene detail_oldphotos
     with fadeshort
     # Atropos Gedanken
@@ -297,6 +380,7 @@ label pictures_anan:
 
 label books_anan:
     $ sawbooks =True
+    $ ananthingswatched +=1
     # Atropos Gedanken
     symb"Wow, was für Wälzer! Bücher sind schon Raritäten, aber solche wie diese hier werde ich wohl nirgendwo sonst wiederfinden."
     "Atropos""…"
@@ -325,6 +409,7 @@ label books_anan:
 
 label safe_anan:
     $ sawsafe =True
+    $ ananthingswatched +=1
     scene detail_safe
     with fadeshort
     if sawbooks:

@@ -4,6 +4,7 @@ default neiro_unterhalten= False
 default badmood= False
 default okaymood=False
 define startfade=Fade(1,0.5,3)
+define fadestart=Fade(1,0.5,3)
 define startfade2=Fade(1,0.5,0.5)
 define datewithera= False
 define dialgoueoffice= False
@@ -17,7 +18,7 @@ $ symb= Character (None, window_xalign=0.5, window_yalign=1.0, who_posy=500)
 label start:
     stop music
     $ renpy.movie_cutscene("cutscene_introsound.mpg")
-    play music "Sound_freeze.mp3" fadeout 2000
+    play music "Sound/Music/Cutscenes/End/AnfangLoop.mp3" fadeout 1
 
     window hide
 
@@ -49,8 +50,7 @@ label change:
     with startfade
     scene street
     with startfade2
-    stop music fadeout 2000
-    play music "Sound_verkehrsraum_demo.mp3" fadeout 1
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
 
     # Symbiont
     symb"{i}Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung. {/i}"
@@ -360,9 +360,7 @@ label conversation_with_seller:
         # Atropos Gedanken
         symb"Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
 
-        stop music fadeout 1
-        play music "Sound_Buro.mp3" fadeout 2
-
+        play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
         scene office_1
         with fadeshort
 
@@ -634,6 +632,9 @@ label conversation_with_seller:
                     jump entscheidung4_2
                 "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
                     jump entscheidung4_3
+                "Oh, es ist schon spät. Ich sollte ins Labor.":
+                    symb "Oh, es ist schon spät. Ich sollte ins Labor."
+                    jump nachentscheidung4
 
             label entscheidung4_1:
                 $ neiro_unterhalten = True
@@ -906,7 +907,7 @@ label conversation_with_seller:
 
                 show chesis happy_alt
 
-                "Chesis" "Stimmt, das war unvergesslich! Kloth kam zu uns gelaufen und…"
+                "Chesis" "Stimmt, das war unvergesslich! 2 Jahre ist es mittlerweile her, oder? Kloth kam zu uns gelaufen und…"
 
     # hier fehlt noch sepiafilter
                 show sepia
@@ -1023,7 +1024,7 @@ label conversation_with_seller:
 
                 "Chesis" "Also dann, ich muss jetzt hier weiter. Man sieht sich."
 
-                "Atropos" "Mach´s gut. Wir sehen uns dann ja spätestens beim Grillen."
+                "Atropos" "Mach's gut. Wir sehen uns dann ja spätestens beim Grillen."
 
                 "Atropos" "Oder in der Mittagspause, wenn wir sie gleichzeitig machen sollten."
 
@@ -1090,10 +1091,10 @@ label conversation_with_seller:
 
                     "Atropos" "Ich sollte dann wirklich ins Labor."
 
+                    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
                     scene lab
                     with fadeshort
-                    stop music fadeout 2
-                    play music "Sound_labor_sorglos.mp3" fadeout 3
 
                     "Atropos" "Hey Era."
 
@@ -1234,8 +1235,7 @@ label conversation_with_seller:
         # Atropos Gedanken
         symb"Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
 
-        stop music fadeout 1
-        play music "Sound_Buro.mp3" fadeout 2
+        play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
 
         scene office_1
         with fadeshort
@@ -1507,6 +1507,9 @@ label conversation_with_seller:
                     jump entscheidung4_2V2
                 "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
                     jump entscheidung4_3V2
+                "Oh, es ist schon spät. Ich sollte ins Labor.":
+                    symb "Oh, es ist schon spät. Ich sollte ins Labor."
+                    jump nachentscheidung4V2
 
             label entscheidung4_1V2:
 
@@ -1848,7 +1851,7 @@ label conversation_with_seller:
 
                 "Chesis" "Bis später!"
 
-                "Atropos" "Mach´s gut…"
+                "Atropos" "Mach's gut…"
 
                 hide chesis
 
@@ -1933,7 +1936,7 @@ label work:
 
     "Zelos" "Also dann, ich muss nun wirklich weitermachen. Aither öffnet bald und die Pillen lagern sich weder von selbst ein, noch verkaufen sie sich von allein."
 
-    "Atropos" "Mach´s gut, wir sehen uns!"
+    "Atropos" "Mach's gut, wir sehen uns!"
 
     "Zelos" "Ach Atropos, ich vergaß: Bist du um 12:15 Uhr in der Mensa dabei?"
 
@@ -2064,8 +2067,7 @@ label work:
                 # Atropos Gedanken
                 symb"Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
 
-                stop music fadeout 1
-                play music "Sound_labor_sorglos.mp3" fadeout 2
+                play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
                 scene lab
                 with fadeshort
 
@@ -2372,7 +2374,7 @@ label anan_is_right:
     # Atropos Gedanken
     symb"Aber jetzt erstmal zurück ins Labor. Ich habe noch einiges zu tun. Ich darf Anan nicht erneut enttäuschen."
 
-
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
@@ -2544,6 +2546,8 @@ label anan_is_right:
     show anan normal_mid behind screen_transparent:
         xalign 0.4
 
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
     show anan happy_left
@@ -2611,6 +2615,8 @@ label anan_is_right:
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
     scene lab
     with fadeshort
@@ -2698,7 +2704,7 @@ label why_important:
     # Atropos Gedanken
     symb"Vermutlich sollte ich jetzt erstmal ins Labor zurück, damit ich Anan nicht erneut enttäusche… dann sehe ich weiter…"
 
-
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
@@ -2836,6 +2842,8 @@ label why_important:
 
     "Era" "Bitte pass gut auf dich auf, Atropos."
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     "Atropos" "Danke. Ihr habt ja recht. Ich werde nachher zu Anan gehen und das Ganze klären."
 
     "Atropos" "Jetzt sollten wir aber erst einmal mit der Arbeit anfangen."
@@ -2887,6 +2895,7 @@ label why_important:
     show anan normal_left behind screen_transparent:
         xalign 0.4
 
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
@@ -2951,6 +2960,8 @@ label why_important:
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
     scene lab
     with fadeshort
@@ -3018,7 +3029,6 @@ label be_against:
     # Atropos Gedanken
     symb"Was erlaubt sich Anan bitte? Ich lasse mir doch nicht vorschreiben, ob und wie oft ich die Happiness-Pille einnehmen soll!"
 
-
     # Atropos Gedanken
     symb"Ich weiß ja, dass er die Welt vom Krieg erlöst hat, aber das ist ganz allein meine Entscheidung! Ich sollte über mein eigenes Glück bestimmen können."
 
@@ -3052,10 +3062,12 @@ label be_against:
 
     "Atropos" "Ich bin glücklich!"
 
-    "Atropos" "Und Anan kann mir das nicht nehmen! Er kann mich nicht zwingen. Ich werde nicht zu ihm gehen, das kann er vergessen!"
+    "Atropos" "Und Anan kann mir das nicht nehmen! Er kann mich nicht zwingen!"# Ich werde nicht zu ihm gehen, das kann er vergessen!"
 
     # Atropos Gedanken
     symb"Aber jetzt erstmal weiter ins Labor…"
+
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
 
 
     scene lab
@@ -3174,6 +3186,8 @@ label be_against:
     show anan normal_left behind screen_transparent:
         xalign 0.4
 
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+
     # Bild wechselt von Laborhintergrund in Nahansicht des Bildschirms. Atlas, Anan und Adrés tauchen nebeneinander auf
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
@@ -3239,6 +3253,8 @@ label be_against:
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
 
 
     scene lab
@@ -3316,6 +3332,7 @@ label go_office:
         show screen force_mouse_move_twooptions
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+                play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
                 hide screen force_mouse_move_twooptions
                 # Atropos Gedanken
@@ -3384,6 +3401,8 @@ label good_mood:
     show anan normal_left behind screen_transparent:
         xalign 0.4
 
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
@@ -3447,6 +3466,8 @@ label good_mood:
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
     scene lab
     with fadeshort

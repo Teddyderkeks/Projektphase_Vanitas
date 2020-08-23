@@ -18,7 +18,7 @@ label rueffel:
     "Atropos"  "…"
 
     # Atropos Gedanken
-    symb"Er spricht es gar nicht an, dass ich zu spät bin und einfach in sein Zimmer hineingeplatzt bin?"
+    symb"Er spricht gar nicht an, dass ich zu spät und einfach in sein Zimmer hineingeplatzt bin?"
 
     # Atropos Gedanken
     symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
@@ -55,7 +55,7 @@ label rueffel:
 
     "Atropos"  "Schaden? Aber…"
 
-    "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+    "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
     "Anan" "Verstehst du das, Atropos?"
 
@@ -290,6 +290,9 @@ label expulsion_office:
 
     # Atropos Gedanken
     symb"Dann packe ich mal meine Sachen zusammen… ist nicht bald ohnehin Zeit für die Mittagspause? Dann kann ich mich nochmal von meinen Freunden verabschieden."
+
+    scene lab
+    with fadestart
 
     "Atropos"  "…"
 

@@ -33,11 +33,13 @@ label after_detail_posterpills:
     # Symbiont
     symb"{i}Nimm die Pille jetzt. Willst du noch länger unglücklich sein? Sei dankbar, dass Anan dir eine zweite Chance gab. Verspiele diese nicht. Mit deinen Freunden kannst du auch nachher noch reden. {/i}"
 
-
+    show screen force_mouse_move_twooptions
     menu:
         "Ja, natürlich. Ich sollte sofort zurück ins Labor.":
+            hide screen force_mouse_move_twooptions
             jump take_pill_back_work
         "Ich denke, ich werde mich erst mit meinen Freunden unterhalten.":
+            hide screen force_mouse_move_twooptions
             jump talk_with_colleagues
 
 label take_pill_back_work:

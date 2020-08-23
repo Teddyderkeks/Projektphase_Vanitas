@@ -1,6 +1,23 @@
 default read_letter_kloth = False
 default read_computer_kloth = False
 default read_document_kloth = False
+image glitch:
+        "glitch1"
+        pause .2
+        #"glitch2"
+        #pause .09
+        "glitch3"
+        pause .2
+        "glitch4"
+        pause .2
+        "glitch5"
+        pause .2
+        "glitch6"
+        pause .2
+        #"glitch7"
+        #pause .09
+        repeat
+
 
 label search_kloth:
     scene hall
@@ -37,7 +54,6 @@ label search_kloth:
     symb"Ich sollte dennoch in seinem Büro nachschauen gehen."
 
     "Atropos" "…"
-
 
     "Atropos" "Kloth? Bist du da? Darf ich reinkommen?"
 
@@ -103,10 +119,19 @@ label search_kloth_in_anan_office:
     # Atropos Gedanken
     symb"Sollte ich nachschauen? Aber bei Anan ist es noch einmal etwas anderes, einfach einzutreten als bei Kloth…"
 
+    menu:
+        "Ich will es riskieren.":
+            symb "Ich will es riskieren."
+            jump wannariskanan
+        "Nein, reingehen gehört sich wirklich nicht.":
+            symb "Nein, reingehen gehört sich wirklich nicht."
+            # Atropos Gedanken
+            symb"Aber was soll ich jetzt nur tun?"
+            # Atropos Gedanken
+            symb"Es fühlt sich falsch an, einfach ins Labor zurückzukehren."
+            jump search_kloth_without_anan_office
 
-    # Atropos Gedanken
-    symb"Sollte ich nachschauen? Aber bei Anan ist es noch einmal etwas anderes, einfach einzutreten als bei Kloth…"
-
+label wannariskanan:
 
     scene anan_office
     with fadeshort
@@ -128,12 +153,14 @@ label search_kloth_in_anan_office:
 
     # Symbiont
     symb"{i}Willst du das etwa? Das würde dein Glück nur gefährden. {/i}"
-
+    show screen force_mouse_move_twooptionsdown
     menu:
         "Ich möchte das Risiko eingehen und mich trotzdem umsehen.":
+            hide screen force_mouse_move_twooptionsdown
             jump symbiont_in_between
         "Ich suche besser wo anders nach ihm.":
-            jump search_kloth_without_anan_office
+            hide screen force_mouse_move_twooptionsdown
+            jump search_kloth_without_anan_offices
 
 label symbiont_in_between:
     # Atropos Gedanken
@@ -153,7 +180,6 @@ label symbiont_in_between:
 
     # Symbiont
     symb"{i}Verlasse diesen Raum, Atropos! Denk an deine Glücklichkeit. {/i}"
-
 
     # Symbiont
     symb"{i}Riskiere sie nicht! {/i}"
@@ -199,35 +225,50 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Zu so früher Stunde schon ein Bier? (lacht)"
 
+    show glitch
+
     "Kloth" "Warum nicht- es schmeckt halt gut und lässt einen vieles vergessen."
+
+    hide glitch
 
     "Atropos" "Vergessen? Es gibt doch nichts in diesem wundervollen Leben, das man vergessen möchte."
 
-    show kloth angry
+    show kloth angry_alt
+    show glitch
 
     "Kloth" "Wundervoll? Glücklich? Bestimmt… Träum weiter Atropos, bleibe in deiner Traumwelt gefangen."
+
+    hide glitch
 
     "Atropos" "Von was redest du nur?"
 
     show kloth vest_open
+    show glitch
 
     "Kloth" "Sieh dich doch mal um. All diese glücklichen, breit grinsenden Menschen, die alles toll finden, was andere sagen und tun. Nennst du das Glück?"
+    hide glitch
 
     "Atropos" "Kloth, was ist denn nur los mit dir? Du machst mir ja fast schon Angst."
 
-    show kloth angry
+    show kloth angry_alt
+    show glitch
 
     "Kloth" "Immerhin würdest du dann nicht mehr seelenlos glücklich sein. Das wäre schon mal ein Fortschritt."
+    hide glitch
 
     "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon! Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
 
     show kloth crazy
+    show glitch
 
     "Kloth" "Nein, ist er nicht! Mir geht es gut. Hörst du Atropos? Mir geht es gut!"
+
+    hide glitch
 
     "Atropos" "Schon okay, ich habe verstanden. Du bist glücklich und das freut mich."
 
     show kloth scared1
+    show glitch
 
     "Kloth" "Sie werden kommen, Atropos. Ich warne dich! Sie werden kommen und uns holen!"
 
@@ -236,6 +277,7 @@ label search_kloth_without_anan_office:
     show kloth crazy
 
     "Kloth" "Aber mich werden sie nicht bekommen. Ich werde ihnen entkommen. Ich werde fliehen, hörst du?"
+    hide glitch
 
     "Atropos" "Ja, das wirst du, Kloth. Alles wird in Ordnung. Ruhe dich einfach ein wenig aus und beruhige dich."
 
@@ -276,8 +318,11 @@ label search_kloth_without_anan_office:
     symb"{i}Du musst heute noch so viel Arbeit erledigen. Kümmere dich darum! Das macht dich glücklich. {/i}"
 
 
+
+    show screen force_mouse_move_670
     menu:
         "Ich suche weiter nach Kloth. Ich muss sofort mit ihm persönlich darüber sprechen.":
+            hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich suche weiter nach Kloth. Ich muss sofort mit ihm persönlich darüber sprechen."
 
@@ -289,6 +334,7 @@ label search_kloth_without_anan_office:
 
             jump still_search_kloth
         "Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann.":
+            hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann."
 
@@ -312,6 +358,7 @@ label search_kloth_without_anan_office:
 
             jump selection_kloth_office
         "Ich sollte besser zurück ins Labor. Vielleicht hat Kloth den anderen dort ja auch eine Nachricht für mich hinterlassen?":
+            hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich sollte besser zurück ins Labor. Vielleicht hat Kloth den anderen dort ja auch eine Nachricht für mich hinterlassen?"
 
@@ -725,7 +772,10 @@ label still_search_kloth:
             "Atropos"  "Ich denke ich weiß, was mich dort erwartet."
             jump serverraumpille
         else:
-            "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            if thingswatched>0:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            else:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
             scene hall
             with fadeshort
             "Atropos"  "Aber was?"
@@ -734,7 +784,10 @@ label still_search_kloth:
             "Atropos"  "Natürlich…"
 
             if kloth_office_visited:
-                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+                if thingswatched>0:
+                    "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+                else:
+                    "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
             else:
                 "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
 
@@ -745,7 +798,10 @@ label still_search_kloth:
 
     else:
         if read_computer_kloth:
-            "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            if thingswatched>0:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            else:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
             scene hall
             with fadeshort
             "Atropos"  "Aber was?"
@@ -758,8 +814,11 @@ label still_search_kloth:
             call screen arrow_detail_servertextkloth2
 
         else:
-
-            "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            if thingswatched>0:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+            else:
+                "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
+            scene hall
             scene hall
             with fadeshort
             "Atropos"  "Aber was?"
@@ -767,7 +826,10 @@ label still_search_kloth:
             with fadeshort
             "Atropos"  "Natürlich…"
             if kloth_office_visited:
-                "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+                if thingswatched>0:
+                    "Atropos"  "Der PC… Wie konnte ich nur vergessen auf diesem nachzuschauen?"
+                else:
+                    "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
             else:
                 "Atropos"  "Der PC… es würde Sinn machen, wenn dort Informationen sind…"
 
@@ -838,11 +900,13 @@ label serverraumpille:
     # Symbiont
     symb"{i}Was ist mit all den Menschen im Gebäude? Wirst du sie retten? Sie sind unschuldig und wissen von nichts. Wenn du dich selbst als Opfer betrachtest. Sind sie dann nicht Opfer genau wie du? {i}"
 
-
+    show screen force_mouse_move_630
     menu:
         "Wenn ich den Menschen helfe, rette ich damit vielleicht auch Anan. Das kann ich nicht zulassen.":
+            hide screen force_mouse_move_630
             jump menschennichthelfen
         "Ich muss den Menschen helfen. Sie können nichts dafür.":
+            hide screen force_mouse_move_630
             jump menschenhelfen
 
 label menschennichthelfen:
@@ -879,7 +943,8 @@ label menschennichthelfen:
 
     "Atropos"  "Ich werde Kloths Werk vollenden!"
 
-    "Atropos"  "…"
+    scene server_room
+    with fadestart
 
     "Atropos"  "…"
 

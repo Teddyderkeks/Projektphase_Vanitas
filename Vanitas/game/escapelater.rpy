@@ -1,7 +1,9 @@
 label escapelater:
 
     "Atropos" "…"
-    # Schwarzblende
+
+    show lab
+    with startfade
 
     "Atropos" "Era, machst du auch Pause?"
 
@@ -179,6 +181,9 @@ label escapelater:
 
     # Atropos Gedanken
     symb"Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
@@ -427,7 +432,7 @@ label dontgowithnarcais:
 
     show era confused
 
-    "Era" "Nein… nein! Ich… wollte nur fragen, ob meine Nichte uns begleiten kann. Seit meine Schwester und deren Frau starb, kümmere ich mich um sie."
+    "Era" "Nein… nein! Ich… wollte nur fragen, ob meine Nichte uns begleiten kann. Seit meine Schwester und ihre Frau starben, kümmere ich mich um sie."
 
     "Era" "Ich weiß nicht, ob ich dir schonmal davon erzählt habe…"
 

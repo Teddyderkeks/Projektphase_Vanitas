@@ -104,7 +104,7 @@ define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 ##Musik Main Menu
-define config.main_menu_music = "Sound_hauptmenu.mp3"
+define config.main_menu_music = "Sound/Music/main_menu_concerto.mp3"
 
 ## Dialogue ####################################################################
 ##

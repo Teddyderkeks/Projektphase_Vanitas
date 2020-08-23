@@ -1,5 +1,6 @@
 label takepillnow:
 
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
@@ -25,13 +26,24 @@ label takepillnow:
 
     "Era" "K-Kein Problem…"
 
+    scene detail_pillbox
+    with fadeshort
+
     # Atropos Gedanken
     symb"Na los, ich tue das Richtige. Es ist die richtige Entscheidung, Happiness zu nehmen."
+
+    scene detail_pill
+    with fadeshort
 
     # Atropos Gedanken
     symb"Es ist die richtige Entscheidung, glücklich sein zu wollen."
 
     "Atropos" "(schluckt Happinesss)"
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+    scene lab
+    with fadeshort
 
     # Symbiont
     symb"{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"

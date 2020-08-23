@@ -4,11 +4,13 @@ default reschedule_kloth = False
 label leave_or_corpse:
     $ last_try_find_kloth = False
     $ weak_symbiont = True
-
+    show screen force_mouse_move_twooptionsdownweak
     menu:
         "Ich kann die Leiche nicht einfach liegenlassen, ohne zu wissen, wer es ist!":
+            hide screen force_mouse_move_twooptionsdownweak
             jump kloth_corpse
         "Ich will das nicht sehen… ich habe Angst!":
+            hide screen force_mouse_move_twooptionsdownweak
             jump leave_and_go_pill
 
 label leave_and_go_pill:
@@ -132,7 +134,7 @@ label kloth_corpse:
 
     "Atropos" "Kloth, was ist los?"
 
-    show cloth scared1_neutral
+    show kloth scared1_neutral
 
     "Kloth" "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
@@ -169,20 +171,27 @@ label kloth_corpse:
 
 label conversation_with_kloth:
     if reschedule_kloth:
+        show screen force_mouse_move_580strong
         menu:
             "Alles gut, von mir aus. Ich höre dir zu.":
                 "Atropos" "Alles gut, von mir aus. Ich höre dir zu. Aber hier und jetzt. Ich möchte noch ein bisschen was von meiner Mittagspause haben."
+                hide screen force_mouse_move_580strong
                 jump accept_conversation_kloth
             "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher.":
+                hide screen force_mouse_move_580strong
                 "Atropos" "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher. Ich will lieber weiterhin mein glückliches Leben führen."
                 jump refuse_conversation_kloth
     else:
+        show screen force_mouse_move_550
         menu:
             "Ja, natürlich helfe ich dir. Erzähl endlich, was los ist. Wie kann ich dir helfen?":
+                hide screen force_mouse_move_550
                 jump accept_conversation_kloth
             "Können wir das Gespräch vielleicht vertagen? Ich habe echt Hunger und will Chesis zudem nicht warten lassen.":
+                hide screen force_mouse_move_550
                 jump reschedule_conversation_kloth
             "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch.":
+                hide screen force_mouse_move_550
                 jump refuse_conversation_kloth
 
 label reschedule_conversation_kloth:
@@ -214,16 +223,16 @@ label reschedule_conversation_kloth:
     "Kloth" "Und wie sie es ist. Sie ist gefährlich, vielleicht sogar tödlich… Bitte… können wir an einen ruhigen Ort gehen und ich erzähle dir dann alles?"
 
     # Symbiont
-    symb"Rede nicht mit ihm! Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen."
+    symb"{i}Rede nicht mit ihm! Er hat nichts Gutes im Sinn. Siehst du es denn nicht? Er versucht dich zu manipulieren und zu beeinflussen."
 
     # Symbiont
-    symb"Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast!"
+    symb"{i}Siehst du nicht das grausame Lächeln, welches für einen Moment über sein Gesicht huschte? Lauf weg, solange du noch die Gelegenheit hast!"
 
     # Symbiont
-    symb"Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?"
+    symb"{i}Hast du nicht gehört, dass es sich um ein tödliches Wissen handelt? Willst du dich und deine Glücklichkeit in Gefahr bringen?"
 
     # Symbiont
-    symb"Lehne das Gespräch ab. Es wäre ein großer Fehler, mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen."
+    symb"{i}Lehne das Gespräch ab. Es wäre ein großer Fehler, mit ihm zu sprechen. Er wird dein Glück zerstören und dich in einen dunklen Abgrund mitreißen."
 
 
     jump conversation_with_kloth
@@ -251,7 +260,7 @@ label accept_conversation_kloth:
 
     "Kloth" "Atropos. Es gibt etwas anderes, das die Menschen… "
 
-    # Schwarzer Bildschirm, dann Glitch-Effekte
+    show glitch
 
     # Symbiont
     symb"Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht? "
@@ -263,7 +272,8 @@ label accept_conversation_kloth:
     symb"Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?"
 
     "Atropos" "Nein… nein, ich will ein glückliches Leben haben."
-    # Ende Glitch-Effekt
+
+    hide glitch
 
     show kloth unsuresmiling_neutral
 
@@ -275,6 +285,8 @@ label accept_conversation_kloth:
 
     # Symbiont
     symb"Ein glückliches Leben. Ein Leben voller Happiness."
+
+    hide kloth
 
     $ renpy.movie_cutscene("atropos_accepts_conversation.mpg")
 
@@ -329,6 +341,9 @@ label refuse_conversation_kloth:
     "Kloth" "Wir werden kontrolliert! Verstehst du das nicht?"
 
     "Kloth" "…"
+
+    hide kloth
+    hide chesis
 
     $ renpy.movie_cutscene("atropos_refuse_conversation.mpg")
 
