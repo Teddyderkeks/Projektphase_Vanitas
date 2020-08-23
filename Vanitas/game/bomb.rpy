@@ -171,9 +171,6 @@ label choice_bomb:
     symb"Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
 
     # Atropos Gedanken
-    symb"Kann ich Era und die anderen einfach so sterben lassen, ohne wenigstens etwas versucht zu haben?"
-
-    # Atropos Gedanken
     symb"Ich weiß einfach nicht, was ich tun soll…"
 
     # Atropos Gedanken
@@ -202,12 +199,14 @@ label choice_bomb:
 
     # Symbiont
     symb"{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich! {/i}"
-
+    show screen force_mouse_move_480
     menu:
         "Ich will die Bombe entschärfen!":
+            hide screen force_mouse_move_480
             jump entschaerfenPillegenommen
 
         "Ich werde abwarten und die Bombe explodieren lassen. Ich vertraue Kloth!":
+            hide screen force_mouse_move_480
             jump explodierenPillegenommen
 
 label entschaerfenPillegenommen:
@@ -241,6 +240,8 @@ label entschaerfenPillegenommen:
     "Atropos" "Aber ich hätte nicht mal etwas zum Durchschneiden da…"
 
     "Atropos" "Hilft mir das Internet weiter?"
+    scene server_room
+    with fadestart
 
     "Atropos" "…"
 
@@ -330,9 +331,13 @@ label explodierenPillegenommen:
 
     # Atropos Gedanken
     symb"Das alles muss ein Ende finden."
+    scene server_room
+    with fadestart
 
     scene detail_bomb0010
     with fadeshort
+
+    show glitch
 
     # Symbiont
     symb"{i}Noch 10 Sekunden… die Uhr, sie tickt…{/i}"
@@ -344,6 +349,7 @@ label explodierenPillegenommen:
     symb"Ich wünschte ich hätte die Chance gehabt nochmal mit Kloth über alles zu sprechen. Ihn zu fragen, was das alles zu bedeuten hat."
 
     scene detail_bomb0009
+    show glitch
 
     # Symbiont
     symb"{i}9 Sekunden. {/i}"
@@ -355,6 +361,7 @@ label explodierenPillegenommen:
     symb"Auch die mächtigsten Männer brauchen wohl jemanden, dem sie sich anvertrauen können…"
 
     scene detail_bomb0008
+    show glitch
 
     # Symbiont
     symb"{i}8 Sekunden. {/i}"
@@ -366,6 +373,7 @@ label explodierenPillegenommen:
     symb"So viele Menschen werden heute sterben…"
 
     scene detail_bomb0007
+    show glitch
 
     # Symbiont
     symb"{i}7 Sekunden. {/i}"
@@ -374,6 +382,7 @@ label explodierenPillegenommen:
     symb"Die Zeit wird langsam knapp… Ich habe keine Zeit mehr etwas zu ändern… Ich dachte, ich wäre meiner Entscheidung sicher gewesen, aber…"
 
     scene detail_bomb0006
+    show glitch
 
     # Symbiont
     symb"{i}6 Sekunden. {/i}"
@@ -382,6 +391,7 @@ label explodierenPillegenommen:
     symb"Was ist dieses Gefühl?"
 
     scene detail_bomb0005
+    show glitch
 
     # Symbiont
     symb"{i}5 Sekunden. {/i}"
@@ -390,6 +400,7 @@ label explodierenPillegenommen:
     symb"Ich habe Angst… ich habe Angst zu sterben… und all diese anderen Menschen, die ich mit in den Tod reiße…"
 
     scene detail_bomb0004
+    show glitch
 
     # Symbiont
     symb"{i}4 Sekunden. {/i}"
@@ -399,18 +410,18 @@ label explodierenPillegenommen:
 
     # Symbiont
     symb"{i}Bist du glücklich, Atropos? {/i}"
+    window hide
 
     # Atropos Gedanken
     symb"Nein. Nein, bin ich nicht."
 
-    # End-Animation läuft ab, darüber liegt aber ein leichtes Rauschen
+    hide glitch
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
 
     scene street
-    with fadeshort
 
     # Atropos Gedanken
     symb"Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung."
@@ -528,10 +539,6 @@ label sawallthreekloth:
 
     # Atropos Gedanken
     symb"Chesis… ich brauche ihn jetzt… ich muss mit ihm sprechen. Vielleicht weiß er, was zu tun ist."
-
-
-    # Atropos Gedanken
-    symb"Aber wo kann er sein? Wo kann ich ihn nur finden?"
 
     # Atropos Gedanken
     symb"Aber wo kann er sein? Wo kann ich ihn nur finden? Es ist fast Zeit für die Mittagspause, oder? Vielleicht arbeitet er noch?"
@@ -840,6 +847,9 @@ label saveeralab:
 
     # Atropos Gedanken
     symb"Wo bleibt denn nur Era?"
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
@@ -2155,8 +2165,6 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "…"
 
-    "Atropos" "…"
-
     "Atropos" "Ich habe Angst…"
 
     "Atropos" "Was, wenn ich doch Schuld tragen würde?"
@@ -2206,6 +2214,9 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "Ja, ganz sicher! Aither ist böse!"
 
+    scene lab
+    with startfade
+
     "Atropos" "…"
 
     scene detail_bomb0047
@@ -2216,10 +2227,12 @@ label doesbombexistsawallthreekloth:
     scene server_room
     with fadeshort
 
-
     "Atropos" "Chesis… habe ich das Richtige getan?"
 
     "Atropos" "Bitte vergib mir…"
+
+    scene server_room
+    with startfade
 
     "Atropos" "…"
 
@@ -2568,8 +2581,8 @@ label doesbombexist:
     "Atropos" "Ich sitze einfach nur da und tue nichts… das ist alles… das ist absolut alles…"
 
     "Atropos" "Oder?"
-
-    "Atropos" "…"
+    scene server_room
+    with startfade
 
     "Atropos" "…"
 
@@ -2921,11 +2934,10 @@ label ananorjustbombwho:
         scene stairs_down
         with fadeshort
 
+        show chesis confused
         "Chesis" "Und? Was ist jetzt?"
 
         "Atropos" "Überspiel es nicht! Du weißt genau, was los ist!"
-
-        show chesis confused
 
         "Chesis" "Du machst mir langsam Angst. Hast du heute Happiness genommen?"
 
@@ -3469,6 +3481,9 @@ label aithershoulddie:
     "Atropos"  "Ich wünschte, du könntest mit mir reden und mir sagen, dass ich hier gerade das Richtige tue."
 
     "Atropos"  "Es tut mir leid, dass das alles passiert ist…"
+
+    scene server_room
+    with startfade
 
     "Atropos"  "…"
 

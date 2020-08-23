@@ -54,7 +54,7 @@ label office:
     symb"Hmm…"
 
     if okaymood== False:
-        "Wenn er nicht im Büro ist, könnte ich die Chance nutzen, mich dort mal umzusehen. Vielleicht finde ich ja irgendetwas heraus?"
+        symb"Wenn er nicht im Büro ist, könnte ich die Chance nutzen, mich dort mal umzusehen. Vielleicht finde ich ja irgendetwas heraus?"
 
     # Atropos Gedanken
     symb"Was soll ich tun?"
@@ -67,9 +67,10 @@ label office:
 
     # Symbiont
     symb"{i}Triff die richtige Entscheidung.{i}"
-
+    show screen force_mouse_move_twooptionsdownweak
     menu:
         "Ich trete einfach mal ein und sehe dann weiter.":
+            hide screen force_mouse_move_twooptionsdownweak
             # Atropos Gedanken
             symb"Ich trete einfach mal ein und sehe dann weiter. Es wird schon nichts Schlimmes deswegen passieren."
             scene anan_office
@@ -97,6 +98,7 @@ label office:
             $ straight_anan_office = True
             jump selection_anan_office
         "Ich sollte besser vor der Tür auf Anan warten.":
+            hide screen force_mouse_move_twooptionsdownweak
 
             # Atropos Gedanken
             symb"Ich sollte besser vor der Tür auf Anan warten. Ich gehe lieber kein Risiko ein."
@@ -588,8 +590,13 @@ label how_many_infos_anan:
     if infos_count_anan == 0:
         if  straight_anan_office:
 
-            # Atropos Gedanken
-            symb"Ich sollte mich besser nicht in Anans Büro umschauen und das Zimmer verlassen."
+            if (sawsafe==True) or (sawpictures==True) or (sawbooks==True):
+                # Atropos Gedanken
+                symb"Ich sollte mich besser nicht weiter in Anans Büro umschauen und das Zimmer verlassen."
+            else:
+
+                # Atropos Gedanken
+                symb"Ich sollte mich besser nicht in Anans Büro umschauen und das Zimmer verlassen."
 
             # Atropos Gedanken
             symb"Er könnte jeden Moment zurückkommen, und außerdem gehört es sich einfach nicht."
@@ -611,6 +618,9 @@ label how_many_infos_anan:
 
             # Atropos Gedanken
             symb"Zum Glück… Anan ist noch nicht zu sehen."
+
+            scene hall
+            with fadestart
 
             "Atropos" "…"
 
@@ -762,7 +772,8 @@ label how_many_infos_anan:
             # Atropos Gedanken
             symb"Ich werde einfach warten, bis Anan zurückkommt und nichts anrühren."
 
-            # hier evtl Option sich die Bilder in Anans Büro näher anzuschauen und darüber Gedanken zu machen
+            scene anan_office
+            with startfade
 
             "Atropos" "…"
             # Atropos Gedanken
@@ -858,6 +869,9 @@ label how_many_infos_anan:
 
             # Atropos Gedanken
             symb"Anan ist noch nicht zu sehen. Ich habe Glück."
+
+            scene hall
+            with fadestart
 
             "Atropos" "…"
 
@@ -1090,7 +1104,7 @@ label how_many_infos_anan:
 
         "Anan" "Hättest du damals zu Kriegszeiten bereits gelebt, würdest du das vielleicht besser verstehen, aber dank Happiness bist du in Zeiten des Friedens aufgewachsen."
 
-        "Anan" "Und nur weil du die Wahrheit herausfinden möchtest, erlaubt dir das zudem nicht, dich an fremdes Eigentum zu vergreifen."
+        "Anan" "Und nur weil du die Wahrheit herausfinden möchtest, erlaubt dir das zudem nicht, dich an fremdem Eigentum zu vergreifen."
 
         "Atropos" "Ich… ich weiß…"
 
@@ -1243,7 +1257,7 @@ label face_anan:
 
     "Atropos" "Das… das ist unfair! Ich wollte doch nur mehr herausfinden, weil nie jemand etwas erzählt. Warum werden wir über das alles im Dunklen gelassen?"
 
-    "Anan" "Es ist also unfair, dass du dich an fremdes Eigentum vergreifst?"
+    "Anan" "Es ist also unfair, dass du dich an fremdem Eigentum vergreifst?"
 
     "Anan" "Vergiss, was auch immer du gesehen hast. Es ist nichts, was dich glücklich macht, eher im Gegenteil. Du solltest aufhören, dir darüber Gedanken zu machen."
 
@@ -1689,8 +1703,8 @@ label end_search_kloth:
 
     # Start Erinnerung
 
-    show sepia
     scene stairs_up
+    show sepia
     with fadeshort
     show kloth smiling behind sepia
 
@@ -1730,8 +1744,6 @@ label end_search_kloth:
 
     "Atropos" "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch. Ich hatte heute einen stressigen Tag und brauche jetzt erstmal wieder etwas Ruhe und Entspannung."
     # ab hier Glitch
-    scene stairs_up
-    with fadeshort
     show kloth scared1
 
     "Kloth" "Neeeein!"
@@ -1836,7 +1848,7 @@ label end_search_kloth:
     with fadealarm
 
     scene detail_bomb1000
-    with short
+    with fadeshort
 
     "Atropos" "10 Minuten… dann werdet ihr endlich alle brennen. Und ich mit euch!"
 

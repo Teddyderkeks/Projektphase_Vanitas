@@ -315,7 +315,116 @@ screen force_mouse_move_twooptions(): #obere Auswahl
 
     timer 2 repeat True action MouseMove(x=960, y=500, duration=0.2)
 
-screen force_mouse_move_klothoffice():
+
+screen force_mouse_move_twooptionsdown(): #untere Auswahl
+    on "show":
+        action MouseMove(x=960, y=600, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=600, duration=0.2)
+
+
+screen force_mouse_move_twooptionsdownweak(): #untere Auswahl
+    on "show":
+        action MouseMove(x=960, y=590, duration=0.6)
+
+    timer 2 repeat True action MouseMove(x=960, y=590, duration=0.2)
+
+
+screen force_mouse_move_480():
+    on "show":
+        action MouseMove(x=960, y=480, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=480, duration=0.2)
+
+
+screen force_mouse_move_670():
+    on "show":
+        action MouseMove(x=960, y=670, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=670, duration=0.2)
+
+
+screen force_mouse_move_410():
+    on "show":
+        action MouseMove(x=960, y=410, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=410, duration=0.2)
+
+screen force_mouse_move_630():
+    on "show":
+        action MouseMove(x=960, y=630, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=630, duration=0.2)
+
+
+screen force_mouse_move_550():
+    on "show":
+        action MouseMove(x=960, y=550, duration=0.2)
+
+    timer 2 repeat True action MouseMove(x=960, y=550, duration=0.2)
+
+
+screen force_mouse_move_580strong():
+    on "show":
+        action MouseMove(x=960, y=550, duration=0.1)
+
+    timer 1 repeat True action MouseMove(x=960, y=550, duration=0.1)
+
+screen force_mouse_move_anansoffice(): #Pille nicht genommen, nur leichte Force
+
+    if sawsafe ==False: # ist an erster Stelle
+        if ananthingswatched==0:
+            on "show":
+                action MouseMove(x=960, y=340, duration=0.4)
+            timer 3 repeat True action MouseMove(x=960, y=340, duration=0.4)
+        else:
+            if ananthingswatched==1:
+                on "show":
+                    action MouseMove(x=960, y=390, duration=0.4)
+                timer 3 repeat True action MouseMove(x=960, y=390, duration=0.4)
+            else:
+                if ananthingswatched==2:
+                    on "show":
+                        action MouseMove(x=960, y=430, duration=0.4)
+                    timer 3 repeat True action MouseMove(x=960, y=430, duration=0.4)
+                else:
+                    if ananthingswatched==3:
+                        on "show":
+                            action MouseMove(x=960, y=470, duration=0.4)
+                        timer 3 repeat True action MouseMove(x=960, y=470, duration=0.4)
+                    else:
+                        if ananthingswatched==4:
+                            on "show":
+                                action MouseMove(x=960, y=540, duration=0.4)
+                            timer 3 repeat True action MouseMove(x=960, y=540, duration=0.4)
+    else: # ist an zweiter Stelle
+        if ananthingswatched==1:
+            on "show":
+                action MouseMove(x=960, y=280, duration=0.4)
+            timer 3 repeat True action MouseMove(x=960, y=280, duration=0.4)
+        else:
+            if ananthingswatched==2:
+                on "show":
+                    action MouseMove(x=960, y=330, duration=0.4)
+                timer 3 repeat True action MouseMove(x=960, y=330, duration=0.4)
+            else:
+                if ananthingswatched==3:
+                    on "show":
+                        action MouseMove(x=960, y=370, duration=0.4)
+                    timer 3 repeat True action MouseMove(x=960, y=370, duration=0.4)
+                else:
+                    if ananthingswatched==4:
+                        on "show":
+                            action MouseMove(x=960, y=410, duration=0.4)
+                        timer 3 repeat True action MouseMove(x=960, y=410, duration=0.4)
+                    else:
+                        if ananthingswatched==5:
+                            on "show":
+                                action MouseMove(x=960, y=460, duration=0.4)
+                            timer 3 repeat True action MouseMove(x=960, y=460, duration=0.4)
+
+
+screen force_mouse_move_klothoffice(): #in Pille genommen
 
     if thingswatched>0:
         if infos_count_kloth>0:

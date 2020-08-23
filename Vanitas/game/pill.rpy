@@ -120,10 +120,10 @@ label pill:
         # Symbiont
         symb"{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
 
-        show screen force_mouse_move_twooptions
+        show screen force_mouse_move_twooptionsdown
         menu:
             "Ich sollte nach Kloth suchen.":
-                hide screen force_mouse_move_twooptions
+                hide screen force_mouse_move_twooptionsdown
 
                 # Atropos Gedanken
                 symb"Ich sollte nach Kloth suchen. Ich wüsste zu gerne, warum er sich so lange nicht bei mir gemeldet hatte."
@@ -134,7 +134,7 @@ label pill:
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
 
-                hide screen force_mouse_move_twooptions
+                hide screen force_mouse_move_twooptionsdown
 
                 # Atropos Gedanken
                 symb"Ich werde erstmal nach Chesis suchen. Danach werde ich weitersehen."
@@ -158,7 +158,7 @@ label still_search_chesis:
     show zelos normal:
         xalign 0.5
 
-    "Atropos" "Was gibt´s?"
+    "Atropos" "Was gibt's?"
 
     "Zelos" "Wie du siehst brummt uns der Laden. Ich muss meine Mittagspause verschieben. Aber Tycho und die anderen waren gerade da, sie wollten zur Mensa, wenn du sie suchst."
 
@@ -182,14 +182,14 @@ label still_search_chesis:
     # Atropos Gedanken
     symb"Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
 
-    show chesis smiling:
+    show chesis normal:
         xalign 0.5
 
     "Chesis" "Hey Atropos."
 
     "Atropos" "Hast du Zeit für eine Mittagspause?"
 
-    show chesis grinning2
+    show chesis happy_alt
 
     "Chesis" "Bin gerade mit meinem Gespräch fertig geworden, wo wollen wir hin?"
 
@@ -225,12 +225,13 @@ label still_search_chesis:
     # Symbiont
     symb"{i}Nicht jeder ist nun mal ständig am Handy und erreichbar. Freue dich lieber auf nachher, wenn du ihn wiedersiehst. {/i}"
 
-    show chesis smiling
+    show chesis normal
 
     "Chesis" "Ach, spielt doch keine Rolle! Du zerbrichst dir unnötig den Kopf."
-
+    show screen force_mouse_move_twooptionsdown
     menu:
         "Ich möchte trotzdem lieber nach Kloth suchen.":
+            hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Ich denke, ich möchte trotzdem lieber nach Kloth suchen."
 
@@ -244,6 +245,7 @@ label still_search_chesis:
 
             jump search_kloth
         "Du hast Recht.":
+            hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Du hast Recht. Es wird schon alles in Ordnung sein."
 
@@ -253,7 +255,7 @@ label still_search_chesis:
 
             "Atropos" "Gehen wir ins Büro und holen uns dort einen Kaffee?"
 
-            show chesis grinning
+            show chesis happy
 
             "Chesis" "Gerne."
 
@@ -309,9 +311,10 @@ label mittagspausemitchesis:
     show chesis happy
 
     "Chesis" "Ja, bleibe einfach ruhig. Das wird sich alles aufklären und am Ende werden wir darüber lachen."
-
+    show screen force_mouse_move_480
     menu:
         "Du hast ja Recht. Tut mir leid.":
+            hide screen force_mouse_move_480
 
             "Atropos" "Du hast ja Recht. Tut mir leid, ich weiß nicht, was in mich gefahren ist."
 
@@ -343,6 +346,7 @@ label mittagspausemitchesis:
 
             jump not_search_kloth
         "Ich gehe trotzdem besser auf Nummer sicher und suche ihn.":
+            hide screen force_mouse_move_480
 
             "Atropos" "Ich gehe trotzdem besser auf Nummer sicher und suche ihn."
 
@@ -356,7 +360,7 @@ label mittagspausemitchesis:
 
             "Chesis" "Ja, genau. Ich freue mich, bis dann!"
 
-            "Atropos" "Mach´s gut, bis später!"
+            "Atropos" "Mach's gut, bis später!"
 
             jump search_kloth
 
@@ -429,6 +433,9 @@ label laborpillende:
     with fadeshort
     # Atropos Gedanken
     symb"Era und Narcais scheinen beide in der Mittagspause zu sein. Dann kann ich mich jetzt ja in Ruhe dem Bericht für Anan widmen, den ich noch machen muss."
+
+    scene lab
+    with fadestart
 
     "Atropos" "…"
 
@@ -551,6 +558,7 @@ label erabegleiten:
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
+
     return
 
 label eranichtbegleiten:
@@ -561,7 +569,7 @@ label eranichtbegleiten:
 
     "Era" "O-Okay… und Atropos…?"
 
-    "Atropos" "Was gibt´s?"
+    "Atropos" "Was gibt's?"
 
     show era happy
 
