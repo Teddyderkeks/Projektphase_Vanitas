@@ -1,50 +1,46 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 2707, in script
-    "Atropos" "Hey Era."
-  File "renpy/common/00library.rpy", line 268, in say
-    who(what, interact=interact, *args, **kwargs)
-IOError: Couldn't find file 'Sound/Music/Rooms/Labor/labor_duester'.
+  File "game/rueffel.rpy", line 25, in script
+    symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
+IOError: Couldn't find file 'Sound/Music/Rooms/AnansBuero/anans_buero_3St_ganz.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 2707, in script
-    "Atropos" "Hey Era."
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+  File "game/rueffel.rpy", line 25, in script
+    symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1343, in say
-    renpy.store.say(who, what, *args, **kwargs)
-  File "renpy/common/00library.rpy", line 268, in say
-    who(what, interact=interact, *args, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
     self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
     **display_args)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
     rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
     renpy.audio.audio.periodic()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
     six.reraise(exc[0], exc[1], exc[2])
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
     periodic_pass()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
     c.periodic()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
     topf = load(self.file_prefix + filename + self.file_suffix)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
     rv = renpy.loader.load(fn)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'Sound/Music/Rooms/Labor/labor_duester'.
+IOError: Couldn't find file 'Sound/Music/Rooms/AnansBuero/anans_buero_3St_ganz.mp3'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Sun Aug 23 21:46:22 2020
+Mon Aug 24 10:48:12 2020

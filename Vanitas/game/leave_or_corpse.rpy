@@ -126,7 +126,7 @@ label kloth_corpse:
     "Atropos" "Warte. Hatte ich mich nicht gestern mit Kloth unterhalten? Er kam zu mir und…?"
 
     show sepia
-    show kloth smiling behind sepia
+    show kloth unsuresmiling_alt behind sepia
     scene stairs_up
     with fadeshort
 
@@ -240,7 +240,7 @@ label reschedule_conversation_kloth:
 label accept_conversation_kloth:
     "Atropos" "Ja, natürlich helfe ich dir. Erzähl endlich, was los ist. Wie kann ich dir helfen?"
 
-    show kloth unsuresmiling
+    show kloth unsuresmiling_alt
 
     "Kloth" "(atmet erleichtert auf) Danke Atropos! Wirklich… vielen, vielen Dank… du weißt nicht, wie froh ich bin endlich jemanden zu haben, dem ich mich anvertrauen kann."
 
