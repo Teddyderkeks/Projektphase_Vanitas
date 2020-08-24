@@ -1,6 +1,6 @@
 label pill:
     scene lab
-    with fadeshort
+    with fadestart
 
     # Atropos Gedanken
     symb"Endlich Mittagspause. Ich muss meinen Kopf ein bisschen frei bekommen. Von Narcais Vortrag schwirrt mir immer noch der Kopf."
@@ -147,6 +147,8 @@ label pill:
 
 label still_search_chesis:
 
+
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
     scene shop_1
     with fadeshort
 
@@ -263,6 +265,7 @@ label still_search_chesis:
 
 label mittagspausemitchesis:
 
+    play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
     scene office_2
     with fadeshort
     show chesis happy:
@@ -391,6 +394,8 @@ label not_search_kloth:
         # Atropos Gedanken
         symb"Und jetzt zurück ins Labor."
 
+
+        play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
         scene lab
         with fadeshort
 
@@ -423,11 +428,15 @@ label not_search_kloth:
             # Atropos Gedanken
             symb"Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
 
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
             scene lab
             with fadeshort
             jump laborpillende
 
 label laborpillende:
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
     scene lab
     with fadeshort
@@ -505,6 +514,8 @@ label erabegleiten:
 
     "Atropos" "So, wir sind da- mal schauen, ob sie uns weiterhelfen können."
 
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
     scene server_room
     with fadeshort
 
