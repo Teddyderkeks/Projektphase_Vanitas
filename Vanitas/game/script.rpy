@@ -298,6 +298,8 @@ label shop:
     scene shop_1
     with fadeshort
 
+    play sound "Sound/Sounds/gloeckchen.mp3"
+
     show zelos normal
 
     "Zelos" "Guten Morgen und einen wunderschönen Tag, was…? Ach, du bist es Atropos- heute extra überpünktlich?"

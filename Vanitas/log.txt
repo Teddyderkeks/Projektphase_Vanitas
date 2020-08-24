@@ -1,18 +1,18 @@
-Mon Aug 24 18:13:40 2020
+Mon Aug 24 19:35:08 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.07s
-Loading error handling took 0.03s
-Loading script took 0.88s
-Loading save slot metadata. took 0.11s
-Loading persistent took 0.01s
+Loader init took 0.13s
+Loading error handling took 0.04s
+Loading script took 0.85s
+Loading save slot metadata. took 0.09s
+Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.10s
-Loading analysis data took 0.12s
+Running init code took 0.09s
+Loading analysis data took 0.10s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Saknoops\\AppData\\Roaming/RenPy/backups\\Vanitas':
@@ -26,11 +26,11 @@ Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.09s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.38s
-Save bytecode. took 0.08s
+Analyze screens took 0.02s
+Save screen analysis took 0.08s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.37s
+Save bytecode. took 0.07s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.04s
@@ -419,11 +419,27 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 2.8900001049s
+Total time until interface ready: 2.73000001907s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.018949 seconds.
 - Frame drawn at 0.019949 seconds.
-- Frame drawn at 0.035949 seconds.
-- Frame drawn at 0.047949 seconds.
-- 0.047949 seconds to render 5 frames.
+- Frame drawn at 0.027949 seconds.
+- Frame drawn at 0.043949 seconds.
+- 0.043949 seconds to render 5 frames.
+
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1137) drawable=(1920, 1137)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1137) drawable=(1920, 1137)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+The window was minimized.
