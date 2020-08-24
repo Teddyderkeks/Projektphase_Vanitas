@@ -59,7 +59,7 @@ label search_kloth:
 
     # Atropos Gedanken
     symb"Kein Laut zu hören… vielleicht hat er mich ja nicht gehört? Kloth wird schon nicht sauer sein, wenn ich einfach eintrete."
-
+    play music "Sound/Music/Rooms/kloth_buero.mp3" fadeout 3 fadein 3
     scene kloth_office
     with fadeshort
 
@@ -132,7 +132,7 @@ label search_kloth_in_anan_office:
             jump search_kloth_without_anan_office
 
 label wannariskanan:
-
+    play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
     scene anan_office
     with fadeshort
 
@@ -216,7 +216,7 @@ label search_kloth_without_anan_office:
 
     # Überschwung zu Erinnerung, Ort: Kloths Büro; Über der gesamten Erinnerung liegt ein Rauschen
 
-
+    play music "Sound/Music/Rooms/kloth_buero.mp3" fadeout 3 fadein 3
     scene kloth_office
     with fadeshort
     show sepia
@@ -346,7 +346,7 @@ label search_kloth_without_anan_office:
 
             # Atropos Gedanken
             symb"Ich will, dass er endlich wieder glücklich sein kann und nicht so leiden muss, wie es in der Erinnerung den Anschein hatte."
-
+            play music "Sound/Music/Rooms/kloth_buero.mp3" fadeout 3 fadein 3
             scene kloth_office
             with fadeshort
 
@@ -367,7 +367,7 @@ label search_kloth_without_anan_office:
 
             # Atropos Gedanken
             symb"So oder so. Ich muss ohnehin zurück zur Arbeit. Wenn Kloth nicht beim Labor ist, dann werde ich ihm einfach nochmal eine Nachricht schreiben."
-
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
             scene lab
             with fadeshort
             # Atropos Gedanken
@@ -455,6 +455,7 @@ label everything_seen:
 
             # Atropos Gedanken
             symb"Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
             scene lab
             with fadeshort
             jump laborpillende
@@ -561,6 +562,7 @@ label still_search_kloth:
 
     hide anan
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
     scene corpse
     with fadeshort
 
@@ -585,7 +587,7 @@ label still_search_kloth:
 
     "Atropos" "Das darf doch nicht wahr sein…"
 
-
+    play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
     # Wechsel zu Erinnerung
     scene stairs_up
     with fadeshort
@@ -596,7 +598,7 @@ label still_search_kloth:
 
     "Atropos" "Kloth, was ist los?"
 
-    show kloth unsuresmiling
+    show kloth unsuresmiling_alt
 
     "Kloth"  "Ich habe dich überall gesucht. Endlich habe ich dich gefunden… ich muss mit dir reden. Hast du kurz einen Moment Zeit? Bitte…"
 
@@ -649,6 +651,8 @@ label still_search_kloth:
     symb"Hätte ich deinen Tod irgendwie verhindern können?"
 
     show anan disappointed_mid
+
+    play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich bedauere seinen Tod. Wir verlieren einen geschätzten Mitarbeiter. Ich hatte große Hoffnungen in ihn gesetzt."
 
@@ -886,6 +890,8 @@ label serverraumpille:
 
     # Symbiont
     symb"{i}Was willst du tun, wenn du dort bist? Welche Entscheidung wirst du treffen? Wirst du mit dieser Entscheidung glücklich sein? {i}"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
     scene server_room
     with fadeshort
     "Atropos"  "Ein Ticken… Es ist also tatsächlich wahr. Hier ist eine Bombe versteckt, welche jeden Moment hochgehen kann."

@@ -2535,6 +2535,10 @@ label anan_is_right:
         # Atropos Gedanken
         symb"Ob er wohl mit allen Informationen Recht hatte?"
 
+    stop music
+
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+
     # ab hier wieder alle
     scene screen_background
     with fadeshort
@@ -2884,6 +2888,10 @@ label why_important:
         # Atropos Gedanken
         symb"Ob er wohl mit allen Informationen Recht hatte?"
 
+    stop music
+
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+
     # ab hier wieder alle
     scene screen_background
     with fadeshort
@@ -3176,6 +3184,10 @@ label be_against:
     "Era" "Ich… ich kümmere mich darum!"
     hide era
 
+    stop music
+
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+
     scene screen_background
     with fadeshort
     show screen_transparent
@@ -3390,7 +3402,9 @@ label good_mood:
         # Atropos Gedanken
         symb"Ob er wohl mit allen Informationen recht hatte?"
 
+    stop music
 
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
     scene screen_background
     with fadeshort
     show screen_transparent

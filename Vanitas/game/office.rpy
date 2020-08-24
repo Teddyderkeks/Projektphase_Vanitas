@@ -73,6 +73,7 @@ label office:
             hide screen force_mouse_move_twooptionsdownweak
             # Atropos Gedanken
             symb"Ich trete einfach mal ein und sehe dann weiter. Es wird schon nichts Schlimmes deswegen passieren."
+            play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
             scene anan_office
             with fadeshort
 
@@ -118,6 +119,8 @@ label conversation_with_anan:
 
     # Atropos Gedanken
     symb"Ich kann nicht einschätzen, ob Anan gute oder schlechte Laune hat. Ich hoffe einfach nur, ich bekomme nicht zu viel Ärger."
+
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     scene anan_office
     with fadeshort
@@ -202,9 +205,11 @@ label conversation_with_anan:
         "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
             jump understanding
         "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich.":
+            play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
             jump questioning
         "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
-            "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
+            play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
+            "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glüsck bestimmen können!"
 
             "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
 
@@ -503,8 +508,10 @@ label questioning:
 
     menu:
         "Nein… nein, möchte ich nicht. Du hast ja Recht.":
+            play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
             jump understandingpart2
         "Aber das erklärt immer noch nicht wie die Pille eigentlich wirkt.":
+            play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
             jump misunderstanding
 
 label misunderstanding:
@@ -594,7 +601,6 @@ label how_many_infos_anan:
                 # Atropos Gedanken
                 symb"Ich sollte mich besser nicht weiter in Anans Büro umschauen und das Zimmer verlassen."
             else:
-
                 # Atropos Gedanken
                 symb"Ich sollte mich besser nicht in Anans Büro umschauen und das Zimmer verlassen."
 
@@ -718,6 +724,7 @@ label how_many_infos_anan:
 
             menu:
                 "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                    play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
                     "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
 
                     "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
@@ -754,6 +761,7 @@ label how_many_infos_anan:
 
                     jump expulsion_office
                 "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                    play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
                     jump understandingpart3
 
         else:
@@ -1204,6 +1212,8 @@ label face_anan:
     # alle
     "Atropos" "Was soll das alles? Was hat das zu bedeuten?"
 
+    play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
+
     show anan strict_mid
 
     "Anan" "Es ist wohl viel eher an mir, {b}dir{/b} diese Frage zu stellen."
@@ -1360,6 +1370,8 @@ label not_face_anan:
 
     menu:
         "Ich vertraue immer noch auf Aither. Ich glaube an das Gute in der Firma.":
+
+            play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
             # Atropos Gedanken
             symb"Ich vertraue immer noch auf Aither. Ich glaube an das Gute in der Firma."
 
@@ -1382,6 +1394,8 @@ label not_face_anan:
 
             jump back_to_work
         "Ich traue Aither nicht.":
+
+            play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
             # Atropos Gedanken
             symb"Ich traue Aither nicht."
 
@@ -1479,6 +1493,8 @@ label visit_kloth:
     # Atropos Gedanken
     symb"Kein Laut zu hören… vielleicht hat er mich ja nicht gehört? Kloth wird schon nicht sauer sein, wenn ich einfach eintrete."
 
+    play music "Sound/Music/Rooms/kloth_buero.mp3" fadeout 3 fadein 3
+
     scene kloth_office
     with fadeshort
 
@@ -1518,6 +1534,7 @@ label search_kloth_in_stairwell:
     # Atropos Gedanken
     symb"Die Aufzüge sind so voll- ich nehme besser die Treppe…"
 
+
     scene stairs_up
     with fadeshort
 
@@ -1526,6 +1543,8 @@ label search_kloth_in_stairwell:
 
     scene stairs_down
     with fadeshort
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
     # Atropos Gedanken
     symb"Warte… was ist das?"
@@ -1672,6 +1691,8 @@ label end_search_kloth:
     # Atropos Gedanken
     symb"Vor den Aufzügen warten so viele Menschen, ich nehme die Treppe…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene stairs_down
     with fadeshort
 
@@ -1703,10 +1724,12 @@ label end_search_kloth:
 
     # Start Erinnerung
 
+    play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
+
     scene stairs_up
     show sepia
     with fadeshort
-    show kloth smiling behind sepia
+    show kloth unsuresmiling_alt behind sepia
 
     "Kloth"  "Atropos!"
 
@@ -1786,6 +1809,7 @@ label end_search_kloth:
 
     $ renpy.movie_cutscene("atropos_pushes_kloth.mpg")
 
+
     # Symbiont
     symb"{i}Bleib ruhig! Du warst es nicht. Vergiss alles! Sei glücklich! {/i}"
 
@@ -1799,6 +1823,8 @@ label end_search_kloth:
 
     # Symbiont
     symb"{i}Beruhige dich! Verlier nicht deinen Verstand! So machst du nur dich und alle anderen unglücklich. {/i}"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_verrueckt.mp3" fadeout 3 fadein 3
 
     "Atropos" "Und die Bombe wird booom gehen."
 

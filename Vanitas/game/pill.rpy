@@ -600,6 +600,8 @@ label eranichtbegleiten:
     # Atropos Gedanken
     symb"Ah, da ist er ja schon. Mal sehen, ob mir dort jemand weiterhelfen kann."
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
