@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bomb.rpy", line 1063: could not parse statement.
-    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3s
-                                                                                     ^
+File "game/functions.rpy", line 49: u's' is not a keyword argument or valid child for the imagebutton statement.
+    idle "gui/button_nightshade.png"s
+                                     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 24 15:19:23 2020
+Mon Aug 24 17:33:15 2020
