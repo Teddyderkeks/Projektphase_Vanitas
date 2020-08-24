@@ -220,7 +220,7 @@ label search_kloth_without_anan_office:
     scene kloth_office
     with fadeshort
     show sepia
-    show kloth angry_neutral behind sepia:
+    show kloth unsuresmiling_neutral_alt behind sepia:
         xalign 0.5
 
     "Atropos" "Zu so früher Stunde schon ein Bier? (lacht)"
