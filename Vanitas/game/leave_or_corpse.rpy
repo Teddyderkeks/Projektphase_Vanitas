@@ -26,6 +26,8 @@ label leave_and_go_pill:
     # Atropos Gedanken
     symb"Ich will einfach nur glücklich sein. Mein Leben war zuvor so einfach und ohne Probleme… das hier macht mir Angst."
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     scene lab
     with fadeshort
 
@@ -77,6 +79,8 @@ label kloth_corpse:
     # Atropos Gedanken
     symb"Trotzdem habe ich Angst…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene corpse
     with fadeshort
 
@@ -124,6 +128,8 @@ label kloth_corpse:
     "Atropos" "Ahhh- mein Kopf tut weh. Da ist irgendeine Erinnerung, aber ich bekomme sie nicht ganz zu fassen… Was ist das?"
 
     "Atropos" "Warte. Hatte ich mich nicht gestern mit Kloth unterhalten? Er kam zu mir und…?"
+
+    play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
 
     show sepia
     show kloth unsuresmiling_alt behind sepia
@@ -289,6 +295,8 @@ label accept_conversation_kloth:
     hide kloth
 
     $ renpy.movie_cutscene("atropos_accepts_conversation.mpg")
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
     "Atropos" "Nein."
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label selection_kloth_office_after_anan_office is defined twice, at
-  File "game/selection_kloth_office_after_anan_office.rpy", line 6 and
-  File "game/selection_kloth_office_after_anan_office0.rpyc", line 6.
+File "game/bomb.rpy", line 1063: could not parse statement.
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3s
+                                                                                     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Aug 23 11:26:20 2020
+Mon Aug 24 15:19:23 2020

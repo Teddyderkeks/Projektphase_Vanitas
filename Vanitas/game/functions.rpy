@@ -1,3 +1,22 @@
+screen computer():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            #focus_mask True
+            action Jump ("watchnothingoffice")
+
+screen nightshade():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "arrow.png"
+            hover "arrowblue.png"
+            #focus_mask True
+            action Jump ("watchnothingoffice")
+
+
 screen arrow_watchoffice():
     frame:
         xpos 1700 ypos 500

@@ -8,6 +8,7 @@ label back_to_work:
     # Atropos Gedanken
     symb"Auch wenn ich mich immer noch frage, wie sie überhaupt wirkt…"
 
+    play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
 
     scene stairs_up
     with fadeshort
@@ -218,8 +219,11 @@ label talk_with_colleagues:
     # Atropos Gedanken
     symb"Naja, egal. Ich sollte jetzt zurück ins Labor…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     scene stairs_down
     with fadeshort
+
 
     # Atropos Gedanken
     symb"Warte… was ist das?"
@@ -268,8 +272,6 @@ label talk_with_colleagues:
 
     # Symbiont
     symb"{i}Tu es! {/i}"
-
-
 
 
     jump leave_or_corpse
