@@ -371,35 +371,49 @@ label conversation_with_seller:
         symb"Dann bin ich wohl wirklich zu früh dran."
 
         #Atropos Gedanken
+        symb"Der eine Computer ist an. Ob wohl doch schon jemand hier ist? Wem gehört der Computer?"
+
+        #Atropos Gedanken
         symb"Ich könnte mich noch ein wenig umsehen."
 
-# klickbar => fehlt noch!!!!!
-        # Wenn Spieler direkt auf den PC im Raum klickt
-        # Detailansicht PC
-        # Atropos Gedanken
-        #"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
-        # Bevor der Spieler mehr erfahren kann, schaltet sich der Bildschirm des PCs von allein aus.
-        # Atropos Gedanken
-        #"Hm? Der Bildschirm ist einfach ausgegangen."
-        # Atropos Gedanken
-        #"Wieso sollte jemand über die Moiren forschen?"
+        show screen computer
 
         menu:
             "Ich schaue mir den Kalender an.":
+                hide screen computer
                 "Ich schaue mir den Kalender an."
                 jump watchofficecalendar
 
             "Da ist ein interessantes Foto.":
+                hide screen computer
                 "Da ist ein interessantes Foto."
                 jump watchofficephoto
 
             "Neben der Sanduhr liegt etwas.":
+                hide screen computer
                 "Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
+                hide screen computer
                 "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
                 jump watchnothingoffice
+
+        label computermoira:
+            hide screen computer
+            # Wenn Spieler direkt auf den PC im Raum klickt
+            scene detail_pc_moira
+            # Atropos Gedanken
+            symb"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
+            call screen arrowcomputer
+            label afteromputermoira:
+                scene office_1
+                # Atropos Gedanken
+                symb"Hm? Der Bildschirm ist einfach ausgegangen."
+                # Atropos Gedanken
+                symb"Wieso sollte jemand über die Moiren forschen?"
+                jump watchnothingoffice
+
 
         label watchofficecalendar:
             scene detail_calendar
@@ -1036,22 +1050,38 @@ label conversation_with_seller:
 
                 #Atropos Gedanken
                 symb"Ich könnte mich noch einmal umsehen..."
+                show screen nightshade1
 
                 menu:
                     "Wieso ist hier ein Schmetterling?":
+                        hide screen nightshade
                         symb "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly
 
                     "Ich will mir die Bilder ansehen.":
+                        hide screen nightshade
                         symb"Ich will mir die Bilder ansehen."
                         jump watchhallpictures
 
                     "Ein Druckknopfmelder?":
                         symb"Ein Druckknopfmelder?"
+                        hide screen nightshade
                         jump watchhallalarm
 
                     "Ich sollte dann wirklich ins Labor.":
+                        hide screen nightshade
                         jump watchnothinghall
+
+                label afternightshade1:
+                    hide screen nightshade1
+                    # Atropos Gedanken
+                    symb"Nachtschatten. Die Blumen sind wunderschön."
+                    # Atropos Gedanken
+                    symb"Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                    "Atropos""…"
+                    # Atropos Gedanken
+                    symb"Nicht, dass ich mich mit sowas beschäftigt hätte."
+                    jump watchnothinghall
 
                 label watchhallbutterfly:
                     # Atropos
@@ -1249,32 +1279,41 @@ label conversation_with_seller:
         #Atropos Gedanken
         symb"Ich könnte mich noch ein wenig umsehen."
 
-# klickbar => fehlt noch!!!!!
-        # Wenn Spieler direkt auf den PC im Raum klickt
-        # Detailansicht PC
-        # Atropos Gedanken
-        #"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
-        # Bevor der Spieler mehr erfahren kann, schaltet sich der Bildschirm des PCs von allein aus.
-        # Atropos Gedanken
-        #"Hm? Der Bildschirm ist einfach ausgegangen."
-        # Atropos Gedanken
-        #"Wieso sollte jemand über die Moiren forschen?"
-
+        show screen computer2
         menu:
             "Ich schaue mir den Kalender an.":
+                hide screen computer2
                 symb"Ich schaue mir den Kalender an."
                 jump watchofficecalendar2
 
             "Da ist ein interessantes Foto.":
+                hide screen computer2
                 symb"Da ist ein interessantes Foto."
                 jump watchofficephoto2
 
             "Neben der Sanduhr liegt etwas.":
+                hide screen computer2
                 symb"Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass2
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
+                hide screen computer2
                 symb"Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
+                jump watchnothingoffice2
+
+        label computermoira2:
+            hide screen computer2
+            # Wenn Spieler direkt auf den PC im Raum klickt
+            scene detail_pc_moira
+            # Atropos Gedanken
+            symb"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
+            call screen arrowcomputer2
+            label afteromputermoira2:
+                scene office_1
+                # Atropos Gedanken
+                symb"Hm? Der Bildschirm ist einfach ausgegangen."
+                # Atropos Gedanken
+                symb"Wieso sollte jemand über die Moiren forschen?"
                 jump watchnothingoffice2
 
         label watchofficecalendar2:
@@ -1861,21 +1900,38 @@ label conversation_with_seller:
                 #Atropos Gedanken
                 symb"Ich könnte mich vielleicht noch einmal umsehen, bevor ich gehe..."
 
+                show screen nightshade3
+
                 menu:
                     "Wieso ist hier ein Schmetterling?":
+                        hide screen nightshade3
                         "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly3
 
                     "Ich will mir die Bilder ansehen.":
+                        hide screen nightshade3
                         "Ich will mir die Bilder ansehen."
                         jump watchhallpictures3
 
                     "Ein Druckknopfmelder?":
+                        hide screen nightshade3
                         "Ein Druckknopfmelder?"
                         jump watchhallalarm3
 
                     "Ich habe vermutlich lange genug herumgetrödelt.":
+                        hide screen nightshade3
                         jump watchnothinghall3
+
+                label afternightshade3:
+                    hide screen nightshade3
+                    # Atropos Gedanken
+                    symb"Nachtschatten. Die Blumen sind wunderschön."
+                    # Atropos Gedanken
+                    symb"Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                    "Atropos""…"
+                    # Atropos Gedanken
+                    symb"Nicht, dass ich mich mit sowas beschäftigt hätte."
+                    jump watchnothinghall3
 
                 label watchhallbutterfly3:
                     # Atropos
@@ -2010,21 +2066,39 @@ label work:
             # Atropos Gedanken
             symb"Aber bevor ich mich um den Bericht für ihn kümmere, könnte ich mich noch kurz umsehen."
 
+            show screen nightshade2
+
             menu:
                 "Wieso ist hier ein Schmetterling?":
+                    hide screen nightshade2
                     "Wieso ist hier ein Schmetterling?"
                     jump watchhallbutterfly2
 
                 "Ich will mir die Bilder ansehen.":
+                    hide screen nightshade2
                     "Ich will mir die Bilder ansehen."
                     jump watchhallpictures2
 
                 "Ein Druckknopfmelder?":
+                    hide screen nightshade2
                     "Ein Druckknopfmelder?"
                     jump watchhallalarm2
 
                 "Ich sollte dann wirklich ins Labor. Ich will Anan nicht enttäuschen":
+                    hide screen nightshade2
                     jump watchnothinghall2
+
+            label afternightshade2:
+                hide screen nightshade2
+                # Atropos Gedanken
+                "Nachtschatten. Die Blumen sind wunderschön."
+                # Atropos Gedanken
+                "Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                # Atropos Gedanken
+                "…"
+                # Atropos Gedanken
+                "Nicht, dass ich mich mit sowas beschäftigt hätte."
+                jump watchnothinghall2
 
             label watchhallbutterfly2:
                 # Atropos
