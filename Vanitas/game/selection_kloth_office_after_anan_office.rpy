@@ -18,10 +18,10 @@ label selection_kloth_office_after_anan_office:
 
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
                         jump search_kloth_in_stairwell
 
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
@@ -41,17 +41,16 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
                         jump pictureskloth_kloth
                     "Ich werde den Computer durchsuchen.":
                         jump computer_kloth
-
                     "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
                         jump worldmap_kloth
 
@@ -62,10 +61,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde mir das Dokument anschauen.":
@@ -87,10 +86,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
                     "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
@@ -107,10 +106,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
 
@@ -132,10 +131,10 @@ label selection_kloth_office_after_anan_office:
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
                         # Atropos Gedanken
-                        "Ich muss Kloth sofort finden!"
+                        symb"Ich muss Kloth sofort finden!"
 
                         # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
                         jump search_kloth_in_stairwell
 
@@ -153,28 +152,55 @@ label selection_kloth_office_after_anan_office:
 
 
             else:
-                menu:
-                    "Ich werde das Regal untersuchen."  if sawshelf == False:
-                        jump shelf_kloth
+                if (sawsafe==True) or (sawpictures==True) or (sawbooks==True):
+                    menu:
+                        "Ich werde das Regal untersuchen."  if sawshelf == False:
+                            jump shelf_kloth
 
-                    "Nein, ich suche besser nach Kloth.":
-                        # Atropos Gedanken
-                        "Nein, ich suche besser nach Kloth."
-                        # Atropos Gedanken
-                        "Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+                        "Ich suche besser nach Kloth.":
+                            # Atropos Gedanken
+                            symb"Ich suche besser nach Kloth."
+                            # Atropos Gedanken
+                            symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
 
-                        jump search_kloth_in_stairwell
+                            jump search_kloth_in_stairwell
 
-                    "Ich werde mir das Dokument anschauen.":
-                        jump document_kloth
+                        "Ich werde mir das Dokument anschauen.":
+                            jump document_kloth
 
-                    "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
-                        jump pictureskloth_kloth
+                        "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                            jump pictureskloth_kloth
 
-                    "Ich werde den Computer durchsuchen.":
-                        jump computer_kloth
+                        "Ich werde den Computer durchsuchen.":
+                            jump computer_kloth
 
-                    "Ich werde mir den Brief anschauen.":
-                        jump letter_kloth
-                    "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
-                        jump worldmap_kloth
+                        "Ich werde mir den Brief anschauen.":
+                            jump letter_kloth
+                        "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                            jump worldmap_kloth
+                else:
+                    menu:
+                        "Ich werde das Regal untersuchen."  if sawshelf == False:
+                            jump shelf_kloth
+
+                        "Nein, ich suche besser nach Kloth.":
+                            # Atropos Gedanken
+                            symb"Nein, ich suche besser nach Kloth."
+                            # Atropos Gedanken
+                            symb"Ich brauche jetzt Antworten, sonst werde ich verrückt…"
+
+                            jump search_kloth_in_stairwell
+
+                        "Ich werde mir das Dokument anschauen.":
+                            jump document_kloth
+
+                        "Ich werde die Bilder untersuchen." if sawpictureskloth == False:
+                            jump pictureskloth_kloth
+
+                        "Ich werde den Computer durchsuchen.":
+                            jump computer_kloth
+
+                        "Ich werde mir den Brief anschauen.":
+                            jump letter_kloth
+                        "Ich werde mir die Weltkarte einmal ansehen." if sawworldmap == False:
+                            jump worldmap_kloth
