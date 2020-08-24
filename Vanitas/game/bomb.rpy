@@ -128,6 +128,8 @@ label choice_bomb:
     # Atropos Gedanken
     symb"Ich… ich…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
@@ -420,6 +422,8 @@ label explodierenPillegenommen:
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
     $ renpy.movie_cutscene("cutscene_ende.mpg")
+
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
 
     scene street
 
@@ -935,6 +939,8 @@ label saveeralab:
     scene hall
     with fadeshort
 
+
+
     # Atropos Gedanken
     symb"Wo könnte er nur sein? Vermutlich ist er bei der Mensa, oder?"
 
@@ -949,6 +955,8 @@ label saveeralab:
 
     # Symbiont
     symb"{i}Und was ist mit Kloth? Was ist, wenn er noch im Gebäude ist? Und deine anderen Freunde. Willst du sie wirklich einfach sterben lassen? {/i}"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
     # Atropos Gedanken
     symb"Ich… ich… wie viel Zeit habe ich noch? Verdammt…"
@@ -1051,6 +1059,8 @@ label saveeraelsewhere:
 
     # Atropos Gedanken
     symb"Das darf doch nicht wahr sein…"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
     scene hall
     with fadeshort
@@ -1267,7 +1277,7 @@ label savechesis:
 
     hide chesis
 
-
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
     # Atropos Gedanken
     symb"Immerhin ist er sicher."
 
@@ -1501,6 +1511,8 @@ label savetycho:
     "Tycho" "Also… Bye! (lacht)"
     hide tycho
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     # Atropos Gedanken
     symb"Diese verdammte Pille!"
 
@@ -1659,6 +1671,8 @@ label savekloth:
 
     scene stairs_up
     with fadeshort
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
     # Atropos Gedanken
     symb"Warte… was war das eben?"
@@ -2005,6 +2019,8 @@ label saveallallthreekloth:
 
     "Anan" "Konsequenzen, derer ich mir stets bewusst war. Und ich trage die Verantwortung für jede von diesen."
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
     show anan normal_mid
@@ -2052,6 +2068,8 @@ label saveallallthreekloth:
 
     "Atropos" "Ich will nicht sterben…"
 
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
+
     # Symbiont
     symb"{i}Vergiss die Angst. Vergiss den Schmerz. Sei glücklich. {/i}"
 
@@ -2095,6 +2113,8 @@ label doesbombexistsawallthreekloth:
 
     # Atropos Gedanken
     symb"Und da vorne ist der Serverraum auch schon."
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
     scene server_room
     with fadeshort
@@ -2164,6 +2184,8 @@ label doesbombexistsawallthreekloth:
     "Atropos" "Oder?"
 
     "Atropos" "…"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
     "Atropos" "Ich habe Angst…"
 
@@ -2410,6 +2432,8 @@ label trywarnpeople:
     # Atropos Gedanken
     symb"Ich muss zum Serverraum!"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
@@ -2515,6 +2539,8 @@ label doesbombexist:
     # Atropos Gedanken
     symb"Und da vorne ist der Serverraum auch schon."
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
@@ -2612,6 +2638,8 @@ label doesbombexist:
 
     "Atropos" "Noch ein paar Minuten…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
@@ -2691,6 +2719,8 @@ label besureanandies:
     "Atropos" "Ich muss herausfinden, wie viel Zeit mir noch bleibt."
 
     "Atropos" "Ich muss zum Serverraum!"
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
     scene server_room
     with fadeshort
 
@@ -3269,9 +3299,6 @@ label after_detail_blog4:
 
     "Atropos"  "Aber wo… wo könnte sie sein?"
 
-    scene kloth_office
-    with fadeshort
-
     "Atropos"  "Warte… die Serverstrukturen, die ich vorher gesehen habe… wollte Kloth die Server in die Luft jagen?"
 
     "Atropos"  "Ich muss in den Serverraum! Sofort!"
@@ -3279,59 +3306,61 @@ label after_detail_blog4:
 
 label chesiskillsklothwhattodo:
 
-        # ab hier wieder alle
-        scene server_room
-        with fadeshort
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
-        # Atropos Gedanken
-        symb"Ein Ticken… Also doch…"
+    # ab hier wieder alle
+    scene server_room
+    with fadeshort
 
-        # Atropos Gedanken
-        symb"Wo ist sie? Ach, da leuchten die Ziffern im Dunkeln… Wie viel Zeit bleibt noch?"
+    # Atropos Gedanken
+    symb"Ein Ticken… Also doch…"
 
-        scene detail_bomb2031
-        with fadeshort
+    # Atropos Gedanken
+    symb"Wo ist sie? Ach, da leuchten die Ziffern im Dunkeln… Wie viel Zeit bleibt noch?"
 
-        # Atropos Gedanken
-        symb"20 Minuten…"
+    scene detail_bomb2031
+    with fadeshort
 
-        scene server_room
-        with fadeshort
+    # Atropos Gedanken
+    symb"20 Minuten…"
 
-        # Atropos Gedanken
-        symb"Was soll ich mit dieser verbleibenden Zeit anfangen? Was soll ich tun?"
+    scene server_room
+    with fadeshort
 
-        # Atropos Gedanken
-        symb"Aither… Aither muss büßen! Ich muss sichergehen, dass die Bombe auf alle Fälle hochgeht."
+    # Atropos Gedanken
+    symb"Was soll ich mit dieser verbleibenden Zeit anfangen? Was soll ich tun?"
 
-        # Atropos Gedanken
-        symb"Ich räche dich, Kloth! Vertraue mir. Dein Tod wird nicht umsonst sein!"
+    # Atropos Gedanken
+    symb"Aither… Aither muss büßen! Ich muss sichergehen, dass die Bombe auf alle Fälle hochgeht."
 
-        "Atropos"  "…"
+    # Atropos Gedanken
+    symb"Ich räche dich, Kloth! Vertraue mir. Dein Tod wird nicht umsonst sein!"
 
-        "Atropos"  "Wieso nur musstest du sterben, Kloth?"
+    "Atropos"  "…"
 
-        "Atropos"  "Es tut mir leid, dass ich Chesis dafür verurteilt habe. Er kann nichts dafür. Es ist allein die Schuld von Happiness und Aither!"
+    "Atropos"  "Wieso nur musstest du sterben, Kloth?"
 
-        "Atropos"  "Verdammt… wie können Menschen mittlerweile sogar einen Mord begehen und danach glücklich sein, als wüssten sie von nichts?"
+    "Atropos"  "Es tut mir leid, dass ich Chesis dafür verurteilt habe. Er kann nichts dafür. Es ist allein die Schuld von Happiness und Aither!"
 
-        "Atropos"  "Das ist einfach nur krank…"
+    "Atropos"  "Verdammt… wie können Menschen mittlerweile sogar einen Mord begehen und danach glücklich sein, als wüssten sie von nichts?"
 
-        "Atropos"  "Denkt Anan wirklich, dass das die beste Lösung für die Menschheit ist?"
+    "Atropos"  "Das ist einfach nur krank…"
 
-        "Atropos"  "Es muss doch auch andere Möglichkeiten geben… andere Möglichkeiten, dass die Menschheit in Glück und Frieden zusammenleben kann."
+    "Atropos"  "Denkt Anan wirklich, dass das die beste Lösung für die Menschheit ist?"
 
-        "Atropos"  "Wieso müssen alle Menschen dazu gezwungen werden Happiness zu nehmen?"
+    "Atropos"  "Es muss doch auch andere Möglichkeiten geben… andere Möglichkeiten, dass die Menschheit in Glück und Frieden zusammenleben kann."
 
-        "Atropos"  "Und Anan… er ist derjenige, der die Menschen zwingt!"
+    "Atropos"  "Wieso müssen alle Menschen dazu gezwungen werden Happiness zu nehmen?"
 
-        "Atropos"  "Was, wenn ich zwar die Strukturen zerstöre, aber Anan überlebt? Wenn er Aither neu errichtet? Dann hätte ich nichts erreicht und Kloth nicht gerächt…"
+    "Atropos"  "Und Anan… er ist derjenige, der die Menschen zwingt!"
 
-        menu:
-            "Ich muss sichergehen, dass auch Anan stirbt!":
-                jump ananshoulddie
-            "Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun.":
-                jump aithershoulddie
+    "Atropos"  "Was, wenn ich zwar die Strukturen zerstöre, aber Anan überlebt? Wenn er Aither neu errichtet? Dann hätte ich nichts erreicht und Kloth nicht gerächt…"
+
+    menu:
+        "Ich muss sichergehen, dass auch Anan stirbt!":
+            jump ananshoulddie
+        "Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun.":
+            jump aithershoulddie
 
 label ananshoulddie:
     "Atropos"  "Ich muss sichergehen, dass auch Anan stirbt!"
@@ -3415,6 +3444,8 @@ label ananshoulddie:
 
     "Anan" "…"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
     show anan normal_mid
@@ -3452,6 +3483,8 @@ label ananshoulddie:
     return
 
 label aithershoulddie:
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
     # Atropos Gedanken
     symb"Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun."

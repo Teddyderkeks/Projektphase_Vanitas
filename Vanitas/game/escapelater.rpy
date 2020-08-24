@@ -49,6 +49,8 @@ label escapelater:
     # Atropos Gedanken
     symb"Jetzt suche ich erstmal nach Chesis- vielleicht will er mit in die Mittagspause kommen."
 
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
+
     scene shop_1
     with fadeshort
 
@@ -102,6 +104,8 @@ label escapelater:
     show chesis happy_alt
 
     "Chesis" "Gerne."
+
+    play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
 
     scene office_2
     show chesis normal
@@ -175,6 +179,8 @@ label escapelater:
 
     # Atropos Gedanken
     symb"Dann werde ich einfach schon Mal ins Labor zurück. Ich habe sonst ohnehin nichts mehr zu tun."
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
     scene lab
     with fadeshort
@@ -305,6 +311,8 @@ label gowithnarcais:
 
     "Atropos" "Da vorne ist der Serverraum!"
 
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
+
     scene server_room
     with fadeshort
 
@@ -425,6 +433,8 @@ label dontgowithnarcais:
     "Atropos" "Dann bin ich gegen 19 Uhr da."
 
     show era normal
+
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
     "Era" "Oh… Atropos…"
 

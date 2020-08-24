@@ -1,19 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/rueffel.rpy", line 25, in script
-    symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
-IOError: Couldn't find file 'Sound/Music/Rooms/AnansBuero/anans_buero_3St_ganz.mp3'.
+  File "game/pill_kloth_search.rpy", line 597, in script
+    "Kloth" "Atropos!"
+  File "renpy/common/00library.rpy", line 268, in say
+    who(what, interact=interact, *args, **kwargs)
+IOError: Couldn't find file 'Sound/Music/treppenhaus_ohne_Symbiont.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/rueffel.rpy", line 25, in script
-    symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
+  File "game/pill_kloth_search.rpy", line 597, in script
+    "Kloth" "Atropos!"
   File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
-    who(what, *args, **kwargs)
+  File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1343, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 268, in say
+    who(what, interact=interact, *args, **kwargs)
   File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
     self.do_display(who, what, cb_args=self.cb_args, **display_args)
   File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
@@ -38,9 +42,9 @@ Full traceback:
     rv = renpy.loader.load(fn)
   File "C:\Users\Saknoops\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'Sound/Music/Rooms/AnansBuero/anans_buero_3St_ganz.mp3'.
+IOError: Couldn't find file 'Sound/Music/treppenhaus_ohne_Symbiont.mp3'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Mon Aug 24 10:48:12 2020
+Mon Aug 24 12:52:37 2020
