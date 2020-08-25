@@ -22,7 +22,6 @@ header{
 
 nav{
 	text-align:center;
-	
 }
 
 nav ul{
@@ -50,18 +49,22 @@ section{
 	border: 1px solid #DEDCD9;
 	border-radius: 5px;
 	margin-bottom: 15px;
+	overflow:auto;	
 	
 }
 
 section video{
+	margin-bottom:30px;
 	width: 500px;
 	height:350px;
 }
+
 .article img{
 	float: left;
 	padding: 5px;
 	margin-right: 10px;
 	border: 1px solid #DEDCD9;
+	display: block;
 }
 
 .article{
@@ -74,13 +77,65 @@ section video{
 	font-size: 18px;
 }
 
+#gallery{
+	width: 500px;
+	height:200px;
+	display:table;
+	border-spacing:10px;
+}
+
+#gallery a{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#gallery img{
+	transition:1s;
+	-moz-transition:1s;
+	-webkit-transition:1s;
+	border: 1px solid #DEDCD9;
+	padding: 5px;
+}
+
+#gallery img:target{
+	padding: 5px;
+	width:300px;
+	height:150px;
+	border: 1px solid #DEDCD9;
+}
+
+.team_photo{
+	height: 120px;
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+.team_photo img{
+	float: left;
+	clear: left;
+	padding: 5px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	border: 1px solid #DEDCD9;
+	display: block;
+}
+
+.team_photo a{
+	float:left;
+	margin-top: 20px;
+}
+
+.team_photo p{
+	float:left;
+	margin-right:300px;
+
+}
 
 aside{
 	width: 278px;
 	height: 300px; 
-	float: right;
 	padding: 25px;
-	margin-top: 15px;
+	margin-top: 31px;
 	background-color: #F2F2F2;
 	border: 1px solid #DEDCD9;
 	border-radius: 5px;
@@ -88,10 +143,15 @@ aside{
 	overflow:auto;	
 }
 
+aside h2{
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
 .sidebar img{
 	float: left;
 	padding: 5px;
-	margin-right: 10px;
+	margin-right:10px;
 	border: 1px solid #DEDCD9;
 }
 
