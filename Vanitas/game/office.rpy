@@ -159,98 +159,115 @@ label conversation_with_anan:
         # Symbiont
         symb"{i}Tu es! {i}"
 
-    # alle
-
-    "Atropos"  "Anan… es tut mir leid…"
-
-    show anan disappointed_mid
-
-    "Anan" "Es tut dir also leid."
-
-    "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
-
-    "Atropos"  "Schaden? Aber…"
-
-    show anan strict_mid
-
-    "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
-
-    "Anan" "Verstehst du das, Atropos?"
-
-    "Atropos"  "Ich…"
-
-    show anan happy_mid
-
-    "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
-
-    "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
-
-    show anan disappointed_mid
-
-    "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
-
-    "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
-
-    "Anan" "Du solltest dein Leben genießen und glücklich sein."
-
-    "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
-
-    "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
-
-    show anan happy_mid
-
-    "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
-
-    "Anan" "Nimm Happiness, Atropos, und werde wieder glücklich! Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
-
-    "Atropos"  "Ich…"
-
 
     menu:
-        "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
-            $ lookaroundinanansofficenounderstanding = True
-            jump understanding
-        "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich.":
-            play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
-            jump questioning
-        "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
-            $ lookaroundinanansofficenoangry = True
-            play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
-            "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glüsck bestimmen können!"
+        "Ich sollte mich besser entschuldigen.":
+            # Atropos Gedanken
+            symb"Ich sollte mich besser entschuldigen."
 
-            "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
-
-            "Atropos"  "Wenn wir wenigstens wüssten, was die Pille eigentlich überhaupt mit uns anstellt, aber nicht mal das wird uns gesagt."
-
-            "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
+            "Atropos"  "Anan… es tut mir leid…"
 
             show anan disappointed_mid
 
-            "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
+            "Anan" "Es tut dir also leid."
 
-            "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
+            jump imsorryanan1
 
-            "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
+        "Ich werde mich nicht entschuldigen!":
+            # Atropos Gedanken
+            symb"Ich werde mich nicht entschuldigen!"
+            "Atropos"  "…"
 
-            "Anan" "Ich dachte, dass du verstehen würdest, wie wichtig das Glück für die Menschen ist und dass du voll und ganz hinter Aither stehen würdest."
+            jump imsorryanan1
 
-            "Anan" "Aber das scheint nicht der Fall zu sein. Was soll ich jetzt nur mit dir anstellen?"
+    # alle
 
-            "Anan" "Kann man noch vernünftig mit dir reden und dich überzeugen? Oder gehörst du bereits zu den verlorenen Seelen?"
+    label imsorryanan1:
 
-            "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
+        "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
-            show anan normal_mid
+        "Atropos"  "Schaden? Aber…"
 
-            "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
+        show anan strict_mid
 
-            "Anan" "Sie sind verloren, aber sie können gerettet werden. Wir können sie finden und ihnen die Wahrheit und Erkenntnis zurückbringen."
+        "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
-            "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
+        "Anan" "Verstehst du das, Atropos?"
 
-            "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+        "Atropos"  "Ich…"
 
-            jump expulsion_office
+        show anan happy_mid
+
+        "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
+
+        "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
+
+        show anan disappointed_mid
+
+        "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+
+        "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
+
+        "Anan" "Du solltest dein Leben genießen und glücklich sein."
+
+        "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
+
+        "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+
+        show anan happy_mid
+
+        "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+
+        "Anan" "Nimm Happiness, Atropos, und werde wieder glücklich! Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
+
+        "Atropos"  "Ich…"
+
+
+        menu:
+            "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                $ lookaroundinanansofficenounderstanding = True
+                jump understanding
+            "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich.":
+                play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
+                jump questioning
+            "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                $ lookaroundinanansofficenoangry = True
+                play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
+                "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glüsck bestimmen können!"
+
+                "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
+
+                "Atropos"  "Wenn wir wenigstens wüssten, was die Pille eigentlich überhaupt mit uns anstellt, aber nicht mal das wird uns gesagt."
+
+                "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
+
+                show anan disappointed_mid
+
+                "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
+
+                "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
+
+                "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
+
+                "Anan" "Ich dachte, dass du verstehen würdest, wie wichtig das Glück für die Menschen ist und dass du voll und ganz hinter Aither stehen würdest."
+
+                "Anan" "Aber das scheint nicht der Fall zu sein. Was soll ich jetzt nur mit dir anstellen?"
+
+                "Anan" "Kann man noch vernünftig mit dir reden und dich überzeugen? Oder gehörst du bereits zu den verlorenen Seelen?"
+
+                "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
+
+                show anan normal_mid
+
+                "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
+
+                "Anan" "Sie sind verloren, aber sie können gerettet werden. Wir können sie finden und ihnen die Wahrheit und Erkenntnis zurückbringen."
+
+                "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
+
+                "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+
+                jump expulsion_office
 
 label understanding:
     "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
@@ -489,39 +506,55 @@ label questioning:
     "Anan" "Bevor du mir diese Frage nicht mit einem überzeugten {b}Ja{/b} beantworten kannst, bist du nicht glücklich."
 
     # Atropos Gedanken
-    symb"Kann ich ihm die Frage mit einem überzeugten Ja beantworten? Ich weiß es nicht…"
-
-    # Atropos Gedanken
-    symb"Was, wenn es doch immer noch die Wirkung meiner letzten Pille ist, warum ich mich glücklich fühle?"
-
-    "Atropos"  "…"
-
-    "Anan" "Dein Schweigen ist mir Antwort genug."
-
-    "Anan" "Die Pille ist für dein Glück verantwortlich. Ohne Happiness kannst du nicht glücklich sein."
-
-    show anan disappointed_mid
-
-    "Anan" "Nicht dauerhaft."
-
-    show anan normal_mid
-
-    "Anan" "Es mag Momente geben, in denen du glücklich bist, so wie es vor Happiness der Fall war…"
-
-    "Anan" "Aber letztlich werden dich Selbstzweifel, quälende Ängste, Unsicherheiten, Neid, Hass und Wut zerfressen, bis sie nichts mehr von dir übriglassen."
-
-    "Anan" "Möchtest du das wirklich sein? Diese Art von Monster, welche sich selbst und anderen Menschen schadet?"
-
+    symb"Kann ich ihm die Frage mit einem überzeugten Ja beantworten?"
 
     menu:
-        "Nein… nein, möchte ich nicht. Du hast ja Recht.":
-            $ lookaroundinanansofficenounderstanding = True
-            play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
-            jump understandingpart2
-        "Aber das erklärt immer noch nicht wie die Pille eigentlich wirkt.":
-            $ lookaroundinanansofficenonounderstanding = True
-            play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
-            jump misunderstanding
+        "Ich weiß es nicht...":
+            symb"Ich weiß es nicht…"
+            # Atropos Gedanken
+            symb"Was, wenn es doch immer noch die Wirkung meiner letzten Pille ist, warum ich mich glücklich fühle?"
+
+            "Atropos"  "…"
+
+            "Anan" "Dein Schweigen ist mir Antwort genug."
+            jump canianswerconfident
+
+        "Ja, kann ich!":
+            "Atropos"  "Ja, kann ich!"
+            jump canianswerconfident
+        "Nein...":
+            # Atropos Gedanken
+            symb"Nein, vermutlich nicht..."
+            "Anan" "Dein Schweigen ist mir Antwort genug."
+            jump canianswerconfident
+
+
+    label canianswerconfident:
+
+        "Anan" "Die Pille ist für dein Glück verantwortlich. Ohne Happiness kannst du nicht glücklich sein."
+
+        show anan disappointed_mid
+
+        "Anan" "Nicht dauerhaft."
+
+        show anan normal_mid
+
+        "Anan" "Es mag Momente geben, in denen du glücklich bist, so wie es vor Happiness der Fall war…"
+
+        "Anan" "Aber letztlich werden dich Selbstzweifel, quälende Ängste, Unsicherheiten, Neid, Hass und Wut zerfressen, bis sie nichts mehr von dir übriglassen."
+
+        "Anan" "Möchtest du das wirklich sein? Diese Art von Monster, welche sich selbst und anderen Menschen schadet?"
+
+
+        menu:
+            "Nein… nein, möchte ich nicht. Du hast ja Recht.":
+                $ lookaroundinanansofficenounderstanding = True
+                play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+                jump understandingpart2
+            "Aber das erklärt immer noch nicht wie die Pille eigentlich wirkt.":
+                $ lookaroundinanansofficenonounderstanding = True
+                play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
+                jump misunderstanding
 
 label misunderstanding:
 
@@ -683,95 +716,112 @@ label how_many_infos_anan:
                 symb"{i}Tu es! {i}"
 
             # alle
-
-            "Atropos"  "Anan… es tut mir leid…"
-
-            show anan disappointed_mid
-
-            "Anan" "Es tut dir also leid."
-
-            "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
-
-            "Atropos"  "Schaden? Aber…"
-
-            show anan strict_mid
-
-            "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
-
-            "Anan" "Verstehst du das, Atropos?"
-
-            "Atropos"  "Ich…"
-
-            show anan normal_mid
-
-            "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
-
-            "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
-
-            show anan disappointed_mid
-
-            "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
-
-            show anan normal_mid
-
-            "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
-
-            "Anan" "Du solltest dein Leben genießen und glücklich sein."
-
-            "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
-
-            "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
-
-            "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
-
-            show anan happy_mid
-
-            "Anan" "Nimm Happiness, Atropos und werde wieder glücklich. Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
-
-            "Atropos"  "Ich…"
-
-
             menu:
-                "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
-                    play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
-                    "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
+                "Ich sollte mich besser entschuldigen.":
+                    # Atropos Gedanken
+                    symb"Ich sollte mich besser entschuldigen."
 
-                    "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
-
-                    "Atropos"  "Wenn wir wenigstens wüssten, was die Pille eigentlich überhaupt mit uns anstellt, aber nicht mal das wird uns gesagt."
-
-                    "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
+                    "Atropos"  "Anan… es tut mir leid…"
 
                     show anan disappointed_mid
 
-                    "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
+                    "Anan" "Es tut dir also leid."
 
-                    "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
+                    jump imsorryanan2
 
-                    "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
+                "Ich werde mich nicht entschuldigen!":
+                    # Atropos Gedanken
+                    symb"Ich werde mich nicht entschuldigen!"
+                    "Atropos"  "…"
 
-                    "Anan" "Ich dachte, dass du verstehen würdest, wie wichtig das Glück für die Menschen ist und dass du voll und ganz hinter Aither stehen würdest."
+                    jump imsorryanan2
 
-                    show anan strict_mid
+            # alle
 
-                    "Anan" "Aber das scheint nicht der Fall zu sein. Was soll ich jetzt nur mit dir anstellen?"
+            label imsorryanan2:
 
-                    "Anan" "Kann man noch vernünftig mit dir reden und dich überzeugen? Oder gehörst du bereits zu den verlorenen Seelen?"
+                "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
-                    "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
+                "Atropos"  "Schaden? Aber…"
 
-                    "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
+                show anan strict_mid
 
-                    "Anan" "Sie sind verloren, aber sie können gerettet werden. Wir können sie finden und ihnen die Wahrheit und Erkenntnis zurückbringen."
+                "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
-                    "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
+                "Anan" "Verstehst du das, Atropos?"
 
-                    "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+                "Atropos"  "Ich…"
 
-                    jump expulsion_office
-                "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
-                    play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
-                    jump understandingpart3
+                show anan normal_mid
+
+                "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
+
+                "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
+
+                show anan disappointed_mid
+
+                "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+
+                show anan normal_mid
+
+                "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
+
+                "Anan" "Du solltest dein Leben genießen und glücklich sein."
+
+                "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
+
+                "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+
+                "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+
+                show anan happy_mid
+
+                "Anan" "Nimm Happiness, Atropos und werde wieder glücklich. Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
+
+                "Atropos"  "Ich…"
+
+
+                menu:
+                    "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                        play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
+                        "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
+
+                        "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
+
+                        "Atropos"  "Wenn wir wenigstens wüssten, was die Pille eigentlich überhaupt mit uns anstellt, aber nicht mal das wird uns gesagt."
+
+                        "Atropos"  "Das ist… das ist… ich will nicht mehr… ich werde diese verdammte Pille nicht mehr nehmen. Ich will auf meine eigene Art und Weise glücklich sein!"
+
+                        show anan disappointed_mid
+
+                        "Anan" "Das ist also deine Antwort? Das ist die Antwort, zu der du gekommen bist?"
+
+                        "Atropos"  "Ja! Du kannst mich nicht dazu zwingen, Happiness zu nehmen! Ich kann mich einfach weigern!"
+
+                        "Anan" "Ich bin enttäuscht von dir Atropos. Ich habe mehr von dir erwartet."
+
+                        "Anan" "Ich dachte, dass du verstehen würdest, wie wichtig das Glück für die Menschen ist und dass du voll und ganz hinter Aither stehen würdest."
+
+                        show anan strict_mid
+
+                        "Anan" "Aber das scheint nicht der Fall zu sein. Was soll ich jetzt nur mit dir anstellen?"
+
+                        "Anan" "Kann man noch vernünftig mit dir reden und dich überzeugen? Oder gehörst du bereits zu den verlorenen Seelen?"
+
+                        "Atropos"  "Verlorene Seelen? Sprichst du von denen, die sich gegen Happiness wehren und die Pille verweigern?"
+
+                        "Anan" "Sie schaden mit ihrem Verhalten der gesamten Menschheit und bedrohen unsere Existenz. Verlorene Seelen scheint da doch ein passendes Wort zu sein, nicht wahr?"
+
+                        "Anan" "Sie sind verloren, aber sie können gerettet werden. Wir können sie finden und ihnen die Wahrheit und Erkenntnis zurückbringen."
+
+                        "Anan" "Und genauso können wir auch dir helfen Atropos. Alle verlorenen Seelen sind Teil der Menschheit und auch ihr Glück ist wichtig, egal wie egoistisch sie auch gehandelt haben mögen."
+
+                        "Anan" "Egal wie unwichtig ihnen das Glück der Menschheit auch ist. Wir können sie läutern und dafür sorgen, dass eines Tages alle Menschen wahrhaftes Glück empfinden können."
+
+                        jump expulsion_office
+                    "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                        play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
+                        jump understandingpart3
 
         else:
             # Atropos Gedanken
@@ -938,63 +988,82 @@ label how_many_infos_anan:
                 symb"{i}Tu es! {i}"
 
             # alle
+            menu:
+                "Ich sollte mich besser entschuldigen.":
+                    # Atropos Gedanken
+                    symb"Ich sollte mich besser entschuldigen."
 
-            "Atropos"  "Anan… es tut mir leid…"
+                    "Atropos"  "Anan… es tut mir leid…"
 
-            "Anan" "Es tut dir also leid."
+                    show anan disappointed_mid
 
-            show anan disappointed_mid
+                    "Anan" "Es tut dir also leid."
 
-            "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
+                    jump imsorryanan3
 
-            "Atropos"  "Schaden? Aber…"
+                "Ich werde mich nicht entschuldigen!":
+                    # Atropos Gedanken
+                    symb"Ich werde mich nicht entschuldigen!"
+                    "Atropos"  "…"
 
-            show anan strict_mid
+                    jump imsorryanan3
 
-            "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+            # alle
 
-            "Anan" "Verstehst du das, Atropos?"
+            label imsorryanan3:
 
-            "Atropos"  "Ich…"
+                show anan disappointed_mid
 
-            show anan normal_mid
+                "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
-            "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
+                "Atropos"  "Schaden? Aber…"
 
-            "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
+                show anan strict_mid
 
-            # Atropos Gedanken
-            symb"Soll ich Anan unterbrechen?"
+                "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
-            show anan disappointed_mid
+                "Anan" "Verstehst du das, Atropos?"
 
-            "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+                "Atropos"  "Ich…"
 
-            show anan normal_mid
+                show anan normal_mid
 
-            "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
+                "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
 
-            # Atropos Gedanken
-            symb"Soll ich ihn auf das ansprechen, was ich herausgefunden habe?"
+                "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
 
-            "Anan" "Du solltest dein Leben genießen und glücklich sein."
+                # Atropos Gedanken
+                symb"Soll ich Anan unterbrechen?"
 
-            "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du, würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
+                show anan disappointed_mid
 
-            # Atropos Gedanken
-            symb"Aber wie würde er reagieren?"
+                "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
 
-            "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+                show anan normal_mid
 
-            "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+                "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
 
-            # Atropos Gedanken
-            symb"Immerhin würde ich dadurch gleichzeitig zugeben, dass ich mich in seinem Büro ohne sein Wissen umgesehen habe."
+                # Atropos Gedanken
+                symb"Soll ich ihn auf das ansprechen, was ich herausgefunden habe?"
 
-            "Anan" "Nimm Happiness, Atropos und werde wieder glücklich. Nicht nur für deine eigene Glücklichkeit sondern für die aller Menschen."
+                "Anan" "Du solltest dein Leben genießen und glücklich sein."
 
-            # Symbiont
-            symb"{i}Lass es bleiben! Es würde dir nichts bringen außer Unglück und Elend. Du würdest keine Antworten bekommen, aber gleichzeitig würdest du zugeben, was du getan hast.{i}"
+                "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du, würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
+
+                # Atropos Gedanken
+                symb"Aber wie würde er reagieren?"
+
+                "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+
+                "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+
+                # Atropos Gedanken
+                symb"Immerhin würde ich dadurch gleichzeitig zugeben, dass ich mich in seinem Büro ohne sein Wissen umgesehen habe."
+
+                "Anan" "Nimm Happiness, Atropos und werde wieder glücklich. Nicht nur für deine eigene Glücklichkeit sondern für die aller Menschen."
+
+                # Symbiont
+                symb"{i}Lass es bleiben! Es würde dir nichts bringen außer Unglück und Elend. Du würdest keine Antworten bekommen, aber gleichzeitig würdest du zugeben, was du getan hast.{i}"
 
 
         else:
