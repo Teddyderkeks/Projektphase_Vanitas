@@ -76,6 +76,8 @@ label change:
     # Atropos Gedanken
     symb"Man trifft ihn eigentlich nie ohne sein Handy an. Das ist seltsam... es klingt nicht nach ihm. Ob etwas vorgefallen ist?"
 
+    play sound ("Sound/Sounds/durchsage.mp3")
+
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -2608,7 +2610,7 @@ label anan_is_right:
 
     "Atropos" "…"
 
-    play sound ("<from 0 to 5>Sound/Music/Rooms/verkaufsraum.mp3") fadeout 3
+    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -2632,16 +2634,16 @@ label anan_is_right:
 
     stop music
 
-    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+    $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
 
     # ab hier wieder alle
     scene screen_background
     with fadeshort
     show screen_transparent
     show atlas normal_small behind screen_transparent:
-        xalign 0.12
+        xalign 0.15
     show adres normal_small behind screen_transparent:
-        xalign 0.8
+        xalign 0.85
     show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
@@ -2997,6 +2999,7 @@ label why_important:
         symb"Zurück an die Arbeit."
 
         "Atropos" "…"
+        play sound ("Sound/Sounds/durchsage.mp3")
 
         "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3021,16 +3024,16 @@ label why_important:
 
         stop music
 
-        $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+        $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
 
         # ab hier wieder alle
         scene screen_background
         with fadeshort
         show screen_transparent
         show atlas normal_small behind screen_transparent:
-            xalign 0.12
+            xalign 0.15
         show adres normal_small behind screen_transparent:
-            xalign 0.8
+            xalign 0.85
         show anan normal_left_small behind screen_transparent:
             xalign 0.4
 
@@ -3321,6 +3324,7 @@ label be_against:
         symb"Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
 
         "Atropos" "…"
+        play sound ("Sound/Sounds/durchsage.mp3")
 
         "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3336,15 +3340,15 @@ label be_against:
 
         stop music
 
-        $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+        $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
 
         scene screen_background
         with fadeshort
         show screen_transparent
         show atlas normal_small behind screen_transparent:
-            xalign 0.12
+            xalign 0.15
         show adres normal_small behind screen_transparent:
-            xalign 0.8
+            xalign 0.85
         show anan normal_left_small behind screen_transparent:
             xalign 0.4
 
@@ -3533,6 +3537,7 @@ label good_mood:
     symb"Zurück an die Arbeit."
 
     "Atropos" "…"
+    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3557,7 +3562,7 @@ label good_mood:
 
     stop music
 
-    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+    $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
     scene screen_background
     with fadeshort
     show screen_transparent
@@ -3695,6 +3700,7 @@ label no_office:
     symb"Und jetzt zurück an die Arbeit. Zumindest der Bericht für Anan sollte heute fertig werden."
 
     "Atropos" "…"
+    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. {/i}"
 
@@ -3731,6 +3737,7 @@ label no_office:
         show era confused
 
         "Era" "Was will er von dir, Atropos?"
+        play sound ("<from 0 to 5>Sound/Music/Rooms/verkaufsraum.mp3") fadeout 3
 
         "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. Er erwartet dich.{/i}"
 
