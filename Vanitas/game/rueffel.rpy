@@ -25,121 +25,142 @@ label rueffel:
     # Atropos Gedanken
     symb"Und warum sagt er nichts? Das macht mich nervös… soll ich etwa anfangen? Erwartet Anan eine Entschuldigung von mir?"
 
-    # Atropos Gedanken
-    symb"Das kann er aber so was von vergessen. Es ist schon schlimm genug, dass ich seiner Aufforderung überhaupt gefolgt bin. Aber ich werde mich auf keinen Fall entschuldigen."
-
-    # Atropos Gedanken
-    symb"Niemals!"
-
-    # Symbiont
-    symb"{i}Entschuldige dich, egal aus welchem Grund. Willst du etwa noch mehr Ärger bekommen? {i}"
-
-    # Symbiont
-    symb"{i}Sowohl Anan als auch du werdet glücklicher sein, wenn du dich entschuldigst. Mehr als das will er nicht hören. Einfach nur eine Entschuldigung für dein Verhalten. {i}"
-
-    # Symbiont
-    symb"{i}Tu es! {i}"
-
-    # Atropos Gedanken
-    symb"Ich werde weiterhin schweigen…"
-
-    # Atropos Gedanken
-    symb"Aber warum sagt Anan nichts? Das macht mir langsam Angst…"
-
-    # Atropos Gedanken
-    symb"Wartet er wirklich bis ich mich entschuldige?"
-
-    "Atropos"  "Ich werde mich nicht entschuldigen, dass ich die Pille nicht genommen habe."
-
-    show anan strict_mid
-
-    "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
-
-    "Atropos"  "Schaden? Aber…"
-
-    "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
-
-    "Anan" "Verstehst du das, Atropos?"
-
-    "Atropos"  "Ich…"
-
-    show anan normal_mid
-
-    "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
-
-    "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
-
-    show anan disappointed_mid
-
-    "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
-
-    "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
-
-    show anan normal_mid
-
-    "Anan" "Du solltest dein Leben genießen und glücklich sein."
-
-    "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
-
-    "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
-
-    "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
-
-    "Anan" "Nimm Happiness, Atropos, und werde wieder glücklich! Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
-
-    "Atropos"  "Ich…"
-
-    show screen force_mouse_move_twooptions
-
     menu:
-        "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
-            $ ruffleunderstanding = True
-            hide screen force_mouse_move_twooptions
-            play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+        "Es tut mir leid.":
+            jump imsorry
 
-            "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
+        "Ich werde mich nicht entschuldigen!":
+            jump imnotsorry
 
-            "Atropos"  "Ein Fehler, den ich nicht mehr wiederholen werde. Es tut mir aufrichtig leid. Wirklich."
+    label imsorry:
 
-            "Atropos"  "Ich will glücklich sein und wenn Happiness der einzige Weg dorthin ist, dann werde ich diesem Weg folgen."
+        "Atropos"  "…"
 
-            show anan strict_mid
+        "Atropos"  "Es tut mir leid..."
 
-            "Anan" "Happiness ist der einzige Weg. Wir haben viele andere Wege versucht, aber keiner hatte den Erfolg gebracht, welchen wir uns erhofft hatten."
+        "Anan" "Es tut dir also leid."
+        jump afterimsorry
 
-            "Anan" "Das Glück aller Menschen steht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
+    label imnotsorry:
 
-            "Anan" "Willst du glücklich sein?"
+        # Atropos Gedanken
+        symb"Das kann er aber so was von vergessen. Es ist schon schlimm genug, dass ich seiner Aufforderung überhaupt gefolgt bin. Aber ich werde mich auf keinen Fall entschuldigen."
 
-            "Atropos"  "Ja."
+        # Atropos Gedanken
+        symb"Niemals!"
 
-            "Anan" "Wirst du zukünftig stets zuerst an dein eigenes Glück und das Glück aller denken?"
+        # Symbiont
+        symb"{i}Entschuldige dich, egal aus welchem Grund. Willst du etwa noch mehr Ärger bekommen? {i}"
 
-            "Atropos"  "Ja."
+        # Symbiont
+        symb"{i}Sowohl Anan als auch du werdet glücklicher sein, wenn du dich entschuldigst. Mehr als das will er nicht hören. Einfach nur eine Entschuldigung für dein Verhalten. {i}"
 
-            show anan normal_mid
+        # Symbiont
+        symb"{i}Tu es! {i}"
 
-            "Anan" "Du darfst zurück ins Labor. Nimm die Pille sofort, wenn du dort bist und vergiss sie zukünftig nicht mehr."
+        # Atropos Gedanken
+        symb"Ich werde weiterhin schweigen…"
 
-            "Atropos"  "Werde ich nicht. Und danke Anan."
+        # Atropos Gedanken
+        symb"Aber warum sagt Anan nichts? Das macht mir langsam Angst…"
 
-            "Anan" "Sei einfach nur glücklich. Mehr will ich nicht. Du hast es verdient, glücklich zu sein, du leistet wertvolle Arbeit für die Gesellschaft."
+        # Atropos Gedanken
+        symb"Wartet er wirklich bis ich mich entschuldige?"
 
-            show anan happy_mid
+        "Atropos"  "Ich werde mich nicht entschuldigen, dass ich die Pille nicht genommen habe."
+        jump afterimsorry
 
-            "Anan" "Jemand, der Menschen ihr Glück bringt, sollte selbst nicht unglücklich sein."
+    label afterimsorry:
 
-            "Atropos"  "Du hast recht. Es tut mir leid."
+        show anan strict_mid
 
-            scene hall
-            with fadeshort
+        "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
-            jump back_to_work
-        "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
-            $ ruffleangry = True
-            play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
-            hide screen force_mouse_move_twooptions
-            jump ichsollmichopfern
+        "Atropos"  "Schaden? Aber…"
+
+        "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+
+        "Anan" "Verstehst du das, Atropos?"
+
+        "Atropos"  "Ich…"
+
+        show anan normal_mid
+
+        "Anan" "Ich bin nicht dein Feind. Und auch Happiness ist es nicht. Wir wollen alle nur ein einziges Ziel: Dass alle Menschen glücklich sind."
+
+        "Anan" "Dass alle Menschen eine Vergangenheit, eine Gegenwart, eine Zukunft haben können, die glücklich ist. Die sie erfüllt und die sorglos ist."
+
+        show anan disappointed_mid
+
+        "Anan" "Der Krieg war eine düstere Zeit voller Leid und Elend. Du kannst es dir nicht vorstellen und darüber solltest du froh sein."
+
+        "Anan" "Du solltest dankbar sein für das Leben, das wir dir geschenkt haben."
+
+        show anan normal_mid
+
+        "Anan" "Du solltest dein Leben genießen und glücklich sein."
+
+        "Anan" "Die Welt ist zerstört, es gibt nur noch Astoa, Peria und Keposa. Was denkst du würde passieren, wenn die Menschen alle aufhören würden Happiness zu nehmen?"
+
+        "Anan" "Denkst du, das würde ein gutes Ende nehmen? In einer Welt, die immer noch aus den Fugen geraten ist?"
+
+        "Anan" "Die Menschen verdienen es, glücklich zu sein und sie brauchen das Glück, um friedlich leben zu können."
+
+        "Anan" "Nimm Happiness, Atropos, und werde wieder glücklich! Nicht nur für deine eigene Glücklichkeit, sondern für die aller Menschen."
+
+        "Atropos"  "Ich…"
+
+        show screen force_mouse_move_twooptions
+
+        menu:
+            "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                $ ruffleunderstanding = True
+                hide screen force_mouse_move_twooptions
+                play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+
+                "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
+
+                "Atropos"  "Ein Fehler, den ich nicht mehr wiederholen werde. Es tut mir aufrichtig leid. Wirklich."
+
+                "Atropos"  "Ich will glücklich sein und wenn Happiness der einzige Weg dorthin ist, dann werde ich diesem Weg folgen."
+
+                show anan strict_mid
+
+                "Anan" "Happiness ist der einzige Weg. Wir haben viele andere Wege versucht, aber keiner hatte den Erfolg gebracht, welchen wir uns erhofft hatten."
+
+                "Anan" "Das Glück aller Menschen steht an oberster Stelle und nur auf diese Weise können wir das Glück erreichen."
+
+                "Anan" "Willst du glücklich sein?"
+
+                "Atropos"  "Ja."
+
+                "Anan" "Wirst du zukünftig stets zuerst an dein eigenes Glück und das Glück aller denken?"
+
+                "Atropos"  "Ja."
+
+                show anan normal_mid
+
+                "Anan" "Du darfst zurück ins Labor. Nimm die Pille sofort, wenn du dort bist und vergiss sie zukünftig nicht mehr."
+
+                "Atropos"  "Werde ich nicht. Und danke Anan."
+
+                "Anan" "Sei einfach nur glücklich. Mehr will ich nicht. Du hast es verdient, glücklich zu sein, du leistet wertvolle Arbeit für die Gesellschaft."
+
+                show anan happy_mid
+
+                "Anan" "Jemand, der Menschen ihr Glück bringt, sollte selbst nicht unglücklich sein."
+
+                "Atropos"  "Du hast recht. Es tut mir leid."
+
+                scene hall
+                with fadeshort
+
+                jump back_to_work
+            "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                $ ruffleangry = True
+                play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
+                hide screen force_mouse_move_twooptions
+                jump ichsollmichopfern
 
 
 label ichsollmichopfern:

@@ -61,41 +61,20 @@ label change:
     # Atropos Gedanken
     symb"Ich freue mich schon auf heute. Nach der Arbeit grillen Kloth, Chesis und ich endlich. Ich kann es schon seit Wochen kaum noch erwarten!"
 
-    # Atropos Gedanken
-    symb"Hoffentlich hat es Kloth nicht vergessen. Er wirkte in letzter Zeit manchmal etwas abwesend."
+    scene detail_phone_unlockstreet
+    with fadeshort
 
     # Atropos Gedanken
-    symb"Ob ihn wohl etwas bedrückt? Ich kann mir vorstellen, dass ziemlich viel Verantwortung auf ihm lastet."
+    symb"Oh, ich habe einige verpasste Nachrichten. Mal sehen, ob mir Kloth endlich geantwortet hat."
+
+    scene detail_phone_chats
+    with fadeshort
 
     # Atropos Gedanken
-    #"Für seinen Job wäre ich wohl wirklich nicht geeignet. Da kann ich echt froh sein im Labor zu arbeiten."
-
-    # Symbiont
-    #"{i}Jeder bekommt von Aither geeignete Arbeit zugeteilt. Arbeit, die ihn glücklich macht.{/i}"
+    symb"Immer noch nicht? Er hat sie ja noch nicht mal gelesen... dabei ist er doch sonst so gewissenhaft und antwortet innerhalb von Minuten."
 
     # Atropos Gedanken
-    symb"Ich kann mir nicht vorstellen, wie er direkt unter Anan zu arbeiten. Als rechte Hand von einem der 'Großen Drei' trägt man bestimmt viel Verantwortung. Das merkt man Kloth auch an."
-
-    # Symbiont
-    symb"{i}Anan hat in dieser Welt wirklich einiges verändert. Deswegen ist es eine Ehre, für ihn und Aither zu arbeiten.{/i}"
-
-    # Atropos Gedanken
-    symb"Und nicht nur er. Auch Atlas und Adrés. Ohne ihr Triumvirat wäre die Welt vermutlich immer noch im Krieg versunken."
-
-    # Atropos Gedanken
-    symb"Letztlich weiß ich es nur aus den Erzählungen meines Vaters, aber es muss schrecklich gewesen sein. Das fehlende Wasser und die unzureichende Nahrung…"
-
-    # Symbiont
-    symb"{i}Du kannst wirklich glücklich sein, dass du in der heutigen Zeit lebst mit einem Dach über dem Kopf und nichts, worüber du dir Sorgen machen müsstest. {/i}"
-
-    # Atropos Gedanken
-    #"Außerdem habe ich Chesis und Kloth an meiner Seite. Es gibt einfach nichts Besseres als gemeinsam mit seinen besten Freunden arbeiten zu können."
-
-    # Symbiont
-    #"{i}Und dann auch noch für eine Firma wie Aither, die allen Menschen ihre Glücklichkeit schenkt. {/i}"
-
-    # Atropos Gedanken
-    symb"Alle Menschen haben es verdient glücklich zu sein, genau aus diesem Grund bringen wir ihnen ja Happiness. Manchmal frage ich mich nur…"
+    symb"Man trifft ihn eigentlich nie ohne sein Handy an. Das ist seltsam... es klingt nicht nach ihm. Ob etwas vorgefallen ist?"
 
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
@@ -108,9 +87,6 @@ label change:
 
     # Atropos Gedanken
     symb"Happiness…"
-
-    # Atropos Gedanken
-    symb"Stimmt…"
 
     # Atropos Gedanken
     symb"Ich habe es schon wieder vergessen."
@@ -176,13 +152,10 @@ label take_pill:
     symb"Es war ein großer Fehler gewesen in letzter Zeit nicht auf die regelmäßige Einnahme zu achten."
 
     # Atropos Gedanken
-    symb"Wenn ich genauer darüber nachdenke… Vermutlich war ich nicht so glücklich, wie ich hätte sein können."
+    symb"Ich möchte glücklich sein. Ich möchte genauso glücklich sein wie alle anderen."
 
     # Atropos Gedanken
-    symb"Aber ich möchte glücklich sein. Ich möchte genauso glücklich sein wie alle anderen."
-
-    # Atropos Gedanken
-    symb"Ohne die Pille habe ich mich irgendwie so… leer gefühlt. Da waren Gedanken gewesen, die ich nicht haben wollte."
+    symb"Ohne die Pille habe ich mich irgendwie so… leer gefühlt."
 
     # Atropos Gedanken
     symb"Aber ich beginne mich langsam wieder besser zu fühlen. Ich fühle mich gut. Zufrieden."
@@ -191,13 +164,13 @@ label take_pill:
     symb"Die Happiness-Pille ist das, was ich brauche, um glücklich zu sein. Um ein glückliches Leben zu führen."
 
     # Atropos Gedanken
-    symb"Sie ist wichtig und zukünftig werde ich sie nicht mehr vergessen! Dann kann ich endlich wieder das Leben führen, das ich führen will."
+    #symb"Sie ist wichtig und zukünftig werde ich sie nicht mehr vergessen! Dann kann ich endlich wieder das Leben führen, das ich führen will."
 
     # Atropos Gedanken
     symb"Ein gutes Leben."
 
     # Atropos Gedanken
-    symb"Ein glückliches Leben."
+    #symb"Ein glückliches Leben."
 
     # Symbiont
     symb"{i}Gut gemacht, Atropos. Das ist es was wichtig ist: Ein glückliches Leben und genau dieses Leben führst du nun wieder. {/i}"
@@ -2382,60 +2355,82 @@ label work:
             # Symbiont
             symb"{i} Vielleicht bist du ohne die Tablette ja doch nicht so glücklich wie du dachtest, wenn es Anan sofort aufgefallen ist. {/i}"
 
-            "Atropos" "Ja, nein… ich…"
-
-            "Anan" "Du hast Happiness in letzter Zeit nicht regelmäßig eingenommen."
-
-            "Atropos" "Nein… ich habe es vergessen…"
-
-            "Anan" "Ich erwarte dich in meinem Büro. Punkt elf und keine Sekunde zu spät!"
-
-            "Anan" "Du gefährdest mit solchen Aktionen nicht nur dein eigenes Glück, sondern auch das Glück der Menschen, die dir am wichtigsten sind."
-
-            show anan normal_mid
-
-            "Anan" "Möchtest du das etwa?"
-
-            "Atropos" "Nein… ich…"
-
-            "Anan" "Die Menschheit braucht Happiness, sonst würde die Welt zurück ins Chaos fallen."
-
-            show anan disappointed_mid
-
-            "Anan" "Ich möchte nie wieder so etwas wie im Krieg damals erleben müssen. Kein Mensch sollte so etwas jemals wieder erleiden müssen."
-
-            show anan normal_mid
-
-            "Anan" "Ich habe jetzt zu tun, aber ich will dich später in meinem Büro sehen. Vergiss es nicht. Ich wünsche dir einen Tag voller Glücklichkeit."
-
-            hide anan
-
-            # Symbiont
-            symb"{i}Anan hat Recht. Du solltest die Pille nehmen. Regelmäßig. Du willst doch glücklich sein. {/i}"
-
-            # Atropos Gedanken
-            symb"Ich… ah… ich weiß nicht was ich tun soll…"
-
-            # Atropos Gedanken
-            symb"Verdammt…"
-
-            show screen force_mouse_move_threeoptions
-            $ pillnottakenananhall = True
             menu:
-                "Anan hat ja recht...":
-                    $ pillnottakenananhallananright = True
-                    hide screen force_mouse_move_threeoptions
-                    $ okaymood= True
-                    jump anan_is_right
-                "Ich bin doch auch ohne Pille glücklich...":
-                    $ pillnottakenananhallananwhy = True
-                    hide screen force_mouse_move_threeoptions
-                    jump why_important
-                "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
-                    $ pillnottakenananhallananwrong = True
-                    hide screen force_mouse_move_threeoptions
-                    $ badmood= True
-                    jump be_against
+                "Ich sollte besser lügen. Die Wahrheit würde ihm nicht gefallen.":
+
+                    # Atropos Gedanken
+                    symb"Ich sollte besser lügen. Die Wahrheit würde ihm nicht gefallen."
+
+                    # Atropos Gedanken
+                    symb"Ich will keinen Ärger dafür bekommen."
+
+                    "Atropos" "Mir geht es gut. Ich bin glücklich dank Happiness!"
+
+                    "Anan" "Deine Lüge ist offensichtlich."
+
+                    "Anan" "Du hast Happiness in letzter Zeit nicht regelmäßig eingenommen."
+
+                    jump afterlieortruthanan
+
+                "Ich sollte die Wahrheit sagen.":
+
+                    # Atropos Gedanken
+                    symb"Ich sollte die Wahrheit sagen."
+
+                    "Atropos" "Ich habe Happiness ein paar Mal vergessen, aber nicht weiter schlimm. Ich bin glücklich."
+
+                    jump afterlieortruthanan
+
+            label afterlieortruthanan:
+
+                "Anan" "Ich erwarte dich in meinem Büro. Punkt elf und keine Sekunde zu spät!"
+
+                "Anan" "Du gefährdest mit solchen Aktionen nicht nur dein eigenes Glück, sondern auch das Glück der Menschen, die dir am wichtigsten sind."
+
+                show anan normal_mid
+
+                "Anan" "Möchtest du das etwa?"
+
+                "Atropos" "Nein… ich…"
+
+                "Anan" "Die Menschheit braucht Happiness, sonst würde die Welt zurück ins Chaos fallen."
+
+                show anan disappointed_mid
+
+                "Anan" "Ich möchte nie wieder so etwas wie im Krieg damals erleben müssen. Kein Mensch sollte so etwas jemals wieder erleiden müssen."
+
+                show anan normal_mid
+
+                "Anan" "Ich habe jetzt zu tun, aber ich will dich später in meinem Büro sehen. Vergiss es nicht. Ich wünsche dir einen Tag voller Glücklichkeit."
+
+                hide anan
+
+                # Symbiont
+                symb"{i}Anan hat Recht. Du solltest die Pille nehmen. Regelmäßig. Du willst doch glücklich sein. {/i}"
+
+                # Atropos Gedanken
+                symb"Ich… ah… ich weiß nicht was ich tun soll…"
+
+                # Atropos Gedanken
+                symb"Verdammt…"
+
+                show screen force_mouse_move_threeoptions
+                $ pillnottakenananhall = True
+                menu:
+                    "Anan hat ja recht...":
+                        $ pillnottakenananhallananright = True
+                        hide screen force_mouse_move_threeoptions
+                        $ okaymood= True
+                        jump anan_is_right
+                    "Ich bin doch auch ohne Pille glücklich...":
+                        $ pillnottakenananhallananwhy = True
+                        hide screen force_mouse_move_threeoptions
+                        jump why_important
+                    "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
+                        $ pillnottakenananhallananwrong = True
+                        hide screen force_mouse_move_threeoptions
+                        $ badmood= True
+                        jump be_against
 
 label anan_is_right:
     $ straight_office = True
@@ -2866,6 +2861,8 @@ label why_important:
 
     "Era" "Ich… ach… egal, vergiss es. Es war nicht so wichtig."
 
+    "Era" "D-Du wirkst als würde dich etwas beschäftigen. Ich... ich sage es dir, wenn du den Kopf dafür hast."
+
     "Atropos" "Okay."
 
     show era confused
@@ -2905,228 +2902,260 @@ label why_important:
 
     "Era" "Können… können wir dir irgendwie helfen? Was ist vorgefallen?"
 
-    "Atropos" "Ich hatte in letzter Zeit ein paar Mal meine Pille vergessen und bin vorhin Anan über den Weg gelaufen."
+    menu:
+        "Ich sollte mich ihnen anvertrauen.":
+            # Atropos Gedanken
+            symb"Ich sollte mich ihnen anvertrauen."
 
-    "Atropos" "Er hatte es sofort bemerkt und mir einen Vortrag über die Wichtigkeit der Happiness-Pille gehalten und ich muss nachher noch in sein Büro…"
+            "Atropos" "Ich hatte in letzter Zeit ein paar Mal meine Pille vergessen und bin vorhin Anan über den Weg gelaufen."
 
-    "Atropos" "Aber ich bin doch auch ohne sie glücklich… warum muss ich sie um jeden Preis einnehmen?"
+            "Atropos" "Er hatte es sofort bemerkt und mir einen Vortrag über die Wichtigkeit der Happiness-Pille gehalten und ich muss nachher noch in sein Büro…"
 
-    "Atropos" "Außerdem… muss Anan wirklich so einen Aufstand darum machen, dass ich sie Mal vergessen habe, oder keine Lust hatte sie zu nehmen?"
+            "Atropos" "Aber ich bin doch auch ohne sie glücklich… warum muss ich sie um jeden Preis einnehmen?"
 
-    "Atropos" "Und eigentlich wollte ich Anan niemals enttäuschen… nicht nach allem, was er für uns getan hat…"
+            "Atropos" "Außerdem… muss Anan wirklich so einen Aufstand darum machen, dass ich sie Mal vergessen habe, oder keine Lust hatte sie zu nehmen?"
 
-    "Atropos" "Ich weiß einfach nicht, was ich tun soll."
+            "Atropos" "Und eigentlich wollte ich Anan niemals enttäuschen… nicht nach allem, was er für uns getan hat…"
 
-    show era confused_gray
-    show narcais normal
+            "Atropos" "Ich weiß einfach nicht, was ich tun soll."
 
-    "Narcais" "Ich kann Anan verstehen. Happiness ist nun mal unglaublich wichtig. Wie kannst du so etwas Wichtiges nur vergessen?"
+            show era confused_gray
+            show narcais normal
 
-    show narcais annoyed
+            "Narcais" "Ich kann Anan verstehen. Happiness ist nun mal unglaublich wichtig. Wie kannst du so etwas Wichtiges nur vergessen?"
 
-    "Narcais" "Wie kannst du so egoistisch sein? Damit gefährdest du nicht nur dein Glück, sondern unser aller Glück."
+            show narcais annoyed
 
-    show narcais annoyed_gray
-    show era normal
+            "Narcais" "Wie kannst du so egoistisch sein? Damit gefährdest du nicht nur dein Glück, sondern unser aller Glück."
 
-    "Era" "Atropos… mach dir bitte keine Vorwürfe, okay?"
+            show narcais annoyed_gray
+            show era normal
 
-    show era confused
+            "Era" "Atropos… mach dir bitte keine Vorwürfe, okay?"
 
-    "Era" "Aber ich muss Narcais zustimmen. Happiness ist wichtig… du solltest die Pille nehmen und dich bei Anan dafür entschuldigen."
+            show era confused
 
-    "Era" "Und… und… denk bitte an dein eigenes Glück. Ich will, dass du glücklich bist… du… du bedeutest mir…"
+            "Era" "Aber ich muss Narcais zustimmen. Happiness ist wichtig… du solltest die Pille nehmen und dich bei Anan dafür entschuldigen."
 
-    show era shy
+            "Era" "Und… und… denk bitte an dein eigenes Glück. Ich will, dass du glücklich bist… du… du bedeutest mir…"
 
-    "Era" "…"
+            show era shy
 
-    "Era" "Bitte pass gut auf dich auf, Atropos."
+            "Era" "…"
 
-    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+            "Era" "Bitte pass gut auf dich auf, Atropos."
 
-    "Atropos" "Danke. Ihr habt ja recht. Ich werde nachher zu Anan gehen und das Ganze klären."
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
-    "Atropos" "Jetzt sollten wir aber erst einmal mit der Arbeit anfangen."
+            "Atropos" "Danke. Ihr habt ja recht. Ich werde nachher zu Anan gehen und das Ganze klären."
 
-    show era shy_gray
-    show narcais normal
+            "Atropos" "Jetzt sollten wir aber erst einmal mit der Arbeit anfangen."
 
-    "Narcais" "Vergiss meinen Bericht nicht!"
+            show era shy_gray
+            show narcais normal
 
-    "Atropos" "(lacht) Keine Sorge, das könnte ich niemals."
+            "Narcais" "Vergiss meinen Bericht nicht!"
 
-    hide era
-    hide narcais
+            "Atropos" "(lacht) Keine Sorge, das könnte ich niemals."
 
-    # Atropos Gedanken
-    symb"Zurück an die Arbeit."
+            hide era
+            hide narcais
 
-    "Atropos" "…"
+            jump openyourheartornot
 
-    "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
+        "Ich will nicht darüber sprechen.":
+            # Atropos Gedanken
+            symb"Ich will nicht darüber sprechen."
 
-    "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so, wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
+            "Atropos" "Ich erzähle euch ein anderes Mal davon..."
 
-    "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
+            show era shy
 
-    show era normal:
-        xalign 0.5
+            "Era" "J-Ja... natürlich."
 
-    "Era" "Ich… ich kümmere mich darum!"
+            show era shy_gray
+            show narcais normal
 
-    hide era
+            "Narcais" "Vergiss meinen Bericht aber nicht!"
 
-    if neiro_unterhalten:
+            "Atropos" "(lacht) Keine Sorge, das könnte ich niemals."
+
+            hide era
+            hide narcais
+
+            jump openyourheartornot
+
+
+
+    label openyourheartornot:
+        # Atropos Gedanken
+        symb"Zurück an die Arbeit."
+
+        "Atropos" "…"
+
+        "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
+
+        "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so, wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
+
+        "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
+
+        show era normal:
+            xalign 0.5
+
+        "Era" "Ich… ich kümmere mich darum!"
+
+        hide era
+
+        if neiro_unterhalten:
+
+            # Atropos Gedanken
+            symb"Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
+
+            # Atropos Gedanken
+            symb"Ob er wohl mit allen Informationen Recht hatte?"
+
+        stop music
+
+        $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+
+        # ab hier wieder alle
+        scene screen_background
+        with fadeshort
+        show screen_transparent
+        show atlas normal_small behind screen_transparent:
+            xalign 0.12
+        show adres normal_small behind screen_transparent:
+            xalign 0.8
+        show anan normal_left_small behind screen_transparent:
+            xalign 0.4
+
+        play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+
+        "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
+
+        "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
+
+        show anan disappointed_left_small
+
+        "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
+
+        show anan normal_left_small
+
+        "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+
+        show anan happy_left_small
+
+        "Anan" "Der Gründungstag von Aither."
+
+        "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
+
+        show anan normal_left_small
+
+        "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
+
+        show anan happy_left_small
+
+        "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
+
+        "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+
+        "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
+
+        "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
+
+        show anan normal_left_small
+
+        "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
+
+        "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+
+        "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+
+        show anan happy_left_small
+
+        "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
+
+        "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
+
+        "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
+
+        "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+
+        "Anan" "Weil ihr uns dabei helft, das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die Ersten, die die neue Happiness erhalten."
+
+        "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
+
+        "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
+
+        show anan normal_left_small
+
+        "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
+
+        "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
+
+        "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+        play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+        scene lab
+        with fadeshort
+        show era normal:
+            xalign 0.25
+        show narcais normal_gray:
+            xalign 0.75
+
+        "Era" "Wow…"
+
+        show era normal_gray
+        show narcais normal
+
+        "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
         # Atropos Gedanken
-        symb"Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
+        symb"Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
 
         # Atropos Gedanken
-        symb"Ob er wohl mit allen Informationen Recht hatte?"
+        symb"Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
 
-    stop music
+        # Atropos Gedanken
+        symb"Ich frage mich, ob Anan mit seiner Rede wirklich recht hat? Es wirkt alles so plausibel und klar, wenn er es erzählt…"
 
-    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+        # Atropos Gedanken
+        symb"Und dennoch… ich wüsste zu gerne was die Tablette tatsächlich bewirkt. Wie sie uns überhaupt unser Glück bringt."
 
-    # ab hier wieder alle
-    scene screen_background
-    with fadeshort
-    show screen_transparent
-    show atlas normal_small behind screen_transparent:
-        xalign 0.12
-    show adres normal_small behind screen_transparent:
-        xalign 0.8
-    show anan normal_left_small behind screen_transparent:
-        xalign 0.4
+        # Atropos Gedanken
+        symb"Vielleicht würde es mir dann leichter fallen, sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
 
-    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+        show narcais normal_gray
+        show era normal
 
-    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
+        "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
 
-    "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
+        "Atropos" "Ja, das ist er wohl. "
 
-    show anan disappointed_left_small
+        "Atropos" "Jetzt sollten wir aber zurück an die Arbeit, wir müssen heute noch einiges schaffen."
 
-    "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
+        # Bildschirm wird schwarz und blendet dann wieder auf. Erneut ins Labor.
 
-    show anan normal_left_small
+        "Atropos" "…"
 
-    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+        # Atropos Gedanken
+        symb"Oh, es ist schon spät. Ich müsste langsam los, wenn ich pünktlich in Anans Büro sein will…"
 
-    show anan happy_left_small
+        # Atropos Gedanken
+        symb"Ich sollte besser gehen. Vielleicht hilft es mir ja Mal mit Anan über meine Zweifel und Sorgen zu sprechen."
 
-    "Anan" "Der Gründungstag von Aither."
+        # Atropos Gedanken
+        symb"Ich möchte nicht Zweifeln… ich möchte einfach nur glücklich sein…"
 
-    "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
+        "Atropos" "Bin gleich wieder da."
 
-    show anan normal_left_small
+        show era happy
 
-    "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
-
-    show anan happy_left_small
-
-    "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
-
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
-
-    "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
-
-    "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
-
-    show anan normal_left_small
-
-    "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
-
-    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
-
-    "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
-
-    show anan happy_left_small
-
-    "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
-
-    "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
-
-    "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
-
-    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
-
-    "Anan" "Weil ihr uns dabei helft, das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die Ersten, die die neue Happiness erhalten."
-
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
-
-    "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
-
-    show anan normal_left_small
-
-    "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
-
-    "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
-
-    "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
-
-    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
-
-    scene lab
-    with fadeshort
-    show era normal:
-        xalign 0.25
-    show narcais normal_gray:
-        xalign 0.75
-
-    "Era" "Wow…"
-
-    show era normal_gray
-    show narcais normal
-
-    "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
-
-    # Atropos Gedanken
-    symb"Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
-
-    # Atropos Gedanken
-    symb"Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
-
-    # Atropos Gedanken
-    symb"Ich frage mich, ob Anan mit seiner Rede wirklich recht hat? Es wirkt alles so plausibel und klar, wenn er es erzählt…"
-
-    # Atropos Gedanken
-    symb"Und dennoch… ich wüsste zu gerne was die Tablette tatsächlich bewirkt. Wie sie uns überhaupt unser Glück bringt."
-
-    # Atropos Gedanken
-    symb"Vielleicht würde es mir dann leichter fallen, sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
-
-    show narcais normal_gray
-    show era normal
-
-    "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
-
-    "Atropos" "Ja, das ist er wohl. "
-
-    "Atropos" "Jetzt sollten wir aber zurück an die Arbeit, wir müssen heute noch einiges schaffen."
-
-    # Bildschirm wird schwarz und blendet dann wieder auf. Erneut ins Labor.
-
-    "Atropos" "…"
-
-    # Atropos Gedanken
-    symb"Oh, es ist schon spät. Ich müsste langsam los, wenn ich pünktlich in Anans Büro sein will…"
-
-    # Atropos Gedanken
-    symb"Ich sollte besser gehen. Vielleicht hilft es mir ja Mal mit Anan über meine Zweifel und Sorgen zu sprechen."
-
-    # Atropos Gedanken
-    symb"Ich möchte nicht Zweifeln… ich möchte einfach nur glücklich sein…"
-
-    "Atropos" "Bin gleich wieder da."
-
-    show era happy
-
-    "Era" "Bis… bis später!"
+        "Era" "Bis… bis später!"
 
 
-    jump go_office
+        jump go_office
 
 label be_against:
     $ straight_office = False
@@ -3220,7 +3249,7 @@ label be_against:
 
     show era happy
 
-    "Era" "Ja, natürlich. Gerne!"
+    "Era" "Ja, natürlich. Gerne! Wir reden, wenn du wieder glücklicher bist!"
 
     "Era" "Ich arbeite dann mal weiter."
 
@@ -3231,208 +3260,225 @@ label be_against:
 
     "Narcais" "Atropos, ich habe den Bericht…"
 
-    # fällt ihm ins Wort
+    menu:
+        "Ich unterbreche ihn, sonst redet er ewig.":
 
-    "Atropos" "Jetzt nicht… ich habe zu tun, siehst du das nicht?"
+            # Atropos Gedanken
+            symb"Ich unterbreche ihn, sonst redet er ewig."
 
-    show narcais annoyed
+            "Atropos" "Jetzt nicht… ich habe zu tun, siehst du das nicht?"
 
-    "Narcais" "Was? Aber… du wolltest doch den Bericht durchlesen, den ich geschrieben habe."
+            show narcais annoyed
 
-    "Atropos" "Jetzt nicht!"
+            "Narcais" "Was? Aber… du wolltest doch den Bericht durchlesen, den ich geschrieben habe."
 
-    show narcais normal
+            "Atropos" "Jetzt nicht!"
 
-    "Narcais" "Klar, kein Problem! Les ihn dir durch, sobald du dazu kommst."
+            show narcais normal
 
-    show narcais cocky
+            jump afternarcaistalk
 
-    "Narcais" "Du solltest ohnehin nicht viel damit zu tun haben. Ich weiß, dass ich perfekte Arbeit liefere- das ist eine allgemein bekannte Tatsache."
+        "Ich lasse ihn aussprechen, aber verschiebe den Bericht auf später.":
+            # Atropos Gedanken
+            symb"Ich lasse ihn aussprechen, aber verschiebe den Bericht auf später."
 
-    # Atropos Gedanken
-    symb"Er ist echt stark von sich eingenommen. Ich kann weder ihn noch Era gerade ertragen…"
+            "Narcais" "… fertiggestellt. Schaust du ihn dir an? Es sollten keine Fehler drinnen sein, immerhin kommt er von mir."
 
-    # Atropos Gedanken
-    symb"Kann ich nicht mal eine Sekunde für mich haben, damit ich in Ruhe nachdenken kann?"
+            "Atropos" "Ich kümmere mich später darum, ich habe gerade zu tun."
 
-    # Atropos Gedanken
-    symb"Natürlich kann ich so nicht vollkommen glücklich sein…"
+            jump afternarcaistalk
 
-    "Atropos" "Ich kümmere mich darum."
+    label afternarcaistalk:
+        "Narcais" "Klar, kein Problem! Les ihn dir durch, sobald du dazu kommst."
 
-    # Narcais verschwindet.
-    hide narcais
+        show narcais cocky
 
-    # Atropos Gedanken
-    symb"Endlich ein wenig Ruhe."
+        "Narcais" "Du solltest ohnehin nicht viel damit zu tun haben. Ich weiß, dass ich perfekte Arbeit liefere- das ist eine allgemein bekannte Tatsache."
 
-    # Atropos Gedanken
-    symb"Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
+        # Atropos Gedanken
+        symb"Er ist echt stark von sich eingenommen. Ich kann weder ihn noch Era gerade ertragen…"
 
-    "Atropos" "…"
+        # Atropos Gedanken
+        symb"Kann ich nicht mal eine Sekunde für mich haben, damit ich in Ruhe nachdenken kann?"
 
-    "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
+        # Atropos Gedanken
+        symb"Natürlich kann ich so nicht vollkommen glücklich sein…"
 
-    "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
+        "Atropos" "Ich kümmere mich darum."
 
-    "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
+        # Narcais verschwindet.
+        hide narcais
 
-    show era normal:
-        xalign 0.5
+        # Atropos Gedanken
+        symb"Endlich ein wenig Ruhe."
 
-    "Era" "Ich… ich kümmere mich darum!"
-    hide era
+        # Atropos Gedanken
+        symb"Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
 
-    stop music
+        "Atropos" "…"
 
-    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+        "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
-    scene screen_background
-    with fadeshort
-    show screen_transparent
-    show atlas normal_small behind screen_transparent:
-        xalign 0.12
-    show adres normal_small behind screen_transparent:
-        xalign 0.8
-    show anan normal_left_small behind screen_transparent:
-        xalign 0.4
+        "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
 
-    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
+        "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
 
-    # Bild wechselt von Laborhintergrund in Nahansicht des Bildschirms. Atlas, Anan und Adrés tauchen nebeneinander auf
+        show era normal:
+            xalign 0.5
 
-    "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
+        "Era" "Ich… ich kümmere mich darum!"
+        hide era
 
-    "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
+        stop music
 
-    show anan disappointed_left_small
+        $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
 
-    "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
+        scene screen_background
+        with fadeshort
+        show screen_transparent
+        show atlas normal_small behind screen_transparent:
+            xalign 0.12
+        show adres normal_small behind screen_transparent:
+            xalign 0.8
+        show anan normal_left_small behind screen_transparent:
+            xalign 0.4
 
-    show anan normal_left_small
+        play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
-    "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+        # Bild wechselt von Laborhintergrund in Nahansicht des Bildschirms. Atlas, Anan und Adrés tauchen nebeneinander auf
 
-    show anan happy_left_small
+        "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
-    "Anan" "Der Gründungstag von Aither."
+        "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
+        show anan disappointed_left_small
 
-    show anan normal_left_small
+        "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
+        show anan normal_left_small
 
-    show anan happy_left_small
+        "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
+        show anan happy_left_small
 
-    "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
+        "Anan" "Der Gründungstag von Aither."
 
-    "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
+        "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
+        show anan normal_left_small
 
-    show anan normal_left_small
+        "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
+        show anan happy_left_small
 
-    "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
+        "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+        "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
-    show anan happy_left_small
+        "Anan" "Ich verspreche es euch. Die Menschheit wird niemals wieder das erleiden müssen, was in der Vergangenheit vorgefallen ist."
 
-    "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
+        "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
+        show anan normal_left_small
 
-    "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
+        "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
-    "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
+        "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
-    "Anan" "Weil ihr uns dabei helft, das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die Ersten, die die neue Happiness erhalten."
+        "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
+        show anan happy_left_small
 
-    "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
+        "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
-    show anan normal_left_small
+        "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
 
-    "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
+        "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
-    "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
+        "Anan" "Ihr seid alle herzlich eingeladen, diesen Triumph auszukosten und an dem berauschenden Fest teilzunehmen, welches Aither in gesamt Astoa ausrichten wird. "
 
-    "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+        "Anan" "Weil ihr uns dabei helft, das Glück unter die Menschen zu bringen, werdet ihr natürlich dafür belohnt. Ihr seid die Ersten, die die neue Happiness erhalten."
 
-    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
+        "Anan" "Verteilt das Glück. Bringt anderen Glück. Seid selbst glücklich! Lebt, sodass ihr glücklich seid! Macht die Welt zu einem besseren Ort!"
 
+        "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    scene lab
-    with fadeshort
-    show era normal:
-        xalign 0.25
-    show narcais normal_gray:
-        xalign 0.75
+        show anan normal_left_small
 
-    # Übertragung wird beendet und der Labor ist wieder im Hintergrund.
+        "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
-    "Era" "Wow…"
+        "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
-    show era normal_gray
-    show narcais normal
+        "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
-    "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
+        play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
 
-    # Atropos Gedanken
-    symb"Schöne Worte und nichts dahinter…"
 
-    # Atropos Gedanken
-    symb"Wieso mussten wir uns diesen Unsinn anhören?"
+        scene lab
+        with fadeshort
+        show era normal:
+            xalign 0.25
+        show narcais normal_gray:
+            xalign 0.75
 
-    # Atropos Gedanken
-    symb"Warum überlässt Anan nicht uns die Wahl, ob wir die Pille nehmen wollen oder nicht?"
+        # Übertragung wird beendet und der Labor ist wieder im Hintergrund.
 
-    # Atropos Gedanken
-    symb"Vielleicht würde es mir dann leichter fallen sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
+        "Era" "Wow…"
 
-    # Symbiont
-    symb"{i} Diese Gedanken hast du nur, weil du nicht glücklich bist. Nimm die Pille und werde wieder glücklich! {/i}"
+        show era normal_gray
+        show narcais normal
 
-    # Symbiont
-    symb"{i} Merkst du nicht, wie deine Zweifel dich innerlich zerfressen? {/i}"
+        "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
-    # Symbiont
-    symb"{i}Ist es das, was du willst? Du bist unglücklich, Atropos. Kein Mensch sollte unglücklich sein. {/i}"
+        # Atropos Gedanken
+        symb"Schöne Worte und nichts dahinter…"
 
-    show narcais normal_gray
-    show era normal
+        # Atropos Gedanken
+        symb"Wieso mussten wir uns diesen Unsinn anhören?"
 
-    "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf, an das Glück aller Menschen zu denken."
+        # Atropos Gedanken
+        symb"Warum überlässt Anan nicht uns die Wahl, ob wir die Pille nehmen wollen oder nicht?"
 
-    "Atropos" "Wir sollten zurück an die Arbeit, wir müssen heute noch einiges schaffen."
+        # Atropos Gedanken
+        symb"Vielleicht würde es mir dann leichter fallen sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
 
-    "Atropos" "…"
+        # Symbiont
+        symb"{i} Diese Gedanken hast du nur, weil du nicht glücklich bist. Nimm die Pille und werde wieder glücklich! {/i}"
 
-    # Atropos Gedanken
-    symb"Es ist schon spät. Ich müsste jetzt los, um pünktlich bei Anan zu sein."
+        # Symbiont
+        symb"{i} Merkst du nicht, wie deine Zweifel dich innerlich zerfressen? {/i}"
 
-    # Atropos Gedanken
-    symb"Aber will ich das überhaupt?"
+        # Symbiont
+        symb"{i}Ist es das, was du willst? Du bist unglücklich, Atropos. Kein Mensch sollte unglücklich sein. {/i}"
 
-    # Symbiont
-    symb"{i}Du willst pünktlich sein. Anan war noch nett und verständnisvoll, aber das wird sich ändern, wenn du weiterhin dein Glück und das Glück aller gefährdest. {/i}"
+        show narcais normal_gray
+        show era normal
 
-    # Symbiont
-    symb"{i}Wieso wehrst du dich so verzweifelt gegen dein Glück? Niemand will dir Leid zufügen. Alle wollen nur dein Bestes. {/i}"
+        "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf, an das Glück aller Menschen zu denken."
 
-    # Symbiont
-    symb"{i}Besänftige deinen Zorn! Anan sorgt sich um dich. Geh zu ihm und entschuldige dein Verhalten! {/i}"
+        "Atropos" "Wir sollten zurück an die Arbeit, wir müssen heute noch einiges schaffen."
 
-    # Symbiont
-    symb"{i}Alles kann gut werden, wenn du es nur willst. {/i}"
+        "Atropos" "…"
 
-    jump go_office
+        # Atropos Gedanken
+        symb"Es ist schon spät. Ich müsste jetzt los, um pünktlich bei Anan zu sein."
+
+        # Atropos Gedanken
+        symb"Aber will ich das überhaupt?"
+
+        # Symbiont
+        symb"{i}Du willst pünktlich sein. Anan war noch nett und verständnisvoll, aber das wird sich ändern, wenn du weiterhin dein Glück und das Glück aller gefährdest. {/i}"
+
+        # Symbiont
+        symb"{i}Wieso wehrst du dich so verzweifelt gegen dein Glück? Niemand will dir Leid zufügen. Alle wollen nur dein Bestes. {/i}"
+
+        # Symbiont
+        symb"{i}Besänftige deinen Zorn! Anan sorgt sich um dich. Geh zu ihm und entschuldige dein Verhalten! {/i}"
+
+        # Symbiont
+        symb"{i}Alles kann gut werden, wenn du es nur willst. {/i}"
+
+        jump go_office
 
 label go_office:
 
@@ -3648,42 +3694,63 @@ label no_office:
     "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. {/i}"
 
     $ loudspeaker = True
-    # Atropos Gedanken
-    symb"Ich werde die Durchsage einfach überhören."
 
-    show narcais normal
+    menu:
+        "Ich werde die Durchsage einfach überhören.":
+            jump stillnooffice
 
-    "Narcais" "Atropos, deine Anwesenheit wird verlangt. Wieso reagierst du nicht? Du solltest dich geehrt fühlen, in Anans Büro gerufen zu werden!"
+        "Ich sollte gehen.":
 
-    show narcais normal_gray
-    show era confused
+            # Atropos Gedanken
+            symb"Ich sollte gehen."
 
-    "Era" "Was will er von dir, Atropos?"
+            # Atropos Gedanken
+            symb"Ich kann mir ja mal anhören, was er zu sagen hat und dann weitersehen…"
 
-    "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. Er erwartet dich.{/i}"
+            scene hall
+            with fadeshort
 
-    # Atropos Gedanken
-    symb"Sieht so aus, als würde mir keine andere Wahl bleiben… Ich möchte auch nicht unter meinen Kollegen deswegen seltsam auffallen."
+            jump rueffel
 
-    # Atropos Gedanken
-    symb"Ich hoffe die anderen denken jetzt nicht schlecht von mir… und muss Anan das gleich über die Lautsprecher durchsagen lassen?"
 
-    # Atropos Gedanken
-    symb"Das muss echt nicht jeder mitbekommen…"
+    label stillnooffice:
 
-    # Atropos Gedanken
-    symb"Aber ich kann mir ja mal anhören, was er zu sagen hat und dann weitersehen…"
+        # Atropos Gedanken
+        symb"Ich werde die Durchsage einfach überhören."
 
-    show era confused_gray
-    show narcais confused
+        show narcais normal
 
-    "Narcais" "Atropos?"
+        "Narcais" "Atropos, deine Anwesenheit wird verlangt. Wieso reagierst du nicht? Du solltest dich geehrt fühlen, in Anans Büro gerufen zu werden!"
 
-    "Atropos" "Schon gut, schon gut."
+        show narcais normal_gray
+        show era confused
 
-    "Atropos" "Ich geh ja schon."
+        "Era" "Was will er von dir, Atropos?"
 
-    scene hall
-    with fadeshort
+        "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. Er erwartet dich.{/i}"
 
-    jump rueffel
+        # Atropos Gedanken
+        symb"Sieht so aus, als würde mir keine andere Wahl bleiben… Ich möchte auch nicht unter meinen Kollegen deswegen seltsam auffallen."
+
+        # Atropos Gedanken
+        symb"Ich hoffe die anderen denken jetzt nicht schlecht von mir… und muss Anan das gleich über die Lautsprecher durchsagen lassen?"
+
+        # Atropos Gedanken
+        symb"Das muss echt nicht jeder mitbekommen…"
+
+        # Atropos Gedanken
+        symb"Aber ich kann mir ja mal anhören, was er zu sagen hat und dann weitersehen…"
+
+        show era confused_gray
+        show narcais confused
+
+        "Narcais" "Atropos?"
+
+        "Atropos" "Schon gut, schon gut."
+
+        "Atropos" "Ich geh ja schon."
+
+        scene hall
+        with fadeshort
+
+        jump rueffel
