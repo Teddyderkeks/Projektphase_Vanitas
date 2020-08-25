@@ -307,7 +307,7 @@ label entschaerfenPillegenommen:
     symb"{i}Es war zu spät... {/i}"
     $ endsad= True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -437,7 +437,7 @@ label explodierenPillegenommen:
     stop sounds
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -986,7 +986,7 @@ label saveeralab:
 
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -1153,7 +1153,7 @@ label saveeraelsewhere:
     "Atropos" "Für alles."
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -1326,7 +1326,7 @@ label savechesis:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -1549,7 +1549,7 @@ label savetycho:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -1731,7 +1731,7 @@ label savekloth:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -1874,11 +1874,11 @@ label saveallallthreekloth:
     "Chesis" "Ach, Atropos hatte so was in die Richtung glaube ich Mal erwähnt, aber keine Ahnung. Man sieht sich."
     hide chesis
 
-    show anan strict left
+    show anan strict_left
 
     "Anan" "Atropos, auf ein Wort."
     hide tycho
-    show anan strict left:
+    show anan strict_left:
         xalign 0.5
 
     "Atropos" "W-Was?"
@@ -2084,7 +2084,7 @@ label saveallallthreekloth:
 
     $endhappy = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -2263,7 +2263,7 @@ label doesbombexistsawallthreekloth:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -2514,7 +2514,7 @@ label trywarnpeople:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
     jump ending
 
 
@@ -2564,7 +2564,7 @@ label doesbombexist:
     # Atropos Gedanken
     symb"Oder hat er es nur durch Zufall mitbekommen?"
 
-    scene detail2031
+    scene detail_bomb2031
     with fadeshort
 
     # Atropos Gedanken
@@ -2688,7 +2688,7 @@ label doesbombexist:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
     jump ending
 
 label besureanandies:
@@ -2842,7 +2842,7 @@ label besureanandies:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
     jump ending
 
 
@@ -3481,7 +3481,7 @@ label ananshoulddie:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
@@ -3554,6 +3554,6 @@ label aithershoulddie:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending

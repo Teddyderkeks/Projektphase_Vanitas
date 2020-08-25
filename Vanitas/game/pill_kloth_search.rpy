@@ -4,8 +4,6 @@ default read_document_kloth = False
 image glitch:
         "glitch1"
         pause .2
-        #"glitch2"
-        #pause .09
         "glitch3"
         pause .2
         "glitch4"
@@ -14,8 +12,6 @@ image glitch:
         pause .2
         "glitch6"
         pause .2
-        #"glitch7"
-        #pause .09
         repeat
 
 
@@ -183,7 +179,7 @@ label wannariskanan:
             jump symbiont_in_between
         "Ich suche besser wo anders nach ihm.":
             hide screen force_mouse_move_twooptionsdown
-            jump search_kloth_without_anan_offices
+            jump search_kloth_without_anan_office
 
 label symbiont_in_between:
     # Atropos Gedanken
@@ -243,7 +239,7 @@ label search_kloth_without_anan_office:
     scene kloth_office
     with fadeshort
     show sepia
-    show kloth unsuresmiling_neutral behind sepia:
+    show kloth unsuresmiling_mid behind sepia:
         xalign 0.5
 
 
@@ -822,11 +818,14 @@ label still_search_kloth:
         else:
             if thingswatched>0:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber was?"
             else:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
-            scene hall
-            with fadeshort
-            "Atropos"  "Aber was?"
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber wo?"
             scene kloth_office
             with fadeshort
             "Atropos"  "Natürlich…"
@@ -848,11 +847,15 @@ label still_search_kloth:
         if read_computer_kloth:
             if thingswatched>0:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber was?"
             else:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
-            scene hall
-            with fadeshort
-            "Atropos"  "Aber was?"
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber wo?"
+
             scene kloth_office
             with fadeshort
             "Atropos"  "Natürlich…"
@@ -864,12 +867,15 @@ label still_search_kloth:
         else:
             if thingswatched>0:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich muss irgendwelche Anhaltspunkte übersehen haben."
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber was?"
             else:
                 "Atropos"  "Ich muss zurück in Kloths Büro… ich hätte mich doch umsehen sollen."
-            scene hall
-            scene hall
-            with fadeshort
-            "Atropos"  "Aber was?"
+                scene hall
+                with fadeshort
+                "Atropos"  "Aber wo?"
+
             scene kloth_office
             with fadeshort
             "Atropos"  "Natürlich…"
@@ -1059,7 +1065,7 @@ label menschennichthelfen:
 
     $endhappy = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 label menschenhelfen:
@@ -1178,6 +1184,6 @@ label menschenhelfen:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending

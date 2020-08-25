@@ -305,7 +305,7 @@ label accept_conversation_kloth:
 
     hide kloth
 
-    $ renpy.movie_cutscene("atropos_accepts_conversation.mpg")
+    $ renpy.movie_cutscene("cutscenes/atropos_accepts_conversation.mpg")
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
@@ -364,7 +364,7 @@ label refuse_conversation_kloth:
     hide kloth
     hide chesis
 
-    $ renpy.movie_cutscene("atropos_refuse_conversation.mpg")
+    $ renpy.movie_cutscene("cutscenes/Atropos_wants_to_kill_Kloth.mpg")
 
     "Atropos" "Nein."
 
