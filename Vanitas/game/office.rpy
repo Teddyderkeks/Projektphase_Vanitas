@@ -2076,6 +2076,8 @@ label end_search_kloth:
 
     "Atropos" "(lacht)"
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $endcrazy= True
+
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

@@ -373,6 +373,8 @@ label expulsion_office:
         "Atropos"  "Also, wir hören bald voneinander. Noch einen wunderschönen Tag."
 
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $endsad = True
+
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

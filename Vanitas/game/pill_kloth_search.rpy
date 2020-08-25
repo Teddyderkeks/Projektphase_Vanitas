@@ -1057,7 +1057,9 @@ label menschennichthelfen:
 
     "Atropos"  "Danke."
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $endhappy = True
+
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 label menschenhelfen:
@@ -1174,6 +1176,8 @@ label menschenhelfen:
     # Symbiont
     symb"{i}Es tut mir leid. {i}"
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $endsad = True
+
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

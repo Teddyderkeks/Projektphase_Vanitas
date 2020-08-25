@@ -109,10 +109,21 @@ default klotheverythingseenbutnotsafeopen = False
 default klotheverythingseensafeopen = False
 default safeopen = False
 default saneorseek = False
+default endhappy= False
+default endsad=False
+default endcrazy=False
 
 
 label ending:
     scene atropos_falling
+    if endsad:
+        play music ("Sound/cutscene_ende/loop_sad.mp3") fadein 3 fadeout 3
+    else:
+        if endhappy:
+            play music ("Sound/cutscene_ende/loop_happy.mp3") fadein 3 fadeout 3
+        else:
+            if endcrazy:
+                play music ("Sound/cutscene_ende/loop_crazy.mp3") fadein 3 fadeout 3
 
     if klotheverythingseenbutnotsafeopen== False and klotheverythingseensafeopen== False:
 
@@ -844,7 +855,7 @@ label partend_2:
         # Symbiont
         "S.""{i}Lebe wohl. {/i}"
 
-        $ renpy.movie_cutscene("cutscene_ende.mpg")
+        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
 
         play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
 
@@ -886,18 +897,32 @@ label partend_2:
         if pilltakenyes:
             # Symbiont
             "S.""{i}Es tut mir leid. {/i}"
-
-            $ renpy.movie_cutscene("cutscene_ende.mpg")
-            return
+            if endhappy:
+                $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                return
+            else:
+                if endsad:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                    return
+                else:
+                    if endcrazy:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                        return
         else:
             if pilltakenno or pilltakenlater:
                 # Symbiont
                 "S.""{i}Wir sterben gemeinsam. {/i}"
-                $ renpy.movie_cutscene("cutscene_ende.mpg")
-                return
-
-
-
+                if endhappy:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                    return
+                else:
+                    if endsad:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                        return
+                    else:
+                        if endcrazy:
+                            $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                            return
 
 
 
@@ -1586,7 +1611,7 @@ label partend_3:
         # Symbiont
         "Kronos""{i}Lebe wohl. {/i}"
 
-        $ renpy.movie_cutscene("cutscene_ende.mpg")
+        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
         play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
         scene street
 
@@ -1626,16 +1651,36 @@ label partend_3:
         if pilltakenyes:
             # Symbiont
             "Kronos""{i}Es tut mir leid. {/i}"
+            if endhappy:
+                $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                return
+            else:
+                if endsad:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                    return
+                else:
+                    if endcrazy:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                        return
 
-            $ renpy.movie_cutscene("cutscene_ende.mpg")
-            return
+
+
         else:
             if pilltakenno or pilltakenlater:
                 # Symbiont
                 "Kronos""{i}Wir sterben gemeinsam. {/i}"
 
-                $ renpy.movie_cutscene("cutscene_ende.mpg")
-                return
+                if endhappy:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                    return
+                else:
+                    if endsad:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                        return
+                    else:
+                        if endcrazy:
+                            $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                            return
 
 label part1:
 
@@ -2322,7 +2367,7 @@ label partend:
         # Symbiont
         symb"{i}Lebe wohl. {/i}"
 
-        $ renpy.movie_cutscene("cutscene_ende.mpg")
+        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
 
         play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
 
@@ -2363,11 +2408,30 @@ label partend:
         if pilltakenyes:
             # Symbiont
             symb"{i}Es tut mir leid. {/i}"
-            $ renpy.movie_cutscene("cutscene_ende.mpg")
-            return
+            if endhappy:
+                $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                return
+            else:
+                if endsad:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                    return
+                else:
+                    if endcrazy:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                        return
+
         else:
             if pilltakenno or pilltakenlater:
                 # Symbiont
                 symb"{i}Wir sterben gemeinsam. {/i}"
-                $ renpy.movie_cutscene("cutscene_ende.mpg")
-                return
+                if endhappy:
+                    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_gluecklich.mpg")
+                    return
+                else:
+                    if endsad:
+                        $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_traurig.mpg")
+                        return
+                    else:
+                        if endcrazy:
+                            $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende_crazy.mpg")
+                            return

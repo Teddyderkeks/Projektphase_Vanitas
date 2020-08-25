@@ -1,24 +1,46 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/selection_kloth_office_after_anan_office.rpy", line 13, in script
-    if safeopen = True:
-SyntaxError: invalid syntax (game/selection_kloth_office_after_anan_office.rpy, line 13)
+  File "game/ending.rpy", line 131, in script
+    symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
+IOError: Couldn't find file 'Sound/cutscene_ende/loop_sad'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/selection_kloth_office_after_anan_office.rpy", line 13, in script
-    if safeopen = True:
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/selection_kloth_office_after_anan_office.rpy, line 13)
+  File "game/ending.rpy", line 131, in script
+    symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
+    c.periodic()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'Sound/cutscene_ende/loop_sad'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Tue Aug 25 12:45:38 2020
+Tue Aug 25 17:14:12 2020
