@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 49: u's' is not a keyword argument or valid child for the imagebutton statement.
-    idle "gui/button_nightshade.png"s
-                                     ^
+File "game/pill_kloth_search.rpy", line 43: is not terminated with a newline. (Check strings and parenthesis.)
+        play sound("Sound/Sounds/abschicken.mp3"
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 24 17:33:15 2020
+Mon Aug 24 23:40:36 2020

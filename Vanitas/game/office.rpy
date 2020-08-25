@@ -41,6 +41,8 @@ label office:
     # Atropos Gedanken
     symb"Da ist das Büro. Mal sehen, ob Anan da ist. Ich klopfe besser an."
 
+    play sound "Sound/Sounds/tuereklopfen.mp3"
+
     # Atropos Gedanken
     symb"Seltsam, keine Antwort… ob ich wohl einfach eintreten sollte?"
 
@@ -168,7 +170,7 @@ label conversation_with_anan:
 
     show anan strict_mid
 
-    "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+    "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
     "Anan" "Verstehst du das, Atropos?"
 
@@ -687,7 +689,7 @@ label how_many_infos_anan:
 
             show anan strict_mid
 
-            "Anan" "Ja, Schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
+            "Anan" "Ja, schaden. Wenn du unglücklich bist, wirst du dadurch auch andere unglücklich machen. Du wirst sie aus ihrem glücklichen Leben herausreißen und ins Unglück stürzen."
 
             "Anan" "Verstehst du das, Atropos?"
 
@@ -1465,23 +1467,43 @@ label visit_kloth:
     # Atropos Gedanken
     symb"Ich sollte es wirklich erstmal mit einer Nachricht versuchen."
 
+    scene detail_phone_unlockhall
+    with fadestart
+
+    scene detail_phone_writing
+    with fadestart
+
     "Atropos" "…"
+    play sound("Sound/Sounds/abschicken.mp3")
+
+    scene detail_phone_messages
 
     # Atropos Gedanken
     symb"Seltsam. Es wird nicht angezeigt, dass er meine Nachricht überhaupt empfängt. Hat er sein Handy ausgeschaltet? Ich sollte ihn besser doch anrufen."
 
+    play sound("Sound/Sounds/waehlen.mp3")
+    scene detail_phone_call
+
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
 
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
-
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
+    play sound("Sound/Sounds/wartesound.mp3")
 
     "Atropos" "Verdammt, Kloth. Geh dran, bitte…"
+    play sound("Sound/Sounds/wartesound.mp3")
 
     "Atropos" "…"
+
+    scene detail_phone_calldenied
 
     # Symbiont
     symb"{i}Er ist gerade bestimmt in einer Besprechung und hat deswegen sein Handy abgeschaltet. {/i}"
+
+    scene hall
 
     # Atropos Gedanken
     symb"Ich sollte dennoch in seinem Büro nachschauen gehen."
@@ -1766,7 +1788,10 @@ label end_search_kloth:
     "Kloth" "Du bist der Einzige, der mir helfen kann!"
 
     "Atropos" "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch. Ich hatte heute einen stressigen Tag und brauche jetzt erstmal wieder etwas Ruhe und Entspannung."
+
+    play sound "Sound/Sounds/glitch.mp3"
     # ab hier Glitch
+    show glitch
     show kloth scared1
 
     "Kloth" "Neeeein!"
@@ -1790,6 +1815,9 @@ label end_search_kloth:
     show kloth scared1
 
     "Kloth" "Ich bin sie losgeworden, aber nun wollen sie mich töten. Ich darf dieses Wissen nicht weitergeben!"
+    stop sound
+
+    play sound "Sound/Sounds/glitch.mp3"
 
     show kloth scared2
 
@@ -1806,6 +1834,8 @@ label end_search_kloth:
     "Kloth" "Sie werden kommen uns holen!"
 
     "Kloth" "Uns alle!"
+    hide sepia
+    hide glitch
 
     $ renpy.movie_cutscene("atropos_pushes_kloth.mpg")
 

@@ -32,23 +32,44 @@ label search_kloth:
     # Atropos Gedanken
     symb"Ich sollte es wirklich erstmal mit einer Nachricht versuchen."
 
+    scene detail_phone_unlockhall
+    with fadestart
+
+    scene detail_phone_writing
+    with fadestart
+
     "Atropos" "…"
+
+    play sound("Sound/Sounds/abschicken.mp3")
+
+    scene detail_phone_messages
 
     # Atropos Gedanken
     symb"Seltsam. Es wird nicht angezeigt, dass er meine Nachricht überhaupt empfängt. Hat er sein Handy ausgeschaltet? Ich sollte ihn besser doch anrufen."
 
+    play sound("Sound/Sounds/waehlen.mp3")
+    scene detail_phone_call
+
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
 
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
-
+    play sound("Sound/Sounds/wartesound.mp3")
     "Atropos" "…"
+    play sound("Sound/Sounds/wartesound.mp3")
 
     "Atropos" "Verdammt, Kloth. Geh dran, bitte…"
+    play sound("Sound/Sounds/wartesound.mp3")
 
     "Atropos" "…"
+
+    scene detail_phone_calldenied
 
     # Symbiont
     symb"{i}Er ist gerade bestimmt in einer Besprechung und hat deswegen sein Handy abgeschaltet. {/i}"
+
+    scene hall
 
     # Atropos Gedanken
     symb"Ich sollte dennoch in seinem Büro nachschauen gehen."
@@ -105,6 +126,8 @@ label search_kloth:
             jump search_kloth_without_anan_office
 
 label search_kloth_in_anan_office:
+
+    play sound "Sound/Sounds/tuereklopfen.mp3"
 
     # Atropos Gedanken
     symb"Ich klopfe besser an."
@@ -223,51 +246,63 @@ label search_kloth_without_anan_office:
     show kloth unsuresmiling_neutral_alt behind sepia:
         xalign 0.5
 
+
     "Atropos" "Zu so früher Stunde schon ein Bier? (lacht)"
 
     show glitch
+    play sound("Sound/Sounds/glitch.mp3")
 
     "Kloth" "Warum nicht- es schmeckt halt gut und lässt einen vieles vergessen."
 
     hide glitch
+    stop sound
 
     "Atropos" "Vergessen? Es gibt doch nichts in diesem wundervollen Leben, das man vergessen möchte."
 
     show kloth angry_alt
+    play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
     "Kloth" "Wundervoll? Glücklich? Bestimmt… Träum weiter Atropos, bleibe in deiner Traumwelt gefangen."
 
     hide glitch
+    stop sound
 
     "Atropos" "Von was redest du nur?"
 
     show kloth vest_open
+    play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
     "Kloth" "Sieh dich doch mal um. All diese glücklichen, breit grinsenden Menschen, die alles toll finden, was andere sagen und tun. Nennst du das Glück?"
     hide glitch
+    stop sound
 
     "Atropos" "Kloth, was ist denn nur los mit dir? Du machst mir ja fast schon Angst."
 
     show kloth angry_alt
+    play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
     "Kloth" "Immerhin würdest du dann nicht mehr seelenlos glücklich sein. Das wäre schon mal ein Fortschritt."
     hide glitch
+    stop sound
 
     "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon! Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
 
     show kloth crazy
+    play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
     "Kloth" "Nein, ist er nicht! Mir geht es gut. Hörst du Atropos? Mir geht es gut!"
 
     hide glitch
+    stop sound
 
     "Atropos" "Schon okay, ich habe verstanden. Du bist glücklich und das freut mich."
 
     show kloth scared1
+    play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
     "Kloth" "Sie werden kommen, Atropos. Ich warne dich! Sie werden kommen und uns holen!"
@@ -278,6 +313,7 @@ label search_kloth_without_anan_office:
 
     "Kloth" "Aber mich werden sie nicht bekommen. Ich werde ihnen entkommen. Ich werde fliehen, hörst du?"
     hide glitch
+    stop sound
 
     "Atropos" "Ja, das wirst du, Kloth. Alles wird in Ordnung. Ruhe dich einfach ein wenig aus und beruhige dich."
 
@@ -1046,14 +1082,20 @@ label menschenhelfen:
     # Atropos Gedanken
     symb"Ich denke, das ist es wert."
 
+    play sound("Sound/Sounds/glass.mp3")
+
     scene detail_alarmbroken
     with fadeshort
+
+    play sound("Sound/Sounds/feueralarm.mp3")
 
     # Atropos Gedanken
     symb"Der Alarm ist ganz schön laut und all diese aufgeregten Stimmen, welche durcheinanderrufen."
 
     scene hall
     with fadeshort
+
+    stop sound
 
 
     show ireia confused:
@@ -1088,7 +1130,7 @@ label menschenhelfen:
     "Ireia" "Ein Brand wird uns doch nicht einfach aufhalten. Der wird sicher bald gelöscht werden und wir haben nachher noch ein Meeting."
 
     show ireia happy_gray
-    show armene nromal
+    show armene normal
 
     "Armene" "Natürlich Ireia. Man sieht sich später, Atropos!"
 
