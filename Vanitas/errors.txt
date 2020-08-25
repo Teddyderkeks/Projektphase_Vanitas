@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: expected 'word' not found.
-    style.say_who_window.background = Frame("gui/textbox_withoutname.png")
-         ^
+File "game/bomb.rpy", line 1063: could not parse statement.
+    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3s
+                                                                                     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Aug 21 09:57:43 2020
+Mon Aug 24 15:19:23 2020

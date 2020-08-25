@@ -4,18 +4,23 @@ default neiro_unterhalten= False
 default badmood= False
 default okaymood=False
 define startfade=Fade(1,0.5,3)
+define fadestart=Fade(1,0.5,3)
 define startfade2=Fade(1,0.5,0.5)
 define datewithera= False
 define dialgoueoffice= False
 define talkchesismorning= False
 define loudspeaker = False
-define symb= Character(None ,window_background="gui/textbox_withoutname.png")
-#$ symb= Character(None, namebox_height=360, namebox_yalign=0.5)
+define symb= Character(None,window_background="gui/textbox_withoutname.png")
+
+#xalign=0.5, yalign=1.0
+$ symb= Character (None, window_xalign=0.5, window_yalign=1.0, who_posy=500)
 
 label start:
     stop music
     $ renpy.movie_cutscene("cutscene_introsound.mpg")
-    play music "Sound_freeze.mp3" fadeout 2000
+    play music "Sound/Music/Cutscenes/End/AnfangLoop.mp3" fadeout 1
+
+    window hide
 
     scene atropos_falling
 
@@ -23,46 +28,44 @@ label start:
     symb "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
 
     # Symbiont
-    "{i}Du wirst sterben und es scheint keinen Ausweg aus der Lage zu geben. {/i}"
+    symb"{i}Du wirst sterben und es scheint keinen Ausweg aus der Lage zu geben. {/i}"
 
     # Symbiont
-    "{i}Warst du glücklich, Atropos? {/i}"
+    symb"{i}Warst du glücklich, Atropos? {/i}"
 
     # Symbiont
-    "{i}Bist du zufrieden mit den Entscheidungen, die du getroffen hast? {/i}"
+    symb"{i}Bist du zufrieden mit den Entscheidungen, die du getroffen hast? {/i}"
 
     # Symbiont
-    "{i}Dein Glück ist letztlich das Einzige, das zählt. {/i}"
+    symb"{i}Dein Glück ist letztlich das Einzige, das zählt. {/i}"
 
     # Symbiont
-    "{i}Lebe wohl. {/i}"
+    symb"{i}Lebe wohl. {/i}"
 
     jump change
 
 
 label change:
-
     scene 5hours
     with startfade
     scene street
     with startfade2
-    stop music fadeout 2000
-    play music "Sound_verkehrsraum_demo.mp3" fadeout 1
+    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
 
     # Symbiont
-    "{i}Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung. {/i}"
+    symb"{i}Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung. {/i}"
 
     # Symbiont
-    "{i} Atropos, du solltest den Tag nutzen, um dich und alle anderen Menschen glücklich zu machen. {/i}"
+    symb"{i} Atropos, du solltest den Tag nutzen, um dich und alle anderen Menschen glücklich zu machen. {/i}"
 
     # Atropos Gedanken
-    "Ich freue mich schon auf heute. Nach der Arbeit grillen Kloth, Chesis und ich endlich. Ich kann es schon seit Wochen kaum noch erwarten!"
+    symb"Ich freue mich schon auf heute. Nach der Arbeit grillen Kloth, Chesis und ich endlich. Ich kann es schon seit Wochen kaum noch erwarten!"
 
     # Atropos Gedanken
-    "Hoffentlich hat es Kloth nicht vergessen. Er wirkte in letzter Zeit manchmal etwas abwesend."
+    symb"Hoffentlich hat es Kloth nicht vergessen. Er wirkte in letzter Zeit manchmal etwas abwesend."
 
     # Atropos Gedanken
-    "Ob ihn wohl etwas bedrückt? Ich kann mir vorstellen, dass ziemlich viel Verantwortung auf ihm lastet."
+    symb"Ob ihn wohl etwas bedrückt? Ich kann mir vorstellen, dass ziemlich viel Verantwortung auf ihm lastet."
 
     # Atropos Gedanken
     #"Für seinen Job wäre ich wohl wirklich nicht geeignet. Da kann ich echt froh sein im Labor zu arbeiten."
@@ -71,19 +74,19 @@ label change:
     #"{i}Jeder bekommt von Aither geeignete Arbeit zugeteilt. Arbeit, die ihn glücklich macht.{/i}"
 
     # Atropos Gedanken
-    "Ich kann mir nicht vorstellen, wie er direkt unter Anan zu arbeiten. Als rechte Hand von einem der 'Großen Drei' trägt man bestimmt viel Verantwortung. Das merkt man Kloth auch an."
+    symb"Ich kann mir nicht vorstellen, wie er direkt unter Anan zu arbeiten. Als rechte Hand von einem der 'Großen Drei' trägt man bestimmt viel Verantwortung. Das merkt man Kloth auch an."
 
     # Symbiont
-    "{i}Anan hat in dieser Welt wirklich einiges verändert. Deswegen ist es eine Ehre, für ihn und Aither zu arbeiten.{/i}"
+    symb"{i}Anan hat in dieser Welt wirklich einiges verändert. Deswegen ist es eine Ehre, für ihn und Aither zu arbeiten.{/i}"
 
     # Atropos Gedanken
-    "Und nicht nur er. Auch Atlas und Adrés. Ohne ihr Triumvirat wäre die Welt vermutlich immer noch im Krieg versunken."
+    symb"Und nicht nur er. Auch Atlas und Adrés. Ohne ihr Triumvirat wäre die Welt vermutlich immer noch im Krieg versunken."
 
     # Atropos Gedanken
-    "Letztlich weiß ich es nur aus den Erzählungen meines Vaters, aber es muss schrecklich gewesen sein. Das fehlende Wasser und die unzureichende Nahrung…"
+    symb"Letztlich weiß ich es nur aus den Erzählungen meines Vaters, aber es muss schrecklich gewesen sein. Das fehlende Wasser und die unzureichende Nahrung…"
 
     # Symbiont
-    "{i}Du kannst wirklich glücklich sein, dass du in der heutigen Zeit lebst mit einem Dach über dem Kopf und nichts, worüber du dir Sorgen machen müsstest. {/i}"
+    symb"{i}Du kannst wirklich glücklich sein, dass du in der heutigen Zeit lebst mit einem Dach über dem Kopf und nichts, worüber du dir Sorgen machen müsstest. {/i}"
 
     # Atropos Gedanken
     #"Außerdem habe ich Chesis und Kloth an meiner Seite. Es gibt einfach nichts Besseres als gemeinsam mit seinen besten Freunden arbeiten zu können."
@@ -92,7 +95,7 @@ label change:
     #"{i}Und dann auch noch für eine Firma wie Aither, die allen Menschen ihre Glücklichkeit schenkt. {/i}"
 
     # Atropos Gedanken
-    "Alle Menschen haben es verdient glücklich zu sein, genau aus diesem Grund bringen wir ihnen ja Happiness. Manchmal frage ich mich nur…"
+    symb"Alle Menschen haben es verdient glücklich zu sein, genau aus diesem Grund bringen wir ihnen ja Happiness. Manchmal frage ich mich nur…"
 
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
@@ -104,47 +107,47 @@ label change:
     with fadeshort
 
     # Atropos Gedanken
-    "Happiness…"
+    symb"Happiness…"
 
     # Atropos Gedanken
-    "Stimmt…"
+    symb"Stimmt…"
 
     # Atropos Gedanken
-    "Ich habe es schon wieder vergessen."
+    symb"Ich habe es schon wieder vergessen."
 
     # Atropos Gedanken
-    "Ob es wohl Konsequenzen hat, dass ich sie nicht täglich genommen habe?"
+    symb"Ob es wohl Konsequenzen hat, dass ich sie nicht täglich genommen habe?"
 
     # Atropos Gedanken
-    "Immerhin ist es das, was sie uns stets einprägen: Vergiss niemals - auch nicht einmal - deine Pille zu nehmen."
+    symb"Immerhin ist es das, was sie uns stets einprägen: Vergiss niemals - auch nicht einmal - deine Pille zu nehmen."
 
     "Atropos" "…"
 
     # Atropos Gedanken
-    "Aber war ich in den letzten Tagen deswegen wirklich weniger glücklich?"
+    symb"Aber war ich in den letzten Tagen deswegen wirklich weniger glücklich?"
 
     # Symbiont
-    "{i}Nimm die Pille, Atropos. Du brauchst sie, um glücklich zu sein. {/i}"
+    symb"{i}Nimm die Pille, Atropos. Du brauchst sie, um glücklich zu sein. {/i}"
 
     # Atropos Gedanken
-    "Ich habe aber nicht den Eindruck, dass sich viel verändert hat…"
+    symb"Ich habe aber nicht den Eindruck, dass sich viel verändert hat…"
 
     # Atropos Gedanken
-    "Oder?"
+    symb"Oder?"
 
     # Atropos Gedanken
-    "Was soll ich jetzt machen? Soll ich sie nehmen?"
-    #show screen force_mouse_move_1
+    symb"Was soll ich jetzt machen? Soll ich sie nehmen?"
+    show screen force_mouse_move_threeoptions
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump not_take_pill
         "Ich nehme die Pille, sobald ich sie brauche.":
-            hide screen force_mouse_move
+            hide screen force_mouse_move_threeoptions
             jump later_take_pill
 
 
@@ -153,83 +156,83 @@ label take_pill:
     $ pill_taken = True
 
     # Atropos Gedanken
-    "Ich sollte die Pille besser jetzt sofort nehmen."
+    symb"Ich sollte die Pille besser jetzt sofort nehmen."
 
     scene detail_pill
     with fadeshort
 
     # Atropos Gedanken
-    "So… schnell runter damit, ehe ich es schon wieder vergesse."
+    symb"So… schnell runter damit, ehe ich es schon wieder vergesse."
 
     scene street
     with fadeshort
 
     # Atropos Gedanken
-    "Es war ein großer Fehler gewesen in letzter Zeit nicht auf die regelmäßige Einnahme zu achten."
+    symb"Es war ein großer Fehler gewesen in letzter Zeit nicht auf die regelmäßige Einnahme zu achten."
 
     # Atropos Gedanken
-    "Wenn ich genauer darüber nachdenke… Vermutlich war ich nicht so glücklich, wie ich hätte sein können."
+    symb"Wenn ich genauer darüber nachdenke… Vermutlich war ich nicht so glücklich, wie ich hätte sein können."
 
     # Atropos Gedanken
-    "Aber ich möchte glücklich sein. Ich möchte genauso glücklich sein wie alle anderen."
+    symb"Aber ich möchte glücklich sein. Ich möchte genauso glücklich sein wie alle anderen."
 
     # Atropos Gedanken
-    "Ohne die Pille habe ich mich irgendwie so… leer gefühlt. Da waren Gedanken gewesen, die ich nicht haben wollte."
+    symb"Ohne die Pille habe ich mich irgendwie so… leer gefühlt. Da waren Gedanken gewesen, die ich nicht haben wollte."
 
     # Atropos Gedanken
-    "Aber ich beginne mich langsam wieder besser zu fühlen. Ich fühle mich gut. Zufrieden."
+    symb"Aber ich beginne mich langsam wieder besser zu fühlen. Ich fühle mich gut. Zufrieden."
 
     # Atropos Gedanken
-    "Die Happiness-Pille ist das, was ich brauche, um glücklich zu sein. Um ein glückliches Leben zu führen."
+    symb"Die Happiness-Pille ist das, was ich brauche, um glücklich zu sein. Um ein glückliches Leben zu führen."
 
     # Atropos Gedanken
-    "Sie ist wichtig und zukünftig werde ich sie nicht mehr vergessen! Dann kann ich endlich wieder das Leben führen, das ich führen will."
+    symb"Sie ist wichtig und zukünftig werde ich sie nicht mehr vergessen! Dann kann ich endlich wieder das Leben führen, das ich führen will."
 
     # Atropos Gedanken
-    "Ein gutes Leben."
+    symb"Ein gutes Leben."
 
     # Atropos Gedanken
-    "Ein glückliches Leben."
+    symb"Ein glückliches Leben."
 
     # Symbiont
-    "{i}Gut gemacht, Atropos. Das ist es was wichtig ist: Ein glückliches Leben und genau dieses Leben führst du nun wieder. {/i}"
+    symb"{i}Gut gemacht, Atropos. Das ist es was wichtig ist: Ein glückliches Leben und genau dieses Leben führst du nun wieder. {/i}"
 
     # Symbiont
-    "{i}Vergiss niemals, glücklich zu sein und immer deinem Glück zu folgen. {/i}"
+    symb"{i}Vergiss niemals, glücklich zu sein und immer deinem Glück zu folgen. {/i}"
 
     # Symbiont
-    "{i}In jeder einzelnen Entscheidung. {/i}"
+    symb"{i}In jeder einzelnen Entscheidung. {/i}"
 
     # Atropos Gedanken
-    "Ja, ich werde es nicht vergessen."
+    symb"Ja, ich werde es nicht vergessen."
 
 
     jump shop
 
 label not_take_pill:
     # Atropos Gedanken
-    "Ich nehme die Pille nicht- ich brauche sie nicht!"
+    symb"Ich nehme die Pille nicht- ich brauche sie nicht!"
 
     # Atropos Gedanken
-    "Nicht mehr zumindest."
+    symb"Nicht mehr zumindest."
 
     # Atropos Gedanken
-    "Warum auch? Ich bin auch ohne sie glücklich. Sie ist komplett überflüssig."
+    symb"Warum auch? Ich bin auch ohne sie glücklich. Sie ist komplett überflüssig."
 
     # Atropos Gedanken
-    "Obwohl ich sie die letzten Tage so unregelmäßig genommen habe, habe ich keinen Unterschied zu sonst bemerkt."
+    symb"Obwohl ich sie die letzten Tage so unregelmäßig genommen habe, habe ich keinen Unterschied zu sonst bemerkt."
 
     # Atropos Gedanken
-    "Ich war glücklich und ich bin glücklich. Dafür brauche ich die Pille nicht. Sie scheint fast nur ein Placebo zu sein."
+    symb"Ich war glücklich und ich bin glücklich. Dafür brauche ich die Pille nicht. Sie scheint fast nur ein Placebo zu sein."
 
     # Atropos Gedanken
-    "Die Hauptsache ist doch, dass ich glücklich bin und nicht, wie ich dieses Glück erreiche."
+    symb"Die Hauptsache ist doch, dass ich glücklich bin und nicht, wie ich dieses Glück erreiche."
 
     # Atropos Gedanken
-    "Ich werde die Tablette einfach weiterhin nicht nehmen. Das wird schon keinem auffallen. Und wenn doch, fange ich einfach an, sie wieder zu nehmen."
+    symb"Ich werde die Tablette einfach weiterhin nicht nehmen. Das wird schon keinem auffallen. Und wenn doch, fange ich einfach an, sie wieder zu nehmen."
 
     # Atropos Gedanken
-    "Schaden wird sie mir auf keinen Fall."
+    symb"Schaden wird sie mir auf keinen Fall."
 
     scene street
     with fadeshort
@@ -239,28 +242,28 @@ label not_take_pill:
 
 label later_take_pill:
     # Atropos Gedanken
-    "Ich nehme die Pille, sobald ich sie brauche. Das sollte ausreichen."
+    symb"Ich nehme die Pille, sobald ich sie brauche. Das sollte ausreichen."
 
     # Atropos Gedanken
-    "Ich weiß ja, dass die Tablette wichtig ist. Nur durch sie kann ich wirklich glücklich sein…"
+    symb"Ich weiß ja, dass die Tablette wichtig ist. Nur durch sie kann ich wirklich glücklich sein…"
 
     # Atropos Gedanken
-    "Dennoch… Ich habe die letzten Tage keinen großen Unterschied bemerkt, obwohl ich sie unregelmäßig eingenommen hatte."
+    symb"Dennoch… Ich habe die letzten Tage keinen großen Unterschied bemerkt, obwohl ich sie unregelmäßig eingenommen hatte."
 
     # Atropos Gedanken
-    "Es wird schon keine Auswirkungen haben, dass ich sie die paar Mal vergessen habe."
+    symb"Es wird schon keine Auswirkungen haben, dass ich sie die paar Mal vergessen habe."
 
     # Atropos Gedanken
-    "Sicherheitshalber werde ich sie irgendwann heute trotzdem wieder einnehmen. Ich möchte mein Glück nicht riskieren."
+    symb"Sicherheitshalber werde ich sie irgendwann heute trotzdem wieder einnehmen. Ich möchte mein Glück nicht riskieren."
 
     # Atropos Gedanken
-    "Bei allen anderen wirkt sie immerhin auch. Alle Menschen sind glücklich seit Anan und die anderen sie uns zum Geschenk gemacht haben."
+    symb"Bei allen anderen wirkt sie immerhin auch. Alle Menschen sind glücklich seit Anan und die anderen sie uns zum Geschenk gemacht haben."
 
     # Atropos Gedanken
-    "Das ist kein Vergleich zu dem, wie kaputt und zerstört die Welt zuvor war."
+    symb"Das ist kein Vergleich zu dem, wie kaputt und zerstört die Welt zuvor war."
 
     # Atropos Gedanken
-    "Ich sollte dankbarer für diese Chance sein und mein Glück nicht riskieren."
+    symb"Ich sollte dankbarer für diese Chance sein und mein Glück nicht riskieren."
 
     scene street
     with fadeshort
@@ -271,7 +274,7 @@ label later_take_pill:
 label shop:
 
     # Atropos Gedanken
-    "Da ist ja schon Aither."
+    symb"Da ist ja schon Aither."
 
     # Atropos Gedanken
     #"Ich bin heute echt früh dran. Da ist schon Aither und ich habe noch reichlich Zeit, bis ich mit der Arbeit anfangen muss."
@@ -301,16 +304,20 @@ label shop:
 
     "Atropos" "Hey, Zelos. Ja, ich bin heute etwas zu früh aufgewacht und dachte mir, dass ich den Tag besser nutze, als noch weiter liegen zu bleiben."
 
+    show zelos happy
+
     "Zelos" "Eifrig und strebsam, das lobe ich mir. Aber man kann auch gar nicht anders als seine Arbeit hier zu lieben, natürlich ist man da gerne bereit mehr Zeit zu investieren."
 
     "Atropos" "Spaß macht die Arbeit hier auf jeden Fall und wir dienen der Menschheit. Das kann wohl nicht jeder von sich behaupten. (lacht)"
+
+    show zelos normal
 
     "Zelos" "Ich hoffe es stört dich nicht, wenn ich nebenbei weiterarbeite? Die neuste Lieferung der Happiness-Pille kam eben an und ich muss sie noch in die Regale einsortieren."
 
     "Atropos" "Alles gut, lass dich von mir nicht stören."
 
     # Atropos Gedanken
-    "Zelos ist ja wirklich nett, aber sein Übereifer kann manchmal auch etwas anstrengend sein. Wie kann er nur immer so voller Energie sein?"
+    symb"Zelos ist ja wirklich nett, aber sein Übereifer kann manchmal auch etwas anstrengend sein. Wie kann er nur immer so voller Energie sein?"
 
     menu:
         "Ich wollte ohnehin mal bei meinen Freunden im Büro vorbeischauen.":
@@ -323,6 +330,8 @@ label conversation_with_seller:
     show zelos normal
     "Atropos" "Ich wollte ohnehin mal bei Tycho und den anderen im Büro vorbeischauen. Wir sehen uns später."
 
+    show zelos happy
+
     "Zelos" "Richte den Anderen schöne Grüße von mir aus!"
 
     "Atropos" "Klar, mache ich."
@@ -331,9 +340,13 @@ label conversation_with_seller:
 
     "Atropos" "Ich weiß noch nicht, ob ich es zeitlich schaffe. Es türmt sich heute ein Berg an Arbeit, aber ich versuche es auf alle Fälle."
 
+    show zelos normal
+
     "Zelos" "(murmelt) Happiness- Glück für alle. Oh, tut mir leid, was hast du gesagt?"
 
     "Atropos" "(lacht) Nichts… alles gut, lass dich von mir nicht länger aufhalten. Wir sehen uns."
+
+    show zelos happy
 
     "Zelos" "Bis dann und einen wunderschön glücklichen Tag in der besten Firma der Welt!"
 
@@ -345,22 +358,20 @@ label conversation_with_seller:
         with fadeshort
 
         # Atropos Gedanken
-        "Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
+        symb"Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
 
-        stop music fadeout 1
-        play music "Sound_Buro.mp3" fadeout 2
-
+        play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
         scene office_1
         with fadeshort
 
         # Atropos Gedanken
-        "Hmm, es scheint noch keiner hier zu sein."
+        symb"Hmm, es scheint noch keiner hier zu sein."
 
         # Atropos Gedanken
-        "Dann bin ich wohl wirklich zu früh dran."
+        symb"Dann bin ich wohl wirklich zu früh dran."
 
         #Atropos Gedanken
-        "Ich könnte mich noch ein wenig umsehen."
+        symb"Ich könnte mich noch ein wenig umsehen."
 
 # klickbar => fehlt noch!!!!!
         # Wenn Spieler direkt auf den PC im Raum klickt
@@ -394,11 +405,11 @@ label conversation_with_seller:
             scene detail_calendar
             with fadeshort
             # Atropos Gedanken
-            "September 2256."
+            symb"September 2256."
             # Atropos Gedanken
-            "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
+            symb"Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
-            "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
+            symb"Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
             call screen arrow_watchoffice()
 
 
@@ -406,16 +417,16 @@ label conversation_with_seller:
             scene detail_photo_neiro
             with fadeshort
             # Atropos Gedanken
-            "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
+            symb"Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
-            "Was sein Bruder wohl jetzt so macht?"
+            symb"Was sein Bruder wohl jetzt so macht?"
             call screen arrow_watchoffice()
 
         label watchofficehourglass:
             scene detail_hourglass
             with fadeshort
             # Atropos Gedanken
-            "Was steht da?"
+            symb"Was steht da?"
             show detail_hourglass_overlay
             call screen arrow_watchoffice()
 
@@ -426,65 +437,96 @@ label conversation_with_seller:
             $ dialgoueoffice=True
 
             # Atropos Gedanken
-            "Ich höre Stimmen, könnten sie das sein?"
+            symb"Ich höre Stimmen, könnten sie das sein?"
 
             # Atropos Gedanken
-            "Tatsächlich, sie sind es, und sie scheinen sich eh noch zu unterhalten, bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
+            symb"Tatsächlich, sie sind es, und sie scheinen sich eh noch zu unterhalten, bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
             scene office_2
             with fadeshort
 
             "Atropos" "Hey Leute."
 
             show ireia normal:
-                xalign 0.5
+                xalign 0.35
 
             "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen! Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich!"
 
             "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
 
-            show tycho normal:
-                xalign 0.75
+            show ireia normal_gray
+            show tycho really_happy:
+                xalign 0.85
 
             "Tycho" "Das will ich dir aber auch geraten haben. (lacht) Uns kann man doch gar nicht {b}nicht{/b} mögen, nicht wahr? Und dementsprechend musst du uns auch vermisst haben."
 
-            show armene normal:
-                xalign 1
+            show tycho really_happy_gray
+            show armene normal behind neiro:
+                xalign 0.0
 
             "Armene" "Ja. Ja, das stimmt! Hallo Atropos."
 
             "Atropos" "Hi Armene, wie geht es dir?"
 
+            show armene happy
+
             "Armene" "Ich bin glücklich wie immer!"
+
+            show armene happy_gray
+            show ireia happy
 
             "Ireia" "Jetzt überfall die Arme doch nicht, du kennst sie doch."
 
+            show ireia strict
+
             "Ireia" "Und Armene, du solltest weiter deine Präsentation über das firmeninterne Kommunikationssystem vorbereiten- ich erwarte bessere Arbeit von dir als letztes Mal."
+
+            show ireia strict_gray
+            show armene normal
 
             "Armene" "Natürlich Ireia, tut mir leid!"
 
-            hide armene normal
+            hide armene
+            show tycho normal
 
             "Tycho" "Neiro, gesell dich doch zu uns, was sitzt du so einsam und verlassen an deinem Platz? Deine Arbeitszeit hat doch noch nicht angefangen."
 
-            show neiro normal:
-                xalign 0.25
+            show tycho normal_gray
+            show neiro nervous_laugh:
+                xalign 0.6
 
             "Neiro" "Oh… ich habe euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
 
             "Atropos" "Neiro, wie er leibt und lebt. (lacht)"
 
+            show neiro nervous_laugh_gray
+            show ireia strict
+
             "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte von dir keine schlechteren Ergebnisse deswegen sehen."
+
+            show ireia strict_gray
+            show neiro happy
 
             "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
 
             # Atropos Gedanken
-            "Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+            symb"Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+
+            show neiro happy_gray
+            show tycho normal
 
             "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
 
+            show tycho normal_gray
+            show ireia happy
+
             "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zu feiern haben. Das Glück der Menschen entsteht nicht von selbst."
 
+            show ireia happy_gray
+            show tycho happy
+
             "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
+
+            show tycho normal
 
             "Tycho" "Zurück zum Thema… diese Party wird gigantisch. Erinnert ihr euch noch an die anlässlich des 30. Gründungstages?"
 
@@ -499,18 +541,34 @@ label conversation_with_seller:
             "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
 
             "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch gab Anan mir eine Einladung."
+
+            show tycho really_happy
+
             "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
+
+            show tycho really_happy_gray
+            show ireia strict
+
             "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
 
             "Atropos" "Ja… du kannst doch nicht die Information anteasern und dann damit hinter dem Berg halten."
 
-            show armene normal:
-                xalign 1
+            show ireia strict_gray
+            show tycho happy
+            show armene normal_gray:
+                xalign 0.0
 
             "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
 
             "Atropos" "Habe ich dich gerade richtig verstanden? Die Großen Drei, alle hier in Astoa?"
+
+            show tycho happy_gray
+            show ireia happy
+
             "Ireia" "Das sind ja unglaubliche Neuigkeiten. Wieso hast du uns nicht schon früher davon erzählt?"
+
+            show ireia happy_gray
+            show tycho normal
 
             "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
 
@@ -518,32 +576,54 @@ label conversation_with_seller:
 
             "Atropos" "Dennoch kenne ich Atlas und Adrés nur von Fotos und nicht von Videoaufzeichnungen oder anderen Quellen. Es wird ein ziemliches Geheimnis um ihre Existenz gemacht."
 
-            "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
+            show tycho normal_gray
+            show ireia normal
 
+            "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
 
             "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
 
+            show ireia normal_gray
+            show armene shy
 
             "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
 
+            show armene shy_gray
+            show ireia strict
+
             "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
 
+            show ireia strict_gray
+            show armene shy
+
             "Armene" "Nein… ich wollte mich nur am Gespräch beteiligen…"
+
+            show armene shy_gray
+            show neiro normal
 
             "Neiro" "Um was geht es? Tut mir leid, ich war mit den Gedanken kurz abgeschweift…"
 
             "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
 
+            show neiro normal_gray
+            show tycho happy
+
             "Tycho" "(lacht) Und wieder das übliche Chaos. Es macht echt zu viel Spaß mit euch Zeit zu verbringen!"
+
+            show tycho happy_gray
+            show ireia strict
 
             "Ireia" "Armene, los an die Arbeit!"
 
+            show ireia strict_gray
+            show armene normal
+
             "Armene" "Ja natürlich Ireia, mache ich!"
 
-            hide armene normal
+            hide armene
 
             # Atropos Gedanken
-            "Was mich gerade interessieren würde…"
+            symb"Was mich gerade interessieren würde…"
 
             menu:
                 "Ich hätte gerne mehr Informationen über die Gründungsfeier.":
@@ -552,43 +632,89 @@ label conversation_with_seller:
                     jump entscheidung4_2
                 "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
                     jump entscheidung4_3
+                "Oh, es ist schon spät. Ich sollte ins Labor.":
+                    symb "Oh, es ist schon spät. Ich sollte ins Labor."
+                    jump nachentscheidung4
 
             label entscheidung4_1:
                 $ neiro_unterhalten = True
 
                 "Atropos" "Tycho, hast du noch mehr Informationen über die diesjährige Gründungsfeier?"
 
+                show tycho normal
+
                 "Tycho" "Hmm, gute Frage- lass mich einen Moment überlegen…"
+
+                show tycho normal_gray
+                show neiro normal
 
                 "Neiro" "Ihr sprecht über die Gründungsfeier?"
 
+                show neiro normal_gray
+                show ireia normal
+
                 "Ireia" "Ja, darum ging es schon die ganzen letzten Minuten."
+
+                show ireia normal_gray
+                show neiro happy
 
                 "Neiro" "Oh. Jedenfalls, ich weiß ein bisschen was…"
 
+                show neiro happy_gray
+                show tycho happy
+
                 "Tycho" "Worauf wartest du noch? Erzähl schon!"
+
+                show tycho happy_gray
+                show neiro normal
 
                 "Neiro" "Atlas und Adrés werden hierher nach Astoa kommen, um der Gründungsfeier beizuwohnen!"
 
                 "Atropos" "Neiro, das wissen wir bereits. (lacht) Immerhin haben wir dadurch noch einmal die Bestätigung."
 
+                show neiro normal_gray
+                show irea confused
+
                 "Ireia" "Weißt du sonst noch etwas? Irgendwelche Neuigkeiten?"
+
+                show ireia confused_gray
+                show neiro nervous_laugh
 
                 "Neiro" "Es hieß, dass heute im Laufe des Tages noch eine offizielle Ankündigung des Ganzen erfolgen soll."
 
                 "Atropos" "Eine offizielle Ankündigung? Also einfach eine Durchsage von Anan?"
 
+                show neiro normal
+
                 "Neiro" "Nein, soweit ich das weiß, werden alle drei live geschaltet."
+
+                show neiro normal_gray
+                show ireia happy
 
                 "Ireia" "Das gab es ja noch nie. Normalerweise kommunizieren wir nicht mit dem Rest der Welt… warum sollten wir auch?"
 
+                show ireia happy_gray
+                show tycho really_happy
+
                 "Tycho" "Das sind wirklich unglaubliche Neuigkeiten! Ich freue mich schon darauf. Die diesjährige Gründungsfeier wird unbeschreiblich und unvergesslich werden!"
+
+                show tycho really_happy_gray
+                show neiro happy
 
                 "Neiro" "Und es gibt noch etwas: Angeblich soll mit der Gründungsfeier eine neue Happiness-Pille vorgestellt werden."
 
+                show neiro happy_gray
+                show ireia confused
+
                 "Ireia" "Eine neue Pille? Sag nicht, dass es eine Pille sein wird, die uns noch glücklicher macht?"
 
+                show ireia confused_gray
+                show tycho normal
+
                 "Tycho" "Ich wüsste nicht, was es sonst sein könnte… der Tag wird ja immer besser!"
+
+                show tycho normal_gray
+                show ireia confused
 
                 "Ireia" "Atropos, müsstest du darüber nicht eigentlich mehr wissen?"
 
@@ -598,42 +724,73 @@ label conversation_with_seller:
 
                 "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
 
+                show ireia happy
+
                 "Ireia" "Sie wollen das Beste für die Welt, genauso wie Anan. Ist das nicht das Einzige, das zählt?"
 
+                show ireia happy_gray
+                show tycho happy
+
                 "Tycho" "Ihnen ist unser Wohl am aller wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht mir das vorzustellen!"
+
+                show tycho happy_gray
+                show ireia normal
 
                 "Ireia" "Wir wären immer noch im Krieg versunken. Ohne die Happiness-Pille, ohne glückliche Menschen würde es nur weiter Streit und Zwietracht geben."
 
                 "Atropos" "Ich frage mich immer noch, wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
 
+                show ireia normal_gray
+                show tycho really_happy
+
                 "Tycho" "Natürlich durch unsere Glücklichkeit: Happiness. Das ist das Einzige, was wirklich zählt. Spielen andere Gründe oder genauere Erläuterungen eine Rolle?"
+
+                show tycho really_happy_gray
+                show ireia strict
 
                 "Ireia" "Nein, das ist nun wirklich nichts, worüber wir uns Gedanken machen müssten."
 
                 "Ireia" "Sie schenkten uns Happiness und beendeten damit den 50-jährigen Krieg. Darum sind wir heute glücklich. Darum dürfen wir das Leben unserer Träume leben!"
 
                 # Symbiont
-                "{i}Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
+                symb"{i}Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
 
                 "Atropos" "Ihr habt Recht. (lacht) Also, andere Frage: Durftet ihr schon einmal persönlich mit Anan sprechen?"
 
+                show ireia strict_gray
+                show neiro happy
+
                 "Neiro" "Es geht gerade um Anan? Was ist mit ihm? Ist er nicht toll? So zuvorkommend und aufmerksam- einen besseren Chef kann man sich nicht wünschen."
+
+                show neiro happy_gray
+                show ireia happy
 
                 "Ireia" "Ich hatte Dank ein paar weniger Meetings mal mit ihm zu tun. Er ist die beeindruckendste Persönlichkeit, die ich jemals getroffen habe."
 
                 "Ireia" "Und obwohl er fast schon gottgleichen Status hat, ist er trotzdem auf dem Boden geblieben und kümmert sich um jeden einzelnen von uns."
 
+                show ireia happy_gray
+                show tycho normal
+
                 "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich vergessen meine Pille zu nehmen, weil ich eine Zeit lang krank war."
+
                 "Atropos" "Das hattest du ja noch nie erwähnt… wie ist er damit umgegangen?"
 
                 "Tycho" "Er war unglaublich verständnisvoll und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
 
+                show tycho happy
+
                 "Tycho" "Durch dieses Ereignis ist mir noch einmal bewusst geworden, wie wichtig die Happiness-Pille eigentlich ist."
 
                 "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht, wie sehr ich es damals bereut hatte."
+
+                show tycho really_happy
+
                 "Tycho" "Anan gibt alles, damit es uns gut geht und wir glücklich sind. Wie hatte ich es ihm nur so danken können?"
 
                 "Atropos" "Tycho… wie…"
+
+                show tycho happy
 
                 "Tycho" "Ich… Ich bin so glücklich, dass ich eine zweite Chance erhalten habe. Jetzt kann ich dabei helfen allen Menschen ihr Glück zu geben!"
 
@@ -643,13 +800,24 @@ label conversation_with_seller:
 
                 "Atropos" "Neiro, dein Bruder ist gestorben?"
 
+                show neiro nervous_laugh
+
                 "Neiro" "Achso… ja. Er ist von einem der Busse erwischt worden, der eine technische Fehlfunktion hatte."
+
+                show neiro nervous_laugh_gray
+                show ireia normal
 
                 "Ireia" "Möge er nun in Frieden glücklich sein."
 
                 "Atropos" "Wann findet seine Ehrung statt?"
 
+                show ireia normal_gray
+                show neiro normal
+
                 "Neiro" "Genau steht es noch nicht fest, aber voraussichtlich kommenden Sonntag. Ihr seid alle herzlich eingeladen, wenn ihr wollt. Es wird ein riesiges Fest geben."
+
+                show neiro normal_gray
+                show tycho happy
 
                 "Tycho" "Habe ich da Fest gehört? Da kann man doch gar nicht nein sagen, ich bin so was von dabei! Atropos, wie sieht es bei dir aus?"
 
@@ -657,15 +825,30 @@ label conversation_with_seller:
 
                 "Atropos" "Die Totenehrungen sind jedes Mal ein unvergessliches Ereignis. Ich freue mich schon darauf!"
 
+                show tycho happy_gray
+                show ireia happy
+
                 "Ireia" "Ich komme natürlich ebenfalls. Dein Bruder war ein guter Mensch, Neiro, dem das Glück aller Menschen sehr am Herzen lag. Er verdient es angemessen geehrt und gefeiert zu werden."
+
+                show ireia happy_gray
+                show neiro happy
 
                 "Neiro" "Danke, das freut mich sehr zu hören. Gebt die Einladung gerne an alle weiter. Ich freue mich, wenn viele Leute kommen!"
 
+                show neiro happy_gray
+                show tycho really_happy
+
                 "Tycho" "Du kannst dich auf uns verlassen. Das wird die beste Totenehrung dieses Jahres, versprochen."
+
+                show tycho really_happy_gray
+                show neiro happy
 
                 "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen am planen, was es alles zu Essen geben soll."
 
                 "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb, war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
+
+                show neiro happy_gray
+                show tycho normal
 
                 "Tycho" "Es war dafür aber auch eine wunderschöne Ehrung gewesen, die deinem Vater würdig gewesen war."
 
@@ -677,18 +860,24 @@ label conversation_with_seller:
             label nachentscheidung4:
                 "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
+                show tycho happy
+
                 "Tycho" "Mach's gut, bis zur Mittagspause."
+
+                show tycho happy_gray
+                show ireia happy
 
                 "Ireia" "Auf Wiedersehen!"
 
+                hide ireia
                 scene hall
                 with fadeshort
 
                 # Atropos Gedanken
-                "Es war schön, mal wieder eine Runde mit ihnen zu reden."
+                symb"Es war schön, mal wieder eine Runde mit ihnen zu reden."
 
                 # Atropos Gedanken
-                "Ich sollte öfter mal bei ihnen vorbeischauen."
+                symb"Ich sollte öfter mal bei ihnen vorbeischauen."
 
                 $ talkchesismorning= True
 
@@ -710,20 +899,20 @@ label conversation_with_seller:
 
                 "Atropos" "Erinnerst du dich noch daran, wie wir früher immer noch Ewigkeiten hier im Flur gestanden hatten?"
 
-                show chesis grinning
+                show chesis happy
 
                 "Chesis" "Klar, wie könnte ich das vergessen. Es ist schade, dass Kloth uns keine Gesellschaft mehr leistet, aber es ist auch so schön. Und wir sehen ihn ja nach der Arbeit."
 
                 "Atropos" "Alleine das eine Mal, als Kloth zu uns gelaufen kam, um uns zu erzählen, dass er Anans Chefsekretär werden soll!"
 
-                show chesis grinning2
+                show chesis happy_alt
 
-                "Chesis" "Stimmt, das war unvergesslich! Kloth kam zu uns gelaufen und…"
+                "Chesis" "Stimmt, das war unvergesslich! 2 Jahre ist es mittlerweile her, oder? Kloth kam zu uns gelaufen und…"
 
     # hier fehlt noch sepiafilter
                 show sepia
 
-                show chesis normal behind sepia:
+                show chesis normal_gray behind sepia:
                     xalign 0.75
 
                 show kloth grinning behind sepia:
@@ -735,23 +924,41 @@ label conversation_with_seller:
 
                 "Kloth" "Ihr werdet mir diese Neuigkeiten nicht glauben… ich hätte niemals damit gerechnet, dass mir so etwas jemals passieren würde!"
 
+                show kloth grinning_gray
+                show chesis normal
+
                 "Chesis" "Erzähl schon."
+
+                show chesis normal_gray
+                show kloth smiling
 
                 "Kloth" "Ihr wisst doch, dass ich gestern zu Anan gerufen wurde. Ich hatte mich ja da schon gefragt, wie ich zu dieser Ehre kam…"
 
                 "Atropos" "Und? Was war der Grund?"
 
+                show kloth grinning
+
                 "Kloth" "Es ist so unglaublich! Ich wurde zu seinem Chefsekretär befördert. Ich kann es immer noch nicht richtig fassen…"
 
-                show chesis grinning
+                show kloth grinning_gray
+                show chesis happy
 
                 "Chesis" "Herzlichen Glückwunsch, du hast es verdient!"
 
                 "Atropos" "Kloth, das sind ja fantastische Neuigkeiten. Ich freue mich riesig für dich!"
 
+                show chesis happy_gray
+                show kloth grinning
+
                 "Kloth" "Es war schon immer mein Traum, der Menschheit dienen zu können und als Anans Chefsekretär ist mir das nun wirklich möglich!"
 
+                show kloth grinning_gray
+                show chesis happy
+
                 "Chesis" "Wenn jemand von uns so etwas erreichen konnte, dann du."
+
+                show chesis happy_gray
+                show kloth smiling
 
                 "Kloth" "Du bist aber ebenfalls unglaublich, Chesis. Du bist der beste Verkäufer, den Aither besitzt!"
 
@@ -761,10 +968,12 @@ label conversation_with_seller:
 
                 "Atropos" "Wir helfen den Menschen dabei ein glückliches Leben zu führen."
 
+                show kloth smiling_gray
                 show chesis confused
 
                 "Chesis" "Kloth, was sind dann eigentlich deine Tätigkeiten?"
 
+                show chesis confused_gray
                 show kloth unsuresmiling
 
                 "Kloth" "Sorry, aber das muss mein kleines Geheimnis bleiben. Ihr wisst, dass ich euch sonst alles sage, aber darüber darf ich nicht reden."
@@ -776,13 +985,14 @@ label conversation_with_seller:
 
     # Ende Sepiafilter
 
-                show chesis normal
+                show chesis normal:
+                    xalign 0.5
 
                 "Atropos" "An solche Momente erinnere ich mich immer wieder gerne. Ich schätze jede Sekunde, die ich mit Kloth und dir verbringen darf."
 
                 "Chesis" "Geht mir genauso. Ihr seid meine besten Freunde seit der Kindheit."
 
-                show chesis grinning
+                show chesis happy
 
                 "Chesis" "Damals, ohne euch und ohne die Happiness-Pille, war ich einsam und verloren gewesen. Alles hatte sich geändert, nachdem ich euch kennenlernen durfte."
 
@@ -792,6 +1002,8 @@ label conversation_with_seller:
 
                 "Chesis" "Da vorne ist Anan. Wie soll ich ihn nur begrüßen?"
 
+                show chesis normal_gray:
+                    xalign 0.75
                 show anan normal_mid:
                     xalign 0.25
 
@@ -801,7 +1013,8 @@ label conversation_with_seller:
 
                 hide anan
 
-                show chesis confused
+                show chesis confused:
+                    xalign 0.5
 
                 "Chesis" "Jetzt habe ich meine Chance verpasst. Aber ist er nicht einfach nur unglaublich? Seine Präsenz nimmt den ganzen Raum ein, ohne dass er dafür etwas tun müsste."
 
@@ -811,30 +1024,30 @@ label conversation_with_seller:
 
                 "Chesis" "Also dann, ich muss jetzt hier weiter. Man sieht sich."
 
-                "Atropos" "Mach´s gut. Wir sehen uns dann ja spätestens beim Grillen."
+                "Atropos" "Mach's gut. Wir sehen uns dann ja spätestens beim Grillen."
 
                 "Atropos" "Oder in der Mittagspause, wenn wir sie gleichzeitig machen sollten."
 
-                show chesis grinning2
+                show chesis happy_alt
 
                 "Chesis" "Gerne."
 
                 hide chesis
 
                 #Atropos Gedanken
-                "Ich könnte mich noch einmal umsehen..."
+                symb"Ich könnte mich noch einmal umsehen..."
 
                 menu:
                     "Wieso ist hier ein Schmetterling?":
-                        "Wieso ist hier ein Schmetterling?"
+                        symb "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly
 
                     "Ich will mir die Bilder ansehen.":
-                        "Ich will mir die Bilder ansehen."
+                        symb"Ich will mir die Bilder ansehen."
                         jump watchhallpictures
 
                     "Ein Druckknopfmelder?":
-                        "Ein Druckknopfmelder?"
+                        symb"Ein Druckknopfmelder?"
                         jump watchhallalarm
 
                     "Ich sollte dann wirklich ins Labor.":
@@ -842,34 +1055,34 @@ label conversation_with_seller:
 
                 label watchhallbutterfly:
                     # Atropos
-                    "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
+                    "Atropos""Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                     # Atropos
-                    "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
+                    "Atropos""So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
                     # Atropos
-                    "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
+                    "Atropos""Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
-                    "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
+                    "Atropos""Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
                     jump watchnothinghall
 
                 label watchhallpictures:
                     scene detail_pictureshall
                     with fadeshort
                     # Atropos Gedanken
-                    "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
+                    symb"Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
                     # Atropos Gedanken
-                    "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
+                    symb"Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                     # Atropos Gedanken
-                    "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
+                    symb"Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
                     call screen arrow_watchhall()
                 label watchhallalarm:
                     scene detail_alarm
                     with fadeshort
                     # Atropos Gedanken
-                    "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
+                    symb"Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
                     # Atropos Gedanken
-                    "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
+                    symb"Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                     # Atropos Gedanken
-                    "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
+                    symb"Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
                     call screen arrow_watchhall()
 
                 label watchnothinghall:
@@ -878,10 +1091,10 @@ label conversation_with_seller:
 
                     "Atropos" "Ich sollte dann wirklich ins Labor."
 
+                    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
                     scene lab
                     with fadeshort
-                    stop music fadeout 2
-                    play music "Sound_labor_sorglos.mp3" fadeout 3
 
                     "Atropos" "Hey Era."
 
@@ -894,21 +1107,27 @@ label conversation_with_seller:
 
                     "Atropos" "…"
 
+                    show era shy
+
                     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
                     "Atropos" "Ja, natürlich… sorry…"
+
+                    show era confused
 
                     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
 
                     "Era" "Ich… ahhhh…"
 
                     # Atropos Gedanken
-                    "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+                    symb"Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
 
                     # Atropos Gedanken
-                    "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
+                    symb"Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
 
                     "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen musst."
+
+                    show era normal
 
                     "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
@@ -916,50 +1135,69 @@ label conversation_with_seller:
 
                     "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
 
+                    show era shy
+
                     "Era" "…"
+
+                    show era normal
 
                     "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir, wir könnten uns vielleicht mal treffen?"
 
                     # Atropos Gedanken
-                    "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+                    symb"Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
 
                     # Symbiont
-                    "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+                    symb"{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
 
                     # Symbiont
-                    "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
+                    symb"{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
 
                     "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
 
+                    show era happy
+
                     "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
 
-                    show era normal:
+                    show era happy_gray:
                         xalign 0.25
 
                     show narcais normal:
                         xalign 0.75
 
                     "Narcais" "Einen glücklichen guten Morgen zusammen! Habt ihr schon meine letzten Forschungsergebnisse gesehen? Ich kann mich selbst nur loben, sie sind hervorragend ausgefallen."
+
+                    show narcais normal_gray
+                    show era shy
+
                     "Era" "G-Guten Morgen…"
 
                     "Atropos" "Morgen… hattest du dich nicht mit dem Einfluss der Impfung auf Kinder und Jugendliche beschäftigt?"
+
+                    show era shy_gray
+                    show narcais normal
 
                     "Narcais" "Ja, genau. Und ich bin zu dem Schluss gekommen, dass wir es mit Glycohexatenol versuchen sollten."
 
                     "Narcais" "Die Jugendlichen vertragen den alten Wirkstoff ebenfalls gut, aber nachweislich können wir keine Kinder damit impfen."
 
+                    show narcais cocky
+
                     "Narcais" "Dies birgt allerdings bekannter Weise hohe Risiken, weil die Umweltverschmutzungen durch den Krieg auch Kinder betreffen können."
 
                     "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happiness-Pille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
+
+                    show narcais normal
 
                     "Narcais" "Die Kinder sollten ebenfalls in der Lage sein eine glückliche Kindheit führen zu dürfen! Wenn ich an meine eigene Kindheit denke…"
 
                     "Atropos" "Narcais- du zählst nur Fakten auf, die bereits bekannt sind. Was ist jetzt mit dem Glycohexatenol?"
 
                     # Atropos Gedanken
-                    "Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
+                    symb"Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
+
+                    show narcais cocky
 
                     "Narcais" "Ich habe die Erkenntnis gewonnen, dass der Wirkstoff die Durchführung der Impfung um einige Jahre vorverlegen dürfte."
 
@@ -971,11 +1209,17 @@ label conversation_with_seller:
 
                     "Atropos" "Danke, ich beschäftige mich später damit."
 
+                    show narcais normal
+
                     "Narcais" "Ja, natürlich. Lass dir Zeit. Nicht jeder kann so schnell und effizient arbeiten wie ich…"
 
                     hide narcais
 
                     "Atropos" "Sorry für die Unterbrechung, Era. Also, wir schreiben dann einfach die Tage, okay?"
+
+                    show era normal:
+                        xalign 0.5
+
 
                     "Era" "J-Ja… natürlich. Danke Atropos!"
 
@@ -989,22 +1233,21 @@ label conversation_with_seller:
         with fadeshort
 
         # Atropos Gedanken
-        "Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
+        symb"Da vorne liegt das Büro- ich frage mich, ob die anderen wohl schon da sind? Ich bin heute ziemlich früh dran."
 
-        stop music fadeout 1
-        play music "Sound_Buro.mp3" fadeout 2
+        play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
 
         scene office_1
         with fadeshort
 
         # Atropos Gedanken
-        "Hmm, es scheint noch keiner hier zu sein."
+        symb"Hmm, es scheint noch keiner hier zu sein."
 
         # Atropos Gedanken
-        "Dann bin ich wohl wirklich zu früh dran."
+        symb"Dann bin ich wohl wirklich zu früh dran."
 
         #Atropos Gedanken
-        "Ich könnte mich noch ein wenig umsehen."
+        symb"Ich könnte mich noch ein wenig umsehen."
 
 # klickbar => fehlt noch!!!!!
         # Wenn Spieler direkt auf den PC im Raum klickt
@@ -1019,59 +1262,59 @@ label conversation_with_seller:
 
         menu:
             "Ich schaue mir den Kalender an.":
-                "Ich schaue mir den Kalender an."
+                symb"Ich schaue mir den Kalender an."
                 jump watchofficecalendar2
 
             "Da ist ein interessantes Foto.":
-                "Da ist ein interessantes Foto."
+                symb"Da ist ein interessantes Foto."
                 jump watchofficephoto2
 
             "Neben der Sanduhr liegt etwas.":
-                "Neben der Sanduhr liegt etwas."
+                symb"Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass2
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
-                "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
+                symb"Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
                 jump watchnothingoffice2
 
         label watchofficecalendar2:
             scene detail_calendar
             with fadeshort
             # Atropos Gedanken
-            "September 2256."
+            symb"September 2256."
             # Atropos Gedanken
-            "Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
+            symb"Der Todestag meiner Mutter jährt sich bald wieder. Ich war noch so klein… Ich kann mich gar nicht mehr an sie erinnern."
             # Atropos Gedanken
-            "Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
-            call screen arrow_watchoffice()
+            symb"Vielleicht kommt Mora dann mal wieder zu Besuch, um gemeinsam zu feiern."
+            call screen arrow_watchoffice2()
 
 
         label watchofficephoto2:
             scene detail_photo_neiro
             with fadeshort
             # Atropos Gedanken
-            "Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
+            symb"Oh, Neiro! Das daneben muss dann wohl sein Bruder sein. Die beiden scheinen allen Anschein nach gut miteinander auszukommen."
             # Atropos Gedanken
-            "Was sein Bruder wohl jetzt so macht?"
-            call screen arrow_watchoffice()
+            symb"Was sein Bruder wohl jetzt so macht?"
+            call screen arrow_watchoffice2()
 
         label watchofficehourglass2:
             scene detail_hourglass
             with fadeshort
             # Atropos Gedanken
-            "Was steht da?"
+            symb"Was steht da?"
             show detail_hourglass_overlay
-            call screen arrow_watchoffice()
+            call screen arrow_watchoffice2()
 
         label watchnothingoffice2:
 
             $ dialgoueoffice=True
 
             # Atropos Gedanken
-            "Ich höre Stimmen, könnten sie das sein?"
+            symb"Ich höre Stimmen, könnten sie das sein?"
 
             # Atropos Gedanken
-            "Tatsächlich, sie sind es, und sie scheinen sich eh noch zu unterhalten, bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
+            symb"Tatsächlich, sie sind es, und sie scheinen sich eh noch zu unterhalten, bevor sie den Tag starten. Ich sollte mich zu ihnen gesellen."
 
             scene office_2
             with fadeshort
@@ -1079,19 +1322,21 @@ label conversation_with_seller:
             "Atropos" "Hey Leute."
 
             show ireia normal:
-                xalign 0.5
+                xalign 0.35
 
             "Ireia" "Atropos, wie schön dich hier mal wieder anzutreffen. Du hast dich schon seit einer Weile nicht mehr im Büro blicken lassen. Vermisst hast du uns wohl nicht sonderlich."
 
             "Atropos" "Nun, ist ja auch nicht so ganz mein Arbeitsplatz. (lacht) Und keine Sorge, ich habe euch alle vermisst."
 
+            show ireia normal_gray
             show tycho normal:
-                xalign 0.75
+                xalign 0.85
 
             "Tycho" "Das will ich dir aber auch geraten haben. (lacht) Uns kann man doch gar nicht {b}nicht{/b} mögen, nicht wahr? Und dementsprechend musst du uns auch vermisst haben."
 
+            show tycho normal_gray
             show armene normal:
-                xalign 1
+                xalign 0.0
 
             "Armene" "Ja. Ja, das stimmt! Hallo Atropos."
 
@@ -1099,35 +1344,62 @@ label conversation_with_seller:
 
             "Armene" "Ich bin glücklich wie immer!"
 
+            show armene normal_gray
+            show ireia happy
+
             "Ireia" "Jetzt überfall die Arme doch nicht, du kennst sie doch."
+
+            show ireia strict
 
             "Ireia" "Und Armene, du solltest weiter deine Präsentation über das firmeninterne Kommunikationssystem vorbereiten- ich erwarte bessere Arbeit von dir als letztes Mal."
 
+            show ireia strict_gray
+            show armene shy
+
             "Armene" "Natürlich Ireia, tut mir leid!"
 
-            hide armene normal
+            hide armene
+            show tycho normal
 
             "Tycho" "Neiro, gesell dich doch zu uns, was sitzt du so einsam und verlassen an deinem Platz? Deine Arbeitszeit hat doch noch nicht angefangen."
 
+            show tycho normal_gray
             show neiro normal:
-                xalign 0.25
+                xalign 0.6
 
             "Neiro" "Oh… ich hatte euch gar nicht bemerkt, tut mir leid. Atropos? Was machst du hier? Arbeitest du nicht in einer anderen Abteilung? Verkauf oder so?"
 
             "Atropos" "Neiro, wie er leibt und lebt. (lacht)"
 
+            show neiro normal_gray
+            show ireia strict
+
             "Ireia" "Du solltest definitiv an deinem Gedächtnis arbeiten, Neiro. Es wird in letzter Zeit immer kritischer. Ich möchte deswegen von dir keine schlechteren Ergebnisse sehen."
+
+            show ireia strict_gray
+            show neiro happy
 
             "Neiro" "Natürlich Ireia, ich gebe weiterhin mein Bestes, du musst dir keine Sorgen machen."
 
             # Atropos Gedanken
-            "Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+            symb"Neiro hatte schon immer eine seltsame Art mit Kritik umzugehen. Aber immerhin verträgt er dadurch Ireias direkte Art gut."
+
+            show neiro happy_gray
+            show tycho normal
 
             "Tycho" "Habt ihr es eigentlich schon gehört? Anan will anlässlich des diesjährigen 37. Gründungstages wieder eine riesige Feier veranstalten!"
 
+            show tycho normal_gray
+            show ireia happy
+
             "Ireia" "Dann sollten wir noch härter arbeiten, damit wir auch einen Anlass zum Feiern haben. Das Glück der Menschen entsteht nicht von selbst."
 
+            show ireia happy_gray
+            show tycho happy
+
             "Tycho" "Natürlich arbeiten wir hart! Aber das tut man für Aither doch auch gerne."
+
+            show tycho normal
 
             "Tycho" "Zurück zum Thema… diese Party wird gigantisch. Erinnert ihr euch noch an die anlässlich des 30. Gründungstages?"
 
@@ -1142,19 +1414,34 @@ label conversation_with_seller:
             "Tycho" "Ach ja, der 30. Gründungstag… eine bessere Feier habe ich noch nie erlebt! Und ich war schon auf vielen Feiern gewesen, das könnt ihr mir glauben."
 
             "Tycho" "Damals hatte ich gerade erst hier angefangen. Ich war nur ein einfacher Praktikant gewesen, aber dennoch gab Anan mir eine Einladung."
+
+            show tycho really_happy
+
             "Tycho" "Ich konnte mein Glück kaum fassen. Es war berauschend! All das Essen im Überfluss und dann die Musik, der Tanz…"
+
+            show tycho really_happy_gray
+            show ireia strict
+
             "Ireia" "Tycho, fass dich kürzer. Wir haben noch Arbeit zu erledigen. Und jetzt erzähl schon, was hast du vom diesjährigen Gründungstag gehört?"
 
             "Atropos" "Ja… du kannst doch nicht die Information anteasern und dann damit hinter dem Berg halten."
 
-            show armene normal:
-                xalign 1
+            show armene normal_gray:
+                xalign 0.0
+            show ireia strict_gray
+            show tycho normal
 
             "Tycho" "Sorry, sorry… also, ich weiß nicht viel, aber angeblich sollen Atlas und Adrés höchstpersönlich vorbeikommen, um gemeinsam mit Anan diesen Tag zu feiern."
 
             "Atropos" "Habe ich dich gerade richtig verstanden? Die Großen Drei, alle hier in Astoa?"
 
+            show tycho normal_gray
+            show ireia happy
+
             "Ireia" "Das sind ja unglaubliche Neuigkeiten! Wieso hast du uns nicht schon früher davon erzählt?"
+
+            show ireia happy_gray
+            show tycho normal
 
             "Tycho" "Weil ich davor selbst nur ganz vage Gerüchte gehört habe, aber mittlerweile verstärkt sich der Eindruck immer mehr, dass an den Gerüchten etwas Wahres dran sein könnte."
 
@@ -1162,30 +1449,56 @@ label conversation_with_seller:
 
             "Atropos" "Dennoch kenne ich Atlas und Adrés nur von Fotos und nicht von Videoaufzeichnungen oder anderen Quellen. Es wird ein ziemliches Geheimnis um ihre Existenz gemacht."
 
+            show tycho normal_gray
+            show ireia normal
+
             "Ireia" "Das ist aber auch gut so. Die drei sind immerhin dafür verantwortlich, dass alle Menschen glücklich sind."
 
             "Ireia" "Da haben sie Wichtigeres zu tun, als sich darum zu kümmern, dass wir Informationen über sie bekommen."
 
+            show ireia normal_gray
+            show armene shy
+
             "Armene" "Ich frage mich, ob Atlas und Adrés wohl auch so unglaublich charmant und gutaussehend sind wie Anan… (seufzt verträumt)"
+
+            show armene shy_gray
+            show ireia strict
 
             "Ireia" "Armene? Wie lange stehst du schon hier? Bist du fertig mit deiner Präsentation?"
 
+            show ireia strict_gray
+            show armene shy
+
             "Armene" "Nein… Ich wollte mich nur am Gespräch beteiligen…"
+
+            show armene shy_gray
+            show neiro nervous_laugh
 
             "Neiro" "Um was geht es? Tut mir leid, ich bin mit den Gedanken kurz abgeschweift…"
 
+            show neiro normal
+
             "Neiro" "Mein Bruder ist gestern gestorben und wir müssen noch die Feier ihm zu Ehren vorbereiten…"
+
+            show neiro normal_gray
+            show tycho happy
 
             "Tycho" "(lacht) Und wieder das übliche Chaos. Es macht echt zu viel Spaß mit euch Zeit zu verbringen!"
 
+            show tycho happy_gray
+            show ireia strict
+
             "Ireia" "Armene, los an die Arbeit!"
+
+            show ireia strict_gray
+            show armene normal
 
             "Armene" "Ja natürlich Ireia, mache ich!"
 
-            hide armene normal
+            hide armene
 
             # Atropos Gedanken
-            "Was mich gerade interessieren würde…"
+            symb"Was mich gerade interessieren würde…"
 
             menu:
                 "Ich hätte gerne mehr Informationen über die Gründungsfeier.":
@@ -1194,6 +1507,9 @@ label conversation_with_seller:
                     jump entscheidung4_2V2
                 "Ich will mich bei Neiro nach seinem verstorbenen Bruder erkundigen.":
                     jump entscheidung4_3V2
+                "Oh, es ist schon spät. Ich sollte ins Labor.":
+                    symb "Oh, es ist schon spät. Ich sollte ins Labor."
+                    jump nachentscheidung4V2
 
             label entscheidung4_1V2:
 
@@ -1201,21 +1517,44 @@ label conversation_with_seller:
 
                 "Atropos" "Tycho, hast du noch mehr Informationen über die diesjährige Gründungsfeier?"
 
+                show tycho normal
+
                 "Tycho" "Hmm, gute Frage- lass mich einen Moment überlegen…"
+
+                show tycho normal_gray
+                show neiro nervous_laugh
 
                 "Neiro" "Ihr sprecht über die Gründungsfeier?"
 
+                show neiro nervous_laugh_gray
+                show ireia normal
+
                 "Ireia" "Ja, darum ging es schon die ganzen letzten Minuten."
+
+                show ireia normal_gray
+                show neiro normal
 
                 "Neiro" "Oh. Jedenfalls, ich weiß ein bisschen was…"
 
+                show neiro normal_gray
+                show tycho happy
+
                 "Tycho" "Worauf wartest du noch? Erzähl schon!"
+
+                show tycho happy_gray
+                show neiro normal
 
                 "Neiro" "Atlas und Adrés werden hierher nach Astoa kommen, um der Gründungsfeier beizuwohnen!"
 
                 "Atropos" "Neiro, das wissen wir bereits. (lacht) Immerhin haben wir dadurch noch einmal die Bestätigung."
 
+                show neiro normal_gray
+                show ireia confused
+
                 "Ireia" "Weißt du sonst noch etwas? Irgendwelche Neuigkeiten?"
+
+                show ireia confused_gray
+                show neiro normal
 
                 "Neiro" "Es hieß, dass heute im Laufe des Tages noch eine offizielle Ankündigung des Ganzen erfolgen soll."
 
@@ -1223,23 +1562,41 @@ label conversation_with_seller:
 
                 "Neiro" "Nein, soweit ich das weiß, werden alle drei live geschaltet."
 
+                show neiro normal_gray
+                show ireia happy
+
                 "Ireia" "Das gab es ja noch nie! Normalerweise kommunizieren wir nicht mit den Menschen außerhalb von Astoa… warum sollten wir auch?"
+
+                show ireia happy_gray
+                show tycho really_happy
 
                 "Tycho" "Das sind wirklich unglaubliche Neuigkeiten! Ich freue mich schon darauf. Die diesjährige Gründungsfeier wird unbeschreiblich und unvergesslich werden!"
 
+                show tycho really_happy_gray
+                show neiro happy
+
                 "Neiro" "Und es gibt noch etwas: Angeblich soll mit der Gründungsfeier eine neue Happiness-Pille vorgestellt werden."
+
+                show neiro happy_gray
+                show ireia normal
 
                 "Ireia" "Eine neue Pille? Sag nicht, dass es eine Pille sein wird, die uns noch glücklicher macht?"
 
+                show ireia normal_gray
+                show tycho normal
+
                 "Tycho" "Ich wüsste nicht, was es sonst sein könnte… der Tag wird ja immer besser!"
+
+                show tycho normal_gray
+                show ireia confused
 
                 "Ireia" "Atropos, müsstest du darüber nicht eigentlich mehr wissen?"
 
                 # Atropos Gedanken
-                "Eine neue Pille? Ob sie dann wohl besser wirkt als die aktuelle? Immerhin scheine ich sie momentan nicht wirklich für mein Glück zu brauchen."
+                symb"Eine neue Pille? Ob sie dann wohl besser wirkt als die aktuelle? Immerhin scheine ich sie momentan nicht wirklich für mein Glück zu brauchen."
 
                 # Symbiont
-                "{i}Doch, du brauchst sie. Merkst du nicht, dass du immer mehr zu zweifeln beginnst? Zweifel säen Unmut und Unzufriedenheit. Du gefährdest dein Glück. {/i}"
+                symb"{i}Doch, du brauchst sie. Merkst du nicht, dass du immer mehr zu zweifeln beginnst? Zweifel säen Unmut und Unzufriedenheit. Du gefährdest dein Glück. {/i}"
 
                 jump nachentscheidung4V2
 
@@ -1247,53 +1604,82 @@ label conversation_with_seller:
 
                 "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
 
+                show ireia happy
+
                 "Ireia" "Sie wollen das Beste für die Welt, genauso wie Anan. Ist das nicht das Einzige, das zählt?"
 
+                show ireia happy_gray
+                show tycho happy
+
                 "Tycho" "Ihnen ist unser Wohl am aller Wichtigsten. Stellt euch nur vor, wie die Welt ohne sie wäre. Ich wage es gar nicht, mir das vorzustellen!"
+
+                show tycho happy_gray
+                show ireia normal
 
                 "Ireia" "Wir wären immer noch im Krieg versunken. Ohne die Happiness-Pille, ohne glückliche Menschen würde es nur weiter Streit und Zwietracht geben."
 
                 "Atropos" "Ich frage mich immer noch, wie ausgerechnet diese drei Männer es damals geschafft haben uns den Frieden zu schenken…"
 
+                show ireia normal_gray
+                show tycho happy
+
                 "Tycho" "Natürlich durch unsere Glücklichkeit: Happiness. Das ist das Einzige, was wirklich zählt. Spielen andere Gründe oder genauere Erläuterungen eine Rolle?"
+
+                show tycho happy_gray
+                show ireia normal
 
                 "Ireia" "Nein, das ist nun wirklich nichts, worüber wir uns Gedanken machen müssten."
 
                 "Ireia" "Sie schenkten uns Happiness und beendeten damit den 50-jährigen Krieg. Darum sind wir heute glücklich. Darum dürfen wir das Leben unserer Träume leben!"
 
                 # Symbiont
-                "{i} Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
+                symb"{i} Sie haben Recht. Warum solltest du dir weiter darüber Gedanken machen? Es spielt keine Rolle. Die Hauptsache ist ein glückliches Leben und das besitzt du. {/i}"
 
                 # Atropos Gedanken
-                "Ja, ich besitze ein glückliches Leben. Aber sollte man aus diesem Grund dennoch nichts hinterfragen?"
+                symb"Ja, ich besitze ein glückliches Leben. Aber sollte man aus diesem Grund dennoch nichts hinterfragen?"
 
                 "Atropos" "Sollten wir nicht mehr erfahren dürfen? Wieso machen Anan und die anderen beiden so ein großes Geheimnis aus der Vergangenheit?"
 
                 "Atropos" "Wir wissen, dass sie den Krieg beendet haben und dass das mit Hilfe der Happiness-Pille passiert ist… aber wie?"
 
+                show ireia confused
+
                 "Ireia" "Habt ihr schon Mal die Ehre gehabt mit Anan zu sprechen?"
 
                 # Atropos Gedanken
-                "Sie übergehen mich. Ist das in letzter Zeit nicht irgendwie häufiger vorgekommen? Als würden sie die Wahrheit einfach nicht hören wollen."
+                symb"Sie übergehen mich. Ist das in letzter Zeit nicht irgendwie häufiger vorgekommen? Als würden sie die Wahrheit einfach nicht hören wollen."
 
                 # Atropos Gedanken
-                "Naja, egal, ich will mir gerade keine Gedanken mehr darum machen. Heute ist so ein schöner Tag. Ich sollte aufhören über so unnötiges Zeug nachzudenken."
+                symb"Naja, egal, ich will mir gerade keine Gedanken mehr darum machen. Heute ist so ein schöner Tag. Ich sollte aufhören über so unnötiges Zeug nachzudenken."
+
+                show ireia normal
 
                 "Ireia" "Ich hatte Dank ein paar weniger Meetings mal mit ihm zu tun. Er ist die beeindruckendste Persönlichkeit, die ich jemals getroffen habe."
 
                 "Ireia" "Und obwohl er fast schon gottgleichen Status hat, ist er trotzdem auf dem Boden geblieben und kümmert sich um jeden einzelnen von uns."
 
+                show ireia normal_gray
+                show neiro happy
+
                 "Neiro" "Es geht gerade um Anan? Was ist mit ihm? Ist er nicht toll? So zuvorkommend und aufmerksam- einen besseren Chef kann man sich nicht wünschen."
 
+                show neiro happy_gray
+                show tycho normal
+
                 "Tycho" "Ich hatte ein einziges Mal mit ihm gesprochen. Damals hatte ich vergessen meine Pille zu nehmen, weil ich eine Zeit lang krank war."
+
                 "Atropos" "Das hattest du ja noch nie erwähnt… wie ist er damit umgegangen?"
+
+                show tycho happy
 
                 "Tycho" "Er war unglaublich verständnisvoll und hatte mir klar gemacht, dass er nur um mein Wohlergehen und mein Glück besorgt ist."
 
                 # Atropos Gedanken
-                "Ob Anan wohl auch bei mir so verständnisvoll reagieren würde, wenn er mitbekommen würde, dass ich die Pille nicht genommen habe?"
+                symb"Ob Anan wohl auch bei mir so verständnisvoll reagieren würde, wenn er mitbekommen würde, dass ich die Pille nicht genommen habe?"
 
                 "Tycho" "Durch dieses Ereignis ist mir noch einmal bewusst geworden, wie wichtig die Happiness-Pille eigentlich ist."
+
+                show tycho really_happy
 
                 "Tycho" "Ich bin froh, dass Anan mir die Augen geöffnet hat. Ihr wisst gar nicht, wie sehr ich es damals bereut hatte."
 
@@ -1309,13 +1695,24 @@ label conversation_with_seller:
 
                 "Atropos" "Neiro, dein Bruder ist gestorben?"
 
+                show neiro nervous_laugh
+
                 "Neiro" "Achso… ja. Er ist von einem der Busse erwischt worden, der eine technische Fehlfunktion hatte."
+
+                show neiro nervous_laugh_gray
+                show ireia normal
 
                 "Ireia" "Möge er nun in Frieden glücklich sein."
 
                 "Atropos" "Wann findet seine Ehrung statt?"
 
+                show ireia normal_gray
+                show neiro normal
+
                 "Neiro" "Genau steht es noch nicht fest, aber voraussichtlich kommenden Sonntag. Ihr seid alle herzlich eingeladen, wenn ihr wollt. Es wird ein riesiges Fest geben."
+
+                show neiro normal_gray
+                show tycho happy
 
                 "Tycho" "Habe ich da Fest gehört? Da kann man doch gar nicht nein sagen, ich bin so was von dabei! Atropos, wie sieht es bei dir aus?"
 
@@ -1323,14 +1720,30 @@ label conversation_with_seller:
 
                 "Atropos" "Die Totenehrungen sind jedes Mal ein unvergessliches Ereignis. Ich freue mich schon darauf!"
 
+                show tycho happy_gray
+                show ireia happy
+
                 "Ireia" "Ich komme natürlich ebenfalls. Dein Bruder war ein guter Mensch, Neiro, dem das Glück aller Menschen sehr am Herzen lag. Er verdient es angemessen geehrt und gefeiert zu werden."
+
+                show ireia happy_gray
+                show neiro happy
 
                 "Neiro" "Danke, das freut mich sehr zu hören. Gebt die Einladung gerne an alle weiter. Ich freue mich, wenn viele Leute kommen!"
 
+                show neiro happy_gray
+                show tycho really_happy
+
                 "Tycho" "Du kannst dich auf uns verlassen. Das wird die beste Totenehrung dieses Jahres, versprochen."
 
+                show tycho really_happy_gray
+                show neiro happy
+
                 "Neiro" "Das ohnehin. Immerhin findet sie in meiner Familie statt. Das passiert auch nicht alle Tage. Meine Eltern sind schon seit Tagen am planen, was es alles zu Essen geben soll."
+
                 "Atropos" "Kann ich mir vorstellen. Als letztes Jahr mein Vater starb, war die Planung seiner Ehrung auch ein großes Ereignis für meinen Bruder und mich gewesen."
+
+                show neiro happy_gray
+                show tycho normal
 
                 "Tycho" "Es war dafür aber auch eine wunderschöne Ehrung gewesen, die deinem Vater würdig gewesen war."
 
@@ -1343,7 +1756,12 @@ label conversation_with_seller:
             label nachentscheidung4V2:
                 "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
+                show tycho happy
+
                 "Tycho" "Mach's gut, bis zur Mittagspause!"
+
+                show tycho happy_gray
+                show ireia happy
 
                 "Ireia" "Auf Wiedersehen!"
 
@@ -1351,15 +1769,19 @@ label conversation_with_seller:
                 with fadeshort
 
                 # Atropos Gedanken
-                "So… dann mal auf ins Labor."
+                symb"So… dann mal auf ins Labor."
 
                 $ talkchesismorning= True
+
+                show chesis normal
 
                 "Chesis" "Guten Morgen!"
 
                 "Atropos" "Hey Chesis, wie schön dir über den Weg zu laufen."
 
                 "Atropos" "Hast du Kloth heute schon gesehen?"
+
+                show chesis confused
 
                 "Chesis" "Nein. Ich…"
 
@@ -1370,7 +1792,9 @@ label conversation_with_seller:
                 "Atropos" "Mir fällt auf, dass er auch auf meine Nachrichten nicht mehr geantwortet hat… seltsam…"
 
                 # Symbiont
-                "{i}Vermutlich ist er einfach viel beschäftigt. Die anderen meinten doch, dass bald die Gründungsfeier sein wird. Da wird Kloth viel zu organisieren haben. {/i}"
+                symb"{i}Vermutlich ist er einfach viel beschäftigt. Die anderen meinten doch, dass bald die Gründungsfeier sein wird. Da wird Kloth viel zu organisieren haben. {/i}"
+
+                show chesis normal
 
                 "Chesis" "Ich… mein Kopf tut so weh. Tut mir leid, ich muss los…"
 
@@ -1380,7 +1804,11 @@ label conversation_with_seller:
 
                 "Atropos" "Über Kloth und dass er seit gestern fast schon spurlos verschwunden ist."
 
+                show chesis confused
+
                 "Chesis" "Ich bin mir sicher, er wird schon wieder auftauchen…"
+
+                show chesis happy
 
                 "Chesis" "Mach dir keinen Kopf! Du musst dir wirklich keine Gedanken machen. Es geht ihm bestimmt gut."
 
@@ -1389,39 +1817,49 @@ label conversation_with_seller:
                 "Chesis" "Er wird nachher wieder bei uns sein und wir werden alle zusammen grillen. So wie wir es schon seit Wochen geplant haben. "
 
                 # Atropos Gedanken
-                "Was ist denn nur los mit ihm? Er wirkt so anders. Normalerweise redet er nie so viel…"
+                symb"Was ist denn nur los mit ihm? Er wirkt so anders. Normalerweise redet er nie so viel…"
 
                 "Atropos" "Chesis, bist du dir sicher, dass alles in Ordnung ist?"
 
                 # vollkommen ruhig und gelassen.
 
+                show chesis happy_alt
+
                 "Chesis" "Ja natürlich ist alles in Ordnung. Warum fragst du? "
 
                 # Symbiont
-                "{i}Du hast es dir bestimmt nur eingebildet. Er ist glücklich, was sollte also nicht stimmen? {/i}"
+                symb"{i}Du hast es dir bestimmt nur eingebildet. Er ist glücklich, was sollte also nicht stimmen? {/i}"
 
                 "Atropos" "Alles gut… passt schon…"
 
                 # Atropos Gedanken
-                "Vielleicht gab es ja einen Vorfall zwischen ihm und seiner Freundin?"
+                symb"Vielleicht gab es ja einen Vorfall zwischen ihm und seiner Freundin?"
+
+                show chesis normal
 
                 "Chesis" "Also dann, ich muss los. Wir sehen uns später."
 
                 "Atropos" "Wenn es etwas gibt, worüber du mit mir reden möchtest, kannst du jederzeit zu mir kommen. Ich hoffe das weißt du."
 
+                show chesis happy
+
                 "Chesis" "Danke Atropos, du bist ein wahrer Freund. Aber mach dir keine Sorgen, es ist alles in Ordnung. Ich bin glücklich."
 
                 "Atropos" "(leise) Das ist alles, was zählt."
 
+                show chesis happy_alt
+
                 "Chesis" "Bis später!"
 
-                "Atropos" "Mach´s gut…"
+                "Atropos" "Mach's gut…"
+
+                hide chesis
 
                 #Atropos Gedanken
-                "… Das war ein wenig seltsam. Ich glaube, ich sollte mich ein wenig auf andere Gedanken bringen."
+                symb"… Das war ein wenig seltsam. Ich glaube, ich sollte mich ein wenig auf andere Gedanken bringen."
 
                 #Atropos Gedanken
-                "Ich könnte mich vielleicht noch einmal umsehen, bevor ich gehe..."
+                symb"Ich könnte mich vielleicht noch einmal umsehen, bevor ich gehe..."
 
                 menu:
                     "Wieso ist hier ein Schmetterling?":
@@ -1441,40 +1879,40 @@ label conversation_with_seller:
 
                 label watchhallbutterfly3:
                     # Atropos
-                    "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
+                    symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                     # Atropos
-                    "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
+                    symb"So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
                     # Atropos
-                    "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
+                    symb"Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
-                    "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
+                    symb"Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
+                    jump watchnothinghall3
 
                 label watchhallpictures3:
                     scene detail_pictureshall
                     with fadeshort
                     # Atropos Gedanken
-                    "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
+                    symb"Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
                     # Atropos Gedanken
-                    "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
+                    symb"Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                     # Atropos Gedanken
-                    "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                    call screen arrow_watchhall()
+                    symb"Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
+                    call screen arrow_watchhall3()
 
                 label watchhallalarm3:
                     scene detail_alarm
                     with fadeshort
                     # Atropos Gedanken
-                    "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
+                    symb"Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
                     # Atropos Gedanken
-                    "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
+                    symb"Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                     # Atropos Gedanken
-                    "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                    call screen arrow_watchhall()
+                    symb"Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
+                    call screen arrow_watchhall3()
 
                 label watchnothinghall3:
                     #Atropos Gedanken
-                    "Ich habe vermutlich lange genug herumgetrödelt. Wird Zeit, dass ich mich langsam an die Arbeit mache."
+                    symb"Ich habe vermutlich lange genug herumgetrödelt. Wird Zeit, dass ich mich langsam an die Arbeit mache."
                     jump worknachzelos
 
 label work:
@@ -1488,19 +1926,27 @@ label work:
 
     "Zelos" "Ich be…"
 
+    show zelos happy
+
     "Zelos" "(räuspert sich) Ich freue mich unglaublich für die beiden. Sie sind so weit gekommen und vor allem Kloth wird noch so viel mehr erreichen."
 
     "Atropos" "Als Kind hätte er sich vermutlich auch niemals vorstellen können eines Tages Chefsekretär von Anan zu werden."
 
+    show zelos normal
+
     "Zelos" "Also dann, ich muss nun wirklich weitermachen. Aither öffnet bald und die Pillen lagern sich weder von selbst ein, noch verkaufen sie sich von allein."
 
-    "Atropos" "Mach´s gut, wir sehen uns!"
+    "Atropos" "Mach's gut, wir sehen uns!"
 
     "Zelos" "Ach Atropos, ich vergaß: Bist du um 12:15 Uhr in der Mensa dabei?"
 
     "Atropos" "Ich denke, ich müsste es schaffen. Bis dann, man sieht sich."
 
+    show zelos happy
+
     "Zelos" "Bis nachher und einen wunderschön glücklichen Tag in der besten Firma der Welt!"
+
+    hide zelos
 
     label worknachzelos:
 
@@ -1510,16 +1956,16 @@ label work:
             with fadeshort
 
             # Atropos Gedanken
-            "Was muss ich heute noch alles erledigen? Narcais wollte mir seinen Bericht über seine letzten Forschungen schicken und sonst…"
+            symb"Was muss ich heute noch alles erledigen? Narcais wollte mir seinen Bericht über seine letzten Forschungen schicken und sonst…"
 
             # Atropos Gedanken
-            "Ach ja, stimmt. Ich muss noch einmal die Wirkstoffliste der Tabletten durchgehen. Anan wollte, dass ich alle erfasse, weil er Änderungen vornehmen möchte."
+            symb"Ach ja, stimmt. Ich muss noch einmal die Wirkstoffliste der Tabletten durchgehen. Anan wollte, dass ich alle erfasse, weil er Änderungen vornehmen möchte."
 
             # Atropos Gedanken
-            "Ich bin gespannt, was die neuen Wirkstoffe alles bewirken…"
+            symb"Ich bin gespannt, was die neuen Wirkstoffe alles bewirken…"
 
             # Atropos Gedanken
-            "Letztlich werde ich es wohl erst erfahren, wenn die Pille im Verkauf ist, immerhin arbeitet jeder nur an einem winzigen Teil des großen Ganzen."
+            symb"Letztlich werde ich es wohl erst erfahren, wenn die Pille im Verkauf ist, immerhin arbeitet jeder nur an einem winzigen Teil des großen Ganzen."
 
             show anan normal_mid :
                 xalign 0.5
@@ -1530,33 +1976,39 @@ label work:
 
             "Anan" "Atropos Laiotas- richtig? Kann ich die Liste heute noch von dir erwarten? Sie wird von meinen anderen Forschern benötigt."
             # Atropos Gedanken
-            "Anan kennt meinen Namen? Das werden die anderen niemals glauben, wenn ich es ihnen erzähle…"
+            symb"Anan kennt meinen Namen? Das werden die anderen niemals glauben, wenn ich es ihnen erzähle…"
 
             "Atropos" "Ja, natürlich, ich stelle sie dir heute fertig."
+
+            show anan happy_mid
 
             "Anan" "Vielen Dank! Wir alle schätzen deine Arbeit sehr. Denk immer daran: Den Glücklichen gehört die Welt. Kein Mensch sollte unglücklich sein."
 
             "Atropos" "Ich werde es nicht vergessen!"
 
+            show anan normal_mid
+
             "Anan" "Ich erwarte den Bericht um 16 Uhr in meinem Postfach."
 
             "Atropos" "Natürlich, ich werde dich nicht enttäuschen!"
+
+            show anan happy_mid
 
             "Anan" "Du könntest mich niemals enttäuschen. Ich wünsche dir einen Tag voller Glücklichkeit."
 
             hide anan
 
             # Atropos Gedanken
-            "Anan hat tatsächlich mit mir gesprochen? Ich muss träumen…"
+            symb"Anan hat tatsächlich mit mir gesprochen? Ich muss träumen…"
 
             # Atropos Gedanken
-            "Er war höflich gewesen, aber gleichzeitig so einnehmend. Man kann ihm keinen Wunsch abschlagen."
+            symb"Er war höflich gewesen, aber gleichzeitig so einnehmend. Man kann ihm keinen Wunsch abschlagen."
 
             # Atropos Gedanken
-            "Und dass er sich die Zeit genommen hat, mit mir zu sprechen, obwohl er Anan ist… Er kümmert sich wirklich um das Glück aller Menschen. Es ist nicht nur leeres Gerede."
+            symb"Und dass er sich die Zeit genommen hat, mit mir zu sprechen, obwohl er Anan ist… Er kümmert sich wirklich um das Glück aller Menschen. Es ist nicht nur leeres Gerede."
 
             # Atropos Gedanken
-            "Aber bevor ich mich um den Bericht für ihn kümmere, könnte ich mich noch kurz umsehen."
+            symb"Aber bevor ich mich um den Bericht für ihn kümmere, könnte ich mich noch kurz umsehen."
 
             menu:
                 "Wieso ist hier ein Schmetterling?":
@@ -1576,35 +2028,35 @@ label work:
 
             label watchhallbutterfly2:
                 # Atropos
-                "Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
+                symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                 # Atropos
-                "So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
+                symb"So wunderschön. Und doch haben kleine Wesen wie du nur ein kurzes Leben."
                 # Atropos
-                "Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
+                symb"Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                 # Atropos
-                "Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                jump watchnothinghall
+                symb"Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
+                jump watchnothinghall2
 
             label watchhallpictures2:
                 scene detail_pictureshall
                 with fadeshort
                 # Atropos Gedanken
-                "Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
+                symb"Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
                 # Atropos Gedanken
-                "Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
+                symb"Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                 # Atropos Gedanken
-                "Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
+                symb"Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
                 call screen arrow_watchhall()
 
             label watchhallalarm2:
                 scene detail_alarm
                 with fadeshort
                 # Atropos Gedanken
-                "Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
+                symb"Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
                 # Atropos Gedanken
-                "Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
+                symb"Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                 # Atropos Gedanken
-                "Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
+                symb"Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
                 call screen arrow_watchhall()
 
             label watchnothinghall2:
@@ -1613,10 +2065,9 @@ label work:
 
 
                 # Atropos Gedanken
-                "Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
+                symb"Jetzt sollte ich aber weiter ins Labor. Ich will Anan nicht enttäuschen."
 
-                stop music fadeout 1
-                play music "Sound_labor_sorglos.mp3" fadeout 2
+                play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
                 scene lab
                 with fadeshort
 
@@ -1631,21 +2082,29 @@ label work:
 
                 "Atropos" "…"
 
+                show era shy
+
                 "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
                 "Atropos" "Ja, natürlich… sorry…"
 
+                show era confused
+
                 "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+
+                show era shy
 
                 "Era" "Ich… ahhhh…"
 
                 # Atropos Gedanken
-                "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+                symb"Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
 
                 # Atropos Gedanken
-                "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
+                symb"Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
 
                 "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
+
+                show era confused
 
                 "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
@@ -1653,36 +2112,46 @@ label work:
 
                 "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
 
+                show era shy
+
                 "Era" "…"
+
+                show era normal
 
                 "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
 
                 # Atropos Gedanken
-                "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+                symb"Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
 
                 # Symbiont
-                "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+                symb"{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
                 # Symbiont
-                "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
+                symb"{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
 
                 "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
+
+                show era happy
 
                 "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
 
                 "Atropos" "Dann ist es abgemacht."
 
+                show era normal
+
                 "Era" "Kommen… kommen Chesis und Kloth dann auch mit? Ihr drei seid wirklich unzertrennlich, seit ihr hier angefangen habt…"
 
                 "Atropos" "Möchtest du denn, dass sie mitkommen?"
+
+                show era shy
 
                 "Era" "Also… Ich… Ich… Nein, ehrlich gesagt, würde ich lieber Zeit mit dir alleine verbringen."
 
                 show narcais normal:
                     xalign 0.25
 
-                show era normal:
+                show era shy_gray:
                     xalign 0.75
 
 
@@ -1690,23 +2159,40 @@ label work:
 
                 "Atropos" "Morgen… Und nein, nicht jedes Gespräch dreht sich gleich um dich, Narcais. (lacht)"
 
+                show narcais normal_gray
+                show era normal
+
                 "Era" "G-Guten Morgen… es ging gerade um Kloth und Chesis."
+
+                show era normal_gray
+                show narcais cocky
 
                 "Narcais" "Ach die drei unzertrennlichen Freunde. Ihr wart schon damals in der Schule berühmt berüchtigt. Keiner konnte euch das Wasser reichen."
 
+                show narcais annoyed
+
                 "Narcais" "Abgesehen von mir natürlich, aber das haben alle verkannt."
+
+                show narcais annoyed_gray
+                show era normal
 
                 "Era" "Hattet ihr damals eigentlich alle gleichzeitig angefangen hier zu arbeiten, Atropos?"
 
                 "Atropos" "Nein, Kloth hatte ein paar Jahre vor uns angefangen. Er wurde damals von Anan höchstpersönlich rekrutiert."
 
+                show era confused
+
                 "Era" "Von Anan?"
 
                 "Atropos" "Kloth hatte bei einer Feier eine Rede über Aither und die Bedeutung des Glücks gehalten und konnte so Anan von sich überzeugen."
 
+                show era normal
+
                 "Era" "Kloth ist wirklich mitreißend. Er ist Anan sehr ähnlich. Fast schon wie Vater und Sohn."
 
                 "Atropos" "Das stimmt wohl. (lacht)"
+
+                show era confused
 
                 "Era" "Und… und was war mit Chesis und dir gewesen?"
 
@@ -1714,27 +2200,44 @@ label work:
 
                 "Atropos" "Und dann hatten Kloth und ich Chesis überzeugt doch ebenfalls hier anzufangen, weil er hier gute Chancen hat trotz seiner introvertierten Art."
 
+                show era normal
+
                 "Era" "Stimmt… es ist wirklich schwer mit ihm zu reden… ich hatte es ein paar Mal versucht und dann musste ich aufgegeben. Dir gegenüber ist er dagegen so offen."
 
                 "Atropos" "Wir sind immerhin auch schon seit Ewigkeiten befreundet. Ich bin mir sicher, mit der Zeit wird er sich auch dir gegenüber mehr öffnen."
 
+                show era shy
+
                 "Era" "Das… das wäre sehr schön."
+
+                show era shy_gray
+                show narcais annoyed
 
                 "Narcais" "Seid ihr fertig mit eurem Gespräch über nicht anwesende Personen? Ich bin auch noch da."
 
                 "Atropos" "Wer könnte dich vergessen? (lacht)"
 
+                show narcais cocky
+
                 "Narcais" "Niemand, das ist mir bewusst!"
 
+                show narcais normal
+
                 "Narcais" "Jedenfalls: Ich habe einen Bericht verfasst, den du noch durcharbeiten müsstest."
+
+                show narcais cocky
 
                 "Narcais" "Ich bin mir sicher, dass er keine Fehler hat, immerhin habe ich ihn erstellt, aber so ist nun mal die Vorschrift."
 
                 "Atropos" "Es ging um den Einfluss der Impfung auf Kinder und Jugendliche, richtig?"
 
+                show narcais normal
+
                 "Narcais" "Ja, genau. Und diesbezüglich: Ich habe einige…"
 
                 "Atropos" "Können wir deinen Vortrag auf später verschieben? Ich muss noch etwas für Anan fertig zusammenstellen. Ich beschäftige mich später mit deinem Bericht."
+
+                show narcais cocky
 
                 "Narcais" "Ich bin froh zu hören, dass wenigstens eine Person hier meine Arbeit wertschätzt. Ich arbeite nun weiter."
 
@@ -1745,17 +2248,17 @@ label work:
             with fadeshort
 
             # Atropos Gedanken
-            "Da vorne ist Anan… ich hoffe er bemerkt nichts."
+            symb"Da vorne ist Anan… ich hoffe er bemerkt nichts."
 
             # Symbiont
-            "{i}Du hättest die Pille sofort heute Morgen nehmen sollen. Dann müsstest du dir jetzt keine Gedanken mehr darüber machen. {/i}"
+            symb"{i}Du hättest die Pille sofort heute Morgen nehmen sollen. Dann müsstest du dir jetzt keine Gedanken mehr darüber machen. {/i}"
 
             # Symbiont
-            "{i}Diese Sorgen sind doch nichts anderes als unnötiger Stress, der dein Glück verhindert. {/i}"
+            symb"{i}Diese Sorgen sind doch nichts anderes als unnötiger Stress, der dein Glück verhindert. {/i}"
 
             # Symbiont
             # Symbiont
-            "{i}Nimm die Pille jetzt ein! Werd wieder glücklich! Du hast es verdient, ein sorgenfreies Leben zu haben. {/i}"
+            symb"{i}Nimm die Pille jetzt ein! Werd wieder glücklich! Du hast es verdient, ein sorgenfreies Leben zu haben. {/i}"
 
             show anan normal_mid:
                 xalign 0.5
@@ -1767,24 +2270,30 @@ label work:
             "Anan" "Atropos Laiotas- richtig? Kann ich die Liste heute noch von dir erwarten? Sie wird von meinen anderen Forschern benötigt."
 
             # Atropos Gedanken
-            "Lass ihn nichts bemerken… bitte… ich darf nicht auffallen. Nicht vor ihm. Er gibt so viel für uns, ich darf ihn nicht enttäuschen."
+            symb"Lass ihn nichts bemerken… bitte… ich darf nicht auffallen. Nicht vor ihm. Er gibt so viel für uns, ich darf ihn nicht enttäuschen."
 
             "Atropos" "Ja, natürlich, ich stelle sie dir heute fertig."
 
+            show anan happy_mid
+
             "Anan" "Vielen Dank."
 
+            show anan normal_mid
+
             "Anan" "…"
+
+            show anan strict_mid
 
             "Anan" "Atropos. Du wirkst nicht glücklich, betrübt dich etwas?"
 
             # Atropos Gedanken
-            "Hat er etwas gemerkt? Oder erkundigt er sich einfach nur höflichkeitshalber? Was soll ich tun? Verdammt…"
+            symb"Hat er etwas gemerkt? Oder erkundigt er sich einfach nur höflichkeitshalber? Was soll ich tun? Verdammt…"
 
             # Symbiont
-            "{i}Sag die Wahrheit und entschuldige dich. Nimm einfach die Happiness-Pille sofort wieder ein und alles kommt in Ordnung. {/i}"
+            symb"{i}Sag die Wahrheit und entschuldige dich. Nimm einfach die Happiness-Pille sofort wieder ein und alles kommt in Ordnung. {/i}"
 
             # Symbiont
-            "{i} Vielleicht bist du ohne die Tablette ja doch nicht so glücklich wie du dachtest, wenn es Anan sofort aufgefallen ist. {/i}"
+            symb"{i} Vielleicht bist du ohne die Tablette ja doch nicht so glücklich wie du dachtest, wenn es Anan sofort aufgefallen ist. {/i}"
 
             "Atropos" "Ja, nein… ich…"
 
@@ -1795,35 +2304,45 @@ label work:
             "Anan" "Ich erwarte dich in meinem Büro. Punkt elf und keine Sekunde zu spät!"
 
             "Anan" "Du gefährdest mit solchen Aktionen nicht nur dein eigenes Glück, sondern auch das Glück der Menschen, die dir am wichtigsten sind."
+
+            show anan normal_mid
+
             "Anan" "Möchtest du das etwa?"
 
             "Atropos" "Nein… ich…"
 
             "Anan" "Die Menschheit braucht Happiness, sonst würde die Welt zurück ins Chaos fallen."
 
+            show anan disappointed_mid
+
             "Anan" "Ich möchte nie wieder so etwas wie im Krieg damals erleben müssen. Kein Mensch sollte so etwas jemals wieder erleiden müssen."
+
+            show anan normal_mid
 
             "Anan" "Ich habe jetzt zu tun, aber ich will dich später in meinem Büro sehen. Vergiss es nicht. Ich wünsche dir einen Tag voller Glücklichkeit."
 
             hide anan
 
             # Symbiont
-            "{i}Anan hat Recht. Du solltest die Pille nehmen. Regelmäßig. Du willst doch glücklich sein. {/i}"
+            symb"{i}Anan hat Recht. Du solltest die Pille nehmen. Regelmäßig. Du willst doch glücklich sein. {/i}"
 
             # Atropos Gedanken
-            "Ich… ah… ich weiß nicht was ich tun soll…"
+            symb"Ich… ah… ich weiß nicht was ich tun soll…"
 
             # Atropos Gedanken
-            "Verdammt…"
+            symb"Verdammt…"
 
-
+            show screen force_mouse_move_threeoptions
             menu:
                 "Anan hat ja recht...":
+                    hide screen force_mouse_move_threeoptions
                     $ okaymood= True
                     jump anan_is_right
                 "Ich bin doch auch ohne Pille glücklich...":
+                    hide screen force_mouse_move_threeoptions
                     jump why_important
                 "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
+                    hide screen force_mouse_move_threeoptions
                     $ badmood= True
                     jump be_against
 
@@ -1833,29 +2352,29 @@ label anan_is_right:
     $ datewithera= True
 
     # Atropos Gedanken
-    "Anan hat ja recht. Ich sehe es ein. Es war ein Fehler gewesen…"
+    symb"Anan hat ja recht. Ich sehe es ein. Es war ein Fehler gewesen…"
 
     # Atropos Gedanken
-    "Happiness hat es geschafft die Welt aus den Fängen des Krieges zu befreien. Ohne die Pille hätte der Krieg noch viel Jahre angedauert."
+    symb"Happiness hat es geschafft die Welt aus den Fängen des Krieges zu befreien. Ohne die Pille hätte der Krieg noch viel Jahre angedauert."
     # Atropos Gedanken
-    "Ich wäre im Krieg geboren worden oder meine Eltern hätten mich vielleicht gar nicht erst bekommen."
-
-    # Atropos Gedanken
-    "Und wie Anan gesagt hat. Ohne die Tablette würde vermutlich auch jetzt die Welt wieder zurück ins Chaos fallen."
+    symb"Ich wäre im Krieg geboren worden oder meine Eltern hätten mich vielleicht gar nicht erst bekommen."
 
     # Atropos Gedanken
-    "Was hatte ich mir nur dabei gedacht jemals zu zweifeln und zu zögern? Alle Menschen nehmen Happiness und alle, die Happiness nehmen, sind glücklich."
+    symb"Und wie Anan gesagt hat. Ohne die Tablette würde vermutlich auch jetzt die Welt wieder zurück ins Chaos fallen."
 
     # Atropos Gedanken
-    "Ich werde diesen Fehler nicht noch einmal begehen. Zukünftig werde ich die Pille wieder regelmäßig einnehmen."
+    symb"Was hatte ich mir nur dabei gedacht jemals zu zweifeln und zu zögern? Alle Menschen nehmen Happiness und alle, die Happiness nehmen, sind glücklich."
 
     # Atropos Gedanken
-    "Ich werde nachher zu Anan gehen und mich für mein rücksichtloses Verhalten entschuldigen."
+    symb"Ich werde diesen Fehler nicht noch einmal begehen. Zukünftig werde ich die Pille wieder regelmäßig einnehmen."
 
     # Atropos Gedanken
-    "Aber jetzt erstmal zurück ins Labor. Ich habe noch einiges zu tun. Ich darf Anan nicht erneut enttäuschen."
+    symb"Ich werde nachher zu Anan gehen und mich für mein rücksichtloses Verhalten entschuldigen."
 
+    # Atropos Gedanken
+    symb"Aber jetzt erstmal zurück ins Labor. Ich habe noch einiges zu tun. Ich darf Anan nicht erneut enttäuschen."
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
@@ -1870,21 +2389,29 @@ label anan_is_right:
 
     "Atropos" "…"
 
+    show era shy
+
     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
     "Atropos" "Ja, natürlich… sorry…"
 
+    show era confused
+
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+
+    show era shy
 
     "Era" "Ich… ahhhh…"
 
     # Atropos Gedanken
-    "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+    symb"Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
 
     # Atropos Gedanken
-    "Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
+    symb"Zum Glück bekommt sie sich immer relativ rasch wieder in den Griff."
 
     "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
+
+    show era confused
 
     "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
@@ -1892,37 +2419,51 @@ label anan_is_right:
 
     "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
 
+    show era shy
+
     "Era" "…"
+
+    show era normal
 
     "Era" "Was ich dich jedenfalls fragen wollte: Hast du nächste Woche Zeit? Ich dachte mir wir könnten uns vielleicht mal treffen?"
 
     # Atropos Gedanken
-    "Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
+    symb"Das war bei ihr mal wieder eine 180 Grad Wendung. Manchmal frage ich mich…"
 
 
     # Symbiont
-    "{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
+    symb"{i}Sie ist einfach ein wenig unsicher. Es wirkt, als würde sie sich für dich interessieren. Darum ist sie nervös und weiß nicht, wie sie sich dir gegenüber verhalten soll. {/i}"
 
 
     # Symbiont
-    "{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
+    symb"{i}Du solltest sie ein wenig beruhigen. Du magst sie doch auch, gestehe es dir ein. {/i}"
 
     "Atropos" "Gerne, warum nicht? Passt dir Donnerstag? Wir könnten Bowlen gehen."
+
+    show era happy
 
     "Era" "Wirklich? Ich… ja… ja… Donnerstag passt super!"
 
     show narcais normal:
         xalign 0.25
-    show era normal:
+    show era happy_gray:
         xalign 0.75
 
     "Narcais" "Einen glücklichen guten Morgen zusammen! Habt ihr schon meine letzten Forschungsergebnisse gesehen? Ich kann mich selbst nur loben, sie sind hervorragend ausgefallen."
+
+    show narcais normal_gray
+    show era shy
 
     "Era" "G-Guten Morgen…"
 
     "Atropos" "Morgen… hattest du dich nicht mit dem Einfluss der Impfung auf Kinder und Jugendliche beschäftigt?"
 
+    show era shy_gray
+    show narcais cocky
+
     "Narcais" "Ja, genau. Und ich bin zu dem Schluss gekommen, dass wir es mit Glycohexatenol versuchen sollten."
+
+    show narcais normal
 
     "Narcais" "Die Jugendlichen vertragen den alten Wirkstoff ebenfalls gut, aber nachweislich können wir keine Kinder damit impfen."
 
@@ -1930,22 +2471,32 @@ label anan_is_right:
 
     "Narcais" "Auch ist die Impfung eine Grundvoraussetzung für die Einnahme der Happiness-Pille. Bereits jetzt leiden viel zu viele Kinder unter der späten Einnahme."
 
+    show narcais cocky
+
     "Narcais" "Die Kinder sollten ebenfalls in der Lage sein eine glückliche Kindheit führen zu dürfen! Wenn ich an meine eigene Kindheit denke…"
 
     "Atropos" "Narcais- du zählst nur Fakten auf, die bereits bekannt sind. Was ist jetzt mit dem Glycohexatenol?"
 
     # Atropos Gedanken
-    "Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
+    symb"Er nutzt wirklich jede Chance, um mit seinem Wissen zu prahlen…"
+
+    show narcais normal
 
     "Narcais" "Ich habe die Erkenntnis gewonnen, dass der Wirkstoff die Durchführung der Impfung um einige Jahre vorverlegen dürfte."
 
     "Narcais" "Diesbezüglich hatte ich einige Forschungen durchgeführt, welche meine Erkenntnis belegt hatten."
 
+    show narcais cocky
+
     "Narcais" "Ich habe bereits einen umfassenden Bericht dazu verfasst und dir geschickt. Aber du musst vermutlich nur einen kurzen Blick darauf werfen…"
+
+    show narcais normal
 
     "Narcais" "Du weißt, dass ich immer beste Arbeit abliefere und keine Fehler mache."
 
     "Atropos" "Danke, ich beschäftige mich später damit."
+
+    show narcais cocky
 
     "Narcais" "Ja, natürlich. Lass dir Zeit. Nicht jeder kann so schnell und effizient arbeiten wie ich…"
 
@@ -1953,14 +2504,16 @@ label anan_is_right:
 
     "Atropos" "Sorry für die Unterbrechung, Era. Also, wir schreiben dann einfach die Tage, okay?"
 
+    show era happy
+
     "Era" "J-Ja… natürlich. Danke Atropos!"
+
     hide era
 
     # Atropos Gedanken
-    "Zurück an die Arbeit."
+    symb"Zurück an die Arbeit."
 
     "Atropos" "…"
-
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -1968,34 +2521,50 @@ label anan_is_right:
 
     "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
 
+    show era normal
+
     "Era" "Ich… ich kümmere mich darum!"
+
+    hide era
 
     # für den Fall, dass Atropos sich davor mit Neiro darüber unterhalten hat
 
     if neiro_unterhalten:
-        "Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
+        symb"Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
 
         # Atropos Gedanken
-        "Ob er wohl mit allen Informationen Recht hatte?"
+        symb"Ob er wohl mit allen Informationen Recht hatte?"
+
+    stop music
+
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
 
     # ab hier wieder alle
-    scene triumvirate
+    scene screen_background
     with fadeshort
-    show anan normal_mid:
-        xalign 0.5
-    show atlas normal:
-        xalign 0
-    show adres normal:
-        xalign 0.99
+    show screen_transparent
+    show atlas normal behind screen_transparent:
+        xalign 0.12
+    show adres normal behind screen_transparent:
+        xalign 0.8
+    show anan normal_mid behind screen_transparent:
+        xalign 0.4
 
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
+    show anan happy_left
+
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
+
+    show anan normal_left
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+
+    show anan happy_left
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -2003,7 +2572,11 @@ label anan_is_right:
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
+    show anan normal_left
+
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
+
+    show anan happy_left
 
     "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
@@ -2011,15 +2584,23 @@ label anan_is_right:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
+    show anan disappointed_left
+
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+
+    show anan normal_left
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
     "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
+
+    show anan happy_left
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
@@ -2031,31 +2612,41 @@ label anan_is_right:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     scene lab
     with fadeshort
     show era normal:
         xalign 0.25
-    show narcais normal:
+    show narcais normal_gray:
         xalign 0.75
 
     "Era" "Wow…"
 
+    show era normal_gray
+    show narcais normal
+
     "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
     # Atropos Gedanken
-    "Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
+    symb"Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
 
     # Atropos Gedanken
-    "Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
+    symb"Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
 
     # Atropos Gedanken
-    "Und Anan hat vermutlich ebenfalls recht. Ich weiß ja, dass er nur das Beste für uns will…"
+    symb"Und Anan hat vermutlich ebenfalls recht. Ich weiß ja, dass er nur das Beste für uns will…"
+
+    show narcais normal_gray
+    show era normal
 
     "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
 
@@ -2066,9 +2657,11 @@ label anan_is_right:
     "Atropos" "…"
 
     # Atropos Gedanken
-    "Oh, es ist schon spät. Ich muss langsam los, damit ich pünktlich bei Anans Büro bin."
+    symb"Oh, es ist schon spät. Ich muss langsam los, damit ich pünktlich bei Anans Büro bin."
 
     "Atropos" "Bin gleich wieder da."
+
+    show era happy
 
     "Era" "Bis… bis später!"
 
@@ -2079,43 +2672,43 @@ label why_important:
     $ straight_office = True
 
     # Atropos Gedanken
-    "Ich bin doch auch ohne Pille glücklich…"
+    symb"Ich bin doch auch ohne Pille glücklich…"
 
     # Atropos Gedanken
-    "Oder? Irre ich mich etwa? Denke ich nur selbst, dass ich glücklich bin, aber alle anderen erkennen die Wahrheit?"
+    symb"Oder? Irre ich mich etwa? Denke ich nur selbst, dass ich glücklich bin, aber alle anderen erkennen die Wahrheit?"
 
     # Atropos Gedanken
-    "Mache ich mir nur etwas vor?"
+    symb"Mache ich mir nur etwas vor?"
 
     # Atropos Gedanken
-    "Bin ich wirklich glücklich?"
+    symb"Bin ich wirklich glücklich?"
 
     # Atropos Gedanken
-    "Was ist, wenn Anan recht hat? Gefährde ich durch meine Aktionen auch das Glück der anderen?"
+    symb"Was ist, wenn Anan recht hat? Gefährde ich durch meine Aktionen auch das Glück der anderen?"
 
     # Atropos Gedanken
-    "Ist Kloth deswegen in letzter Zeit so seltsam drauf?"
+    symb"Ist Kloth deswegen in letzter Zeit so seltsam drauf?"
 
     # Atropos Gedanken
-    "Ist alles etwa meine Schuld?"
+    symb"Ist alles etwa meine Schuld?"
 
     # Symbiont
-    "{i}Nein, mache dir darüber jetzt keine Gedanken oder Vorwürfe! Jeder macht mal Fehler, aber du hast eine Chance erhalten diesen Fehler auszubessern. {/i}"
+    symb"{i}Nein, mache dir darüber jetzt keine Gedanken oder Vorwürfe! Jeder macht mal Fehler, aber du hast eine Chance erhalten diesen Fehler auszubessern. {/i}"
 
 
     # Symbiont
-    "{i}Nutze diese Chance und mache jetzt alles richtig! {/i}"
+    symb"{i}Nutze diese Chance und mache jetzt alles richtig! {/i}"
 
     # Symbiont
-    "{i}Nimm die Pille und zeig der Welt wie glücklich du bist! Beweise allen, dass auch du vollkommen glücklich sein kannst. {/i}"
+    symb"{i}Nimm die Pille und zeig der Welt wie glücklich du bist! Beweise allen, dass auch du vollkommen glücklich sein kannst. {/i}"
 
     # Atropos Gedanken
-    "Ich weiß nicht… das alles ist so… schwierig… Was soll ich nur denken? Was soll ich nur tun?"
+    symb"Ich weiß nicht… das alles ist so… schwierig… Was soll ich nur denken? Was soll ich nur tun?"
 
     # Atropos Gedanken
-    "Vermutlich sollte ich jetzt erstmal ins Labor zurück, damit ich Anan nicht erneut enttäusche… dann sehe ich weiter…"
+    symb"Vermutlich sollte ich jetzt erstmal ins Labor zurück, damit ich Anan nicht erneut enttäusche… dann sehe ich weiter…"
 
-
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
     scene lab
     with fadeshort
 
@@ -2130,21 +2723,29 @@ label why_important:
 
     "Atropos" "…"
 
+    show era shy
+
     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
     "Atropos" "Ja, natürlich… sorry…"
 
+    show era confused
+
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+
+    show era shy
 
     "Era" "Ich… ahhhh…"
 
     # Atropos Gedanken
-    "Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
+    symb"Era ist wirklich süß, aber ihre Mischung aus Tollpatschigkeit und Unsicherheit kann auch ziemlich anstrengend sein."
 
     # Atropos Gedanken
-    "Ich habe gerade vor allem andere Sorgen."
+    symb"Ich habe gerade vor allem andere Sorgen."
 
     "Atropos" "Alles in Ordnung. Es war nur ein Missgeschick, nichts worüber du dir Gedanken machen müsstest."
+
+    show era confused
 
     "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
@@ -2152,67 +2753,107 @@ label why_important:
 
     "Era" "Ich… ich wollte dich fragen… Zeit… du… nächste Woche… ahhh…"
 
+    show era shy
+
     "Era" "…"
+
+    show era normal
 
     "Era" "Was ich dich jedenfalls fragen wollte…"
 
     "Era" "…"
 
-    "Atropos" "Was? Tut mir leid… ich war gerade etwas in Gedanken gewesen."
+    "Atropos" "Was? Tut mir leid… ich war gerade etwas in Gedanken versunken."
+
+    show era shy
 
     "Era" "Ich… ach… egal, vergiss es. Es war nicht so wichtig."
 
     "Atropos" "Okay."
+
+    show era confused
 
     "Era" "Aber sag mal Atropos… I-Ist alles in Ordnung? Dich scheint etwas zu beschäftigen…"
 
     # Narcais taucht auf
     show narcais normal:
         xalign 0.25
-    show era normal:
+    show era confused_gray:
         xalign 0.75
 
     "Narcais" "Einen glücklichen guten Morgen zusammen. Was habe ich verpasst? Redet ihr über mich?"
 
+    show narcais normal_gray
+    show era normal
+
     "Era" "G-Guten Morgen… Nein… es ging um Atropos. Ihn scheint etwas zu beschäftigen. Er wirkt nicht glücklich…"
+
+    show era normal_gray
+    show narcais cocky
 
     "Narcais" "Ach, mich beschäftigen auch immer tausend Dinge. Das ist doch nichts ungewöhnliches."
 
+    show narcais normal
+
     "Narcais" "Jedenfalls: Ich habe einen Bericht verfasst, den du noch durcharbeiten müsstest, Atropos."
+
+    show narcais cocky
 
     "Narcais" "Ich bin mir sicher, dass er keine Fehler hat, immerhin habe ich ihn erstellt, aber so ist nun mal die Vorschrift."
 
     "Atropos" "Ich kümmere mich darum."
 
+    show narcais cocky_gray
+    show era confused
+
     "Era" "Können… können wir dir irgendwie helfen? Was ist vorgefallen?"
 
     "Atropos" "Ich hatte in letzter Zeit ein paar Mal meine Pille vergessen und bin vorhin Anan über den Weg gelaufen."
+
     "Atropos" "Er hatte es sofort bemerkt und mir einen Vortrag über die Wichtigkeit der Happiness-Pille gehalten und ich muss nachher noch in sein Büro…"
 
     "Atropos" "Aber ich bin doch auch ohne sie glücklich… warum muss ich sie um jeden Preis einnehmen?"
 
     "Atropos" "Außerdem… muss Anan wirklich so einen Aufstand darum machen, dass ich sie Mal vergessen habe, oder keine Lust hatte sie zu nehmen?"
+
     "Atropos" "Und eigentlich wollte ich Anan niemals enttäuschen… nicht nach allem, was er für uns getan hat…"
 
     "Atropos" "Ich weiß einfach nicht, was ich tun soll."
 
+    show era confused_gray
+    show narcais normal
+
     "Narcais" "Ich kann Anan verstehen. Happiness ist nun mal unglaublich wichtig. Wie kannst du so etwas Wichtiges nur vergessen?"
+
+    show narcais annoyed
 
     "Narcais" "Wie kannst du so egoistisch sein? Damit gefährdest du nicht nur dein Glück, sondern unser aller Glück."
 
+    show narcais annoyed_gray
+    show era normal
+
     "Era" "Atropos… mach dir bitte keine Vorwürfe, okay?"
+
+    show era confused
 
     "Era" "Aber ich muss Narcais zustimmen. Happiness ist wichtig… du solltest die Pille nehmen und dich bei Anan dafür entschuldigen."
 
     "Era" "Und… und… denk bitte an dein eigenes Glück. Ich will, dass du glücklich bist… du… du bedeutest mir…"
 
+    show era shy
+
     "Era" "…"
 
     "Era" "Bitte pass gut auf dich auf, Atropos."
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     "Atropos" "Danke. Ihr habt ja recht. Ich werde nachher zu Anan gehen und das Ganze klären."
 
     "Atropos" "Jetzt sollten wir aber erst einmal mit der Arbeit anfangen."
+
+    show era shy_gray
+    show narcais normal
 
     "Narcais" "Vergiss meinen Bericht nicht!"
 
@@ -2222,10 +2863,9 @@ label why_important:
     hide narcais
 
     # Atropos Gedanken
-    "Zurück an die Arbeit."
+    symb"Zurück an die Arbeit."
 
     "Atropos" "…"
-
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -2243,34 +2883,51 @@ label why_important:
     if neiro_unterhalten:
 
         # Atropos Gedanken
-        "Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
+        symb"Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
 
         # Atropos Gedanken
-        "Ob er wohl mit allen Informationen Recht hatte?"
+        symb"Ob er wohl mit allen Informationen Recht hatte?"
+
+    stop music
+
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
 
     # ab hier wieder alle
-    scene triumvirate
+    scene screen_background
     with fadeshort
-    show anan normal_mid:
-        xalign 0.5
-    show atlas normal:
-        xalign 0
-    show adres normal:
-        xalign 0.99
+    show screen_transparent
+    show atlas normal behind screen_transparent:
+        xalign 0.12
+    show adres normal behind screen_transparent:
+        xalign 0.8
+    show anan normal_left behind screen_transparent:
+        xalign 0.4
+
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
+    show anan disappointed_left
+
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
+    show anan normal_left
+
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+
+    show anan happy_left
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
+    show anan normal_left
+
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
+
+    show anan happy_left
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -2280,11 +2937,15 @@ label why_important:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+
+    show anan happy_left
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -2300,39 +2961,47 @@ label why_important:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     scene lab
     with fadeshort
     show era normal:
         xalign 0.25
-    show narcais normal:
+    show narcais normal_gray:
         xalign 0.75
 
     "Era" "Wow…"
 
+    show era normal_gray
+    show narcais normal
+
     "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
     # Atropos Gedanken
-    "Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
+    symb"Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
 
     # Atropos Gedanken
-    "Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
+    symb"Aber ich muss ihnen schon recht geben. Seine Rede war beeindruckend wie immer."
 
     # Atropos Gedanken
-    "Ich frage mich, ob Anan mit seiner Rede wirklich recht hat? Es wirkt alles so plausibel und klar, wenn er es erzählt…"
+    symb"Ich frage mich, ob Anan mit seiner Rede wirklich recht hat? Es wirkt alles so plausibel und klar, wenn er es erzählt…"
 
     # Atropos Gedanken
-    "Und dennoch… ich wüsste zu gerne was die Tablette tatsächlich bewirkt. Wie sie uns überhaupt unser Glück bringt."
+    symb"Und dennoch… ich wüsste zu gerne was die Tablette tatsächlich bewirkt. Wie sie uns überhaupt unser Glück bringt."
 
     # Atropos Gedanken
-    "Vielleicht würde es mir dann leichter fallen, sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
+    symb"Vielleicht würde es mir dann leichter fallen, sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
 
-
+    show narcais normal_gray
+    show era normal
 
     "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
 
@@ -2345,15 +3014,17 @@ label why_important:
     "Atropos" "…"
 
     # Atropos Gedanken
-    "Oh, es ist schon spät. Ich müsste langsam los, wenn ich pünktlich in Anans Büro sein will…"
+    symb"Oh, es ist schon spät. Ich müsste langsam los, wenn ich pünktlich in Anans Büro sein will…"
 
     # Atropos Gedanken
-    "Ich sollte besser gehen. Vielleicht hilft es mir ja Mal mit Anan über meine Zweifel und Sorgen zu sprechen."
+    symb"Ich sollte besser gehen. Vielleicht hilft es mir ja Mal mit Anan über meine Zweifel und Sorgen zu sprechen."
 
     # Atropos Gedanken
-    "Ich möchte nicht Zweifeln… ich möchte einfach nur glücklich sein…"
+    symb"Ich möchte nicht Zweifeln… ich möchte einfach nur glücklich sein…"
 
     "Atropos" "Bin gleich wieder da."
+
+    show era happy
 
     "Era" "Bis… bis später!"
 
@@ -2364,35 +3035,34 @@ label be_against:
     $ straight_office = False
 
     # Atropos Gedanken
-    "Was erlaubt sich Anan bitte? Ich lasse mir doch nicht vorschreiben, ob und wie oft ich die Happiness-Pille einnehmen soll!"
-
-
-    # Atropos Gedanken
-    "Ich weiß ja, dass er die Welt vom Krieg erlöst hat, aber das ist ganz allein meine Entscheidung! Ich sollte über mein eigenes Glück bestimmen können."
+    symb"Was erlaubt sich Anan bitte? Ich lasse mir doch nicht vorschreiben, ob und wie oft ich die Happiness-Pille einnehmen soll!"
 
     # Atropos Gedanken
-    "Keiner sollte mir vorgeben dürfen, wie ich zu meinem Glück kommen soll!"
-
-    # Symbiont
-    "{i}Nimm die Pille. Merkst du denn nicht, dass du mit jeder Sekunde unglücklicher wirst? {/i}"
-
-    # Symbiont
-    "{i}Denk nochmal nach, was du gerade alles gedacht hast. Bist das wirklich du? {/i}"
-
-    # Symbiont
-    "{i}Das ist nicht mehr der Atropos, der du sein willst, oder? {/i}"
-
-    # Symbiont
-    "{i}Du warst mal glücklich gewesen, aber gerade stößt du dich selbst und die, die du liebst ins Unglück. {/i}"
-
-    # Symbiont
-    "{i}Bist du gerade, ohne die Happiness-Pille, wirklich glücklich? {/i}"
+    symb"Ich weiß ja, dass er die Welt vom Krieg erlöst hat, aber das ist ganz allein meine Entscheidung! Ich sollte über mein eigenes Glück bestimmen können."
 
     # Atropos Gedanken
-    "Ja! Ja, ich bin glücklich!"
+    symb"Keiner sollte mir vorgeben dürfen, wie ich zu meinem Glück kommen soll!"
 
     # Symbiont
-    "{i}Das nennst du Glück? Du bist gerade wirklich glücklich? Es gibt nichts, dass dir Sorgen oder Kopfzerbrechen bereitet? {/i}"
+    symb"{i}Nimm die Pille. Merkst du denn nicht, dass du mit jeder Sekunde unglücklicher wirst? {/i}"
+
+    # Symbiont
+    symb"{i}Denk nochmal nach, was du gerade alles gedacht hast. Bist das wirklich du? {/i}"
+
+    # Symbiont
+    symb"{i}Das ist nicht mehr der Atropos, der du sein willst, oder? {/i}"
+
+    # Symbiont
+    symb"{i}Du warst mal glücklich gewesen, aber gerade stößt du dich selbst und die, die du liebst ins Unglück. {/i}"
+
+    # Symbiont
+    symb"{i}Bist du gerade, ohne die Happiness-Pille, wirklich glücklich? {/i}"
+
+    # Atropos Gedanken
+    symb"Ja! Ja, ich bin glücklich!"
+
+    # Symbiont
+    symb"{i}Das nennst du Glück? Du bist gerade wirklich glücklich? Es gibt nichts, dass dir Sorgen oder Kopfzerbrechen bereitet? {/i}"
 
     "Atropos" "Ich bin glücklich."
 
@@ -2400,10 +3070,12 @@ label be_against:
 
     "Atropos" "Ich bin glücklich!"
 
-    "Atropos" "Und Anan kann mir das nicht nehmen! Er kann mich nicht zwingen. Ich werde nicht zu ihm gehen, das kann er vergessen!"
+    "Atropos" "Und Anan kann mir das nicht nehmen! Er kann mich nicht zwingen!"# Ich werde nicht zu ihm gehen, das kann er vergessen!"
 
     # Atropos Gedanken
-    "Aber jetzt erstmal weiter ins Labor…"
+    symb"Aber jetzt erstmal weiter ins Labor…"
+
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
 
 
     scene lab
@@ -2418,24 +3090,36 @@ label be_against:
 
     "Atropos" "…"
 
+    show era shy
+
     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
     "Atropos" "Ja, sorry …"
 
+    show era confused
+
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
+
+    show era shy
 
     "Era" "Ich… ahhhh…"
 
     # Atropos Gedanken
-    "Musste das jetzt sein? Ich mag Era echt gerne, aber ihre Tollpatschigkeit kann wirklich nerven."
+    symb"Musste das jetzt sein? Ich mag Era echt gerne, aber ihre Tollpatschigkeit kann wirklich nerven."
 
     "Atropos" "Mir geht es gut."
+
+    show era confused
 
     "Era" "Trotzdem… das wollte ich nicht… und dabei wollte ich doch… ich wollte dich…"
 
     "Atropos" "Era, sorry, aber mir ist gerade nicht nach einem Gespräch. Können wir das auf später verschieben?"
 
-    # erst niedergeschlagen, dann freudestrahlend
+    show era shy
+
+    "Era" "..."
+
+    show era happy
 
     "Era" "Ja, natürlich. Gerne!"
 
@@ -2452,24 +3136,28 @@ label be_against:
 
     "Atropos" "Jetzt nicht… ich habe zu tun, siehst du das nicht?"
 
-    # irritiert
+    show narcais annoyed
 
     "Narcais" "Was? Aber… du wolltest doch den Bericht durchlesen, den ich geschrieben habe."
 
     "Atropos" "Jetzt nicht!"
 
+    show narcais normal
+
     "Narcais" "Klar, kein Problem! Les ihn dir durch, sobald du dazu kommst."
+
+    show narcais cocky
 
     "Narcais" "Du solltest ohnehin nicht viel damit zu tun haben. Ich weiß, dass ich perfekte Arbeit liefere- das ist eine allgemein bekannte Tatsache."
 
     # Atropos Gedanken
-    "Er ist echt stark von sich eingenommen. Ich kann weder ihn noch Era gerade ertragen…"
+    symb"Er ist echt stark von sich eingenommen. Ich kann weder ihn noch Era gerade ertragen…"
 
     # Atropos Gedanken
-    "Kann ich nicht mal eine Sekunde für mich haben, damit ich in Ruhe nachdenken kann?"
+    symb"Kann ich nicht mal eine Sekunde für mich haben, damit ich in Ruhe nachdenken kann?"
 
     # Atropos Gedanken
-    "Natürlich kann ich so nicht vollkommen glücklich sein…"
+    symb"Natürlich kann ich so nicht vollkommen glücklich sein…"
 
     "Atropos" "Ich kümmere mich darum."
 
@@ -2477,10 +3165,10 @@ label be_against:
     hide narcais
 
     # Atropos Gedanken
-    "Endlich ein wenig Ruhe."
+    symb"Endlich ein wenig Ruhe."
 
     # Atropos Gedanken
-    "Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
+    symb"Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
 
     "Atropos" "…"
 
@@ -2496,15 +3184,21 @@ label be_against:
     "Era" "Ich… ich kümmere mich darum!"
     hide era
 
-    scene triumvirate
-    with fadeshort
+    stop music
 
-    show anan normal_mid:
-        xalign 0.5
-    show atlas normal:
-        xalign 0
-    show adres normal:
-        xalign 0.99
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+
+    scene screen_background
+    with fadeshort
+    show screen_transparent
+    show atlas normal behind screen_transparent:
+        xalign 0.12
+    show adres normal behind screen_transparent:
+        xalign 0.8
+    show anan normal_left behind screen_transparent:
+        xalign 0.4
+
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     # Bild wechselt von Laborhintergrund in Nahansicht des Bildschirms. Atlas, Anan und Adrés tauchen nebeneinander auf
 
@@ -2512,15 +3206,25 @@ label be_against:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
+    show anan disappointed_left
+
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
+    show anan normal_left
+
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+
+    show anan happy_left
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
+    show anan normal_left
+
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
+
+    show anan happy_left
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -2530,11 +3234,15 @@ label be_against:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+
+    show anan happy_left
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -2550,44 +3258,56 @@ label be_against:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
+
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
+
+    play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
+
 
     scene lab
     with fadeshort
     show era normal:
         xalign 0.25
-    show narcais normal:
+    show narcais normal_gray:
         xalign 0.75
 
     # Übertragung wird beendet und der Labor ist wieder im Hintergrund.
 
     "Era" "Wow…"
 
+    show era normal_gray
+    show narcais normal
+
     "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
     # Atropos Gedanken
-    "Schöne Worte und nichts dahinter…"
+    symb"Schöne Worte und nichts dahinter…"
 
     # Atropos Gedanken
-    "Wieso mussten wir uns diesen Unsinn anhören?"
+    symb"Wieso mussten wir uns diesen Unsinn anhören?"
 
     # Atropos Gedanken
-    "Warum überlässt Anan nicht uns die Wahl, ob wir die Pille nehmen wollen oder nicht?"
+    symb"Warum überlässt Anan nicht uns die Wahl, ob wir die Pille nehmen wollen oder nicht?"
 
     # Atropos Gedanken
-    "Vielleicht würde es mir dann leichter fallen sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
+    symb"Vielleicht würde es mir dann leichter fallen sie zu nehmen. Vielleicht würde ich dann weniger zweifeln."
 
     # Symbiont
-    "{i} Diese Gedanken hast du nur, weil du nicht glücklich bist. Nimm die Pille und werde wieder glücklich! {/i}"
+    symb"{i} Diese Gedanken hast du nur, weil du nicht glücklich bist. Nimm die Pille und werde wieder glücklich! {/i}"
 
     # Symbiont
-    "{i} Merkst du nicht, wie deine Zweifel dich innerlich zerfressen? {/i}"
+    symb"{i} Merkst du nicht, wie deine Zweifel dich innerlich zerfressen? {/i}"
 
     # Symbiont
-    "{i}Ist es das, was du willst? Du bist unglücklich, Atropos. Kein Mensch sollte unglücklich sein. {/i}"
+    symb"{i}Ist es das, was du willst? Du bist unglücklich, Atropos. Kein Mensch sollte unglücklich sein. {/i}"
+
+    show narcais normal_gray
+    show era normal
 
     "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf, an das Glück aller Menschen zu denken."
 
@@ -2596,22 +3316,22 @@ label be_against:
     "Atropos" "…"
 
     # Atropos Gedanken
-    "Es ist schon spät. Ich müsste jetzt los, um pünktlich bei Anan zu sein."
+    symb"Es ist schon spät. Ich müsste jetzt los, um pünktlich bei Anan zu sein."
 
     # Atropos Gedanken
-    "Aber will ich das überhaupt?"
+    symb"Aber will ich das überhaupt?"
 
     # Symbiont
-    "{i}Du willst pünktlich sein. Anan war noch nett und verständnisvoll, aber das wird sich ändern, wenn du weiterhin dein Glück und das Glück aller gefährdest. {/i}"
+    symb"{i}Du willst pünktlich sein. Anan war noch nett und verständnisvoll, aber das wird sich ändern, wenn du weiterhin dein Glück und das Glück aller gefährdest. {/i}"
 
     # Symbiont
-    "{i}Wieso wehrst du dich so verzweifelt gegen dein Glück? Niemand will dir Leid zufügen. Alle wollen nur dein Bestes. {/i}"
+    symb"{i}Wieso wehrst du dich so verzweifelt gegen dein Glück? Niemand will dir Leid zufügen. Alle wollen nur dein Bestes. {/i}"
 
     # Symbiont
-    "{i}Besänftige deinen Zorn! Anan sorgt sich um dich. Geh zu ihm und entschuldige dein Verhalten! {/i}"
+    symb"{i}Besänftige deinen Zorn! Anan sorgt sich um dich. Geh zu ihm und entschuldige dein Verhalten! {/i}"
 
     # Symbiont
-    "{i}Alles kann gut werden, wenn du es nur willst. {/i}"
+    symb"{i}Alles kann gut werden, wenn du es nur willst. {/i}"
 
     jump go_office
 
@@ -2621,46 +3341,49 @@ label go_office:
         jump office
 
     else:
-
+        show screen force_mouse_move_twooptions
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+                play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+                hide screen force_mouse_move_twooptions
                 # Atropos Gedanken
-                "Vermutlich ist es besser, wenn ich zu Anan gehe. Ich will keinen Ärger bekommen. Nicht auch noch dafür."
+                symb"Vermutlich ist es besser, wenn ich zu Anan gehe. Ich will keinen Ärger bekommen. Nicht auch noch dafür."
 
                 # Atropos Gedanken
-                "Vielleicht kann er mir ja auch ein paar Antworten geben… warum es so wichtig ist die Pille zu nehmen. Was passiert, wenn ich sie ein paar Tage nicht nehme…"
+                symb"Vielleicht kann er mir ja auch ein paar Antworten geben… warum es so wichtig ist die Pille zu nehmen. Was passiert, wenn ich sie ein paar Tage nicht nehme…"
 
                 # Atropos Gedanken
-                "Ich denke, ich habe vorhin vielleicht etwas überreagiert… Ich sollte mir davon nicht die Laune verderben lassen."
+                symb"Ich denke, ich habe vorhin vielleicht etwas überreagiert… Ich sollte mir davon nicht die Laune verderben lassen."
 
                 # Atropos Gedanken
-                "Immerhin treffe ich nachher noch Kloth und Chesis zum Grillen. Für den Moment sollte ich mich darauf fokussieren."
+                symb"Immerhin treffe ich nachher noch Kloth und Chesis zum Grillen. Für den Moment sollte ich mich darauf fokussieren."
 
                 # Atropos Gedanken
-                "Und jetzt sollte ich wirklich los. Sonst komme ich noch zu spät. Ich sollte Anan nicht warten lassen."
+                symb"Und jetzt sollte ich wirklich los. Sonst komme ich noch zu spät. Ich sollte Anan nicht warten lassen."
 
                 "Atropos" "Bin gleich wieder da."
+
+                show era happy
 
                 "Era" "Bis… bis später!"
 
                 jump office
             "Ich werde auf keinen Fall zu Anans Büro gehen.":
+                hide screen force_mouse_move_twooptions
                 jump no_office
 
 label good_mood:
-    # Atropos Gedanken
 
     hide era
     hide narcais
-    "Zurück an die Arbeit."
+    symb"Zurück an die Arbeit."
 
     "Atropos" "…"
-
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
     "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
-
 
     "Durchsage" "{i}In wenigen Minuten erfolgt eine Übertragung von Anan. Bitte schaltet die entsprechenden Bildschirme ein. {/i}"
 
@@ -2674,34 +3397,49 @@ label good_mood:
     if neiro_unterhalten:
 
         # Atropos Gedanken
-        "Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
+        symb"Das muss die Übertragung sein, die Neiro vorhin erwähnt hatte."
 
         # Atropos Gedanken
-        "Ob er wohl mit allen Informationen recht hatte?"
+        symb"Ob er wohl mit allen Informationen recht hatte?"
 
+    stop music
 
-    scene triumvirate
+    $ renpy.movie_cutscene("cutscenes/logodrehend.mpg")
+    scene screen_background
     with fadeshort
-    show anan normal_mid:
-        xalign 0.5
-    show adres normal:
-        xalign 0.99
-    show atlas normal:
-        xalign 0
+    show screen_transparent
+    show atlas normal behind screen_transparent:
+        xalign 0.12
+    show adres normal behind screen_transparent:
+        xalign 0.8
+    show anan normal_left behind screen_transparent:
+        xalign 0.4
+
+    play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
+    show anan disappointed_left
+
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
+    show anan normal_left
+
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
+
+    show anan happy_left
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
+    show anan normal_left
+
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
+
+    show anan happy_left
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -2711,11 +3449,15 @@ label good_mood:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
+
+    show anan happy_left
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -2731,32 +3473,45 @@ label good_mood:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
+    show anan normal_left
+
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
     "Anan" "Ihr seid der Rest der Menschheit. Wir müssen überleben und unseren Nachkommen eine heile, gute Welt überlassen. Nicht die Trümmer, welche unsere Vorfahren uns hinterlassen haben."
 
     "Anan" "Also kämpft an meiner Seite und lasst uns die Welt verändern!"
 
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
     scene lab
     with fadeshort
 
     show era normal:
         xalign 0.25
-    show narcais normal:
+    show narcais normal_gray:
         xalign 0.75
 
     "Era" "Wow…"
 
+    show era normal_gray
+    show narcais normal
+
     "Narcais" "Man könnte ihm den ganzen Tag zuhören ohne müde zu werden…"
 
     # Atropos Gedanken
-    "Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
+    symb"Und das von jemandem, der sich selbst am liebsten den ganzen Tag zuhört."
 
     "Atropos" "Dieser Mann ist wirklich unglaublich… Man spürt mit jeder Faser seines Körpers, wie wichtig ihm das Wohl aller Menschen ist."
+
+    show narcais normal_gray
+    show era normal
 
     "Era" "Er… er ist wirklich beeindruckend… Er hat so viel in seinem Leben erreicht und dennoch hört er nie auf an das Glück aller Menschen zu denken."
 
     "Atropos" "Ich frage mich, welchen Preis er wohl dafür bezahlen muss?"
+
+    show era normal_gray
+    show narcais normal
 
     "Narcais" "Egal wie hoch er auch sein mag. Ich bin mir sicher, dass Anan nicht eine Sekunde zögert, diesen zu bezahlen."
 
@@ -2768,23 +3523,23 @@ label good_mood:
 label no_office:
 
     # Atropos Gedanken
-    "Nein! Auf keinen Fall, ich werde nicht nachgeben, nur weil Anan eine gute Rede gehalten hat."
+    symb"Nein! Auf keinen Fall, ich werde nicht nachgeben, nur weil Anan eine gute Rede gehalten hat."
 
     # Atropos Gedanken
-    "Mir ist es egal, was die Konsequenzen sind, ich werde mich nicht weiter dazu zwingen lassen, Happiness zu nehmen."
+    symb"Mir ist es egal, was die Konsequenzen sind, ich werde mich nicht weiter dazu zwingen lassen, Happiness zu nehmen."
     # Atropos Gedanken
-    "Es ist meine freie Entscheidung wie ich zu meinem eigenen Glück gelangen will. Keiner kann mich zwingen, dieses Glück über Happiness zu erreichen."
+    symb"Es ist meine freie Entscheidung wie ich zu meinem eigenen Glück gelangen will. Keiner kann mich zwingen, dieses Glück über Happiness zu erreichen."
     # Symbiont
-    "{i}Letztlich wirst du das Glück nur über Happiness erreichen können. {/i}"
+    symb"{i}Letztlich wirst du das Glück nur über Happiness erreichen können. {/i}"
 
     # Atropos Gedanken
-    "Ich nehme die Pille wann und wenn ich will!"
+    symb"Ich nehme die Pille wann und wenn ich will!"
 
     # Symbiont
-    "{i}Du solltest sie jetzt und hier nehmen. {/i}"
+    symb"{i}Du solltest sie jetzt und hier nehmen. {/i}"
 
     # Atropos Gedanken
-    "Und jetzt zurück an die Arbeit. Zumindest der Bericht für Anan sollte heute fertig werden."
+    symb"Und jetzt zurück an die Arbeit. Zumindest der Bericht für Anan sollte heute fertig werden."
 
     "Atropos" "…"
 
@@ -2792,24 +3547,33 @@ label no_office:
 
     $ loudspeaker = True
     # Atropos Gedanken
-    "Ich werde die Durchsage einfach überhören."
+    symb"Ich werde die Durchsage einfach überhören."
+
+    show narcais normal
 
     "Narcais" "Atropos, deine Anwesenheit wird verlangt. Wieso reagierst du nicht? Du solltest dich geehrt fühlen, in Anans Büro gerufen zu werden!"
+
+    show narcais normal_gray
+    show era confused
+
     "Era" "Was will er von dir, Atropos?"
 
     "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. Er erwartet dich.{/i}"
 
     # Atropos Gedanken
-    "Sieht so aus, als würde mir keine andere Wahl bleiben… Ich möchte auch nicht unter meinen Kollegen deswegen seltsam auffallen."
+    symb"Sieht so aus, als würde mir keine andere Wahl bleiben… Ich möchte auch nicht unter meinen Kollegen deswegen seltsam auffallen."
 
     # Atropos Gedanken
-    "Ich hoffe die anderen denken jetzt nicht schlecht von mir… und muss Anan das gleich über die Lautsprecher durchsagen lassen?"
+    symb"Ich hoffe die anderen denken jetzt nicht schlecht von mir… und muss Anan das gleich über die Lautsprecher durchsagen lassen?"
 
     # Atropos Gedanken
-    "Das muss echt nicht jeder mitbekommen…"
+    symb"Das muss echt nicht jeder mitbekommen…"
 
     # Atropos Gedanken
-    "Aber ich kann mir ja mal anhören, was er zu sagen hat und dann weitersehen…"
+    symb"Aber ich kann mir ja mal anhören, was er zu sagen hat und dann weitersehen…"
+
+    show era confused_gray
+    show narcais confused
 
     "Narcais" "Atropos?"
 
