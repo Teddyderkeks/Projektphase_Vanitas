@@ -5,10 +5,17 @@ default sawworldmap =False
 
 label selection_kloth_office_after_anan_office:
     $ kloth_office_after_anan_office = True
+    $ lookaroundklothsoffice = True
 
     if read_letter_kloth:
         if read_computer_kloth:
             if read_document_kloth:
+                $ klothwatchedeverything= True
+                $ lookaroundklothsofficewatchedeverything= True
+                if safeopen == True:
+                    $klotheverythingseensafeopen= True
+                else:
+                    $klotheverythingseenbutnotsafeopen = True
                 jump how_many_infos_kloth
             else:
                 menu:

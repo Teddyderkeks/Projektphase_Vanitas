@@ -354,10 +354,11 @@ label search_kloth_without_anan_office:
     symb"{i}Du musst heute noch so viel Arbeit erledigen. Kümmere dich darum! Das macht dich glücklich. {/i}"
 
 
-
+    $ whattosearchafteranansoffice = True
     show screen force_mouse_move_670
     menu:
         "Ich suche weiter nach Kloth. Ich muss sofort mit ihm persönlich darüber sprechen.":
+            $ whattosearchafteranansofficekloth = True
             hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich suche weiter nach Kloth. Ich muss sofort mit ihm persönlich darüber sprechen."
@@ -370,6 +371,7 @@ label search_kloth_without_anan_office:
 
             jump still_search_kloth
         "Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann.":
+            $ whattosearchafteranansofficeklothsoffice = True
             hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann."
@@ -394,6 +396,7 @@ label search_kloth_without_anan_office:
 
             jump selection_kloth_office
         "Ich sollte besser zurück ins Labor. Vielleicht hat Kloth den anderen dort ja auch eine Nachricht für mich hinterlassen?":
+            $ whattosearchafteranansofficebacklab = True
             hide screen force_mouse_move_670
             # Atropos Gedanken
             symb"Ich sollte besser zurück ins Labor. Vielleicht hat Kloth den anderen dort ja auch eine Nachricht für mich hinterlassen?"
@@ -415,6 +418,8 @@ label search_kloth_without_anan_office:
             jump not_search_kloth
 
 label everything_seen:
+
+    $ lookaroundklothsofficewatchedeverything = True
     # Atropos Gedanken
     symb"Was soll ich jetzt nur tun?"
 
@@ -460,9 +465,10 @@ label everything_seen:
     # Atropos Gedanken
     symb"Ich…"
 
-
+    $ searchklothorsolveclue = True
     menu:
         "Ich will doch einfach nur glücklich sein.":
+            $ searchklothorsolvecluehappiness = True
             # Atropos Gedanken
             symb"Ich will doch einfach nur glücklich sein."
 
@@ -496,8 +502,10 @@ label everything_seen:
             with fadeshort
             jump laborpillende
         "Ich muss versuchen den Hinweisen nachzugehen.":
+            $ searchklothorsolveclueclue = True
             jump choice_bomb
         "Ich muss Kloth finden und ihn fragen, was all das zu bedeuten hat.":
+            $ searchklothorsolvecluekloth = True
             # Atropos Gedanken
             symb"Ich muss Kloth finden und ihn fragen, was das alles zu bedeuten hat."
 
@@ -943,11 +951,14 @@ label serverraumpille:
     symb"{i}Was ist mit all den Menschen im Gebäude? Wirst du sie retten? Sie sind unschuldig und wissen von nichts. Wenn du dich selbst als Opfer betrachtest. Sind sie dann nicht Opfer genau wie du? {i}"
 
     show screen force_mouse_move_630
+    $ savepeopleorkillall = True
     menu:
         "Wenn ich den Menschen helfe, rette ich damit vielleicht auch Anan. Das kann ich nicht zulassen.":
+            $ savepeopleorkillallkill = True
             hide screen force_mouse_move_630
             jump menschennichthelfen
         "Ich muss den Menschen helfen. Sie können nichts dafür.":
+            $ savepeopleorkillallsave = True
             hide screen force_mouse_move_630
             jump menschenhelfen
 
@@ -1048,8 +1059,7 @@ label menschennichthelfen:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending
 label menschenhelfen:
 
     "Atropos"  "Ich muss den Menschen helfen. Sie können nichts dafür."
@@ -1166,5 +1176,4 @@ label menschenhelfen:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending

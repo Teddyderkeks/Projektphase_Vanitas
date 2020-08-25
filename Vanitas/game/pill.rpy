@@ -121,8 +121,10 @@ label pill:
         symb"{i}Du willst ihn doch nicht bei irgendetwas stören. {/i}"
 
         show screen force_mouse_move_twooptionsdown
+        $ whotolookfor = True
         menu:
             "Ich sollte nach Kloth suchen.":
+                $ whotolookforklothimmediately = True
                 hide screen force_mouse_move_twooptionsdown
 
                 # Atropos Gedanken
@@ -133,6 +135,7 @@ label pill:
 
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
+                $ whotolookforchesis = True
 
                 hide screen force_mouse_move_twooptionsdown
 
@@ -233,6 +236,7 @@ label still_search_chesis:
     show screen force_mouse_move_twooptionsdown
     menu:
         "Ich möchte trotzdem lieber nach Kloth suchen.":
+            $ whotolookforklothlater = True
             hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Ich denke, ich möchte trotzdem lieber nach Kloth suchen."
@@ -349,6 +353,7 @@ label mittagspausemitchesis:
 
             jump not_search_kloth
         "Ich gehe trotzdem besser auf Nummer sicher und suche ihn.":
+            $ whotolookforklothlater = True
             hide screen force_mouse_move_480
 
             "Atropos" "Ich gehe trotzdem besser auf Nummer sicher und suche ihn."
@@ -506,10 +511,13 @@ label laborpillende:
 
     "Era" "Wenn…, wenn du willst könnte ich dich hinbringen?"
 
+    $ takeerawithyoutobomb = True
     menu:
         "Klar, gerne.":
+            $ takeerawithyoutobombyes = True
             jump erabegleiten
         "Alles gut, ich finde es schon.":
+            $ takeerawithyoutobombno = True
             jump eranichtbegleiten
 
 label erabegleiten:
@@ -602,9 +610,7 @@ label erabegleiten:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label eranichtbegleiten:
 
@@ -675,5 +681,4 @@ label eranichtbegleiten:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending

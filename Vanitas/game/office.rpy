@@ -70,8 +70,10 @@ label office:
     # Symbiont
     symb"{i}Triff die richtige Entscheidung.{i}"
     show screen force_mouse_move_twooptionsdownweak
+    $ lookaroundinanansoffice = True
     menu:
         "Ich trete einfach mal ein und sehe dann weiter.":
+            $ lookaroundinanansofficeyes = True
             hide screen force_mouse_move_twooptionsdownweak
             # Atropos Gedanken
             symb"Ich trete einfach mal ein und sehe dann weiter. Es wird schon nichts Schlimmes deswegen passieren."
@@ -101,6 +103,7 @@ label office:
             $ straight_anan_office = True
             jump selection_anan_office
         "Ich sollte besser vor der Tür auf Anan warten.":
+            $ lookaroundinanansofficeno = True
             hide screen force_mouse_move_twooptionsdownweak
 
             # Atropos Gedanken
@@ -205,11 +208,13 @@ label conversation_with_anan:
 
     menu:
         "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+            $ lookaroundinanansofficenounderstanding = True
             jump understanding
         "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich.":
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
             jump questioning
         "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+            $ lookaroundinanansofficenoangry = True
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
             "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glüsck bestimmen können!"
 
@@ -510,9 +515,11 @@ label questioning:
 
     menu:
         "Nein… nein, möchte ich nicht. Du hast ja Recht.":
+            $ lookaroundinanansofficenounderstanding = True
             play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
             jump understandingpart2
         "Aber das erklärt immer noch nicht wie die Pille eigentlich wirkt.":
+            $ lookaroundinanansofficenonounderstanding = True
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
             jump misunderstanding
 
@@ -850,6 +857,8 @@ label how_many_infos_anan:
 
     if infos_count_anan == 1 or infos_count_anan == 2:
         if  straight_anan_office:
+
+            $ lookaroundinanansofficeyesatleastonebutnotall = True
             # Atropos Gedanken
             symb"Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen und dabei sollte er mich besser nicht erwischen."
 
@@ -989,6 +998,7 @@ label how_many_infos_anan:
 
 
         else:
+            $ lookaroundinanansofficeseenatleastone = True
             # Atropos Gedanken
             symb"Ich sollte aufhören. Es ist zu riskant. Anan könnte jeden Moment zurückkommen und dabei sollte er mich besser nicht erwischen."
 
@@ -1009,6 +1019,7 @@ label how_many_infos_anan:
 
     if infos_count_anan == 3:
         if straight_anan_office:
+            $ lookaroundinanansofficeyesall = True
             # Atropos Gedanken
             symb"Hier scheint sonst nichts mehr Wichtiges herumzuliegen…"
 
@@ -1020,6 +1031,7 @@ label how_many_infos_anan:
 
             "Atropos"  "Verdammt…"
         else:
+            $ lookaroundinanansofficeseeneverything = True
             # Atropos Gedanken
             symb"Hier scheint sonst nichts mehr Wichtiges herumzuliegen…"
 
@@ -1182,12 +1194,14 @@ label one_or_two_infos:
         # Atropos Gedanken
         symb"Aber vielleicht sollte ich ihn auch einfach mit dem, was ich gefunden habe konfrontieren? Angriff ist immerhin die beste Verteidigung."
 
-
+    $ confrontanan = True
     menu:
         "Ich sollte Anan mit den Tatsachen konfrontieren.":
             $ last_try_find_kloth = True
+            $ confrontananyes = True
             jump face_anan
         "Ich lasse den Rest seiner Ansprache über mich ergehen und hoffe, dass er nichts bemerkt hat.":
+            $ confrontananno = True
             jump not_face_anan
 
 label face_anan:
@@ -1373,6 +1387,7 @@ label not_face_anan:
     menu:
         "Ich vertraue immer noch auf Aither. Ich glaube an das Gute in der Firma.":
 
+            $ firmaok = True
             play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
             # Atropos Gedanken
             symb"Ich vertraue immer noch auf Aither. Ich glaube an das Gute in der Firma."
@@ -1396,7 +1411,7 @@ label not_face_anan:
 
             jump back_to_work
         "Ich traue Aither nicht.":
-
+            $ firmabad = True
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
             # Atropos Gedanken
             symb"Ich traue Aither nicht."
@@ -1657,11 +1672,14 @@ label last_search_kloth:
     # Atropos Gedanken
     symb"Was soll ich mit all diesen Informationen anstellen? Soll ich nach Kloth suchen? Oder besser nach der Bombe?"
 
-
+    $ seekafterklothpng = True
+    $ saneorseek = True
     menu:
         "Ich muss nach Kloth suchen!":
+            $ seekafterklothpngyes = True
             jump end_search_kloth
         "Ich muss nach der Bombe suchen!":
+            $ seekafterklothpngenoughinfo = True
             jump nextstepwithbomb
 
 label end_search_kloth:
@@ -1991,6 +2009,4 @@ label end_search_kloth:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending

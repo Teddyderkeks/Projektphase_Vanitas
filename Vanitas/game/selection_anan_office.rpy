@@ -200,6 +200,8 @@ label letter_anan:
     $ read_letter_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
+    $ lookaroundinanansofficeyesatleastonebutnotallletter = True
+    $ lookaroundinanansofficeseenletterbutnoteverything = True
 
     # Atropos Gedanken
     symb"Ich könnte mir den geöffneten Brief auf Anans Schreibtisch anschauen."
@@ -256,6 +258,9 @@ label document_anan:
     $ read_document_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
+    $ lookaroundinanansofficeyesatleastonebutnotalldocument = True
+    $ lookaroundinanansofficeseendocumentbutnoteverything = True
+
 
     # Atropos Gedanken
     symb"Ich könnte mir die herumliegenden Dokumente ansehen."
@@ -307,6 +312,8 @@ label computer_anan:
     $ read_computer_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
+    $ lookaroundinanansofficeyesatleastonebutnotallcomputer = True
+    $ lookaroundinanansofficeseenpcbutnoteverything = True
 
     # Atropos Gedanken
     symb"Ich könnte mich auf Anans PC umsehen."
@@ -413,6 +420,7 @@ label safe_anan:
     scene detail_safe
     with fadeshort
     if sawbooks:
+        $ safeopen = True
         # Atropos Gedanken
         symb"Ein Safe? Da könnte etwas Interessantes drin sein…"
         # Atropos Gedanken

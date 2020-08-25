@@ -1,4 +1,5 @@
 label rueffel:
+    $ ruffel= True
     if loudspeaker:
         # Atropos Gedanken
         symb"Da ist Anans Büro… ich habe absolut keine Lust reinzugehen."
@@ -92,6 +93,7 @@ label rueffel:
 
     menu:
         "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+            $ ruffleunderstanding = True
             hide screen force_mouse_move_twooptions
             play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
@@ -134,6 +136,7 @@ label rueffel:
 
             jump back_to_work
         "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+            $ ruffleangry = True
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
             hide screen force_mouse_move_twooptions
             jump ichsollmichopfern
@@ -351,6 +354,4 @@ label expulsion_office:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending

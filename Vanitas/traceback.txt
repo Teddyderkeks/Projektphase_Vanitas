@@ -1,28 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-WindowsError: [Error 32] Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: 'C:\\Users\\Sabrina\\AppData\\Roaming/RenPy/Vanitas-1596038599\\persistent'
+  File "game/selection_kloth_office_after_anan_office.rpy", line 13, in script
+    if safeopen = True:
+SyntaxError: invalid syntax (game/selection_kloth_office_after_anan_office.rpy, line 13)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\main.py", line 581, in main
-    renpy.persistent.update(True)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\persistent.py", line 391, in update
-    save()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\persistent.py", line 407, in save
-    renpy.loadsave.location.save_persistent(data)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\savelocation.py", line 490, in save_persistent
-    l.save_persistent(data)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\savelocation.py", line 351, in save_persistent
-    safe_rename(fn_new, fn)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loadsave.py", line 306, in safe_rename
-    os.unlink(new)
-WindowsError: [Error 32] Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: 'C:\\Users\\Sabrina\\AppData\\Roaming/RenPy/Vanitas-1596038599\\persistent'
+  File "game/selection_kloth_office_after_anan_office.rpy", line 13, in script
+    if safeopen = True:
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/selection_kloth_office_after_anan_office.rpy, line 13)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Tue Aug 25 00:49:54 2020
+Tue Aug 25 12:45:38 2020
