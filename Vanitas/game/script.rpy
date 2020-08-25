@@ -158,6 +158,8 @@ label take_pill:
     # Atropos Gedanken
     symb"Ich sollte die Pille besser jetzt sofort nehmen."
 
+    play sound "Sound/Sounds/pille.mp3" fadeout 1
+
     scene detail_pill
     with fadeshort
 
@@ -297,6 +299,8 @@ label shop:
 
     scene shop_1
     with fadeshort
+
+    play sound "Sound/Sounds/gloeckchen.mp3"
 
     show zelos normal
 
@@ -1142,6 +1146,8 @@ label conversation_with_seller:
                     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
                     "Atropos" "Ja, natürlich… sorry…"
+
+                    play sound("Sound/Sounds/bump.mp3")
 
                     show era confused
 
@@ -2162,6 +2168,8 @@ label work:
 
                 "Atropos" "Ja, natürlich… sorry…"
 
+                play sound("Sound/Sounds/bump.mp3")
+
                 show era confused
 
                 "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
@@ -2469,6 +2477,8 @@ label anan_is_right:
 
     "Atropos" "Ja, natürlich… sorry…"
 
+    play sound("Sound/Sounds/bump.mp3")
+
     show era confused
 
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
@@ -2589,6 +2599,8 @@ label anan_is_right:
 
     "Atropos" "…"
 
+    play sound ("<from 0 to 5>Sound/Music/Rooms/verkaufsraum.mp3") fadeout 3
+
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
     "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
@@ -2617,28 +2629,28 @@ label anan_is_right:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_mid behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -2646,11 +2658,11 @@ label anan_is_right:
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
@@ -2658,23 +2670,23 @@ label anan_is_right:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
     "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
@@ -2686,7 +2698,7 @@ label anan_is_right:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -2802,6 +2814,8 @@ label why_important:
     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
     "Atropos" "Ja, natürlich… sorry…"
+
+    play sound("Sound/Sounds/bump.mp3")
 
     show era confused
 
@@ -2970,11 +2984,11 @@ label why_important:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_left behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -2983,25 +2997,25 @@ label why_important:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -3011,7 +3025,7 @@ label why_important:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -3019,7 +3033,7 @@ label why_important:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -3035,7 +3049,7 @@ label why_important:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -3170,6 +3184,8 @@ label be_against:
 
     "Atropos" "Ja, sorry …"
 
+    play sound("Sound/Sounds/bump.mp3")
+
     show era confused
 
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
@@ -3265,11 +3281,11 @@ label be_against:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_left behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -3280,25 +3296,25 @@ label be_against:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -3308,7 +3324,7 @@ label be_against:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -3316,7 +3332,7 @@ label be_against:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -3332,7 +3348,7 @@ label be_against:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -3482,12 +3498,12 @@ label good_mood:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
-        xalign 0.12
-    show adres normal behind screen_transparent:
-        xalign 0.8
-    show anan normal_left behind screen_transparent:
-        xalign 0.4
+    show atlas normal_small behind screen_transparent:
+        xalign 0.15
+    show adres normal_small behind screen_transparent:
+        xalign 0.85
+    show anan normal_left_small behind screen_transparent:
+        xalign 0.40
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
@@ -3495,25 +3511,25 @@ label good_mood:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -3523,7 +3539,7 @@ label good_mood:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -3531,7 +3547,7 @@ label good_mood:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -3547,7 +3563,7 @@ label good_mood:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 

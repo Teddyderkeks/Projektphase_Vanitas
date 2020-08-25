@@ -341,6 +341,8 @@ label explodierenPillegenommen:
 
     show glitch
 
+    play sound "Sound/Sounds/glitch.mp3"
+
     # Symbiont
     symb"{i}Noch 10 Sekunden… die Uhr, sie tickt…{/i}"
 
@@ -371,6 +373,10 @@ label explodierenPillegenommen:
     # Atropos Gedanken
     symb"Ob es wohl anders hätte kommen können? Hätte ich versuchen sollen alle zu retten, aber die Bombe explodieren lassen sollen?"
 
+    stop sound
+
+    play sound "Sound/Sounds/glitch.mp3"
+
     # Atropos Gedanken
     symb"So viele Menschen werden heute sterben…"
 
@@ -395,6 +401,10 @@ label explodierenPillegenommen:
     scene detail_bomb0005
     show glitch
 
+    stop sound
+
+    play sound "Sound/Sounds/glitch.mp3"
+
     # Symbiont
     symb"{i}5 Sekunden. {/i}"
 
@@ -418,6 +428,7 @@ label explodierenPillegenommen:
     symb"Nein. Nein, bin ich nicht."
 
     hide glitch
+    stop sounds
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -1541,16 +1552,22 @@ label savetycho:
     with fadealarm
     scene detail_alarm
     with fadealarm
+    play sound("Sound/Sounds/glass.mp3")
     scene detail_alarmbroken
     with fadealarm
     scene hall
     with fadealarm
+
+    play sound("Sound/Sounds/feueralarm.mp3")
+
+
 
     # Atropos Gedanken
     symb"Der Alarm ist ganz schön laut… hoffentlich bewirkt er etwas."
 
     "Atropos" "Lauft!"
 
+    stop sound
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
@@ -1772,8 +1789,12 @@ label saveallallthreekloth:
     # Atropos Gedanken
     symb"Ich muss es versuchen, selbst wenn dann Panik ausbrechen würde."
 
+    play sound("Sound/Sounds/glass.mp3")
+
     scene detail_alarmbroken
     with fadeshort
+
+    play sound("Sound/Sounds/feueralarm.mp3")
 
     # Atropos Gedanken
     symb"Der Alarm ist ganz schön laut… ich hoffe er bewirkt etwas."
@@ -1781,10 +1802,13 @@ label saveallallthreekloth:
     scene hall
     with fadeshort
 
+
     # Atropos Gedanken
     symb"Bitte… flieht doch…"
 
     "Atropos" "Flieht!"
+
+    stop sound
     show tycho normal
 
     "Tycho" "Was ist denn los?"
@@ -2399,9 +2423,12 @@ label trywarnpeople:
     # Atropos Gedanken
     symb"Bitte funktioniere…"
 
+    play sound("Sound/Sounds/glass.mp3")
+
     scene detail_alarmbroken
     with fadeshort
 
+    play sound("Sound/Sounds/feueralarm.mp3")
     # Atropos Gedanken
     symb"Wenn die Bombe hochgeht, ohne dass ich es schaffe die Menschen zu retten… nein, das könnte ich mir nicht verzeihen…"
 
@@ -2414,9 +2441,10 @@ label trywarnpeople:
     # Atropos Gedanken
     symb"Ich muss sie retten und das um jeden Preis!"
 
-
     # Atropos Gedanken
     symb"Der Alarm ist zu laut, aber immerhin verlassen die Menschen schon mal ihren Arbeitsplatz."
+
+    stop sound
 
     scene hall
     with fadeshort

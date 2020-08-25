@@ -267,6 +267,7 @@ label accept_conversation_kloth:
     "Kloth" "Atropos. Es gibt etwas anderes, das die Menschen… "
 
     show glitch
+    play sound("Sound/Sounds/glitch.mp3")
 
     # Symbiont
     symb"Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht? "
@@ -278,6 +279,8 @@ label accept_conversation_kloth:
     symb"Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?"
 
     "Atropos" "Nein… nein, ich will ein glückliches Leben haben."
+
+    stop sound
 
     hide glitch
 
