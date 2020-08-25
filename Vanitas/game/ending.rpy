@@ -1,29 +1,17 @@
 
 label ending:
 
-if absoluetlyeverythingseen:
 
+    #Symbiont
+    symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
 
+    #Symbiont
+    symb"{i} Du wirst sterben und es scheint keinen Ausweg aus dieser Lage zu geben. {/i}"
 
-else:
+    #Symbiont
+    symb"{i} Der Tag unseres Todes. Denkst du, dass du alles getan hast, das du tun konntest, um glücklich zu sein und in Frieden gehen zu können? {/i}"
 
-
-
-    if absoluetlyeverythingseenandsafe:
-
-
-
-    else:
-        #Symbiont
-        symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
-
-        #Symbiont
-        symb"{i} Du wirst sterben und es scheint keinen Ausweg aus dieser Lage zu geben. {/i}"
-
-        #Symbiont
-        symb"{i} Der Tag unseres Todes. Denkst du, dass du alles getan hast, das du tun konntest, um glücklich zu sein und in Frieden gehen zu können? {/i}"
-
-        jump part1
+    jump part1
 
 
 label part1:
@@ -686,7 +674,7 @@ label part20:
                     "{i}Währenddessen bist du im Labor geblieben. Die Bombe explodierte, ohne dass jemand etwas dagegen tun konnte. Hättest du das verhindern können? {/i}"
                     jump partend
 
-jump partend:
+label partend:
     #Symbiont
     "{i}… {/i}"
 
