@@ -370,36 +370,70 @@ label mittagspausemitchesis:
 
 label not_search_kloth:
     if read_document_kloth:
-        # Atropos Gedanken
-        symb"Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit."
+        if infos_count_kloth == 1:
+            # Atropos Gedanken
+            symb"Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit."
 
-        # Atropos Gedanken
-        symb"Über Kloth werde ich schon früher oder später mehr erfahren."
+            # Atropos Gedanken
+            symb"Über Kloth werde ich schon früher oder später mehr erfahren."
 
-        # Atropos Gedanken
-        symb"Wenn er so weit ist, wird er mir alles erzählen. Und bis dahin kann ich warten. Wir sind immerhin beste Freunde."
+            # Atropos Gedanken
+            symb"Wenn er so weit ist, wird er mir alles erzählen. Und bis dahin kann ich warten. Wir sind immerhin beste Freunde."
 
-        # Atropos Gedanken
-        symb"Und wenn er Hilfe braucht, dann werde ich ihm helfen. Wenn ich mich richtig erinnere und es ihm tatsächlich nicht gut geht…"
+            # Atropos Gedanken
+            symb"Und wenn er Hilfe braucht, dann werde ich ihm helfen. Wenn ich mich richtig erinnere und es ihm tatsächlich nicht gut geht…"
 
-        # Atropos Gedanken
-        symb"Ich werde immer an seiner Seite stehen und für ihn da sein, wenn er mich braucht."
+            # Atropos Gedanken
+            symb"Ich werde immer an seiner Seite stehen und für ihn da sein, wenn er mich braucht."
 
-        scene hall
-        with fadeshort
+            scene hall
+            with fadeshort
 
-        # Atropos Gedanken
-        symb"So… ich habe Kloth nochmals eine Nachricht geschrieben. Ich bin mir sicher, es wird sich alles aufklären."
+            # Atropos Gedanken
+            symb"So… ich habe Kloth nochmals eine Nachricht geschrieben. Ich bin mir sicher, es wird sich alles aufklären."
 
-        # Atropos Gedanken
-        symb"Und jetzt zurück ins Labor."
+            # Atropos Gedanken
+            symb"Und jetzt zurück ins Labor."
 
 
-        play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
-        scene lab
-        with fadeshort
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+            scene lab
+            with fadeshort
 
-        jump laborpillende
+            jump laborpillende
+        else:
+            # Atropos Gedanken
+            symb"Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein."
+
+            # Atropos Gedanken
+            symb"Das alles sind nichts anderes als Hirngespinste."
+
+            # Atropos Gedanken
+            symb"Ja, ganz bestimmt! Ich bilde mir das ganze nur ein…"
+
+            # Atropos Gedanken
+            symb"Ich kehre jetzt einfach ins Labor zurück und vergesse das Ganze. Alles wird wieder wie zuvor sein."
+            # Symbiont
+            symb"{i}Ja, vergiss es. Sei einfach nur glücklich. Du bist sicher, nichts kann dir passieren. Das alles hier ist niemals passiert. Du hast eine ganz normale Mittagspause verbracht. {/i}"
+
+            # Symbiont
+            symb"{i}Sei glücklich, Atropos! {/i}"
+
+            scene hall
+            with fadeshort
+
+            # Atropos Gedanken
+            symb"Ob wohl Era da ist? Ich würde gerne ein bisschen Zeit mit ihr alleine verbringen und sie besser kennenlernen."
+
+            # Atropos Gedanken
+            symb"Auch wenn sie manchmal anstrengend sein kann, ist sie doch ziemlich süß."
+
+            play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+            scene lab
+            with fadeshort
+            jump laborpillende
+
 
     if infos_count_kloth == 1 or infos_count_kloth == 2:
             # Atropos Gedanken
