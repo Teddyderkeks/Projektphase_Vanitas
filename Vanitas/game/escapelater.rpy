@@ -376,8 +376,9 @@ label gowithnarcais:
 
     "Narcais" "Ich hoffe, er überlebt."
 
+    $endsad = True
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
@@ -460,7 +461,8 @@ label dontgowithnarcais:
 
     "Era" "Und… und vielleicht können wir uns das nächste Mal dann ja zu zweit treffen?"
 
+    $endsad = True
 
-    $ renpy.movie_cutscene("cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
