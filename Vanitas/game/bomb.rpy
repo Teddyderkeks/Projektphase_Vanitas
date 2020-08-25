@@ -202,12 +202,16 @@ label choice_bomb:
     # Symbiont
     symb"{i}Dir bleibt nicht mehr viel Zeit. Entscheide dich! {/i}"
     show screen force_mouse_move_480
+    $ whatwithbomb = True
     menu:
         "Ich will die Bombe entschärfen!":
+            $ whatwithbombtrydefuse = True
+
             hide screen force_mouse_move_480
             jump entschaerfenPillegenommen
 
         "Ich werde abwarten und die Bombe explodieren lassen. Ich vertraue Kloth!":
+            $ whatwithbombexplode = True
             hide screen force_mouse_move_480
             jump explodierenPillegenommen
 
@@ -304,8 +308,7 @@ label entschaerfenPillegenommen:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending
 
 label explodierenPillegenommen:
 
@@ -424,54 +427,19 @@ label explodierenPillegenommen:
     symb"{i}Bist du glücklich, Atropos? {/i}"
     window hide
 
-    # Atropos Gedanken
+    # Atropos Gedankens
     symb"Nein. Nein, bin ich nicht."
+
+    $secretending= True
 
     hide glitch
     stop sounds
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
-
-    scene street
-
-    # Atropos Gedanken
-    symb"Heute ist ein guter Tag. Ein glücklicher Tag. Ein Tag voller Zufriedenheit und Erfüllung."
-
-    # Atropos Gedanken
-    symb"Endlich fühle ich mich wirklich glücklich."
-
-    # Atropos Gedanken
-    symb"Ich weiß nicht, warum ich in letzter Zeit unglücklicher gewesen war, aber jetzt bin ich glücklich und das ist das Einzige, das zählt."
-
-    # Atropos Gedanken
-    symb"Da vorne ist ja auch schon Tartaros. Und nachher treffe ich mich mit meinen Freunden- besser kann der Tag gar nicht mehr werden."
-
-    # Atropos Gedanken
-    symb"Ich bin froh für eine Firma wie Tartaros zu arbeiten. Es muss schrecklich für die Menschen gewesen sein, die in Aither gearbeitet hatten."
-
-    # Atropos Gedanken
-    symb"Diese Bombe… einfach grauenhaft… wer könnte so etwas nur tun? All die Menschen, die gestorben sind…"
-
-    # Atropos Gedanken
-    symb"Aber ich sollte mir keine Gedanken mehr darüber machen. Es liegt in der Vergangenheit und hat mich zum Glück nicht betroffen."
-
-    # Atropos Gedanken
-    symb"Jetzt sollte ich mich ganz auf das Hier und Jetzt konzentrieren."
-
-    # Atropos Gedanken
-    symb"Was steht heute alles an?"
-
-    # Symbiont
-    symb"{i}Atropos. Bist du glücklich? {/i}"
-
-    "Atropos" "Ja. Ja, das bin ich."
+    jump ending
 
 
-    return
 
 label sawallthreekloth:
     # Atropos Gedanken
@@ -720,12 +688,14 @@ label sawallthreekloth:
     "Atropos" "Verdammt…"
 
     "Atropos" "Ich… ich…"
-
+    $ savepeoplewarnoralarm= True
     menu:
         "Ich muss versuchen die Leute zu warnen.":
+            $ savepeoplewarnoralarmfriends = True
             jump savepeoplesawallthreekloth
 
         "Ich muss erst nachschauen, ob die Bombe tatsächlich existiert.":
+            $ savepeoplewarnoralarmbomb = True
             jump doesbombexistsawallthreekloth
 
 label savepeoplesawallthreekloth:
@@ -747,6 +717,7 @@ label savepeoplesawallthreekloth:
         "Meine Freunde… ich muss sichergehen, dass es ihnen gut geht.":
             jump savefriendsallthreekloth
         "Ich muss sichergehen, dass es allen Menschen gut geht und alle eine Chance haben, nicht nur meine Freunde.":
+            $ savepeoplewarnoralarmalarm = True
             jump saveallallthreekloth
 
 
@@ -767,17 +738,21 @@ label savefriendsallthreekloth:
     # wenn Gespräch im Labor weder wütend noch niedergeschlagen
 
         "Ich muss Era um jeden Preis retten. Sie bedeutet mir viel." if datewithera == True :
+            $ savepeoplewarnoralarmfriendsera = True
             jump saveera
     # immer
         "Ich muss Chesis retten- er ist einer meiner besten Freunde seit unserer Kindheit- trotz seiner Ignoranz zuvor.":
+            $ savepeoplewarnoralarmfriendschesis = True
             jump savechesis
 
     # nur wenn man das Gespräch mit den Kollegen zuvor hatte
         "Ich versuche Tycho zu finden. Er ist bei allen beliebt- vielleicht kann er meine restlichen Freunde warnen." if  dialgoueoffice == True:
+            $ savepeoplewarnoralarmfriendstycho = True
             jump savetycho
 
     # immer
         "Ich weiß immer noch nicht, was mit Kloth passiert ist. Ich muss ihn finden.":
+            $ savepeoplewarnoralarmfriendskloth = True
             jump savekloth
 
 label saveera:
@@ -795,9 +770,11 @@ label saveera:
     menu:
 
         "Ich versuche es im Labor. Vielleicht ist sie ja noch dort.":
+            $ savepeoplewarnoralarmfriendseralab = True
             jump saveeralab
 
         "Ich suche besser wo anders nach ihr. In ihrer Mittagspause ist sie bestimmt nicht dort.":
+            $ savepeoplewarnoralarmfriendseraelsewhere = True
             jump saveeraelsewhere
 
 
@@ -1007,9 +984,7 @@ label saveeralab:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 
 label saveeraelsewhere:
@@ -1175,9 +1150,7 @@ label saveeraelsewhere:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label savechesis:
 
@@ -1348,9 +1321,7 @@ label savechesis:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label savetycho:
 
@@ -1571,9 +1542,7 @@ label savetycho:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label savekloth:
 
@@ -1753,10 +1722,7 @@ label savekloth:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
-
+    jump ending
 
 label saveallallthreekloth:
 
@@ -2107,9 +2073,7 @@ label saveallallthreekloth:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 
 label doesbombexistsawallthreekloth:
@@ -2286,10 +2250,7 @@ label doesbombexistsawallthreekloth:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
-
+    jump ending
 
 
 label nextstepwithbomb:
@@ -2382,15 +2343,18 @@ label nextstepwithbomb:
     "Atropos" "Verdammt…"
 
     "Atropos" "Ich… ich…"
-
+    $ whatwithbomb = True
+    $ savepeopleorkillall = True
     menu:
         "Ich muss versuchen die Leute zu warnen.":
+            $ savepeopleorkillallsave = True
             jump trywarnpeople
 
         "Ich muss erst nachschauen, ob die Bombe tatsächlich existiert.":
             jump doesbombexist
 
         "Ich muss sichergehen, dass Anan mit Aither untergeht.":
+            $ whatwithbombkillanan = True
             jump besureanandies
 
 
@@ -2536,9 +2500,7 @@ label trywarnpeople:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 
 label doesbombexist:
@@ -2712,9 +2674,7 @@ label doesbombexist:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label besureanandies:
 
@@ -2868,9 +2828,7 @@ label besureanandies:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 
 label ananorjustbombwho:
@@ -3383,11 +3341,13 @@ label chesiskillsklothwhattodo:
     "Atropos"  "Und Anan… er ist derjenige, der die Menschen zwingt!"
 
     "Atropos"  "Was, wenn ich zwar die Strukturen zerstöre, aber Anan überlebt? Wenn er Aither neu errichtet? Dann hätte ich nichts erreicht und Kloth nicht gerächt…"
-
+    $ whatwithbomb = True
     menu:
         "Ich muss sichergehen, dass auch Anan stirbt!":
+            $ rememberklothtalkyeskillanan = True
             jump ananshoulddie
         "Ich hoffe einfach, dass er mit der Firma untergeht. Ich könnte niemals selbst aktiv etwas tun.":
+            $ rememberklothtalkyeskillanannot = True
             jump aithershoulddie
 
 label ananshoulddie:
@@ -3506,9 +3466,7 @@ label ananshoulddie:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending
 
 label aithershoulddie:
 
@@ -3579,6 +3537,4 @@ label aithershoulddie:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-
-    return
+    jump ending

@@ -1,6 +1,7 @@
 default back_to_work_bevore = False
 
 label back_to_work:
+    $ backtoworkpart = True
     $ back_to_work_bevore = True
     # Atropos Gedanken
     symb"So… zurück an die Arbeit. Ich muss die Pille nehmen."
@@ -37,9 +38,11 @@ label after_detail_posterpills:
     show screen force_mouse_move_twooptions
     menu:
         "Ja, natürlich. Ich sollte sofort zurück ins Labor.":
+            $ backtoworkparttakepill = True
             hide screen force_mouse_move_twooptions
             jump take_pill_back_work
         "Ich denke, ich werde mich erst mit meinen Freunden unterhalten.":
+            $ backtoworkparttalkfriends = True
             hide screen force_mouse_move_twooptions
             jump talk_with_colleagues
 

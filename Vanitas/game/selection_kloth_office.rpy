@@ -8,21 +8,25 @@ label selection_kloth_office:
 
 
 
-
+    $ lookaroundklothsoffice = True
     if read_letter_kloth:
         if read_computer_kloth:
             if read_document_kloth:
+                $ klothwatchedeverything= True
+                $ lookaroundklothsofficewatchedeverything= True
                 jump everything_seen
             else:
                 show screen force_mouse_move_klothoffice
                 menu:
                     "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -43,12 +47,14 @@ label selection_kloth_office:
                 show screen force_mouse_move_klothoffice
                 menu:
                     "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -69,12 +75,14 @@ label selection_kloth_office:
                 menu:
 
                     "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -99,12 +107,14 @@ label selection_kloth_office:
                 show screen force_mouse_move_klothoffice
                 menu:
                     "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -124,12 +134,14 @@ label selection_kloth_office:
                 show screen force_mouse_move_klothoffice
                 menu:
                     "Ich habe genug. Ich gehe zurück zur Arbeit. Das alles macht mir Angst. Ich will einfach nur glücklich sein.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -153,12 +165,14 @@ label selection_kloth_office:
                 show screen force_mouse_move_klothoffice
                 menu:
                     "Das sind firmeninterne Sachen. Die gehen mich nichts an, ich sollte lieber zurück zur Arbeit.":
+                        $ lookaroundklothsofficewatcheddontsearchkloth = True
                         hide screen force_mouse_move_klothoffice
                         jump not_search_kloth
                     "Ich werde das Regal untersuchen."  if sawshelf == False:
                         hide screen force_mouse_move_klothoffice
                         jump shelf_kloth
                     "Ich muss Kloth sofort finden!":
+                        $ lookaroundklothsofficewatchedatleastonethensearchedkloth = True
                         hide screen force_mouse_move_klothoffice
                         # Atropos Gedanken
                         symb"Ich muss Kloth sofort finden!"
@@ -200,6 +214,7 @@ label selection_kloth_office:
 
 label letter_kloth:
     $ read_letter_kloth = True
+    $ lookaroundklothsofficeletter = True
     $ infos_count_kloth += 1
     $ thingswatched += 1
 
@@ -330,11 +345,12 @@ label computer_kloth:
 
     if password == "Sadness" or password == "sadness":
         $ password_right = True
+
         scene detail_confession
         with fadeshort
         call screen arrow_detail_confession
         label after_detail_confession:
-
+            $ lookaroundklothsofficepcpasswordcorrect = True
             # Atropos Gedanken
             symb"Was ist das? Das kann doch alles nicht wahr sein… Wie? Warum?"
 
@@ -355,7 +371,7 @@ label computer_kloth:
 
 
     else:
-
+        $ lookaroundklothsofficepcpasswordwrong = True
         # Atropos Gedanken
         symb"Falsches Passwort... Ich muss wo anderes weitersuchen..."
 
@@ -475,6 +491,7 @@ label computer_kloth:
 
 label document_kloth:
     $ thingswatched += 1
+    $ lookaroundklothsofficedocument = True
     $ read_document_kloth = True
     $ infos_count_kloth += 1
 

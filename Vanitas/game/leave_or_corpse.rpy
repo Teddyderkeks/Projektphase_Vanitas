@@ -2,14 +2,17 @@ default murderer = False
 default reschedule_kloth = False
 
 label leave_or_corpse:
+    $ foundcorpse = True
     $ last_try_find_kloth = False
     $ weak_symbiont = True
     show screen force_mouse_move_twooptionsdownweak
     menu:
         "Ich kann die Leiche nicht einfach liegenlassen, ohne zu wissen, wer es ist!":
+            $ foundcorpselook = True
             hide screen force_mouse_move_twooptionsdownweak
             jump kloth_corpse
         "Ich will das nicht sehen… ich habe Angst!":
+            $ foundcorpsegoaway = True
             hide screen force_mouse_move_twooptionsdownweak
             jump leave_and_go_pill
 
@@ -176,14 +179,17 @@ label kloth_corpse:
     jump conversation_with_kloth
 
 label conversation_with_kloth:
+    $ rememberklothtalk = True
     if reschedule_kloth:
         show screen force_mouse_move_580strong
         menu:
             "Alles gut, von mir aus. Ich höre dir zu.":
+                $ rememberklothtalkyes = True
                 "Atropos" "Alles gut, von mir aus. Ich höre dir zu. Aber hier und jetzt. Ich möchte noch ein bisschen was von meiner Mittagspause haben."
                 hide screen force_mouse_move_580strong
                 jump accept_conversation_kloth
             "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher.":
+                $ rememberklothtalkno = True
                 hide screen force_mouse_move_580strong
                 "Atropos" "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher. Ich will lieber weiterhin mein glückliches Leben führen."
                 jump refuse_conversation_kloth
@@ -191,12 +197,14 @@ label conversation_with_kloth:
         show screen force_mouse_move_550
         menu:
             "Ja, natürlich helfe ich dir. Erzähl endlich, was los ist. Wie kann ich dir helfen?":
+                $ rememberklothtalkyes = True
                 hide screen force_mouse_move_550
                 jump accept_conversation_kloth
             "Können wir das Gespräch vielleicht vertagen? Ich habe echt Hunger und will Chesis zudem nicht warten lassen.":
                 hide screen force_mouse_move_550
                 jump reschedule_conversation_kloth
             "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch.":
+                $ rememberklothtalkno = True
                 hide screen force_mouse_move_550
                 jump refuse_conversation_kloth
 
