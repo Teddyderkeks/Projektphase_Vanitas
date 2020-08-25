@@ -277,7 +277,7 @@ label part5_2:
                     "S.""{i}Es sollten eure letzten gemeinsamen Minuten sein, ohne dass es euch bewusst war. Hättet ihr die Zeit anders nutzen können? Vielleicht mit Kloth? {/i}"
 
                     #Symbiont
-                    "S.""{i} Als eure Zeit vorbei war, bist du zurück ins Büro gegangen. {/i}"
+                    "S.""{i} Als eure Zeit vorbei war, bist du zurück ins Labor gegangen. {/i}"
                     jump part10_2
 
 label part6_2:
@@ -288,7 +288,7 @@ label part6_2:
             "S.""{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
             #Symbiont
-            "S.""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+            "S.""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. {/i}"
 
             #Symbiont
             "S.""{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"
@@ -324,7 +324,7 @@ label part7_2:
                 "S.""{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
                 #Symbiont
-                "S.""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+                "S.""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. {/i}"
 
                 #Symbiont
                 "S.""{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"
@@ -1039,7 +1039,7 @@ label part5_3:
                     "Kronos""{i}Es sollten eure letzten gemeinsamen Minuten sein, ohne dass es euch bewusst war. Hättet ihr die Zeit anders nutzen können? Vielleicht mit Kloth? {/i}"
 
                     #Symbiont
-                    "Kronos""{i} Als eure Zeit vorbei war, bist du zurück ins Büro gegangen. {/i}"
+                    "Kronos""{i} Als eure Zeit vorbei war, bist du zurück ins Labor gegangen. {/i}"
                     jump part10_3
 
 label part6_3:
@@ -1050,7 +1050,7 @@ label part6_3:
             "Kronos""{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
             #Symbiont
-            "Kronos""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+            "Kronos""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. {/i}"
 
             #Symbiont
             "Kronos""{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"
@@ -1086,7 +1086,7 @@ label part7_3:
                 "Kronos""{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
                 #Symbiont
-                "Kronos""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+                "Kronos""{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen.{/i}"
 
                 #Symbiont
                 "Kronos""{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"
@@ -1794,7 +1794,7 @@ label part5:
                     symb"{i}Es sollten eure letzten gemeinsamen Minuten sein, ohne dass es euch bewusst war. Hättet ihr die Zeit anders nutzen können? Vielleicht mit Kloth? {/i}"
 
                     #Symbiont
-                    symb"{i} Als eure Zeit vorbei war, bist du zurück ins Büro gegangen. {/i}"
+                    symb"{i} Als eure Zeit vorbei war, bist du zurück ins Labor gegangen. {/i}"
                     jump part10
 
 label part6:
@@ -1805,7 +1805,7 @@ label part6:
             symb"{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
             #Symbiont
-            symb"{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+            symb"{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. {/i}"
 
             #Symbiont
             symb"{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"
@@ -1841,7 +1841,7 @@ label part7:
                 symb"{i}Du wolltest deinen Freund nach allem, was du gesehen hattest, weitersuchen. Anan lief dir über den Weg und erklärte sich bereit, dir dabei zu helfen. {/i}"
 
                 #Symbiont
-                symb"{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. Und in dem Moment hattest du dich daran erinnert. Kloth war dem Wahnsinn verfallen. {/i}"
+                symb"{i}Gemeinsam fandet ihr ihn - tot, am Fuße der Treppen. {/i}"
 
                 #Symbiont
                 symb"{i}Anan wollte dir deine Trauer nehmen, aber es war zu spät. Hatte Kloths Wahnsinn sich auf dich übertragen? {/i}"

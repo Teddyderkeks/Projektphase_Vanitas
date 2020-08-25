@@ -76,8 +76,6 @@ label change:
     # Atropos Gedanken
     symb"Man trifft ihn eigentlich nie ohne sein Handy an. Das ist seltsam... es klingt nicht nach ihm. Ob etwas vorgefallen ist?"
 
-    play sound ("Sound/Sounds/durchsage.mp3")
-
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -290,7 +288,7 @@ label shop:
 
     "Atropos" "Ich schaue heute Abend Mal nach und gebe dir Bescheid, falls ich noch weiteres Material dazu finde."
 
-    "Zelos" "Super, danke! Du kannst ja auch Chesis und Kloth Mal Bescheid geben- als Anans Chefsekretär hat Kloth bestimmt teiferreichende Informationen."
+    "Zelos" "Super, danke! Du kannst ja auch Chesis und Kloth Mal Bescheid geben- als Anans Chefsekretär hat Kloth bestimmt tiefer reichende Informationen."
 
     "Atropos" "Ich bezweifle sehr, dass er die rausgeben darf. (lacht)"
 
@@ -1043,22 +1041,22 @@ label conversation_with_seller:
 
                 menu:
                     "Wieso ist hier ein Schmetterling?":
-                        hide screen nightshade
+                        hide screen nightshade1
                         symb "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly
 
                     "Ich will mir die Bilder ansehen.":
-                        hide screen nightshade
+                        hide screen nightshade1
                         symb"Ich will mir die Bilder ansehen."
                         jump watchhallpictures
 
                     "Ein Druckknopfmelder?":
                         symb"Ein Druckknopfmelder?"
-                        hide screen nightshade
+                        hide screen nightshade1
                         jump watchhallalarm
 
                     "Ich sollte dann wirklich ins Labor.":
-                        hide screen nightshade
+                        hide screen nightshade1
                         jump watchnothinghall
 
                 label afternightshade1:
@@ -2610,7 +2608,6 @@ label anan_is_right:
 
     "Atropos" "…"
 
-    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -2999,7 +2996,6 @@ label why_important:
         symb"Zurück an die Arbeit."
 
         "Atropos" "…"
-        play sound ("Sound/Sounds/durchsage.mp3")
 
         "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3324,7 +3320,6 @@ label be_against:
         symb"Ich werde mich nachher mit allem beschäftigen. Jetzt sollte ich erst einmal mit der Arbeit anfangen."
 
         "Atropos" "…"
-        play sound ("Sound/Sounds/durchsage.mp3")
 
         "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3537,7 +3532,6 @@ label good_mood:
     symb"Zurück an die Arbeit."
 
     "Atropos" "…"
-    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
@@ -3700,7 +3694,6 @@ label no_office:
     symb"Und jetzt zurück an die Arbeit. Zumindest der Bericht für Anan sollte heute fertig werden."
 
     "Atropos" "…"
-    play sound ("Sound/Sounds/durchsage.mp3")
 
     "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. {/i}"
 
@@ -3737,7 +3730,6 @@ label no_office:
         show era confused
 
         "Era" "Was will er von dir, Atropos?"
-        play sound ("<from 0 to 5>Sound/Music/Rooms/verkaufsraum.mp3") fadeout 3
 
         "Durchsage" "{i}Atropos Laiotas. Dein Glück erwartet dich! Finde dich umgehend im Büro von Anan ein. Er erwartet dich.{/i}"
 
