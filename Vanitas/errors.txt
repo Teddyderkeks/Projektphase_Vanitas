@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/pill_kloth_search.rpy", line 43: is not terminated with a newline. (Check strings and parenthesis.)
-        play sound("Sound/Sounds/abschicken.mp3"
+File "game/ending.rpy", line 679: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
+    "{i}… {/i}"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 24 23:40:36 2020
+Tue Aug 25 02:45:41 2020
