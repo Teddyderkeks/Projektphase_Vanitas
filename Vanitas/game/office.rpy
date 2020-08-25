@@ -1924,7 +1924,7 @@ label end_search_kloth:
     hide sepia
     hide glitch
 
-    $ renpy.movie_cutscene("atropos_pushes_kloth.mpg")
+    $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
 
 
     # Symbiont
@@ -2078,6 +2078,6 @@ label end_search_kloth:
 
     $endcrazy= True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
