@@ -243,7 +243,7 @@ label search_kloth_without_anan_office:
     scene kloth_office
     with fadeshort
     show sepia
-    show kloth unsuresmiling_neutral_alt behind sepia:
+    show kloth unsuresmiling_neutral behind sepia:
         xalign 0.5
 
 
@@ -259,7 +259,7 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Vergessen? Es gibt doch nichts in diesem wundervollen Leben, das man vergessen möchte."
 
-    show kloth angry_alt
+    show kloth angry_mid
     play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
@@ -270,7 +270,7 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Von was redest du nur?"
 
-    show kloth vest_open
+    show kloth vest_open_mid
     play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
@@ -280,7 +280,7 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Kloth, was ist denn nur los mit dir? Du machst mir ja fast schon Angst."
 
-    show kloth angry_alt
+    show kloth angry_mid
     play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
@@ -290,7 +290,7 @@ label search_kloth_without_anan_office:
 
     "Atropos" "Wie viel hast du getrunken? Du fantasierst ja schon! Dein Alkoholkonsum ist in den letzten Monaten viel zu sehr angestiegen."
 
-    show kloth crazy
+    show kloth crazy_mid
     play sound("Sound/Sounds/glitch.mp3")
     show glitch
 
@@ -309,7 +309,7 @@ label search_kloth_without_anan_office:
 
     "Kloth" "Sie warten nur darauf, dass wir alle zu seelenlosen Kreaturen werden. Und dann holen sie uns."
 
-    show kloth crazy
+    show kloth crazy_mid
 
     "Kloth" "Aber mich werden sie nicht bekommen. Ich werde ihnen entkommen. Ich werde fliehen, hörst du?"
     hide glitch
