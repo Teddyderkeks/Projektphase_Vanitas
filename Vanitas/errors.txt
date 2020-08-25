@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/pill.rpy", line 42: expected statement.
-    1.Dialog
-            ^
-
-File "game/pill.rpy", line 45: expected statement.
-    2.Dialog
-            ^
+File "game/ending.rpy", line 679: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
+    "{i}… {/i}"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Aug 07 14:52:28 2020
+Tue Aug 25 02:45:41 2020

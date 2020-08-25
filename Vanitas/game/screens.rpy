@@ -1,7 +1,6 @@
 ﻿################################################################################
 ## Initialization
 ################################################################################
-
 init offset = -1
 
 
@@ -126,17 +125,20 @@ style say_label is default
 style say_dialogue is default
 style say_thought is say_dialogue
 
-style namebox is default
+#style namebox is default
 style namebox_label is say_label
 
 
 style window:
     xalign 0.5
     xfill True
-    yalign gui.textbox_yalign
+    yalign gui.namebox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    #background Image("gui/textbox_chara.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox_chara.png")
+
+
 
 style namebox:
     xpos gui.name_xpos
@@ -204,12 +206,13 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
-screen choice(items):
+screen choice (items):
     style_prefix "choice"
-
     vbox:
+        yalign 0.5
         for i in items:
             textbutton i.caption action i.action
+
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -294,22 +297,23 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
         yalign 0.5
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        xpos gui.navigation_xpos
 
-            textbutton _("Start") action Start()
+        if main_menu:
+            #xpos 350
+
+            textbutton _("Spiel starten") action Start()
 
         else:
+            #xpos gui.navigation_xpos
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("Spiel speichern") action ShowMenu("save")
 
-            textbutton _("Speichern") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Spiel laden") action ShowMenu("load")
 
         textbutton _("Einstellungen") action ShowMenu("preferences")
 
@@ -323,10 +327,12 @@ screen navigation():
 
         textbutton _("Über") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        textbutton _("Credits") action ShowMenu("credits")
+
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Hilfe") action ShowMenu("help")
+            #textbutton _("Hilfe") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -374,10 +380,9 @@ screen main_menu():
         vbox:
             text "[config.name!t]":
                 style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+                xpos -1400
+                ypos -800
+                font "vivaldi.ttf"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -557,14 +562,14 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            #text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+            #if gui.about:
+                #text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
+            text _("\n Vanitas ist ein Visual Novel, das im Sinne einer Projektarbeit hervorgegangen ist. Nightshade Games ist eine Gruppe von Game Design Studenten der Mediadesign Hochschule, Standort München.")
+            text _("\n Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""
@@ -577,6 +582,123 @@ style about_text is gui_text
 style about_label_text:
     size gui.label_text_size
 
+screen credits():
+
+    tag menu
+
+    use game_menu(_("Credits"), scroll="viewport"):
+
+        vbox:
+
+            hbox:
+                box_wrap True
+
+                vbox:
+                    style_prefix "radio"
+                    text _("Producing")
+                    text _("")
+                    text _("Game Design")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("Art")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("Tech")
+                    text _("")
+                    text _("Music")
+                    text _("")
+                    text _("")
+                    text _("")
+                    text _("Attendant")
+                    text _("Profs")
+                    text _("")
+                    text _("In Cooperation")
+                    text _("")
+                    text _("")
+                    text _("Playtester")
+
+                vbox:
+                    #style_prefix "radio"
+                    text _("Dimitri Kamelin")
+                    text _("")
+                    text _("Sabrina Knoops")
+                    text _("Simon Marx")
+                    text _("Laura Lawatowitsch")
+                    text _("")
+                    text _("Vanessa Rudewig")
+                    text _("Michelle (Myo) Sonntag")
+                    text _("Eliza Ghanbar")
+                    text _("Nadine Mayer")
+                    text _("Kaz Lehrl")
+                    text _("Brandon Lenk")
+                    text _("")
+                    text _("Tatiana Krupenina")
+                    text _("")
+                    text _("Luis Stilp")
+                    text _("Lukas Geppert")
+                    text _("Madeleine Sonntag")
+                    text _("")
+                    text _("Dominik Mieth")
+                    text _("Henning Jansen")
+                    text _("")
+                    text _("MDH. München")
+                    text _("Clam Musicstudio Nürnberg")
+                    text _("")
+                    text _("Deodot")
+                    text _("Omlett")
+                    text _("Germi")
+                    text _("Yuki Raito")
+                    text _("Savi")
+                    text _("Conor H.")
+                    text _("Melissa Neumann")
+                    text _("JannikNatsu")
+                    text _("Dominik P.")
+                    text _("Carmen Naber")
+                    text _("Per Sparre")
+                    text _("Biggi Lehrl")
+                    text _("Yannic")
+                    text _("SusuTsuiji")
+                    text _("Felix Lehrl")
+                    text _("Suki Tsuiji")
+                    text _("Ade S.")
+                    text _("and a lot more...")
+
+                vbox:
+                    #style_prefix "radio"
+                    text _("      Producer")
+                    text _("")
+                    text _("      Creative Director, Design Lead")
+                    text _("      Game Designer")
+                    text _("      Game Designer")
+                    text _("")
+                    text _("      Lead Artist")
+                    text _("      Artist")
+                    text _("      Artist")
+                    text _("      Artist")
+                    text _("      Artist")
+                    text _("      Artist")
+                    text _("")
+                    text _("      Tech Lead")
+                    text _("")
+                    text _("      Sound Designer")
+                    text _("      Komponist")
+                    text _("      Singer")
+                    text _("")
+                    text _("      Game Design Prof")
+                    text _("      Art Prof")
+
+
+style credits_label is gui_label
+style credits_label_text is gui_label_text
+style credits_text is gui_text
+
+style credits_label_text:
+    size gui.label_text_size
 
 ## Load and Save screens #######################################################
 ##
@@ -588,22 +710,19 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-
     tag menu
 
-    use file_slots(_("Speichern"))
+    use file_slots(_(" Spiel speichern"))
 
 
 screen load():
-
     tag menu
 
-    use file_slots(_("Load"))
-
+    use file_slots(_("Spiel laden"))
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatisches Specihern"), quick=_(""))
 
     use game_menu(title):
 
@@ -645,36 +764,14 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        #text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("leer")):
+                        text FileTime(slot, format=_("{#file_time}%d %B %Y, %H:%M"), empty=_("Leer")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
                             style "slot_name_text"
 
                         key "save_delete" action FileDelete(slot)
-
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                spacing gui.page_spacing
-
-                textbutton _("<") action FilePagePrevious()
-
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
-
-                textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label
@@ -735,20 +832,6 @@ screen preferences():
                         textbutton _("Fenster") action Preference("display", "window")
                         textbutton _("Vollbild") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "radio"
-                    label _("Rollback Side")
-                    textbutton _("Disable") action Preference("rollback side", "disable")
-                    textbutton _("Left") action Preference("rollback side", "left")
-                    textbutton _("Right") action Preference("rollback side", "right")
-
-                vbox:
-                    style_prefix "check"
-                    label _("Spulen")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("Nach Auswahl") action Preference("after choices", "toggle")
-                    textbutton _("Übergänge") action InvertSelected(Preference("transitions", "toggle"))
-
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
@@ -787,19 +870,19 @@ screen preferences():
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        label _("Sprachlautstärke")
+                    #if config.has_voice:
+                        #label _("Sprachlautstärke")
 
-                        hbox:
-                            bar value Preference("voice volume")
+                        #hbox:
+                            #bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                            #if config.sample_voice:
+                                #textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("Gesamtlautstärke aus"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -1178,7 +1261,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "gui/confirm_frame.png", "gui/frame_exit.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5

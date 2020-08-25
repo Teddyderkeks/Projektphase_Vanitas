@@ -1,46 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 5, in script
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-  File "game/script.rpy", line 5, in <module>
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-IOError: Couldn't find file 'atropos_lehnt_gespraech_ab.mpg'.
+WindowsError: [Error 32] Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: 'C:\\Users\\Sabrina\\AppData\\Roaming/RenPy/Vanitas-1596038599\\persistent'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 5, in script
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script.rpy", line 5, in <module>
-    $ renpy.movie_cutscene("atropos_lehnt_gespraech_ab.mpg")
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1538, in movie_cutscene
-    roll_forward=roll_forward)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
-    c.periodic()
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
-    rv = renpy.loader.load(fn)
-  File "C:\Users\Tatiana Krupenina\Desktop\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'atropos_lehnt_gespraech_ab.mpg'.
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\main.py", line 581, in main
+    renpy.persistent.update(True)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\persistent.py", line 391, in update
+    save()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\persistent.py", line 407, in save
+    renpy.loadsave.location.save_persistent(data)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\savelocation.py", line 490, in save_persistent
+    l.save_persistent(data)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\savelocation.py", line 351, in save_persistent
+    safe_rename(fn_new, fn)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loadsave.py", line 306, in safe_rename
+    os.unlink(new)
+WindowsError: [Error 32] Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: 'C:\\Users\\Sabrina\\AppData\\Roaming/RenPy/Vanitas-1596038599\\persistent'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Fri Aug 07 15:25:06 2020
+Tue Aug 25 00:49:54 2020
