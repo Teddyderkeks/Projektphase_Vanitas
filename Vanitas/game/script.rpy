@@ -254,24 +254,6 @@ label shop:
     # Atropos Gedanken
     symb"Da ist ja schon Aither."
 
-    # Atropos Gedanken
-    #"Ich bin heute echt früh dran. Da ist schon Aither und ich habe noch reichlich Zeit, bis ich mit der Arbeit anfangen muss."
-
-    # Atropos Gedanken
-    #"Zum Glück wohne ich nicht so weit von der Filiale entfernt. Ich könnte es echt schlimmer treffen."
-
-    # Atropos Gedanken
-    #"Ich verstehe nicht, wie Kloth so weit außerhalb vom Zentrum Astoas leben kann. Er hat ein großes Haus, aber dafür fährt er immer Ewigkeiten bis zur Arbeit."
-
-    # Atropos Gedanken
-    #"Egal… was muss ich heute nochmal tun?"
-
-    # Atropos Gedanken
-    #"Ach stimmt ja. Die neuen Proben, die gestern von Adrés Filiale eingetroffen sind, müssen analysiert und ausgewertet werden."
-
-    # Atropos Gedanken
-    #"Dann kümmere ich mich am besten als Allererstes darum."
-
 
     scene shop_1
     with fadeshort
@@ -290,14 +272,37 @@ label shop:
 
     "Atropos" "Spaß macht die Arbeit hier auf jeden Fall und wir dienen der Menschheit. Das kann wohl nicht jeder von sich behaupten. (lacht)"
 
+    "Zelos" "Ach ja, hast du meine Nachrichten bekommen? Meine Schwester erstellt eine Dokumentation über den Krieg und wie Happiness uns gerettet hat, und sucht noch alte Artikel dafür."
+
+    "Atropos" "Bekommen ja, aber noch nicht gelesen. Über den Krieg sagst du?"
+
+    "Zelos" "Ja, genau. Sie hofft mehr Insiderwissen zu bekommen, weil wir doch alle für Aither unter Anan arbeiten."
+
+    "Zelos" "Er, Adrés und Atlas haben wirklich die Welt gerettet, indem sie Happiness erschufen."
+
+    "Zelos" "Nicht auszudenken, wie lange der Krieg sonst noch angedauert hätte und wie viele Menschen ihm zum Opfer gefallen wären."
+
+    "Atropos" "Ich weiß nur ein paar Sachen aus den Erzählungen meines Vaters, aber der 50-jährige Krieg muss wirklich schrecklich gewesen sein. Das fehlende Wasser und die unzureichende Nahrung..."
+
+    "Zelos" "Und dann tauchten die Großen Drei als unsere Erlöser auf. Ihr Triumvirat hat uns alle gerettet!"
+
+    "Atropos" "Ich schaue heute Abend Mal nach und gebe dir Bescheid, falls ich noch weiteres Material dazu finde."
+
+    "Zelos" "Super, danke! Du kannst ja auch Chesis und Kloth Mal Bescheid geben- als Anans Chefsekretär hat Kloth bestimmt teiferreichende Informationen."
+
+    "Atropos" "Ich bezweifle sehr, dass er die rausgeben darf. (lacht)"
+
+    "Zelos" "Einen Versuch ist es doch wert, nicht wahr? Als dein bester Freund ist er bestimmt dazu bereit. (Lacht)"
+
+    "Atropos" "Ich sehe, was ich machen kann."
+
+    "Zelos" "Danke!"
+
     show zelos normal
 
     "Zelos" "Ich hoffe es stört dich nicht, wenn ich nebenbei weiterarbeite? Die neuste Lieferung der Happiness-Pille kam eben an und ich muss sie noch in die Regale einsortieren."
 
     "Atropos" "Alles gut, lass dich von mir nicht stören."
-
-    # Atropos Gedanken
-    symb"Zelos ist ja wirklich nett, aber sein Übereifer kann manchmal auch etwas anstrengend sein. Wie kann er nur immer so voller Energie sein?"
 
     menu:
         "Ich wollte ohnehin mal bei meinen Freunden im Büro vorbeischauen.":
