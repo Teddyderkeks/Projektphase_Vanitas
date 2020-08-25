@@ -158,6 +158,8 @@ label take_pill:
     # Atropos Gedanken
     symb"Ich sollte die Pille besser jetzt sofort nehmen."
 
+    play sound "Sound/Sounds/pille.mp3" fadeout 1
+
     scene detail_pill
     with fadeshort
 
@@ -298,6 +300,8 @@ label shop:
     scene shop_1
     with fadeshort
 
+    play sound "Sound/Sounds/gloeckchen.mp3"
+
     show zelos normal
 
     "Zelos" "Guten Morgen und einen wunderschönen Tag, was…? Ach, du bist es Atropos- heute extra überpünktlich?"
@@ -371,35 +375,49 @@ label conversation_with_seller:
         symb"Dann bin ich wohl wirklich zu früh dran."
 
         #Atropos Gedanken
+        symb"Der eine Computer ist an. Ob wohl doch schon jemand hier ist? Wem gehört der Computer?"
+
+        #Atropos Gedanken
         symb"Ich könnte mich noch ein wenig umsehen."
 
-# klickbar => fehlt noch!!!!!
-        # Wenn Spieler direkt auf den PC im Raum klickt
-        # Detailansicht PC
-        # Atropos Gedanken
-        #"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
-        # Bevor der Spieler mehr erfahren kann, schaltet sich der Bildschirm des PCs von allein aus.
-        # Atropos Gedanken
-        #"Hm? Der Bildschirm ist einfach ausgegangen."
-        # Atropos Gedanken
-        #"Wieso sollte jemand über die Moiren forschen?"
+        show screen computer
 
         menu:
             "Ich schaue mir den Kalender an.":
+                hide screen computer
                 "Ich schaue mir den Kalender an."
                 jump watchofficecalendar
 
             "Da ist ein interessantes Foto.":
+                hide screen computer
                 "Da ist ein interessantes Foto."
                 jump watchofficephoto
 
             "Neben der Sanduhr liegt etwas.":
+                hide screen computer
                 "Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
+                hide screen computer
                 "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
                 jump watchnothingoffice
+
+        label computermoira:
+            hide screen computer
+            # Wenn Spieler direkt auf den PC im Raum klickt
+            scene detail_pc_moira
+            # Atropos Gedanken
+            symb"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
+            call screen arrowcomputer
+            label afteromputermoira:
+                scene office_1
+                # Atropos Gedanken
+                symb"Hm? Der Bildschirm ist einfach ausgegangen."
+                # Atropos Gedanken
+                symb"Wieso sollte jemand über die Moiren forschen?"
+                jump watchnothingoffice
+
 
         label watchofficecalendar:
             scene detail_calendar
@@ -1036,22 +1054,38 @@ label conversation_with_seller:
 
                 #Atropos Gedanken
                 symb"Ich könnte mich noch einmal umsehen..."
+                show screen nightshade1
 
                 menu:
                     "Wieso ist hier ein Schmetterling?":
+                        hide screen nightshade
                         symb "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly
 
                     "Ich will mir die Bilder ansehen.":
+                        hide screen nightshade
                         symb"Ich will mir die Bilder ansehen."
                         jump watchhallpictures
 
                     "Ein Druckknopfmelder?":
                         symb"Ein Druckknopfmelder?"
+                        hide screen nightshade
                         jump watchhallalarm
 
                     "Ich sollte dann wirklich ins Labor.":
+                        hide screen nightshade
                         jump watchnothinghall
+
+                label afternightshade1:
+                    hide screen nightshade1
+                    # Atropos Gedanken
+                    symb"Nachtschatten. Die Blumen sind wunderschön."
+                    # Atropos Gedanken
+                    symb"Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                    "Atropos""…"
+                    # Atropos Gedanken
+                    symb"Nicht, dass ich mich mit sowas beschäftigt hätte."
+                    jump watchnothinghall
 
                 label watchhallbutterfly:
                     # Atropos
@@ -1112,6 +1146,8 @@ label conversation_with_seller:
                     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
                     "Atropos" "Ja, natürlich… sorry…"
+
+                    play sound("Sound/Sounds/bump.mp3")
 
                     show era confused
 
@@ -1249,32 +1285,41 @@ label conversation_with_seller:
         #Atropos Gedanken
         symb"Ich könnte mich noch ein wenig umsehen."
 
-# klickbar => fehlt noch!!!!!
-        # Wenn Spieler direkt auf den PC im Raum klickt
-        # Detailansicht PC
-        # Atropos Gedanken
-        #"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
-        # Bevor der Spieler mehr erfahren kann, schaltet sich der Bildschirm des PCs von allein aus.
-        # Atropos Gedanken
-        #"Hm? Der Bildschirm ist einfach ausgegangen."
-        # Atropos Gedanken
-        #"Wieso sollte jemand über die Moiren forschen?"
-
+        show screen computer2
         menu:
             "Ich schaue mir den Kalender an.":
+                hide screen computer2
                 symb"Ich schaue mir den Kalender an."
                 jump watchofficecalendar2
 
             "Da ist ein interessantes Foto.":
+                hide screen computer2
                 symb"Da ist ein interessantes Foto."
                 jump watchofficephoto2
 
             "Neben der Sanduhr liegt etwas.":
+                hide screen computer2
                 symb"Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass2
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
+                hide screen computer2
                 symb"Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
+                jump watchnothingoffice2
+
+        label computermoira2:
+            hide screen computer2
+            # Wenn Spieler direkt auf den PC im Raum klickt
+            scene detail_pc_moira
+            # Atropos Gedanken
+            symb"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
+            call screen arrowcomputer2
+            label afteromputermoira2:
+                scene office_1
+                # Atropos Gedanken
+                symb"Hm? Der Bildschirm ist einfach ausgegangen."
+                # Atropos Gedanken
+                symb"Wieso sollte jemand über die Moiren forschen?"
                 jump watchnothingoffice2
 
         label watchofficecalendar2:
@@ -1861,21 +1906,38 @@ label conversation_with_seller:
                 #Atropos Gedanken
                 symb"Ich könnte mich vielleicht noch einmal umsehen, bevor ich gehe..."
 
+                show screen nightshade3
+
                 menu:
                     "Wieso ist hier ein Schmetterling?":
+                        hide screen nightshade3
                         "Wieso ist hier ein Schmetterling?"
                         jump watchhallbutterfly3
 
                     "Ich will mir die Bilder ansehen.":
+                        hide screen nightshade3
                         "Ich will mir die Bilder ansehen."
                         jump watchhallpictures3
 
                     "Ein Druckknopfmelder?":
+                        hide screen nightshade3
                         "Ein Druckknopfmelder?"
                         jump watchhallalarm3
 
                     "Ich habe vermutlich lange genug herumgetrödelt.":
+                        hide screen nightshade3
                         jump watchnothinghall3
+
+                label afternightshade3:
+                    hide screen nightshade3
+                    # Atropos Gedanken
+                    symb"Nachtschatten. Die Blumen sind wunderschön."
+                    # Atropos Gedanken
+                    symb"Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                    "Atropos""…"
+                    # Atropos Gedanken
+                    symb"Nicht, dass ich mich mit sowas beschäftigt hätte."
+                    jump watchnothinghall3
 
                 label watchhallbutterfly3:
                     # Atropos
@@ -2010,21 +2072,39 @@ label work:
             # Atropos Gedanken
             symb"Aber bevor ich mich um den Bericht für ihn kümmere, könnte ich mich noch kurz umsehen."
 
+            show screen nightshade2
+
             menu:
                 "Wieso ist hier ein Schmetterling?":
+                    hide screen nightshade2
                     "Wieso ist hier ein Schmetterling?"
                     jump watchhallbutterfly2
 
                 "Ich will mir die Bilder ansehen.":
+                    hide screen nightshade2
                     "Ich will mir die Bilder ansehen."
                     jump watchhallpictures2
 
                 "Ein Druckknopfmelder?":
+                    hide screen nightshade2
                     "Ein Druckknopfmelder?"
                     jump watchhallalarm2
 
                 "Ich sollte dann wirklich ins Labor. Ich will Anan nicht enttäuschen":
+                    hide screen nightshade2
                     jump watchnothinghall2
+
+            label afternightshade2:
+                hide screen nightshade2
+                # Atropos Gedanken
+                "Nachtschatten. Die Blumen sind wunderschön."
+                # Atropos Gedanken
+                "Ich glaube, ein Entwicklerteam von Visual Novels heißt so."
+                # Atropos Gedanken
+                "…"
+                # Atropos Gedanken
+                "Nicht, dass ich mich mit sowas beschäftigt hätte."
+                jump watchnothinghall2
 
             label watchhallbutterfly2:
                 # Atropos
@@ -2087,6 +2167,8 @@ label work:
                 "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
                 "Atropos" "Ja, natürlich… sorry…"
+
+                play sound("Sound/Sounds/bump.mp3")
 
                 show era confused
 
@@ -2395,6 +2477,8 @@ label anan_is_right:
 
     "Atropos" "Ja, natürlich… sorry…"
 
+    play sound("Sound/Sounds/bump.mp3")
+
     show era confused
 
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
@@ -2515,6 +2599,8 @@ label anan_is_right:
 
     "Atropos" "…"
 
+    play sound ("<from 0 to 5>Sound/Music/Rooms/verkaufsraum.mp3") fadeout 3
+
     "Durchsage" "{i}Lebe glücklich. Erfülle deinen Traum. Dein Leben ist dein Traum. Deine Träume werden wahr. {/i}"
 
     "Durchsage" "{i}Nimm Happiness ein und lebe dein Leben so wie du willst. Happiness, dein Leben, deine Entscheidung, deine Glücklichkeit. {/i}"
@@ -2543,28 +2629,28 @@ label anan_is_right:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_mid behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
     "Anan" "Ich hoffe, ihr alle hattet heute bisher einen glücklichen Tag."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
@@ -2572,11 +2658,11 @@ label anan_is_right:
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Die neue Tablette wird stärker sein, besser sein, glücklicher machen. Niemand muss mehr in der Angst leben, sie einmal zu vergessen und dadurch sein Glück zu verlieren."
 
@@ -2584,23 +2670,23 @@ label anan_is_right:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
     "Anan" "Atlas und Adrés sind meine Mitstreiter, seit sie mich im Krieg gerettet haben. Sie retteten mich, obwohl wir damals auf unterschiedlichen Seiten standen."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
     "Anan" "Glück ist alles, was der Mensch in seinem Leben braucht. Ohne Glück verliert das Leben seinen Wert und seinen Sinn. "
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Um diesen Triumph in unserem langen, beschwerlichen Weg auf der Suche nach Glück zu feiern, werden Adrés und Atlas zum Gründungstag nach Astoa reisen. "
 
@@ -2612,7 +2698,7 @@ label anan_is_right:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -2728,6 +2814,8 @@ label why_important:
     "Era" "Ich… darf ich kurz vorbei? Ich… ich muss zu meinem Arbeitsplatz da drüben."
 
     "Atropos" "Ja, natürlich… sorry…"
+
+    play sound("Sound/Sounds/bump.mp3")
 
     show era confused
 
@@ -2896,11 +2984,11 @@ label why_important:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_left behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -2909,25 +2997,25 @@ label why_important:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -2937,7 +3025,7 @@ label why_important:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -2945,7 +3033,7 @@ label why_important:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -2961,7 +3049,7 @@ label why_important:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -3096,6 +3184,8 @@ label be_against:
 
     "Atropos" "Ja, sorry …"
 
+    play sound("Sound/Sounds/bump.mp3")
+
     show era confused
 
     "Era" "Ich… oh nein, es tut mir so leid… das wollte ich nicht. Habe ich dich verletzt? Das… ich… es ist aus Versehen passiert…"
@@ -3191,11 +3281,11 @@ label be_against:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
+    show atlas normal_small behind screen_transparent:
         xalign 0.12
-    show adres normal behind screen_transparent:
+    show adres normal_small behind screen_transparent:
         xalign 0.8
-    show anan normal_left behind screen_transparent:
+    show anan normal_left_small behind screen_transparent:
         xalign 0.4
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -3206,25 +3296,25 @@ label be_against:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -3234,7 +3324,7 @@ label be_against:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -3242,7 +3332,7 @@ label be_against:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -3258,7 +3348,7 @@ label be_against:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 
@@ -3408,12 +3498,12 @@ label good_mood:
     scene screen_background
     with fadeshort
     show screen_transparent
-    show atlas normal behind screen_transparent:
-        xalign 0.12
-    show adres normal behind screen_transparent:
-        xalign 0.8
-    show anan normal_left behind screen_transparent:
-        xalign 0.4
+    show atlas normal_small behind screen_transparent:
+        xalign 0.15
+    show adres normal_small behind screen_transparent:
+        xalign 0.85
+    show anan normal_left_small behind screen_transparent:
+        xalign 0.40
 
     play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
 
@@ -3421,25 +3511,25 @@ label good_mood:
 
     "Anan" "An meiner Seite befinden sich Atlas und Adrés. Zwei Namen, die euch nicht ganz unbekannt sein dürften."
 
-    show anan disappointed_left
+    show anan disappointed_left_small
 
     "Anan" "Aufgrund der instabilen Verbindung werden sie nicht persönlich zu euch sprechen können, aber ich spreche heute im Namen von uns allen zu euch."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin mir sicher, keiner von euch hat vergessen, was sich in nicht einmal einem Monat zum 37. Mal jähren wird."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Der Gründungstag von Aither."
 
     "Anan" "Und in diesem Jahr fällt der Gründungstag mit einem ganz besonderen Ereignis zusammen."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Die Happiness-Pille ist noch nicht vollkommen. Sie ist in einer stetigen Weiterentwicklung, damit die Menschheit eines Tages perfektes Glück erfahren darf."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Und diesem perfekten Glück sind wir einen Schritt nähergekommen."
 
@@ -3449,7 +3539,7 @@ label good_mood:
 
     "Anan" "Eines Tages werden wir das Glück erreichen, was jeder einzelne Mensch verdient hat. Perfekten Frieden und perfekte Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich bin bereit, alles dafür zu geben, und gemeinsam können wir diesen Traum erreichen. Diese perfekte, heile Welt."
 
@@ -3457,7 +3547,7 @@ label good_mood:
 
     "Anan" "Das öffnete mir meine Augen und ließ mich erkennen, dass all der Krieg sinnlos war. Dass das nicht die Lösung war, nach der wir streben sollten."
 
-    show anan happy_left
+    show anan happy_left_small
 
     "Anan" "Stattdessen sollten wir nach Glück streben. Denn Glück ist es, was das höchste Ziel des Individuums ist. "
 
@@ -3473,7 +3563,7 @@ label good_mood:
 
     "Anan" "Vergesst niemals: Happiness. Euer Leben. Eure Entscheidung. Eure Glücklichkeit."
 
-    show anan normal_left
+    show anan normal_left_small
 
     "Anan" "Ich danke euch für eure wertvolle Zeit. Lasst uns für die Glücklichkeit kämpfen! Lasst uns für unser eigenes Glück kämpfen! Aither wird euch stets bei diesem Kampf unterstützen!"
 

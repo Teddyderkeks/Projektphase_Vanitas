@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bomb.rpy", line 1063: could not parse statement.
-    play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3s
-                                                                                     ^
+File "game/ending.rpy", line 679: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
+    "{i}… {/i}"
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 24 15:19:23 2020
+Tue Aug 25 02:45:41 2020
