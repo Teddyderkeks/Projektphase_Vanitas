@@ -6,10 +6,10 @@ default okaymood=False
 define startfade=Fade(1,0.5,3)
 define fadestart=Fade(1,0.5,3)
 define startfade2=Fade(1,0.5,0.5)
-define datewithera= False
-define dialgoueoffice= False
-define talkchesismorning= False
-define loudspeaker = False
+default datewithera= False
+default dialgoueoffice= False
+default talkchesismorning= False
+default loudspeaker = False
 define symb= Character(None,window_background="gui/textbox_withoutname.png")
 
 #xalign=0.5, yalign=1.0
@@ -141,12 +141,15 @@ label change:
 
     menu:
         "Ich sollte die Pille besser jetzt sofort nehmen.":
+            $ pilltakenyes = True
             hide screen force_mouse_move_threeoptions
             jump take_pill
         "Ich nehme die Pille nicht- ich brauche sie nicht!":
+            $ pilltakenno = True
             hide screen force_mouse_move_threeoptions
             jump not_take_pill
         "Ich nehme die Pille, sobald ich sie brauche.":
+            $ pilltakenlater = True
             hide screen force_mouse_move_threeoptions
             jump later_take_pill
 
@@ -325,8 +328,10 @@ label shop:
 
     menu:
         "Ich wollte ohnehin mal bei meinen Freunden im Büro vorbeischauen.":
+            $ beginnoffice = True
             jump conversation_with_seller
         "Ich wollte ohnehin zur Arbeit los.":
+            $ beginnlab = True
             jump work
 
 label conversation_with_seller:
@@ -2415,15 +2420,19 @@ label work:
             symb"Verdammt…"
 
             show screen force_mouse_move_threeoptions
+            $ pillnottakenananhall = True
             menu:
                 "Anan hat ja recht...":
+                    $ pillnottakenananhallananright = True
                     hide screen force_mouse_move_threeoptions
                     $ okaymood= True
                     jump anan_is_right
                 "Ich bin doch auch ohne Pille glücklich...":
+                    $ pillnottakenananhallananwhy = True
                     hide screen force_mouse_move_threeoptions
                     jump why_important
                 "Was erlaubt sich Anan bitte? Ich lasse mir doch nichts vorschreiben…":
+                    $ pillnottakenananhallananwrong = True
                     hide screen force_mouse_move_threeoptions
                     $ badmood= True
                     jump be_against
@@ -3432,8 +3441,10 @@ label go_office:
 
     else:
         show screen force_mouse_move_twooptions
+        $ gotoananofficeornot = True
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+                $ gotoananofficeornotyes = True
                 play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
                 hide screen force_mouse_move_twooptions
@@ -3460,6 +3471,7 @@ label go_office:
 
                 jump office
             "Ich werde auf keinen Fall zu Anans Büro gehen.":
+                $ gotoananofficeornotno = True
                 hide screen force_mouse_move_twooptions
                 jump no_office
 

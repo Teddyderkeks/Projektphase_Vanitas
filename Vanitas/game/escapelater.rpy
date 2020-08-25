@@ -1,5 +1,7 @@
 label escapelater:
 
+    $ lategoback = True
+
     "Atropos" "…"
 
     show lab
@@ -221,13 +223,14 @@ label escapelater:
 
         menu:
             "Klar, gerne.":
+                $ datewitheratakeherwithyou= True
                 jump erabegleiten
             "Alles gut, ich finde es schon.":
+                $ datewitheradonttakeherwithyou= True
                 jump eranichtbegleiten
 
     else:
 
-        show era shy_gray
         show narcais annoyed
 
         "Narcais" "Funktioniert dein Computer auch nicht mehr?"
@@ -239,8 +242,10 @@ label escapelater:
         # Entscheidung 35
         menu:
             "Klar, lass uns gehen!":
+                $ takenarcaiswithyou = True
                 jump gowithnarcais
             "Geh du allein. Ich muss noch was anderes zwischenzeitlich fertigmachen.":
+                $ donttakenarcaiswithyou = True
                 jump dontgowithnarcais
 
 label gowithnarcais:
@@ -360,7 +365,7 @@ label gowithnarcais:
 
     "Atropos" "Das… das kann doch nicht wahr sein…"
 
-    scene serverroom
+    scene server_room
     with fadeshort
 
     "Narcais" "Eine Bombe?"
@@ -374,8 +379,7 @@ label gowithnarcais:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending
 
 label dontgowithnarcais:
 
@@ -459,5 +463,4 @@ label dontgowithnarcais:
 
     $ renpy.movie_cutscene("cutscene_intro.mpg")
 
-    $ renpy.movie_cutscene("cutscene_ende.mpg")
-    return
+    jump ending

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/ending.rpy", line 679: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
-    "{i}… {/i}"
-    ^
+The label part3 is defined twice, at
+  File "game/ending.rpy", line 207 and
+  File "game/ending.rpy", line 1697.
+
+The label part20 is defined twice, at
+  File "game/ending.rpy", line 789 and
+  File "game/ending.rpy", line 2277.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Aug 25 02:45:41 2020
+Tue Aug 25 12:36:41 2020
