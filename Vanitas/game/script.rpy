@@ -2683,7 +2683,6 @@ label anan_is_right:
 
     # ab hier wieder alle
     scene screen_background
-    with fadeshort
     show screen_transparent
     show atlas normal_small behind screen_transparent:
         xalign 0.15
@@ -3074,7 +3073,6 @@ label why_important:
 
         # ab hier wieder alle
         scene screen_background
-        with fadeshort
         show screen_transparent
         show atlas normal_small behind screen_transparent:
             xalign 0.15
@@ -3390,7 +3388,6 @@ label be_against:
         $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
 
         scene screen_background
-        with fadeshort
         show screen_transparent
         show atlas normal_small behind screen_transparent:
             xalign 0.15
@@ -3612,7 +3609,6 @@ label good_mood:
 
     $ renpy.movie_cutscene("cutscenes/logomitbildschirm.mpg")
     scene screen_background
-    with fadeshort
     show screen_transparent
     show atlas normal_small behind screen_transparent:
         xalign 0.15
