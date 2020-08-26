@@ -321,8 +321,9 @@ label accept_conversation_kloth:
     symb"Ein glückliches Leben. Ein Leben voller Happiness."
 
     hide kloth
+    hide chesis
 
-    $ renpy.movie_cutscene("cutscenes/atropos_accepts_conversation.mpg")
+    $ renpy.movie_cutscene("cutscenes/atropos_wants_to_kill_kloth.mpg")
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
@@ -332,7 +333,7 @@ label accept_conversation_kloth:
 
     "Atropos" "Kloth… verdammt… wie konnte das nur passieren? Und was habe ich nur getan? Was hatte ich tun wollen?"
 
-    "Atropos" "Wie konnte er einem seiner besten Freunde so etwas antun? Wie hatte er Kloth in den Abgrund stürzen können?"
+    "Atropos" "Und Chesis...Wie konnte er einem seiner besten Freunde so etwas antun? Wie hatte er Kloth in den Abgrund stürzen können?"
 
     "Atropos" "Hätte ich es verhindern können? Nein- das spielt keine Rolle. Ich hätte es verhindern müssen."
 
@@ -376,7 +377,7 @@ label refuse_conversation_kloth:
     hide kloth
     hide chesis
 
-    $ renpy.movie_cutscene("cutscenes/Atropos_wants_to_kill_Kloth.mpg")
+    $ renpy.movie_cutscene("cutscenes/atropos_says_no.mpg")
 
     "Atropos" "Nein."
 
