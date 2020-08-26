@@ -1,4 +1,5 @@
 label pill:
+    $ renpy.fix_rollback()
     scene lab
     with fadestart
 
@@ -25,6 +26,7 @@ label pill:
             jump watchnothinglab
 
     label watchlabcomp:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Era scheint gerade an etwas dran zu sein. Das sind einige Auswertungen aus dem Spektrometer."
@@ -39,6 +41,7 @@ label pill:
         jump watchnothinglab
 
     label watchlabcab:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Da drin ist alles Mögliche, damit wir nicht nur die Pillen herstellen, sondern auch unsere Produkte verbessern. Dass wir da noch den Überblick behalten…"
@@ -52,6 +55,7 @@ label pill:
         jump watchnothinglab
 
     label watchlabdoor:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Die Notdusche… Mein alter Freund."
@@ -67,6 +71,7 @@ label pill:
         jump watchnothinglab
 
     label watchnothinglab:
+        $ renpy.fix_rollback()
 
 
 
@@ -149,6 +154,7 @@ label pill:
 
 
 label still_search_chesis:
+    $ renpy.fix_rollback()
 
 
     play music "Sound/Music/Rooms/verkaufsraum.mp3" fadeout 3 fadein 3
@@ -268,6 +274,7 @@ label still_search_chesis:
             jump mittagspausemitchesis
 
 label mittagspausemitchesis:
+    $ renpy.fix_rollback()
 
     play music "Sound/Music/Rooms/buero_normal.mp3" fadeout 3 fadein 3
     scene office_2
@@ -374,6 +381,7 @@ label mittagspausemitchesis:
 
 
 label not_search_kloth:
+    $ renpy.fix_rollback()
     if read_document_kloth:
         if infos_count_kloth == 1:
             # Atropos Gedanken
@@ -474,6 +482,7 @@ label not_search_kloth:
             jump laborpillende
 
 label laborpillende:
+    $ renpy.fix_rollback()
 
     play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
@@ -521,6 +530,7 @@ label laborpillende:
             jump eranichtbegleiten
 
 label erabegleiten:
+    $ renpy.fix_rollback()
 
     "Atropos" "Klar, gerne. Wenn du gerade die Zeit dafür hast?"
 
@@ -610,11 +620,12 @@ label erabegleiten:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
 
 label eranichtbegleiten:
+    $ renpy.fix_rollback()
 
     "Atropos" "Alles gut, ich finde es schon."
 
@@ -683,6 +694,6 @@ label eranichtbegleiten:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending

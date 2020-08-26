@@ -89,7 +89,7 @@ label change:
     symb"Happiness…"
 
     # Atropos Gedanken
-    symb"Ich habe es schon wieder vergessen."
+    symb"Ich habe sie schon wieder vergessen."
 
     # Atropos Gedanken
     symb"Ob es wohl Konsequenzen hat, dass ich sie nicht täglich genommen habe?"
@@ -133,6 +133,7 @@ label change:
 
 label take_pill:
     $ pill_taken = True
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich sollte die Pille besser jetzt sofort nehmen."
@@ -188,6 +189,7 @@ label take_pill:
     jump shop
 
 label not_take_pill:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich nehme die Pille nicht- ich brauche sie nicht!"
 
@@ -219,6 +221,7 @@ label not_take_pill:
     jump shop
 
 label later_take_pill:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich nehme die Pille, sobald ich sie brauche. Das sollte ausreichen."
 
@@ -250,6 +253,7 @@ label later_take_pill:
     jump shop
 
 label shop:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Da ist ja schon Aither."
@@ -286,9 +290,9 @@ label shop:
 
     "Zelos" "Und dann tauchten die Großen Drei als unsere Erlöser auf. Ihr Triumvirat hat uns alle gerettet!"
 
-    "Atropos" "Ich schaue heute Abend Mal nach und gebe dir Bescheid, falls ich noch weiteres Material dazu finde."
+    "Atropos" "Ich schaue heute Abend mal nach und gebe dir Bescheid, falls ich noch weiteres Material dazu finde."
 
-    "Zelos" "Super, danke! Du kannst ja auch Chesis und Kloth Mal Bescheid geben- als Anans Chefsekretär hat Kloth bestimmt tiefer reichende Informationen."
+    "Zelos" "Super, danke! Du kannst ja auch Chesis und Kloth mal Bescheid geben- als Anans Chefsekretär hat Kloth bestimmt tiefer reichende Informationen."
 
     "Atropos" "Ich bezweifle sehr, dass er die rausgeben darf. (lacht)"
 
@@ -313,6 +317,7 @@ label shop:
             jump work
 
 label conversation_with_seller:
+    $ renpy.fix_rollback()
 
     show zelos normal
     "Atropos" "Ich wollte ohnehin mal bei Tycho und den anderen im Büro vorbeischauen. Wir sehen uns später."
@@ -387,6 +392,7 @@ label conversation_with_seller:
                 jump watchnothingoffice
 
         label computermoira:
+            $ renpy.fix_rollback()
             hide screen computer
             # Wenn Spieler direkt auf den PC im Raum klickt
             scene detail_pc_moira
@@ -403,6 +409,7 @@ label conversation_with_seller:
 
 
         label watchofficecalendar:
+            $ renpy.fix_rollback()
             scene detail_calendar
             with fadeshort
             # Atropos Gedanken
@@ -415,6 +422,7 @@ label conversation_with_seller:
 
 
         label watchofficephoto:
+            $ renpy.fix_rollback()
             scene detail_photo_neiro
             with fadeshort
             # Atropos Gedanken
@@ -424,6 +432,7 @@ label conversation_with_seller:
             call screen arrow_watchoffice()
 
         label watchofficehourglass:
+            $ renpy.fix_rollback()
             scene detail_hourglass
             with fadeshort
             # Atropos Gedanken
@@ -432,6 +441,7 @@ label conversation_with_seller:
             call screen arrow_watchoffice()
 
         label watchnothingoffice:
+            $ renpy.fix_rollback()
 
             scene office_1
             with fadeshort
@@ -638,6 +648,7 @@ label conversation_with_seller:
                     jump nachentscheidung4
 
             label entscheidung4_1:
+                $ renpy.fix_rollback()
                 $ neiro_unterhalten = True
 
                 "Atropos" "Tycho, hast du noch mehr Informationen über die diesjährige Gründungsfeier?"
@@ -722,6 +733,7 @@ label conversation_with_seller:
                 jump nachentscheidung4
 
             label entscheidung4_2:
+                $ renpy.fix_rollback()
 
                 "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
 
@@ -798,6 +810,7 @@ label conversation_with_seller:
                 jump nachentscheidung4
 
             label entscheidung4_3:
+                $ renpy.fix_rollback()
 
                 "Atropos" "Neiro, dein Bruder ist gestorben?"
 
@@ -859,6 +872,7 @@ label conversation_with_seller:
 
 
             label nachentscheidung4:
+                $ renpy.fix_rollback()
                 "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
                 show tycho happy
@@ -1060,6 +1074,7 @@ label conversation_with_seller:
                         jump watchnothinghall
 
                 label afternightshade1:
+                    $ renpy.fix_rollback()
                     hide screen nightshade1
                     # Atropos Gedanken
                     symb"Nachtschatten. Die Blumen sind wunderschön."
@@ -1071,6 +1086,8 @@ label conversation_with_seller:
                     jump watchnothinghall
 
                 label watchhallbutterfly:
+                    $ renpy.fix_rollback()
+                    scene detail_butterfly
                     # Atropos
                     "Atropos""Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                     # Atropos
@@ -1079,9 +1096,10 @@ label conversation_with_seller:
                     "Atropos""Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
                     "Atropos""Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall
+                    call screen arrow_watchhall()
 
                 label watchhallpictures:
+                    $ renpy.fix_rollback()
                     scene detail_pictureshall
                     with fadeshort
                     # Atropos Gedanken
@@ -1092,6 +1110,7 @@ label conversation_with_seller:
                     symb"Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
                     call screen arrow_watchhall()
                 label watchhallalarm:
+                    $ renpy.fix_rollback()
                     scene detail_alarm
                     with fadeshort
                     # Atropos Gedanken
@@ -1103,6 +1122,7 @@ label conversation_with_seller:
                     call screen arrow_watchhall()
 
                 label watchnothinghall:
+                    $ renpy.fix_rollback()
 
                     $ datewithera= True
 
@@ -1291,6 +1311,7 @@ label conversation_with_seller:
                 jump watchnothingoffice2
 
         label computermoira2:
+            $ renpy.fix_rollback()
             hide screen computer2
             # Wenn Spieler direkt auf den PC im Raum klickt
             scene detail_pc_moira
@@ -1298,6 +1319,7 @@ label conversation_with_seller:
             symb"Seltsam. Da hat wohl jemand etwas nachlesen wollen und vergessen den Bildschirm zu sperren."
             call screen arrowcomputer2
             label afteromputermoira2:
+                $ renpy.fix_rollback()
                 scene office_1
                 # Atropos Gedanken
                 symb"Hm? Der Bildschirm ist einfach ausgegangen."
@@ -1306,6 +1328,7 @@ label conversation_with_seller:
                 jump watchnothingoffice2
 
         label watchofficecalendar2:
+            $ renpy.fix_rollback()
             scene detail_calendar
             with fadeshort
             # Atropos Gedanken
@@ -1318,6 +1341,7 @@ label conversation_with_seller:
 
 
         label watchofficephoto2:
+            $ renpy.fix_rollback()
             scene detail_photo_neiro
             with fadeshort
             # Atropos Gedanken
@@ -1327,6 +1351,7 @@ label conversation_with_seller:
             call screen arrow_watchoffice2()
 
         label watchofficehourglass2:
+            $ renpy.fix_rollback()
             scene detail_hourglass
             with fadeshort
             # Atropos Gedanken
@@ -1335,6 +1360,7 @@ label conversation_with_seller:
             call screen arrow_watchoffice2()
 
         label watchnothingoffice2:
+            $ renpy.fix_rollback()
 
             $ dialgoueoffice=True
 
@@ -1540,6 +1566,7 @@ label conversation_with_seller:
                     jump nachentscheidung4V2
 
             label entscheidung4_1V2:
+                $ renpy.fix_rollback()
 
                 $ neiro_unterhalten = True
 
@@ -1629,6 +1656,7 @@ label conversation_with_seller:
                 jump nachentscheidung4V2
 
             label entscheidung4_2V2:
+                $ renpy.fix_rollback()
 
                 "Atropos" "Ich bin wirklich gespannt auf Atlas und Adrés."
 
@@ -1720,6 +1748,7 @@ label conversation_with_seller:
                 jump nachentscheidung4V2
 
             label entscheidung4_3V2:
+                $ renpy.fix_rollback()
 
                 "Atropos" "Neiro, dein Bruder ist gestorben?"
 
@@ -1782,6 +1811,7 @@ label conversation_with_seller:
 
 
             label nachentscheidung4V2:
+                $ renpy.fix_rollback()
                 "Atropos" "Also dann, ich muss leider langsam los. Heute wartet ein Berg an Arbeit auf mich."
 
                 show tycho happy
@@ -1912,6 +1942,7 @@ label conversation_with_seller:
                         jump watchnothinghall3
 
                 label afternightshade3:
+                    $ renpy.fix_rollback()
                     hide screen nightshade3
                     # Atropos Gedanken
                     symb"Nachtschatten. Die Blumen sind wunderschön."
@@ -1923,6 +1954,8 @@ label conversation_with_seller:
                     jump watchnothinghall3
 
                 label watchhallbutterfly3:
+                    $ renpy.fix_rollback()
+                    scene detail_butterfly
                     # Atropos
                     symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                     # Atropos
@@ -1931,9 +1964,10 @@ label conversation_with_seller:
                     symb"Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                     # Atropos
                     symb"Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                    jump watchnothinghall3
+                    call screen arrow_watchhall3()
 
                 label watchhallpictures3:
+                    $ renpy.fix_rollback()
                     scene detail_pictureshall
                     with fadeshort
                     # Atropos Gedanken
@@ -1945,6 +1979,7 @@ label conversation_with_seller:
                     call screen arrow_watchhall3()
 
                 label watchhallalarm3:
+                    $ renpy.fix_rollback()
                     scene detail_alarm
                     with fadeshort
                     # Atropos Gedanken
@@ -1956,11 +1991,13 @@ label conversation_with_seller:
                     call screen arrow_watchhall3()
 
                 label watchnothinghall3:
+                    $ renpy.fix_rollback()
                     #Atropos Gedanken
                     symb"Ich habe vermutlich lange genug herumgetrödelt. Wird Zeit, dass ich mich langsam an die Arbeit mache."
                     jump worknachzelos
 
 label work:
+    $ renpy.fix_rollback()
     show zelos normal
 
     "Atropos" "Ich wollte ohnehin zur Arbeit los."
@@ -1994,6 +2031,7 @@ label work:
     hide zelos
 
     label worknachzelos:
+        $ renpy.fix_rollback()
 
         if pill_taken:
 
@@ -2078,6 +2116,7 @@ label work:
                     jump watchnothinghall2
 
             label afternightshade2:
+                $ renpy.fix_rollback()
                 hide screen nightshade2
                 # Atropos Gedanken
                 "Nachtschatten. Die Blumen sind wunderschön."
@@ -2090,6 +2129,8 @@ label work:
                 jump watchnothinghall2
 
             label watchhallbutterfly2:
+                $ renpy.fix_rollback()
+                scene detail_butterfly
                 # Atropos
                 symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                 # Atropos
@@ -2098,9 +2139,10 @@ label work:
                 symb"Wenn ich dich jetzt hinauslasse, könntest du mir nicht versprechen, dich nicht beim nächsten offenen Fenster wieder hinein zu verirren."
                 # Atropos
                 symb"Ich würde das Gefühl haben, dich zu retten. Aber in Wahrheit würde ich dein Schicksal nur hinauszögern. Entkommen wirst du ihm nie."
-                jump watchnothinghall2
+                call screen arrow_watchhall2()
 
             label watchhallpictures2:
+                $ renpy.fix_rollback()
                 scene detail_pictureshall
                 with fadeshort
                 # Atropos Gedanken
@@ -2109,9 +2151,10 @@ label work:
                 symb"Dank Ihnen konnte der Krieg ein Ende finden. Die Menschheit kann sich jetzt erholen."
                 # Atropos Gedanken
                 symb"Atlas hat seinen Sitz weiter im Westen und Adrés im Osten. Gemeinsam teilen sie sich drei gleiche Bereiche der Welt."
-                call screen arrow_watchhall()
+                call screen arrow_watchhall2()
 
             label watchhallalarm2:
+                $ renpy.fix_rollback()
                 scene detail_alarm
                 with fadeshort
                 # Atropos Gedanken
@@ -2120,9 +2163,10 @@ label work:
                 symb"Vor allem im Labor kann schnell etwas schiefgehen. Aber wir arbeiten fleißig und passen gut auf. Seit ich hier arbeite, ist noch kein Notfall vorgekommen."
                 # Atropos Gedanken
                 symb"Trotzdem ist es gut zu wissen, wo sich der Knopf befindet. Man weiß ja nie."
-                call screen arrow_watchhall()
+                call screen arrow_watchhall2()
 
             label watchnothinghall2:
+                $ renpy.fix_rollback()
 
                 $ datewithera= True
 
@@ -2359,9 +2403,10 @@ label work:
 
             # Symbiont
             symb"{i} Vielleicht bist du ohne die Tablette ja doch nicht so glücklich wie du dachtest, wenn es Anan sofort aufgefallen ist. {/i}"
-
+            show screen force_mouse_move_twooptionsdown
             menu:
                 "Ich sollte besser lügen. Die Wahrheit würde ihm nicht gefallen.":
+                    hide screen force_mouse_move_twooptionsdown
 
                     # Atropos Gedanken
                     symb"Ich sollte besser lügen. Die Wahrheit würde ihm nicht gefallen."
@@ -2378,6 +2423,7 @@ label work:
                     jump afterlieortruthanan
 
                 "Ich sollte die Wahrheit sagen.":
+                    hide screen force_mouse_move_twooptionsdown
 
                     # Atropos Gedanken
                     symb"Ich sollte die Wahrheit sagen."
@@ -2387,6 +2433,7 @@ label work:
                     jump afterlieortruthanan
 
             label afterlieortruthanan:
+                $ renpy.fix_rollback()
 
                 "Anan" "Ich erwarte dich in meinem Büro. Punkt elf und keine Sekunde zu spät!"
 
@@ -2438,6 +2485,7 @@ label work:
                         jump be_against
 
 label anan_is_right:
+    $ renpy.fix_rollback()
     $ straight_office = True
 
     $ datewithera= True
@@ -2763,6 +2811,7 @@ label anan_is_right:
     jump go_office
 
 label why_important:
+    $ renpy.fix_rollback()
     $ straight_office = True
 
     # Atropos Gedanken
@@ -2992,6 +3041,7 @@ label why_important:
 
 
     label openyourheartornot:
+        $ renpy.fix_rollback()
         # Atropos Gedanken
         symb"Zurück an die Arbeit."
 
@@ -3162,6 +3212,7 @@ label why_important:
         jump go_office
 
 label be_against:
+    $ renpy.fix_rollback()
     $ straight_office = False
 
     # Atropos Gedanken
@@ -3293,6 +3344,7 @@ label be_against:
             jump afternarcaistalk
 
     label afternarcaistalk:
+        $ renpy.fix_rollback()
         "Narcais" "Klar, kein Problem! Les ihn dir durch, sobald du dazu kommst."
 
         show narcais cocky
@@ -3485,6 +3537,7 @@ label be_against:
         jump go_office
 
 label go_office:
+    $ renpy.fix_rollback()
 
     if straight_office:
         jump office
@@ -3526,6 +3579,7 @@ label go_office:
                 jump no_office
 
 label good_mood:
+    $ renpy.fix_rollback()
 
     hide era
     hide narcais
@@ -3673,6 +3727,7 @@ label good_mood:
     jump pill
 
 label no_office:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Nein! Auf keinen Fall, ich werde nicht nachgeben, nur weil Anan eine gute Rede gehalten hat."
@@ -3718,6 +3773,7 @@ label no_office:
 
 
     label stillnooffice:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Ich werde die Durchsage einfach überhören."

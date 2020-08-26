@@ -4,6 +4,7 @@ default sawpictureskloth = False
 default sawworldmap =False
 
 label selection_kloth_office_after_anan_office:
+    $ renpy.fix_rollback()
     $ kloth_office_after_anan_office = True
     $ lookaroundklothsoffice = True
 

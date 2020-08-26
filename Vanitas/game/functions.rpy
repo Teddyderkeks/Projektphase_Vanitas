@@ -88,6 +88,15 @@ screen arrow_watchhall():
             #focus_mask True
             action Jump ("watchnothinghall")
 
+screen arrow_watchhall2():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "gui/arrow.png"
+            hover "gui/arrowblue.png"
+            #focus_mask True
+            action Jump ("watchnothinghall2")
+
 screen arrow_watchhall3():
     frame:
         xpos 1700 ypos 500
