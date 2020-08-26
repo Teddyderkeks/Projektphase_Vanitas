@@ -3,6 +3,7 @@ define fadeshort=Fade(0.5,0.5,0.5)
 
 
 label choice_bomb:
+    $ renpy.fix_rollback()
 
 
     # Atropos Gedanken
@@ -216,6 +217,7 @@ label choice_bomb:
             jump explodierenPillegenommen
 
 label entschaerfenPillegenommen:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich will die Bombe entschärfen!"
@@ -307,11 +309,12 @@ label entschaerfenPillegenommen:
     symb"{i}Es war zu spät... {/i}"
     $ endsad= True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label explodierenPillegenommen:
+    $ renpy.fix_rollback()
 
 
     # Atropos Gedanken
@@ -434,16 +437,17 @@ label explodierenPillegenommen:
     $secretending= True
 
     hide glitch
-    stop sounds
+    stop sound
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 
 
 label sawallthreekloth:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Was hat das alles zu bedeuten?"
 
@@ -701,6 +705,7 @@ label sawallthreekloth:
             jump doesbombexistsawallthreekloth
 
 label savepeoplesawallthreekloth:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss versuchen die Leute zu warnen."
 
@@ -724,6 +729,7 @@ label savepeoplesawallthreekloth:
 
 
 label savefriendsallthreekloth:
+    $ renpy.fix_rollback()
 
     "Atropos" "Meine Freunde… ich muss sichergehen, dass es ihnen gut geht."
 
@@ -758,6 +764,7 @@ label savefriendsallthreekloth:
             jump savekloth
 
 label saveera:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss Era um jeden Preis retten. Sie bedeutet mir viel."
 
@@ -781,6 +788,7 @@ label saveera:
 
 
 label saveeralab:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich versuche es im Labor. Vielleicht ist sie ja noch dort."
@@ -986,12 +994,13 @@ label saveeralab:
 
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 
 label saveeraelsewhere:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich suche besser wo anders nach ihr. In ihrer Mittagspause ist sie bestimmt nicht dort."
@@ -1153,12 +1162,13 @@ label saveeraelsewhere:
     "Atropos" "Für alles."
     $ endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label savechesis:
 
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich muss Chesis retten- er ist einer meiner besten Freunde seit unserer Kindheit- trotz seiner Ignoranz zuvor."
 
@@ -1326,11 +1336,12 @@ label savechesis:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label savetycho:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich versuche Tycho zu finden. Er ist bei allen beliebt- vielleicht kann er meine restlichen Freunde warnen."
@@ -1549,11 +1560,12 @@ label savetycho:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label savekloth:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich weiß immer noch nicht, was mit Kloth passiert ist. Ich muss ihn finden."
@@ -1731,11 +1743,12 @@ label savekloth:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label saveallallthreekloth:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss sichergehen, dass es allen Menschen gut geht und alle eine Chance haben, nicht nur meine Freunde."
 
@@ -2024,16 +2037,17 @@ label saveallallthreekloth:
 
     scene server_room
     with fadeshort
-    show anan normal_mid
 
     scene detail_bomb0020
     with fadeshort
 
-
-    "Anan" "Noch 20 Sekunden. Ich bereue es nicht der Menschheit Happiness geschenkt zu haben. Nur so konnte sie glücklich sein und war es auch."
-
     scene server_room
     with fadeshort
+
+    show anan strict_mid
+
+
+    "Anan" "Noch 20 Sekunden. Ich bereue es nicht der Menschheit Happiness geschenkt zu haben. Nur so konnte sie glücklich sein und war es auch."
 
     "Atropos" "Aber warum ihnen keine Wahl lassen?"
 
@@ -2046,8 +2060,12 @@ label saveallallthreekloth:
     "Atropos" "Nein… Ja… Ich denke schon…"
 
     scene detail_pill
+    with fadestart
+
+    scene server_room
     with fadeshort
-    show anan happy_left
+
+    show anan happy_mid
 
     "Anan" "Nimm sie. Sei glücklich."
 
@@ -2056,7 +2074,7 @@ label saveallallthreekloth:
 
     scene server_room
     with fadeshort
-    hide anan
+    show anan normal_mid
 
     # Symbiont
     symb"{i}Atropos, sei glücklich. Vergiss all das Leid. Es geht dir gut. {/i}"
@@ -2082,14 +2100,17 @@ label saveallallthreekloth:
 
     "Atropos" "Danke…"
 
+    hide anan
+
     $endhappy = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 
 label doesbombexistsawallthreekloth:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss erst nachschauen, ob die Bombe tatsächlich existiert."
 
@@ -2105,6 +2126,8 @@ label doesbombexistsawallthreekloth:
 
     # Atropos Gedanken
     symb"Ich muss verstehen, was das alles wirklich zu bedeuten hat."
+
+    scene hall
 
     # Atropos Gedanken
     symb"Der Serverraum. Wo war er gleich nochmal?"
@@ -2237,7 +2260,7 @@ label doesbombexistsawallthreekloth:
 
     "Atropos" "Ja, ganz sicher! Aither ist böse!"
 
-    scene lab
+    scene server_room
     with startfade
 
     "Atropos" "…"
@@ -2263,12 +2286,13 @@ label doesbombexistsawallthreekloth:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 
 label nextstepwithbomb:
+    $ renpy.fix_rollback()
     "Atropos" "Ich muss nach der Bombe suchen!"
 
     "Atropos" "Aber wo kann sie sinnvollerweise versteckt worden sein? Wo könnte man den größten Schaden anrichten?"
@@ -2359,13 +2383,13 @@ label nextstepwithbomb:
 
     "Atropos" "Ich… ich…"
     $ whatwithbomb = True
-    $ savepeopleorkillall = True
     menu:
         "Ich muss versuchen die Leute zu warnen.":
-            $ savepeopleorkillallsave = True
+            $ whatwithbombsavepeoplebutexplode = True
             jump trywarnpeople
 
         "Ich muss erst nachschauen, ob die Bombe tatsächlich existiert.":
+            $ whatwithbombexplode = True
             jump doesbombexist
 
         "Ich muss sichergehen, dass Anan mit Aither untergeht.":
@@ -2375,6 +2399,7 @@ label nextstepwithbomb:
 
 
 label trywarnpeople:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss versuchen, die Leute zu warnen."
 
@@ -2471,7 +2496,9 @@ label trywarnpeople:
 
     "Atropos" "Ich hoffe die Menschen werden bald in einer besseren, wirklich glücklichen Welt leben."
 
-    "Atropos" "Im Brief hat Atlas zwar behauptet, dass die Menschheit Happiness braucht, aber das ist nichts anderes als die Propaganda, die uns Anan regelmäßig predigt…"
+    if read_letter_anan:
+
+        "Atropos" "Im Brief hat Atlas zwar behauptet, dass die Menschheit Happiness braucht, aber das ist nichts anderes als die Propaganda, die uns Anan regelmäßig predigt…"
 
     "Atropos" "Wir brauchen keine Happiness, um in Frieden miteinander leben zu können!"
 
@@ -2514,11 +2541,12 @@ label trywarnpeople:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
     jump ending
 
 
 label doesbombexist:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss erst nachschauen, ob die Bombe tatsächlich existiert."
 
@@ -2534,6 +2562,8 @@ label doesbombexist:
 
     # Atropos Gedanken
     symb"Ich muss verstehen, was das alles wirklich zu bedeuten hat."
+
+    scene hall
 
     # Atropos Gedanken
     symb"Der Serverraum. Wo war er gleich nochmal?"
@@ -2688,10 +2718,11 @@ label doesbombexist:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
     jump ending
 
 label besureanandies:
+    $ renpy.fix_rollback()
 
     "Atropos" "Ich muss sichergehen, dass Anan mit Aither untergeht."
 
@@ -2736,7 +2767,7 @@ label besureanandies:
 
     "Atropos" "Tatsächlich. Noch 10 Minuten."
 
-    scene serverroom
+    scene server_room
     with fadeshort
 
     "Atropos" "Nur noch so wenig Zeit? Aber wie bekomme ich Anan dazu hier hochzukommen? Durch Erpressung? Es ist einen Versuch wert…"
@@ -2842,11 +2873,12 @@ label besureanandies:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
     jump ending
 
 
 label ananorjustbombwho:
+    $ renpy.fix_rollback()
 
     if murderer:
 
@@ -3219,6 +3251,7 @@ label ananorjustbombwho:
             call screen arrow_detail_blog3
 
 label after_detail_blog3:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Eine Bombe?"
 
@@ -3240,27 +3273,32 @@ label after_detail_blog3:
     call screen arrow_detail_servertext3()
 
 label after_detail_servertext2:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraph2()
 
 label after_detail_servergraph2:
+    $ renpy.fix_rollback()
     scene kloth_office
     with fadeshort
     "Atropos" "Das erklärt alles. Ich muss in den Serverraum. Sofort!"
     jump chesiskillsklothwhattodo
 
 label after_detail_servertext3:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraph3()
 
 label after_detail_servergraph3:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
     jump chesiskillsklothwhattodo
 
 label after_detail_blog2:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Eine Bombe?"
 
@@ -3279,11 +3317,13 @@ label after_detail_blog2:
     call screen arrow_detail_servertext4()
 
 label after_detail_servertext4:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraph4()
 
 label after_detail_servergraph4:
+    $ renpy.fix_rollback()
 
     scene kloth_office
     with fadeshort
@@ -3291,6 +3331,7 @@ label after_detail_servergraph4:
     jump chesiskillsklothwhattodo
 
 label after_detail_blog4:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Eine Bombe?"
 
@@ -3306,6 +3347,7 @@ label after_detail_blog4:
     jump chesiskillsklothwhattodo
 
 label chesiskillsklothwhattodo:
+    $ renpy.fix_rollback()
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
@@ -3366,6 +3408,7 @@ label chesiskillsklothwhattodo:
             jump aithershoulddie
 
 label ananshoulddie:
+    $ renpy.fix_rollback()
     "Atropos"  "Ich muss sichergehen, dass auch Anan stirbt!"
 
     "Atropos"  "Aber wie?"
@@ -3481,11 +3524,12 @@ label ananshoulddie:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
 label aithershoulddie:
+    $ renpy.fix_rollback()
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
@@ -3554,6 +3598,6 @@ label aithershoulddie:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

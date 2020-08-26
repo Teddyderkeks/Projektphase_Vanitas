@@ -16,6 +16,7 @@ image glitch:
 
 
 label search_kloth:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
 
@@ -122,6 +123,7 @@ label search_kloth:
             jump search_kloth_without_anan_office
 
 label search_kloth_in_anan_office:
+    $ renpy.fix_rollback()
 
     play sound "Sound/Sounds/tuereklopfen.mp3"
 
@@ -151,6 +153,7 @@ label search_kloth_in_anan_office:
             jump search_kloth_without_anan_office
 
 label wannariskanan:
+    $ renpy.fix_rollback()
     play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
     scene anan_office
     with fadeshort
@@ -182,6 +185,7 @@ label wannariskanan:
             jump search_kloth_without_anan_office
 
 label symbiont_in_between:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich möchte das Risiko eingehen und mich trotzdem umsehen."
 
@@ -221,6 +225,7 @@ label symbiont_in_between:
 
 
 label search_kloth_without_anan_office:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
 
@@ -414,6 +419,7 @@ label search_kloth_without_anan_office:
             jump not_search_kloth
 
 label everything_seen:
+    $ renpy.fix_rollback()
 
     $ lookaroundklothsofficewatchedeverything = True
     # Atropos Gedanken
@@ -520,6 +526,7 @@ label everything_seen:
             jump still_search_kloth
 
 label still_search_kloth:
+    $ renpy.fix_rollback()
 
     scene hall
     with fadeshort
@@ -893,18 +900,22 @@ label still_search_kloth:
 
 
 label after_detail_blogkloth2:
+    $ renpy.fix_rollback()
     "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
     jump serverraumpille
 label after_detail_servertextkloth2:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraphkloth2
 
 label after_detail_servergraphkloth2:
+    $ renpy.fix_rollback()
     "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
     jump serverraumpille
 
 label after_detail_blogkloth:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Eine Bombe?"
 
@@ -924,16 +935,19 @@ label after_detail_blogkloth:
     call screen arrow_detail_servertextkloth
 
 label after_detail_servertextkloth:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraphkloth
 
 label after_detail_servergraphkloth:
+    $ renpy.fix_rollback()
     "Atropos"  "Das erklärt alles. Ich muss in den Serverraum. Sofort."
     jump serverraumpille
 
 
 label serverraumpille:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
     "Atropos"  "Ich muss mich beeilen. Ich weiß nicht, wie viel Zeit mir noch bleibt."
@@ -969,6 +983,7 @@ label serverraumpille:
             jump menschenhelfen
 
 label menschennichthelfen:
+    $ renpy.fix_rollback()
     "Atropos"  "Wenn ich den Menschen helfe, rette ich damit vielleicht auch Anan. Das kann ich nicht zulassen."
 
     "Atropos"  "Anan ist überhaupt erst schuld an der gesamten Lage, in der wir uns gerade befinden."
@@ -1065,10 +1080,11 @@ label menschennichthelfen:
 
     $endhappy = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 label menschenhelfen:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Ich muss den Menschen helfen. Sie können nichts dafür."
 
@@ -1184,6 +1200,6 @@ label menschenhelfen:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

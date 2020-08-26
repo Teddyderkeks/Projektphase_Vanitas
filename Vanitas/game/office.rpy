@@ -11,6 +11,7 @@ default rage_atropos_bomb = False
 default straight_anan_office = False
 
 label office:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
 
@@ -115,6 +116,7 @@ label office:
             jump conversation_with_anan
 
 label conversation_with_anan:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
 
@@ -158,10 +160,10 @@ label conversation_with_anan:
 
         # Symbiont
         symb"{i}Tu es! {i}"
-
-
+        show screen force_mouse_move_twooptions
     menu:
         "Ich sollte mich besser entschuldigen.":
+            hide screen force_mouse_move_twooptions
             # Atropos Gedanken
             symb"Ich sollte mich besser entschuldigen."
 
@@ -174,6 +176,7 @@ label conversation_with_anan:
             jump imsorryanan1
 
         "Ich werde mich nicht entschuldigen!":
+            hide screen force_mouse_move_twooptions
             # Atropos Gedanken
             symb"Ich werde mich nicht entschuldigen!"
             "Atropos"  "…"
@@ -183,6 +186,7 @@ label conversation_with_anan:
     # alle
 
     label imsorryanan1:
+        $ renpy.fix_rollback()
 
         "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
@@ -270,6 +274,7 @@ label conversation_with_anan:
                 jump expulsion_office
 
 label understanding:
+    $ renpy.fix_rollback()
     "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler."
 
     "Atropos"  "Ein Fehler, den ich nicht mehr wiederholen werde. Es tut mir aufrichtig leid. Wirklich."
@@ -321,6 +326,7 @@ label understanding:
     jump takepillnow
 
 label understandingpart2:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Nein… nein, möchte ich nicht. Du hast ja recht."
 
@@ -433,6 +439,7 @@ label understandingpart2:
     jump takepillnow
 
 label understandingpart3:
+    $ renpy.fix_rollback()
     "Atropos"  "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen. Es war ein Fehler gewesen."
 
     "Atropos"  "Ein Fehler, den ich nicht mehr wiederholen werde. Es tut mir aufrichtig leid. Wirklich."
@@ -493,6 +500,7 @@ label understandingpart3:
 
 
 label questioning:
+    $ renpy.fix_rollback()
     "Atropos"  "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich."
 
     "Atropos"  "Ich habe in der letzten Zeit keinerlei Veränderungen bemerkt, obwohl ich sie nicht genommen habe."
@@ -530,6 +538,7 @@ label questioning:
 
 
     label canianswerconfident:
+        $ renpy.fix_rollback()
 
         "Anan" "Die Pille ist für dein Glück verantwortlich. Ohne Happiness kannst du nicht glücklich sein."
 
@@ -557,6 +566,7 @@ label questioning:
                 jump misunderstanding
 
 label misunderstanding:
+    $ renpy.fix_rollback()
 
     "Atropos" "Aber das erklärt immer noch nicht wie die Pille eigentlich wirkt."
 
@@ -635,6 +645,7 @@ label misunderstanding:
     jump selection_anan_office
 
 label how_many_infos_anan:
+    $ renpy.fix_rollback()
 
     if infos_count_anan == 0:
         if  straight_anan_office:
@@ -714,10 +725,12 @@ label how_many_infos_anan:
 
                 # Symbiont
                 symb"{i}Tu es! {i}"
+                show screen force_mouse_move_twooptions
 
             # alle
             menu:
                 "Ich sollte mich besser entschuldigen.":
+                    hide screen force_mouse_move_twooptions
                     # Atropos Gedanken
                     symb"Ich sollte mich besser entschuldigen."
 
@@ -730,6 +743,7 @@ label how_many_infos_anan:
                     jump imsorryanan2
 
                 "Ich werde mich nicht entschuldigen!":
+                    hide screen force_mouse_move_twooptions
                     # Atropos Gedanken
                     symb"Ich werde mich nicht entschuldigen!"
                     "Atropos"  "…"
@@ -739,6 +753,7 @@ label how_many_infos_anan:
             # alle
 
             label imsorryanan2:
+                $ renpy.fix_rollback()
 
                 "Anan" "Ich bin mir noch nicht so sicher, ob du begreifst, was du für einen Schaden angerichtet hast. Sowohl bei dir selbst als auch bei deinen Mitmenschen."
 
@@ -1011,6 +1026,7 @@ label how_many_infos_anan:
             # alle
 
             label imsorryanan3:
+                $ renpy.fix_rollback()
 
                 show anan disappointed_mid
 
@@ -1239,6 +1255,7 @@ label how_many_infos_anan:
         jump visit_kloth
 
 label one_or_two_infos:
+    $ renpy.fix_rollback()
     if straight_anan_office== False:
 
         #Atropos Gedanken
@@ -1274,6 +1291,7 @@ label one_or_two_infos:
             jump not_face_anan
 
 label face_anan:
+    $ renpy.fix_rollback()
     $ bomb_trigger_choice = True
 
     # Atropos Gedanken
@@ -1390,6 +1408,7 @@ label face_anan:
     jump  visit_kloth
 
 label not_face_anan:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Ich lasse den Rest seiner Ansprache über mich ergehen und hoffe, dass er nichts bemerkt hat."
@@ -1518,26 +1537,25 @@ label not_face_anan:
             jump visit_kloth
 
 label visit_kloth:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
-    if face_anan_in_office:
-        # Atropos Gedanken
-        symb"Ich sollte Kloth suchen. Vielleicht kann er mir Antworten geben."
+    # Atropos Gedanken
+    symb"Ich sollte Kloth suchen. Vielleicht kann er mir Antworten geben."
+    # Atropos Gedanken
+    symb"Immerhin ist er Anans persönlicher Sekretär… das muss ja irgendetwas zu bedeuten haben, oder?"
 
-        # Atropos Gedanken
-        symb"Immerhin ist er Anans persönlicher Sekretär… das muss ja irgendetwas zu bedeuten haben, oder?"
+    # Atropos Gedanken
+    symb"Er muss dadurch irgendwelche Informationen besitzen, die ich nicht habe… Informationen, die Klarheit in alles bringen."
 
-        # Atropos Gedanken
-        symb"Er muss dadurch irgendwelche Informationen besitzen, die ich nicht habe… Informationen, die Klarheit in alles bringen."
+    # Atropos Gedanken
+    symb"Vielleicht kann er mir dabei helfen, entweder meine Zweifel zu zerstreuen oder meine Sorgen zu bestätigen."
 
-        # Atropos Gedanken
-        symb"Vielleicht kann er mir dabei helfen, entweder meine Zweifel zu zerstreuen oder meine Sorgen zu bestätigen."
+    # Atropos Gedanken
+    symb"So oder so… ich brauche einfach Gewissheit."
 
-        # Atropos Gedanken
-        symb"So oder so… ich brauche einfach Gewissheit."
-
-        # Atropos Gedanken
-        symb"Das alles macht mich halb wahnsinnig…"
+    # Atropos Gedanken
+    symb"Das alles macht mich halb wahnsinnig…"
 
     # Atropos Gedanken
     symb"Wo er wohl gerade ist? Gesehen habe ich ihn heute immer noch nicht. Ich kann ihn ja mal anrufen."
@@ -1621,6 +1639,7 @@ label visit_kloth:
     jump selection_kloth_office_after_anan_office
 
 label search_kloth_in_stairwell:
+    $ renpy.fix_rollback()
     $ rage_atropos_bomb = False
     # Atropos Gedanken
     symb"Aber wo kann er nur sein? Habe ich nicht überall nach ihm gesucht?"
@@ -1704,6 +1723,7 @@ label search_kloth_in_stairwell:
     jump leave_or_corpse
 
 label how_many_infos_kloth:
+    $ renpy.fix_rollback()
 
     if infos_count_kloth == 1 or infos_count_kloth == 2:
         jump choice_bomb
@@ -1715,6 +1735,7 @@ label how_many_infos_kloth:
             jump sawallthreekloth
 
 label last_search_kloth:
+    $ renpy.fix_rollback()
     $ rage_atropos_bomb = True
 
     # Atropos Gedanken
@@ -1752,6 +1773,7 @@ label last_search_kloth:
             jump nextstepwithbomb
 
 label end_search_kloth:
+    $ renpy.fix_rollback()
     scene hall
     with fadeshort
 
@@ -1923,6 +1945,8 @@ label end_search_kloth:
     "Kloth" "Uns alle!"
     hide sepia
     hide glitch
+    hide kloth
+    stop sound
 
     $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
 
@@ -1959,7 +1983,7 @@ label end_search_kloth:
     "Atropos" "Arme kleine Menschen… sie werden bluten…"
 
     # Symbiont
-    symb"{i}Sei glücklich! {/si}"
+    symb"{i}Sei glücklich! {/i}"
 
     "Atropos" "Aber Happiness wird euch doch bestimmt glücklich machen, oder?"
 
@@ -2078,6 +2102,6 @@ label end_search_kloth:
 
     $endcrazy= True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

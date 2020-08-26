@@ -3,6 +3,7 @@ default password_right = False
 default kloth_office_visited = False
 
 label selection_kloth_office:
+    $ renpy.fix_rollback()
     $ kloth_office_choice = True
     $ kloth_office_visited = True
 
@@ -213,6 +214,7 @@ label selection_kloth_office:
                         jump worldmap_kloth
 
 label letter_kloth:
+    $ renpy.fix_rollback()
     $ read_letter_kloth = True
     $ lookaroundklothsofficeletter = True
     $ infos_count_kloth += 1
@@ -228,6 +230,7 @@ label letter_kloth:
     with fadeshort
     call screen arrow_detail_letterkloth
     label after_detail_letterkloth:
+        $ renpy.fix_rollback()
 
         if read_computer_kloth:
 
@@ -306,6 +309,7 @@ label letter_kloth:
         jump selection_kloth_office_after_anan_office
 
 label computer_kloth:
+    $ renpy.fix_rollback()
     $ read_computer_kloth = True
     $ infos_count_kloth += 1
     $ thingswatched += 1
@@ -350,6 +354,7 @@ label computer_kloth:
         with fadeshort
         call screen arrow_detail_confession
         label after_detail_confession:
+            $ renpy.fix_rollback()
             $ lookaroundklothsofficepcpasswordcorrect = True
             # Atropos Gedanken
             symb"Was ist das? Das kann doch alles nicht wahr sein… Wie? Warum?"
@@ -382,6 +387,7 @@ label computer_kloth:
     with fadeshort
     call screen arrow_detail_blog
     label after_detail_blog:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Eine Bombe?"
@@ -490,6 +496,7 @@ label computer_kloth:
             jump selection_kloth_office_after_anan_office
 
 label document_kloth:
+    $ renpy.fix_rollback()
     $ thingswatched += 1
     $ lookaroundklothsofficedocument = True
     $ read_document_kloth = True
@@ -506,12 +513,13 @@ label document_kloth:
     call screen arrow_detail_servertext()
 
 label after_detail_servertext:
+    $ renpy.fix_rollback()
     scene detail_servergraph
     with fadeshort
     call screen arrow_detail_servergraph()
 
 label after_detail_servergraph:
-
+    $ renpy.fix_rollback()
     if read_computer_kloth:
 
         # Atropos Gedanken
@@ -567,6 +575,7 @@ label after_detail_servergraph:
         jump selection_kloth_office_after_anan_office
 
 label shelf_kloth:
+    $ renpy.fix_rollback()
     $ thingswatched += 1
     $ sawshelf = True
     # Atropos Gedanken
@@ -587,6 +596,7 @@ label shelf_kloth:
         jump selection_kloth_office_after_anan_office
 
 label pictureskloth_kloth:
+    $ renpy.fix_rollback()
     $ thingswatched += 1
     $ sawpictureskloth = True
     scene detail_photoskloth
@@ -599,6 +609,7 @@ label pictureskloth_kloth:
     symb"Ich würde gerne beim Grillen noch ein Foto von uns aufnehmen."
     call screen arrow_detail_photoskloth
     label after_detail_photoskloth:
+        $ renpy.fix_rollback()
         scene kloth_office
         with fadeshort
         if kloth_office_choice:
@@ -609,6 +620,7 @@ label pictureskloth_kloth:
             jump selection_kloth_office_after_anan_office
 
 label worldmap_kloth:
+    $ renpy.fix_rollback()
     $ thingswatched += 1
     $ sawworldmap = True
     scene detail_map
@@ -617,6 +629,7 @@ label worldmap_kloth:
     symb"Die Großen Drei – gerecht auf der Welt verteilt."
     call screen arrow_detail_worldmap
     label after_detail_worldmap:
+        $ renpy.fix_rollback()
         scene kloth_office
         with fadeshort
         if kloth_office_choice:

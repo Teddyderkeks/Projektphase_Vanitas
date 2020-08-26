@@ -1,4 +1,5 @@
 label takepillnow:
+    $ renpy.fix_rollback()
 
     play music "Sound/Music/Rooms/Labor/labor_duester.mp3" fadeout 3 fadein 3
     scene lab

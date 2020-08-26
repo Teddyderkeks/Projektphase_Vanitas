@@ -1,15 +1,16 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/ending.rpy", line 131, in script
-    symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
-IOError: Couldn't find file 'Sound/cutscene_ende/loop_sad'.
+  File "game/script.rpy", line 28, in script
+    symb "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
+Exception: Screen quick_menu is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/ending.rpy", line 131, in script
-    symb "{i} Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es, bis du auf dem Boden ankommst. {/i}"
+  File "game/script.rpy", line 28, in script
+    symb "{i}Du bist so gut wie tot. Nicht mal mehr Sekunden dauert es bis du auf dem Boden aufkommst. {/i}"
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -24,23 +25,16 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
-    c.periodic()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
-    rv = renpy.loader.load(fn)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'Sound/cutscene_ende/loop_sad'.
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2876, in interact_core
+    renpy.display.screen.show_overlay_screens(suppress_overlay)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\screen.py", line 1371, in show_overlay_screens
+    show_screen(i)
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\screen.py", line 1107, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen quick_menu is not known.
+
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Tue Aug 25 17:14:12 2020
+Wed Aug 26 00:43:46 2020

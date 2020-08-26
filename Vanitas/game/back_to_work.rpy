@@ -1,6 +1,7 @@
 default back_to_work_bevore = False
 
 label back_to_work:
+    $ renpy.fix_rollback()
     $ backtoworkpart = True
     $ back_to_work_bevore = True
     # Atropos Gedanken
@@ -25,6 +26,7 @@ label back_to_work:
     call screen arrow_detail_posterpills
 
 label after_detail_posterpills:
+    $ renpy.fix_rollback()
 
     scene stairs_up
     with fadeshort
@@ -47,6 +49,7 @@ label after_detail_posterpills:
             jump talk_with_colleagues
 
 label take_pill_back_work:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ja, natürlich. Ich sollte sofort zurück ins Labor. Ich muss die Pille nehmen."
 
@@ -59,6 +62,7 @@ label take_pill_back_work:
     jump takepillnow
 
 label talk_with_colleagues:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich denke ich werde mich erst mit meinen Freunden unterhalten. Für alles andere ist auch nachher noch Zeit."
 
@@ -108,7 +112,7 @@ label talk_with_colleagues:
 
     "Neiro" "Es geht um Anan? Du durftest Zeit mit ihm verbringen? Das muss traumhaft sein… (seufzt)"
 
-    show neiro normal _gray
+    show neiro normal_gray
     show armene shy
 
     "Armene" "Ich wünschte, ich hätte einmal das Glück mit ihm persönlich zu sprechen! Es gibt wirklich keine größere Ehre als für Anan zu arbeiten!"
@@ -149,7 +153,7 @@ label talk_with_colleagues:
 
     "Tycho" "Ich hatte neulich auch mal ein Gespräch mit ihm und…"
 
-    show tycho really happy_gray
+    show tycho really_happy_gray
     show ireia strict
 
     "Ireia" "Die Geschichte hast du schon tausend Mal erzählt."

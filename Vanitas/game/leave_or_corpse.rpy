@@ -2,6 +2,7 @@ default murderer = False
 default reschedule_kloth = False
 
 label leave_or_corpse:
+    $ renpy.fix_rollback()
     $ foundcorpse = True
     $ last_try_find_kloth = False
     $ weak_symbiont = True
@@ -17,6 +18,7 @@ label leave_or_corpse:
             jump leave_and_go_pill
 
 label leave_and_go_pill:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich will das nicht sehen… ich habe Angst."
 
@@ -56,13 +58,23 @@ label leave_and_go_pill:
 
     hide era
 
+    scene detail_pillbox
+    with fadeshort
     # Atropos Gedanken
     symb"Na los, ich tue das Richtige. Es ist die richtige Entscheidung Happiness zu nehmen."
+
+    scene detail_pill
+    with fadeshort
 
     # Atropos Gedanken
     symb"Es ist die richtige Entscheidung, glücklich sein zu wollen."
 
     "Atropos" "(schluckt Happiness)"
+
+    play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
+
+    scene lab
+    with fadeshort
 
     # Symbiont
     symb"{i}Gut gemacht. Und nun vergiss, was dich unglücklich gemacht hat. Vergiss all den Stress und deine Ängste. {i}"
@@ -76,6 +88,7 @@ label leave_and_go_pill:
     jump escapelater
 
 label kloth_corpse:
+    $ renpy.fix_rollback()
     # Atropos Gedanken
     symb"Ich kann die Leiche nicht einfach liegenlassen, ohne zu wissen, wer es ist!"
 
@@ -135,7 +148,7 @@ label kloth_corpse:
     play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
 
     show sepia
-    show kloth unsuresmiling_alt behind sepia
+    show kloth unsuresmiling_alt behind sepia:
     scene stairs_up
     with fadeshort
 
@@ -155,7 +168,8 @@ label kloth_corpse:
 
     "Atropos" "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
-    # zeige Chesis klein weiter hinten
+    show chesis normal_gray:
+        xalign 0.0
 
     "Kloth" "Ich… ich…"
 
@@ -179,6 +193,7 @@ label kloth_corpse:
     jump conversation_with_kloth
 
 label conversation_with_kloth:
+    $ renpy.fix_rollback()
     $ rememberklothtalk = True
     if reschedule_kloth:
         show screen force_mouse_move_580strong
@@ -209,6 +224,7 @@ label conversation_with_kloth:
                 jump refuse_conversation_kloth
 
 label reschedule_conversation_kloth:
+    $ renpy.fix_rollback()
     $ reschedule_kloth = True
     "Atropos" "Können wir das Gespräch vielleicht vertagen? Ich habe echt Hunger und will Chesis zudem nicht warten lassen."
 
@@ -252,6 +268,7 @@ label reschedule_conversation_kloth:
     jump conversation_with_kloth
 
 label accept_conversation_kloth:
+    $ renpy.fix_rollback()
     "Atropos" "Ja, natürlich helfe ich dir. Erzähl endlich, was los ist. Wie kann ich dir helfen?"
 
     show kloth unsuresmiling_alt
@@ -323,17 +340,13 @@ label accept_conversation_kloth:
 
     "Atropos" "Ich werde dich rächen, Kloth, das verspreche ich dir! Dein Mord wird nicht ungesühnt bleiben!"
 
-
-    if back_to_work_bevore:
-        "Was untersuchen?"
-        jump selection_kloth_office_back_to_work
-    else:
-        jump ananorjustbombwho
+    jump ananorjustbombwho
 
 label refuse_conversation_kloth:
+    $ renpy.fix_rollback()
     "Atropos" "Tut mir leid, aber ich habe gerade nicht den Nerv für ein solches Gespräch. Ich hatte heute einen stressigen Tag und brauche jetzt erstmal wieder etwas Ruhe und Entspannung."
 
-    show kloth angry_neutral
+    show kloth angry_alt
 
     "Kloth" "Oh okay. Ja klar… wenn du nicht willst… ich kann dich nicht dazu zwingen. Ich wünschte, du hättest mir zugehört, Atropos. Ich dachte, wir wären Freunde."
 
@@ -349,8 +362,7 @@ label refuse_conversation_kloth:
 
     "Kloth" "Wenn du doch jemals mehr wissen willst. Wähle das Gegenteil von Happiness."
 
-    # Kloth gesellt sich zu Chesis
-
+    show kloth angry_alt_gray
     "Kloth" "…"
 
     "Chesis" "…"
@@ -392,9 +404,5 @@ label refuse_conversation_kloth:
     "Atropos" "Ich werde dich rächen, Kloth und wenn es das Letzte ist, was ich tue."
 
 
-    if back_to_work_bevore:
-        "Was untersuchen?"
-        jump selection_kloth_office_back_to_work
-    else:
-        $ murderer = True
-        jump ananorjustbombwho
+    $ murderer = True
+    jump ananorjustbombwho

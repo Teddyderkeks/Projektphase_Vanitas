@@ -1,4 +1,5 @@
 label escapelater:
+    $ renpy.fix_rollback()
 
     $ lategoback = True
 
@@ -249,6 +250,7 @@ label escapelater:
                 jump dontgowithnarcais
 
 label gowithnarcais:
+    $ renpy.fix_rollback()
 
     "Atropos" "Klar, lass uns gehen!"
 
@@ -368,6 +370,8 @@ label gowithnarcais:
     scene server_room
     with fadeshort
 
+    show narcais confused
+
     "Narcais" "Eine Bombe?"
 
     "Atropos" "Wir haben keine Chance mehr…"
@@ -375,6 +379,7 @@ label gowithnarcais:
     "Atropos" "Tut mir leid wegen Neiro…"
 
     "Narcais" "Ich hoffe, er überlebt."
+    hide narcais
 
     $endsad = True
 
@@ -383,6 +388,7 @@ label gowithnarcais:
     jump ending
 
 label dontgowithnarcais:
+    $ renpy.fix_rollback()
 
 
     "Atropos" "Geh du allein. Ich muss noch was anderes zwischenzeitlich fertigmachen."

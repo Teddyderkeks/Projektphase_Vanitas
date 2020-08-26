@@ -206,7 +206,7 @@ label part2_2:
 
             if pilltakenyes:
                 #Symbiont
-                "S.""{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte{/i}"
+                "S.""{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte.{/i}"
                 jump part5_2
             else:
                 if pilltakenno or pilltakenlater:
@@ -247,7 +247,7 @@ label part4_2:
         else:
             if gotoananofficeornotno:
                 #Symbiont
-                "S.""Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
+                "S.""{i}Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
                 jump part18_2
 
 label part5_2:
@@ -378,22 +378,24 @@ label part9_2:
             "S.""{i}Vielleicht hättest du mehr herausgefunden, wenn du dir noch mehr angesehen hättest?"
             if saneorseek:
                 jump part13_2
-            if part14_2before:
+            if part14_2before and confrontananno:
                 jump part15_2
+            if part14_2before and confrontananyes:
+                jump part13_2
             if pilltakenyes:
                 jump part7_2
 
         else:
             if lookaroundklothsofficewatchedeverything:
-                #Symbiont
-                "S.""{i}Du hattest dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
                 #Symbiont
                 "S.""{i}Nur nicht, wo er war. {/i}"
                 if saneorseek:
                     jump part13_2
-                if part14_2before:
+                if part14_2before and confrontananno:
                     jump part15_2
+                if part14_2before and confrontananyes:
+                    jump part13_2
                 if pilltakenyes:
                         jump part7_2
 
@@ -622,8 +624,8 @@ label part14_2:
                         "S.""{i}Du hast dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
                         #Symbiont
-                        "S.""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
-                        jump part11_2
+                        #"S.""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
+                        jump part9_2
                     else:
                         #Symbiont
                         "S.""{i}Du wolltest kein Risiko eingehen. Dein Durchsuchen blieb zwar ein Geheimnis, aber du warst der Ansicht, dass das nicht genug war. {/i}"
@@ -646,7 +648,7 @@ label part15_2:
             "S.""{i}Sag mir, Atropos, stehst du zu deinen Entscheidungen? {/i}"
 
             #Symbiont
-            "S.""{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hasst du dein Schicksal besiegelt. {/i}"
+            "S.""{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hast du dein Schicksal besiegelt. {/i}"
             jump partend_2
         else:
             if savepeoplewarnoralarmfriends:
@@ -685,22 +687,13 @@ label part15_2:
                                 #Symbiont
                                 "S.""{i}Glaubst du, irgendwann einen Fehler gemacht zu haben, Atropos? {/i}"
                                 jump partend_2
-            else:
-                if savepeoplewarnoralarmalarm:
-                    #Symbiont
-                    #"{i}Dein Versuch, den Feueralarm auszulösen, war vergebens. Keiner wollte die Situation realisieren. Oder konnten sie es nicht? {/i}"
+                            else:
+                                if savepeoplewarnoralarmalarm:
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du mehr Informationen gebraucht, um einen Weg zu finden, deine Freunde zu retten. {/i}"
+                                    #Symbiont
+                                    "S.""{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du sie aber auch nie retten können. Das Schicksal kann nicht geändert werden, sagt man doch. {/i}"
-
-                    #Übergangstext:
-                    #Symbiont
-                    "S.""{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
-
-                    jump partend_2
+                                    jump partend_2
 
 
 label part16_2:
@@ -968,7 +961,7 @@ label part2_3:
 
             if pilltakenyes:
                 #Symbiont
-                "Kronos""{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte{/i}"
+                "Kronos""{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte.{/i}"
                 jump part5_3
             else:
                 if pilltakenno or pilltakenlater:
@@ -1009,7 +1002,7 @@ label part4_3:
         else:
             if gotoananofficeornotno:
                 #Symbiont
-                "Kronos""Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
+                "Kronos""{i}Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
                 jump part18_3
 
 label part5_3:
@@ -1137,22 +1130,24 @@ label part9_3:
             "Kronos""{i}Vielleicht hättest du mehr herausgefunden, wenn du dir noch mehr angesehen hättest?"
             if saneorseek:
                 jump part13_3
-            if part14_3before:
+            if part14_3before and confrontananno:
                 jump part15_3
+            if part14_3before and confrontananyes:
+                jump part13_3
             if pilltakenyes:
                 jump part7_3
 
         else:
             if lookaroundklothsofficewatchedeverything:
-                #Symbiont
-                "Kronos""{i}Du hattest dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
                 #Symbiont
                 "Kronos""{i}Nur nicht, wo er war. {/i}"
                 if saneorseek:
                     jump part13_3
-                if part14_3before:
+                if part14_3before and confrontananno:
                     jump part15_3
+                if part14_3before and confrontananyes:
+                    jump part13_3
                 if pilltakenyes:
                     jump part7_3
 
@@ -1379,9 +1374,7 @@ label part14_3:
                         #Symbiont
                         "Kronos""{i}Du hast dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
-                        #Symbiont
-                        "Kronos""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
-                        jump part11_3
+                        jump part9_3
                     else:
                         #Symbiont
                         "Kronos""{i}Du wolltest kein Risiko eingehen. Dein Durchsuchen blieb zwar ein Geheimnis, aber du warst der Ansicht, dass das nicht genug war. {/i}"
@@ -1404,7 +1397,7 @@ label part15_3:
             "Kronos""{i}Sag mir, Atropos, stehst du zu deinen Entscheidungen? {/i}"
 
             #Symbiont
-            "Kronos""{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hasst du dein Schicksal besiegelt. {/i}"
+            "Kronos""{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hast du dein Schicksal besiegelt. {/i}"
             jump partend_3
         else:
             if savepeoplewarnoralarmfriends:
@@ -1443,22 +1436,12 @@ label part15_3:
                                 #Symbiont
                                 "Kronos""{i}Glaubst du, irgendwann einen Fehler gemacht zu haben, Atropos? {/i}"
                                 jump partend_3
-            else:
-                if savepeoplewarnoralarmalarm:
-                    #Symbiont
-                    #"{i}Dein Versuch, den Feueralarm auszulösen, war vergebens. Keiner wollte die Situation realisieren. Oder konnten sie es nicht? {/i}"
+                            else:
+                                if savepeoplewarnoralarmalarm:
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du mehr Informationen gebraucht, um einen Weg zu finden, deine Freunde zu retten. {/i}"
+                                    "Kronos""{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du sie aber auch nie retten können. Das Schicksal kann nicht geändert werden, sagt man doch. {/i}"
-
-                    #Übergangstext:
-                    #Symbiont
-                    "Kronos""{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
-
-                    jump partend_3
+                                    jump partend_3
 
 
 label part16_3:
@@ -1723,7 +1706,7 @@ label part2:
 
             if pilltakenyes:
                 #Symbiont
-                symb"{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte{/i}"
+                symb"{i}Es gab für dich kaum etwas Schöneres als den Gedanken, dass deine Arbeit andere Menschen glücklich machte.{/i}"
                 jump part5
             else:
                 if pilltakenno or pilltakenlater:
@@ -1764,7 +1747,7 @@ label part4:
         else:
             if gotoananofficeornotno:
                 #Symbiont
-                symb"Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
+                symb"{i}Deswegen hattest du dich dafür entschieden, nicht in sein Büro zu kommen. Doch Anan ließ dir keine Wahl. Oder hattest du die Wahl schon davor? {/i}"
                 jump part18
 
 label part5:
@@ -1892,22 +1875,24 @@ label part9:
             symb"{i}Vielleicht hättest du mehr herausgefunden, wenn du dir noch mehr angesehen hättest?"
             if saneorseek:
                 jump part13
-            if part14before:
+            if part14before and confrontananno:
                 jump part15
+            if part14before and confrontananyes:
+                jump part13
             if pilltakenyes:
                 jump part7
 
         else:
             if lookaroundklothsofficewatchedeverything:
-                #Symbiont
-                symb"{i}Du hattest dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
                 #Symbiont
                 symb"{i}Nur nicht, wo er war. {/i}"
                 if saneorseek:
                     jump part13
-                if part14before:
+                if part14before and confrontananno:
                     jump part15
+                if part14before and confrontananyes:
+                    jump part13
                 if pilltakenyes:
                     jump part7
 
@@ -2135,8 +2120,8 @@ label part14:
                         symb"{i}Du hast dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
                         #Symbiont
-                        symb"{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
-                        jump part11
+                        #"S.""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
+                        jump part9_2
                     else:
                         #Symbiont
                         symb"{i}Du wolltest kein Risiko eingehen. Dein Durchsuchen blieb zwar ein Geheimnis, aber du warst der Ansicht, dass das nicht genug war. {/i}"
@@ -2159,7 +2144,7 @@ label part15:
             symb"{i}Sag mir, Atropos, stehst du zu deinen Entscheidungen? {/i}"
 
             #Symbiont
-            symb"{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hasst du dein Schicksal besiegelt. {/i}"
+            symb"{i}Du hattest Zweifel, bis zum letzten Augenblick. Und nun hast du dein Schicksal besiegelt. {/i}"
             jump partend
         else:
             if savepeoplewarnoralarmfriends:
@@ -2198,22 +2183,12 @@ label part15:
                                 #Symbiont
                                 symb"{i}Glaubst du, irgendwann einen Fehler gemacht zu haben, Atropos? {/i}"
                                 jump partend
-            else:
-                if savepeoplewarnoralarmalarm:
-                    #Symbiont
-                    #"{i}Dein Versuch, den Feueralarm auszulösen, war vergebens. Keiner wollte die Situation realisieren. Oder konnten sie es nicht? {/i}"
+                            else:
+                                if savepeoplewarnoralarmalarm:
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du mehr Informationen gebraucht, um einen Weg zu finden, deine Freunde zu retten. {/i}"
+                                    symb"{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
 
-                    #Symbiont
-                    #"{i}Vielleicht hättest du sie aber auch nie retten können. Das Schicksal kann nicht geändert werden, sagt man doch. {/i}"
-
-                    #Übergangstext:
-                    #Symbiont
-                    symb"{i}Letztlich rettete Anan dein Glück und das Leben aller Menschen. {/i}"
-
-                    jump partend
+                                    jump partend
 
 
 label part16:

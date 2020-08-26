@@ -245,7 +245,7 @@ style choice_button_text is default:
 
 screen quick_menu():
 
-    ## Ensure this appears on top of other screens.
+    # Ensure this appears on top of other screens.
     zorder 100
 
     if quick_menu:
@@ -256,14 +256,14 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Zurück") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Spulen") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Speichern") action ShowMenu('save')
-            textbutton _("S.Speichern") action QuickSave()
-            textbutton _("S. Laden") action QuickLoad()
-            textbutton _("Optionen") action ShowMenu('preferences')
+            #textbutton _("Zurück") action Rollback()
+            #textbutton _("History") action ShowMenu('history')
+            #textbutton _("Spulen") action Skip() alternate Skip(fast=True, confirm=True)
+            #textbutton _("Auto") action Preference("auto-forward", "toggle")
+            #textbutton _("Speichern") action ShowMenu('save')
+            #textbutton _("S.Speichern") action QuickSave()
+            #textbutton _("S. Laden") action QuickLoad()
+            #textbutton _("Optionen") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -329,10 +329,10 @@ screen navigation():
 
         textbutton _("Credits") action ShowMenu("credits")
 
-        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Hilfe") action ShowMenu("help")
+            textbutton _("Hilfe") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -568,8 +568,8 @@ screen about():
             #if gui.about:
                 #text "[gui.about!t]\n"
 
-            text _("\n Vanitas ist ein Visual Novel, das im Sinne einer Projektarbeit hervorgegangen ist. Nightshade Games ist eine Gruppe von Game Design Studenten der Mediadesign Hochschule, Standort München.")
-            text _("\n Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("\nVanitas ist ein Visual Novel, das im Sinne der Projektarbeit 08/2020 hervorgegangen ist. Nightshade Games ist eine Gruppe von Game Design Studenten des zweiten und vierten Semesters der Mediadesign Hochschule, Standort München.")
+            text _("\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""
@@ -666,7 +666,23 @@ screen credits():
                     text _("Felix Lehrl")
                     text _("Suki Tsuiji")
                     text _("Ade S.")
-                    text _("and a lot more...")
+                    text _("Julian K.")
+                    text _("Yvonne B.")
+                    text _("Melanie F.")
+                    text _("Annika R.")
+                    text _("Dorota K.")
+                    text _("Alex F.")
+                    text _("Emma R.")
+                    text _("Janina S.")
+                    text _("Christian N.")
+                    text _("Samuel K.")
+                    text _("Sara H.")
+                    text _("Theo K.")
+                    text _("Abi S.")
+                    text _("Dominik G.")
+                    text _("Jakob S.")
+                    text _("Gabriel G.")
+
 
                 vbox:
                     #style_prefix "radio"
@@ -676,7 +692,7 @@ screen credits():
                     text _("      Game Designer")
                     text _("      Game Designer")
                     text _("")
-                    text _("      Lead Artist")
+                    text _("      Art Lead")
                     text _("      Artist")
                     text _("      Artist")
                     text _("      Artist")
@@ -818,8 +834,8 @@ screen preferences():
     tag menu
 
     use game_menu(_("Einstellungen"), scroll="viewport"):
-
         vbox:
+
 
             hbox:
                 box_wrap True
@@ -1071,118 +1087,118 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                textbutton _("Tastatur") action SetScreenVariable("device", "keyboard")
+                textbutton _("Maus") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                #if GamepadExists():
+                    #textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+            #elif device == "gamepad":
+                #use gamepad_help
 
 
 screen keyboard_help():
 
     hbox:
         label _("Enter")
-        text _("Advances dialogue and activates the interface.")
+        text _("Weiter im Dialog und Aktivierung des Interfaces.")
 
     hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
+        label _("Leertaste")
+        text _("Weiter im Dialog ohne Entscheidung auszuwählen.")
 
     hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
+        label _("Pfeiltasten")
+        text _("Navigation des Interfaces.")
 
     hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
+        label _("Esc")
+        text _("Zugang zum Menü.")
 
     hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
+        label _("Strg")
+        text _("Vorspulen solange gedrückt.")
 
-    hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
+    #hbox:
+        #label _("Tab")
+        #text _("Toggles dialogue skipping.")
 
     hbox:
         label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
+        text _("Zurückspulen.")
 
     hbox:
         label _("Page Down")
-        text _("Rolls forward to later dialogue.")
+        text _("Vorspulen.")
 
     hbox:
         label "H"
-        text _("Hides the user interface.")
+        text _("Versteckt User- Interface.")
 
     hbox:
         label "S"
-        text _("Takes a screenshot.")
+        text _("Screenshot.")
 
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+    #hbox:
+        #label "V"
+        #text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
 
 screen mouse_help():
 
     hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
+        label _("Linksklick")
+        text _("Weiter im Dialog und Aktivierung des Interfaces.")
 
     hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
+        label _("Mittelklick")
+        text _("Versteckt User-Interface.")
 
     hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
+        label _("Rechtsklick")
+        text _("Zugang zum Menü.")
 
     hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
+        label _("Mausrad hochrollen")
+        text _("Zurückspulen.")
 
     hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
+        label _("Mausrad runterrollen")
+        text _("Vorspulen.")
 
 
-screen gamepad_help():
+#screen gamepad_help():
 
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
+    #hbox:
+        #label _("Right Trigger\nA/Bottom Button")
+        #text _("Advances dialogue and activates the interface.")
 
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
+    #hbox:
+        #label _("Left Trigger\nLeft Shoulder")
+        #text _("Rolls back to earlier dialogue.")
 
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
+    #hbox:
+        #label _("Right Shoulder")
+        #text _("Rolls forward to later dialogue.")
 
 
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
+    #hbox:
+        #label _("D-Pad, Sticks")
+        #text _("Navigate the interface.")
 
-    hbox:
-        label _("Start, Guide")
-        text _("Accesses the game menu.")
+    #hbox:
+        #label _("Start, Guide")
+        #text _("Accesses the game menu.")
 
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
+    #hbox:
+        #label _("Y/Top Button")
+        #text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+    #textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button

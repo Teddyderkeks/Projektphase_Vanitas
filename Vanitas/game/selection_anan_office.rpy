@@ -4,6 +4,7 @@ default sawsafe= False
 default ananthingswatched=0
 
 label selection_anan_office:
+    $ renpy.fix_rollback()
 
     if read_letter_anan:
         if read_computer_anan:
@@ -197,6 +198,7 @@ label selection_anan_office:
 
 
 label letter_anan:
+    $ renpy.fix_rollback()
     $ read_letter_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
@@ -223,11 +225,13 @@ label letter_anan:
     call screen arrow_detail_letter1()
 
 label after_detail_letter1:
+    $ renpy.fix_rollback()
     scene detail_letter2
     with fadeshort
     call screen arrow_detail_letter2()
 
 label after_detail_letter2:
+    $ renpy.fix_rollback()
 
     # Atropos Gedanken
     symb"Was hat das alles zu bedeuten?"
@@ -255,6 +259,7 @@ label after_detail_letter2:
         jump selection_anan_office
 
 label document_anan:
+    $ renpy.fix_rollback()
     $ read_document_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
@@ -272,6 +277,7 @@ label document_anan:
     with fadeshort
     call screen arrow_detail_document
     label after_detail_document:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Was ist das alles? Ich verstehe die Zusammenhänge nicht, aber es scheint um die Wirkungsweisen des Gehirns in Bezug auf bestimmte Substanzen zu gehen?"
@@ -309,6 +315,7 @@ label document_anan:
 
 
 label computer_anan:
+    $ renpy.fix_rollback()
     $ read_computer_anan =True
     $ infos_count_anan += 1
     $ ananthingswatched +=1
@@ -332,6 +339,7 @@ label computer_anan:
     call screen arrow_detail_ananpc
 
     label after_detail_ananpc:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Was ist das für eine Tabelle? Und warum stehe ich als neuester Eintrag drinnen? Ich muss beobachtet werden?"
@@ -364,6 +372,7 @@ label computer_anan:
             jump selection_anan_office
 
 label pictures_anan:
+    $ renpy.fix_rollback()
     $ sawpictures =True
     $ ananthingswatched +=1
     scene detail_oldphotos
@@ -378,6 +387,7 @@ label pictures_anan:
     symb"Da sind auch Atlas und Adrés. Aither muss damals noch relativ neu gewesen sein… Vielleicht ein, zwei Jahre alt?"
     call screen arrow_detail_oldphotos
     label after_detail_oldphotos:
+        $ renpy.fix_rollback()
         scene anan_office
         with fadeshort
         # Atropos Gedanken
@@ -386,6 +396,7 @@ label pictures_anan:
 
 
 label books_anan:
+    $ renpy.fix_rollback()
     $ sawbooks =True
     $ ananthingswatched +=1
     # Atropos Gedanken
@@ -408,6 +419,7 @@ label books_anan:
     symb"Ich sollte das Buch sorgfältig zurücklegen, damit es nicht auffällt."
     call screen arrow_detail_bookphoto
     label after_detail_bookphoto:
+        $ renpy.fix_rollback()
         scene anan_office
         with fadeshort
         # Atropos Gedanken
@@ -415,6 +427,7 @@ label books_anan:
         jump selection_anan_office
 
 label safe_anan:
+    $ renpy.fix_rollback()
     $ sawsafe =True
     $ ananthingswatched +=1
     scene detail_safe
@@ -453,6 +466,7 @@ label safe_anan:
         symb"Ich lege es erstmal wieder zurück."
         call screen arrow_detail_safe_open
         label after_detail_safe_open:
+            $ renpy.fix_rollback()
             scene anan_office
             with fadeshort
             # Atropos Gedanken

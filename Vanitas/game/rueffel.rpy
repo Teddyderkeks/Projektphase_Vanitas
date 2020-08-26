@@ -1,4 +1,5 @@
 label rueffel:
+    $ renpy.fix_rollback()
     $ ruffel= True
     if loudspeaker:
         # Atropos Gedanken
@@ -33,6 +34,7 @@ label rueffel:
             jump imnotsorry
 
     label imsorry:
+        $ renpy.fix_rollback()
 
         "Atropos"  "…"
 
@@ -42,6 +44,7 @@ label rueffel:
         jump afterimsorry
 
     label imnotsorry:
+        $ renpy.fix_rollback()
 
         # Atropos Gedanken
         symb"Das kann er aber so was von vergessen. Es ist schon schlimm genug, dass ich seiner Aufforderung überhaupt gefolgt bin. Aber ich werde mich auf keinen Fall entschuldigen."
@@ -71,6 +74,7 @@ label rueffel:
         jump afterimsorry
 
     label afterimsorry:
+        $ renpy.fix_rollback()
 
         show anan strict_mid
 
@@ -164,6 +168,7 @@ label rueffel:
 
 
 label ichsollmichopfern:
+    $ renpy.fix_rollback()
     "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
 
     "Atropos"  "Das ist doch nicht fair. Ich habe keine Lust mehr darauf. Wieso wird uns nie irgendetwas erklärt?"
@@ -205,6 +210,7 @@ label ichsollmichopfern:
     jump expulsion_office
 
 label expulsion_office:
+    $ renpy.fix_rollback()
 
     "Atropos"  "Wahrhaftes Glück? Das ist alles vollkommen absurd. Hörst du dich eigentlich selbst reden?"
 
@@ -375,6 +381,6 @@ label expulsion_office:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
 
     jump ending
