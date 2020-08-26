@@ -610,6 +610,8 @@ label erabegleiten:
     # Symbiont
     symb"{i}Lauf, Atropos.{/i}"
 
+    show era confused
+
     "Era" "Was, warum? Es ist doch alles in Ordnung. Aber hier ist niemand. Wir sollten wo anders suchen gehen."
 
     "Atropos" "Wirf sie sofort weg!"
@@ -620,7 +622,7 @@ label erabegleiten:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending
 
@@ -694,6 +696,6 @@ label eranichtbegleiten:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

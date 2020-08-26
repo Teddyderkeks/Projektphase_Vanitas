@@ -1,33 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 22, in script
-    $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
-  File "game/script.rpy", line 22, in <module>
-    $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
-IOError: Couldn't find file 'cutscenes/atropos_accepts_conversation.mpg'.
+  File "renpy/common/00start.rpy", line 233, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/gui.rpy", line 95, in script
+    $ renpy.movie_cutscene("cutscenes/opening.mpg")
+  File "game/gui.rpy", line 95, in <module>
+    $ renpy.movie_cutscene("cutscenes/opening.mpg")
+IOError: Couldn't find file 'cutscenes/opening.mpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 22, in script
-    $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
+  File "renpy/common/00start.rpy", line 233, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/gui.rpy", line 95, in script
+    $ renpy.movie_cutscene("cutscenes/opening.mpg")
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 22, in <module>
-    $ renpy.movie_cutscene("cutscenes/atropos_pushes_kloth.mpg")
+  File "game/gui.rpy", line 95, in <module>
+    $ renpy.movie_cutscene("cutscenes/opening.mpg")
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\exports.py", line 1538, in movie_cutscene
     roll_forward=roll_forward)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3130, in interact_core
-    renpy.audio.audio.interact()
-  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1107, in interact
-    periodic()
+  File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\display\core.py", line 3380, in interact_core
+    renpy.audio.audio.periodic()
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
     six.reraise(exc[0], exc[1], exc[2])
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
@@ -40,9 +42,9 @@ Full traceback:
     rv = renpy.loader.load(fn)
   File "C:\Users\Sabrina\Desktop\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'cutscenes/atropos_accepts_conversation.mpg'.
+IOError: Couldn't find file 'cutscenes/opening.mpg'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Vanitas 1.0
-Wed Aug 26 03:58:09 2020
+Wed Aug 26 04:11:32 2020
