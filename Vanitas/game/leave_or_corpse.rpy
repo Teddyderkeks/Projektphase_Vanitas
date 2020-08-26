@@ -147,9 +147,10 @@ label kloth_corpse:
 
     play music "Sound/Music/treppenhaus_ohne_Symbiont.mp3" fadeout 3 fadein 3
 
+    scene stairs_up
     show sepia
     show kloth unsuresmiling_alt behind sepia:
-    scene stairs_up
+        xalign 0.5
     with fadeshort
 
     "Kloth" "Atropos!"
@@ -168,7 +169,7 @@ label kloth_corpse:
 
     "Atropos" "Kloth, es ist alles in Ordnung. Niemand kann dir etwas tun. Was ist denn nur los mit dir?"
 
-    show chesis normal_gray:
+    show chesis normal_gray behind sepia:
         xalign 0.0
 
     "Kloth" "Ich… ich…"
@@ -199,11 +200,13 @@ label conversation_with_kloth:
         show screen force_mouse_move_580strong
         menu:
             "Alles gut, von mir aus. Ich höre dir zu.":
+                $ renpy.fix_rollback()
                 $ rememberklothtalkyes = True
                 "Atropos" "Alles gut, von mir aus. Ich höre dir zu. Aber hier und jetzt. Ich möchte noch ein bisschen was von meiner Mittagspause haben."
                 hide screen force_mouse_move_580strong
                 jump accept_conversation_kloth
             "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher.":
+                $ renpy.fix_rollback()
                 $ rememberklothtalkno = True
                 hide screen force_mouse_move_580strong
                 "Atropos" "Nein, tut mir leid, aber das ist mir alles zu riskant und unsicher. Ich will lieber weiterhin mein glückliches Leben führen."
@@ -309,7 +312,7 @@ label accept_conversation_kloth:
 
     hide glitch
 
-    show kloth unsuresmiling_neutral
+    show kloth unsuresmiling_alt
 
     "Kloth" "Hast du was gesagt? Geht es dir gut? Du hast ziemlich weggetreten gewirkt."
 
@@ -322,10 +325,12 @@ label accept_conversation_kloth:
 
     hide kloth
     hide chesis
+    hide sepia
 
     $ renpy.movie_cutscene("cutscenes/atropos_wants_to_kill_kloth.mpg")
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
+
 
     "Atropos" "Nein."
 
@@ -376,6 +381,7 @@ label refuse_conversation_kloth:
 
     hide kloth
     hide chesis
+    hide sepia
 
     $ renpy.movie_cutscene("cutscenes/atropos_says_no.mpg")
 

@@ -3222,7 +3222,7 @@ label ananorjustbombwho:
 
                 scene detail_blog
                 with fadeshort
-                call screen arrow_detail_blog4
+                call screen arrow_detail_blog3
 
 
     if read_computer_kloth == False:
@@ -3248,7 +3248,7 @@ label ananorjustbombwho:
 
             scene detail_blog
             with fadeshort
-            call screen arrow_detail_blog3
+            call screen arrow_detail_blog4
 
 label after_detail_blog3:
     $ renpy.fix_rollback()

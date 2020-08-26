@@ -605,7 +605,11 @@ label part14_2:
 
             #Symbiont
             "S.""{i}Nur seinen Ärger und eine Kündigung. Das hatte dich nur noch mehr dazu motiviert, in Kloths Büro weiterzusuchen. Nicht wahr? {/i}"
-            jump part9_2
+            if klothwatchedeverything == False:
+                symb"{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
+                jump part16_2
+            else:
+                jump part9_2
         if confrontananno:
             if firmaok:
                 #Symbiont
@@ -635,7 +639,7 @@ label part14_2:
 
                         #Symbiont
                         "S.""{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
-                        jump part15_2
+                        jump part16_2
 
 
 label part15_2:
@@ -1356,7 +1360,12 @@ label part14_3:
 
             #Symbiont
             "Kronos""{i}Nur seinen Ärger und eine Kündigung. Das hatte dich nur noch mehr dazu motiviert, in Kloths Büro weiterzusuchen. Nicht wahr? {/i}"
-            jump part9_3
+
+            if klothwatchedeverything == False:
+                symb"{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
+                jump part16_3
+            else:
+                jump part9_3
         if confrontananno:
             if firmaok:
                 #Symbiont
@@ -1384,7 +1393,7 @@ label part14_3:
 
                         #Symbiont
                         "Kronos""{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
-                        jump part15_3
+                        jump part16_3
 
 
 label part15_3:
@@ -2101,7 +2110,11 @@ label part14:
 
             #Symbiont
             symb"{i}Nur seinen Ärger und eine Kündigung. Das hatte dich nur noch mehr dazu motiviert, in Kloths Büro weiterzusuchen. Nicht wahr? {/i}"
-            jump part9
+            if klothwatchedeverything == False:
+                symb"{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
+                jump part16
+            else:
+                jump part9
         if confrontananno:
             if firmaok:
                 #Symbiont
@@ -2119,9 +2132,8 @@ label part14:
                         #Symbiont
                         symb"{i}Du hast dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
-                        #Symbiont
-                        #"S.""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
-                        jump part9_2
+
+                        jump part9
                     else:
                         #Symbiont
                         symb"{i}Du wolltest kein Risiko eingehen. Dein Durchsuchen blieb zwar ein Geheimnis, aber du warst der Ansicht, dass das nicht genug war. {/i}"
@@ -2131,7 +2143,7 @@ label part14:
 
                         #Symbiont
                         symb"{i}Du wolltest nicht zu viel Zeit dort verschwenden. Nach kurzem Umsehen bist du direkt weiter. Hättest du mehr herausfinden können? {/i}"
-                        jump part15
+                        jump part16
 
 
 label part15:

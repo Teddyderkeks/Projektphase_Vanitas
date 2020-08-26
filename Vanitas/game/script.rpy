@@ -16,6 +16,7 @@ define symb= Character(None,window_background="gui/textbox_withoutname.png")
 $ symb= Character (None, window_xalign=0.5, window_yalign=1.0, who_posy=500)
 
 label start:
+
     stop music
 
     $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")

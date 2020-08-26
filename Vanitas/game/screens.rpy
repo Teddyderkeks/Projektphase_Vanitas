@@ -643,10 +643,10 @@ screen credits():
                     text _("Lukas Geppert")
                     text _("Madeleine Sonntag")
                     text _("")
-                    text _("Dominik Mieth")
-                    text _("Henning Jansen")
+                    text _("Prof. Dominik Mieth")
+                    text _("Prof. Henning Janssen")
                     text _("")
-                    text _("MDH. München")
+                    text _("MD.H München")
                     text _("Clam Musicstudio Nürnberg")
                     text _("")
                     text _("Deodot")
@@ -705,8 +705,8 @@ screen credits():
                     text _("      Komponist")
                     text _("      Singer")
                     text _("")
-                    text _("      Game Design Prof")
-                    text _("      Art Prof")
+                    text _("      Game Design")
+                    text _("      Art")
 
 
 style credits_label is gui_label

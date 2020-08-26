@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: expected statement.
-    config.windows_icon = "window_icon.png"
-                        ^
+File "game/ending.rpy", line 2125: if statement expects a non-empty block.
+    if klothnotwatchedeverything:
+                                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 26 02:37:29 2020
+Wed Aug 26 18:55:56 2020
