@@ -298,13 +298,13 @@ label accept_conversation_kloth:
     play sound("Sound/Sounds/glitch.mp3")
 
     # Symbiont
-    symb"Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht? "
+    symb"{i}Hör nicht hin. Das sind nichts anderes als Lügen. Alles nur Lügen! Er ist vollkommen wahnsinnig. Siehst du es denn nicht?{/i} "
 
     # Symbiont
-    symb"Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?"
+    symb"{i}Er ist nicht glücklich und er wird auch dich unglücklich machen. Willst du dein restliches Leben in Furcht und Angst und Unglücklichkeit verbringen?{/i}"
 
     # Symbiont
-    symb"Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?"
+    symb"{i}Willst du ein tristes, graues Leben führen, wenn du ein Leben voller Farben und Freude haben kannst?{/i}"
 
     "Atropos" "Nein… nein, ich will ein glückliches Leben haben."
 
