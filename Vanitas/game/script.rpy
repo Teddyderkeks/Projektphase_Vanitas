@@ -1089,7 +1089,9 @@ label conversation_with_seller:
 
                 label watchhallbutterfly:
                     $ renpy.fix_rollback()
+                    symb "Wieso ist hier ein Schmetterling?"
                     scene detail_butterfly
+
                     # Atropos
                     "Atropos""Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                     # Atropos
@@ -1102,8 +1104,10 @@ label conversation_with_seller:
 
                 label watchhallpictures:
                     $ renpy.fix_rollback()
+                    symb"Ich will mir die Bilder ansehen."
                     scene detail_pictureshall
                     with fadeshort
+
                     # Atropos Gedanken
                     symb"Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
                     # Atropos Gedanken
@@ -1113,8 +1117,10 @@ label conversation_with_seller:
                     call screen arrow_watchhall()
                 label watchhallalarm:
                     $ renpy.fix_rollback()
+                    symb"Ein Druckknopfmelder?"
                     scene detail_alarm
                     with fadeshort
+
                     # Atropos Gedanken
                     symb"Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
                     # Atropos Gedanken
@@ -1957,6 +1963,7 @@ label conversation_with_seller:
 
                 label watchhallbutterfly3:
                     $ renpy.fix_rollback()
+                    symb"Wieso ist hier ein Schmetterling?"
                     scene detail_butterfly
                     # Atropos
                     symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
@@ -1970,6 +1977,7 @@ label conversation_with_seller:
 
                 label watchhallpictures3:
                     $ renpy.fix_rollback()
+                    symb"Ich will mir die Bilder ansehen."
                     scene detail_pictureshall
                     with fadeshort
                     # Atropos Gedanken
@@ -1982,6 +1990,7 @@ label conversation_with_seller:
 
                 label watchhallalarm3:
                     $ renpy.fix_rollback()
+                    symb"Ein Druckknopfmelder?"
                     scene detail_alarm
                     with fadeshort
                     # Atropos Gedanken
@@ -2132,7 +2141,9 @@ label work:
 
             label watchhallbutterfly2:
                 $ renpy.fix_rollback()
+                symb "Wieso ist hier ein Schmetterling?"
                 scene detail_butterfly
+
                 # Atropos
                 symb"Woher kommst du denn, kleiner Flattermann? Anscheinend hast du dich irgendwie hierher verirrt."
                 # Atropos
@@ -2145,8 +2156,10 @@ label work:
 
             label watchhallpictures2:
                 $ renpy.fix_rollback()
+                symb"Ich will mir die Bilder ansehen."
                 scene detail_pictureshall
                 with fadeshort
+
                 # Atropos Gedanken
                 symb"Anan, Atlas und Adrés. Die drei Gründer von Aither. Gemeinsam haben sie die Welt vorangebracht."
                 # Atropos Gedanken
@@ -2157,8 +2170,10 @@ label work:
 
             label watchhallalarm2:
                 $ renpy.fix_rollback()
+                symb "Ein Druckknopfmelder?"
                 scene detail_alarm
                 with fadeshort
+
                 # Atropos Gedanken
                 symb"Damit kann man den Alarm auslösen, sollte es mal brennen oder wenn irgendwelche Gase entstehen."
                 # Atropos Gedanken
