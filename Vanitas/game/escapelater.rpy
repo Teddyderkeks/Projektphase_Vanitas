@@ -317,6 +317,8 @@ label gowithnarcais:
     "Narcais" "…"
 
     "Atropos" "Da vorne ist der Serverraum!"
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 

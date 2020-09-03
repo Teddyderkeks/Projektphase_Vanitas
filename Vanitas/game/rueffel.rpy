@@ -2,6 +2,7 @@ label rueffel:
     $ renpy.fix_rollback()
     $ ruffel= True
     if loudspeaker:
+        scene detail_door_anan
         # Atropos Gedanken
         symb"Da ist Anans Büro… ich habe absolut keine Lust reinzugehen."
 
@@ -381,6 +382,6 @@ label expulsion_office:
 
     $endsad = True
 
-    $ renpy.movie_cutscene("Sound/cutscene_intro/cutscene_intro.mpg")
+    $ renpy.movie_cutscene("Sound/cutscene_ende/cutscene_ende.mpg")
 
     jump ending

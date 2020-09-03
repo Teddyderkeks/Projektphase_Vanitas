@@ -126,6 +126,9 @@ label choice_bomb:
     # Symbiont
     symb"{i}Geh zum Serverraum und beruhige dich erstmal. Sei ruhig. Denk nach. Was ist die für dich richtige Entscheidung? Wie kannst du glücklich sein? {/i}"
 
+    scene detail_door_server
+    with fadeshort
+
     # Atropos Gedanken
     symb"Ich… ich…"
 
@@ -2032,6 +2035,8 @@ label saveallallthreekloth:
     "Anan" "Genauso, wie ich zahlreiche kleine Entscheidungen treffen musste, um zum heutigen Tag zu kommen. Und jede dieser Entscheidungen hatte Konsequenzen mit sich gebracht."
 
     "Anan" "Konsequenzen, derer ich mir stets bewusst war. Und ich trage die Verantwortung für jede von diesen."
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 
@@ -2137,6 +2142,8 @@ label doesbombexistsawallthreekloth:
 
     # Atropos Gedanken
     symb"Und da vorne ist der Serverraum auch schon."
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
@@ -2463,6 +2470,8 @@ label trywarnpeople:
 
     # Atropos Gedanken
     symb"Ich muss zum Serverraum!"
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
@@ -2573,6 +2582,8 @@ label doesbombexist:
 
     # Atropos Gedanken
     symb"Und da vorne ist der Serverraum auch schon."
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
@@ -2753,6 +2764,8 @@ label besureanandies:
     "Atropos" "Ich muss herausfinden, wie viel Zeit mir noch bleibt."
 
     "Atropos" "Ich muss zum Serverraum!"
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
     scene server_room
@@ -2776,7 +2789,7 @@ label besureanandies:
 
     "Atropos" "Ich muss es versuchen."
 
-    scene hall
+    scene detail_door_anan
     with fadeshort
 
     "Atropos" "Anan? Bist du da?"
@@ -3348,6 +3361,8 @@ label after_detail_blog4:
 
 label chesiskillsklothwhattodo:
     $ renpy.fix_rollback()
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_ruhig.mp3" fadeout 3 fadein 3
 
@@ -3429,6 +3444,8 @@ label ananshoulddie:
     # Atropos Gedanken
     symb"Meinen Rachedurst… das darf mir nicht den Weg versperren und mich an meinem Ziel scheitern lassen…"
 
+    scene detail_door_anan
+
     "Atropos"  "Anan? Bist du da?"
 
     "Anan" "Komm herein."
@@ -3489,6 +3506,8 @@ label ananshoulddie:
     "Atropos"  "Die Computer bei uns im Labor hatten einen Ausfall. Ich wollte die Techniker dort bitten sich darum zu kümmern."
 
     "Anan" "…"
+    scene detail_door_server
+    with fadestart
 
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
 

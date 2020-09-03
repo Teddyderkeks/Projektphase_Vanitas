@@ -184,14 +184,70 @@ label still_search_chesis:
     "Zelos" "Einen wunderschönen glücklichen guten Morgen. Was kann ich dir heute Gutes tun?"
 
     # Atropos Gedanken
-    symb"Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis."
+    symb"Zelos wirkt beschäftigt, ich sollte ihn nicht länger aufhalten. Dann suche ich mal nach Chesis... oder ich könnte mich zwischenzeitlich mal umsehen."
 
+    menu:
+        "Ich suche weiter nach Chesis.":
+            symb"Ich suche weiter nach Chesis."
+            jump lookafterchesisafterzelos
+        "Ich könnte mir die Packungen ansehen.":
+            symb"Ich könnte mir die Packungen ansehen."
+            jump lookpillbox
+        "Ich könnte mir die Flyer ansehen.":
+            symb"Ich könnte mir die Flyer ansehen."
+            jump lookflyer
+
+label lookpillbox:
+    scene detail_pillbox
+    # Atropos Gedanken
+    symb"Die Happiness-Pille ist das bekannteste Produkt von Aither. Schließlich nimmt sie so gut wie jeder Mensch ein."
+
+    # Atropos Gedanken
+    symb"Aber die Firma sorgt auch mit anderen Mitteln dafür, dass wir ohne Sorgen leben können."
+
+    # Atropos Gedanken
+    symb"Medizin gegen Tumore, zur Vorbeugung und Verhinderung von Infarkten oder Hirnschlägen…"
+
+    # Atropos Gedanken
+    symb"Einige Krankheiten konnten dank Aither endgültig besiegt werden. Eines Tages werden wir unser Leben lang nicht nur glücklich, sondern garantiert und dauerhaft gesund sein."
+
+    call screen pillbox
+
+label lookflyer:
+    scene detail_flyer
+
+    # Atropos Gedanken
+    "Dieses Mal wird für eine neue Impfung geworben. Es ist wichtig für die Kinder…"
+
+    #Atropos Gedanken
+    "Noch heute spüren wir die Nachfolgen des Krieges. Die Impfung wird sie vor den giftigen Gasen schützen, die immer noch in der Atmosphäre schweben."
+
+    # Atropos Gedanken
+    "Meistens bekommt man dann kurz nach seiner Impfung die erste Packung Happiness. Darum sehen viele die Impfung als ersten Schritt eines glücklichen Lebens an."
+
+    call screen flyer
+
+
+label lookafterchesisafterzelos:
+    hide screen pillbox
+    hide screen flyer
     hide zelos
     scene shop_2
     with fadeshort
 
     # Atropos Gedanken
     symb"Da ist ja Chesis. Aber er scheint auch noch beschäftigt zu sein. Er hat wohl gerade ein Beratungsgespräch."
+
+    symb"Die Kinderecke..."
+    # Atropos Gedanken
+    symb"Früher hatte ich dort mit meinem Bruder gespielt. Während Vater seine Pillen abholte, oder wenn er Beratung suchte, um zu wissen, wann es endlich bei uns beiden so weit sei."
+
+    # Atropos Gedanken
+    symb"Ein wenig hat sich die Ecke verändert. Mora und ich hatten aufgehört dort zu spielen, als wir uns die Knie am Tisch anhauten, wenn wir uns setzen wollten."
+
+    # Atropos Gedanken
+    symb"Ob Vater damals geahnt hatte, dass einer von uns beiden eines Tages hier arbeiten würde?"
+
 
     show chesis normal:
         xalign 0.5
@@ -564,6 +620,8 @@ label erabegleiten:
 
     "Era" "Ich mich auch."
 
+    scene detail_door_server
+
     "Atropos" "So, wir sind da- mal schauen, ob sie uns weiterhelfen können."
 
 
@@ -651,6 +709,8 @@ label eranichtbegleiten:
 
     # Atropos Gedanken
     symb"Ich hoffe es ist überhaupt jemand da. Soweit ich weiß, machen die Kollegen aus dem Serverraum immer erst ziemlich spät Mittagspause."
+
+    scene detail_door_server
 
     # Atropos Gedanken
     symb"Ah, da ist er ja schon. Mal sehen, ob mir dort jemand weiterhelfen kann."

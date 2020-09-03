@@ -321,7 +321,7 @@ label accept_conversation_kloth:
     "Kloth" "Gut, ich hatte mir schon Sorgen gemacht. Also? Was meinst du sollen wir tun? Das müssen die Menschen erfahren. Wir können sie nicht im Unwissenden lassen…"
 
     # Symbiont
-    symb"Ein glückliches Leben. Ein Leben voller Happiness."
+    symb"{i}Ein glückliches Leben. Ein Leben voller Happiness.{/i}"
 
     hide kloth
     hide chesis

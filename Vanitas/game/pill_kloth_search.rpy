@@ -72,6 +72,7 @@ label search_kloth:
     symb"Ich sollte dennoch in seinem Büro nachschauen gehen."
 
     "Atropos" "…"
+    scene detail_door_kloth
 
     "Atropos" "Kloth? Bist du da? Darf ich reinkommen?"
 
@@ -124,6 +125,7 @@ label search_kloth:
 
 label search_kloth_in_anan_office:
     $ renpy.fix_rollback()
+    scene detail_door_anan
 
     play sound "Sound/Sounds/tuereklopfen.mp3"
 
@@ -146,6 +148,7 @@ label search_kloth_in_anan_office:
             jump wannariskanan
         "Nein, reingehen gehört sich wirklich nicht.":
             symb "Nein, reingehen gehört sich wirklich nicht."
+            scene hall
             # Atropos Gedanken
             symb"Aber was soll ich jetzt nur tun?"
             # Atropos Gedanken
@@ -955,6 +958,9 @@ label serverraumpille:
     # Symbiont
     symb"{i}Was willst du tun, wenn du dort bist? Welche Entscheidung wirst du treffen? Wirst du mit dieser Entscheidung glücklich sein? {i}"
 
+    scene detail_door_server
+    with fadestart
+
     play music "Sound/Music/Rooms/Serverraum/serverraum_normal.mp3" fadeout 3 fadein 3
     scene server_room
     with fadeshort
@@ -1183,6 +1189,8 @@ label menschenhelfen:
     symb"{i}Rette sie! Du könntest mit ihrem Tod nicht leben. {i}"
 
     "Atropos"  "Verdammt… ich darf nicht zu spät kommen… der Serverraum… ich muss zurück und die Bombe aufhalten!"
+    scene detail_door_server
+    with fadestart
 
     scene server_room
     with fadealarm

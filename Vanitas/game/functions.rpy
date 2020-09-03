@@ -371,8 +371,25 @@ screen arrow_detail_servergraphkloth2():
             #focus_mask True
             action Jump ("after_detail_servergraphkloth2")
 
-#call screen pfeil_back
-#hide screen pfeil_back
+screen pillbox():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "gui/arrow.png"
+            hover "gui/arrowblue.png"
+            #focus_mask True
+            action Jump ("lookafterchesisafterzelos")
+
+screen flyer():
+    frame:
+        xpos 1700 ypos 500
+        imagebutton:
+            idle "gui/arrow.png"
+            hover "gui/arrowblue.png"
+            #focus_mask True
+            action Jump ("lookafterchesisafterzelos")
+
+
 
 
 screen force_mouse_move_threeoptions(): #obere Auswahl

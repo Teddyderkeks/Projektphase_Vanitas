@@ -604,9 +604,9 @@ label pictureskloth_kloth:
     # Atropos Gedanken
     symb"Bilder von uns. Wenn ich sie so miteinander vergleiche, komme ich mir schon ganz alt vor."
     # Atropos Gedanken
-    symb"Hm…"
+    symb"Ich vermisse die alten Zeiten. Damals hatten wir vielleicht keine Happiness, aber wir hatten mehr Zeit füreinander."
     # Atropos Gedanken
-    symb"Ich würde gerne beim Grillen noch ein Foto von uns aufnehmen."
+    symb"Kloth ist in letzter Zeit so beschäftigt gewesen, dass er kaum Zeit für Chesis und mich hatte."
     call screen arrow_detail_photoskloth
     label after_detail_photoskloth:
         $ renpy.fix_rollback()
@@ -627,6 +627,9 @@ label worldmap_kloth:
     with fadeshort
     # Atropos Gedanken
     symb"Die Großen Drei – gerecht auf der Welt verteilt."
+    symb"In den letzten Jahrhunderten hat sich einiges verändert- ich hatte neulich mal eine alte Weltkarte in der Hand."
+    symb"Es ist kaum vorstellbar, dass damals überall Menschen lebten. Nicht, wenn man vergleicht, was jetzt noch bewohnbar ist."
+    symb"Übrig sind nur noch Keposa, Astoa und Peria. Alles andere ist so zerstört, dass dort wohl lange Zeit niemand mehr leben kann."
     call screen arrow_detail_worldmap
     label after_detail_worldmap:
         $ renpy.fix_rollback()

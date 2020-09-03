@@ -39,6 +39,8 @@ label office:
         # Atropos Gedanken
         symb"Ob da wohl etwas Wahres dran ist?"
 
+    scene detail_door_anan
+
     # Atropos Gedanken
     symb"Da ist das Büro. Mal sehen, ob Anan da ist. Ich klopfe besser an."
 
@@ -104,11 +106,13 @@ label office:
             $ straight_anan_office = True
             jump selection_anan_office
         "Ich sollte besser vor der Tür auf Anan warten.":
+
             $ lookaroundinanansofficeno = True
             hide screen force_mouse_move_twooptionsdownweak
 
             # Atropos Gedanken
             symb"Ich sollte besser vor der Tür auf Anan warten. Ich gehe lieber kein Risiko ein."
+            scene hall
 
             # Atropos Gedanken
             symb"Ich will nicht noch mehr Ärger bekommen als ohnehin schon."
@@ -123,6 +127,9 @@ label conversation_with_anan:
     show anan normal_mid
 
     "Anan" "Atropos Laiotas. Ich lobe deine Pünktlichkeit. Folge mir!"
+    hide anan
+    scene detail_door_anan
+
 
     # Atropos Gedanken
     symb"Ich kann nicht einschätzen, ob Anan gute oder schlechte Laune hat. Ich hoffe einfach nur, ich bekomme nicht zu viel Ärger."
@@ -2010,6 +2017,9 @@ label end_search_kloth:
     "Atropos" "Sterbt! Sterbt alle!"
 
     "Atropos" "Tick, Tack- wie viel Zeit bleibt euch wohl noch?"
+
+    scene detail_door_server
+    with fadestart
 
     scene server_room
     with fadealarm
