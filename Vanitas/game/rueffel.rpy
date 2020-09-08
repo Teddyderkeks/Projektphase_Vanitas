@@ -119,6 +119,7 @@ label rueffel:
 
         menu:
             "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                $ renpy.fix_rollback()
                 $ ruffleunderstanding = True
                 hide screen force_mouse_move_twooptions
                 play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -162,6 +163,7 @@ label rueffel:
 
                 jump back_to_work
             "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                $ renpy.fix_rollback()
                 $ ruffleangry = True
                 play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
                 hide screen force_mouse_move_twooptions

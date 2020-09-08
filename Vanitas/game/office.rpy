@@ -76,6 +76,7 @@ label office:
     $ lookaroundinanansoffice = True
     menu:
         "Ich trete einfach mal ein und sehe dann weiter.":
+            $ renpy.fix_rollback()
             $ lookaroundinanansofficeyes = True
             hide screen force_mouse_move_twooptionsdownweak
             # Atropos Gedanken
@@ -106,6 +107,7 @@ label office:
             $ straight_anan_office = True
             jump selection_anan_office
         "Ich sollte besser vor der Tür auf Anan warten.":
+            $ renpy.fix_rollback()
 
             $ lookaroundinanansofficeno = True
             hide screen force_mouse_move_twooptionsdownweak
@@ -170,6 +172,7 @@ label conversation_with_anan:
         show screen force_mouse_move_twooptions
     menu:
         "Ich sollte mich besser entschuldigen.":
+            $ renpy.fix_rollback()
             hide screen force_mouse_move_twooptions
             # Atropos Gedanken
             symb"Ich sollte mich besser entschuldigen."
@@ -183,6 +186,7 @@ label conversation_with_anan:
             jump imsorryanan1
 
         "Ich werde mich nicht entschuldigen!":
+            $ renpy.fix_rollback()
             hide screen force_mouse_move_twooptions
             # Atropos Gedanken
             symb"Ich werde mich nicht entschuldigen!"
@@ -236,12 +240,15 @@ label conversation_with_anan:
 
         menu:
             "Du hast ja recht. Ich hätte Happiness niemals vergessen dürfen.":
+                $ renpy.fix_rollback()
                 $ lookaroundinanansofficenounderstanding = True
                 jump understanding
             "Aber wirkt die Pille wirklich? Ich fühle mich auch ohne sie glücklich.":
+                $ renpy.fix_rollback()
                 play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
                 jump questioning
             "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                $ renpy.fix_rollback()
                 $ lookaroundinanansofficenoangry = True
                 play music "Sound/Music/Rooms/AnansBuero/anan_buero_3St_ganz.mp3" fadeout 3 fadein 3
                 "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glüsck bestimmen können!"
@@ -525,6 +532,7 @@ label questioning:
 
     menu:
         "Ich weiß es nicht...":
+            $ renpy.fix_rollback()
             symb"Ich weiß es nicht…"
             # Atropos Gedanken
             symb"Was, wenn es doch immer noch die Wirkung meiner letzten Pille ist, warum ich mich glücklich fühle?"
@@ -535,9 +543,11 @@ label questioning:
             jump canianswerconfident
 
         "Ja, kann ich!":
+            $ renpy.fix_rollback()
             "Atropos"  "Ja, kann ich!"
             jump canianswerconfident
         "Nein...":
+            $ renpy.fix_rollback()
             # Atropos Gedanken
             symb"Nein, vermutlich nicht..."
             "Anan" "Dein Schweigen ist mir Antwort genug."
@@ -737,6 +747,7 @@ label how_many_infos_anan:
             # alle
             menu:
                 "Ich sollte mich besser entschuldigen.":
+                    $ renpy.fix_rollback()
                     hide screen force_mouse_move_twooptions
                     # Atropos Gedanken
                     symb"Ich sollte mich besser entschuldigen."
@@ -750,6 +761,7 @@ label how_many_infos_anan:
                     jump imsorryanan2
 
                 "Ich werde mich nicht entschuldigen!":
+                    $ renpy.fix_rollback()
                     hide screen force_mouse_move_twooptions
                     # Atropos Gedanken
                     symb"Ich werde mich nicht entschuldigen!"
@@ -805,6 +817,7 @@ label how_many_infos_anan:
 
                 menu:
                     "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!":
+                        $ renpy.fix_rollback()
                         play music "Sound/Music/Rooms/AnansBuero/anan_buero_4St_ganz.mp3" fadeout 3 fadein 3
                         "Atropos" "Ich soll mich also für alle Menschen aufopfern? Was soll das denn bitte? Ich will selbst über mein Glück bestimmen können!"
 
@@ -1012,6 +1025,7 @@ label how_many_infos_anan:
             # alle
             menu:
                 "Ich sollte mich besser entschuldigen.":
+                    $ renpy.fix_rollback()
                     # Atropos Gedanken
                     symb"Ich sollte mich besser entschuldigen."
 
@@ -1024,6 +1038,7 @@ label how_many_infos_anan:
                     jump imsorryanan3
 
                 "Ich werde mich nicht entschuldigen!":
+                    $ renpy.fix_rollback()
                     # Atropos Gedanken
                     symb"Ich werde mich nicht entschuldigen!"
                     "Atropos"  "…"
@@ -1481,6 +1496,7 @@ label not_face_anan:
 
     menu:
         "Ich vertraue immer noch auf Aither. Ich glaube an das Gute in der Firma.":
+            $ renpy.fix_rollback()
 
             $ firmaok = True
             play music "Sound/Music/Rooms/AnansBuero/anans_buero_normal.mp3" fadeout 3 fadein 3
@@ -1506,6 +1522,7 @@ label not_face_anan:
 
             jump back_to_work
         "Ich traue Aither nicht.":
+            $ renpy.fix_rollback()
             $ firmabad = True
             play music "Sound/Music/Rooms/AnansBuero/anan_buero_2St_ganz.mp3" fadeout 3 fadein 3
             # Atropos Gedanken

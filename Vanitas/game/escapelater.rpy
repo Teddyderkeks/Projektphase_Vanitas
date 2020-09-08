@@ -325,6 +325,8 @@ label gowithnarcais:
     scene server_room
     with fadeshort
 
+    show narcais normal
+
     "Atropos" "Hallo? Jemand da?"
 
     "Atropos" "Seltsam- es scheint keiner hier zu sein…"

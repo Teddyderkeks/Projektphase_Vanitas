@@ -102,6 +102,7 @@ label search_kloth:
 
     menu:
         "Einen Versuch ist es wert, selbst wenn ich dafür Ärger von Anan bekommen sollte.":
+            $ renpy.fix_rollback()
 
             # Atropos Gedanken
             symb"Einen Versuch ist es wert, selbst wenn ich dafür Ärger von Anan bekommen sollte."
@@ -111,6 +112,7 @@ label search_kloth:
 
             jump search_kloth_in_anan_office
         "Nein, ich sollte wo anders nach ihm suchen.":
+            $ renpy.fix_rollback()
 
             # Atropos Gedanken
             symb"Nein, ich sollte wo anders nach ihm suchen."
@@ -144,9 +146,11 @@ label search_kloth_in_anan_office:
 
     menu:
         "Ich will es riskieren.":
+            $ renpy.fix_rollback()
             symb "Ich will es riskieren."
             jump wannariskanan
         "Nein, reingehen gehört sich wirklich nicht.":
+            $ renpy.fix_rollback()
             symb "Nein, reingehen gehört sich wirklich nicht."
             scene hall
             # Atropos Gedanken
@@ -362,6 +366,7 @@ label search_kloth_without_anan_office:
     show screen force_mouse_move_670
     menu:
         "Ich suche weiter nach Kloth. Ich muss sofort mit ihm persönlich darüber sprechen.":
+            $ renpy.fix_rollback()
             $ whattosearchafteranansofficekloth = True
             hide screen force_mouse_move_670
             # Atropos Gedanken
@@ -375,6 +380,7 @@ label search_kloth_without_anan_office:
 
             jump still_search_kloth
         "Ich sehe mich in Kloths Büro nach Hinweisen um, damit ich ihm helfen kann.":
+            $ renpy.fix_rollback()
             $ whattosearchafteranansofficeklothsoffice = True
             hide screen force_mouse_move_670
             # Atropos Gedanken
@@ -400,6 +406,7 @@ label search_kloth_without_anan_office:
 
             jump selection_kloth_office
         "Ich sollte besser zurück ins Labor. Vielleicht hat Kloth den anderen dort ja auch eine Nachricht für mich hinterlassen?":
+            $ renpy.fix_rollback()
             $ whattosearchafteranansofficebacklab = True
             hide screen force_mouse_move_670
             # Atropos Gedanken

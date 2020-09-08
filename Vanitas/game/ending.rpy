@@ -627,8 +627,6 @@ label part14_2:
                         #Symbiont
                         "S.""{i}Du hast dir alles in Kloths Büro angesehen. Dadurch konntest du alles über die Bombe herausfinden. {/i}"
 
-                        #Symbiont
-                        #"S.""{i}Macht es dich glücklich zu wissen, dass du die Explosion nicht aufgehalten hattest? {/i}"
                         jump part9_2
                     else:
                         #Symbiont
