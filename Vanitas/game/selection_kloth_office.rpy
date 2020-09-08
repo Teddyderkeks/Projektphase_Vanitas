@@ -583,7 +583,7 @@ label shelf_kloth:
     # Atropos Gedanken
     symb"Normalerweise ist er niemand, der einfach ausrastet. Aber in letzter Zeit kann ich ihn einfach nicht mehr richtig einschätzen."
     # Atropos Gedanken
-    symb"Ich hoffe, es war nur ein Einbrecher. Einer von diesen seltsamen Typen, die kein Happiness nehmen und stattdessen alles kaputt machen wollen."
+    symb"Ich hoffe, es war nur ein Einbrecher. Ich habe gehört es gibt welche unter denen, die keine Happiness nehmen, weil sie neidisch über den Besitz anderer sind."
     # Atropos Gedanken
     symb"Hoffentlich war es ein Einbrecher. Bitte lass es nicht Kloth gewesen sein."
     scene kloth_office
@@ -604,9 +604,9 @@ label pictureskloth_kloth:
     # Atropos Gedanken
     symb"Bilder von uns. Wenn ich sie so miteinander vergleiche, komme ich mir schon ganz alt vor."
     # Atropos Gedanken
-    symb"Ich vermisse die alten Zeiten. Damals hatten wir vielleicht keine Happiness, aber wir hatten mehr Zeit füreinander."
+    symb"Ich vermisse die alten Zeiten. Damals hatten wir vielleicht keine Happiness, aber immerhin mehr Zeit füreinander."
     # Atropos Gedanken
-    symb"Kloth ist in letzter Zeit so beschäftigt gewesen, dass er kaum Zeit für Chesis und mich hatte."
+    symb"Kloth war in letzter Zeit so beschäftigt, dass er kaum Zeit für Chesis und mich hatte."
     call screen arrow_detail_photoskloth
     label after_detail_photoskloth:
         $ renpy.fix_rollback()

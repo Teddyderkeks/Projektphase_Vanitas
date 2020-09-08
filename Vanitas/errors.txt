@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ending.rpy", line 2125: if statement expects a non-empty block.
-    if klothnotwatchedeverything:
-                                 ^
+File "game/ending.rpy", line 630: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    jump part9_2
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Aug 26 18:55:56 2020
+Tue Sep 08 14:51:44 2020

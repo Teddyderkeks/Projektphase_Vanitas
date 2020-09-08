@@ -2423,6 +2423,7 @@ label work:
             show screen force_mouse_move_twooptionsdown
             menu:
                 "Ich sollte besser lügen. Die Wahrheit würde ihm nicht gefallen.":
+                    $ renpy.fix_rollback()
                     hide screen force_mouse_move_twooptionsdown
 
                     # Atropos Gedanken
@@ -2440,6 +2441,7 @@ label work:
                     jump afterlieortruthanan
 
                 "Ich sollte die Wahrheit sagen.":
+                    $ renpy.fix_rollback()
                     hide screen force_mouse_move_twooptionsdown
 
                     # Atropos Gedanken
@@ -2973,6 +2975,7 @@ label why_important:
 
     menu:
         "Ich sollte mich ihnen anvertrauen.":
+            $ renpy.fix_rollback()
             # Atropos Gedanken
             symb"Ich sollte mich ihnen anvertrauen."
 
@@ -3033,6 +3036,7 @@ label why_important:
             jump openyourheartornot
 
         "Ich will nicht darüber sprechen.":
+            $ renpy.fix_rollback()
             # Atropos Gedanken
             symb"Ich will nicht darüber sprechen."
 
@@ -3332,6 +3336,7 @@ label be_against:
 
     menu:
         "Ich unterbreche ihn, sonst redet er ewig.":
+            $ renpy.fix_rollback()
 
             # Atropos Gedanken
             symb"Ich unterbreche ihn, sonst redet er ewig."
@@ -3349,6 +3354,7 @@ label be_against:
             jump afternarcaistalk
 
         "Ich lasse ihn aussprechen, aber verschiebe den Bericht auf später.":
+            $ renpy.fix_rollback()
             # Atropos Gedanken
             symb"Ich lasse ihn aussprechen, aber verschiebe den Bericht auf später."
 
@@ -3561,6 +3567,7 @@ label go_office:
         $ gotoananofficeornot = True
         menu:
             "Ich sollte besser zu Anans Büro gehen.":
+                $ renpy.fix_rollback()
                 $ gotoananofficeornotyes = True
                 play music "Sound/Music/Rooms/Labor/labor_sorglos.mp3" fadeout 3 fadein 3
 
@@ -3588,6 +3595,7 @@ label go_office:
 
                 jump office
             "Ich werde auf keinen Fall zu Anans Büro gehen.":
+                $ renpy.fix_rollback()
                 $ gotoananofficeornotno = True
                 hide screen force_mouse_move_twooptions
                 jump no_office
@@ -3772,6 +3780,7 @@ label no_office:
             jump stillnooffice
 
         "Ich sollte gehen.":
+            $ renpy.fix_rollback()
 
             # Atropos Gedanken
             symb"Ich sollte gehen."

@@ -129,6 +129,7 @@ label pill:
         $ whotolookfor = True
         menu:
             "Ich sollte nach Kloth suchen.":
+                $ renpy.fix_rollback()
                 $ whotolookforklothimmediately = True
                 hide screen force_mouse_move_twooptionsdown
 
@@ -140,6 +141,7 @@ label pill:
 
                 jump search_kloth
             "Ich werde erstmal nach Chesis suchen.":
+                $ renpy.fix_rollback()
                 $ whotolookforchesis = True
 
                 hide screen force_mouse_move_twooptionsdown
@@ -188,12 +190,15 @@ label still_search_chesis:
 
     menu:
         "Ich suche weiter nach Chesis.":
+            $ renpy.fix_rollback()
             symb"Ich suche weiter nach Chesis."
             jump lookafterchesisafterzelos
         "Ich könnte mir die Packungen ansehen.":
+            $ renpy.fix_rollback()
             symb"Ich könnte mir die Packungen ansehen."
             jump lookpillbox
         "Ich könnte mir die Flyer ansehen.":
+            $ renpy.fix_rollback()
             symb"Ich könnte mir die Flyer ansehen."
             jump lookflyer
 
@@ -217,13 +222,13 @@ label lookflyer:
     scene detail_flyer
 
     # Atropos Gedanken
-    "Dieses Mal wird für eine neue Impfung geworben. Es ist wichtig für die Kinder…"
+    symb"Es wird für die neue Impfung geworben. Damals vor meiner war ich ziemlich aufgeregt."
 
     #Atropos Gedanken
-    "Noch heute spüren wir die Nachfolgen des Krieges. Die Impfung wird sie vor den giftigen Gasen schützen, die immer noch in der Atmosphäre schweben."
+    symb"Danach durfte ich dann endlich Happiness nehmen. Ich war zum ersten Mal wirklich glücklich."
 
-    # Atropos Gedanken
-    "Meistens bekommt man dann kurz nach seiner Impfung die erste Packung Happiness. Darum sehen viele die Impfung als ersten Schritt eines glücklichen Lebens an."
+    #Atropos Gedanken
+    symb"Warum die Impfung wohl mit Hapiness zusammenhängt? Irgendeinen Grund muss es doch geben, oder?"
 
     call screen flyer
 
@@ -298,6 +303,7 @@ label lookafterchesisafterzelos:
     show screen force_mouse_move_twooptionsdown
     menu:
         "Ich möchte trotzdem lieber nach Kloth suchen.":
+            $ renpy.fix_rollback()
             $ whotolookforklothlater = True
             hide screen force_mouse_move_twooptionsdown
 
@@ -313,6 +319,7 @@ label lookafterchesisafterzelos:
 
             jump search_kloth
         "Du hast Recht.":
+            $ renpy.fix_rollback()
             hide screen force_mouse_move_twooptionsdown
 
             "Atropos" "Du hast Recht. Es wird schon alles in Ordnung sein."
@@ -384,6 +391,7 @@ label mittagspausemitchesis:
     show screen force_mouse_move_480
     menu:
         "Du hast ja Recht. Tut mir leid.":
+            $ renpy.fix_rollback()
             hide screen force_mouse_move_480
 
             "Atropos" "Du hast ja Recht. Tut mir leid, ich weiß nicht, was in mich gefahren ist."
@@ -416,6 +424,7 @@ label mittagspausemitchesis:
 
             jump not_search_kloth
         "Ich gehe trotzdem besser auf Nummer sicher und suche ihn.":
+            $ renpy.fix_rollback()
             $ whotolookforklothlater = True
             hide screen force_mouse_move_480
 
