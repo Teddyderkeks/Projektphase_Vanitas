@@ -374,23 +374,27 @@ label conversation_with_seller:
 
         menu:
             "Ich schaue mir den Kalender an.":
+                $ renpy.fix_rollback()
                 hide screen computer
-                "Ich schaue mir den Kalender an."
+                symb"Ich schaue mir den Kalender an."
                 jump watchofficecalendar
 
             "Da ist ein interessantes Foto.":
+                $ renpy.fix_rollback()
                 hide screen computer
-                "Da ist ein interessantes Foto."
+                symb"Da ist ein interessantes Foto."
                 jump watchofficephoto
 
             "Neben der Sanduhr liegt etwas.":
+                $ renpy.fix_rollback()
                 hide screen computer
-                "Neben der Sanduhr liegt etwas."
+                symb"Neben der Sanduhr liegt etwas."
                 jump watchofficehourglass
 
             "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern.":
+                $ renpy.fix_rollback()
                 hide screen computer
-                "Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
+                symb"Oder nein, besser nicht. Ich sollte nicht in fremden Sachen herumstöbern."
                 jump watchnothingoffice
 
         label computermoira:

@@ -675,7 +675,7 @@ screen credits():
                     text _("Emma R.")
                     text _("Janina S.")
                     text _("Samuel K.")
-                    text _("Sara H.")
+                    text _("Sara Hamzi")
                     text _("Theo K.")
                     text _("Abi S.")
                     text _("Dominik G.")
