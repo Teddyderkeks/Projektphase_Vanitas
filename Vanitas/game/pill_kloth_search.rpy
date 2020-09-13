@@ -99,11 +99,11 @@ label search_kloth:
     # Atropos Gedanken
     symb"Vielleicht in Anans Büro? Aber dort kann ich doch nicht einfach so hineinplatzen…"
 
-
+    show screen force_mouse_move_twooptionsdown
     menu:
         "Einen Versuch ist es wert, selbst wenn ich dafür Ärger von Anan bekommen sollte.":
             $ renpy.fix_rollback()
-
+            hide screen force_mouse_move_twooptionsdown
             # Atropos Gedanken
             symb"Einen Versuch ist es wert, selbst wenn ich dafür Ärger von Anan bekommen sollte."
 
@@ -112,6 +112,7 @@ label search_kloth:
 
             jump search_kloth_in_anan_office
         "Nein, ich sollte wo anders nach ihm suchen.":
+            hide screen force_mouse_move_twooptionsdown
             $ renpy.fix_rollback()
 
             # Atropos Gedanken
